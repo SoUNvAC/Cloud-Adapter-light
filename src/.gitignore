@@ -1,0 +1,11 @@
+work_dirs/
+__pycache__/
+**.pyc
+**.pth
+data/
+data
+checkpoints/
+envs/
+visualization/
+venv/
+.venv/

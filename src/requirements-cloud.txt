@@ -1,0 +1,13 @@
+# Install PyTorch and OpenMMLab packages with tools/setup_cloud.sh first.
+numpy<2
+ftfy
+scipy
+prettytable
+matplotlib
+regex
+timm==0.9.16
+einops
+tensorboard
+opencv-python-headless
+Pillow
+huggingface_hub
