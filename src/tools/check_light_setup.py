@@ -32,6 +32,7 @@ def main():
     from mmengine.config import Config
     from mmengine.registry import init_default_scope
     from mmseg.registry import MODELS
+    from mmseg.structures import SegDataSample
 
     import cloud_adapter.models  # noqa: F401
 
@@ -77,9 +78,21 @@ def main():
     if not args.skip_forward:
         model = model.cuda().eval()
         dummy = torch.randn(1, 3, 512, 512, device="cuda")
+        data_sample = SegDataSample(
+            metainfo=dict(
+                ori_shape=(512, 512),
+                img_shape=(512, 512),
+                pad_shape=(512, 512),
+                padding_size=[0, 0, 0, 0],
+                flip=False,
+            )
+        )
         with torch.inference_mode(), torch.autocast(device_type="cuda", dtype=torch.float16):
-            output = model(dummy, mode="tensor")
-        print(f"Forward output shape: {tuple(output.shape)}")
+            # Mask2Former needs batch metadata even for inference, whereas
+            # mode="tensor" calls its head without batch_data_samples.
+            output = model(dummy, data_samples=[data_sample], mode="predict")
+        prediction = output[0].pred_sem_seg.data
+        print(f"Forward output shape: {tuple(prediction.shape)}")
         print(f"Peak allocated memory: {torch.cuda.max_memory_allocated() / 2**30:.2f} GiB")
 
     print("Setup check passed")
