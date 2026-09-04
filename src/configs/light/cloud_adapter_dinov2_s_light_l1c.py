@@ -17,6 +17,9 @@ model = dict(
         seg_pad_val=255,
     ),
     backbone=dict(
+        # The compact student checkpoint should be self-contained for testing
+        # and deployment, unlike the original adapter-only PEFT checkpoint.
+        save_backbone=True,
         img_size=512,
         # Four evenly spaced interactions for the 12-block DINOv2-S.
         adapter_index=[2, 5, 8, 11],

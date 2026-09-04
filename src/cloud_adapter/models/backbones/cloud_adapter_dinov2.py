@@ -13,6 +13,7 @@ class CloudAdapterDinoVisionTransformer(DinoVisionTransformer):
         self,
         cloud_adapter_config=None,
         has_cat=False,
+        save_backbone=False,
         # [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, ],
         adapter_index=[0, 6, 12, 18],  # Transformer Block 的索引
         **kwargs,
@@ -20,6 +21,7 @@ class CloudAdapterDinoVisionTransformer(DinoVisionTransformer):
         super().__init__(**kwargs)
         self.cloud_adapter: CloudAdapter = MODELS.build(cloud_adapter_config)
         self.has_cat = has_cat
+        self.save_backbone = save_backbone
         self.adapter_index = adapter_index
 
     def forward_features(self, x, masks=None):
@@ -105,11 +107,13 @@ class CloudAdapterDinoVisionTransformer(DinoVisionTransformer):
         set_requires_grad(self, ["cloud_adapter"])
         set_train(self, ["cloud_adapter"])
 
-    def state_dict(self, destination, prefix, keep_vars):
-        state = super().state_dict(destination, prefix, keep_vars)
-        keys = [k for k in state.keys() if "cloud_adapter" not in k]
+    def state_dict(self, destination=None, prefix="", keep_vars=False):
+        state = super().state_dict(
+            destination=destination, prefix=prefix, keep_vars=keep_vars
+        )
+        if self.save_backbone:
+            return state
+        keys = [key for key in state if "cloud_adapter" not in key]
         for key in keys:
             state.pop(key)
-            if key in destination:
-                destination.pop(key)
         return state

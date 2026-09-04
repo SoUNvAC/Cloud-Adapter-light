@@ -3,6 +3,8 @@ set -euo pipefail
 
 config="${1:-configs/light/cloud_adapter_dinov2_s_light_l1c.py}"
 work_dir="${2:-work_dirs/cloud_adapter_dinov2_s_light_l1c}"
+if (($# > 0)); then shift; fi
+if (($# > 0)); then shift; fi
 
 export CUDA_VISIBLE_DEVICES="${CUDA_VISIBLE_DEVICES:-0}"
 export PYTHONUNBUFFERED=1
@@ -12,4 +14,5 @@ python tools/check_light_setup.py --config "${config}"
 
 python tools/train.py \
   "${config}" \
-  --work-dir "${work_dir}"
+  --work-dir "${work_dir}" \
+  "$@"

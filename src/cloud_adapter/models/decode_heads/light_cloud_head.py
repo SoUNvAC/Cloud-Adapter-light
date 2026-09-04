@@ -44,7 +44,7 @@ class LightCloudHead(BaseDecodeHead):
     """Small FPN-like head for edge-oriented cloud segmentation.
 
     The head projects all backbone outputs to a small common width, resizes
-    them to the finest feature resolution, averages them, and applies cheap
+    them to the finest feature resolution, fuses them, and applies cheap
     depthwise-separable refinement. It deliberately avoids the deformable
     attention and query decoder used by Mask2Former.
     """
@@ -53,6 +53,7 @@ class LightCloudHead(BaseDecodeHead):
         self,
         decoder_channels: int = 64,
         num_fuse_blocks: int = 2,
+        fusion: str = "mean",
         **kwargs,
     ):
         kwargs.setdefault("input_transform", "multiple_select")
@@ -66,10 +67,23 @@ class LightCloudHead(BaseDecodeHead):
             raise ValueError("decoder_channels must be positive")
         if num_fuse_blocks < 0:
             raise ValueError("num_fuse_blocks must be non-negative")
+        if fusion not in {"mean", "weighted_sum", "concat"}:
+            raise ValueError(
+                "fusion must be one of: mean, weighted_sum, concat"
+            )
 
+        self.fusion = fusion
         self.projections = nn.ModuleList(
             [_Projection(channels, decoder_channels) for channels in self.in_channels]
         )
+        if fusion == "weighted_sum":
+            # Equal weights at initialization reproduce mean fusion. Training
+            # can then emphasize the scales most useful for hard cloud classes.
+            self.scale_logits = nn.Parameter(torch.zeros(len(self.in_channels)))
+        elif fusion == "concat":
+            self.concat_fuse = _Projection(
+                len(self.in_channels) * decoder_channels, decoder_channels
+            )
         self.fuse = nn.Sequential(
             *[_DepthwiseSeparableBlock(decoder_channels) for _ in range(num_fuse_blocks)]
         )
@@ -96,6 +110,14 @@ class LightCloudHead(BaseDecodeHead):
                 )
             projected.append(feature)
 
-        fused = torch.stack(projected, dim=0).mean(dim=0)
+        if self.fusion == "mean":
+            fused = torch.stack(projected, dim=0).mean(dim=0)
+        elif self.fusion == "weighted_sum":
+            features = torch.stack(projected, dim=0)
+            weights = self.scale_logits.softmax(dim=0).view(-1, 1, 1, 1, 1)
+            fused = (weights * features).sum(dim=0)
+        else:
+            fused = self.concat_fuse(torch.cat(projected, dim=1))
+
         fused = self.fuse(fused)
         return self.cls_seg(fused)
