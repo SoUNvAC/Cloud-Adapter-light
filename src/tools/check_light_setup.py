@@ -30,6 +30,7 @@ def main():
 
     import torch
     from mmengine.config import Config
+    from mmengine.registry import init_default_scope
     from mmseg.registry import MODELS
 
     import cloud_adapter.models  # noqa: F401
@@ -38,6 +39,7 @@ def main():
         raise RuntimeError("CUDA is not available to PyTorch")
 
     cfg = Config.fromfile(args.config)
+    init_default_scope(cfg.get("default_scope", "mmseg"))
     checkpoint = Path(cfg.model.backbone.init_cfg.checkpoint)
     if not checkpoint.is_file():
         raise FileNotFoundError(
