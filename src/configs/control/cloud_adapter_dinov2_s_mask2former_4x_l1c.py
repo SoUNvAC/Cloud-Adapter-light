@@ -132,9 +132,33 @@ model = dict(
     ),
 )
 
+# Mask2Former's Hungarian matching can produce an Inf/NaN cost matrix under
+# FP16 autocast. Keep this diagnostic run in FP32 for stable matching. The
+# deployable V1/V2 configs continue to use AMP.
+optim_wrapper = dict(
+    _delete_=True,
+    type="OptimWrapper",
+    constructor="PEFTOptimWrapperConstructor",
+    optimizer=dict(
+        type="AdamW",
+        lr=1e-4,
+        weight_decay=0.05,
+        eps=1e-8,
+        betas=(0.9, 0.999),
+    ),
+    clip_grad=dict(max_norm=1.0, norm_type=2),
+    paramwise_cfg=dict(
+        custom_keys={
+            "norm": dict(decay_mult=0.0),
+            "pos_embed": dict(decay_mult=0.0),
+        },
+        norm_decay_mult=0.0,
+    ),
+)
+
 # Mask2Former is only a diagnostic upper-bound decoder and uses more memory.
-train_dataloader = dict(batch_size=2)
-val_dataloader = dict(batch_size=2)
+train_dataloader = dict(batch_size=1)
+val_dataloader = dict(batch_size=1)
 test_dataloader = val_dataloader
 
 work_dir = "./work_dirs/cloud_adapter_dinov2_s_mask2former_4x_l1c"
