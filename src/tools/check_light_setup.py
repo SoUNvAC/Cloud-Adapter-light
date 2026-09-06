@@ -97,14 +97,22 @@ def main():
             )
         )
 
-        if cfg.model.get("auxiliary_head") is not None:
+        decode_head_type = str(cfg.model.decode_head.type)
+        needs_train_smoke = (
+            cfg.model.get("auxiliary_head") is not None
+            or "Mask2Former" in decode_head_type
+        )
+        if needs_train_smoke:
             model.train()
             num_classes = cfg.model.decode_head.num_classes
             target = torch.randint(
                 0, num_classes, (1, 512, 512), device="cuda", dtype=torch.long
             )
             data_sample.gt_sem_seg = PixelData(data=target)
-            with torch.autocast(device_type="cuda", dtype=torch.float16):
+            use_amp = cfg.optim_wrapper.type == "AmpOptimWrapper"
+            with torch.autocast(
+                device_type="cuda", dtype=torch.float16, enabled=use_amp
+            ):
                 losses = model(dummy, data_samples=[data_sample], mode="loss")
                 total_loss = sum(
                     reduce_loss_value(value, torch)
