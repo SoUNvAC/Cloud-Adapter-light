@@ -25,12 +25,21 @@ def count_files(path: Path) -> int:
     return sum(1 for item in path.rglob("*") if item.is_file())
 
 
+def reduce_loss_value(value, torch):
+    if torch.is_tensor(value):
+        return value.mean()
+    if isinstance(value, (list, tuple)):
+        return sum(item.mean() for item in value)
+    raise TypeError(f"Unsupported loss value type: {type(value)!r}")
+
+
 def main():
     args = parse_args()
 
     import torch
     from mmengine.config import Config
     from mmengine.registry import init_default_scope
+    from mmengine.structures import PixelData
     from mmseg.registry import MODELS
     from mmseg.structures import SegDataSample
 
@@ -76,7 +85,7 @@ def main():
     print(f"Trainable ratio: {100.0 * trainable / total:.2f}%")
 
     if not args.skip_forward:
-        model = model.cuda().eval()
+        model = model.cuda()
         dummy = torch.randn(1, 3, 512, 512, device="cuda")
         data_sample = SegDataSample(
             metainfo=dict(
@@ -87,6 +96,27 @@ def main():
                 flip=False,
             )
         )
+
+        if cfg.model.get("auxiliary_head") is not None:
+            model.train()
+            num_classes = cfg.model.decode_head.num_classes
+            target = torch.randint(
+                0, num_classes, (1, 512, 512), device="cuda", dtype=torch.long
+            )
+            data_sample.gt_sem_seg = PixelData(data=target)
+            with torch.autocast(device_type="cuda", dtype=torch.float16):
+                losses = model(dummy, data_samples=[data_sample], mode="loss")
+                total_loss = sum(
+                    reduce_loss_value(value, torch)
+                    for name, value in losses.items()
+                    if "loss" in name
+                )
+            total_loss.backward()
+            print(f"Training smoke loss: {total_loss.detach().item():.4f}")
+            model.zero_grad(set_to_none=True)
+            del losses, total_loss, target
+
+        model.eval()
         with torch.inference_mode(), torch.autocast(device_type="cuda", dtype=torch.float16):
             # Mask2Former needs batch metadata even for inference, whereas
             # mode="tensor" calls its head without batch_data_samples.
