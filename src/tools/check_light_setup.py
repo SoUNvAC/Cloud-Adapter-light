@@ -125,13 +125,18 @@ def main():
             del losses, total_loss, target
 
         model.eval()
+        torch.cuda.empty_cache()
+        torch.cuda.reset_peak_memory_stats()
         with torch.inference_mode(), torch.autocast(device_type="cuda", dtype=torch.float16):
             # Mask2Former needs batch metadata even for inference, whereas
             # mode="tensor" calls its head without batch_data_samples.
             output = model(dummy, data_samples=[data_sample], mode="predict")
         prediction = output[0].pred_sem_seg.data
         print(f"Forward output shape: {tuple(prediction.shape)}")
-        print(f"Peak allocated memory: {torch.cuda.max_memory_allocated() / 2**30:.2f} GiB")
+        print(
+            "Inference peak allocated memory: "
+            f"{torch.cuda.max_memory_allocated() / 2**30:.2f} GiB"
+        )
 
     print("Setup check passed")
 
