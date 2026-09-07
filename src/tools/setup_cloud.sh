@@ -1,6 +1,21 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+# The pinned PyTorch 2.1.0 CUDA 12.1 wheels are only published for CPython
+# 3.8-3.11. Check this before upgrading anything in an incompatible venv.
+python - <<'PY'
+import sys
+
+if not ((3, 8) <= sys.version_info[:2] <= (3, 11)):
+    version = ".".join(map(str, sys.version_info[:3]))
+    raise SystemExit(
+        f"Unsupported Python {version}. This setup requires Python 3.8-3.11 "
+        "(Python 3.10 is recommended) because torch==2.1.0 has no wheel for "
+        "newer Python versions. Create and activate a compatible environment, "
+        "then rerun tools/setup_cloud.sh."
+    )
+PY
+
 python -m pip install --upgrade pip setuptools wheel
 
 # Use the exact PyTorch minor version against which the official MMCV wheel
