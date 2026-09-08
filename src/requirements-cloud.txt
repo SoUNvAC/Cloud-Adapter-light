@@ -11,3 +11,4 @@ tensorboard
 opencv-python-headless
 Pillow
 huggingface_hub
+onnx==1.15.0
