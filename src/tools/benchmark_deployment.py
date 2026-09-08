@@ -26,6 +26,12 @@ def parse_args():
     parser.add_argument("--iters", type=int, default=100)
     parser.add_argument("--precision", choices=("fp16", "fp32"), default="fp16")
     parser.add_argument(
+        "--weight-dtype",
+        choices=("fp32", "fp16"),
+        default="fp32",
+        help="Resident model parameter dtype; use fp16 for an FP16 deployment baseline",
+    )
+    parser.add_argument(
         "--output-format",
         choices=("text", "tsv", "json"),
         default="text",
@@ -82,6 +88,8 @@ def main():
         model.init_weights()
         load_checkpoint(model, args.checkpoint, map_location="cpu", strict=False)
         model = model.cuda().eval()
+        if args.weight_dtype == "fp16":
+            model = model.half()
 
     size = args.input_size
     inputs = torch.randn(args.batch_size, 3, size, size, device="cuda")
@@ -131,6 +139,7 @@ def main():
     result = dict(
         gpu=torch.cuda.get_device_name(0),
         precision=args.precision,
+        weight_dtype=args.weight_dtype,
         batch_size=args.batch_size,
         input_size=size,
         parameters_m=total_params / 1e6,
@@ -162,6 +171,7 @@ def main():
     else:
         print(f'GPU: {result["gpu"]}')
         print(f'Precision: {result["precision"]}')
+        print(f'Weight dtype: {result["weight_dtype"]}')
         print(f'Input: {args.batch_size} x 3 x {size} x {size}')
         print(f'Parameters: {result["parameters_m"]:.3f} M')
         print(f'Checkpoint size: {result["checkpoint_mib"]:.2f} MiB')
