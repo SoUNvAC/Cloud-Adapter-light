@@ -75,14 +75,25 @@ def main():
     model.init_weights()
     model.train()
 
-    total = sum(parameter.numel() for parameter in model.parameters())
+    named_parameters = list(model.named_parameters())
+    total = sum(parameter.numel() for _, parameter in named_parameters)
+    teacher_total = sum(
+        parameter.numel()
+        for name, parameter in named_parameters
+        if name.startswith("teacher.")
+    )
+    deploy_total = total - teacher_total
     trainable = sum(
-        parameter.numel() for parameter in model.parameters() if parameter.requires_grad
+        parameter.numel()
+        for _, parameter in named_parameters
+        if parameter.requires_grad
     )
     print(f"GPU: {torch.cuda.get_device_name(0)}")
-    print(f"Total parameters: {total / 1e6:.2f} M")
+    print(f"Deployment parameters: {deploy_total / 1e6:.2f} M")
+    if teacher_total:
+        print(f"Training-only teacher parameters: {teacher_total / 1e6:.2f} M")
     print(f"Trainable parameters: {trainable / 1e6:.2f} M")
-    print(f"Trainable ratio: {100.0 * trainable / total:.2f}%")
+    print(f"Trainable/deployment ratio: {100.0 * trainable / deploy_total:.2f}%")
 
     if not args.skip_forward:
         model = model.cuda()
