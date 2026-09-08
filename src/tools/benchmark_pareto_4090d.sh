@@ -4,6 +4,8 @@ shopt -s nullglob
 
 precision="${1:-fp16}"
 iters="${2:-100}"
+benchmark_gpu=""
+rows=()
 
 run_case() {
   local name="$1"
@@ -12,7 +14,8 @@ run_case() {
   local checkpoints=("${work_dir}"/best_mIoU_iter_*.pth)
 
   if ((${#checkpoints[@]} == 0)); then
-    echo "${name}: skipped (no best checkpoint in ${work_dir})"
+    printf 'Skipping %s: no best checkpoint found\n' "${name}" >&2
+    rows+=("${name}"$'\t-'$'\t-'$'\t-'$'\t-'$'\t-'$'\t-'$'\t-')
     return 0
   fi
   if ((${#checkpoints[@]} > 1)); then
@@ -20,13 +23,23 @@ run_case() {
     return 1
   fi
 
-  echo "===== ${name} ====="
-  python tools/benchmark_deployment.py \
+  printf 'Benchmarking %s...\n' "${name}" >&2
+  local metrics
+  metrics="$(python tools/benchmark_deployment.py \
     --config "${config}" \
     --checkpoint "${checkpoints[0]}" \
     --batch-size 1 \
     --precision "${precision}" \
-    --iters "${iters}"
+    --iters "${iters}" \
+    --quiet \
+    --output-format tsv)"
+
+  local gpu params checkpoint mean median p90 throughput peak
+  IFS=$'\t' read -r gpu params checkpoint mean median p90 throughput peak <<< "${metrics}"
+  if [[ -z "${benchmark_gpu}" ]]; then
+    benchmark_gpu="${gpu}"
+  fi
+  rows+=("${name}"$'\t'"${params}"$'\t'"${checkpoint}"$'\t'"${mean}"$'\t'"${median}"$'\t'"${p90}"$'\t'"${throughput}"$'\t'"${peak}")
 }
 
 run_case \
@@ -63,3 +76,15 @@ run_case \
   "V9-Micro-Q25-D2-P2" \
   "configs/light/cloud_adapter_dinov2_s_mask2former_micro_q25_d2_p2_l1c.py" \
   "work_dirs/cloud_adapter_dinov2_s_mask2former_micro_q25_d2_p2_l1c"
+
+printf '\nGPU: %s | Precision: %s | Batch: 1 | Input: 512x512 | Iterations: %s\n\n' \
+  "${benchmark_gpu:-unknown}" "${precision}" "${iters}"
+printf '| %-25s | %10s | %10s | %9s | %9s | %9s | %9s | %10s |\n' \
+  "Model" "Params(M)" "Ckpt(MiB)" "Mean(ms)" "P50(ms)" "P90(ms)" "Img/s" "Peak(GiB)"
+printf '|---------------------------|-----------:|-----------:|----------:|----------:|----------:|----------:|-----------:|\n'
+
+for row in "${rows[@]}"; do
+  IFS=$'\t' read -r name params checkpoint mean median p90 throughput peak <<< "${row}"
+  printf '| %-25s | %10s | %10s | %9s | %9s | %9s | %9s | %10s |\n' \
+    "${name}" "${params}" "${checkpoint}" "${mean}" "${median}" "${p90}" "${throughput}" "${peak}"
+done
