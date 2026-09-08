@@ -142,7 +142,7 @@ class PMAAConvBlock(nn.Module):
         if self.return_multi_feats:
             return output
         else:
-            global_f = torch.zeros(output[-1].shape, requires_grad=True, device=output1.device)
+            global_f = torch.zeros_like(output[-1])
             for fea in output:
                 global_f = global_f + F.adaptive_avg_pool2d(
                     fea, output_size=output[-1].shape[-2:]

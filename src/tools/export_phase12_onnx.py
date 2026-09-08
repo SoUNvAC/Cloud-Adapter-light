@@ -48,19 +48,27 @@ class StaticMask2FormerLogits(nn.Module):
         return normalized.to(dtype=self.compute_dtype)
 
     def forward(self, rgb_images: Tensor) -> Tensor:
-        inputs = self.normalize(rgb_images)
-        features = self.segmentor.extract_feat(inputs)
-        all_cls_scores, all_mask_preds = self.segmentor.decode_head(features, None)
-        class_probabilities = F.softmax(all_cls_scores[-1], dim=-1)[..., :-1]
-        mask_probabilities = F.interpolate(
-            all_mask_preds[-1],
-            size=rgb_images.shape[-2:],
-            mode="bilinear",
-            align_corners=False,
-        ).sigmoid()
-        return torch.einsum(
-            "bqc,bqhw->bchw", class_probabilities, mask_probabilities
-        )
+        use_amp = self.compute_dtype == torch.float16 and rgb_images.is_cuda
+        with torch.autocast(
+            device_type=rgb_images.device.type,
+            dtype=torch.float16,
+            enabled=use_amp,
+        ):
+            inputs = self.normalize(rgb_images)
+            features = self.segmentor.extract_feat(inputs)
+            all_cls_scores, all_mask_preds = self.segmentor.decode_head(
+                features, None
+            )
+            class_probabilities = F.softmax(all_cls_scores[-1], dim=-1)[..., :-1]
+            mask_probabilities = F.interpolate(
+                all_mask_preds[-1],
+                size=rgb_images.shape[-2:],
+                mode="bilinear",
+                align_corners=False,
+            ).sigmoid()
+            return torch.einsum(
+                "bqc,bqhw->bchw", class_probabilities, mask_probabilities
+            )
 
 
 def parse_args():
@@ -102,7 +110,12 @@ def build_wrapper(args):
 
 def verify_pytorch_path(wrapper, cfg, rgb_images):
     normalized = wrapper.normalize(rgb_images)
-    with torch.inference_mode():
+    use_amp = wrapper.compute_dtype == torch.float16 and rgb_images.is_cuda
+    with torch.inference_mode(), torch.autocast(
+        device_type=rgb_images.device.type,
+        dtype=torch.float16,
+        enabled=use_amp,
+    ):
         wrapped_logits = wrapper(rgb_images)
         features = wrapper.segmentor.extract_feat(normalized)
         reference_logits = wrapper.segmentor.decode_head.predict(

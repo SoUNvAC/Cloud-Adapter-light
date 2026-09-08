@@ -207,8 +207,7 @@ class PMAAConvBlock(nn.Module):
         else:
             if self.return_last_feature:
                 return output[-1]
-            global_f = torch.zeros(
-                output[-1].shape, requires_grad=True, device=output1.device)
+            global_f = torch.zeros_like(output[-1])
             for fea in output:
                 global_f = global_f + F.adaptive_avg_pool2d(
                     fea, output_size=output[-1].shape[-2:]
@@ -472,8 +471,7 @@ class ConvNeXt(nn.Module):
             return tuple(outs)
         if self.return_last_feature:
             return outs[-1]
-        global_f = torch.zeros(
-            outs[-1].shape, requires_grad=True, device=outs[-1].device)
+        global_f = torch.zeros_like(outs[-1])
         for fea in outs:
             global_f = global_f + F.adaptive_avg_pool2d(
                 fea, output_size=outs[-1].shape[-2:]
