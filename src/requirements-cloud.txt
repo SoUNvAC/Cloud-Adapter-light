@@ -12,3 +12,4 @@ opencv-python-headless
 Pillow
 huggingface_hub
 onnx==1.15.0
+onnxruntime-gpu==1.18.0
