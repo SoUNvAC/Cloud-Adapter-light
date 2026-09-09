@@ -45,6 +45,14 @@ python -m pip install --only-binary=:all: \
   "onnx==1.15.0" \
   coloredlogs flatbuffers packaging protobuf sympy
 
+# The cu121 PyTorch runtime in some cloud images contains cuBLAS/cuDNN but
+# omits these three CUDA libraries that ORT links directly. Pin the versions
+# used by torch 2.1.0+cu121 so no CUDA-major mismatch is introduced.
+python -m pip install --only-binary=:all: \
+  "nvidia-cuda-runtime-cu12==12.1.105" \
+  "nvidia-curand-cu12==10.3.2.106" \
+  "nvidia-cufft-cu12==11.0.2.54"
+
 # Remove either CPU ORT or the CUDA 11 wheel so the Python module cannot be
 # shadowed by a second package with the same import name.
 python -m pip uninstall -y onnxruntime onnxruntime-gpu || true

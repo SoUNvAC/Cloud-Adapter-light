@@ -10,6 +10,7 @@ fi
 
 ort_cuda_library_path="$(python - <<'PY'
 from pathlib import Path
+import glob
 import site
 import sys
 
@@ -25,13 +26,23 @@ def add(path):
 
 
 add(Path(torch.__file__).resolve().parent / "lib")
-for site_dir in site.getsitepackages():
+site_dirs = list(site.getsitepackages())
+user_site = site.getusersitepackages()
+if user_site:
+    site_dirs.append(user_site)
+for site_dir in site_dirs:
     nvidia_dir = Path(site_dir) / "nvidia"
     if nvidia_dir.is_dir():
         for library_dir in sorted(nvidia_dir.glob("*/lib")):
             add(library_dir)
 add(Path(sys.prefix) / "lib")
-add("/usr/local/cuda/lib64")
+for pattern in (
+    "/usr/local/cuda*/lib64",
+    "/usr/local/cuda*/targets/x86_64-linux/lib",
+):
+    for library_dir in sorted(glob.glob(pattern)):
+        add(library_dir)
+add("/usr/lib/x86_64-linux-gnu")
 
 print(":".join(str(path) for path in candidates))
 PY
