@@ -12,7 +12,9 @@ def parse_args():
     parser.add_argument("--onnx", required=True)
     parser.add_argument("--output", required=True)
     parser.add_argument(
-        "--mode", choices=("mixed-fp16", "bf16", "fp32"), default="mixed-fp16"
+        "--mode",
+        choices=("mixed-fp16", "bf16", "mixed-bf16", "fp32"),
+        default="mixed-fp16",
     )
     parser.add_argument("--workspace-gib", type=float, default=4.0)
     parser.add_argument("--force", action="store_true")
@@ -153,7 +155,7 @@ def main():
         constrained_layers = constrain_sensitive_layers(network, trt)
         if not constrained_layers:
             raise RuntimeError("No numerically sensitive layers were constrained")
-    elif args.mode == "bf16":
+    elif args.mode in ("bf16", "mixed-bf16"):
         bf16_flag = getattr(trt.BuilderFlag, "BF16", None)
         if bf16_flag is None:
             raise RuntimeError(
@@ -164,6 +166,11 @@ def main():
         config.set_flag(bf16_flag)
         # Prevent the builder from substituting TF32 for the BF16 experiment.
         config.clear_flag(trt.BuilderFlag.TF32)
+        if args.mode == "mixed-bf16":
+            config.set_flag(trt.BuilderFlag.OBEY_PRECISION_CONSTRAINTS)
+            constrained_layers = constrain_sensitive_layers(network, trt)
+            if not constrained_layers:
+                raise RuntimeError("No numerically sensitive layers were constrained")
     else:
         # Strict FP32 is a diagnostic fallback, not the desired final engine.
         config.clear_flag(trt.BuilderFlag.TF32)

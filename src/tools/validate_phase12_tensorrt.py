@@ -202,6 +202,7 @@ def main():
     backend_names = {
         "mixed-fp16": "TensorRT-Mixed",
         "bf16": "TensorRT-BF16",
+        "mixed-bf16": "TensorRT-MixBF16",
         "fp32": "TensorRT-FP32",
     }
     tensorrt_backend_name = backend_names.get(engine_mode, "TensorRT")
