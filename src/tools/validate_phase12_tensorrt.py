@@ -1,4 +1,5 @@
 import argparse
+import json
 import os
 from pathlib import Path
 import sys
@@ -73,6 +74,10 @@ class TensorRTRunner:
         self.context = self.engine.create_execution_context()
         if self.context is None:
             raise RuntimeError("Could not create a TensorRT execution context")
+        # enqueueV3 on CUDA's default stream inserts extra global
+        # synchronization inside TensorRT. A dedicated stream avoids that
+        # warning while explicit stream dependencies preserve correctness.
+        self.stream = torch.cuda.Stream(device=torch.cuda.current_device())
 
         inputs = []
         outputs = []
@@ -111,9 +116,12 @@ class TensorRTRunner:
             )
         self.context.set_tensor_address(self.input_name, input_tensor.data_ptr())
         self.context.set_tensor_address(self.output_name, output_tensor.data_ptr())
-        stream = torch.cuda.current_stream(input_tensor.device)
-        if not self.context.execute_async_v3(stream.cuda_stream):
+        caller_stream = torch.cuda.current_stream(input_tensor.device)
+        self.stream.wait_stream(caller_stream)
+        if not self.context.execute_async_v3(self.stream.cuda_stream):
             raise RuntimeError("TensorRT execute_async_v3 returned false")
+        caller_stream.wait_stream(self.stream)
+        output_tensor.record_stream(self.stream)
         return output_tensor
 
 
@@ -183,6 +191,17 @@ def main():
         raise FileNotFoundError(onnx_path)
     if not engine_path.is_file():
         raise FileNotFoundError(engine_path)
+    metadata_path = engine_path.with_suffix(engine_path.suffix + ".json")
+    if metadata_path.is_file():
+        engine_metadata = json.loads(metadata_path.read_text(encoding="utf-8"))
+        engine_mode = engine_metadata.get("mode", "unknown")
+    else:
+        engine_mode = "unknown"
+    backend_names = {
+        "mixed-fp16": "TensorRT-Mixed",
+        "fp32": "TensorRT-FP32",
+    }
+    tensorrt_backend_name = backend_names.get(engine_mode, "TensorRT")
     image_paths = list_images(Path(args.image_dir), args.samples)
 
     wrapper_args = argparse.Namespace(
@@ -248,6 +267,7 @@ def main():
     pytorch_parity = parity_summary(pytorch_totals)
     ort_parity = parity_summary(ort_totals)
     print(f"TensorRT: {trt.__version__}")
+    print(f"Engine mode: {engine_mode}")
     print(f"Engine: {engine_path.stat().st_size / 2**20:.2f} MiB")
     print(
         f"TensorRT vs PyTorch ({len(image_paths)} images): "
@@ -297,7 +317,7 @@ def main():
     rows = [
         summarize_latency("PyTorch-FP16", pytorch_latencies),
         summarize_latency("ONNXRuntime-CUDA", ort_latencies),
-        summarize_latency("TensorRT-FP16", trt_latencies),
+        summarize_latency(tensorrt_backend_name, trt_latencies),
     ]
     print()
     print("| Backend          | Mean(ms) | P50(ms) | P90(ms) | Img/s |")

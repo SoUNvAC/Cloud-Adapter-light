@@ -7,7 +7,7 @@ import torch
 
 def parse_args():
     parser = argparse.ArgumentParser(
-        description="Build a static TensorRT 10 FP16 engine from the Phase 12 ONNX"
+        description="Build a static TensorRT 10 engine from the Phase 12 ONNX"
     )
     parser.add_argument("--onnx", required=True)
     parser.add_argument("--output", required=True)
