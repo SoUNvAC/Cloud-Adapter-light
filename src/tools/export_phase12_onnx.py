@@ -182,6 +182,28 @@ def main():
 
     exported = onnx.load(str(output_path), load_external_data=False)
     onnx.checker.check_model(exported)
+    sequence_ops = {
+        "ConcatFromSequence",
+        "SequenceAt",
+        "SequenceConstruct",
+        "SequenceEmpty",
+        "SequenceErase",
+        "SequenceInsert",
+        "SequenceLength",
+        "SplitToSequence",
+    }
+    sequence_nodes = [
+        node for node in exported.graph.node if node.op_type in sequence_ops
+    ]
+    if sequence_nodes:
+        details = ", ".join(
+            f"{node.name or '<unnamed>'}:{node.op_type}"
+            for node in sequence_nodes[:12]
+        )
+        raise RuntimeError(
+            "Export contains ONNX Sequence operators unsupported by TensorRT: "
+            + details
+        )
     custom_domains = sorted(
         {
             node.domain

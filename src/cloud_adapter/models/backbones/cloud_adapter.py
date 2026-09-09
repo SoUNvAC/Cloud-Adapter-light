@@ -574,7 +574,12 @@ class CloudAdapter(nn.Module):
         if batch_first:
             feats = feats.permute(1, 0, 2)  # 1025 2 1024
         if has_cls_token:
-            cls_token, feats = torch.tensor_split(feats, [1], dim=0)
+            # Static slicing is numerically identical to tensor_split here and
+            # exports as ordinary ONNX Slice nodes. torch.tensor_split with a
+            # list of split points is lowered to ONNX Sequence operators by
+            # PyTorch 2.1, which TensorRT 10 cannot parse.
+            cls_token = feats[:1]
+            feats = feats[1:]
         # 24 // 1
         # feat: 1024 2 1024
         feats = self.net[layer].forward(
