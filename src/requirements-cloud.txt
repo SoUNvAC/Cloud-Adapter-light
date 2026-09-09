@@ -12,4 +12,5 @@ opencv-python-headless
 Pillow
 huggingface_hub
 onnx==1.15.0
-onnxruntime-gpu==1.18.0
+# CUDA 12 ONNX Runtime is installed from Microsoft's matching wheel feed by
+# tools/install_onnxruntime_cu12.sh. PyPI's ORT 1.18.0 wheel targets CUDA 11.8.

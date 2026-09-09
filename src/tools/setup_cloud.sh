@@ -35,6 +35,7 @@ python -m pip install --no-cache-dir "mmcv==2.1.0" \
 python -m mim install "mmdet==3.3.0"
 python -m mim install "mmsegmentation==1.2.2"
 python -m pip install -r requirements-cloud.txt
+bash tools/install_onnxruntime_cu12.sh
 
 python - <<'PY'
 import torch

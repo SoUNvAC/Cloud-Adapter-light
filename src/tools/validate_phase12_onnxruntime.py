@@ -9,7 +9,12 @@ import time
 
 os.environ.setdefault("XFORMERS_DISABLED", "1")
 
-import cv2
+try:
+    import cv2
+except ImportError as error:
+    raise RuntimeError(
+        "OpenCV is missing. Run: bash tools/install_onnxruntime_cu12.sh"
+    ) from error
 import numpy as np
 import torch
 
@@ -161,8 +166,8 @@ def main():
         import onnxruntime as ort
     except ImportError as error:
         raise RuntimeError(
-            "Install the compatible GPU runtime with: "
-            "python -m pip install onnxruntime-gpu==1.18.0"
+            "Install the CUDA 12 GPU runtime with: "
+            "bash tools/install_onnxruntime_cu12.sh"
         ) from error
     if "CUDAExecutionProvider" not in ort.get_available_providers():
         raise RuntimeError(
@@ -193,6 +198,16 @@ def main():
             sess_options=options,
             providers=[("CUDAExecutionProvider", {"device_id": 0})],
         )
+        active_providers = session.get_providers()
+        if "CUDAExecutionProvider" not in active_providers:
+            raise RuntimeError(
+                "CUDAExecutionProvider failed to initialize and ONNX Runtime "
+                "fell back to CPU. Active providers: "
+                + ", ".join(active_providers)
+                + ". Install the CUDA 12/cuDNN 8 wheel with: "
+                "bash tools/install_onnxruntime_cu12.sh"
+            )
+        session.disable_fallback()
 
         max_abs_error = 0.0
         absolute_error_sum = 0.0
