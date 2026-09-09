@@ -2,6 +2,10 @@
 set -euo pipefail
 shopt -s nullglob
 
+# libonnxruntime_providers_cuda.so is loaded by dlopen, so expose the CUDA and
+# cuDNN libraries bundled in the active PyTorch environment before Python starts.
+source tools/activate_onnxruntime_cuda_libs.sh
+
 python - <<'PY'
 import importlib.util
 import sys
