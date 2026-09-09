@@ -1,0 +1,2 @@
+# Install after requirements-cloud.txt for the CUDA 12 deployment experiments.
+tensorrt-cu12==10.0.1
