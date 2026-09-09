@@ -45,24 +45,20 @@ def constrain_sensitive_layers(network, trt):
         )
         if layer_type is not None
     }
-    sensitive_elementwise = {
-        operation
-        for operation in (
-            getattr(trt.ElementWiseOperation, "DIV", None),
-            getattr(trt.ElementWiseOperation, "POW", None),
-        )
-        if operation is not None
-    }
-    sensitive_unary = {
-        operation
-        for operation in (
-            getattr(trt.UnaryOperation, "EXP", None),
-            getattr(trt.UnaryOperation, "LOG", None),
-            getattr(trt.UnaryOperation, "RECIP", None),
-            getattr(trt.UnaryOperation, "SQRT", None),
-        )
-        if operation is not None
-    }
+    # TensorRT 10.0.1's network.get_layer() exposes a generic ILayer rather
+    # than the typed IElementWiseLayer/IUnaryLayer subclasses, so `.op` is not
+    # available. ONNX parser layer names retain the operator name and provide
+    # a version-stable way to identify these sensitive operations.
+    sensitive_name_tokens = (
+        "/div",
+        "div_",
+        "/pow",
+        "pow_",
+        "/sqrt",
+        "sqrt_",
+        "/reciprocal",
+        "reciprocal_",
+    )
 
     constrained = []
     for index in range(network.num_layers):
@@ -91,11 +87,7 @@ def constrain_sensitive_layers(network, trt):
                 "instance_norm",
                 "/norm",
             )
-        )
-        if layer.type == getattr(trt.LayerType, "ELEMENTWISE", None):
-            force_fp32 = force_fp32 or layer.op in sensitive_elementwise
-        if layer.type == getattr(trt.LayerType, "UNARY", None):
-            force_fp32 = force_fp32 or layer.op in sensitive_unary
+        ) or any(token in name for token in sensitive_name_tokens)
         if not force_fp32:
             continue
 
