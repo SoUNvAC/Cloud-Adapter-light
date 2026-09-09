@@ -13,3 +13,4 @@ venv/
 **.png
 ***.png
 ann_dir
+EXPERIMENT_LOG.md
