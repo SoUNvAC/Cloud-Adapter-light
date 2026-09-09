@@ -11,6 +11,9 @@ def parse_args():
     )
     parser.add_argument("--onnx", required=True)
     parser.add_argument("--output", required=True)
+    parser.add_argument(
+        "--mode", choices=("mixed-fp16", "fp32"), default="mixed-fp16"
+    )
     parser.add_argument("--workspace-gib", type=float, default=4.0)
     parser.add_argument("--force", action="store_true")
     return parser.parse_args()
@@ -29,6 +32,80 @@ def tensor_description(engine, trt):
             }
         )
     return tensors
+
+
+def constrain_sensitive_layers(network, trt):
+    """Keep overflow-prone reductions and nonlinearities in FP32."""
+    sensitive_types = {
+        layer_type
+        for layer_type in (
+            getattr(trt.LayerType, "NORMALIZATION", None),
+            getattr(trt.LayerType, "REDUCE", None),
+            getattr(trt.LayerType, "SOFTMAX", None),
+        )
+        if layer_type is not None
+    }
+    sensitive_elementwise = {
+        operation
+        for operation in (
+            getattr(trt.ElementWiseOperation, "DIV", None),
+            getattr(trt.ElementWiseOperation, "POW", None),
+        )
+        if operation is not None
+    }
+    sensitive_unary = {
+        operation
+        for operation in (
+            getattr(trt.UnaryOperation, "EXP", None),
+            getattr(trt.UnaryOperation, "LOG", None),
+            getattr(trt.UnaryOperation, "RECIP", None),
+            getattr(trt.UnaryOperation, "SQRT", None),
+        )
+        if operation is not None
+    }
+
+    constrained = []
+    for index in range(network.num_layers):
+        layer = network.get_layer(index)
+        tensors = [
+            layer.get_input(tensor_index)
+            for tensor_index in range(layer.num_inputs)
+        ] + [
+            layer.get_output(tensor_index)
+            for tensor_index in range(layer.num_outputs)
+        ]
+        if not any(
+            tensor is not None and tensor.dtype in (trt.float16, trt.float32)
+            for tensor in tensors
+        ):
+            continue
+        name = layer.name.lower()
+        force_fp32 = layer.type in sensitive_types or any(
+            token in name
+            for token in (
+                "layernorm",
+                "layer_norm",
+                "groupnorm",
+                "group_norm",
+                "instancenorm",
+                "instance_norm",
+                "/norm",
+            )
+        )
+        if layer.type == getattr(trt.LayerType, "ELEMENTWISE", None):
+            force_fp32 = force_fp32 or layer.op in sensitive_elementwise
+        if layer.type == getattr(trt.LayerType, "UNARY", None):
+            force_fp32 = force_fp32 or layer.op in sensitive_unary
+        if not force_fp32:
+            continue
+
+        layer.precision = trt.float32
+        for output_index in range(layer.num_outputs):
+            output = layer.get_output(output_index)
+            if output is not None and output.dtype in (trt.float16, trt.float32):
+                layer.set_output_type(output_index, trt.float32)
+        constrained.append(layer.name)
+    return constrained
 
 
 def main():
@@ -76,13 +153,22 @@ def main():
     config.set_memory_pool_limit(
         trt.MemoryPoolType.WORKSPACE, int(args.workspace_gib * 2**30)
     )
-    config.set_flag(trt.BuilderFlag.FP16)
-    # Avoid TF32 changing the few graph regions that intentionally remain FP32.
-    config.clear_flag(trt.BuilderFlag.TF32)
+    constrained_layers = []
+    if args.mode == "mixed-fp16":
+        config.set_flag(trt.BuilderFlag.FP16)
+        config.set_flag(trt.BuilderFlag.OBEY_PRECISION_CONSTRAINTS)
+        constrained_layers = constrain_sensitive_layers(network, trt)
+        if not constrained_layers:
+            raise RuntimeError("No numerically sensitive layers were constrained")
+    else:
+        # Strict FP32 is a diagnostic fallback, not the desired final engine.
+        config.clear_flag(trt.BuilderFlag.TF32)
     print(
-        f"Building TensorRT {trt.__version__} FP16 engine with "
+        f"Building TensorRT {trt.__version__} {args.mode} engine with "
         f"{args.workspace_gib:.1f} GiB workspace..."
     )
+    if constrained_layers:
+        print(f"FP32-constrained sensitive layers: {len(constrained_layers)}")
     serialized = builder.build_serialized_network(network, config)
     if serialized is None:
         raise RuntimeError("TensorRT failed to build the serialized engine")
@@ -102,7 +188,10 @@ def main():
         "torch_cuda_version": torch.version.cuda,
         "gpu": torch.cuda.get_device_name(0),
         "compute_capability": list(torch.cuda.get_device_capability(0)),
+        "mode": args.mode,
         "workspace_gib": args.workspace_gib,
+        "fp32_constrained_layer_count": len(constrained_layers),
+        "fp32_constrained_layers": constrained_layers,
         "engine_size_mib": output_path.stat().st_size / 2**20,
         "io_tensors": tensor_description(engine, trt),
     }

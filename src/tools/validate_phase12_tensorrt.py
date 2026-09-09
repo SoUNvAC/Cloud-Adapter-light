@@ -132,10 +132,16 @@ def benchmark_tensorrt(runner, rgb_cuda, output, warmup, iters):
 
 
 def update_parity(reference, candidate, totals):
-    error = np.abs(reference - candidate)
-    totals["max_abs"] = max(totals["max_abs"], float(error.max()))
-    totals["abs_sum"] += float(error.sum(dtype=np.float64))
-    totals["values"] += error.size
+    reference_finite = np.isfinite(reference)
+    candidate_finite = np.isfinite(candidate)
+    totals["reference_nonfinite"] += int((~reference_finite).sum())
+    totals["candidate_nonfinite"] += int((~candidate_finite).sum())
+    finite = reference_finite & candidate_finite
+    if finite.any():
+        error = np.abs(reference[finite] - candidate[finite])
+        totals["max_abs"] = max(totals["max_abs"], float(error.max()))
+        totals["abs_sum"] += float(error.sum(dtype=np.float64))
+        totals["values"] += error.size
     totals["equal"] += int(
         (reference.argmax(axis=1) == candidate.argmax(axis=1)).sum()
     )
@@ -145,8 +151,10 @@ def update_parity(reference, candidate, totals):
 def parity_summary(totals):
     return (
         totals["max_abs"],
-        totals["abs_sum"] / totals["values"],
+        totals["abs_sum"] / totals["values"] if totals["values"] else float("nan"),
         100.0 * totals["equal"] / totals["pixels"],
+        totals["reference_nonfinite"],
+        totals["candidate_nonfinite"],
     )
 
 
@@ -206,6 +214,8 @@ def main():
         "values": 0,
         "equal": 0,
         "pixels": 0,
+        "reference_nonfinite": 0,
+        "candidate_nonfinite": 0,
     }
     pytorch_totals = template.copy()
     ort_totals = template.copy()
@@ -237,25 +247,51 @@ def main():
 
     pytorch_parity = parity_summary(pytorch_totals)
     ort_parity = parity_summary(ort_totals)
+    print(f"TensorRT: {trt.__version__}")
+    print(f"Engine: {engine_path.stat().st_size / 2**20:.2f} MiB")
+    print(
+        f"TensorRT vs PyTorch ({len(image_paths)} images): "
+        f"max_abs={pytorch_parity[0]:.6g}, "
+        f"finite_mean_abs={pytorch_parity[1]:.6g}, "
+        f"argmax_agreement={pytorch_parity[2]:.5f}%, "
+        f"reference_nonfinite={pytorch_parity[3]}, "
+        f"tensorrt_nonfinite={pytorch_parity[4]}"
+    )
+    print(
+        f"TensorRT vs ONNX Runtime ({len(image_paths)} images): "
+        f"max_abs={ort_parity[0]:.6g}, "
+        f"finite_mean_abs={ort_parity[1]:.6g}, "
+        f"argmax_agreement={ort_parity[2]:.5f}%, "
+        f"reference_nonfinite={ort_parity[3]}, "
+        f"tensorrt_nonfinite={ort_parity[4]}"
+    )
+
+    if any(
+        (
+            pytorch_parity[3],
+            pytorch_parity[4],
+            ort_parity[3],
+            ort_parity[4],
+        )
+    ):
+        raise RuntimeError(
+            "Non-finite output values detected before benchmarking: "
+            f"PyTorch={pytorch_parity[3]}, ORT={ort_parity[3]}, "
+            f"TensorRT={pytorch_parity[4]}"
+        )
+    if pytorch_parity[2] < args.min_agreement:
+        raise RuntimeError(
+            f"TensorRT/PyTorch argmax agreement {pytorch_parity[2]:.5f}% "
+            f"is below the {args.min_agreement:.5f}% gate"
+        )
+    print("Numerical gate: PASSED")
+
     pytorch_latencies = benchmark_pytorch(wrapper, first_rgb, args.warmup, args.iters)
     ort_latencies = benchmark_onnxruntime(
         ort_session, first_rgb, args.warmup, args.iters
     )
     trt_latencies = benchmark_tensorrt(
         trt_runner, first_rgb, first_trt_output, args.warmup, args.iters
-    )
-
-    print(f"TensorRT: {trt.__version__}")
-    print(f"Engine: {engine_path.stat().st_size / 2**20:.2f} MiB")
-    print(
-        f"TensorRT vs PyTorch ({len(image_paths)} images): "
-        f"max_abs={pytorch_parity[0]:.6g}, mean_abs={pytorch_parity[1]:.6g}, "
-        f"argmax_agreement={pytorch_parity[2]:.5f}%"
-    )
-    print(
-        f"TensorRT vs ONNX Runtime ({len(image_paths)} images): "
-        f"max_abs={ort_parity[0]:.6g}, mean_abs={ort_parity[1]:.6g}, "
-        f"argmax_agreement={ort_parity[2]:.5f}%"
     )
 
     rows = [
@@ -277,11 +313,6 @@ def main():
         f"\nTensorRT vs PyTorch: {rows[0][1] / trt_mean:.3f}x speedup; "
         f"TensorRT vs ORT: {rows[1][1] / trt_mean:.3f}x speedup"
     )
-    if pytorch_parity[2] < args.min_agreement:
-        raise RuntimeError(
-            f"TensorRT/PyTorch argmax agreement {pytorch_parity[2]:.5f}% "
-            f"is below the {args.min_agreement:.5f}% gate"
-        )
     print("Deployment gate: PASSED")
 
 
