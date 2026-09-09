@@ -21,8 +21,8 @@ if [[ ! -f "${ort_onnx_path}" ]]; then
   echo "Missing ${ort_onnx_path}; run tools/export_phase14_onnx_4090d.sh first"
   exit 1
 fi
-if [[ "${trt_mode}" != "mixed-fp16" && "${trt_mode}" != "fp32" ]]; then
-  echo "TRT_MODE must be mixed-fp16 or fp32, got: ${trt_mode}"
+if [[ "${trt_mode}" != "mixed-fp16" && "${trt_mode}" != "bf16" && "${trt_mode}" != "fp32" ]]; then
+  echo "TRT_MODE must be mixed-fp16, bf16, or fp32, got: ${trt_mode}"
   exit 2
 fi
 

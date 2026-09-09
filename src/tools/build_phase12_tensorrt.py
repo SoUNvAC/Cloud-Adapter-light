@@ -12,7 +12,7 @@ def parse_args():
     parser.add_argument("--onnx", required=True)
     parser.add_argument("--output", required=True)
     parser.add_argument(
-        "--mode", choices=("mixed-fp16", "fp32"), default="mixed-fp16"
+        "--mode", choices=("mixed-fp16", "bf16", "fp32"), default="mixed-fp16"
     )
     parser.add_argument("--workspace-gib", type=float, default=4.0)
     parser.add_argument("--force", action="store_true")
@@ -138,20 +138,32 @@ def main():
         errors = [str(parser.get_error(i)) for i in range(parser.num_errors)]
         raise RuntimeError("TensorRT ONNX parsing failed:\n" + "\n".join(errors))
 
-    if not builder.platform_has_fast_fp16:
-        raise RuntimeError("The current GPU does not report fast native FP16 support")
-
     config = builder.create_builder_config()
     config.set_memory_pool_limit(
         trt.MemoryPoolType.WORKSPACE, int(args.workspace_gib * 2**30)
     )
     constrained_layers = []
     if args.mode == "mixed-fp16":
+        if not builder.platform_has_fast_fp16:
+            raise RuntimeError(
+                "The current GPU does not report fast native FP16 support"
+            )
         config.set_flag(trt.BuilderFlag.FP16)
         config.set_flag(trt.BuilderFlag.OBEY_PRECISION_CONSTRAINTS)
         constrained_layers = constrain_sensitive_layers(network, trt)
         if not constrained_layers:
             raise RuntimeError("No numerically sensitive layers were constrained")
+    elif args.mode == "bf16":
+        bf16_flag = getattr(trt.BuilderFlag, "BF16", None)
+        if bf16_flag is None:
+            raise RuntimeError(
+                f"TensorRT {trt.__version__} does not expose BuilderFlag.BF16"
+            )
+        if torch.cuda.get_device_capability(0)[0] < 8:
+            raise RuntimeError("BF16 Tensor Core inference requires Ampere or newer")
+        config.set_flag(bf16_flag)
+        # Prevent the builder from substituting TF32 for the BF16 experiment.
+        config.clear_flag(trt.BuilderFlag.TF32)
     else:
         # Strict FP32 is a diagnostic fallback, not the desired final engine.
         config.clear_flag(trt.BuilderFlag.TF32)

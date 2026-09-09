@@ -56,6 +56,8 @@ def torch_dtype_for_trt(trt_dtype, trt):
         mapping[trt.uint8] = torch.uint8
     if hasattr(trt, "int64"):
         mapping[trt.int64] = torch.int64
+    if hasattr(trt, "bfloat16"):
+        mapping[trt.bfloat16] = torch.bfloat16
     if trt_dtype not in mapping:
         raise TypeError(f"Unsupported TensorRT tensor dtype: {trt_dtype}")
     return mapping[trt_dtype]
@@ -199,6 +201,7 @@ def main():
         engine_mode = "unknown"
     backend_names = {
         "mixed-fp16": "TensorRT-Mixed",
+        "bf16": "TensorRT-BF16",
         "fp32": "TensorRT-FP32",
     }
     tensorrt_backend_name = backend_names.get(engine_mode, "TensorRT")
