@@ -118,12 +118,25 @@ def benchmark_onnxruntime(onnx_path, cpu_inputs, args, ort):
     if ort_output.type not in output_types:
         raise TypeError(f"Unsupported ONNX output type: {ort_output.type}")
     numpy_dtype, torch_dtype = output_types[ort_output.type]
-    output_shape = tuple(int(dimension) for dimension in ort_output.shape)
     expected_shape = (1, 4, args.input_size, args.input_size)
-    if output_shape != expected_shape:
+    reported_shape = tuple(ort_output.shape)
+    if len(reported_shape) != len(expected_shape):
         raise RuntimeError(
-            f"Expected ONNX output {expected_shape}, found {output_shape}"
+            f"Expected rank-{len(expected_shape)} ONNX output, found {reported_shape}"
         )
+    for index, (reported, expected) in enumerate(
+        zip(reported_shape, expected_shape)
+    ):
+        # torch.onnx may retain symbolic names such as
+        # Einsumseg_logits_dim_0 even though this graph has static input and
+        # a previously verified static deployment contract. Validate every
+        # concrete dimension and use the contract for buffer allocation.
+        if isinstance(reported, int) and reported != expected:
+            raise RuntimeError(
+                f"ONNX output dimension {index} is {reported}, expected {expected}; "
+                f"reported shape is {reported_shape}"
+            )
+    output_shape = expected_shape
 
     rgb_cuda = torch.empty_like(cpu_inputs[0], device="cuda")
     logits_cuda = torch.empty(output_shape, dtype=torch_dtype, device="cuda")
