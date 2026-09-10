@@ -324,11 +324,16 @@ def print_results(results, baseline_size, max_miou_drop, min_speedup):
             f"{benchmark['images_s']:5.2f} | {speedup:7.3f}x | {status:<6} |"
         )
 
+    print()
     if passed_sizes:
-        selected = min(passed_sizes, key=lambda size: results[size]["benchmark"]["mean_ms"])
+        selected = min(
+            passed_sizes,
+            key=lambda size: results[size]["benchmark"]["mean_ms"],
+        )
         print(f"Resolution gate: PASSED; fastest eligible candidate is {selected}x{selected}")
     else:
         print("Resolution gate: no lower-resolution candidate passed")
+    print()
     print(
         "Checksums (anti-lazy only): "
         + ", ".join(
