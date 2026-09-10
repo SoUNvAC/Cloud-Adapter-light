@@ -2,6 +2,7 @@ import argparse
 import gc
 from pathlib import Path
 import statistics
+import sys
 import time
 
 import cv2
@@ -131,18 +132,46 @@ def percentile(values, fraction):
     return ordered[index]
 
 
-def benchmark(session, inputs, warmup, iters):
+def benchmark_session_run(session, inputs, warmup, iters):
+    def infer_once(input_array):
+        return session.run(None, {"rgb_images": input_array})[0]
+
+    return benchmark_callable(infer_once, inputs, warmup, iters, "session.run")
+
+
+def benchmark_ortvalue_iobinding(session, inputs, warmup, iters, ort, size):
+    input_value = ort.OrtValue.ortvalue_from_shape_and_type(
+        [1, 3, size, size], np.float32, "cuda", 0
+    )
+    output_value = ort.OrtValue.ortvalue_from_shape_and_type(
+        [1, size, size], np.uint8, "cuda", 0
+    )
+    binding = session.io_binding()
+    binding.bind_ortvalue_input("rgb_images", input_value)
+    binding.bind_ortvalue_output("seg_mask", output_value)
+
+    def infer_once(input_array):
+        input_value.update_inplace(input_array)
+        session.run_with_iobinding(binding)
+        return output_value.numpy()
+
+    return benchmark_callable(
+        infer_once, inputs, warmup, iters, "OrtValue-I/O-binding"
+    )
+
+
+def benchmark_callable(infer_once, inputs, warmup, iters, mode):
     started = time.perf_counter()
-    mask = session.run(None, {"rgb_images": inputs[0]})[0]
+    mask = infer_once(inputs[0])
     first_ms = (time.perf_counter() - started) * 1000.0
     checksum = int(mask.sum(dtype=np.int64))
     for index in range(warmup):
-        session.run(None, {"rgb_images": inputs[index % len(inputs)]})
+        infer_once(inputs[index % len(inputs)])
 
     latencies = []
     for index in range(iters):
         started = time.perf_counter()
-        mask = session.run(None, {"rgb_images": inputs[index % len(inputs)]})[0]
+        mask = infer_once(inputs[index % len(inputs)])
         latencies.append((time.perf_counter() - started) * 1000.0)
         checksum += int(mask.sum(dtype=np.int64))
     mean_ms = statistics.fmean(latencies)
@@ -153,6 +182,7 @@ def benchmark(session, inputs, warmup, iters):
         "p90_ms": percentile(latencies, 0.90),
         "images_s": 1000.0 / mean_ms,
         "checksum": checksum,
+        "mode": mode,
     }
 
 
@@ -172,15 +202,16 @@ def print_results(metrics, benchmark_result, startup_ms, artifact_mib, agreement
         print(f"| {class_name:<12} | {metrics['class_iou'][index]:6.3f} |")
     print()
     print(
-        "| Artifact(MiB) | Startup(ms) | First(ms) | Mean(ms) | "
+        "| I/O mode | Artifact(MiB) | Startup(ms) | First(ms) | Mean(ms) | "
         "P50(ms) | P90(ms) | Img/s |"
     )
     print(
-        "|--------------:|------------:|----------:|---------:|"
+        "|:---------|--------------:|------------:|----------:|---------:|"
         "--------:|--------:|------:|"
     )
     print(
-        f"| {artifact_mib:13.2f} | {startup_ms:11.2f} | "
+        f"| {benchmark_result['mode']} | {artifact_mib:13.2f} | "
+        f"{startup_ms:11.2f} | "
         f"{benchmark_result['first_ms']:9.3f} | {benchmark_result['mean_ms']:8.3f} | "
         f"{benchmark_result['p50_ms']:7.3f} | {benchmark_result['p90_ms']:7.3f} | "
         f"{benchmark_result['images_s']:5.2f} |"
@@ -260,9 +291,22 @@ def main():
         load_rgb_image(path, args.input_size)
         for path in image_paths[: args.parity_samples]
     ]
-    benchmark_result = benchmark(
-        benchmark_session, benchmark_inputs, args.warmup, args.iters
+    benchmark_result = benchmark_ortvalue_iobinding(
+        benchmark_session,
+        benchmark_inputs,
+        args.warmup,
+        args.iters,
+        ort,
+        args.input_size,
     )
+    torch_modules = [
+        name for name in sys.modules if name == "torch" or name.startswith("torch.")
+    ]
+    if torch_modules:
+        raise RuntimeError(
+            "Standalone validator unexpectedly imported PyTorch modules: "
+            + ", ".join(torch_modules[:10])
+        )
     print_results(
         metrics,
         benchmark_result,
