@@ -190,8 +190,13 @@ class DinoVisionTransformer(BaseModule):
         class_pos_embed = pos_embed[:, 0]
         patch_pos_embed = pos_embed[:, 1:]
         dim = x.shape[-1]
-        w0 = w // self.patch_size
-        h0 = h // self.patch_size
+        # All deployment exports in this project use static input shapes. Cast
+        # traced shape values before constructing scale_factor so PyTorch's
+        # ONNX tracer passes Python floats (rather than scalar tensors) to
+        # upsample_bicubic2d. This preserves the original DINO interpolation
+        # offset while making non-training resolutions exportable on PT 2.1.
+        w0 = int(w // self.patch_size)
+        h0 = int(h // self.patch_size)
         # we add a small number to avoid floating point error in the interpolation
         # see discussion at https://github.com/facebookresearch/dino/issues/8
         w0, h0 = w0 + 0.1, h0 + 0.1

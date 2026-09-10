@@ -24,15 +24,14 @@ mkdir -p "${output_dir}"
 model_args=(--model "512=${baseline_onnx}")
 for size in 448 320; do
   onnx_path="${output_dir}/v12_export_fpn_fp16_${size}.onnx"
-  if [[ ! -f "${onnx_path}" ]]; then
-    python tools/export_phase12_onnx.py \
-      --config "${config}" \
-      --checkpoint "${checkpoints[0]}" \
-      --output "${onnx_path}" \
-      --precision fp16 \
-      --input-size "${size}" \
-      --opset 17
-  fi
+  python tools/export_phase12_onnx.py \
+    --config "${config}" \
+    --checkpoint "${checkpoints[0]}" \
+    --output "${onnx_path}" \
+    --precision fp16 \
+    --input-size "${size}" \
+    --opset 17 \
+    --force
   model_args+=(--model "${size}=${onnx_path}")
 done
 
