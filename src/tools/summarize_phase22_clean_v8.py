@@ -1,11 +1,9 @@
 import argparse
 import json
 from pathlib import Path
-import re
 import statistics
 
-
-METRICS = ("aAcc", "mIoU", "mAcc", "mDice", "mFscore", "mPrecision", "mRecall")
+from mmseg_log_metrics import parse_last_evaluation
 
 
 def parse_args():
@@ -24,20 +22,6 @@ def parse_args():
     return parser.parse_args()
 
 
-def parse_metrics(log_path):
-    metric_pattern = re.compile(
-        r"\b(" + "|".join(METRICS) + r"):\s*(-?(?:\d+(?:\.\d*)?|\.\d+))"
-    )
-    result = None
-    for line in log_path.read_text(encoding="utf-8", errors="replace").splitlines():
-        values = {name: float(value) for name, value in metric_pattern.findall(line)}
-        if "mIoU" in values:
-            result = values
-    if result is None:
-        raise RuntimeError(f"No mIoU metrics found in {log_path}")
-    return result
-
-
 def main():
     args = parse_args()
     root = Path(args.root)
@@ -52,11 +36,13 @@ def main():
             raise RuntimeError(
                 f"Expected exactly one best checkpoint in {run_dir}, got {checkpoints}"
             )
+        evaluation = parse_last_evaluation(log_path)
         runs.append(
             {
                 "seed": seed,
                 "checkpoint": checkpoints[0].as_posix(),
-                "validation": parse_metrics(log_path),
+                "validation": evaluation["aggregate"],
+                "per_class": evaluation["per_class"],
             }
         )
 

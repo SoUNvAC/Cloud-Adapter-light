@@ -1,11 +1,9 @@
 import argparse
 import json
 from pathlib import Path
-import re
 import statistics
 
-
-METRICS = ("aAcc", "mIoU", "mAcc", "mDice", "mFscore", "mPrecision", "mRecall")
+from mmseg_log_metrics import parse_last_evaluation
 
 
 def parse_args():
@@ -24,20 +22,6 @@ def parse_args():
         default="work_dirs/phase23_clean_v12/summary.json",
     )
     return parser.parse_args()
-
-
-def parse_metrics(log_path):
-    pattern = re.compile(
-        r"\b(" + "|".join(METRICS) + r"):\s*(-?(?:\d+(?:\.\d*)?|\.\d+))"
-    )
-    result = None
-    for line in log_path.read_text(encoding="utf-8", errors="replace").splitlines():
-        values = {name: float(value) for name, value in pattern.findall(line)}
-        if "mIoU" in values:
-            result = values
-    if result is None:
-        raise RuntimeError(f"No mIoU metrics found in {log_path}")
-    return result
 
 
 def main():
@@ -66,7 +50,8 @@ def main():
             raise RuntimeError(
                 f"Expected exactly one best checkpoint in {run_dir}, got {checkpoints}"
             )
-        v12_metrics = parse_metrics(log_path)
+        evaluation = parse_last_evaluation(log_path)
+        v12_metrics = evaluation["aggregate"]
         v8_miou = float(v8_by_seed[seed]["validation"]["mIoU"])
         runs.append(
             {
@@ -74,6 +59,7 @@ def main():
                 "source_v8_checkpoint": v8_by_seed[seed]["checkpoint"],
                 "checkpoint": checkpoints[0].as_posix(),
                 "validation": v12_metrics,
+                "per_class": evaluation["per_class"],
                 "paired_mIoU_drop_from_v8": v8_miou - v12_metrics["mIoU"],
             }
         )

@@ -14,6 +14,10 @@ def make_run(root, seed, miou):
     run_dir.mkdir(parents=True)
     (run_dir / "best_mIoU_iter_40000.pth").touch()
     (run_dir / "val_eval.log").write_text(
+        "|    clear     | 86.0 | 90.0 |\n"
+        "| thick cloud  | 82.0 | 88.0 |\n"
+        "|  thin cloud  | 49.0 | 70.0 |\n"
+        "| cloud shadow | 56.0 | 72.0 |\n"
         "Iter(test) [134/134] aAcc: 88.0 mIoU: "
         f"{miou:.3f} mAcc: 80.0 mDice: 81.0\n",
         encoding="utf-8",
@@ -46,7 +50,12 @@ class CleanProtocolSummaryTests(unittest.TestCase):
                 text=True,
             )
             self.assertEqual(phase22.returncode, 0, phase22.stderr)
-            self.assertTrue(json.loads(phase22_output.read_text())["passed"])
+            phase22_result = json.loads(phase22_output.read_text())
+            self.assertTrue(phase22_result["passed"])
+            self.assertEqual(
+                phase22_result["runs"][0]["per_class"]["thin cloud"]["IoU"],
+                49.0,
+            )
 
             phase23_root = temporary / "phase23"
             for seed, miou in zip(seeds, (67.5, 67.8, 67.6)):
@@ -153,6 +162,92 @@ class CleanProtocolSummaryTests(unittest.TestCase):
             result = json.loads(output.read_text())
             self.assertTrue(result["passed"])
             self.assertEqual(result["selected_candidates"], ["blocks10"])
+
+    def test_phase25_paired_weak_class_gate(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            temporary = Path(temporary)
+            seeds = (42, 123, 3407)
+            phase23 = {
+                "passed": True,
+                "test_evaluated": False,
+                "runs": [],
+            }
+            for seed, miou in zip(seeds, (67.5, 67.7, 67.6)):
+                phase23["runs"].append(
+                    {
+                        "seed": seed,
+                        "validation": {"mIoU": miou},
+                        "per_class": {
+                            "thin cloud": {"IoU": 49.0},
+                            "cloud shadow": {"IoU": 56.0},
+                        },
+                    }
+                )
+            phase23_path = temporary / "phase23.json"
+            phase23_path.write_text(json.dumps(phase23), encoding="utf-8")
+            phase24_path = temporary / "phase24.json"
+            phase24_path.write_text(
+                json.dumps(
+                    {
+                        "passed": True,
+                        "test_evaluated": False,
+                        "candidates": [
+                            {
+                                "name": "blocks10",
+                                "qualifies": True,
+                                "speedup": 1.2,
+                                "benchmark": {
+                                    "active_block_indices": [
+                                        0,
+                                        2,
+                                        3,
+                                        4,
+                                        5,
+                                        6,
+                                        8,
+                                        9,
+                                        10,
+                                        11,
+                                    ]
+                                },
+                            }
+                        ],
+                    }
+                ),
+                encoding="utf-8",
+            )
+            root = temporary / "blocks10"
+            for seed, miou in zip(seeds, (67.2, 67.4, 67.3)):
+                make_run(root, seed, miou)
+            output = root / "summary.json"
+            process = subprocess.run(
+                [
+                    sys.executable,
+                    str(REPO_ROOT / "tools" / "summarize_phase25_block_kd.py"),
+                    "--phase23-summary",
+                    str(phase23_path),
+                    "--phase24-summary",
+                    str(phase24_path),
+                    "--candidate",
+                    "blocks10",
+                    "--root",
+                    str(root),
+                    "--seeds",
+                    *(str(seed) for seed in seeds),
+                    "--output",
+                    str(output),
+                ],
+                check=False,
+                capture_output=True,
+                text=True,
+            )
+            self.assertEqual(process.returncode, 0, process.stderr)
+            result = json.loads(output.read_text())
+            self.assertTrue(result["passed"])
+            self.assertAlmostEqual(result["mean_paired_mIoU_drop_from_v12"], 0.3)
+            self.assertAlmostEqual(
+                result["mean_paired_weak_mIoU_drop_from_v12"], 0.0
+            )
 
 
 if __name__ == "__main__":

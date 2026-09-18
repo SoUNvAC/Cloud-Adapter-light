@@ -73,6 +73,12 @@ class LogitDistillEncoderDecoder(EncoderDecoder):
     def _semantic_logits(self, model, features, batch_img_metas):
         return model.decode_head.predict(features, batch_img_metas, model.test_cfg)
 
+    def _reduce_pixel_distill_loss(self, pixel_kl, labels, valid):
+        del labels
+        if valid.any():
+            return pixel_kl[valid].mean()
+        return pixel_kl.mean() * 0.0
+
     def loss(self, inputs, data_samples):
         batch_img_metas = [sample.metainfo for sample in data_samples]
 
@@ -127,10 +133,7 @@ class LogitDistillEncoderDecoder(EncoderDecoder):
                 mode="nearest",
             ).squeeze(1).long()
         valid = labels != self.decode_head.ignore_index
-        if valid.any():
-            loss_kd = pixel_kl[valid].mean()
-        else:
-            loss_kd = pixel_kl.mean() * 0.0
+        loss_kd = self._reduce_pixel_distill_loss(pixel_kl, labels, valid)
 
         losses["distill.loss_kd"] = (
             loss_kd * temperature * temperature * self.distill_weight
