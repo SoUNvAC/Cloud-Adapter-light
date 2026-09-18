@@ -81,6 +81,13 @@ def parse_args():
     parser.add_argument("--precision", choices=("fp16", "fp32"), default="fp16")
     parser.add_argument("--input-size", type=int, default=512)
     parser.add_argument("--opset", type=int, default=17)
+    parser.add_argument(
+        "--active-block-indices",
+        nargs="+",
+        type=int,
+        default=None,
+        help="Optional static DINO block subset used by Phase 24+ students.",
+    )
     parser.add_argument("--force", action="store_true")
     return parser.parse_args()
 
@@ -98,6 +105,9 @@ def check_onnx_dependency():
 
 def build_wrapper(args):
     cfg = Config.fromfile(args.config)
+    active_block_indices = getattr(args, "active_block_indices", None)
+    if active_block_indices is not None:
+        cfg.model.backbone.active_block_indices = active_block_indices
     init_default_scope(cfg.get("default_scope", "mmseg"))
     model = MODELS.build(cfg.model)
     model.init_weights()

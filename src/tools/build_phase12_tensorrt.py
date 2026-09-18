@@ -13,7 +13,7 @@ def parse_args():
     parser.add_argument("--output", required=True)
     parser.add_argument(
         "--mode",
-        choices=("mixed-fp16", "bf16", "mixed-bf16", "fp32"),
+        choices=("mixed-fp16", "int8-qdq", "bf16", "mixed-bf16", "fp32"),
         default="mixed-fp16",
     )
     parser.add_argument("--workspace-gib", type=float, default=4.0)
@@ -129,6 +129,25 @@ def main():
         raise FileNotFoundError(onnx_path)
     if output_path.exists() and not args.force:
         raise FileExistsError(f"Engine already exists: {output_path} (use --force)")
+    explicit_qdq_counts = {}
+    if args.mode == "int8-qdq":
+        try:
+            import onnx
+        except ImportError as error:
+            raise RuntimeError("onnx==1.15.0 is required to verify Q/DQ input") from error
+        model = onnx.load(str(onnx_path), load_external_data=False)
+        for node in model.graph.node:
+            if node.op_type in ("QuantizeLinear", "DequantizeLinear"):
+                explicit_qdq_counts[node.op_type] = (
+                    explicit_qdq_counts.get(node.op_type, 0) + 1
+                )
+        if not all(
+            explicit_qdq_counts.get(name)
+            for name in ("QuantizeLinear", "DequantizeLinear")
+        ):
+            raise RuntimeError(
+                "int8-qdq mode requires explicit QuantizeLinear/DequantizeLinear nodes"
+            )
 
     logger = trt.Logger(trt.Logger.WARNING)
     builder = trt.Builder(logger)
@@ -145,7 +164,26 @@ def main():
         trt.MemoryPoolType.WORKSPACE, int(args.workspace_gib * 2**30)
     )
     constrained_layers = []
-    if args.mode == "mixed-fp16":
+    if args.mode == "int8-qdq":
+        if not builder.platform_has_fast_int8:
+            raise RuntimeError(
+                "The current GPU does not report fast native INT8 support"
+            )
+        if not builder.platform_has_fast_fp16:
+            raise RuntimeError(
+                "INT8 Q/DQ fallback layers require fast native FP16 support"
+            )
+        config.set_flag(trt.BuilderFlag.INT8)
+        config.set_flag(trt.BuilderFlag.FP16)
+        config.set_flag(trt.BuilderFlag.OBEY_PRECISION_CONSTRAINTS)
+        # Explicit Q/DQ ONNX carries all calibration scales. Supplying a
+        # TensorRT calibrator here would silently define a different method.
+        # Non-quantized layers use FP16, while the same sensitive reductions
+        # as the FP16 baseline remain constrained to FP32.
+        constrained_layers = constrain_sensitive_layers(network, trt)
+        if not constrained_layers:
+            raise RuntimeError("No numerically sensitive layers were constrained")
+    elif args.mode == "mixed-fp16":
         if not builder.platform_has_fast_fp16:
             raise RuntimeError(
                 "The current GPU does not report fast native FP16 support"
@@ -200,6 +238,7 @@ def main():
         "gpu": torch.cuda.get_device_name(0),
         "compute_capability": list(torch.cuda.get_device_capability(0)),
         "mode": args.mode,
+        "explicit_qdq_counts": explicit_qdq_counts,
         "workspace_gib": args.workspace_gib,
         "fp32_constrained_layer_count": len(constrained_layers),
         "fp32_constrained_layers": constrained_layers,
