@@ -7,6 +7,7 @@ source_onnx="work_dirs/phase14_v12_onnx/v12_export_fpn_fp16_512.onnx"
 output_dir="work_dirs/phase20_standalone_mask"
 mask_onnx="${output_dir}/v12_export_fpn_fp16_mask_512.onnx"
 iterations="${1:-200}"
+io_mode="${2:-session-run}"
 
 if [[ ! -f "${source_onnx}" ]]; then
   echo "Missing source ONNX: ${source_onnx}"
@@ -30,6 +31,7 @@ python tools/validate_phase20_standalone_ort.py \
   --parity-samples 20 \
   --warmup 20 \
   --iters "${iterations}" \
+  --io-mode "${io_mode}" \
   --expected-miou 68.728 \
   --max-miou-delta 0.05 \
   --min-agreement 99.99

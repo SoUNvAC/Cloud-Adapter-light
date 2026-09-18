@@ -31,6 +31,11 @@ def parse_args():
     parser.add_argument("--parity-samples", type=int, default=20)
     parser.add_argument("--warmup", type=int, default=20)
     parser.add_argument("--iters", type=int, default=200)
+    parser.add_argument(
+        "--io-mode",
+        choices=("session-run", "ortvalue-iobinding"),
+        default="session-run",
+    )
     parser.add_argument("--expected-miou", type=float, default=68.728)
     parser.add_argument("--max-miou-delta", type=float, default=0.05)
     parser.add_argument("--min-agreement", type=float, default=99.99)
@@ -291,14 +296,19 @@ def main():
         load_rgb_image(path, args.input_size)
         for path in image_paths[: args.parity_samples]
     ]
-    benchmark_result = benchmark_ortvalue_iobinding(
-        benchmark_session,
-        benchmark_inputs,
-        args.warmup,
-        args.iters,
-        ort,
-        args.input_size,
-    )
+    if args.io_mode == "session-run":
+        benchmark_result = benchmark_session_run(
+            benchmark_session, benchmark_inputs, args.warmup, args.iters
+        )
+    else:
+        benchmark_result = benchmark_ortvalue_iobinding(
+            benchmark_session,
+            benchmark_inputs,
+            args.warmup,
+            args.iters,
+            ort,
+            args.input_size,
+        )
     torch_modules = [
         name for name in sys.modules if name == "torch" or name.startswith("torch.")
     ]

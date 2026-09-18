@@ -14,3 +14,4 @@ venv/
 ***.png
 ann_dir
 EXPERIMENT_LOG.md
+!src/EXPERIMENT_LOG.md
