@@ -1,0 +1,6 @@
+# JetPack supplies TensorRT and CUDA system libraries. Do not replace them with
+# desktop pip TensorRT wheels.
+numpy==1.26.4
+Pillow
+onnx==1.15.0
+cuda-python>=12.2,<13
