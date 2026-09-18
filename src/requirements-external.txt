@@ -1,0 +1,2 @@
+# Install after requirements-cloud.txt for Phase 27+ geospatial evaluation.
+rasterio==1.3.10
