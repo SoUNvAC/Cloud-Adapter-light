@@ -40,6 +40,7 @@
 | 18 | V12-EndToEnd | ORT/TRT CPU 张量至 CPU 掩膜端到端基准 | 沿用 Phase 17 | 9.565 / 6.652 ms⁵ | 104.55 / 150.32 img/s⁵ | 44.75 / 95.54 MiB⁵ | 通过，固定 NVIDIA 平台首选 TensorRT |
 | 19 | V12-ResolutionPareto | 512/448/320 输入分辨率完整精度与端到端筛选 | 68.728 / 68.211 / 65.215⁶ | 8.804 / 9.894 / 8.247 ms⁶ | 113.58 / 101.07 / 121.26 img/s⁶ | 44.75 / 45.47 / 45.42 MiB⁶ | 失败，固定回512输入 |
 | 20 | V12-StandaloneMask | ONNX 图内 ArgMax/Cast，移除运行时 PyTorch 后处理 | 68.728 | 13.942 ms⁷ | 71.73 img/s⁷ | 44.75 MiB | 通过，最终采用纯 session.run |
+| 21 | Clean-Protocol | 恢复官方 train/val/test，执行全量哈希与类别分布审计 | 不训练 | 不适用 | 不适用 | Manifest | 通过；Phase 22 起禁止用 test 选模 |
 
 ¹ Phase 8 此处采用 Phase 11 中同机测得的 Native-FP16 结果；早期 autocast 基准为 23.448 ms、42.65 img/s、101.03 MiB。
 
@@ -976,6 +977,52 @@ mask图与原 logits图外部 argmax 的20图像素一致率为100.00000%，anti
 Phase 20 完成。原生掩膜 ONNX 在完整测试集上无精度损失，输出契约与独立运行时均通过，正式作为可移植交付产物。纯 ORT运行默认采用更快、更简单的 `session.run`，预分配 CUDA OrtValue不进入默认路径；工具保留 `--io-mode ortvalue-iobinding` 仅用于复现实验。
 
 独立 ORT的13.942 ms仍明显慢于依赖 PyTorch CUDA tensor桥接的9.565 ms，也慢于 TensorRT-FP32的6.652 ms。因此运行方案分为三档：44.75 MiB mask ONNX加纯 ORT用于最少依赖和跨设备交付；logits ONNX加优化 I/O用于允许自定义设备内存桥接的 ORT集成；固定 NVIDIA设备继续优先采用目标机重建的 TensorRT-FP32。下一步不再在4090D上微调 Python I/O，转入真实目标设备复测。
+
+## Phase 21 — 无泄漏评估协议与数据完整性审计
+
+### 简介
+
+Phase 1–20 的基础数据配置将 validation 和 test 同时指向 `img_dir/test`，多个训练配置又使用 validation mIoU 保存最佳 checkpoint。因此，历史测试集参与了 checkpoint、结构和部署候选选择。Phase 21 不删除或改写这些历史结果，而是将它们明确保留为开发期结果，并为 Phase 22 之后建立独立的官方 train/val/test 协议。
+
+### 目标与止损线
+
+- 恢复 CloudSEN12 High 原始的8,490张 train、535张 val、975张 test 三分割。
+- 对全部图像和标注计算 SHA-256，任意两个 split 的精确图像重叠和图像-标注对重叠必须均为0。
+- 所有图像必须存在同名标注，标签值只能为0、1、2、3。
+- val/test 相对 train 的四类像素分布 total-variation distance 必须均不超过0.10。
+- 任一硬门槛失败则停止后续训练，先重建数据；不得以随机 patch 切分规避场景泄漏问题。
+
+### 协议与代码改动
+
+- 保留 Phase 1–20 配置不变，以保证既有结果可复现。
+- 新增 `configs/protocol/cloud_adapter_dinov2_s_mask2former_export_fpn_l1c_clean.py`，validation 使用 `img_dir/val`，test 保持 `img_dir/test`，并启用确定性训练设置。
+- 修正 `tools/prepare_cloudsen12_l1c.py`，数据就绪检查现在要求 train、val、test 三分割全部存在。
+- 新增 `tools/audit_cloudsen12_protocol.py`，生成逐样本哈希、标注直方图和完整 manifest。
+- 一键入口：`bash tools/run_phase21_protocol_audit_4090d.sh`。本 Phase 不训练模型。
+
+### 实验结果
+
+数据归档 SHA-256 为 `a019db9779eda7080b60f2220c696747dbc26c469896e0fc4865d22b72c248de`，与下载源提供的校验值一致。
+
+| Split | Samples | Clear | Thick cloud | Thin cloud | Cloud shadow | TV vs train |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| Train | 8,490 | 54.649% | 26.810% | 9.678% | 8.863% | 0.0000 |
+| Val | 535 | 53.592% | 26.831% | 10.775% | 8.802% | 0.0112 |
+| Test | 975 | 52.535% | 28.997% | 8.955% | 9.514% | 0.0284 |
+
+| Split pair | Exact image overlap | Exact image-label pair overlap |
+| --- | ---: | ---: |
+| Train / Val | 0 | 0 |
+| Train / Test | 0 | 0 |
+| Val / Test | 0 | 0 |
+
+三个 split 的图像/标注数量完全配对，没有非法标签值，全部门槛通过。机器可读摘要保存于 `eval_result/phase21_protocol/result.json`；逐样本 manifest 默认写入被忽略的 `work_dirs/phase21_protocol/`，避免把约10,000条本地路径与哈希记录提交到仓库。
+
+### 结论与后续约束
+
+Phase 21 通过，说明官方三分割本身没有发现精确内容泄漏，原问题来自训练配置错误地用 test 代替 val。Phase 1–20 的数值继续作为开发历史保存，但不作为无偏最终测试证据。Phase 22 起，所有 checkpoint 和方向选择只能读取 val；test 只允许在结构、训练策略和阈值冻结后运行。
+
+由于团队已经观察过历史 test 聚合结果，后续论文还必须增加此前未用于开发的外部数据集或新地域 holdout，作为真正的外部泛化证据；Phase 21 不能消除既往的人为测试集暴露。
 
 ## 后续维护规则
 

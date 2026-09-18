@@ -31,7 +31,9 @@ def main():
     dataset_dir = data_dir / "cloudsen12_high_l1c"
     expected = [
         dataset_dir / "img_dir" / "train",
+        dataset_dir / "img_dir" / "val",
         dataset_dir / "ann_dir" / "train",
+        dataset_dir / "ann_dir" / "val",
         dataset_dir / "img_dir" / "test",
         dataset_dir / "ann_dir" / "test",
     ]

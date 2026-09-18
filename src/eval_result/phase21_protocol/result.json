@@ -1,0 +1,61 @@
+{
+  "phase": 21,
+  "passed": true,
+  "archive_sha256": "a019db9779eda7080b60f2220c696747dbc26c469896e0fc4865d22b72c248de",
+  "expected_counts": {
+    "train": 8490,
+    "val": 535,
+    "test": 975
+  },
+  "counts": {
+    "train": 8490,
+    "val": 535,
+    "test": 975
+  },
+  "class_names": [
+    "clear",
+    "thick cloud",
+    "thin cloud",
+    "cloud shadow"
+  ],
+  "class_proportions": {
+    "train": [
+      0.5464874483250055,
+      0.2680958966905574,
+      0.09678485003180443,
+      0.08863180495263269
+    ],
+    "val": [
+      0.5359247439375547,
+      0.26830627584011757,
+      0.10774506185656396,
+      0.08802391836576373
+    ],
+    "test": [
+      0.5253480099409055,
+      0.2899651356232472,
+      0.08954739301632612,
+      0.09513946141952123
+    ]
+  },
+  "class_total_variation_from_train": {
+    "val": 0.011170590974319723,
+    "test": 0.028376895399578356
+  },
+  "overlaps": {
+    "train_val": {
+      "exact_image_overlap": 0,
+      "exact_pair_overlap": 0
+    },
+    "train_test": {
+      "exact_image_overlap": 0,
+      "exact_pair_overlap": 0
+    },
+    "val_test": {
+      "exact_image_overlap": 0,
+      "exact_pair_overlap": 0
+    }
+  },
+  "max_class_tv": 0.1,
+  "failed_gates": []
+}
