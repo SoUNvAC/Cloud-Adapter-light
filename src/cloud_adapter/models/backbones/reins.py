@@ -35,9 +35,16 @@ class Reins(nn.Module):
         self.create_model()
 
     def create_model(self):
+        # The original vendored REIN file referenced these layers and scale
+        # without constructing them, so every REIN config failed at model
+        # build time. These are the two feature projections and learnable
+        # residual scale used by forward_delta_feat().
+        self.mlp_token2feat = nn.Linear(self.embed_dims, self.embed_dims)
+        self.mlp_delta_f = nn.Linear(self.embed_dims, self.embed_dims)
+        self.scale = nn.Parameter(torch.tensor(self.scale_init))
         self.learnable_tokens = nn.Parameter(
             torch.empty([self.num_layers, self.token_length, self.embed_dims])
-        ) 
+        )
         val = math.sqrt(
             6.0
             / float(
@@ -47,8 +54,9 @@ class Reins(nn.Module):
         nn.init.uniform_(self.learnable_tokens.data, -val, val)
         nn.init.kaiming_uniform_(self.mlp_delta_f.weight, a=math.sqrt(5))
         nn.init.kaiming_uniform_(self.mlp_token2feat.weight, a=math.sqrt(5))
-        self.transform = nn.Linear(self.embed_dims, self.query_dims)
-        self.merge = nn.Linear(self.query_dims * 3, self.query_dims)
+        if self.link_token_to_query:
+            self.transform = nn.Linear(self.embed_dims, self.query_dims)
+            self.merge = nn.Linear(self.query_dims * 3, self.query_dims)
         if self.zero_mlp_delta_f:
             del self.scale
             self.scale = 1.0
