@@ -3,6 +3,7 @@ from torch import nn as nn
 from .cloud_adapter import CloudAdapter
 from .dino_v2 import DinoVisionTransformer
 from .utils import set_requires_grad, set_train
+from .structured_pruning import resolve_active_block_indices
 import torch
 import torch.nn.functional as F
 
@@ -14,6 +15,7 @@ class CloudAdapterDinoVisionTransformer(DinoVisionTransformer):
         cloud_adapter_config=None,
         has_cat=False,
         save_backbone=False,
+        active_block_indices=None,
         # [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, ],
         adapter_index=[0, 6, 12, 18],  # Transformer Block 的索引
         **kwargs,
@@ -23,6 +25,20 @@ class CloudAdapterDinoVisionTransformer(DinoVisionTransformer):
         self.has_cat = has_cat
         self.save_backbone = save_backbone
         self.adapter_index = adapter_index
+        self.active_block_indices = resolve_active_block_indices(
+            len(self.blocks),
+            active_block_indices,
+            self.adapter_index,
+            self.out_indices,
+        )
+        self._active_block_index_set = set(self.active_block_indices)
+        if len(self.active_block_indices) != len(self.blocks):
+            # Preserve original block numbers so a full DINOv2 checkpoint still
+            # maps active weights by name. Inactive modules have no parameters
+            # and disappear from the deployable checkpoint and exported graph.
+            for index in range(len(self.blocks)):
+                if index not in self._active_block_index_set:
+                    self.blocks[index] = nn.Identity()
 
     def forward_features(self, x, masks=None):
         B, _, h, w = x.shape
@@ -32,6 +48,8 @@ class CloudAdapterDinoVisionTransformer(DinoVisionTransformer):
         outs = []
         cur_idx = 0  # 交互模块的索引
         for idx, blk in enumerate(self.blocks):
+            if idx not in self._active_block_index_set:
+                continue
             x = blk(x)
             if idx in self.adapter_index:
                 x = self.cloud_adapter.forward(

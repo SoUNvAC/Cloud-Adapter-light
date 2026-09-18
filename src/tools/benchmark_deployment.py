@@ -24,6 +24,12 @@ def parse_args():
     parser.add_argument("--input-size", type=int, default=512)
     parser.add_argument("--warmup", type=int, default=20)
     parser.add_argument("--iters", type=int, default=100)
+    parser.add_argument(
+        "--active-block-indices",
+        nargs="+",
+        type=int,
+        help="Optional static DINO block subset used by structured-pruning screens.",
+    )
     parser.add_argument("--precision", choices=("fp16", "fp32"), default="fp16")
     parser.add_argument(
         "--weight-dtype",
@@ -83,6 +89,8 @@ def main():
             raise RuntimeError("CUDA is not available to PyTorch")
 
         cfg = Config.fromfile(args.config)
+        if args.active_block_indices is not None:
+            cfg.model.backbone.active_block_indices = args.active_block_indices
         init_default_scope(cfg.get("default_scope", "mmseg"))
         model = MODELS.build(cfg.model)
         model.init_weights()
@@ -143,6 +151,7 @@ def main():
         batch_size=args.batch_size,
         input_size=size,
         parameters_m=total_params / 1e6,
+        active_block_indices=args.active_block_indices,
         checkpoint_mib=checkpoint_size,
         latency_mean_ms=mean_ms,
         latency_median_ms=median_ms,

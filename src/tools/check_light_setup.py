@@ -57,13 +57,19 @@ def main():
             "Run: bash tools/prepare_dinov2_small.sh"
         )
 
-    data_root = Path(cfg.train_dataloader.dataset.data_root)
-    expected_dirs = [
-        data_root / "img_dir" / "train",
-        data_root / "ann_dir" / "train",
-        data_root / "img_dir" / "test",
-        data_root / "ann_dir" / "test",
-    ]
+    expected_dirs = []
+    for loader_name in ("train_dataloader", "val_dataloader", "test_dataloader"):
+        loader = cfg[loader_name]
+        dataset = loader.dataset
+        data_root = Path(dataset.data_root)
+        prefix = dataset.data_prefix
+        expected_dirs.extend(
+            [
+                data_root / prefix.img_path,
+                data_root / prefix.seg_map_path,
+            ]
+        )
+    expected_dirs = list(dict.fromkeys(expected_dirs))
     missing = [str(path) for path in expected_dirs if not path.is_dir()]
     if missing:
         raise FileNotFoundError("Missing dataset directories: " + ", ".join(missing))

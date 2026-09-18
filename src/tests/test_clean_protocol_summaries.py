@@ -98,6 +98,62 @@ class CleanProtocolSummaryTests(unittest.TestCase):
             self.assertEqual(process.returncode, 1)
             self.assertFalse(json.loads((root / "summary.json").read_text())["passed"])
 
+    def test_phase24_selects_only_qualified_candidate(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            temporary = Path(temporary)
+            phase23_summary = temporary / "phase23.json"
+            phase23_summary.write_text(
+                json.dumps(
+                    {
+                        "passed": True,
+                        "test_evaluated": False,
+                        "runs": [
+                            {"seed": 42, "validation": {"mIoU": 67.5}},
+                            {"seed": 123, "validation": {"mIoU": 67.6}},
+                            {"seed": 3407, "validation": {"mIoU": 67.7}},
+                        ],
+                    }
+                ),
+                encoding="utf-8",
+            )
+            root = temporary / "screen"
+            values = {
+                "baseline12": (67.5, 10.0),
+                "blocks10": (62.5, 8.0),
+                "blocks8": (58.0, 6.0),
+                "blocks6": (50.0, 5.0),
+                "blocks4": (40.0, 4.0),
+            }
+            for name, (miou, latency) in values.items():
+                candidate = root / name
+                candidate.mkdir(parents=True)
+                (candidate / "val_eval.log").write_text(
+                    f"Iter(test) [134/134] mIoU: {miou}\n", encoding="utf-8"
+                )
+                (candidate / "benchmark.json").write_text(
+                    json.dumps({"latency_mean_ms": latency}), encoding="utf-8"
+                )
+            output = root / "summary.json"
+            process = subprocess.run(
+                [
+                    sys.executable,
+                    str(REPO_ROOT / "tools" / "summarize_phase24_block_screen.py"),
+                    "--phase23-summary",
+                    str(phase23_summary),
+                    "--root",
+                    str(root),
+                    "--output",
+                    str(output),
+                ],
+                check=False,
+                capture_output=True,
+                text=True,
+            )
+            self.assertEqual(process.returncode, 0, process.stderr)
+            result = json.loads(output.read_text())
+            self.assertTrue(result["passed"])
+            self.assertEqual(result["selected_candidates"], ["blocks10"])
+
 
 if __name__ == "__main__":
     unittest.main()
