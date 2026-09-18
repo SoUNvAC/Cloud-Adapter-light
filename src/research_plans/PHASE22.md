@@ -15,8 +15,15 @@ Run on the 24-GiB RTX 4090D environment:
 
 ```bash
 cd src
-bash tools/run_phase22_clean_v8_3seed_4090d.sh
+bash tools/run_phase22_oneclick_4090d.sh
 ```
+
+The one-click entry prepares missing DINOv2-S weights, locates either supported
+dataset layout, runs all three seeds, validates and summarizes them, and writes
+the complete console transcript plus final JSON to one file:
+`work_dirs/phase22_clean_v8/PHASE22_REPORT.txt`. Send only that report for the
+Phase 22 decision. It never starts Phase 23. Interrupted runs with an MMEngine
+`last_checkpoint` resume automatically; completed seeds are reused.
 
 This independently trains seeds 42, 123, and 3407 for 40,000 iterations. Each
 run starts from the same converted DINOv2-S initialization. It does not load a
