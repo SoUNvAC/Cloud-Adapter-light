@@ -1,5 +1,6 @@
 # Copyright (c) OpenMMLab. All rights reserved.
 import argparse
+import logging
 import os
 import os.path as osp
 
@@ -9,6 +10,7 @@ import sys
 sys.path.append(os.curdir)
 
 from mmengine.config import Config, DictAction
+from mmengine.logging import print_log
 from mmengine.runner import Runner
 import cloud_adapter.datasets
 
@@ -135,6 +137,22 @@ def main():
 
     # build the runner from config
     runner = Runner.from_cfg(cfg)
+
+    # Match the training-side deterministic exception.  Some CUDA kernels used
+    # by Mask2Former (for example cumsum in sine positional encoding) do not
+    # provide deterministic implementations in PyTorch 2.1.  Phase configs can
+    # explicitly opt into warning instead of aborting so evaluation uses the
+    # same preregistered policy as training.
+    if cfg.get("deterministic_warn_only", False):
+        import torch
+
+        torch.use_deterministic_algorithms(True, warn_only=True)
+        print_log(
+            "Deterministic algorithms remain enabled in warn-only mode for "
+            "operations without a deterministic CUDA implementation.",
+            logger="current",
+            level=logging.WARNING,
+        )
 
     # start testing
     runner.test()
