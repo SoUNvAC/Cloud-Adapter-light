@@ -109,6 +109,17 @@ def main():
         # if 'runner_type' is set in the cfg
         runner = RUNNERS.build(cfg)
 
+    if cfg.get("deterministic_warn_only", False):
+        import torch
+
+        torch.use_deterministic_algorithms(True, warn_only=True)
+        print_log(
+            "Deterministic algorithms remain enabled in warn-only mode for "
+            "operations without a deterministic CUDA implementation.",
+            logger="current",
+            level=logging.WARNING,
+        )
+
     # start training
     runner.train()
 

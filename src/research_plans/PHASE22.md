@@ -30,6 +30,13 @@ run starts from the same converted DINOv2-S initialization. It does not load a
 Phase 1--20 student checkpoint. The official validation split selects the best
 checkpoint. The test split is not evaluated in Phase 22.
 
+Reproducibility fixes the seed, sets `CUBLAS_WORKSPACE_CONFIG=:4096:8`, and
+disables cuDNN benchmarking. PyTorch 2.1 does not provide a deterministic CUDA
+implementation for the `cumsum` inside Mask2Former sine positional encoding;
+the runner therefore keeps deterministic algorithms enabled in warn-only mode
+for unsupported operations. The warning is retained in the report, and the
+three-seed dispersion gate remains mandatory.
+
 ## Pre-registered gates
 
 - Every run must finish and produce exactly one `best_mIoU_iter_*.pth`.

@@ -33,5 +33,9 @@ test_dataloader = dict(
 )
 
 randomness = dict(seed=42, deterministic=True)
+# PyTorch 2.1 has no deterministic CUDA implementation for the cumsum used by
+# Mask2Former sine positional encoding. Keep deterministic algorithms enabled
+# everywhere else, but warn instead of aborting for that documented exception.
+deterministic_warn_only = True
 
 work_dir = "./work_dirs/phase22_clean_v8_seed42"
