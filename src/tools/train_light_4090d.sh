@@ -9,6 +9,9 @@ if (($# > 0)); then shift; fi
 export CUDA_VISIBLE_DEVICES="${CUDA_VISIBLE_DEVICES:-0}"
 export PYTHONUNBUFFERED=1
 export OMP_NUM_THREADS="${OMP_NUM_THREADS:-8}"
+# Required by torch deterministic algorithms for CUDA >= 10.2 CuBLAS GEMMs.
+# Fixing this here keeps all clean-protocol phases on the same reproducible path.
+export CUBLAS_WORKSPACE_CONFIG="${CUBLAS_WORKSPACE_CONFIG:-:4096:8}"
 
 python tools/check_light_setup.py --config "${config}"
 

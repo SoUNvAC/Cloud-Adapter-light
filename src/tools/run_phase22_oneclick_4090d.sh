@@ -34,6 +34,7 @@ PY
 }
 trap finish_report EXIT
 set -e
+export CUBLAS_WORKSPACE_CONFIG="${CUBLAS_WORKSPACE_CONFIG:-:4096:8}"
 
 echo "===== PHASE 22 ONE-CLICK RUN ====="
 echo "STARTED_AT=$(date --iso-8601=seconds 2>/dev/null || date)"
@@ -42,6 +43,7 @@ echo "GIT_COMMIT=$(git rev-parse HEAD 2>/dev/null || echo unavailable)"
 echo "GIT_STATUS_BEGIN"
 git status --short 2>/dev/null || true
 echo "GIT_STATUS_END"
+echo "CUBLAS_WORKSPACE_CONFIG=${CUBLAS_WORKSPACE_CONFIG}"
 python --version || true
 nvidia-smi --query-gpu=name,driver_version,memory.total \
   --format=csv,noheader 2>/dev/null || true

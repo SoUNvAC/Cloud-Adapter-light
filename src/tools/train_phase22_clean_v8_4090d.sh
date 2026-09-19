@@ -18,8 +18,11 @@ if [[ -e "${work_dir}" ]]; then
   if [[ -f "${work_dir}/last_checkpoint" ]]; then
     echo "Resuming interrupted Phase 22 run: ${work_dir}"
     resume_args=(--resume)
+  elif ! find "${work_dir}" -maxdepth 2 -type f -name '*.pth' -print -quit \
+    | grep -q .; then
+    echo "Restarting zero-checkpoint Phase 22 directory: ${work_dir}"
   else
-    echo "Refusing incomplete run without last_checkpoint: ${work_dir}" >&2
+    echo "Refusing checkpoint-bearing run without last_checkpoint: ${work_dir}" >&2
     exit 2
   fi
 fi
