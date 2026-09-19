@@ -11,7 +11,9 @@ resume_args=()
 if [[ -e "${work_dir}" ]]; then
   mapfile -t completed < <(find "${work_dir}" -maxdepth 1 -type f \
     -name 'best_mIoU_iter_*.pth' -print)
-  if [[ "${#completed[@]}" -eq 1 && -f "${work_dir}/val_eval.log" ]]; then
+  if [[ "${#completed[@]}" -eq 1 \
+    && -f "${work_dir}/val_eval.log" \
+    && -f "${work_dir}/VAL_EVAL_COMPLETE" ]]; then
     echo "Reusing completed Phase 22 run: ${work_dir}"
     exit 0
   fi
@@ -62,3 +64,7 @@ python tools/test.py \
   "randomness.seed=${seed}" \
   "randomness.deterministic=True" \
   2>&1 | tee "${work_dir}/val_eval.log"
+
+# A log file is created by tee even when evaluation aborts.  Keep a separate
+# marker so a failed evaluation is never mistaken for a reusable completed run.
+touch "${work_dir}/VAL_EVAL_COMPLETE"
