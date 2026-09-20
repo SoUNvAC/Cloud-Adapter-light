@@ -11,7 +11,7 @@ def parse_args():
     parser = argparse.ArgumentParser(
         description="Gate the Phase 24 zero-shot static block-pruning screen."
     )
-    parser.add_argument("--phase23-summary", required=True)
+    parser.add_argument("--phase22-summary", required=True)
     parser.add_argument("--root", default="work_dirs/phase24_block_screen")
     parser.add_argument("--min-speedup", type=float, default=1.15)
     parser.add_argument("--max-val-miou-drop", type=float, default=8.0)
@@ -35,12 +35,14 @@ def parse_last_miou(path):
 
 def main():
     args = parse_args()
-    phase23_path = Path(args.phase23_summary)
-    phase23 = json.loads(phase23_path.read_text(encoding="utf-8"))
-    if not phase23.get("passed") or phase23.get("test_evaluated") is not False:
+    phase22_path = Path(args.phase22_summary)
+    phase22 = json.loads(phase22_path.read_text(encoding="utf-8"))
+    if phase22.get("phase") != 22 or not phase22.get("passed"):
         raise RuntimeError(
-            "Phase 23 must pass on validation with test sealed before screening"
+            "Phase 22 V8 must pass on validation before structured screening"
         )
+    if phase22.get("test_evaluated") is not False:
+        raise RuntimeError("Phase 22 did not keep test sealed")
 
     root = Path(args.root)
     rows = []
@@ -73,11 +75,11 @@ def main():
             selected.append(row["name"])
 
     gates = {
-        "baseline_matches_phase23_seed42": abs(
+        "baseline_matches_phase22_seed42": abs(
             baseline_miou
             - next(
                 run["validation"]["mIoU"]
-                for run in phase23["runs"]
+                for run in phase22["runs"]
                 if int(run["seed"]) == 42
             )
         )
@@ -89,6 +91,7 @@ def main():
     }
     result = {
         "phase": 24,
+        "accuracy_anchor": "Phase 22 V8",
         "selection_split": "val",
         "test_evaluated": False,
         "screen_type": "zero-shot static block pruning, seed 42",

@@ -144,16 +144,17 @@ class CleanProtocolSummaryTests(unittest.TestCase):
     def test_phase24_selects_only_qualified_candidate(self):
         with tempfile.TemporaryDirectory() as temporary:
             temporary = Path(temporary)
-            phase23_summary = temporary / "phase23.json"
-            phase23_summary.write_text(
+            phase22_summary = temporary / "phase22.json"
+            phase22_summary.write_text(
                 json.dumps(
                     {
+                        "phase": 22,
                         "passed": True,
                         "test_evaluated": False,
                         "runs": [
-                            {"seed": 42, "validation": {"mIoU": 67.5}},
-                            {"seed": 123, "validation": {"mIoU": 67.6}},
-                            {"seed": 3407, "validation": {"mIoU": 67.7}},
+                            {"seed": 42, "validation": {"mIoU": 73.98}},
+                            {"seed": 123, "validation": {"mIoU": 73.65}},
+                            {"seed": 3407, "validation": {"mIoU": 73.78}},
                         ],
                     }
                 ),
@@ -161,9 +162,9 @@ class CleanProtocolSummaryTests(unittest.TestCase):
             )
             root = temporary / "screen"
             values = {
-                "baseline12": (67.5, 10.0),
-                "blocks10": (62.5, 8.0),
-                "blocks8": (58.0, 6.0),
+                "baseline12": (73.98, 10.0),
+                "blocks10": (68.5, 8.0),
+                "blocks8": (64.0, 6.0),
                 "blocks6": (50.0, 5.0),
                 "blocks4": (40.0, 4.0),
             }
@@ -181,8 +182,8 @@ class CleanProtocolSummaryTests(unittest.TestCase):
                 [
                     sys.executable,
                     str(REPO_ROOT / "tools" / "summarize_phase24_block_screen.py"),
-                    "--phase23-summary",
-                    str(phase23_summary),
+                    "--phase22-summary",
+                    str(phase22_summary),
                     "--root",
                     str(root),
                     "--output",

@@ -2,10 +2,12 @@
 
 ## Dependency and motivation
 
-Phase 24 starts only after the three-seed clean V12 baseline passes Phase 23.
-The historical decoder ablations showed that query compression yields little
-latency reduction, while almost all V12 parameters remain in frozen DINOv2-S.
-This phase therefore screens whole-backbone structured compression.
+Phase 24 starts after Phase 23 closes the standard-FPN branch. It returns to the
+passed three-seed Phase 22 V8 accuracy anchor and keeps its deformable decoder
+unchanged. The historical decoder ablations and Phase 23 failure show that
+replacing the decoder costs too much accuracy, while most V8 parameters and
+latency remain in frozen DINOv2-S. This phase therefore screens whole-backbone
+structured compression.
 
 The proposed mechanism replaces inactive DINO blocks with parameter-free
 identities while retaining original block numbers for pretrained weight
@@ -19,7 +21,7 @@ cd src
 bash tools/run_phase24_block_screen_4090d.sh
 ```
 
-Using only the Phase 23 seed-42 checkpoint and official validation split, test:
+Using only the Phase 22 seed-42 checkpoint and official validation split, test:
 
 - 12 blocks: `[0,1,2,3,4,5,6,7,8,9,10,11]`;
 - 10 blocks: `[0,2,3,4,5,6,8,9,10,11]`;
@@ -32,7 +34,7 @@ in this screening phase. Test remains sealed.
 
 ## Pre-registered qualification gates
 
-- The 12-block validation result must reproduce Phase 23 seed 42 within 0.05 mIoU.
+- The 12-block validation result must reproduce Phase 22 seed 42 within 0.05 mIoU.
 - Benchmark latencies must be finite and positive.
 - A pruned candidate qualifies for fine-tuning only if:
   - Native FP16 mean speedup is >= 1.15x; and

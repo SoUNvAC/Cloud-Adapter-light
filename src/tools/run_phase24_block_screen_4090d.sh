@@ -3,26 +3,28 @@ set -euo pipefail
 
 cd "$(dirname "$0")/.."
 
-config="configs/protocol/phase23_clean_v12_l1c.py"
-phase23_root="work_dirs/phase23_clean_v12"
-phase23_summary="${phase23_root}/summary.json"
-checkpoint_dir="${phase23_root}/seed42"
+config="configs/protocol/phase22_clean_v8_l1c.py"
+phase22_root="work_dirs/phase22_clean_v8"
+phase22_summary="${phase22_root}/summary.json"
+checkpoint_dir="${phase22_root}/seed42"
 output_root="work_dirs/phase24_block_screen"
 
-python - "${phase23_summary}" <<'PY'
+python - "${phase22_summary}" <<'PY'
 import json
 from pathlib import Path
 import sys
 
 summary = json.loads(Path(sys.argv[1]).read_text(encoding="utf-8"))
-if not summary.get("passed") or summary.get("test_evaluated") is not False:
-    raise SystemExit("Phase 23 must pass with test sealed before Phase 24")
+if summary.get("phase") != 22 or not summary.get("passed"):
+    raise SystemExit("Phase 22 clean V8 anchor must pass before Phase 24")
+if summary.get("test_evaluated") is not False:
+    raise SystemExit("Phase 22 did not keep test sealed")
 PY
 
 mapfile -t checkpoints < <(find "${checkpoint_dir}" -maxdepth 1 -type f \
   -name 'best_mIoU_iter_*.pth' -print)
 if [[ "${#checkpoints[@]}" -ne 1 ]]; then
-  echo "Expected exactly one Phase 23 seed42 checkpoint" >&2
+  echo "Expected exactly one Phase 22 seed42 checkpoint" >&2
   exit 2
 fi
 checkpoint="${checkpoints[0]}"
@@ -40,9 +42,9 @@ for index in "${!names[@]}"; do
   name="${names[index]}"
   subset="${subsets[index]}"
   candidate_dir="${output_root}/${name}"
-  if [[ -e "${candidate_dir}" ]]; then
-    echo "Refusing to reuse existing candidate directory: ${candidate_dir}" >&2
-    exit 3
+  if [[ -f "${candidate_dir}/SCREEN_COMPLETE" ]]; then
+    echo "Reusing completed Phase 24 candidate: ${name}"
+    continue
   fi
   mkdir -p "${candidate_dir}"
 
@@ -72,10 +74,11 @@ for index in "${!names[@]}"; do
     --output-format json \
     --quiet \
     | tee "${candidate_dir}/benchmark.json"
+  touch "${candidate_dir}/SCREEN_COMPLETE"
 done
 
 python tools/summarize_phase24_block_screen.py \
-  --phase23-summary "${phase23_summary}" \
+  --phase22-summary "${phase22_summary}" \
   --root "${output_root}" \
   --min-speedup 1.15 \
   --max-val-miou-drop 8.0 \
