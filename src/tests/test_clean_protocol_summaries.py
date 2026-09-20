@@ -390,6 +390,64 @@ class CleanProtocolSummaryTests(unittest.TestCase):
             self.assertAlmostEqual(result["speedup"], 1.4)
             self.assertFalse(result["test_evaluated"])
 
+    def test_phase27_resnet18_three_seed_confirmation(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            temporary = Path(temporary)
+            phase26_root = temporary / "phase26"
+            phase27_root = temporary / "phase27"
+            phase26_summary = phase26_root / "summary.json"
+            phase26_root.mkdir()
+            phase26_summary.write_text(
+                json.dumps(
+                    {
+                        "phase": 26,
+                        "passed": True,
+                        "test_evaluated": False,
+                        "speedup": 1.8,
+                        "candidate_benchmark": {"parameters_m": 12.4},
+                    }
+                ),
+                encoding="utf-8",
+            )
+            for seed, miou in ((42, 68.0), (123, 67.8), (3407, 68.2)):
+                run = (
+                    phase26_root / "seed42"
+                    if seed == 42
+                    else phase27_root / f"seed{seed}"
+                )
+                run.mkdir(parents=True)
+                (run / "best_mIoU_iter_40000.pth").touch()
+                (run / "val_eval.log").write_text(
+                    f"Iter(test) [134/134] mIoU: {miou}\n", encoding="utf-8"
+                )
+            output = phase27_root / "summary.json"
+            process = subprocess.run(
+                [
+                    sys.executable,
+                    str(
+                        REPO_ROOT
+                        / "tools"
+                        / "summarize_phase27_resnet18_3seed.py"
+                    ),
+                    "--phase26-summary",
+                    str(phase26_summary),
+                    "--phase26-root",
+                    str(phase26_root),
+                    "--root",
+                    str(phase27_root),
+                    "--output",
+                    str(output),
+                ],
+                check=False,
+                capture_output=True,
+                text=True,
+            )
+            self.assertEqual(process.returncode, 0, process.stderr)
+            result = json.loads(output.read_text())
+            self.assertTrue(result["passed"])
+            self.assertAlmostEqual(result["mean_mIoU"], 68.0)
+            self.assertAlmostEqual(result["std_mIoU"], 0.2)
+
 
 if __name__ == "__main__":
     unittest.main()
