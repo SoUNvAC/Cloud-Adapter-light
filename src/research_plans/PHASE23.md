@@ -73,3 +73,13 @@ all three paired seeds. The original gates are reused without relaxation:
 every run >=66.5 mIoU, mean >=67.0, sample std <=0.60, and mean paired drop
 <=3.0. A second miss closes the standard-FPN branch; there is no further LR,
 schedule, seed, or threshold search.
+
+## Recorded outcome
+
+Trial A failed only the paired-drop gate: mean mIoU 70.5533, sample standard
+deviation 0.1320, and mean paired drop 3.2500. Repair A then obtained seed-42
+8k mIoU values 49.64, 62.46, 64.73, and 65.61 for multipliers 1, 2, 3, and 4.
+None reached the preregistered 67.83 qualification threshold, so no multiplier
+was selected and the three-seed repair confirmation was not run. Phase 23 is
+closed as failed; test was never evaluated. Phase 24 must retain the V8
+deformable decoder and switch to structured backbone compression.
