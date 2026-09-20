@@ -26,6 +26,40 @@ def make_run(root, seed, miou):
 
 
 class CleanProtocolSummaryTests(unittest.TestCase):
+    def test_phase23_repair_sweep_selects_best_qualified_multiplier(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            for multiplier, miou in zip((1, 2, 3, 4), (67.70, 68.10, 68.10, 67.90)):
+                run = root / f"mult{multiplier}_seed42"
+                run.mkdir(parents=True)
+                (run / "best_mIoU_iter_8000.pth").touch()
+                (run / "VAL_EVAL_COMPLETE").touch()
+                (run / "val_eval.log").write_text(
+                    "| clear | 86.0 | 90.0 |\n"
+                    f"Iter(test) [268/268] aAcc: 88.0 mIoU: {miou:.2f} "
+                    "mAcc: 80.0 mDice: 81.0\n",
+                    encoding="utf-8",
+                )
+            output = root / "summary.json"
+            process = subprocess.run(
+                [
+                    sys.executable,
+                    str(REPO_ROOT / "tools" / "summarize_phase23_repair_sweep.py"),
+                    "--root",
+                    str(root),
+                    "--output",
+                    str(output),
+                ],
+                check=False,
+                capture_output=True,
+                text=True,
+            )
+            self.assertEqual(process.returncode, 0, process.stderr)
+            result = json.loads(output.read_text())
+            self.assertTrue(result["passed"])
+            self.assertEqual(result["selected_multiplier"], 2)
+            self.assertFalse(result["test_evaluated"])
+
     def test_phase22_pass_and_phase23_pairing(self):
         with tempfile.TemporaryDirectory() as temporary:
             temporary = Path(temporary)
