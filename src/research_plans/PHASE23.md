@@ -18,6 +18,17 @@ cd src
 bash tools/run_phase23_clean_v12_3seed_4090d.sh
 ```
 
+For unattended execution with a single terminal artifact, use:
+
+```bash
+bash tools/run_phase23_oneclick_4090d.sh
+```
+
+It captures setup, training, validation, the final gate decision, and
+`summary.json` in `work_dirs/phase23_clean_v12/PHASE23_REPORT.txt`. It resumes
+an interrupted run from MMEngine's `last_checkpoint`, retries an interrupted
+validation, and never starts Phase 24.
+
 The script runs seeds 42, 123, and 3407 for 20,000 iterations. Checkpoints are
 selected and re-evaluated only on the official validation split. Test remains
 sealed.

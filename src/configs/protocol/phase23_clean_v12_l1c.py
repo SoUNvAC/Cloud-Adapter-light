@@ -22,5 +22,10 @@ test_dataloader = dict(
 )
 
 randomness = dict(seed=42, deterministic=True)
+# Keep the documented Phase 22 PyTorch 2.1 exception consistent. Mask2Former
+# positional encoding and CUDA IoU histograms do not have deterministic CUDA
+# implementations, so aborting here would make the paired protocol differ from
+# the clean V8 baseline solely because of framework support.
+deterministic_warn_only = True
 
 work_dir = "./work_dirs/phase23_clean_v12_seed42"

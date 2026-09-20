@@ -8,6 +8,7 @@ config="configs/protocol/phase23_clean_v12_l1c.py"
 phase22_root="work_dirs/phase22_clean_v8"
 phase22_summary="${phase22_root}/summary.json"
 work_dir="work_dirs/phase23_clean_v12/seed${seed}"
+resume_args=()
 
 python - "${phase22_summary}" "${seed}" <<'PY'
 import json
@@ -23,8 +24,24 @@ if seed not in {int(run["seed"]) for run in summary.get("runs", [])}:
 PY
 
 if [[ -e "${work_dir}" ]]; then
-  echo "Refusing to reuse existing run directory: ${work_dir}" >&2
-  exit 2
+  mapfile -t completed < <(find "${work_dir}" -maxdepth 1 -type f \
+    -name 'best_mIoU_iter_*.pth' -print)
+  if [[ "${#completed[@]}" -eq 1 \
+    && -f "${work_dir}/val_eval.log" \
+    && -f "${work_dir}/VAL_EVAL_COMPLETE" ]]; then
+    echo "Reusing completed Phase 23 run: ${work_dir}"
+    exit 0
+  fi
+  if [[ -f "${work_dir}/last_checkpoint" ]]; then
+    echo "Resuming interrupted Phase 23 run: ${work_dir}"
+    resume_args=(--resume)
+  elif ! find "${work_dir}" -maxdepth 2 -type f -name '*.pth' -print -quit \
+    | grep -q .; then
+    echo "Restarting zero-checkpoint Phase 23 directory: ${work_dir}"
+  else
+    echo "Refusing checkpoint-bearing run without last_checkpoint: ${work_dir}" >&2
+    exit 2
+  fi
 fi
 
 mapfile -t source_checkpoints < <(find "${phase22_root}/seed${seed}" \
@@ -37,6 +54,7 @@ fi
 bash tools/train_light_4090d.sh \
   "${config}" \
   "${work_dir}" \
+  "${resume_args[@]}" \
   --cfg-options \
   "load_from=${source_checkpoints[0]}" \
   "randomness.seed=${seed}" \
@@ -60,3 +78,7 @@ python tools/test.py \
   "randomness.seed=${seed}" \
   "randomness.deterministic=True" \
   2>&1 | tee "${work_dir}/val_eval.log"
+
+# tee creates val_eval.log before the evaluator succeeds. Keep a separate
+# durable marker so interrupted evaluations are retried rather than reused.
+touch "${work_dir}/VAL_EVAL_COMPLETE"
