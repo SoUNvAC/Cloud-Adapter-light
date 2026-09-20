@@ -1024,6 +1024,54 @@ Phase 21 通过，说明官方三分割本身没有发现精确内容泄漏，�
 
 由于团队已经观察过历史 test 聚合结果，后续论文还必须增加此前未用于开发的外部数据集或新地域 holdout，作为真正的外部泛化证据；Phase 21 不能消除既往的人为测试集暴露。
 
+## Phase 22 — 清洁协议下的三种子 V8 基线
+
+### 简介
+
+Phase 22 不提出新结构，而是在 Phase 21 的无泄漏协议下重新训练历史压缩候选 V8，建立 Phase 23 之后唯一允许使用的清洁验证基线。模型仍为 DINOv2-S、四处 Cloud-Adapter 交互和压缩 Mask2Former：128维特征、25个 query、2层 deformable pixel encoder、2层 query decoder。所有 checkpoint 选择和本 Phase 决策只读取官方 val；975张 test 在整个运行中保持封存。
+
+### 目标与止损线
+
+- 固定种子42、123、3407分别独立训练40,000 iter，并从各自 val 最优 checkpoint 复评。
+- 每个种子的 val mIoU 必须不低于69.0，三种子均值必须不低于69.5。
+- 三种子样本标准差必须不高于0.50 mIoU；否则认为训练稳定性不足，停止后续压缩研究。
+- `summary.json` 必须明确记录 `selection_split=val` 和 `test_evaluated=false`；任一条件失败均不得进入 Phase 23。
+
+### 实验设置
+
+- 数据：CloudSEN12 High L1C，train 8,490张、val 535张；test 975张未评估。
+- 输入与精度：512×512，FP32 Mask2Former训练，batch size 2；DINOv2-S冻结，Cloud-Adapter和压缩解码器可训练。
+- 优化：AdamW，初始学习率1e-4、weight decay 0.05；500 iter线性 warmup，随后 PolyLR；梯度范数上限1.0。
+- 训练：40,000 iter，每2,000 iter在 val评估并按 mIoU保存最佳 checkpoint。
+- 硬件与环境：NVIDIA GeForce RTX 4090 D，PyTorch 2.1，conda环境 `cloud-lite-pt210`。
+- 复现入口：`bash tools/run_phase22_oneclick_4090d.sh`；完整终端报告写入 `work_dirs/phase22_clean_v8/PHASE22_REPORT.txt`，机器可读汇总写入 `work_dirs/phase22_clean_v8/summary.json`。
+
+PyTorch 2.1没有为 Mask2Former位置编码的 CUDA `cumsum`、deformable attention反传和 CUDA histogram提供确定性实现。本 Phase 固定 Python/NumPy/PyTorch种子，启用 cuDNN deterministic、关闭 benchmark，并设置 `CUBLAS_WORKSPACE_CONFIG=:4096:8`；对上述无确定性实现的算子显式使用 `torch.use_deterministic_algorithms(True, warn_only=True)`。该例外同时应用于训练和验证并写入报告，不能把本结果描述为逐 bit 可复现。
+
+### 实验结果
+
+| Seed | Best checkpoint | aAcc | mIoU | mAcc | mDice | mPrecision | mRecall |
+| ---: | --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| 42 | `best_mIoU_iter_40000.pth` | 89.78 | 73.98 | 84.89 | 84.41 | 84.07 | 84.89 |
+| 123 | `best_mIoU_iter_40000.pth` | 89.58 | 73.65 | 84.54 | 84.17 | 83.89 | 84.54 |
+| 3407 | `best_mIoU_iter_40000.pth` | 89.66 | 73.78 | 84.63 | 84.27 | 83.98 | 84.63 |
+
+| Seed | Clear IoU | Thick-cloud IoU | Thin-cloud IoU | Cloud-shadow IoU |
+| ---: | ---: | ---: | ---: | ---: |
+| 42 | 88.56 | 85.09 | 60.80 | 61.47 |
+| 123 | 88.32 | 84.91 | 58.77 | 62.59 |
+| 3407 | 88.40 | 84.83 | 59.66 | 62.21 |
+
+三种子 mIoU 为73.98、73.65、73.78，均值73.8033，样本标准差0.1662。三个硬门槛全部通过：最低单次结果比69.0高4.65点，均值比69.5高4.3033点，标准差比0.50低0.3338点。测试集没有被读取或评估。
+
+### 运行修复记录
+
+首次启动在严格确定性检查处暴露了两项环境兼容问题：cuBLAS需要显式 workspace配置，Mask2Former所用 CUDA算子在 PyTorch 2.1中没有确定性实现。修复分别固定 `CUBLAS_WORKSPACE_CONFIG`，并将预注册的 warn-only例外同时接入训练与验证。另增加 `VAL_EVAL_COMPLETE` 成功标记，避免 `tee` 在验证失败时留下的空壳日志被误判为完成。修复后复用已有 checkpoint继续执行，没有删除或伪造任何训练结果。
+
+### 结论与下一步
+
+Phase 22 通过。V8在清洁 val上的73.8033±0.1662 mIoU成为后续唯一基线；历史 Phase 1–20 的 test数值不得用于 Phase 23之后的方向选择。下一阶段可以进入预注册的结构创新筛选，但仍只能读取 val，并须相对本三种子基线报告同协议精度、复杂度和稳定性差异。
+
 ## 后续维护规则
 
 从 Phase 16 开始，每个 Phase 完成后在本文件末尾追加以下内容：
