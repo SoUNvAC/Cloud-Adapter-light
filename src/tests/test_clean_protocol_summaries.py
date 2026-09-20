@@ -284,6 +284,63 @@ class CleanProtocolSummaryTests(unittest.TestCase):
                 result["mean_paired_weak_mIoU_drop_from_v12"], 0.0
             )
 
+    def test_phase25_mlp_screen_selects_fastest_qualified_ratio(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            temporary = Path(temporary)
+            phase22_summary = temporary / "phase22.json"
+            phase22_summary.write_text(
+                json.dumps(
+                    {
+                        "phase": 22,
+                        "passed": True,
+                        "test_evaluated": False,
+                        "runs": [
+                            {"seed": 42, "validation": {"mIoU": 73.98}},
+                            {"seed": 123, "validation": {"mIoU": 73.65}},
+                            {"seed": 3407, "validation": {"mIoU": 73.78}},
+                        ],
+                    }
+                ),
+                encoding="utf-8",
+            )
+            root = temporary / "screen"
+            values = {
+                "ratio4": (73.98, 10.0),
+                "ratio3": (71.0, 9.1),
+                "ratio2p5": (69.5, 8.0),
+                "ratio2": (60.0, 7.0),
+            }
+            for name, (miou, latency) in values.items():
+                candidate = root / name
+                candidate.mkdir(parents=True)
+                (candidate / "val_eval.log").write_text(
+                    f"Iter(test) [134/134] mIoU: {miou}\n", encoding="utf-8"
+                )
+                (candidate / "benchmark.json").write_text(
+                    json.dumps({"latency_mean_ms": latency}), encoding="utf-8"
+                )
+            output = root / "summary.json"
+            process = subprocess.run(
+                [
+                    sys.executable,
+                    str(REPO_ROOT / "tools" / "summarize_phase25_mlp_screen.py"),
+                    "--phase22-summary",
+                    str(phase22_summary),
+                    "--root",
+                    str(root),
+                    "--output",
+                    str(output),
+                ],
+                check=False,
+                capture_output=True,
+                text=True,
+            )
+            self.assertEqual(process.returncode, 0, process.stderr)
+            result = json.loads(output.read_text())
+            self.assertTrue(result["passed"])
+            self.assertEqual(result["selected_candidate"], "ratio2p5")
+            self.assertFalse(result["test_evaluated"])
+
 
 if __name__ == "__main__":
     unittest.main()
