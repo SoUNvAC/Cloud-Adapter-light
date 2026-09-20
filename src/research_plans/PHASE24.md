@@ -50,3 +50,12 @@ switches to width/channel distillation or a compact pretrained backbone. If one
 or more candidates qualify, Phase 25 fine-tunes the fastest qualifying candidate
 with a class- and boundary-aware teacher objective and uses paired three-seed
 statistics. Thresholds are not relaxed after observing Phase 24.
+
+## Recorded outcome
+
+The 12-block anchor reproduced 73.98 mIoU. The 10/8/6/4-block candidates
+obtained 56.17/40.41/34.94/13.47 mIoU and 1.047/1.102/1.169/1.234x native-FP16
+speedups. No candidate met both gates. Static block skipping is closed; Phase 25
+must not fine-tune these candidates and instead switches to width/channel
+distillation or an independently pretrained compact backbone. Test remained
+sealed.
