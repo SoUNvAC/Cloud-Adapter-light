@@ -341,6 +341,55 @@ class CleanProtocolSummaryTests(unittest.TestCase):
             self.assertEqual(result["selected_candidate"], "ratio2p5")
             self.assertFalse(result["test_evaluated"])
 
+    def test_phase26_resnet18_pilot_requires_accuracy_speed_and_size(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            temporary = Path(temporary)
+            phase22_summary = temporary / "phase22.json"
+            phase22_summary.write_text(
+                json.dumps(
+                    {
+                        "phase": 22,
+                        "passed": True,
+                        "test_evaluated": False,
+                    }
+                ),
+                encoding="utf-8",
+            )
+            root = temporary / "phase26"
+            run = root / "seed42"
+            run.mkdir(parents=True)
+            (run / "val_eval.log").write_text(
+                "Iter(test) [134/134] mIoU: 69.0\n", encoding="utf-8"
+            )
+            (root / "baseline_benchmark.json").write_text(
+                json.dumps({"latency_mean_ms": 35.0}), encoding="utf-8"
+            )
+            (run / "benchmark.json").write_text(
+                json.dumps({"latency_mean_ms": 25.0, "parameters_m": 15.0}),
+                encoding="utf-8",
+            )
+            output = root / "summary.json"
+            process = subprocess.run(
+                [
+                    sys.executable,
+                    str(REPO_ROOT / "tools" / "summarize_phase26_resnet18.py"),
+                    "--phase22-summary",
+                    str(phase22_summary),
+                    "--root",
+                    str(root),
+                    "--output",
+                    str(output),
+                ],
+                check=False,
+                capture_output=True,
+                text=True,
+            )
+            self.assertEqual(process.returncode, 0, process.stderr)
+            result = json.loads(output.read_text())
+            self.assertTrue(result["passed"])
+            self.assertAlmostEqual(result["speedup"], 1.4)
+            self.assertFalse(result["test_evaluated"])
+
 
 if __name__ == "__main__":
     unittest.main()
