@@ -1238,6 +1238,26 @@ Phase 29使用官方OpenMMLab ImageNet预训练MobileNetV2，确定性移除chec
 
 Phase 29失败并关闭本轮移动主干替换方向。MobileNetV2仅2.992M参数且内部val略高于ResNet-18，但V8 deformable解码器使端到端延迟不能随主干参数等比例下降，跨传感器绝对精度也未过线。按预注册不增加种子、不搜索宽度或学习率。Phase 30不再训练候选，而是冻结并审计Phase 21–29证据链，内部test不为失败候选解封。
 
+## Phase 30 — 最终冻结证据审计
+
+### 审计范围
+
+Phase 30不训练、不推理、不读取CloudSEN内部test，只审计Phase 21–29摘要、统计量、checkpoint引用、测速口径、Git状态和复现测试。审计固定于commit `32538b31f2aaf2cc845f09db90d498128e6eb025`，并记录Phase 21与Phase 22–29全部机器摘要的SHA-256。
+
+### 审计结果
+
+41项仓库测试全部通过，1项按环境条件跳过。八项证据完整性门槛全部通过：Phase 21数据审计通过；Phase 22–29实际pass/fail与预期决策链一致；Phase 22与Phase 27三种子均值和样本标准差可从逐次记录精确复算；所引用checkpoint全部存在；Phase 21后内部test始终封存；效率比较均为batch 1、512×512、原生PyTorch FP16且驻留FP16权重；远程tracked worktree干净。
+
+### 最终冻结结论
+
+- 清洁精度锚点仍是Phase 22 V8：73.8033±0.1662 val mIoU。
+- ResNet-18是可复现的内部效率点：68.0033±0.0569 val mIoU、1.828倍加速、12.439M参数；但它被Phase 28外部门槛拒绝，不能宣称为外部泛化合格模型。
+- MobileNetV2 seed 42达到68.47内部val mIoU和2.992M参数，但L8仅33.86 mIoU且仅1.609倍加速，被Phase 29拒绝。
+- 当前没有压缩后继同时通过清洁val、外部泛化和真实延迟联合门槛，因此没有候选有资格解封CloudSEN内部test。
+- Landsat-8 Biome在历史工作区中已有，不能包装为从未观察的纯净外部holdout。TGRS投稿前仍需新增真正未用于开发的地域/外部数据，并提出能通过该证据链的方法。
+
+Phase 30审计本身通过仅表示证据一致，不改变任何模型失败结论。完整单文件报告位于`work_dirs/phase30_final_audit/PHASE30_REPORT.txt`。
+
 ## 后续维护规则
 
 从 Phase 16 开始，每个 Phase 完成后在本文件末尾追加以下内容：

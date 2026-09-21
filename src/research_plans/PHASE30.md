@@ -39,3 +39,11 @@ bash tools/run_phase30_final_audit_oneclick_4090d.sh
 The single terminal report is
 `work_dirs/phase30_final_audit/PHASE30_REPORT.txt`, with machine-readable
 `summary.json` and `FINAL_EVIDENCE_REPORT.md` beside it.
+
+## Recorded outcome
+
+The audit passed all eight integrity gates at commit
+`32538b31f2aaf2cc845f09db90d498128e6eb025`; 41 repository tests passed and one
+was conditionally skipped. The internal CloudSEN test remained sealed. No
+compressed successor qualified: ResNet-18 failed Phase 28 external gates and
+MobileNetV2 failed Phase 29 external-absolute and speed gates.
