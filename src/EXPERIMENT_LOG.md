@@ -1198,6 +1198,25 @@ Phase 27冻结Phase 26的结构、ImageNet初始化、优化器、学习率倍�
 
 Phase 27通过。ResNet-18的精度明显低于Phase 22 V8的73.8033，但稳定性更高且获得可观真实加速，因此形成了可复现的速度—精度工作点。Phase 28在不训练、不调阈值的条件下，对三个V8和三个ResNet-18 checkpoint进行Landsat-8 Biome跨传感器零样本评估；预先固定CloudSEN类别到L8类别的映射，内部CloudSEN test仍不读取。
 
+## Phase 28 — Landsat-8 Biome零样本跨传感器评估
+
+### 简介与门槛
+
+Phase 28不训练或校准模型，对Phase 22的三个V8与Phase 27的三个ResNet-18 checkpoint在完整Landsat-8 Biome test上进行零样本评估。类别映射在运行前固定为CloudSEN `(clear, thick, thin, shadow)` 到L8 `(clear, shadow, thin, cloud)` 的 `[0,3,2,1]`，不使用置信度阈值或测试时增强。门槛为每个紧凑模型至少35.0 mIoU、紧凑均值相对V8最多下降6.5点、三种子标准差不超过1.0。CloudSEN内部test继续封存。
+
+### 实验结果
+
+| Model | Seed 42 | Seed 123 | Seed 3407 | Mean mIoU | Sample std |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Phase 22 V8 | 39.33 | 40.03 | 39.90 | 39.7533 | 0.3723 |
+| Phase 27 ResNet-18 | 33.10 | 31.89 | 33.34 | 32.7767 | 0.7772 |
+
+ResNet-18三次结果均低于35.0绝对门槛；其外部均值比V8低6.9767点，超过6.5止损线0.4767点。标准差和有限数值检查通过，但四项实质门槛中两项失败。六次评估均覆盖2,643张L8测试图像，未读取CloudSEN内部test。
+
+### 结论与方向切换
+
+Phase 28失败并关闭ResNet-18主线。虽然它在CloudSEN val上稳定且快1.828倍，但跨传感器精度没有达到预注册下限，不能通过事后放宽阈值、改变类别映射或使用L8校准修复。L8 Biome在Phase 1–20历史工作区中已经存在，因此本结果应描述为外部跨传感器基准，而非从未接触的纯净外部holdout。Phase 29按止损规则转向独立ImageNet预训练的MobileNetV2原生移动主干，先做单种子内部精度、真实速度与L8零样本联合可行性试验。
+
 ## 后续维护规则
 
 从 Phase 16 开始，每个 Phase 完成后在本文件末尾追加以下内容：
