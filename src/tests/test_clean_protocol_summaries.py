@@ -448,6 +448,41 @@ class CleanProtocolSummaryTests(unittest.TestCase):
             self.assertAlmostEqual(result["mean_mIoU"], 68.0)
             self.assertAlmostEqual(result["std_mIoU"], 0.2)
 
+    def test_phase28_external_gate_compares_frozen_models(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            values = {
+                "v8": (42.0, 42.2, 41.8),
+                "resnet18": (38.0, 38.2, 37.8),
+            }
+            for model, mious in values.items():
+                model_dir = root / model
+                model_dir.mkdir()
+                for seed, miou in zip((42, 123, 3407), mious):
+                    (model_dir / f"seed{seed}.log").write_text(
+                        f"Iter(test) [100/100] mIoU: {miou}\n", encoding="utf-8"
+                    )
+            output = root / "summary.json"
+            process = subprocess.run(
+                [
+                    sys.executable,
+                    str(REPO_ROOT / "tools" / "summarize_phase28_l8_external.py"),
+                    "--root",
+                    str(root),
+                    "--output",
+                    str(output),
+                ],
+                check=False,
+                capture_output=True,
+                text=True,
+            )
+            self.assertEqual(process.returncode, 0, process.stderr)
+            result = json.loads(output.read_text())
+            self.assertTrue(result["passed"])
+            self.assertAlmostEqual(result["mean_compact_drop_from_v8"], 4.0)
+            self.assertTrue(result["external_test_evaluated"])
+            self.assertFalse(result["internal_test_evaluated"])
+
 
 if __name__ == "__main__":
     unittest.main()
