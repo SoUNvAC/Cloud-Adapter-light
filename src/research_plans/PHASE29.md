@@ -14,6 +14,8 @@ decoder design and training protocol.
   channels `(24,32,96,320)`, fully fine-tuned at 0.1 times decoder LR.
 - Initialization: official OpenMMLab ImageNet checkpoint, SHA-256
   `3b2dc3afee0b94e52b357a60851f1ac8ec95cf9318762e785812edf7f6736b14`.
+  Its `backbone.` key prefix is deterministically stripped and classification
+  head keys are discarded before loading into the segmentation backbone.
 - Decoder, losses, schedule, seed 42, and official validation selection match
   Phase 26. Train 40,000 iterations from the independent ImageNet start.
 - After validation selection, benchmark native PyTorch FP16 on 4090D and run

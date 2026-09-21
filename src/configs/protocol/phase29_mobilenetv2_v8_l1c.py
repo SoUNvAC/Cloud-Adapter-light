@@ -5,7 +5,7 @@ import os
 pretrained = os.environ.get(
     "PHASE29_MOBILENETV2_PRETRAINED",
     "work_dirs/phase29_mobilenetv2_pilot/pretrained/"
-    "mobilenet_v2_batch256_imagenet_20200708-3b2dc3af.pth",
+    "mobilenet_v2_backbone_only.pth",
 )
 
 model = dict(

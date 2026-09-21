@@ -9,6 +9,7 @@ external_config="configs/protocol/phase29_l8_mobilenetv2_l1c.py"
 phase26_summary="work_dirs/phase26_resnet18_pilot/summary.json"
 phase28_summary="work_dirs/phase28_l8_external/summary.json"
 pretrained="${root}/pretrained/mobilenet_v2_batch256_imagenet_20200708-3b2dc3af.pth"
+converted_pretrained="${root}/pretrained/mobilenet_v2_backbone_only.pth"
 pretrained_sha256="3b2dc3afee0b94e52b357a60851f1ac8ec95cf9318762e785812edf7f6736b14"
 resume_args=()
 
@@ -27,7 +28,11 @@ echo "${pretrained_sha256}  ${pretrained}" | sha256sum --check --status || {
   echo "Missing or invalid MobileNetV2 pretrained checkpoint" >&2
   exit 7
 }
-export PHASE29_MOBILENETV2_PRETRAINED="${pretrained}"
+if [[ ! -f "${converted_pretrained}" ]]; then
+  python tools/prepare_phase29_mobilenetv2_checkpoint.py \
+    "${pretrained}" "${converted_pretrained}"
+fi
+export PHASE29_MOBILENETV2_PRETRAINED="${converted_pretrained}"
 export PHASE28_L8_ROOT="data/l8_biome"
 if [[ -d "data/cloudsen12_high_l1c" ]]; then
   export CLOUD_ADAPTER_DATA_ROOT="data/cloudsen12_high_l1c"
