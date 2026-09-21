@@ -1217,6 +1217,27 @@ ResNet-18三次结果均低于35.0绝对门槛；其外部均值比V8低6.9767�
 
 Phase 28失败并关闭ResNet-18主线。虽然它在CloudSEN val上稳定且快1.828倍，但跨传感器精度没有达到预注册下限，不能通过事后放宽阈值、改变类别映射或使用L8校准修复。L8 Biome在Phase 1–20历史工作区中已经存在，因此本结果应描述为外部跨传感器基准，而非从未接触的纯净外部holdout。Phase 29按止损规则转向独立ImageNet预训练的MobileNetV2原生移动主干，先做单种子内部精度、真实速度与L8零样本联合可行性试验。
 
+## Phase 29 — MobileNetV2联合可行性试验
+
+### 简介与门槛
+
+Phase 29使用官方OpenMMLab ImageNet预训练MobileNetV2，确定性移除checkpoint的`backbone.`前缀和分类头后加载全部分割主干所需权重。保留V8解码器和Phase 26训练设置，seed 42训练40,000 iter。联合门槛为CloudSEN val mIoU至少66.0、L8零样本mIoU至少35.0、相对Phase 28 V8外部均值下降不超过6.5点、4090D原生FP16加速至少2.0倍、参数不超过7.5M。内部CloudSEN test继续封存。
+
+### 实验结果
+
+候选在CloudSEN官方val达到68.47 mIoU；四类IoU为clear 85.77、thick cloud 83.11、thin cloud 47.53、cloud shadow 57.46。L8 Biome零样本mIoU为33.86，比V8三种子外部均值39.7533低5.8933点。
+
+| Model | Params (M) | Checkpoint (MiB) | Mean latency (ms) | Throughput (img/s) | Peak GPU (GiB) | Speedup |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| Phase 22 V8 | 23.610 | 100.874 | 34.264 | 29.185 | 0.304 | 1.000× |
+| Phase 29 MobileNetV2 | 2.992 | 19.126 | 21.289 | 46.972 | 0.176 | 1.609× |
+
+内部val精度、相对V8外部下降、参数量和有限数值门槛通过；但L8绝对mIoU低于35.0门槛1.14点，真实加速也低于2.0倍门槛0.391倍，因此联合试验失败。
+
+### 结论与下一步
+
+Phase 29失败并关闭本轮移动主干替换方向。MobileNetV2仅2.992M参数且内部val略高于ResNet-18，但V8 deformable解码器使端到端延迟不能随主干参数等比例下降，跨传感器绝对精度也未过线。按预注册不增加种子、不搜索宽度或学习率。Phase 30不再训练候选，而是冻结并审计Phase 21–29证据链，内部test不为失败候选解封。
+
 ## 后续维护规则
 
 从 Phase 16 开始，每个 Phase 完成后在本文件末尾追加以下内容：
