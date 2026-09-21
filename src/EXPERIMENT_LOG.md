@@ -1327,6 +1327,20 @@ Phase 34以Phase 31 seed-42最佳checkpoint热启动学生，并以Phase 22 V8 s
 
 Phase 34失败并关闭该固定蒸馏配方。结果与历史Phase 10普通logit KD和Phase 13特征KD的失败一致：强教师的输出分布会约束容量有限且结构不同的学生，弱类/边界加权没有解决结构错配，反而损害原有表征。按预注册不搜索温度、权重或训练长度。Phase 35改为部署图本身的单一结构增强：在LiteFPN的top-down路径后加入仅作用于stride-8及更粗尺度的轻量bottom-up融合，使细节返回query特征；从ImageNet初始化独立训练，不使用KD，不读取L8或内部test。
 
+## Phase 35 — 双向LiteFPN结构增强试验
+
+### 简介与门槛
+
+Phase 35保留MobileNetV2及128维、25-query、两层query decoder，在LiteFPN top-down路径后增加stride-8及更粗尺度的bottom-up细节回流，每级使用非负归一化双输入权重和一个深度可分离细化块。seed 42从同一ImageNet初始化独立训练40,000 iter。门槛为val mIoU至少68.0、弱类均值至少51.0、原生FP16加速至少2.0倍、参数不超过3.0M。L8与内部test未读取。
+
+### 实验结果
+
+候选达到66.61 mIoU，较Phase 31同seed提高0.78点；thin cloud与cloud shadow IoU为42.06和56.82，弱类均值49.44。模型为2.602M参数、17.854 ms、56.01 img/s，相对V8加速1.919倍。参数和有限数值门槛通过，但总体精度低1.39点、弱类低1.56点、速度低0.081倍，三项核心门槛全部失败。
+
+### 结论与方向切换
+
+Phase 35失败并关闭双向LiteFPN方向。bottom-up细化带来的0.78点精度增益不足以达到论文级68.0门槛，却消耗了Phase 31本就很窄的两倍加速余量，说明继续堆叠解码器融合不再划算。Phase 36停止修改解码器，回到通过独立ImageNet预训练结构提升表征效率：以torchvision MobileNetV3-Large四尺度主干替换MobileNetV2，配合原始单向LiteFPN，从头训练单种子联合检验精度、弱类和两倍加速。内部test继续封存。
+
 ## 后续维护规则
 
 从 Phase 16 开始，每个 Phase 完成后在本文件末尾追加以下内容：

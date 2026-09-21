@@ -26,3 +26,4 @@ from .reins_clip import ReinsCLIPVisionTransformer
 from .convnext_dinov2 import ConvnextDinoVisionTransformer
 from .loracacheadapter_dinov2 import LoRACacheAdapterDinoVisionTransformer
 from .cloud_adapter_sam import CloudAdapterSamVisionTransformer
+from .torchvision_mobilenet_v3 import TorchvisionMobileNetV3Large
