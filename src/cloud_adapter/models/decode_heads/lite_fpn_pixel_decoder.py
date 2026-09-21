@@ -153,3 +153,76 @@ class LiteFPNPixelDecoder(BaseModule):
         multi_scale_features = list(reversed(pyramid))[: self.num_outs]
         mask_feature = self.mask_feature(pyramid[0])
         return mask_feature, multi_scale_features
+
+
+@MODELS.register_module()
+class BiLiteFPNPixelDecoder(LiteFPNPixelDecoder):
+    """LiteFPN with a low-cost bottom-up detail propagation pass.
+
+    The original top-down path supplies semantic context to fine levels. This
+    second path sends the refined fine detail back to coarser query features.
+    Only stride-8 and coarser levels receive extra depthwise-separable blocks,
+    preserving the standard-operator deployment graph and its latency budget.
+    """
+
+    def __init__(self, *args, fusion_epsilon: float = 1e-4, **kwargs):
+        super().__init__(*args, **kwargs)
+        if fusion_epsilon <= 0:
+            raise ValueError("fusion_epsilon must be positive")
+        num_groups = self.refine_blocks[0][0][1].num_groups
+        feat_channels = self.mask_feature.in_channels
+        self.bottom_up_refine_blocks = nn.ModuleList(
+            [
+                _DepthwiseSeparableRefine(feat_channels, num_groups)
+                for _ in range(len(self.input_projections) - 1)
+            ]
+        )
+        self.bottom_up_weights = nn.Parameter(
+            Tensor(len(self.input_projections) - 1, 2).fill_(1.0)
+        )
+        self.fusion_epsilon = float(fusion_epsilon)
+
+    def init_weights(self):
+        super().init_weights()
+        nn.init.ones_(self.bottom_up_weights)
+
+    def forward(self, feats: List[Tensor]) -> Tuple[Tensor, List[Tensor]]:
+        if len(feats) != len(self.input_projections):
+            raise ValueError(
+                f"Expected {len(self.input_projections)} feature maps, "
+                f"received {len(feats)}"
+            )
+
+        laterals = [
+            projection(feature)
+            for projection, feature in zip(self.input_projections, feats)
+        ]
+        top_down = [None] * len(laterals)
+        top_down[-1] = self.refine_blocks[-1](laterals[-1])
+        for level in range(len(laterals) - 2, -1, -1):
+            upsampled = F.interpolate(
+                top_down[level + 1],
+                size=laterals[level].shape[-2:],
+                mode="bilinear",
+                align_corners=False,
+            )
+            top_down[level] = self.refine_blocks[level](
+                laterals[level] + upsampled
+            )
+
+        fused = [top_down[0]]
+        for level in range(1, len(top_down)):
+            downsampled = F.interpolate(
+                fused[level - 1],
+                size=top_down[level].shape[-2:],
+                mode="bilinear",
+                align_corners=False,
+            )
+            weights = F.relu(self.bottom_up_weights[level - 1])
+            weights = weights / (weights.sum() + self.fusion_epsilon)
+            combined = weights[0] * top_down[level] + weights[1] * downsampled
+            fused.append(self.bottom_up_refine_blocks[level - 1](combined))
+
+        multi_scale_features = list(reversed(fused))[: self.num_outs]
+        mask_feature = self.mask_feature(fused[0])
+        return mask_feature, multi_scale_features
