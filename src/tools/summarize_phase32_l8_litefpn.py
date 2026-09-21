@@ -1,6 +1,7 @@
 import argparse
 import json
 import math
+import re
 from pathlib import Path
 
 from mmseg_log_metrics import parse_last_evaluation
@@ -32,13 +33,8 @@ def main():
     v8_mean = float(phase28["models"]["v8"]["mean_mIoU"])
     drop = v8_mean - miou
     text = Path(args.log).read_text(encoding="utf-8", errors="replace")
-    observed_images = None
-    for line in text.splitlines():
-        if "Testing [" in line and "/" in line:
-            try:
-                observed_images = int(line.split("/", 1)[1].split("]", 1)[0])
-            except (ValueError, IndexError):
-                pass
+    progress = re.findall(r"Iter\(test\)\s*\[\s*(\d+)\s*/\s*(\d+)\]", text)
+    observed_images = int(progress[-1][1]) if progress else None
     finite = all(math.isfinite(float(value)) for value in metrics.values())
     gates = {
         "external_mIoU": miou >= args.min_miou,
