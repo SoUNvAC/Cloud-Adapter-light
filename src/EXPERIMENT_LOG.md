@@ -1341,6 +1341,20 @@ Phase 35保留MobileNetV2及128维、25-query、两层query decoder，在LiteFPN
 
 Phase 35失败并关闭双向LiteFPN方向。bottom-up细化带来的0.78点精度增益不足以达到论文级68.0门槛，却消耗了Phase 31本就很窄的两倍加速余量，说明继续堆叠解码器融合不再划算。Phase 36停止修改解码器，回到通过独立ImageNet预训练结构提升表征效率：以torchvision MobileNetV3-Large四尺度主干替换MobileNetV2，配合原始单向LiteFPN，从头训练单种子联合检验精度、弱类和两倍加速。内部test继续封存。
 
+## Phase 36 — MobileNetV3-Large + LiteFPN试验
+
+### 简介与门槛
+
+Phase 36使用torchvision MobileNetV3-Large IMAGENET1K_V2独立预训练权重，输出feature blocks 3/6/12/15的stride 4/8/16/32特征，配合Phase 31原始单向LiteFPN和128维、25-query、两层query decoder。seed 42独立训练40,000 iter。门槛为val mIoU至少68.0、弱类均值至少51.0、原生FP16加速至少2.0倍、参数不超过4.0M。L8与内部test未读取。
+
+### 实验结果
+
+候选达到65.96 mIoU；thin cloud和cloud shadow IoU为43.00和54.55，弱类均值48.775。模型为3.691M参数、17.491 ms、57.17 img/s，相对V8加速1.959倍。参数量和有限数值通过，但总体精度低2.04点、弱类低2.225点、速度低0.041倍。
+
+### 结论与方向切换
+
+Phase 36失败并关闭MobileNetV3-Large主干方向。它比Phase 31 MobileNetV2同seed高0.13点，却增加1.143M参数并失去两倍加速门槛，说明继续替换相近移动主干难以解决弱类表征瓶颈。Phase 37回到当前最快合格部署图Phase 31，不增加推理算子，改为直接监督的弱类加权query分类损失；与失败的教师KL不同，该实验只重新平衡真实标签监督，并从ImageNet初始化独立训练。若不能达到68.0则关闭损失重加权方向。
+
 ## 后续维护规则
 
 从 Phase 16 开始，每个 Phase 完成后在本文件末尾追加以下内容：
