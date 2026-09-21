@@ -33,6 +33,7 @@ if [[ "${#student_checkpoints[@]}" -ne 1 || "${#teacher_checkpoints[@]}" -ne 1 ]
   exit 3
 fi
 export PHASE29_MOBILENETV2_PRETRAINED="${pretrained}"
+export PHASE34_TEACHER_CHECKPOINT="${teacher_checkpoints[0]}"
 if [[ -d "data/cloudsen12_high_l1c" ]]; then
   export CLOUD_ADAPTER_DATA_ROOT="data/cloudsen12_high_l1c"
 elif [[ -d "../data/cloudsen12_high_l1c" ]]; then

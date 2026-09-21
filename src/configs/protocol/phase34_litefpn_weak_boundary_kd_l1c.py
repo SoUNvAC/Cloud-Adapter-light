@@ -1,9 +1,16 @@
 _base_ = ["./phase31_mobilenetv2_litefpn_l1c.py"]
 
+import os
+
+teacher_checkpoint = os.environ.get(
+    "PHASE34_TEACHER_CHECKPOINT",
+    "__PHASE34_TEACHER_CHECKPOINT_MUST_BE_OVERRIDDEN__",
+)
+
 model = dict(
     type="WeakClassBoundaryDistillEncoderDecoder",
     teacher_config="configs/protocol/phase22_clean_v8_l1c.py",
-    teacher_checkpoint="__PHASE34_TEACHER_CHECKPOINT_MUST_BE_OVERRIDDEN__",
+    teacher_checkpoint=teacher_checkpoint,
     distill_temperature=2.0,
     distill_weight=1.0,
     distill_class_weights=[1.0, 1.0, 2.5, 2.0],
