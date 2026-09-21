@@ -1258,6 +1258,27 @@ Phase 30不训练、不推理、不读取CloudSEN内部test，只审计Phase 21�
 
 Phase 30审计本身通过仅表示证据一致，不改变任何模型失败结论。完整单文件报告位于`work_dirs/phase30_final_audit/PHASE30_REPORT.txt`。
 
+## Phase 31 — MobileNetV2 + LiteFPN标准算子解码器试验
+
+### 简介与门槛
+
+Phase 29表明MobileNetV2已经把模型压到2.992M参数，但两层deformable pixel decoder使端到端加速只有1.609倍。Phase 31保留128维、25-query、两层query decoder，只把pixel decoder替换为已有的深度可分离卷积`LiteFPNPixelDecoder`；使用同一ImageNet初始化、seed 42和40,000 iter重新训练，不迁移Phase 29分割权重。预注册门槛为官方val mIoU至少65.5、相对冻结V8基线的4090D原生FP16加速至少2.0倍、参数不超过3.0M，且所有数值有限。内部test继续封存。
+
+### 实验结果
+
+候选在官方val达到65.83 mIoU、85.82 aAcc、77.13 mAcc和78.02 mDice；四类IoU依次为clear 83.96、thick cloud 81.04、thin cloud 42.19、cloud shadow 56.15。
+
+| Model | Params (M) | Checkpoint (MiB) | Mean latency (ms) | Median (ms) | P90 (ms) | Throughput (img/s) | Peak GPU (GiB) | Speedup |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| Phase 22 V8 | 23.610 | 100.874 | 34.264 | 34.114 | 34.722 | 29.185 | 0.304 | 1.000× |
+| Phase 31 MobileNetV2 + LiteFPN | 2.548 | 17.950 | 16.710 | 16.310 | 16.921 | 59.846 | 0.180 | 2.051× |
+
+全部预注册门槛通过：mIoU高于止损线0.33点，加速高于门槛0.051倍，参数量低于上限0.452M。相对Phase 29，LiteFPN使参数再减少0.444M，并把平均延迟从21.289 ms降至16.710 ms，首次形成满足内部精度、模型规模和两倍真实加速的紧凑候选；代价是内部val mIoU从68.47下降2.64点。
+
+### 结论与下一步
+
+Phase 31通过，但精度和速度余量均较窄，不能据此解封内部test。Phase 32冻结checkpoint、类别映射和推理设置，只进行一次Landsat-8 Biome零样本评估；门槛沿用既有外部协议：L8 mIoU至少35.0，且相对Phase 28 V8三种子均值39.7533下降不超过6.5点。若失败则关闭该结构，不做L8驱动调参；若通过，再补两个CloudSEN训练种子确认稳定性。
+
 ## 后续维护规则
 
 从 Phase 16 开始，每个 Phase 完成后在本文件末尾追加以下内容：
