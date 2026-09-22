@@ -1477,6 +1477,12 @@ Phase 45A合并L8 Biome历史patch级train/test目录，从文件名恢复原始
 
 Phase 45A通过后才进入45B：冻结评估Phase 22 V8与Phase 37紧凑模型，使用target-train标签训练监督Oracle，并运行一个不读取目标标签的简单teacher–student适应基线。主要止损量为同架构Oracle target-val mIoU减source-only target-val mIoU：小于5点则停止；5到不足8点时仅当薄云/云影平均Oracle差距至少10点才继续；至少8点才进入因素化方法。锁定target-test在方法开发期间不读取，二分类HRC→GF实验只作独立补充，不与四分类Landsat指标直接求平均。
 
+### Phase 45A结果
+
+训练机在commit `6587ae8`、`cloud-lite-pt210`环境中全量读取10,574对512×512图像与标注，所有配对、命名、标签范围、二维形状、重复检查和新划分完整性门槛通过，manifest SHA-256为`527fd1ecc81e0e088729626d6d2d1b2dc23fdd2bf901a33537c91822c8dcd533`。历史train为7,931 patches、88 scenes，历史test为2,643 patches、88 scenes；两者scene交集为88，即历史划分完全不满足scene互斥，后续禁止沿用该划分作DA证据。
+
+新的biome分层scene级划分为target-train 6,502 patches/56 scenes、target-val 1,905/16、锁定target-test 2,167/16，三者均覆盖8个biome和四类且scene交集为空。target-train像元占比为clear 43.33%、cloud shadow 1.20%、thin cloud 19.31%、thick cloud 36.16%；target-val对应48.21%、2.82%、15.11%、33.86%。云影的极端稀缺支持弱类感知动机，但尚不构成方法有效性证据。Phase 45A通过，按预注册进入45B；target-test保持锁定。
+
 ## 后续维护规则
 
 从 Phase 16 开始，每个 Phase 完成后在本文件末尾追加以下内容：
