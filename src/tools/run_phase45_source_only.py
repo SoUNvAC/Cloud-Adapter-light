@@ -106,7 +106,8 @@ def load_rows(manifest, split):
     return rows
 
 
-def evaluate(name, config, checkpoint, rows, output_root):
+def evaluate(name, config, checkpoint, rows, output_root, label_map=SOURCE_TO_TARGET):
+    label_map = np.asarray(label_map, dtype=np.int64)
     wrapper_args = argparse.Namespace(
         config=str(config), checkpoint=str(checkpoint), precision="fp16",
         active_block_indices=None,
@@ -125,7 +126,7 @@ def evaluate(name, config, checkpoint, rows, output_root):
         rgb = torch.from_numpy(load_rgb_image(image_path, 512)).cuda()
         with torch.inference_mode():
             source_prediction = wrapper(rgb).argmax(dim=1)[0].cpu().numpy()
-        prediction = SOURCE_TO_TARGET[source_prediction]
+        prediction = label_map[source_prediction]
         valid = (target >= 0) & (target < 4)
         encoded = 4 * target[valid] + prediction[valid]
         confusion += np.bincount(encoded, minlength=16).reshape(4, 4)
@@ -151,7 +152,7 @@ def evaluate(name, config, checkpoint, rows, output_root):
         "checkpoint": str(checkpoint),
         "checkpoint_sha256": sha256(checkpoint),
         "evaluated_images": len(rows),
-        "label_remap_source_to_l8": SOURCE_TO_TARGET.tolist(),
+        "prediction_label_map": label_map.tolist(),
         "metrics": metrics,
         "boundary": boundary_metrics(boundary),
         "confusion": confusion.tolist(),

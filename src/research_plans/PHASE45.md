@@ -61,7 +61,10 @@ directly with four-class Landsat metrics.
 ## Pre-registered decision
 
 The primary feasibility gap is oracle target-val mIoU minus the corresponding
-source-only target-val mIoU.
+source-only target-val mIoU.  V8 is the pre-registered primary feasibility
+model; the compact model is a secondary deployment diagnostic.  Both oracles
+start from their generic ImageNet/DINO initialization rather than source-domain
+segmentation weights and use seed 42 for the first upper-bound audit.
 
 - gap below 5.0 points: stop this target-domain direction;
 - gap from 5.0 to below 8.0: continue only if the mean thin-cloud/cloud-shadow
