@@ -1489,6 +1489,8 @@ Phase 45B的Boundary F1定义在首次target-val模型推理前冻结：分别�
 
 在commit `683bb96`上冻结Phase 22 V8 seed-42与Phase 37 seed-42 checkpoint，使用固定`[0,3,2,1]`映射评估全部1,905张scene-disjoint target-val。V8为43.1241 mIoU，四类IoU依次为clear 74.7081、cloud shadow 16.4714、thin cloud 14.1403、thick cloud 67.1766，弱类均值15.3059，1-pixel容差宏Boundary F1为13.4763，其中thin cloud Boundary F1仅2.8838。Phase 37紧凑版为37.1549 mIoU，四类IoU为65.1102、15.8252、15.9285、51.7556，弱类均值15.8769，宏Boundary F1为11.5214，其中thin cloud为4.9800。两套模型均完成全部样本且指标有限；target-test与CloudSEN internal test均未读取。Source-only基准通过完整性检查，但低弱类与边界指标不代表方法成功，下一步必须用同协议Oracle测量真实上限后才能决定是否继续。
 
+Oracle首次启动在commit `1f2157a`的训练前预检阶段失败：通用`check_light_setup.py`只识别目录式dataset并强制读取`data_root`，而Phase 45使用只读CSV manifest。失败发生在iter 0之前，未生成checkpoint、未产生可报告模型结果、未读取target-test。修复仅令预检器验证manifest文件存在，不改变数据、模型、优化器、训练长度或任何预注册门槛，随后原配置重新运行。
+
 ## 后续维护规则
 
 从 Phase 16 开始，每个 Phase 完成后在本文件末尾追加以下内容：

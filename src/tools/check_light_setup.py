@@ -58,9 +58,13 @@ def main():
         )
 
     expected_dirs = []
+    expected_files = []
     for loader_name in ("train_dataloader", "val_dataloader", "test_dataloader"):
         loader = cfg[loader_name]
         dataset = loader.dataset
+        if dataset.get("manifest_path"):
+            expected_files.append(Path(dataset.manifest_path))
+            continue
         data_root = Path(dataset.data_root)
         prefix = dataset.data_prefix
         expected_dirs.extend(
@@ -70,12 +74,16 @@ def main():
             ]
         )
     expected_dirs = list(dict.fromkeys(expected_dirs))
+    expected_files = list(dict.fromkeys(expected_files))
     missing = [str(path) for path in expected_dirs if not path.is_dir()]
+    missing.extend(str(path) for path in expected_files if not path.is_file())
     if missing:
         raise FileNotFoundError("Missing dataset directories: " + ", ".join(missing))
 
     for path in expected_dirs:
         print(f"{path}: {count_files(path)} files")
+    for path in expected_files:
+        print(f"{path}: manifest present")
 
     model = MODELS.build(cfg.model)
     model.init_weights()
