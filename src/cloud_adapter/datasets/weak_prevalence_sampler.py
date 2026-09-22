@@ -4,8 +4,8 @@ from pathlib import Path
 from typing import Iterator, Optional, Sized
 
 import torch
-from mmengine.dataset import DATA_SAMPLERS
 from mmengine.dist import get_dist_info, sync_random_seed
+from mmengine.registry import DATA_SAMPLERS
 from torch.utils.data import Sampler
 
 
