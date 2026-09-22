@@ -6,6 +6,7 @@ from .weak_class_boundary_distill_encoder_decoder import (
     WeakClassBoundaryDistillEncoderDecoder,
 )
 from .boundary_supervised_encoder_decoder import BoundarySupervisedEncoderDecoder
+from .factorized_encoder_decoder import FactorizedEncoderDecoder
 
 __all__ = [
     "FrozenBackboneEncoderDecoder",
@@ -14,4 +15,5 @@ __all__ = [
     "PixelFeatureDistillEncoderDecoder",
     "WeakClassBoundaryDistillEncoderDecoder",
     "BoundarySupervisedEncoderDecoder",
+    "FactorizedEncoderDecoder",
 ]
