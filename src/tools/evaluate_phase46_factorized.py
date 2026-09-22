@@ -94,6 +94,11 @@ def exact_reconstruction_error():
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--checkpoint", required=True)
+    parser.add_argument("--phase", type=int, default=46)
+    parser.add_argument(
+        "--method", default="frozen_v8_factorized_logit_residual"
+    )
+    parser.add_argument("--trainable-parameters", type=int, default=15)
     parser.add_argument(
         "--config", default="configs/protocol/phase46_factorized_v8_l1c.py"
     )
@@ -143,9 +148,9 @@ def main():
         "cloudsen_internal_test_evaluated": False,
     }
     summary = {
-        "phase": 46,
-        "method": "frozen_v8_factorized_logit_residual",
-        "trainable_parameters": 15,
+        "phase": args.phase,
+        "method": args.method,
+        "trainable_parameters": args.trainable_parameters,
         "source_baseline_mIoU": 73.98,
         "target_baseline_mIoU": 43.1241,
         "target_baseline_weak_mIoU": 15.3059,
@@ -158,7 +163,11 @@ def main():
     summary["decision"] = (
         "proceed_to_class_conditional_prototypes"
         if summary["passed"]
-        else "move_factor_heads_to_pixel_features"
+        else (
+            "move_factor_heads_to_pixel_features"
+            if args.phase == 46
+            else "require_target_unlabeled_adaptation"
+        )
     )
     root = output_root.parent
     root.mkdir(parents=True, exist_ok=True)

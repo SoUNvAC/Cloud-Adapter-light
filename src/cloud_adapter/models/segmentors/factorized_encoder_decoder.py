@@ -55,8 +55,13 @@ class FactorizedEncoderDecoder(EncoderDecoder):
             (shadow - non_shadow, cloudy - clear, thick - thin), dim=1
         )
 
-    def _factor_logits(self, logits):
-        return self._base_factor_logits(logits) + self.factor_residual(logits)
+    def _factor_logits(self, logits, factor_features):
+        residual = self.factor_residual(factor_features)
+        if residual.shape[-2:] != logits.shape[-2:]:
+            residual = F.interpolate(
+                residual, size=logits.shape[-2:], mode="bilinear", align_corners=False
+            )
+        return self._base_factor_logits(logits) + residual
 
     @staticmethod
     def _reconstruct(factors):
@@ -75,19 +80,20 @@ class FactorizedEncoderDecoder(EncoderDecoder):
         )
         return probabilities.clamp_min(1e-7).log()
 
-    def _base_logits(self, inputs, batch_img_metas):
+    def _base_outputs(self, inputs, batch_img_metas):
         with torch.no_grad() if self.freeze_base else torch.enable_grad():
             features = self.extract_feat(inputs)
-            return self.decode_head.predict(features, batch_img_metas, self.test_cfg)
+            logits = self.decode_head.predict(features, batch_img_metas, self.test_cfg)
+        return logits, logits
 
     def encode_decode(self, inputs, batch_img_metas):
-        logits = self._base_logits(inputs, batch_img_metas)
-        return self._reconstruct(self._factor_logits(logits))
+        logits, factor_features = self._base_outputs(inputs, batch_img_metas)
+        return self._reconstruct(self._factor_logits(logits, factor_features))
 
     def loss(self, inputs, data_samples):
         batch_img_metas = [sample.metainfo for sample in data_samples]
-        base_logits = self._base_logits(inputs, batch_img_metas)
-        factors = self._factor_logits(base_logits)
+        base_logits, factor_features = self._base_outputs(inputs, batch_img_metas)
+        factors = self._factor_logits(base_logits, factor_features)
         reconstructed = self._reconstruct(factors)
         labels = torch.stack(
             [sample.gt_sem_seg.data for sample in data_samples], dim=0
@@ -127,3 +133,44 @@ class FactorizedEncoderDecoder(EncoderDecoder):
                 reconstruction_loss * self.reconstruction_loss_weight
             ),
         }
+
+
+@MODELS.register_module()
+class PixelFeatureFactorizedEncoderDecoder(FactorizedEncoderDecoder):
+    """Predict factor residuals from the stride-4 Mask2Former mask feature."""
+
+    def __init__(self, mask_feature_channels=128, **kwargs):
+        super().__init__(**kwargs)
+        self.factor_residual = torch.nn.Conv2d(
+            int(mask_feature_channels), 3, kernel_size=1, bias=True
+        )
+        torch.nn.init.zeros_(self.factor_residual.weight)
+        torch.nn.init.zeros_(self.factor_residual.bias)
+        if self.freeze_base:
+            for name, parameter in self.named_parameters():
+                parameter.requires_grad = name.startswith("factor_residual.")
+
+    def _base_outputs(self, inputs, batch_img_metas):
+        captured = []
+
+        def capture_pixel_output(module, module_inputs, module_output):
+            del module, module_inputs
+            captured.append(module_output[0])
+
+        handle = self.decode_head.pixel_decoder.register_forward_hook(
+            capture_pixel_output
+        )
+        try:
+            with torch.no_grad() if self.freeze_base else torch.enable_grad():
+                features = self.extract_feat(inputs)
+                logits = self.decode_head.predict(
+                    features, batch_img_metas, self.test_cfg
+                )
+        finally:
+            handle.remove()
+        if len(captured) != 1:
+            raise RuntimeError(
+                "Expected one pixel-decoder output, "
+                f"captured {len(captured)}"
+            )
+        return logits, captured[0]
