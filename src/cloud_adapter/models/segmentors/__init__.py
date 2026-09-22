@@ -5,6 +5,7 @@ from .label_remap_encoder_decoder import LabelRemapEncoderDecoder
 from .weak_class_boundary_distill_encoder_decoder import (
     WeakClassBoundaryDistillEncoderDecoder,
 )
+from .boundary_supervised_encoder_decoder import BoundarySupervisedEncoderDecoder
 
 __all__ = [
     "FrozenBackboneEncoderDecoder",
@@ -12,4 +13,5 @@ __all__ = [
     "LogitDistillEncoderDecoder",
     "PixelFeatureDistillEncoderDecoder",
     "WeakClassBoundaryDistillEncoderDecoder",
+    "BoundarySupervisedEncoderDecoder",
 ]

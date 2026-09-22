@@ -1355,6 +1355,20 @@ Phase 36使用torchvision MobileNetV3-Large IMAGENET1K_V2独立预训练权重�
 
 Phase 36失败并关闭MobileNetV3-Large主干方向。它比Phase 31 MobileNetV2同seed高0.13点，却增加1.143M参数并失去两倍加速门槛，说明继续替换相近移动主干难以解决弱类表征瓶颈。Phase 37回到当前最快合格部署图Phase 31，不增加推理算子，改为直接监督的弱类加权query分类损失；与失败的教师KL不同，该实验只重新平衡真实标签监督，并从ImageNet初始化独立训练。若不能达到68.0则关闭损失重加权方向。
 
+## Phase 37 — 弱类加权query分类监督
+
+### 简介与门槛
+
+Phase 37完全复用Phase 31部署结构、ImageNet初始化、优化器和40,000 iter训练，仅将Mask2Former query分类权重固定为clear/thick/thin/shadow/no-object=`[1.0, 1.0, 1.5, 1.25, 0.1]`。门槛为val mIoU至少68.0、thin cloud与cloud shadow平均IoU至少51.0、原生FP16加速至少2.0倍、参数不超过3.0M。L8与内部test未读取。
+
+### 实验结果
+
+候选达到67.35 mIoU，比Phase 31同seed提高1.52点；thin cloud与cloud shadow IoU为47.52和55.59，弱类均值51.555，首次超过51.0严格门槛。部署图仍为2.548M参数，实测16.997 ms、58.83 img/s和2.016倍加速。弱类、速度、参数与有限数值通过，但总体mIoU低于68.0门槛0.65点，因此按预注册总体判定失败。
+
+### 结论与方向切换
+
+Phase 37失败，不能把接近门槛包装为通过，也不调整已有类别权重。不过结果明确表明真实标签的弱类监督有效，而教师蒸馏无效。Phase 38关闭query分类权重路线并恢复原始统一query权重，转为训练期额外的像素语义交叉熵：对真实标签边界及弱类加权，直接约束最终semantic logits；该辅助分支不写入checkpoint、不改变Phase 31推理图。若仍不能达到68.0则停止监督损失变体。
+
 ## 后续维护规则
 
 从 Phase 16 开始，每个 Phase 完成后在本文件末尾追加以下内容：
