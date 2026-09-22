@@ -2,6 +2,7 @@ from typing import List, Sequence, Tuple
 
 from mmengine.model import BaseModule
 from mmseg.registry import MODELS
+import torch
 from torch import Tensor, nn
 import torch.nn.functional as F
 
@@ -300,4 +301,51 @@ class DetailLiteFPNPixelDecoder(LiteFPNPixelDecoder):
         )
         mask_input = pyramid[0] + self.detail_gate * self.detail_expand(high_frequency)
         mask_feature = self.mask_feature(mask_input)
+        return mask_feature, multi_scale_features
+
+
+@MODELS.register_module()
+class ContextLiteFPNPixelDecoder(LiteFPNPixelDecoder):
+    """LiteFPN modulated by an identity-initialized global scene gate."""
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        deepest_channels = self.input_projections[-1][0].in_channels
+        feature_channels = self.mask_feature.in_channels
+        self.context_projection = nn.Conv2d(
+            deepest_channels, feature_channels, kernel_size=1, bias=True
+        )
+
+    def init_weights(self):
+        super().init_weights()
+        nn.init.zeros_(self.context_projection.weight)
+        nn.init.zeros_(self.context_projection.bias)
+
+    def forward(self, feats: List[Tensor]) -> Tuple[Tensor, List[Tensor]]:
+        if len(feats) != len(self.input_projections):
+            raise ValueError(
+                f"Expected {len(self.input_projections)} feature maps, "
+                f"received {len(feats)}"
+            )
+
+        laterals = [
+            projection(feature)
+            for projection, feature in zip(self.input_projections, feats)
+        ]
+        pyramid = [None] * len(laterals)
+        pyramid[-1] = self.refine_blocks[-1](laterals[-1])
+        for level in range(len(laterals) - 2, -1, -1):
+            top_down = F.interpolate(
+                pyramid[level + 1],
+                size=laterals[level].shape[-2:],
+                mode="bilinear",
+                align_corners=False,
+            )
+            pyramid[level] = self.refine_blocks[level](laterals[level] + top_down)
+
+        context = F.adaptive_avg_pool2d(feats[-1], output_size=1)
+        gate = 2.0 * torch.sigmoid(self.context_projection(context))
+        gated_pyramid = [feature * gate for feature in pyramid]
+        multi_scale_features = list(reversed(gated_pyramid))[: self.num_outs]
+        mask_feature = self.mask_feature(gated_pyramid[0])
         return mask_feature, multi_scale_features
