@@ -1515,6 +1515,12 @@ Phase 46只回答因素化表示能否作为后续适应的稳定底座，不使
 
 仅使用CloudSEN source-train标签训练4,000 iter，每1,000 iter在官方source-val选择checkpoint；因素BCE与合法四类重构NLL权重均固定为1.0，只有15个校准器参数可训练。训练后一次性评估source-val和scene-disjoint target-val；target-train、锁定target-test及CloudSEN internal test均不读取。通过门槛为source-val mIoU不低于72.98（相对同seed 73.98遗忘不超过1.0）、target-val mIoU不低于43.1241、target弱类mIoU至少16.3059（相对15.3059提升至少1.0），且重构概率和为1、预测只包含四个合法状态。全部通过才允许Phase 47加入类条件目标原型；任一失败则关闭“仅在最终四类logits上做因素残差校准”的实现，不追加训练时长、权重或学习率试验，转而把独立因素头前移到像素特征空间。
 
+### 实验结果与止损
+
+seed 42固定训练4,000 iter，source-val选择iter 4,000。正确经过segmentor因素重构的完整535张source-val为72.6871 mIoU，四类IoU依次为clear 88.0634、thick cloud 85.0886、thin cloud 57.1206、cloud shadow 60.4757，相对同seed V8下降1.2929点，超过1.0遗忘线0.2929点。完整1,905张scene-disjoint target-val为42.5357 mIoU，四类IoU依次为clear 76.9311、cloud shadow 16.7143、thin cloud 10.0850、thick cloud 66.4123，弱类均值13.3997，宏Boundary F1为13.3340；相对source-only分别下降0.5884 mIoU、1.9062弱类IoU和0.1423 Boundary F1。零残差数学重构的最大概率误差为`3.33e-16`、概率和最大误差为`2.22e-16`，结构合法性通过，但三项性能门槛全部失败。target-train标签、锁定target-test与CloudSEN internal test均未读取。
+
+首次机器汇总错误复用了为普通Mask2Former编写的部署wrapper，绕过segmentor级因素重构，因而机械复现V8原值；训练期mmseg验证与该汇总不一致后即被识别。修复只令评估调用已有checkpoint的`encode_decode`，未重训、未改变checkpoint或门槛；以上为修复后的唯一有效结果。Phase 46失败并关闭最终四类logits上的15参数因素残差校准，不延长训练或调权重。结果表明因素监督必须作用于共享像素表征，而不能在已经压缩为四类分数后恢复跨传感器弱类信息；下一阶段按预注册将独立因素头前移到mask feature空间，仍先验证源域保持与目标零样本弱类，再决定是否允许目标原型更新。
+
 ## 后续维护规则
 
 从 Phase 16 开始，每个 Phase 完成后在本文件末尾追加以下内容：
