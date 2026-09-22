@@ -1467,6 +1467,16 @@ Phase 44不训练、不推理、不读取CloudSEN内部test，只审计Phase 31�
 
 Phase 31–43紧凑研究程序关闭。没有模型有资格解封CloudSEN内部test，也不能把Phase 37包装成达到68.0的成功模型。进一步研究必须提出不同的核心架构假设或引入真正未用于开发的外部/地域数据；禁止继续围绕现有MobileNetV2+LiteFPN做相邻损失、采样、门控或局部融合试错。Phase 44审计通过只代表证据链一致，不改变所有模型门槛结论。
 
+## Phase 45 — 跨域可行性与上限审计（进行中）
+
+### 预注册（结果产生前）
+
+Phase 45开启与Phase 31–43不同的新研究主线：面向资源受限部署的弱类感知多类别跨传感器云分割域适应，核心假设为“物理语义因子化 + 类条件适应”。在实现新模型前先审计跨域任务是否有效并测量可利用上限。Landsat-8 Biome在历史阶段已被读取，只作为开发目标域，不能描述为独立外部holdout；CloudSEN内部test继续封存。
+
+Phase 45A合并L8 Biome历史patch级train/test目录，从文件名恢复原始scene ID，再按biome分层、scene互斥地生成target-train、target-val与锁定target-test清单。共享数据文件只读，不移动、不复制、不改标签。完整性门槛为图像标注一一对应、文件名全部可解析、无重复patch、替代划分scene互斥、三个划分均覆盖全部类别和biome、标签值属于0–3且边界/内部像元统计有限。旧train/test的scene重叠只作为历史协议诊断，不作为新划分失败条件。
+
+Phase 45A通过后才进入45B：冻结评估Phase 22 V8与Phase 37紧凑模型，使用target-train标签训练监督Oracle，并运行一个不读取目标标签的简单teacher–student适应基线。主要止损量为同架构Oracle target-val mIoU减source-only target-val mIoU：小于5点则停止；5到不足8点时仅当薄云/云影平均Oracle差距至少10点才继续；至少8点才进入因素化方法。锁定target-test在方法开发期间不读取，二分类HRC→GF实验只作独立补充，不与四分类Landsat指标直接求平均。
+
 ## 后续维护规则
 
 从 Phase 16 开始，每个 Phase 完成后在本文件末尾追加以下内容：
