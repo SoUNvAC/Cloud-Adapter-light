@@ -6,12 +6,41 @@ from pathlib import Path
 
 import numpy as np
 import torch
+from torch import nn
 
 from run_phase45_source_only import evaluate, load_rows
 
 
 IDENTITY = np.arange(4, dtype=np.int64)
 SOURCE_TO_TARGET = np.asarray([0, 3, 2, 1], dtype=np.int64)
+
+
+class FactorizedInferenceWrapper(nn.Module):
+    """Run the segmentor-level factor reconstruction omitted by export wrapper."""
+
+    def __init__(self, deployment_wrapper):
+        super().__init__()
+        self.deployment_wrapper = deployment_wrapper
+
+    def forward(self, rgb_images):
+        normalized = self.deployment_wrapper.normalize(rgb_images)
+        height, width = rgb_images.shape[-2:]
+        metas = [
+            dict(
+                ori_shape=(height, width),
+                img_shape=(height, width),
+                pad_shape=(height, width),
+                padding_size=[0, 0, 0, 0],
+                flip=False,
+            )
+            for _ in range(rgb_images.shape[0])
+        ]
+        with torch.autocast(
+            device_type=rgb_images.device.type,
+            dtype=torch.float16,
+            enabled=rgb_images.is_cuda,
+        ):
+            return self.deployment_wrapper.segmentor.encode_decode(normalized, metas)
 
 
 def source_rows(data_root):
@@ -85,11 +114,13 @@ def main():
     source = evaluate(
         "source_val", config, checkpoint, source_rows(Path(args.data_root)),
         output_root, label_map=IDENTITY,
+        wrapper_transform=FactorizedInferenceWrapper,
     )
     target = evaluate(
         "target_val", config, checkpoint,
         load_rows(Path(args.manifest), "target_val"), output_root,
         label_map=SOURCE_TO_TARGET,
+        wrapper_transform=FactorizedInferenceWrapper,
     )
     equivalence = exact_reconstruction_error()
     gates = {

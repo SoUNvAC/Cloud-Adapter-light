@@ -106,13 +106,23 @@ def load_rows(manifest, split):
     return rows
 
 
-def evaluate(name, config, checkpoint, rows, output_root, label_map=SOURCE_TO_TARGET):
+def evaluate(
+    name,
+    config,
+    checkpoint,
+    rows,
+    output_root,
+    label_map=SOURCE_TO_TARGET,
+    wrapper_transform=None,
+):
     label_map = np.asarray(label_map, dtype=np.int64)
     wrapper_args = argparse.Namespace(
         config=str(config), checkpoint=str(checkpoint), precision="fp16",
         active_block_indices=None,
     )
     wrapper, _ = build_wrapper(wrapper_args)
+    if wrapper_transform is not None:
+        wrapper = wrapper_transform(wrapper)
     confusion = np.zeros((4, 4), dtype=np.int64)
     boundary = [dict(pred=0, gt=0, matched_pred=0, matched_gt=0) for _ in range(4)]
     torch.cuda.reset_peak_memory_stats()
