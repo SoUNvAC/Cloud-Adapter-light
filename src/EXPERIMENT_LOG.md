@@ -1485,6 +1485,10 @@ Phase 45B的Boundary F1定义在首次target-val模型推理前冻结：分别�
 
 新的biome分层scene级划分为target-train 6,502 patches/56 scenes、target-val 1,905/16、锁定target-test 2,167/16，三者均覆盖8个biome和四类且scene交集为空。target-train像元占比为clear 43.33%、cloud shadow 1.20%、thin cloud 19.31%、thick cloud 36.16%；target-val对应48.21%、2.82%、15.11%、33.86%。云影的极端稀缺支持弱类感知动机，但尚不构成方法有效性证据。Phase 45A通过，按预注册进入45B；target-test保持锁定。
 
+### Phase 45B Source-only结果
+
+在commit `683bb96`上冻结Phase 22 V8 seed-42与Phase 37 seed-42 checkpoint，使用固定`[0,3,2,1]`映射评估全部1,905张scene-disjoint target-val。V8为43.1241 mIoU，四类IoU依次为clear 74.7081、cloud shadow 16.4714、thin cloud 14.1403、thick cloud 67.1766，弱类均值15.3059，1-pixel容差宏Boundary F1为13.4763，其中thin cloud Boundary F1仅2.8838。Phase 37紧凑版为37.1549 mIoU，四类IoU为65.1102、15.8252、15.9285、51.7556，弱类均值15.8769，宏Boundary F1为11.5214，其中thin cloud为4.9800。两套模型均完成全部样本且指标有限；target-test与CloudSEN internal test均未读取。Source-only基准通过完整性检查，但低弱类与边界指标不代表方法成功，下一步必须用同协议Oracle测量真实上限后才能决定是否继续。
+
 ## 后续维护规则
 
 从 Phase 16 开始，每个 Phase 完成后在本文件末尾追加以下内容：
