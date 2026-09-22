@@ -1491,6 +1491,12 @@ Phase 45B的Boundary F1定义在首次target-val模型推理前冻结：分别�
 
 Oracle首次启动在commit `1f2157a`的训练前预检阶段失败：通用`check_light_setup.py`只识别目录式dataset并强制读取`data_root`，而Phase 45使用只读CSV manifest。失败发生在iter 0之前，未生成checkpoint、未产生可报告模型结果、未读取target-test。修复仅令预检器验证manifest文件存在，不改变数据、模型、优化器、训练长度或任何预注册门槛，随后原配置重新运行。
 
+### Phase 45B Oracle结果
+
+在commit `385aed5`、seed 42下，两套target-only Oracle均从通用DINO/ImageNet初始化训练40,000 iter，只使用scene-disjoint target-train标签并在target-val选择checkpoint。V8最佳为iter 32,000，在统一逐像素复算中达到56.2204 mIoU，四类IoU为clear 83.1552、cloud shadow 24.4730、thin cloud 39.4668、thick cloud 77.7865，弱类均值31.9699，宏Boundary F1为31.1843。相对冻结V8 source-only分别提升13.0963 mIoU、16.6640弱类IoU和17.7080 Boundary F1。
+
+紧凑Oracle最佳为iter 40,000，达到53.0211 mIoU，四类IoU为83.7106、17.2911、37.0711、74.0118，弱类均值27.1811，宏Boundary F1为42.6916；相对Phase 37 source-only分别提升15.8663、11.3042和31.1702点。两套评估均完整覆盖1,905张target-val，指标有限，target-test与CloudSEN internal test均未读取。主判据V8 Oracle gap 13.0963超过预注册8点继续线，Phase 45B上限审计通过并选择`proceed_to_factorized_method`；在新方法前先完成预注册的简单teacher–student DA基线，禁止把Oracle监督结果作为DA结果。
+
 ## 后续维护规则
 
 从 Phase 16 开始，每个 Phase 完成后在本文件末尾追加以下内容：
