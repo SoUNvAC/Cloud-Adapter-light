@@ -4,6 +4,7 @@ from .gf12ms_whu_gf2 import GF12MSWHUGF2Dataset
 from .cloudsen12_high_l1c import CLOUDSEN12HIGHL1CDataset
 from .cloudsen12_high_l2a import CLOUDSEN12HIGHL2ADataset
 from .l8_biome import L8BIOMEDataset
+from .weak_prevalence_sampler import WeakPrevalenceInfiniteSampler
 
 __all__ = [
     "HRCWHUDataset",
@@ -12,4 +13,5 @@ __all__ = [
     "CLOUDSEN12HIGHL1CDataset",
     "CLOUDSEN12HIGHL2ADataset",
     "L8BIOMEDataset",
+    "WeakPrevalenceInfiniteSampler",
 ]
