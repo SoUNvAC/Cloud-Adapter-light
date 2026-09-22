@@ -226,3 +226,78 @@ class BiLiteFPNPixelDecoder(LiteFPNPixelDecoder):
         multi_scale_features = list(reversed(fused))[: self.num_outs]
         mask_feature = self.mask_feature(fused[0])
         return mask_feature, multi_scale_features
+
+
+@MODELS.register_module()
+class DetailLiteFPNPixelDecoder(LiteFPNPixelDecoder):
+    """LiteFPN with a cheap high-frequency residual on the mask path only."""
+
+    def __init__(
+        self,
+        *args,
+        detail_channels: int = 16,
+        detail_gate_init: float = 0.1,
+        **kwargs,
+    ):
+        super().__init__(*args, **kwargs)
+        if detail_channels <= 0:
+            raise ValueError("detail_channels must be positive")
+        if not 0.0 <= detail_gate_init <= 1.0:
+            raise ValueError("detail_gate_init must be in [0, 1]")
+        input_channels = self.input_projections[0][0].in_channels
+        feature_channels = self.mask_feature.in_channels
+        detail_groups = min(16, detail_channels)
+        while detail_channels % detail_groups:
+            detail_groups -= 1
+        feature_groups = self.refine_blocks[0][0][1].num_groups
+        self.detail_reduce = _ConvGN(
+            input_channels,
+            detail_channels,
+            kernel_size=1,
+            num_groups=detail_groups,
+        )
+        self.detail_expand = _ConvGN(
+            detail_channels,
+            feature_channels,
+            kernel_size=1,
+            activate=False,
+            num_groups=feature_groups,
+        )
+        self.detail_gate = nn.Parameter(Tensor([float(detail_gate_init)]))
+
+    def init_weights(self):
+        initial_gate = self.detail_gate.item()
+        super().init_weights()
+        nn.init.constant_(self.detail_gate, initial_gate)
+
+    def forward(self, feats: List[Tensor]) -> Tuple[Tensor, List[Tensor]]:
+        if len(feats) != len(self.input_projections):
+            raise ValueError(
+                f"Expected {len(self.input_projections)} feature maps, "
+                f"received {len(feats)}"
+            )
+
+        laterals = [
+            projection(feature)
+            for projection, feature in zip(self.input_projections, feats)
+        ]
+        pyramid = [None] * len(laterals)
+        pyramid[-1] = self.refine_blocks[-1](laterals[-1])
+        for level in range(len(laterals) - 2, -1, -1):
+            top_down = F.interpolate(
+                pyramid[level + 1],
+                size=laterals[level].shape[-2:],
+                mode="bilinear",
+                align_corners=False,
+            )
+            pyramid[level] = self.refine_blocks[level](laterals[level] + top_down)
+
+        # The transformer inputs remain on the original LiteFPN path.
+        multi_scale_features = list(reversed(pyramid))[: self.num_outs]
+        detail = self.detail_reduce(feats[0])
+        high_frequency = detail - F.avg_pool2d(
+            detail, kernel_size=3, stride=1, padding=1
+        )
+        mask_input = pyramid[0] + self.detail_gate * self.detail_expand(high_frequency)
+        mask_feature = self.mask_feature(mask_input)
+        return mask_feature, multi_scale_features
