@@ -66,6 +66,16 @@ model; the compact model is a secondary deployment diagnostic.  Both oracles
 start from their generic ImageNet/DINO initialization rather than source-domain
 segmentation weights and use seed 42 for the first upper-bound audit.
 
+The fixed teacher--student baseline uses the frozen Phase 22 seed-42 V8 as an
+offline teacher. Source-order pseudo labels require softmax confidence at
+least 0.90; images with less than 5% accepted pixels are excluded. The student
+starts from the same source checkpoint, trains for exactly 10,000 iterations,
+and is evaluated only at iteration 10,000, without target-val checkpoint
+selection. It passes its baseline gate only if target-val improves by at least
+1.0 mIoU while CloudSEN source-val forgetting is at most 1.0 mIoU. Failure
+closes fixed-teacher pseudo-labeling but does not reverse the independently
+passed Oracle headroom decision.
+
 - gap below 5.0 points: stop this target-domain direction;
 - gap from 5.0 to below 8.0: continue only if the mean thin-cloud/cloud-shadow
   oracle gap is at least 10.0 points;

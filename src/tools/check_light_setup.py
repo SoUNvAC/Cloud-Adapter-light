@@ -61,6 +61,8 @@ def main():
     expected_files = []
     for loader_name in ("train_dataloader", "val_dataloader", "test_dataloader"):
         loader = cfg[loader_name]
+        if loader is None:
+            continue
         dataset = loader.dataset
         if dataset.get("manifest_path"):
             expected_files.append(Path(dataset.manifest_path))

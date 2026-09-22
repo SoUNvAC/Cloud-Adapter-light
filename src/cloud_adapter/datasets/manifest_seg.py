@@ -14,9 +14,10 @@ class Phase45L8ManifestDataset(BaseSegDataset):
         palette=[[0, 0, 0], [85, 85, 85], [170, 170, 170], [255, 255, 255]],
     )
 
-    def __init__(self, manifest_path, split, **kwargs):
+    def __init__(self, manifest_path, split, mask_column="mask_path", **kwargs):
         self.manifest_path = Path(manifest_path)
         self.manifest_split = split
+        self.mask_column = mask_column
         super().__init__(
             img_suffix=".png",
             seg_map_suffix=".png",
@@ -39,7 +40,7 @@ class Phase45L8ManifestDataset(BaseSegDataset):
         return [
             dict(
                 img_path=str(Path(row["image_path"]).resolve()),
-                seg_map_path=str(Path(row["mask_path"]).resolve()),
+                seg_map_path=str(Path(row[self.mask_column]).resolve()),
                 label_map=self.label_map,
                 reduce_zero_label=self.reduce_zero_label,
                 seg_fields=[],

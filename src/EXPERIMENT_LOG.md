@@ -1497,6 +1497,10 @@ Oracle首次启动在commit `1f2157a`的训练前预检阶段失败：通用`che
 
 紧凑Oracle最佳为iter 40,000，达到53.0211 mIoU，四类IoU为83.7106、17.2911、37.0711、74.0118，弱类均值27.1811，宏Boundary F1为42.6916；相对Phase 37 source-only分别提升15.8663、11.3042和31.1702点。两套评估均完整覆盖1,905张target-val，指标有限，target-test与CloudSEN internal test均未读取。主判据V8 Oracle gap 13.0963超过预注册8点继续线，Phase 45B上限审计通过并选择`proceed_to_factorized_method`；在新方法前先完成预注册的简单teacher–student DA基线，禁止把Oracle监督结果作为DA结果。
 
+### Phase 45B Teacher–student预注册（结果产生前）
+
+简单source-free基线冻结Phase 22 seed-42 V8作为离线教师，仅对6,502张target-train图像推理且不读取其标注。将教师四类分数softmax后以0.90置信度保留source-order伪标签，单图有效像元不足5%则排除；伪标签必须至少保留1,000张图且四类均有有效像元。学生从同一source checkpoint初始化，以随机翻转和颜色扰动训练固定10,000 iter，不运行target-val选择，固定评估iter-10,000。通过线为target-val相对V8 source-only至少提升1.0 mIoU，同时CloudSEN source-val遗忘不超过1.0 mIoU。失败即关闭固定教师伪标签方向并转入物理语义因子化/类条件适应；成功只保留为DA baseline，不构成论文主方法。
+
 ## 后续维护规则
 
 从 Phase 16 开始，每个 Phase 完成后在本文件末尾追加以下内容：
