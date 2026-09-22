@@ -49,6 +49,11 @@ Only after Phase 45A passes:
 4. report per-class IoU, weak-class mean, macro boundary F1, adaptation time,
    peak adaptation memory, and source-domain forgetting separately.
 
+Boundary F1 is computed independently for each of the four classes from
+one-pixel semantic boundaries, with a fixed one-pixel matching tolerance, then
+macro-averaged.  This definition is frozen before the first target-val model
+evaluation.
+
 The scene-level target-test partition is locked during method development.
 Binary HRC-to-GF experiments are secondary evidence and are never averaged
 directly with four-class Landsat metrics.
@@ -68,4 +73,3 @@ source-only target-val mIoU.
 No threshold may be changed after results are observed.  Phase 45 does not
 claim that sensor, geography, and ontology effects are independently causal
 unless controlled comparison data actually identify those effects.
-

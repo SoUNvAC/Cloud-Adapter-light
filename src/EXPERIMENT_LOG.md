@@ -1477,6 +1477,8 @@ Phase 45A合并L8 Biome历史patch级train/test目录，从文件名恢复原始
 
 Phase 45A通过后才进入45B：冻结评估Phase 22 V8与Phase 37紧凑模型，使用target-train标签训练监督Oracle，并运行一个不读取目标标签的简单teacher–student适应基线。主要止损量为同架构Oracle target-val mIoU减source-only target-val mIoU：小于5点则停止；5到不足8点时仅当薄云/云影平均Oracle差距至少10点才继续；至少8点才进入因素化方法。锁定target-test在方法开发期间不读取，二分类HRC→GF实验只作独立补充，不与四分类Landsat指标直接求平均。
 
+Phase 45B的Boundary F1定义在首次target-val模型推理前冻结：分别提取四类的一像素语义边界，以一像素空间容差匹配预测与真值边界，先聚合全体像素计算各类F1，再对四类宏平均。不得在观察结果后扩大容差。
+
 ### Phase 45A结果
 
 训练机在commit `6587ae8`、`cloud-lite-pt210`环境中全量读取10,574对512×512图像与标注，所有配对、命名、标签范围、二维形状、重复检查和新划分完整性门槛通过，manifest SHA-256为`527fd1ecc81e0e088729626d6d2d1b2dc23fdd2bf901a33537c91822c8dcd533`。历史train为7,931 patches、88 scenes，历史test为2,643 patches、88 scenes；两者scene交集为88，即历史划分完全不满足scene互斥，后续禁止沿用该划分作DA证据。
