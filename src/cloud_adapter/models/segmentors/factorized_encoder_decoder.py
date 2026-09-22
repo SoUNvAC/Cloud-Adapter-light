@@ -37,6 +37,8 @@ class FactorizedEncoderDecoder(EncoderDecoder):
     def train(self, mode=True):
         super().train(mode)
         if self.freeze_base:
+            for name, parameter in self.named_parameters():
+                parameter.requires_grad = name.startswith("factor_residual.")
             self.backbone.eval()
             if self.with_neck:
                 self.neck.eval()
