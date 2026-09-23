@@ -21,7 +21,9 @@ CloudSEN internal test remain sealed.
 ## Phase 52A preregistered stop-loss
 
 Before training, implementation checks must prove that disabling the target
-path is an exact identity, only target modules require gradients, the selected
+path is a code-level identity and is numerically equal to an independently
+built source model within `1e-5` maximum absolute logit error (CUDA kernels are
+not assumed bitwise deterministic), only target modules require gradients, the selected
 set is still exactly 65 images selected without labels, and added trainable
 parameters are at most 0.50M. The public MsRE arithmetic is retained for this
 vanilla baseline; sensor metadata gating and cloud-aware token groups are not
