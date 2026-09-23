@@ -29,6 +29,13 @@ class Phase45L8ManifestDataset(BaseSegDataset):
         self.mask_column = mask_column
         self.selection_path = Path(selection_path) if selection_path else None
         self.target_to_source = bool(target_to_source)
+        if self.target_to_source:
+            # BaseSegDataset validates configured class names against METAINFO
+            # before load_data_list can attach the pixel-value label map.
+            self.METAINFO = dict(
+                classes=("clear", "thick cloud", "thin cloud", "cloud shadow"),
+                palette=[[0, 0, 0], [255, 255, 255], [170, 170, 170], [85, 85, 85]],
+            )
         super().__init__(
             img_suffix=".png",
             seg_map_suffix=".png",
