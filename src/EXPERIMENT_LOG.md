@@ -1581,6 +1581,12 @@ Phase 45的同架构Oracle相对source-only提高13.0963 mIoU，证明任务存�
 
 但同一checkpoint在535张source-val仅为70.2977 mIoU，四类IoU为87.3995、82.4160、52.3315、59.0438；相对预注册73.98基线遗忘3.6823点，超过最多1点门槛。即使使用近似1:1的完整源域回放，少量目标监督仍通过移动共享表示和分类边界换取目标收益，未形成可接受的双域方法。Phase 50整体失败并执行`stop_adaptation_route_begin_trustworthy_segmentation_audit`：禁止调整源目标比例、学习率、轮数、选择权重或预算，也不进入随机基线、三种子和成本曲线。target-test与CloudSEN internal test均保持封存。下一步只允许一次冻结模型的可信预测/错误定位可行性审计；若现有不确定性不能可靠定位跨传感器错误，则结束TGRS主方法路线。
 
+## Phase 51 — 跨传感器可信预测可行性审计（预注册）
+
+Phase 50的目标精度、弱类和边界均显著改善但源域遗忘超线，适配路线正式停止。Phase 51不训练第三套模型或uncertainty head，只审计冻结Phase 22 V8 source-only自身的最大归一化Mask2Former语义分数，能否在domain shift下定位错误。仅评估535张source-val与1,905张scene-disjoint target-val；不读取target-train、锁定target-test或CloudSEN internal test。
+
+流式统计全部有效像元的20-bin ECE、Brier score、NLL和risk–coverage/AURC，并以`1−max_probability`作为错误分数报告全体、真值薄云/阴影像元及真实语义边界像元的错误检测AUROC。可靠定位必须同时满足：target全体错误AUROC至少0.70、弱类错误AUROC至少0.65、边界错误AUROC至少0.65、最低置信20%像元召回至少40%的全部错误、保留最高置信80%像元时错误风险相对全覆盖至少下降30%。阈值在推理前冻结，不做温度缩放或target-val后校准。全部通过才允许转入可信分割主线并设计风险控制闭环；任一失败即执行`end_tgrs_main_method_route`，停止当前项目的TGRS主方法扩展，只整理既有工程与负结果论文。 
+
 ## 后续维护规则
 
 从 Phase 16 开始，每个 Phase 完成后在本文件末尾追加以下内容：
