@@ -1587,6 +1587,14 @@ Phase 50的目标精度、弱类和边界均显著改善但源域遗忘超线，
 
 流式统计全部有效像元的20-bin ECE、Brier score、NLL和risk–coverage/AURC，并以`1−max_probability`作为错误分数报告全体、真值薄云/阴影像元及真实语义边界像元的错误检测AUROC。可靠定位必须同时满足：target全体错误AUROC至少0.70、弱类错误AUROC至少0.65、边界错误AUROC至少0.65、最低置信20%像元召回至少40%的全部错误、保留最高置信80%像元时错误风险相对全覆盖至少下降30%。阈值在推理前冻结，不做温度缩放或target-val后校准。全部通过才允许转入可信分割主线并设计风险控制闭环；任一失败即执行`end_tgrs_main_method_route`，停止当前项目的TGRS主方法扩展，只整理既有工程与负结果论文。
 
+### Phase 51结果与最终退出
+
+首次完整审计在全部535张source-val和1,905张target-val推理结束后，仅因NumPy布尔量不能JSON序列化而在summary落盘前退出；修复仅将既有门槛比较显式转换为Python `bool`，未改变模型、数据、指标、阈值或封存状态，随后原审计完整重跑。冻结V8在source-val的像素accuracy为89.7778%，ECE 0.02035、NLL 0.27660、Brier 0.15037、AURC 0.01745；全体错误AUROC 0.89386、弱类错误AUROC 0.74933，但边界错误AUROC仅0.58071。
+
+跨到target-val后，像素accuracy降至74.2613%，ECE升至0.10369、NLL 0.87852、Brier 0.39390、AURC 0.13347，说明domain shift同时造成明显过置信与风险排序退化。全体错误AUROC为0.73993并通过0.70门槛，最低置信20%像元召回41.8772%的全部错误（lift 2.0939）也通过；但弱类错误AUROC仅0.35064，显著低于0.65且低于随机排序，边界错误AUROC仅0.56353，80% coverage的风险从25.7387%降至18.7001%、相对下降27.3464%，亦低于30%门槛。
+
+Phase 51失败并执行`end_tgrs_main_method_route`。现有置信度能发现一部分一般错误，却对论文核心的薄云/阴影错误呈反向或无效排序，也不能可靠覆盖边界风险；因此禁止继续增加uncertainty head、校准模块、拒识阈值调参或新的适配结构。Phase 45–51的止损树至此闭合：Oracle监督空间真实存在，无监督适配无效，1%主动监督以超过3点源域遗忘换得目标收益，而冻结置信度无法可靠定位弱类/边界错误。target-train未用于Phase 51，target-test与CloudSEN internal test始终封存。当前项目停止TGRS主方法扩展，后续只整理Phase 1–44部署成果、Phase 45无泄漏协议及Phase 46–51系统负结果，转向JSTARS、GRSL、Remote Sensing或工程部署论文。
+
 ## 后续维护规则
 
 从 Phase 16 开始，每个 Phase 完成后在本文件末尾追加以下内容：
