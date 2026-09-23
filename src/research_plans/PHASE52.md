@@ -53,3 +53,25 @@ target mIoU or 1.5 weak-class IoU at matched labels and seeds, without exceeding
 0.60M added parameters or 25% latency overhead. Cloud-aware tokens and ordinal,
 boundary, or consistency losses are evaluated one factor at a time. A failure
 closes that factor rather than triggering a neighboring hyperparameter sweep.
+
+## Phase 52A result and stop decision
+
+The fixed run completed 4,000 iterations and selected iteration 1,000 on
+target-val. With the target path disabled, the same checkpoint reproduced
+source-val at 73.9800 mIoU, so source forgetting was effectively zero. The
+target path used 380,577 trainable parameters and increased matched RTX 4090 D
+FP16 batch-1 latency from 22.0689 ms to 24.4751 ms (+10.90%); both efficiency
+gates passed.
+
+On all 1,905 target-val images, the candidate reached 44.8525 mIoU, 15.2351
+weak-class mIoU, and 16.5280 macro Boundary F1. Relative to the frozen
+source-only baseline these are +1.7284, -0.0708, and +3.0517 points. The
+boundary, source-preservation, parameter, latency, completeness, finite-value,
+and seal gates passed, but the preregistered +3.0 target mIoU and +4.0 weak-IoU
+gates failed. Cloud-shadow IoU was only 0.8403, despite thin-cloud IoU reaching
+29.6299.
+
+Phase 52 therefore executes `stop_phase52_msre_route`. The project must not
+run the 32-token or injection-position ablations and must not add metadata
+gating, cloud-aware tokens, ordinal losses, or consistency losses on top of
+this candidate. Target-test and CloudSEN internal test remain sealed.

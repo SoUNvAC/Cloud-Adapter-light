@@ -1601,6 +1601,12 @@ Phase 52不是重开Phase 45–51已关闭的输出校准或纯无监督路线�
 
 Phase 52A必须同时达到：target-val相对source-only提高至少3.0 mIoU、弱类至少4.0 IoU、宏Boundary F1至少3.0；关闭目标路径是代码级identity bypass，两个独立构建模型的CUDA推理logit最大绝对误差不超过`1e-5`，且完整source-val遗忘不超过0.05 mIoU；每目标新增可训练参数不超过0.50M；同机batch-1、512×512、原生FP16实际延迟增幅不超过20%。任一失败立即执行`stop_phase52_msre_route`，禁止调整token数、注入位置、学习率、轮数或损失，也不得进入元数据门控和云感知token。全部通过才允许Phase 52B比较16/32 tokens与稀疏位置；后续元数据门控还必须在匹配预算下相对普通MsRE提高至少1.0 mIoU或1.5弱类IoU。
 
+### Phase 52A结果与止损
+
+固定4,000 iter训练完成，并按预注册在target-val选择iter-1,000。关闭目标路径后，同一checkpoint在535张source-val为73.9800 mIoU，源域遗忘近似为零；目标新增可训练参数380,577。RTX 4090 D、batch 1、512×512、原生FP16同机测速从冻结基线22.0689 ms增至24.4751 ms，延迟增幅10.90%，参数与20%延迟门均通过。
+
+完整1,905张target-val达到44.8525 mIoU、15.2351弱类mIoU和16.5280宏Boundary F1，相对冻结source-only分别为`+1.7284`、`-0.0708`和`+3.0517`。边界、源域保持、参数、延迟、完整性、有限数值和封存门通过，但目标总体未达到`+3.0`，弱类未达到`+4.0`，其中cloud shadow IoU仅0.8403。Phase 52A失败并执行`stop_phase52_msre_route`：不运行32-token或注入位置消融，不进入传感器元数据门控、云感知token、序数损失或一致性损失。target-test与CloudSEN internal test保持封存。
+
 ## 后续维护规则
 
 从 Phase 16 开始，每个 Phase 完成后在本文件末尾追加以下内容：
