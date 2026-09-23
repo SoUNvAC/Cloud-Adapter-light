@@ -10,6 +10,7 @@ from .factorized_encoder_decoder import (
     FactorizedEncoderDecoder,
     PixelFeatureFactorizedEncoderDecoder,
 )
+from .shadow_aux_encoder_decoder import ShadowAuxFrozenHeadEncoderDecoder
 
 __all__ = [
     "FrozenBackboneEncoderDecoder",
@@ -20,4 +21,5 @@ __all__ = [
     "BoundarySupervisedEncoderDecoder",
     "FactorizedEncoderDecoder",
     "PixelFeatureFactorizedEncoderDecoder",
+    "ShadowAuxFrozenHeadEncoderDecoder",
 ]

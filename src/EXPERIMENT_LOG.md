@@ -1607,6 +1607,14 @@ Phase 52A必须同时达到：target-val相对source-only提高至少3.0 mIoU、
 
 完整1,905张target-val达到44.8525 mIoU、15.2351弱类mIoU和16.5280宏Boundary F1，相对冻结source-only分别为`+1.7284`、`-0.0708`和`+3.0517`。边界、源域保持、参数、延迟、完整性、有限数值和封存门通过，但目标总体未达到`+3.0`，弱类未达到`+4.0`，其中cloud shadow IoU仅0.8403。Phase 52A失败并执行`stop_phase52_msre_route`：不运行32-token或注入位置消融，不进入传感器元数据门控、云感知token、序数损失或一致性损失。target-test与CloudSEN internal test保持封存。
 
+## Phase 53 — 云影二元辅助监督（预注册）
+
+冻结诊断显示Phase 52A相对source-only的逐类IoU增量为clear `+4.5862`、thick cloud `+2.4689`、thin cloud `+15.4896`、cloud shadow `-15.6312`；thin cloud Boundary F1提高`18.0497`，cloud shadow Boundary F1下降`16.5978`。关闭目标分支的source-val为73.9800 mIoU，确认传感器路径选择实现零遗忘。结论不是“增益全部来自clear/thick”，而是普通MsRE显著改善薄云与薄云边界，却造成云影语义塌缩。
+
+Phase 53只增加一个机制：在最终语义logit上加入正负像元等质量的cloud-shadow二元BCE，固定权重0.5且不增加参数。Phase 52的16个通用token、380,577可训练参数、`[2,5,8,11]`注入位置、rank-8 head-delta、冻结源路径、65张选择、seed 52、优化器、增强、学习率、验证间隔与4,000 iter全部不变；不加入类别token、序数/边界损失、均衡采样、伪标签或元数据门控。
+
+通过线要求target mIoU至少46.1241、弱类mIoU至少19.3059、cloud shadow IoU至少16.4714、cloud shadow Boundary F1至少10.0、thin cloud IoU至少27.6299、关闭目标路径的source-val至少73.93，并保持恰好380,577个目标可训练参数、完整有限评估和两套test封存。任一失败即停止该机制，不调整损失权重、采样、token、位置、训练长度或样本选择。
+
 ## 后续维护规则
 
 从 Phase 16 开始，每个 Phase 完成后在本文件末尾追加以下内容：
