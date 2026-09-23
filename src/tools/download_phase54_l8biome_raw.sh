@@ -21,8 +21,8 @@ declare -A md5=(
 for biome in barren forest grass_crops shrubland snow_ice urban water wetlands; do
   archive="${biome}.tar.gz"
   attempt=0
-  until curl --http1.1 -L --fail --retry 5 --retry-all-errors -C - \
-      -o "${archive}" "${base}/${archive}"; do
+  until wget --continue --timeout=30 --read-timeout=30 --tries=20 \
+      -O "${archive}" "${base}/${archive}"; do
     attempt=$((attempt + 1))
     printf 'download retry biome=%s attempt=%d\n' "${biome}" "${attempt}" >&2
     sleep 5
