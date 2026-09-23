@@ -30,11 +30,10 @@ source_train = dict(
     pipeline=train_pipeline,
 )
 target_selected = dict(
-    type="Phase45L8ManifestDataset",
+    type="Phase50L8MappedDataset",
     manifest_path=manifest_path,
     split="target_train",
     selection_path=selection_path,
-    target_to_source=True,
     metainfo=source_metainfo,
     pipeline=train_pipeline,
 )
@@ -59,10 +58,9 @@ val_dataloader = dict(
     persistent_workers=True,
     sampler=dict(type="DefaultSampler", shuffle=False),
     dataset=dict(
-        type="Phase45L8ManifestDataset",
+        type="Phase50L8MappedDataset",
         manifest_path=manifest_path,
         split="target_val",
-        target_to_source=True,
         metainfo=source_metainfo,
         pipeline=test_pipeline,
     ),

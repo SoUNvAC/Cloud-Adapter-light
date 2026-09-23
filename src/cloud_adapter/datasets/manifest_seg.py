@@ -84,3 +84,16 @@ class Phase45L8ManifestDataset(BaseSegDataset):
                 f"{len(data_list)} records"
             )
         return data_list
+
+
+@DATASETS.register_module()
+class Phase50L8MappedDataset(Phase45L8ManifestDataset):
+    """Expose Landsat labels in the source model's semantic class order."""
+
+    METAINFO = dict(
+        classes=("clear", "thick cloud", "thin cloud", "cloud shadow"),
+        palette=[[0, 0, 0], [255, 255, 255], [170, 170, 170], [85, 85, 85]],
+    )
+
+    def __init__(self, **kwargs):
+        super().__init__(target_to_source=True, **kwargs)
