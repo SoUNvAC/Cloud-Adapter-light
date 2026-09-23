@@ -50,3 +50,13 @@ The selected checkpoint must satisfy every gate:
 
 Any failed gate stops this mechanism. The loss weight, sampler, token count,
 injection position, schedule and selection must not be adjusted afterward.
+
+## Superseded before evaluation
+
+The user refined the hypothesis while the run was still training: Phase 52A's
+successful thin-cloud path must be frozen, and only a separate shadow/non-shadow
+residual may be optimized. Phase 53 instead propagated its shadow auxiliary
+gradient through MsRE, so it no longer isolated the requested mechanism. The
+run was terminated before completion and before any checkpoint evaluation.
+Partial training values are not experimental results. Phase 53 is superseded
+by a frozen Phase 52A shadow-diagnosis and residual protocol.

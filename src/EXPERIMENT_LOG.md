@@ -1615,6 +1615,8 @@ Phase 53只增加一个机制：在最终语义logit上加入正负像元等质�
 
 通过线要求target mIoU至少46.1241、弱类mIoU至少19.3059、cloud shadow IoU至少16.4714、cloud shadow Boundary F1至少10.0、thin cloud IoU至少27.6299、关闭目标路径的source-val至少73.93，并保持恰好380,577个目标可训练参数、完整有限评估和两套test封存。任一失败即停止该机制，不调整损失权重、采样、token、位置、训练长度或样本选择。
 
+Phase 53训练期间，用户进一步冻结假设：不得让shadow辅助梯度继续更新已成功的Phase 52A MsRE，而应冻结Phase 52A全部参数，只训练独立shadow/non-shadow residual。由于Phase 53不再隔离所需机制，任务在完成和checkpoint评估前终止；中途训练值不作为实验结果。后续先完成Phase 52A云影去向、预测占用、1%标注覆盖和特征原型距离诊断，再预注册冻结residual实验。
+
 ## 后续维护规则
 
 从 Phase 16 开始，每个 Phase 完成后在本文件末尾追加以下内容：
