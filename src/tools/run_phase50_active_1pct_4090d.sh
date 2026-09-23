@@ -13,7 +13,7 @@ from pathlib import Path
 row = json.loads(Path("work_dirs/phase49_target_factor_adapter/summary.json").read_text())
 if row.get("decision") != "stop_adjacent_da_variants":
     raise SystemExit("Phase 49 terminal DA stop is required")
-if row.get("target_test_evaluated") is not False:
+if row.get("gates", {}).get("target_test_evaluated") is not False:
     raise SystemExit("Target test seal was violated")
 PY
 

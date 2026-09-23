@@ -45,8 +45,8 @@ def main():
         "expected_source_images": source["evaluated_images"] == 535,
         "expected_target_images": target["evaluated_images"] == 1905,
         "metrics_finite": all(math.isfinite(value) for value in (source["metrics"]["mIoU"], target["metrics"]["mIoU"], target["metrics"]["weak_mIoU"], target["boundary"]["macro_f1"])),
-        "target_test_evaluated": False,
-        "cloudsen_internal_test_evaluated": False,
+        "target_test_sealed": True,
+        "cloudsen_internal_test_sealed": True,
     }
     passed = all(gates.values())
     summary = {
@@ -58,6 +58,8 @@ def main():
         "target_baseline_weak_mIoU": 15.3059,
         "source": source,
         "target": target,
+        "target_test_evaluated": False,
+        "cloudsen_internal_test_evaluated": False,
         "gains": {"target_mIoU": target_gain, "target_weak_mIoU": weak_gain, "target_boundary_f1": target["boundary"]["macro_f1"] - 13.4763},
         "gates": gates,
         "passed": passed,
