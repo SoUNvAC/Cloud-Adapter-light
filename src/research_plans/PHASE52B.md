@@ -49,3 +49,24 @@ Tversky (alpha 0.3, beta 0.7) 1.0, and one-pixel shadow-boundary BCE 0.5.
 Any failed gate executes `stop_shadow_residual_route`. Loss weights, batch
 composition, branch width/dilation, schedule, checkpoint, or thresholds must
 not be adjusted afterward.
+
+## Result and stop decision
+
+Training completed all 4,000 iterations and selected iteration 3,000. The
+first evaluation attempt stopped before its first source image because the
+custom wrapper omitted the original FP16 autocast and presented Float features
+to Half Mask2Former weights. Restoring the evaluation precision context did
+not change the checkpoint, model, data, or thresholds; the complete evaluation
+was then rerun.
+
+The residual reached 43.9302 target mIoU. Shadow IoU recovered from Phase
+52A's 0.8403 to 8.3945, but remained below 16.471. Thin-cloud IoU fell from
+29.6299 to 23.5214, and thin Boundary F1 fell from 20.9335 to 15.8784. Shadow
+Boundary F1 was 9.3660. The source, parameter, completeness, finite-value, and
+seal gates passed, but every preregistered target performance gate failed.
+
+Phase 52B therefore executes `stop_shadow_residual_route`. Although the branch
+partially restores shadow, increasing shadow probability takes pixels from the
+previously successful thin-cloud path even when the conditional ratios among
+non-shadow classes are mathematically fixed. No loss, threshold, width,
+dilation, sampling, or schedule adjustment is permitted.

@@ -1625,6 +1625,12 @@ Phase 52B冻结iter-1,000 Phase 52A的主干、source Cloud-Adapter、MsRE、tar
 
 门槛为零初始化概率误差不超过`1e-5`且预测完全一致、新增参数不超过0.1M、target mIoU至少48.0、shadow IoU至少16.471、thin IoU至少28.630、thin Boundary F1至少19.934、关闭全部目标路径后source-val至少73.93，以及完整有限评估与两套test封存。任一失败执行`stop_shadow_residual_route`，不得事后调整loss、batch组成、宽度、dilation、训练长度或门槛。
 
+### Phase 52B结果与止损
+
+固定4,000 iter完成并选择iter-3,000。首次评估在第一张source图像前因自定义包装器遗漏原FP16 autocast而停止，修复仅恢复评估精度上下文，未改变checkpoint、模型、数据或门槛，随后完整重跑。目标域达到43.9302 mIoU；shadow IoU从Phase 52A的0.8403恢复到8.3945，但仍低于16.471，thin IoU从29.6299降至23.5214，thin Boundary F1从20.9335降至15.8784，shadow Boundary F1为9.3660。源域、参数、完整性、有限数值及封存门通过，但全部目标性能门失败。
+
+Phase 52B执行`stop_shadow_residual_route`。结果表明分支能部分恢复shadow，但即使数学上固定non-shadow类内部比例，提高shadow概率仍会从原本正确的thin像元中夺取预测；禁止继续调整loss、阈值、宽度、dilation、采样或训练长度。
+
 ## 后续维护规则
 
 从 Phase 16 开始，每个 Phase 完成后在本文件末尾追加以下内容：
