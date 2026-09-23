@@ -4,9 +4,14 @@ set -euo pipefail
 root="${1:-../shared/data/l8_biome_raw}"
 revision="f76df19accce34d2acc1878d88b9491bc81f94c8"
 stage="${root}/.hf_download"
+hf_cli="${HF_CLI:-/home/scv/miniconda3/envs/cloud-lite-pt210/bin/huggingface-cli}"
 mkdir -p "${root}"
 mkdir -p "${stage}"
 cd "${root}"
+if [[ ! -x "${hf_cli}" ]]; then
+  echo "Hugging Face CLI is unavailable: ${hf_cli}" >&2
+  exit 4
+fi
 
 declare -A md5=(
   [barren]="0eb691822d03dabd4f5ea8aadd0b41c3"
@@ -26,7 +31,7 @@ for biome in barren forest grass_crops shrubland snow_ice urban water wetlands; 
     continue
   fi
   attempt=0
-  until huggingface-cli download torchgeo/l8biome "${archive}" \
+  until "${hf_cli}" download torchgeo/l8biome "${archive}" \
       --repo-type dataset --revision "${revision}" --local-dir "${stage}"; do
     attempt=$((attempt + 1))
     printf 'download retry biome=%s attempt=%d\n' "${biome}" "${attempt}" >&2
