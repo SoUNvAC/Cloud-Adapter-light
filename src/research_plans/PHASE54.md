@@ -25,10 +25,13 @@ incremental conditions are:
 5. the above + a non-local neighbouring-cloud probability computed from the
    frozen Phase 22 thin-plus-thick probability, without using labels.
 
-All optical bands are converted with the scene MTL reflectance coefficients and
-sun elevation, clipped to `[0, 1]`, and aligned to the existing 512-pixel patch
-coordinates. The cloud-context channel is a fixed annular average and excludes
-the centre neighbourhood. The probe changes only shadow versus non-shadow; the
+The frozen TorchGeo archive stores all 11 bands as a derived uint8 product, not
+the original Landsat DN product; applying the original MTL reflectance
+coefficients again would therefore be invalid. Optical channels use the
+archive's fixed `value / 255` encoding, while MTL is used only for sun elevation
+and azimuth. Every raw window must reconstruct its existing RGB PNG to mean
+absolute error at most 1/255 before it is eligible. The cloud-context channel is
+a fixed annular average and excludes the centre neighbourhood. The probe changes only shadow versus non-shadow; the
 frozen model's conditional clear/thin/thick ratios are retained. It is trained
 with the same balanced shadow BCE, Tversky and one-pixel boundary losses in all
 conditions. Seeds are 42, 123 and 3407. Training length is fixed at 10,000
@@ -81,4 +84,3 @@ material) if either:
 Until the 144 masks have complete independent review and adjudication, B is
 `incomplete`, never pass or fail. Automated spectral thresholds, model
 predictions and QA products are not accepted as substitute ground truth.
-
