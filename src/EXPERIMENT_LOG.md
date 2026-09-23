@@ -1549,6 +1549,14 @@ Phase 48冻结Phase 47 iter-1,000模型及全部参数。使用CloudSEN source-t
 
 Phase 48失败并关闭固定混合的离线余弦原型推理。原型计数完整排除了空类问题，但源/目标mask feature的传感器偏移不能用固定凸组合和欧氏球面距离消除；按预注册不调整10%分位、0.75/0.25混合、0.1温度或0.5融合权重。下一阶段若继续，只允许训练极小目标因素adapter，并以Phase 47参数为显式L2源锚、以双视图一致性和冻结初始类别占用为防塌缩约束；若该可学习适应仍不能至少超过原始V8，则停止该开发任务的相邻DA变体并回到数据/标签体系审计。
 
+## Phase 49 — 源锚约束的无标签因素adapter（进行中）
+
+### 预注册（结果产生前）
+
+Phase 49从Phase 47 iter-1,000冻结checkpoint开始，只更新stride-4因素头的387个参数，V8其余参数全部冻结。按seed 49固定顺序遍历6,502张无标签target-train恰好一轮；每张图构造原图与“水平翻转+亮度0.8–1.2+对比度0.8–1.2”的确定性强视图。损失固定为：双视图三个因素概率MSE权重1.0、二元熵权重0.01、相对冻结初始模型的逐图因素占用MSE权重5.0、相对Phase 47因素头参数的L2源锚权重1.0。Adam学习率固定`1e-4`，不使用target标签、不运行target-val选checkpoint，训练结束checkpoint唯一。
+
+固定checkpoint一次性评估source-val与scene-disjoint target-val。通过门槛沿用Phase 48：source-val至少72.98，target-val mIoU至少44.1241、弱类至少17.3059、宏Boundary F1至少14.4763，且目标适应前后三个因素平均占用绝对漂移均不超过0.05、target-test与CloudSEN internal test封存。失败即关闭该可学习因素adapter及Phase 46–49整组相邻DA变体，不调整增强范围、损失权重、学习率或训练轮数，下一步只允许做标签体系/数据协议审计或提出新的非相邻方法假设。
+
 ## 后续维护规则
 
 从 Phase 16 开始，每个 Phase 完成后在本文件末尾追加以下内容：
