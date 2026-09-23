@@ -20,7 +20,13 @@ declare -A md5=(
 
 for biome in barren forest grass_crops shrubland snow_ice urban water wetlands; do
   archive="${biome}.tar.gz"
-  curl -L --fail --retry 10 -C - -o "${archive}" "${base}/${archive}"
+  attempt=0
+  until curl --http1.1 -L --fail --retry 5 --retry-all-errors -C - \
+      -o "${archive}" "${base}/${archive}"; do
+    attempt=$((attempt + 1))
+    printf 'download retry biome=%s attempt=%d\n' "${biome}" "${attempt}" >&2
+    sleep 5
+  done
   printf '%s  %s\n' "${md5[$biome]}" "${archive}" | md5sum --check --status
   marker=".${biome}.extracted"
   if [[ ! -f "${marker}" ]]; then
@@ -30,4 +36,3 @@ for biome in barren forest grass_crops shrubland snow_ice urban water wetlands; 
 done
 
 touch DOWNLOAD_COMPLETE
-
