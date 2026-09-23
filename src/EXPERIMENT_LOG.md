@@ -1529,6 +1529,12 @@ Phase 47保持Phase 46的数据、V8 checkpoint、冻结策略、因素定义、
 
 门槛完全沿用Phase 46：source-val mIoU至少72.98，scene-disjoint target-val mIoU至少43.1241，target弱类mIoU至少16.3059，并通过概率合法性、样本覆盖和封存检查。全部通过才允许下一阶段加入类条件目标原型；任一失败即关闭“纯source监督的零样本因素残差”方向，不调整特征层、卷积核、训练长度、学习率或损失权重，下一方向必须直接检验目标无标签信息能否在严格防塌缩约束下提供适应增益。
 
+### 实验结果与止损
+
+source-val在iter 1,000达到全程最佳73.2179 mIoU，四类IoU为clear 88.0599、thick cloud 84.6370、thin cloud 58.8692、cloud shadow 61.3057，相对同seed V8遗忘0.7621点，源域保持门槛通过。冻结该checkpoint评估1,905张target-val得到42.8517 mIoU，四类IoU为clear 75.8086、cloud shadow 16.6329、thin cloud 12.2356、thick cloud 66.7297，弱类均值14.4342、宏Boundary F1 13.2528。相对source-only分别下降0.2724 mIoU、0.8717弱类IoU和0.2235 Boundary F1；目标总体与弱类门槛均失败。结构合法性、样本覆盖、有限数值和全部封存检查通过，target-train标签、target-test与CloudSEN internal test均未读取。
+
+Phase 47失败。将因素头前移到mask feature后源域明显优于Phase 46，说明共享像素表征确有可用因素信息；但没有目标数据约束时，该信息仍沿源域决策边界组织，不能自动缩小传感器差异。按预注册关闭纯source监督的零样本因素残差，不调整特征层、卷积核、训练长度、学习率或损失权重。下一阶段只能在冻结Phase 47源模型基础上使用无标签target-train做一次带源锚和类别占用防塌缩的因素条件适应；其目标不是再做固定置信度硬伪标签，而是检验目标一致性是否能校准三个因素。
+
 ## 后续维护规则
 
 从 Phase 16 开始，每个 Phase 完成后在本文件末尾追加以下内容：
