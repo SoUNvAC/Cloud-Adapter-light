@@ -1573,6 +1573,14 @@ Phase 45的同架构Oracle相对source-only提高13.0963 mIoU，证明任务存�
 
 唯一方向继续线为固定checkpoint在1,905张target-val相对V8 source-only 43.1241至少提高5.0 mIoU，即达到48.1241，同时source-val不低于72.98（遗忘不超过1点）、样本数和封存检查全部通过。弱类mIoU、Boundary F1作为机制诊断报告但不事后增加通过条件。通过后才可转入少样本主动DA，并补做随机等预算、三随机种子和标注成本曲线；未通过立即停止全部适配路线，只允许进行一次可信预测/风险控制可行性审计。target-test与CloudSEN internal test继续封存。
 
+### Phase 50结果与止损
+
+无标签选择完整扫描6,502张target-train后固定选择65张（0.9997%），选择阶段未读取标签；8个biome按预注册比例分配且每scene不超过2张。首次运行在训练前因Phase 49封存字段位置检查失败，第二、三次运行在iter 0前因MMSeg目标到源类别元信息映射检查失败；三次均未产生checkpoint。修复仅校正布尔字段读取以及注册具有CloudSEN类顺序的Landsat映射数据集，未改变冻结选择、标签、预算、训练设置或门槛。修复后固定4,000 iter训练完成，target-val训练期mIoU依次为iter 1,000的48.01、iter 2,000的48.72、iter 3,000的48.13和iter 4,000的48.17，故按预注册选择iter 2,000。
+
+独立逐图汇总中，iter-2,000 checkpoint在1,905张target-val达到48.7111 mIoU，clear、cloud shadow、thin cloud、thick cloud IoU分别为78.8973、16.5136、28.1779、71.2555；弱类均值22.3458、宏Boundary F1 19.7348。相对V8 source-only分别提高5.5870、7.0399和6.2585点，目标侧主门槛及弱类/边界机制指标均明显通过，证明1%有监督目标信号可以纠正纯UDA无法恢复的薄云错误。
+
+但同一checkpoint在535张source-val仅为70.2977 mIoU，四类IoU为87.3995、82.4160、52.3315、59.0438；相对预注册73.98基线遗忘3.6823点，超过最多1点门槛。即使使用近似1:1的完整源域回放，少量目标监督仍通过移动共享表示和分类边界换取目标收益，未形成可接受的双域方法。Phase 50整体失败并执行`stop_adaptation_route_begin_trustworthy_segmentation_audit`：禁止调整源目标比例、学习率、轮数、选择权重或预算，也不进入随机基线、三种子和成本曲线。target-test与CloudSEN internal test均保持封存。下一步只允许一次冻结模型的可信预测/错误定位可行性审计；若现有不确定性不能可靠定位跨传感器错误，则结束TGRS主方法路线。
+
 ## 后续维护规则
 
 从 Phase 16 开始，每个 Phase 完成后在本文件末尾追加以下内容：
