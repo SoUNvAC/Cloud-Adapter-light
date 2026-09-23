@@ -42,19 +42,21 @@ def main():
     }
     trainable_count = sum(trainable.values())
     candidate.eval().cuda()
-    phase52, _ = build(args.phase52_config, args.phase52_checkpoint)
-    phase52.eval().cuda()
     generator = torch.Generator(device="cuda").manual_seed(52)
     raw = torch.randn(1, 3, 512, 512, generator=generator, device="cuda") * 40 + 128
     normalized = (raw - candidate.input_mean) / candidate.input_std
     meta = [dict(ori_shape=(512, 512), img_shape=(512, 512), pad_shape=(512, 512),
                  padding_size=[0, 0, 0, 0], flip=False)]
     with torch.inference_mode():
-        base_features = phase52.extract_feat(normalized)
-        base_scores = phase52.decode_head.predict(base_features, meta, phase52.test_cfg)
-        base_probability = base_scores.float().clamp_min(1e-8)
-        base_probability /= base_probability.sum(dim=1, keepdim=True).clamp_min(1e-8)
-        candidate_probability = candidate.encode_decode(normalized, meta).softmax(dim=1)
+        # Compare before/after the zero residual inside one frozen base forward.
+        # Two independent CUDA deformable-attention forwards are not bitwise
+        # deterministic and would test kernel noise rather than the algebraic
+        # identity of the residual construction.
+        base_features, base_probability = candidate._frozen_base(normalized, meta)
+        candidate_logits, _ = candidate._adapt(
+            normalized, base_features, base_probability
+        )
+        candidate_probability = candidate_logits.softmax(dim=1)
     max_abs = (base_probability - candidate_probability).abs().max().item()
     prediction_equal = torch.equal(
         base_probability.argmax(dim=1), candidate_probability.argmax(dim=1)
