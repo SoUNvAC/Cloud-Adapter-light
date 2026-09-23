@@ -41,4 +41,5 @@ class FrozenHeadEncoderDecoder(EncoderDecoder):
         self.decode_head.eval()
         for param in self.decode_head.parameters():
             param.requires_grad = False
+        return self
         
