@@ -3,8 +3,9 @@ set -euo pipefail
 
 root="${1:-../shared/data/l8_biome_raw}"
 revision="f76df19accce34d2acc1878d88b9491bc81f94c8"
-base="https://hf.co/datasets/torchgeo/l8biome/resolve/${revision}"
+stage="${root}/.hf_download"
 mkdir -p "${root}"
+mkdir -p "${stage}"
 cd "${root}"
 
 declare -A md5=(
@@ -20,19 +21,21 @@ declare -A md5=(
 
 for biome in barren forest grass_crops shrubland snow_ice urban water wetlands; do
   archive="${biome}.tar.gz"
+  marker=".${biome}.extracted"
+  if [[ -f "${marker}" ]]; then
+    continue
+  fi
   attempt=0
-  until wget --continue --timeout=30 --read-timeout=30 --tries=20 \
-      -O "${archive}" "${base}/${archive}"; do
+  until huggingface-cli download torchgeo/l8biome "${archive}" \
+      --repo-type dataset --revision "${revision}" --local-dir "${stage}"; do
     attempt=$((attempt + 1))
     printf 'download retry biome=%s attempt=%d\n' "${biome}" "${attempt}" >&2
     sleep 5
   done
+  cp "${stage}/${archive}" "${archive}"
   printf '%s  %s\n' "${md5[$biome]}" "${archive}" | md5sum --check --status
-  marker=".${biome}.extracted"
-  if [[ ! -f "${marker}" ]]; then
-    tar -xzf "${archive}"
-    touch "${marker}"
-  fi
+  tar -xzf "${archive}"
+  touch "${marker}"
 done
 
 touch DOWNLOAD_COMPLETE
