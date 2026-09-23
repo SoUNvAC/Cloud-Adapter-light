@@ -36,7 +36,9 @@ frozen model's conditional clear/thin/thick ratios are retained. It is trained
 with the same balanced shadow BCE, Tversky and one-pixel boundary losses in all
 conditions. Seeds are 42, 123 and 3407. Training length is fixed at 10,000
 updates, validation is every 1,000 updates, and the learning-rate schedule ends
-at update 10,000. This longer diagnostic schedule is intentionally separate
+at update 10,000. Each seed selects the checkpoint with highest validation
+shadow IoU; ties are broken by thin-cloud IoU and then mIoU. This longer
+diagnostic schedule is intentionally separate
 from the Phase 52 4,000-update stop-loss protocol.
 
 The audit passes only if all of the following hold:

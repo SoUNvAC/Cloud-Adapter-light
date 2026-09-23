@@ -34,7 +34,7 @@ def solar_encoding(mtl):
     )
 
 
-def read_multispectral_patch(raw_root, row, swap_xy=False):
+def read_multispectral_patch(raw_root, row, swap_xy=True):
     try:
         import rasterio
         from rasterio.windows import Window
@@ -111,4 +111,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

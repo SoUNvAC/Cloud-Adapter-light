@@ -52,3 +52,11 @@ def test_neighbouring_cloud_probability_excludes_centre():
     context = neighbouring_cloud_probability(cloud, outer=5, inner=3)
     assert context[0, 0, 4, 4] == 0
 
+
+if __name__ == "__main__":
+    test_all_conditions_keep_identical_parameter_count()
+    test_condition_masks_are_nested()
+    test_zero_initialization_exactly_reproduces_base_probabilities()
+    test_nonshadow_conditional_ratios_are_preserved()
+    test_neighbouring_cloud_probability_excludes_centre()
+    print("phase54 shadow probe tests passed")
