@@ -1563,6 +1563,16 @@ Phase 49从Phase 47 iter-1,000冻结checkpoint开始，只更新stride-4因素�
 
 但1,905张target-val仅为42.8839 mIoU，clear、cloud shadow、thin cloud、thick cloud IoU为75.9967、16.7195、12.0771、66.7422，弱类均值14.3983、宏Boundary F1 13.3133；相对原始V8 source-only分别下降0.2402、0.9076和0.1630点，三项目标门槛全部失败。target-train标签、target-test与CloudSEN internal test均未读取。Phase 49失败并触发终止：Phase 46–49从最终logit因素校准、mask-feature因素头、双视图固定原型到源锚可学习adapter均未产生目标域收益，禁止继续调相邻阈值、权重、增强、学习率或轮数。当前证据支持“Oracle空间充足，但现有V8特征的薄云跨传感器可迁移性不足”；下一研究动作必须回到标签体系/传感器数据审计，或提出能改变共享表征而非只校准输出的全新方法假设。
 
+## Phase 50 — 1%目标标注主动适应（预注册）
+
+Phase 45的同架构Oracle相对source-only提高13.0963 mIoU，证明任务存在足够监督上限；Phase 46–49的所有无标签因素化DA均未提高目标域，现将失败归类为“Oracle空间大但跨域监督信号失败”。依冻结止损树，不再设计第三套无监督适配模块，只允许一次1%目标标注主动适应可行性实验。
+
+标注预算固定为scene-disjoint target-train的65/6,502张完整512×512图块，即0.9997%，不读取target-val或锁定target-test参与选择。选择前仅使用冻结Phase 22 V8、目标影像及Phase 45清单中的scene/biome元数据：图块效用固定为0.40×弱类（薄云/阴影）响应、0.35×水平翻转及确定性亮度/对比度视图不一致、0.25×预测熵；再以0.50权重的RGB统计与类别响应特征距离做贪心去重。预算按biome样本量最大余数法分配，每个scene最多选择2张，每个biome只在效用前`20×quota`候选中做距离选择。所有权重、候选规模与约束在标签揭示前冻结。
+
+选定65张后才允许读取对应标签；Landsat标签顺序映射回V8的CloudSEN输出顺序。训练从Phase 22 V8 seed-42最佳checkpoint开始，使用全部CloudSEN source-train与重复131次的65张目标图块组成近似1:1源/目标回放，batch 4，AdamW学习率`2e-5`，固定4,000 iter，每1,000 iter仅在开发用target-val选择checkpoint，seed 50。不得依据结果改变选择权重、标注预算、源目标比例、学习率或训练长度。
+
+唯一方向继续线为固定checkpoint在1,905张target-val相对V8 source-only 43.1241至少提高5.0 mIoU，即达到48.1241，同时source-val不低于72.98（遗忘不超过1点）、样本数和封存检查全部通过。弱类mIoU、Boundary F1作为机制诊断报告但不事后增加通过条件。通过后才可转入少样本主动DA，并补做随机等预算、三随机种子和标注成本曲线；未通过立即停止全部适配路线，只允许进行一次可信预测/风险控制可行性审计。target-test与CloudSEN internal test继续封存。
+
 ## 后续维护规则
 
 从 Phase 16 开始，每个 Phase 完成后在本文件末尾追加以下内容：

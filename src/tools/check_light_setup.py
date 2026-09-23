@@ -59,22 +59,32 @@ def main():
 
     expected_dirs = []
     expected_files = []
+
+    def collect_dataset_paths(dataset):
+        dataset_type = dataset.get("type")
+        if dataset_type == "ConcatDataset":
+            for child in dataset.datasets:
+                collect_dataset_paths(child)
+            return
+        if dataset_type in ("RepeatDataset", "ClassBalancedDataset"):
+            collect_dataset_paths(dataset.dataset)
+            return
+        if dataset.get("manifest_path"):
+            expected_files.append(Path(dataset.manifest_path))
+            if dataset.get("selection_path"):
+                expected_files.append(Path(dataset.selection_path))
+            return
+        data_root = Path(dataset.data_root)
+        prefix = dataset.data_prefix
+        expected_dirs.extend(
+            [data_root / prefix.img_path, data_root / prefix.seg_map_path]
+        )
+
     for loader_name in ("train_dataloader", "val_dataloader", "test_dataloader"):
         loader = cfg[loader_name]
         if loader is None:
             continue
-        dataset = loader.dataset
-        if dataset.get("manifest_path"):
-            expected_files.append(Path(dataset.manifest_path))
-            continue
-        data_root = Path(dataset.data_root)
-        prefix = dataset.data_prefix
-        expected_dirs.extend(
-            [
-                data_root / prefix.img_path,
-                data_root / prefix.seg_map_path,
-            ]
-        )
+        collect_dataset_paths(loader.dataset)
     expected_dirs = list(dict.fromkeys(expected_dirs))
     expected_files = list(dict.fromkeys(expected_files))
     missing = [str(path) for path in expected_dirs if not path.is_dir()]
