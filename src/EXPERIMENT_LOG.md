@@ -1557,6 +1557,12 @@ Phase 49从Phase 47 iter-1,000冻结checkpoint开始，只更新stride-4因素�
 
 固定checkpoint一次性评估source-val与scene-disjoint target-val。通过门槛沿用Phase 48：source-val至少72.98，target-val mIoU至少44.1241、弱类至少17.3059、宏Boundary F1至少14.4763，且目标适应前后三个因素平均占用绝对漂移均不超过0.05、target-test与CloudSEN internal test封存。失败即关闭该可学习因素adapter及Phase 46–49整组相邻DA变体，不调整增强范围、损失权重、学习率或训练轮数，下一步只允许做标签体系/数据协议审计或提出新的非相邻方法假设。
 
+### 实验结果与终止结论
+
+6,502张target-train无标签单轮适应完成，平均总损失0.007304，其中一致性0.004927、熵0.218586、占用MSE `2.16e-05`、参数锚MSE `8.33e-05`。固定最终checkpoint在source-val达到73.2932 mIoU，四类IoU为clear 88.1130、thick cloud 84.6602、thin cloud 59.1216、cloud shadow 61.2780，源域门槛通过且相对Phase 47略升0.0753点。目标三个因素平均占用从`[0.07709, 0.59709, 0.70238]`变为`[0.07407, 0.59964, 0.70073]`，绝对漂移仅`[0.00302, 0.00255, 0.00166]`，远低于0.05防塌缩线。
+
+但1,905张target-val仅为42.8839 mIoU，clear、cloud shadow、thin cloud、thick cloud IoU为75.9967、16.7195、12.0771、66.7422，弱类均值14.3983、宏Boundary F1 13.3133；相对原始V8 source-only分别下降0.2402、0.9076和0.1630点，三项目标门槛全部失败。target-train标签、target-test与CloudSEN internal test均未读取。Phase 49失败并触发终止：Phase 46–49从最终logit因素校准、mask-feature因素头、双视图固定原型到源锚可学习adapter均未产生目标域收益，禁止继续调相邻阈值、权重、增强、学习率或轮数。当前证据支持“Oracle空间充足，但现有V8特征的薄云跨传感器可迁移性不足”；下一研究动作必须回到标签体系/传感器数据审计，或提出能改变共享表征而非只校准输出的全新方法假设。
+
 ## 后续维护规则
 
 从 Phase 16 开始，每个 Phase 完成后在本文件末尾追加以下内容：
