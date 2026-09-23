@@ -26,7 +26,11 @@ class Phase52BLogits(torch.nn.Module):
             ori_shape=size, img_shape=size, pad_shape=size,
             padding_size=[0, 0, 0, 0], flip=False,
         ) for _ in range(rgb.shape[0])]
-        return self.wrapper.segmentor.encode_decode(inputs, meta)
+        use_amp = self.wrapper.compute_dtype == torch.float16 and rgb.is_cuda
+        with torch.autocast(
+            device_type=rgb.device.type, dtype=torch.float16, enabled=use_amp
+        ):
+            return self.wrapper.segmentor.encode_decode(inputs, meta)
 
 
 def enable_residual(wrapper):
