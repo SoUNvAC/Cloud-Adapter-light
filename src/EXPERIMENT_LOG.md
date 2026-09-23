@@ -1595,6 +1595,12 @@ Phase 50的目标精度、弱类和边界均显著改善但源域遗忘超线，
 
 Phase 51失败并执行`end_tgrs_main_method_route`。现有置信度能发现一部分一般错误，却对论文核心的薄云/阴影错误呈反向或无效排序，也不能可靠覆盖边界风险；因此禁止继续增加uncertainty head、校准模块、拒识阈值调参或新的适配结构。Phase 45–51的止损树至此闭合：Oracle监督空间真实存在，无监督适配无效，1%主动监督以超过3点源域遗忘换得目标收益，而冻结置信度无法可靠定位弱类/边界错误。target-train未用于Phase 51，target-test与CloudSEN internal test始终封存。当前项目停止TGRS主方法扩展，后续只整理Phase 1–44部署成果、Phase 45无泄漏协议及Phase 46–51系统负结果，转向JSTARS、GRSL、Remote Sensing或工程部署论文。
 
+## Phase 52 — 稀疏目标传感器 MsRE 可行性（预注册）
+
+Phase 52不是重开Phase 45–51已关闭的输出校准或纯无监督路线，而是检验新的表征级增量假设：Phase 22 DINOv2-S、source Cloud-Adapter和source Mask2Former头全部冻结；目标传感器只启用位于block `[2,5,8,11]`的16-token普通MsRE残差与四尺度rank-8 head-delta。只使用Phase 50在揭示标签前冻结选择的65/6,502张目标图块，训练4,000 iter并每1,000 iter仅以target-val选择checkpoint。target-test和CloudSEN internal test继续封存。
+
+Phase 52A必须同时达到：target-val相对source-only提高至少3.0 mIoU、弱类至少4.0 IoU、宏Boundary F1至少3.0；关闭目标路径后与源模型逐元素一致且完整source-val遗忘不超过0.05 mIoU；每目标新增可训练参数不超过0.50M；同机batch-1、512×512、原生FP16实际延迟增幅不超过20%。任一失败立即执行`stop_phase52_msre_route`，禁止调整token数、注入位置、学习率、轮数或损失，也不得进入元数据门控和云感知token。全部通过才允许Phase 52B比较16/32 tokens与稀疏位置；后续元数据门控还必须在匹配预算下相对普通MsRE提高至少1.0 mIoU或1.5弱类IoU。
+
 ## 后续维护规则
 
 从 Phase 16 开始，每个 Phase 完成后在本文件末尾追加以下内容：
