@@ -178,11 +178,11 @@ def main():
     source = evaluate_uncertainty("source_val", wrapper, source_rows(Path(args.data_root)), [0, 1, 2, 3], (2, 3))
     target = evaluate_uncertainty("target_val", wrapper, load_rows(Path(args.manifest), "target_val"), [0, 3, 2, 1], (1, 2))
     gates = {
-        "target_error_auroc_at_least_0_70": target["error_detection_auroc"] >= 0.70,
-        "target_weak_error_auroc_at_least_0_65": target["weak_error_detection_auroc"] >= 0.65,
-        "target_boundary_error_auroc_at_least_0_65": target["boundary_error_detection_auroc"] >= 0.65,
-        "bottom20_error_recall_at_least_0_40": target["lowest_confidence_20pct_error_recall"] >= 0.40,
-        "risk_reduction_at_80_coverage_at_least_0_30": target["risk_reduction_at_80pct_coverage"] >= 0.30,
+        "target_error_auroc_at_least_0_70": bool(target["error_detection_auroc"] >= 0.70),
+        "target_weak_error_auroc_at_least_0_65": bool(target["weak_error_detection_auroc"] >= 0.65),
+        "target_boundary_error_auroc_at_least_0_65": bool(target["boundary_error_detection_auroc"] >= 0.65),
+        "bottom20_error_recall_at_least_0_40": bool(target["lowest_confidence_20pct_error_recall"] >= 0.40),
+        "risk_reduction_at_80_coverage_at_least_0_30": bool(target["risk_reduction_at_80pct_coverage"] >= 0.30),
         "expected_source_images": source["images"] == 535,
         "expected_target_images": target["images"] == 1905,
         "metrics_finite": all(math.isfinite(value) for row in (source, target) for key, value in row.items() if key not in ("calibration_bins",) and isinstance(value, float)),
