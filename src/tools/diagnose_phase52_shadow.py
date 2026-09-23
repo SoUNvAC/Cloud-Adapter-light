@@ -79,12 +79,14 @@ def main():
     selected_counts = np.zeros(4, dtype=np.int64)
     shadow_images = 0
     shadow_biomes = Counter()
+    shadow_image_names = []
     for row in rows:
         with Image.open(row["mask_path"]) as image:
             labels = np.asarray(image, dtype=np.int64)
         selected_counts += np.bincount(labels.reshape(-1), minlength=4)[:4]
         if np.any(labels == 1):
             shadow_images += 1
+            shadow_image_names.append(row["name"])
             shadow_biomes[row["biome"]] += 1
 
     wrapper_args = argparse.Namespace(
@@ -184,6 +186,7 @@ def main():
                 for i in range(4)
             },
             "images_containing_shadow": shadow_images,
+            "shadow_image_names": shadow_image_names,
             "shadow_image_fraction": shadow_images / len(rows),
             "shadow_biome_image_counts": dict(sorted(shadow_biomes.items())),
             "shadow_biome_coverage": len(shadow_biomes),

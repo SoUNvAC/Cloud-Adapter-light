@@ -1617,6 +1617,14 @@ Phase 53只增加一个机制：在最终语义logit上加入正负像元等质�
 
 Phase 53训练期间，用户进一步冻结假设：不得让shadow辅助梯度继续更新已成功的Phase 52A MsRE，而应冻结Phase 52A全部参数，只训练独立shadow/non-shadow residual。由于Phase 53不再隔离所需机制，任务在完成和checkpoint评估前终止；中途训练值不作为实验结果。后续先完成Phase 52A云影去向、预测占用、1%标注覆盖和特征原型距离诊断，再预注册冻结residual实验。
 
+## Phase 52B — 冻结薄云路径的云影关系残差（预注册）
+
+四项冻结诊断确认类别塌缩：Phase 52A把80.4974%的真值shadow判为clear、14.3310%判为thin、4.2550%判为thick，仅0.9166%仍为shadow；预测shadow占比从source-only的6.3531%降至0.2820%。65张标注仅含50,572个shadow像元（0.2968%），只有8张含shadow，覆盖6/8个biome。Phase 52中后层shadow原型到thin、非零辐射暗clear代理、thick和全部clear的余弦距离依次为0.0769、0.0866、0.1603和0.1663；数据没有水体或山体阴影独立标签，因此不作对应因果声称。
+
+Phase 52B冻结iter-1,000 Phase 52A的主干、source Cloud-Adapter、MsRE、target head-delta和Mask2Former，只训练零初始化shadow residual。分支读取output-index-2特征、冻结四类概率与RGB亮度，使用389→32点卷积、dilation-3的32通道depthwise 3×3和32→1点卷积；只修改shadow log-odds，严格保持clear/thin/thick内部比例。训练仍为同一65张、seed 52和4,000 iter，每batch 4保证一张shadow-positive图；固定loss为balanced BCE 1.0、Tversky 1.0和一像素shadow boundary BCE 0.5。
+
+门槛为零初始化概率误差不超过`1e-5`且预测完全一致、新增参数不超过0.1M、target mIoU至少48.0、shadow IoU至少16.471、thin IoU至少28.630、thin Boundary F1至少19.934、关闭全部目标路径后source-val至少73.93，以及完整有限评估与两套test封存。任一失败执行`stop_shadow_residual_route`，不得事后调整loss、batch组成、宽度、dilation、训练长度或门槛。
+
 ## 后续维护规则
 
 从 Phase 16 开始，每个 Phase 完成后在本文件末尾追加以下内容：
