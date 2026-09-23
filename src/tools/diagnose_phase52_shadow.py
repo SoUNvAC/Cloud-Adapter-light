@@ -126,9 +126,14 @@ def main():
         TARGET_NAMES[index]: features[labels == index].mean(axis=0)
         for index in range(4)
     }
-    clear_luminance = luminance[labels == 0]
+    # Landsat patches contain zero-radiance padding that is encoded as clear.
+    # It is not a dark-land semantic prototype and must be excluded.
+    valid_radiance_clear = (labels == 0) & (luminance > 0.0)
+    clear_luminance = luminance[valid_radiance_clear]
+    if clear_luminance.size == 0:
+        raise RuntimeError("No nonzero-radiance clear feature cells")
     dark_threshold = float(np.quantile(clear_luminance, 0.25))
-    dark_clear = (labels == 0) & (luminance <= dark_threshold)
+    dark_clear = valid_radiance_clear & (luminance <= dark_threshold)
     prototypes["dark_clear_q25"] = features[dark_clear].mean(axis=0)
     shadow = prototypes["cloud_shadow"]
     distances = {
@@ -186,6 +191,9 @@ def main():
         "feature_prototypes": {
             "definition": "Phase52 output index 2; dark proxy is lowest-luminance quartile of true-clear feature cells in selected 1%",
             "dark_clear_luminance_threshold_0_255": dark_threshold,
+            "zero_radiance_clear_cells_excluded": int(
+                np.count_nonzero((labels == 0) & (luminance <= 0.0))
+            ),
             "feature_cell_counts": {
                 **{TARGET_NAMES[i]: int(np.count_nonzero(labels == i)) for i in range(4)},
                 "dark_clear_q25": int(dark_clear.sum()),
