@@ -65,6 +65,13 @@ enforces coverage of all eight biomes, three sun-elevation strata and explicit
 quotas for water, snow/ice (terrain proxy) and urban scenes. Selection uses no
 revised labels.
 
+The frozen ranking score is `0.5 * mean absolute shadow-probability difference
++ 0.4 * shadow/non-shadow hard-prediction XOR fraction + 0.1 * dark-spectral
+fraction`, where dark spectral cells have mean NIR/SWIR below 0.25. Exactly 18
+patches are selected per biome. Each global sun-elevation tertile must contain
+at least 24 patches; deterministic within-biome swaps repair a deficient
+tertile without changing biome quotas.
+
 Each patch is reviewed against the same written rule with co-registered RGB,
 NIR, SWIR, predicted masks, original label and solar geometry. A valid revised
 mask must have a reviewer identifier, completion timestamp and reason codes for
