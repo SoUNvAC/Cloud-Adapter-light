@@ -5,6 +5,9 @@ root="${1:-../shared/data/l8_biome_raw}"
 revision="f76df19accce34d2acc1878d88b9491bc81f94c8"
 stage="${root}/.hf_download"
 hf_cli="${HF_CLI:-/home/scv/miniconda3/envs/cloud-lite-pt210/bin/huggingface-cli}"
+# The training host cannot reach the separate Xet content endpoint reliably.
+# Keep huggingface_hub's hashed incomplete-file resume and use its HTTPS path.
+export HF_HUB_DISABLE_XET="${HF_HUB_DISABLE_XET:-1}"
 mkdir -p "${root}"
 mkdir -p "${stage}"
 cd "${root}"
