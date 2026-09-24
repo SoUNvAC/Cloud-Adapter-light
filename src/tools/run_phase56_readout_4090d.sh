@@ -2,7 +2,13 @@
 set -euo pipefail
 
 cd "$(dirname "$0")/.."
-source "$(conda info --base)/etc/profile.d/conda.sh"
+conda_executable="${CONDA_EXE:-/home/scv/miniconda3/bin/conda}"
+if [[ ! -x "${conda_executable}" ]]; then
+  echo "Conda executable not found: ${conda_executable}" >&2
+  exit 127
+fi
+conda_base="$("${conda_executable}" info --base)"
+source "${conda_base}/etc/profile.d/conda.sh"
 conda activate cloud-lite-pt210
 
 root="work_dirs/phase56_readout"

@@ -31,6 +31,7 @@ def test_sample_spatial_maps_original_coordinates_to_feature_cells():
 def test_phase56_launcher_enforces_requested_environment_and_gpu_lock():
     text = (REPO_ROOT / "tools/run_phase56_readout_4090d.sh").read_text(encoding="utf-8")
     assert "conda activate cloud-lite-pt210" in text
+    assert "CONDA_EXE:-/home/scv/miniconda3/bin/conda" in text
     assert "flock -n" in text
     assert "cache_phase56_readout_features.py" in text
     assert "evaluate_phase56_readout_dense.py" in text
