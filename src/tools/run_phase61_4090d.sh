@@ -2,6 +2,8 @@
 set -euo pipefail
 
 cd /home/scv/Cloud-Adapter-light/src
+source /home/scv/miniconda3/etc/profile.d/conda.sh
+conda activate cloud-lite-pt210
 OUT=work_dirs/phase61
 mkdir -p "$OUT"
 date -Is | tee "$OUT/STARTED_AT.txt"
