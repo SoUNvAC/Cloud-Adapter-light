@@ -1655,6 +1655,14 @@ Phase 52A-fix在修正的`Shadows?=yes`子集上使thin IoU从11.7114升至37.45
 
 只有三门全部通过，才允许把机制结论写为“thin/shadow表征级梯度冲突”并预注册解耦模块；任一失败执行`stop_thin_shadow_conflict_hypothesis`，只保留非对称负迁移现象，不得事后扫描阈值、rank、probe、正则项或由此设计冲突专用结构。
 
+### Phase 55结果与止损
+
+完整审计在RTX 4090 D上使用实际存在且与Phase 52A-fix相同的`cloud-lite-pt210`环境完成；训练机不存在请求名称`cloud-lite-210`。12张官方`Shadows?=yes`训练图块中，得分分辨率下同时含thin和shadow的5张进入梯度审计；线性探针完整评估963张、8景修正target-val。结果文件SHA-256为`ea3c3566487472d266d0f060eed1b1b0e53d3321af0551e84a314bdde7f71c83`。
+
+四个注入层`[2,5,8,11]`的pooled post-MsRE thin/shadow梯度余弦依次为`+0.1628/+0.3860/+0.2518/-0.0018`，均值`+0.1997`，没有至少两层低于`-0.10`。虽然第11层逐图余弦均值为`-0.1233`、bootstrap 95%区间`[-0.1659,-0.0711]`，但等权聚合梯度后几乎为0，冲突门失败。四个注入层的shadow probe AUROC候选相对source差值为`-0.0006/-0.0295/+0.0254/+0.0425`；最终第11层候选为0.6383，高于source-only的0.5958，表明shadow线性信息没有在MsRE逐层消失，表征损失门失败。thin与shadow参数梯度子空间均为rank 3，主夹角`20.82/64.31/86.62`度，shadow梯度能量有43.91%落入thin子空间，但聚合有符号余弦为`+0.4337`而非负值，子空间冲突门也失败。
+
+Phase 55三门全部失败并执行`stop_thin_shadow_conflict_hypothesis`。Phase 52A-fix的近似等量IoU交换仍是成立的非对称负迁移现象，但证据否定“MsRE抹除shadow信息”及“thin/shadow更新全局对抗”这两个机制解释；现象更可能发生在仍含shadow信息的表征之后、共享head/readout的类别竞争中，但该表述仅为定位性推断，不授权继续设计冲突解耦模块。target-test与CloudSEN internal test保持封存。
+
 ## 后续维护规则
 
 从 Phase 16 开始，每个 Phase 完成后在本文件末尾追加以下内容：

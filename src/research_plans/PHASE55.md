@@ -79,3 +79,42 @@ mechanism and preregister a decoupled module. Any failed gate executes
 asymmetric negative-transfer phenomenon, but no conflict-specific architecture
 may be designed from these data. No threshold, rank, regularizer or probe
 variant may be swept after results are visible.
+
+## Result and stop decision
+
+The complete audit used the existing `cloud-lite-pt210` environment on the
+RTX 4090 D; the requested name `cloud-lite-210` does not exist on the host.
+Five of the 12 official `Shadows?=yes` selected patches contained both thin
+and shadow at the diagnostic score resolution and contributed gradients. All
+963 corrected target-val patches from eight scenes contributed to the probes.
+The result artifact SHA-256 is
+`ea3c3566487472d266d0f060eed1b1b0e53d3321af0551e84a314bdde7f71c83`.
+
+The pooled post-MsRE thin/shadow gradient cosines at blocks 2, 5, 8 and 11
+were `+0.1628`, `+0.3860`, `+0.2518` and `-0.0018`, with a four-layer mean of
+`+0.1997`. Only the per-patch layer-11 mean was clearly negative (`-0.1233`,
+bootstrap 95% interval `[-0.1659, -0.0711]`); it did not survive equal-patch
+gradient pooling, and no two blocks crossed the preregistered `-0.10` line.
+The gradient-conflict gate failed.
+
+The held-out shadow-probe AUROC candidate-minus-source differences at the four
+injection blocks were `-0.0006`, `-0.0295`, `+0.0254` and `+0.0425`. The final
+candidate representation was therefore more, not less, linearly separable for
+shadow than source-only (`0.6383` versus `0.5958`). Neither the required
+`-0.05` injection-layer loss nor persistent layer-11 loss occurred, so the
+representation-information-loss gate failed.
+
+The retained thin and shadow parameter-gradient subspaces both had rank 3.
+Their principal angles were `20.82`, `64.31` and `86.62` degrees, and 43.91%
+of normalized shadow-gradient energy projected into the thin subspace. This
+establishes substantial overlap, but its signed aggregate gradient cosine was
+`+0.4337`, not negative. The subspace-conflict gate therefore failed.
+
+All three mechanism gates failed and Phase 55 executes
+`stop_thin_shadow_conflict_hypothesis`. The Phase 52A-fix IoU exchange remains
+a real asymmetric negative-transfer result, but these measurements reject the
+specific claim that MsRE erased shadow information or that thin and shadow
+updates are globally antagonistic. The evidence instead localizes the collapse
+after a still shadow-informative backbone representation, plausibly in the
+shared head/readout competition; that is an interpretation, not authorization
+for another module. Target-test and CloudSEN internal test remained sealed.
