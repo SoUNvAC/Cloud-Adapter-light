@@ -36,3 +36,12 @@
 - 结果（四类/三类/cloud-noncloud/clear-contaminated mIoU）：Phase52 source-only=41.91/58.36/76.39/74.38；Phase52 adapted=43.67/48.92/75.13/71.51；Phase56 readout=43.28/55.24/76.42/71.64；Phase60 random65=47.08/57.33/76.89/70.42；oracle325=47.70/56.91/76.22/70.43。
 - 判定：粗粒度任务大幅恢复，支持主要域差异包含 thin/thick/shadow 边界语义；但这只是计算证据，61D 独立复核完成前不得发表“标签体系不一致”的核心结论。
 - 产物：SHA256 `9d1c09593d3ed009a30d2fab82dbc0076660eb4d88780f29afd58e0eabf64ee3`。
+
+## 2026-09-25：61D 双盲复核包准备完成
+
+- 目标：为至少两位独立人员提供不知道原始标签、模型结果和抽样来源的复核材料。
+- 改动：冻结 Phase52/Phase56 预测，从 `Phase52 pred thin/GT shadow` 与 `Phase56 pred shadow/GT thin` 两类错配中，按 biome、S4 高/低置信度、boundary/interior 分层生成 128×128 RGB crop；生成封存映射、说明、两份独立空白 CSV 和评分脚本。
+- 网络/读出：仅冻结推理；不训练或修改任何网络。候选 7,884 个，最终盲化单元 200 个，图像文件 200 个；reviewer_A/B 均为表头加 200 条空白记录。
+- 止损线：两份独立 CSV 完整锁定前，Cohen/Fleiss κ、共识 IoU、thin/shadow 一致率、原标签一致率和 biome 一致性均不得报告。
+- 结果：状态 `awaiting_two_independent_human_reviews`；`human_agreement_metrics_available=false`。sealed manifest SHA256 `8c774bc2f121459fe780654fbae7178b78e1113446d51b2a7ca6a4ebf74a66fd`；packet summary SHA256 `0d5b6aa87ae5ebc52ac230d662e04ceb567877d56c7f36dfc8d6bfd6d6118f49`；Phase61 总摘要 SHA256 `3018bb09e3c266a464fa696ab4495070088d9fcc1144d31df18a18ad4ed59c05`。
+- 判定：计算审计完成，但 Phase61 整体尚未完成；在两位人员复核前，只能说“标签粒度不匹配假说获得计算支持”，不能发表“两个数据集标签体系不一致”的核心结论。
