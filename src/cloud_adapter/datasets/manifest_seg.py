@@ -6,6 +6,36 @@ from mmseg.datasets import BaseSegDataset
 from mmseg.registry import DATASETS
 
 
+def load_usgs_shadow_status(path):
+    if path is None:
+        return None
+    metadata_path = Path(path)
+    with metadata_path.open(newline="", encoding="utf-8") as handle:
+        rows = list(csv.DictReader(handle))
+    required = {"scene", "usgs_shadows"}
+    if not rows or not required.issubset(rows[0]):
+        raise RuntimeError(f"Invalid USGS shadow metadata: {metadata_path}")
+    result = {}
+    for row in rows:
+        scene, value = row["scene"], row["usgs_shadows"].lower()
+        if value not in ("yes", "no") or scene in result:
+            raise RuntimeError(f"Invalid USGS Shadows? row: {row}")
+        result[scene] = value
+    if len(result) != 96 or sum(value == "yes" for value in result.values()) != 32:
+        raise RuntimeError(
+            f"Expected 96 scenes and 32 Shadows?=yes rows, got {len(result)} and "
+            f"{sum(value == 'yes' for value in result.values())}"
+        )
+    return result
+
+
+def l8_target_to_source_label_map(shadow_status=None, mask_unlabelled_clear=False):
+    label_map = {0: 0, 1: 3, 2: 2, 3: 1}
+    if mask_unlabelled_clear and shadow_status == "no":
+        label_map[0] = 255
+    return label_map
+
+
 @DATASETS.register_module()
 class Phase45L8ManifestDataset(BaseSegDataset):
     """Read the frozen Phase 45 scene-level Landsat manifest."""
@@ -22,6 +52,9 @@ class Phase45L8ManifestDataset(BaseSegDataset):
         mask_column="mask_path",
         selection_path=None,
         target_to_source=False,
+        usgs_shadow_metadata_path=None,
+        usgs_shadows_filter=None,
+        mask_unlabelled_shadow_clear=False,
         **kwargs,
     ):
         self.manifest_path = Path(manifest_path)
@@ -29,6 +62,18 @@ class Phase45L8ManifestDataset(BaseSegDataset):
         self.mask_column = mask_column
         self.selection_path = Path(selection_path) if selection_path else None
         self.target_to_source = bool(target_to_source)
+        self.usgs_shadow_status = load_usgs_shadow_status(usgs_shadow_metadata_path)
+        if usgs_shadows_filter not in (None, "yes", "no"):
+            raise ValueError("usgs_shadows_filter must be None, 'yes', or 'no'")
+        self.usgs_shadows_filter = usgs_shadows_filter
+        self.mask_unlabelled_shadow_clear = bool(mask_unlabelled_shadow_clear)
+        if self.mask_unlabelled_shadow_clear and not self.target_to_source:
+            raise ValueError("Partial shadow labels require target_to_source=True")
+        if (
+            (self.usgs_shadows_filter is not None or self.mask_unlabelled_shadow_clear)
+            and self.usgs_shadow_status is None
+        ):
+            raise ValueError("USGS shadow metadata is required by the requested protocol")
         if self.target_to_source:
             # BaseSegDataset validates configured class names against METAINFO
             # before load_data_list can attach the pixel-value label map.
@@ -54,11 +99,21 @@ class Phase45L8ManifestDataset(BaseSegDataset):
         rows = []
         with self.manifest_path.open(newline="", encoding="utf-8") as handle:
             for row in csv.DictReader(handle):
+                shadow_status = (
+                    self.usgs_shadow_status.get(row["scene"])
+                    if self.usgs_shadow_status is not None else None
+                )
+                if self.usgs_shadow_status is not None and shadow_status is None:
+                    raise RuntimeError(f"Missing USGS Shadows? value for {row['scene']}")
                 if (
                     row["new_split"] == self.manifest_split
                     and (selected_names is None or row["name"] in selected_names)
+                    and (
+                        self.usgs_shadows_filter is None
+                        or shadow_status == self.usgs_shadows_filter
+                    )
                 ):
-                    rows.append(row)
+                    rows.append({**row, "usgs_shadows": shadow_status})
         rows.sort(key=lambda row: row["name"])
         if not rows:
             raise RuntimeError(
@@ -76,7 +131,15 @@ class Phase45L8ManifestDataset(BaseSegDataset):
             if self.target_to_source:
                 # Landsat order: clear, shadow, thin, thick. CloudSEN/model
                 # order: clear, thick, thin, shadow.
-                item["label_map"] = {0: 0, 1: 3, 2: 2, 3: 1}
+                item["label_map"] = l8_target_to_source_label_map(
+                    row["usgs_shadows"], self.mask_unlabelled_shadow_clear
+                )
+                if self.mask_unlabelled_shadow_clear and row["usgs_shadows"] == "no":
+                    # A USGS Shadows?=no scene has no shadow truth mask. Its
+                    # target ID 0 may mean clear, fill, or unlabelled shadow,
+                    # so it cannot be used as a verified shadow negative.
+                    # Thin/thick-cloud pixels remain valid supervision.
+                    assert item["label_map"][0] == 255
             data_list.append(item)
         if selected_names is not None and len(data_list) != len(selected_names):
             raise RuntimeError(

@@ -1607,6 +1607,16 @@ Phase 52A必须同时达到：target-val相对source-only提高至少3.0 mIoU、
 
 完整1,905张target-val达到44.8525 mIoU、15.2351弱类mIoU和16.5280宏Boundary F1，相对冻结source-only分别为`+1.7284`、`-0.0708`和`+3.0517`。边界、源域保持、参数、延迟、完整性、有限数值和封存门通过，但目标总体未达到`+3.0`，弱类未达到`+4.0`，其中cloud shadow IoU仅0.8403。Phase 52A失败并执行`stop_phase52_msre_route`：不运行32-token或注入位置消融，不进入传感器元数据门控、云感知token、序数损失或一致性损失。target-test与CloudSEN internal test保持封存。
 
+### Phase 52A事后协议审计：USGS `Shadows?` 字段遗漏
+
+USGS L8 Biome官方逐景目录包含`Shadows? yes/no`字段：96景中仅32景为`yes`。该字段不在下载的MTL文件中，Phase 45 manifest及原Phase 52A均未摄入它。交叉核对官方整景`fixedmask`确认，`no`场景没有shadow truth；因此原Phase 52A把`no`场景class-0像元作为可靠非shadow负样本，并在无shadow真值的场景上计算Shadow IoU，协议不成立。冻结的65张Phase 50选择中只有12张来自`yes`场景、53张来自`no`场景；1,905张target-val中963张/8景为`yes`、942张/8景为`no`。官方网页快照冻结为`research_plans/protocol_data/l8_biome_usgs_shadow_status.csv`，SHA-256为`34ece4293c8cc64425feb9650660aa101de753cfd0d0de26709b9add6b5e69ab`，每行保留来源URL。原Phase 52A数值保留用于溯源，但其全场景shadow IoU、弱类均值、Boundary F1及“shadow collapse”结论统一标记为`protocol_contaminated_by_missing_usgs_shadow_status`，不得作为后续机制依据。
+
+## Phase 52A-fix — USGS shadow可用性修正版（预注册）
+
+修正版只改变标签有效性：冻结主干/source Cloud-Adapter/source head，保持同一Phase 22初始化、同一65张Phase 50选择、16 tokens、`[2,5,8,11]`注入、rank-8 head-delta、380,577参数、seed 52、batch 4、增强、优化器、学习率、每1,000 iter验证和总4,000 iter完全不变。来自`Shadows?=no`场景的训练图块将L8原始class 0映射为ignore 255，仅保留thin/thick监督；`yes`场景保留完整四类监督。checkpoint选择和目标报告只使用963张、8景的`Shadows?=yes` target-val，并在同一子集重新计算冻结source-only基线；target-test与CloudSEN internal test继续封存。
+
+止损线沿用原相对门槛并增加shadow非回退：相对修正source-only至少`+3.0 mIoU`、`+4.0 thin/shadow mean IoU`、`+3.0 macro Boundary F1`，且shadow IoU增量不得小于0；source-val至少73.93，目标参数必须恰为380,577，同机FP16延迟增幅不超过20%，完整评估535张source-val和963张修正target-val且指标有限。任一失败执行`stop_phase52a_fix_shadow_status_route`，禁止事后调整token、注入位置、损失、采样、学习率或训练长度。
+
 ## Phase 53 — 云影二元辅助监督（预注册）
 
 冻结诊断显示Phase 52A相对source-only的逐类IoU增量为clear `+4.5862`、thick cloud `+2.4689`、thin cloud `+15.4896`、cloud shadow `-15.6312`；thin cloud Boundary F1提高`18.0497`，cloud shadow Boundary F1下降`16.5978`。关闭目标分支的source-val为73.9800 mIoU，确认传感器路径选择实现零遗忘。结论不是“增益全部来自clear/thick”，而是普通MsRE显著改善薄云与薄云边界，却造成云影语义塌缩。

@@ -75,3 +75,50 @@ Phase 52 therefore executes `stop_phase52_msre_route`. The project must not
 run the 32-token or injection-position ablations and must not add metadata
 gating, cloud-aware tokens, ordinal losses, or consistency losses on top of
 this candidate. Target-test and CloudSEN internal test remain sealed.
+
+## Post-hoc protocol correction: official `Shadows?` field
+
+The USGS L8 Biome catalogue contains a scene-level `Shadows? yes/no` field.
+Only 32/96 scenes are `yes`; this field is not present in the downloaded MTL
+files and was absent from the frozen Phase 45 manifest. Phase 52A therefore
+incorrectly treated class-0 pixels in `Shadows?=no` scenes as verified
+non-shadow negatives and evaluated shadow IoU on scenes without shadow truth.
+
+The impact is material. Of the frozen 65 Phase 50 training patches, 12 come
+from `yes` scenes and 53 from `no` scenes. The original 1,905-image target-val
+contains 963 patches from eight `yes` scenes and 942 from eight `no` scenes.
+Consequently, the published Phase 52A all-scene shadow IoU, weak-class mean,
+macro Boundary F1 and the derived "shadow collapse" interpretation are marked
+protocol-contaminated. They remain in the log for provenance but are not valid
+evidence about shadow adaptation.
+
+The frozen official-page snapshot is
+`research_plans/protocol_data/l8_biome_usgs_shadow_status.csv`, SHA-256
+`34ece4293c8cc64425feb9650660aa101de753cfd0d0de26709b9add6b5e69ab`, with
+source URL `https://landsat.usgs.gov/node/7` stored on every row.
+
+## Phase 52A-fix preregistration
+
+Phase 52A-fix changes only label validity. It keeps the same frozen Phase 22
+checkpoint, the same 65-patch Phase 50 selection, 16 tokens, injection blocks
+`[2, 5, 8, 11]`, rank-8 head delta, 380,577 trainable parameters, seed 52,
+augmentations, optimizer, learning-rate schedule, batch size, 1,000-iteration
+validation interval and 4,000 total iterations.
+
+For a training patch from a USGS `Shadows?=no` scene, raw L8 target class 0 is
+mapped to ignore (255), because it may be clear, fill or unlabelled shadow.
+Thin- and thick-cloud pixels remain supervised. `Shadows?=yes` patches retain
+the complete four-class label. Checkpoint selection and target reporting use
+only the 963 patches from the eight `Shadows?=yes` target-val scenes. The
+source-only baseline is recomputed on exactly those same 963 patches; the
+target-test and CloudSEN internal test remain sealed.
+
+The fixed candidate must pass every original relative gate on the corrected
+subset: at least +3.0 mIoU, +4.0 thin/shadow mean IoU and +3.0 macro Boundary
+F1 over corrected source-only. In addition, shadow IoU may not regress at all.
+The source-val floor remains 73.93, target parameters must be exactly 380,577,
+matched FP16 latency overhead must not exceed 20%, all 535 source and 963
+corrected target samples must be evaluated with finite metrics, and both test
+sets remain sealed. Any failure executes
+`stop_phase52a_fix_shadow_status_route`; no post-hoc change to tokens,
+positions, losses, sampling, learning rate or training length is permitted.
