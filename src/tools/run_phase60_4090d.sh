@@ -6,7 +6,11 @@ OUT=work_dirs/phase60
 mkdir -p "$OUT"
 
 date -Is | tee "$OUT/STARTED_AT.txt"
-nvidia-smi --query-gpu=name,driver_version,memory.total,memory.free --format=csv,noheader | tee "$OUT/GPU_PREFLIGHT.txt"
+if command -v nvidia-smi >/dev/null 2>&1; then
+    nvidia-smi --query-gpu=name,driver_version,memory.total,memory.free --format=csv,noheader | tee "$OUT/GPU_PREFLIGHT.txt"
+else
+    echo "nvidia-smi unavailable in PATH; CUDA validation delegated to torch" | tee "$OUT/GPU_PREFLIGHT.txt"
+fi
 python -c 'import torch; print({"torch": torch.__version__, "cuda": torch.version.cuda, "cuda_available": torch.cuda.is_available(), "device": torch.cuda.get_device_name(0) if torch.cuda.is_available() else None})' | tee "$OUT/RUNTIME_PREFLIGHT.txt"
 
 python -u tools/run_phase60a_multispectral_audit.py 2>&1 | tee "$OUT/phase60a_console.log"
