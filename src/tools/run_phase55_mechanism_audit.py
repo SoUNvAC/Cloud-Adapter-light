@@ -17,6 +17,9 @@ import torch.nn.functional as F
 REPO_ROOT = Path(__file__).resolve().parents[1]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
+TOOLS_ROOT = Path(__file__).resolve().parent
+if str(TOOLS_ROOT) not in sys.path:
+    sys.path.insert(0, str(TOOLS_ROOT))
 
 from audit_phase52_sparse_msre import build  # noqa: E402
 from cloud_adapter.datasets.manifest_seg import load_usgs_shadow_status  # noqa: E402
