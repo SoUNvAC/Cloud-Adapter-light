@@ -37,8 +37,22 @@ def test_phase56_launcher_enforces_requested_environment_and_gpu_lock():
     assert "evaluate_phase56_readout_dense.py" in text
 
 
+def test_later_phases_are_hard_gated():
+    guard = (REPO_ROOT / "tools/phase57_59_gate_guard.py").read_text(encoding="utf-8")
+    assert '57: Path("work_dirs/phase56_readout/summary.json")' in guard
+    assert 'summary.get("passed") is not True' in guard
+    for phase, name in (
+        (57, "run_phase57_ontology_screen_4090d.sh"),
+        (58, "run_phase58_method_evolution_4090d.sh"),
+        (59, "run_phase59_paper_validation_4090d.sh"),
+    ):
+        text = (REPO_ROOT / "tools" / name).read_text(encoding="utf-8")
+        assert f"--phase {phase}" in text
+
+
 if __name__ == "__main__":
     test_deterministic_stratified_sampling_is_capped_and_repeatable()
     test_sample_spatial_maps_original_coordinates_to_feature_cells()
     test_phase56_launcher_enforces_requested_environment_and_gpu_lock()
+    test_later_phases_are_hard_gated()
     print("Phase 56 feature-cache protocol tests passed")
