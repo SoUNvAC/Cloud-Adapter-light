@@ -1647,6 +1647,14 @@ Phase 52B冻结iter-1,000 Phase 52A的主干、source Cloud-Adapter、MsRE、tar
 
 Phase 52B执行`stop_shadow_residual_route`。结果表明分支能部分恢复shadow，但即使数学上固定non-shadow类内部比例，提高shadow概率仍会从原本正确的thin像元中夺取预测；禁止继续调整loss、阈值、宽度、dilation、采样或训练长度。
 
+## Phase 55 — thin/shadow非对称负迁移机制审计（预注册）
+
+Phase 52A-fix在修正的`Shadows?=yes`子集上使thin IoU从11.7114升至37.4599（`+25.7485`），同时使shadow IoU从26.7183降至1.0008（`-25.7175`），弱类均值仅变化`+0.0155`。Phase 55不训练新分割模块，只验证这种近似等量交换是否确由表征级梯度冲突造成。source-only固定为Phase 22 iter-40,000，候选固定为Phase 52A-fix iter-1,000；诊断拟合只使用冻结65张选择中官方`Shadows?=yes`的12张，线性探针只在963张、8景`Shadows?=yes` target-val上作scene-disjoint评估，两套test继续封存。
+
+审计A在候选最终checkpoint分别构造thin与shadow的像素平均负对数语义概率损失，只使用得分分辨率下同时含两类的训练图块；在`[2,5,8,11]`四个注入层测量post-MsRE token梯度和逐层learnable-token梯度的余弦及seed-55 bootstrap 95%区间。冲突门为至少2/4层的pooled post-MsRE余弦小于`-0.10`，且四层均值小于0。审计B对source-only和候选的全部12层、source Cloud-Adapter之后及候选MsRE之后的384维patch feature，使用固定`lambda=0.01`类别均衡ridge probe；候选必须在至少一个注入层shadow AUROC低于source至少0.05，且第11层仍未恢复到距source 0.02以内。审计C将相同类别损失对全部380,577目标参数的逐图归一化梯度定义为thin更新与shadow经验Fisher/Jacobian子空间，固定保留90%奇异值能量、rank最多8；最小主夹角必须不大于75度、shadow梯度投影能量至少10%，且聚合thin/shadow梯度余弦为负。
+
+只有三门全部通过，才允许把机制结论写为“thin/shadow表征级梯度冲突”并预注册解耦模块；任一失败执行`stop_thin_shadow_conflict_hypothesis`，只保留非对称负迁移现象，不得事后扫描阈值、rank、probe、正则项或由此设计冲突专用结构。
+
 ## 后续维护规则
 
 从 Phase 16 开始，每个 Phase 完成后在本文件末尾追加以下内容：
