@@ -1617,6 +1617,12 @@ USGS L8 Biome官方逐景目录包含`Shadows? yes/no`字段：96景中仅32景�
 
 止损线沿用原相对门槛并增加shadow非回退：相对修正source-only至少`+3.0 mIoU`、`+4.0 thin/shadow mean IoU`、`+3.0 macro Boundary F1`，且shadow IoU增量不得小于0；source-val至少73.93，目标参数必须恰为380,577，同机FP16延迟增幅不超过20%，完整评估535张source-val和963张修正target-val且指标有限。任一失败执行`stop_phase52a_fix_shadow_status_route`，禁止事后调整token、注入位置、损失、采样、学习率或训练长度。
 
+### Phase 52A-fix结果与止损
+
+修正后的4,000 iter训练完成，并在仅含官方`Shadows?=yes`的963张、8景target-val上选择iter-1,000。同一修正子集重新计算的冻结source-only为41.9126 mIoU、19.2148弱类mIoU、14.9421宏Boundary F1、26.7183 shadow IoU和11.7114 thin IoU；候选为43.6728 mIoU、19.2303弱类mIoU和15.7833宏Boundary F1，增量仅`+1.7602/+0.0155/+0.8412`。thin IoU升至37.4599，但shadow IoU降至1.0008，相对修正基线回退25.7175点。
+
+关闭目标路径的source-val为73.9820；目标参数恰为380,577；同机FP16 batch-1延迟从21.4472 ms升至25.0755 ms，增幅16.92%。完整性、有限数值、源域、参数、延迟与封存检查通过，但三个目标增益门和shadow非回退门全部失败。Phase 52A-fix执行`stop_phase52a_fix_shadow_status_route`，不得启动相邻调参或下一阶段实验。该修正结论明确写入官方USGS逐景`Shadows?`字段：排除942张来自`Shadows?=no`、没有shadow真值的target-val图块后，薄云增益与shadow collapse仍然存在，不能再归因于该字段遗漏。
+
 ## Phase 53 — 云影二元辅助监督（预注册）
 
 冻结诊断显示Phase 52A相对source-only的逐类IoU增量为clear `+4.5862`、thick cloud `+2.4689`、thin cloud `+15.4896`、cloud shadow `-15.6312`；thin cloud Boundary F1提高`18.0497`，cloud shadow Boundary F1下降`16.5978`。关闭目标分支的source-val为73.9800 mIoU，确认传感器路径选择实现零遗忘。结论不是“增益全部来自clear/thick”，而是普通MsRE显著改善薄云与薄云边界，却造成云影语义塌缩。

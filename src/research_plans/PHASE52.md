@@ -122,3 +122,25 @@ corrected target samples must be evaluated with finite metrics, and both test
 sets remain sealed. Any failure executes
 `stop_phase52a_fix_shadow_status_route`; no post-hoc change to tokens,
 positions, losses, sampling, learning rate or training length is permitted.
+
+## Phase 52A-fix result and stop decision
+
+The corrected 4,000-iteration run completed and selected iteration 1,000 on
+the 963-patch, eight-scene `Shadows?=yes` target-val subset. On that exact
+subset, the recomputed frozen source-only baseline reached 41.9126 mIoU,
+19.2148 thin/shadow mean IoU, 14.9421 macro Boundary F1, 26.7183 shadow IoU
+and 11.7114 thin-cloud IoU. The fixed candidate reached 43.6728 mIoU, 19.2303
+weak-class mIoU and 15.7833 macro Boundary F1: gains of only +1.7602, +0.0155
+and +0.8412. Its thin-cloud IoU rose to 37.4599, but shadow IoU collapsed to
+1.0008, a -25.7175-point regression against the corrected baseline.
+
+The disabled target path retained 73.9820 source-val mIoU. The target path
+used exactly 380,577 trainable parameters; matched FP16 batch-1 latency rose
+from 21.4472 ms to 25.0755 ms (+16.92%). Completeness, finite-value, source,
+parameter, latency and seal checks passed, while all three target improvement
+gates and the shadow non-regression gate failed. Phase 52A-fix therefore
+executes `stop_phase52a_fix_shadow_status_route`; no neighboring adjustment or
+next-phase experiment is authorized. The corrected result confirms that the
+thin-cloud gain and shadow collapse persist even after the official USGS
+`Shadows?` field is respected, rather than being an artifact of evaluating
+the 942 target-val patches whose scenes have no shadow ground truth.
