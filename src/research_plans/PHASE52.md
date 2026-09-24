@@ -94,7 +94,7 @@ evidence about shadow adaptation.
 
 The frozen official-page snapshot is
 `research_plans/protocol_data/l8_biome_usgs_shadow_status.csv`, SHA-256
-`34ece4293c8cc64425feb9650660aa101de753cfd0d0de26709b9add6b5e69ab`, with
+`c735dc14ba5d40ffc0443ba9e5441d2716acd897c80f341a0093319f18862390`, with
 source URL `https://landsat.usgs.gov/node/7` stored on every row.
 
 ## Phase 52A-fix preregistration

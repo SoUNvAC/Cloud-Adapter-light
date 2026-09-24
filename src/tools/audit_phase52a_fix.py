@@ -71,7 +71,7 @@ def main():
             len(metadata) == 96 and sum(value == "yes" for value in metadata.values()) == 32
         ),
         "official_metadata_frozen_sha256": metadata_sha256
-        == "34ece4293c8cc64425feb9650660aa101de753cfd0d0de26709b9add6b5e69ab",
+        == "c735dc14ba5d40ffc0443ba9e5441d2716acd897c80f341a0093319f18862390",
         "exactly_65_selected": len(selected_rows) == 65,
         "selection_without_labels": selection.get("target_labels_read_during_selection") is False,
         "selected_status_is_12_yes_53_no": selected_status == {"yes": 12, "no": 53},

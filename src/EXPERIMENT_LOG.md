@@ -1609,7 +1609,7 @@ Phase 52A必须同时达到：target-val相对source-only提高至少3.0 mIoU、
 
 ### Phase 52A事后协议审计：USGS `Shadows?` 字段遗漏
 
-USGS L8 Biome官方逐景目录包含`Shadows? yes/no`字段：96景中仅32景为`yes`。该字段不在下载的MTL文件中，Phase 45 manifest及原Phase 52A均未摄入它。交叉核对官方整景`fixedmask`确认，`no`场景没有shadow truth；因此原Phase 52A把`no`场景class-0像元作为可靠非shadow负样本，并在无shadow真值的场景上计算Shadow IoU，协议不成立。冻结的65张Phase 50选择中只有12张来自`yes`场景、53张来自`no`场景；1,905张target-val中963张/8景为`yes`、942张/8景为`no`。官方网页快照冻结为`research_plans/protocol_data/l8_biome_usgs_shadow_status.csv`，SHA-256为`34ece4293c8cc64425feb9650660aa101de753cfd0d0de26709b9add6b5e69ab`，每行保留来源URL。原Phase 52A数值保留用于溯源，但其全场景shadow IoU、弱类均值、Boundary F1及“shadow collapse”结论统一标记为`protocol_contaminated_by_missing_usgs_shadow_status`，不得作为后续机制依据。
+USGS L8 Biome官方逐景目录包含`Shadows? yes/no`字段：96景中仅32景为`yes`。该字段不在下载的MTL文件中，Phase 45 manifest及原Phase 52A均未摄入它。交叉核对官方整景`fixedmask`确认，`no`场景没有shadow truth；因此原Phase 52A把`no`场景class-0像元作为可靠非shadow负样本，并在无shadow真值的场景上计算Shadow IoU，协议不成立。冻结的65张Phase 50选择中只有12张来自`yes`场景、53张来自`no`场景；1,905张target-val中963张/8景为`yes`、942张/8景为`no`。官方网页快照冻结为`research_plans/protocol_data/l8_biome_usgs_shadow_status.csv`，规范LF字节SHA-256为`c735dc14ba5d40ffc0443ba9e5441d2716acd897c80f341a0093319f18862390`，每行保留来源URL。原Phase 52A数值保留用于溯源，但其全场景shadow IoU、弱类均值、Boundary F1及“shadow collapse”结论统一标记为`protocol_contaminated_by_missing_usgs_shadow_status`，不得作为后续机制依据。
 
 ## Phase 52A-fix — USGS shadow可用性修正版（预注册）
 
