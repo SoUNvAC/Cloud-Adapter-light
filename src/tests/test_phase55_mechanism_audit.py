@@ -38,3 +38,10 @@ def test_principal_angles_detect_shared_and_orthogonal_directions():
     )
     assert orthogonal["smallest_principal_angle_degrees"] > 89.9
     assert orthogonal["shadow_gradient_energy_in_thin_subspace"] < 1e-9
+
+
+if __name__ == "__main__":
+    test_binary_auc_handles_ties_and_perfect_order()
+    test_balanced_ridge_separates_a_linear_problem()
+    test_principal_angles_detect_shared_and_orthogonal_directions()
+    print("Phase 55 mechanism-audit unit tests passed")
