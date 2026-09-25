@@ -2,7 +2,6 @@ import torch
 import torch.nn.functional as F
 
 from mmseg.registry import MODELS
-from mmseg.utils import add_prefix
 
 from .frozen_encoder_decoder import FrozenHeadEncoderDecoder
 
@@ -48,6 +47,7 @@ class PartialLabelFrozenHeadEncoderDecoder(FrozenHeadEncoderDecoder):
             raise ValueError("partial_loss_weight must be positive")
 
     def loss(self, inputs, data_samples):
+        batch_img_metas = [sample.metainfo for sample in data_samples]
         features = self.extract_feat(inputs)
         partial_masks = []
         for sample in data_samples:
@@ -61,22 +61,31 @@ class PartialLabelFrozenHeadEncoderDecoder(FrozenHeadEncoderDecoder):
                     partial, int(self.decode_head.ignore_index)
                 )
 
-        seg_logits = self.decode_head(features)
-        losses = add_prefix(
-            self.decode_head.loss_by_feat(seg_logits, data_samples), "decode"
-        )
+        # Preserve the native decode-head objective exactly. This supports the
+        # inherited Mask2Former head as well as ordinary dense decode heads.
+        losses = self._decode_head_forward_train(features, data_samples)
         if self.with_auxiliary_head:
             losses.update(self._auxiliary_head_forward_train(features, data_samples))
 
         partial_mask = torch.stack(partial_masks, dim=0).squeeze(1)
-        if partial_mask.shape[-2:] != seg_logits.shape[-2:]:
-            seg_logits = F.interpolate(
-                seg_logits,
-                size=partial_mask.shape[-2:],
-                mode="bilinear",
-                align_corners=self.decode_head.align_corners,
+        if partial_mask.any():
+            # Mask2Former converts query classes/masks to dense semantic logits
+            # in predict(); gradients still flow to the existing target adapter
+            # through the frozen head.
+            seg_logits = self.decode_head.predict(
+                features, batch_img_metas, self.test_cfg
             )
-        losses["partial.loss_set_nll"] = partial_label_nll(
-            seg_logits, partial_mask, self.partial_classes
-        ) * self.partial_loss_weight
+            if partial_mask.shape[-2:] != seg_logits.shape[-2:]:
+                seg_logits = F.interpolate(
+                    seg_logits,
+                    size=partial_mask.shape[-2:],
+                    mode="bilinear",
+                    align_corners=self.decode_head.align_corners,
+                )
+            partial_loss = partial_label_nll(
+                seg_logits, partial_mask, self.partial_classes
+            )
+        else:
+            partial_loss = sum(feature.sum() for feature in features) * 0.0
+        losses["partial.loss_set_nll"] = partial_loss * self.partial_loss_weight
         return losses
