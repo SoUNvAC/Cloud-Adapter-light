@@ -45,3 +45,15 @@
 - 止损线：两份独立 CSV 完整锁定前，Cohen/Fleiss κ、共识 IoU、thin/shadow 一致率、原标签一致率和 biome 一致性均不得报告。
 - 结果：状态 `awaiting_two_independent_human_reviews`；`human_agreement_metrics_available=false`。sealed manifest SHA256 `8c774bc2f121459fe780654fbae7178b78e1113446d51b2a7ca6a4ebf74a66fd`；packet summary SHA256 `0d5b6aa87ae5ebc52ac230d662e04ceb567877d56c7f36dfc8d6bfd6d6118f49`；Phase61 总摘要 SHA256 `3018bb09e3c266a464fa696ab4495070088d9fcc1144d31df18a18ad4ed59c05`。
 - 判定：计算审计完成，但 Phase61 整体尚未完成；在两位人员复核前，只能说“标签粒度不匹配假说获得计算支持”，不能发表“两个数据集标签体系不一致”的核心结论。
+
+## 2026-09-25：61D 双盲复核首次评分（缺失值临时审计）
+
+- 目标：导入 reviewer A/B 的独立复核结果，计算一致性、类别交并比、thin/shadow 一致率、原标签一致率及 biome 分层稳定性。
+- 改动：将 `/mnt/i/zhc/reviewer_A.csv` 与 `reviewer_B.csv` 原样复制到远端 `src/work_dirs/phase61/blind_review/completed_reviews/`，不删除或改写源文件；评分器新增严格缺失校验、complete-case 临时模式、输入 SHA/缺失 tile 留痕，以及唯一无歧义的拼写规范化 `ambiguous haze/cirru`→`ambiguous haze/cirrus`（1 条，不作语义代填）。
+- 网络/读出：不训练、不推理、不修改网络；在 `cloud-lite-pt210` 中只运行统计评分。本地提交 `7ef9da8` 已 push；gzs 首次 pull 遇到 GitHub GnuTLS 握手失败，第二次重试成功并 fast-forward 到同一提交。
+- 数据完整性：sealed 200 条；A 完成 193、缺 7，B 完成 198、缺 2；双方缺失重叠 1 条，因此双人 complete-case 为 192，排除 8 条。A/B 原始 SHA256 分别为 `d5890697dafa64fe8b4fc77fa244b6ce244ac8be1d45d8be9b2c30b4802d3477`、`931b28ac4c82034b29adb85ad106cb3e357815e8335094448e9f280fd68ae440`。
+- 止损线：状态固定为 `incomplete_preliminary`；不得把 192 条临时结果冒充完整 200 条正式结论，不得代填 9 个 reviewer 空单元，也不得据此发表“标签体系不一致”的核心结论。
+- 结果（192 个双人有效单元）：Cohen κ=0.1363，Fleiss κ=0.1286，精确一致率=28.65%。reviewer 间 IoU：clear 41.56、thin 8.06、thick 5.88、cloud-shadow 19.35、terrain/water-shadow 0.00、ambiguous-haze/cirrus 7.84、uncertain-boundary 9.84（%）。原标签均为 thin/shadow 的抽样单元上精确一致率同为 28.65%；仅在双方都选 definite thin/shadow 的 17 条中，thin-vs-shadow 一致率为 64.71%。
+- 共识/原标签：两人完全一致才形成共识，共 55/192（28.65%）；原标签与共识一致率 12.73%，Thin/Shadow IoU 分别为 14.29/10.53。该错配抽样设计没有 original clear/thick 支持，因此 clear/thick 的原标签 IoU 不作解释。
+- biome 一致性（双人精确一致率）：barren 15.00%、forest 33.33%、grass_crops 36.11%、shrubland 27.78%、snow_ice 31.03%、wetlands 30.56%；各 biome 均未显示高一致性，但缺失主要集中在 snow_ice（29/36 complete-case），只能作为临时诊断。
+- 产物：`review_metrics_preliminary.json` SHA256 `d24112930f1fa39c8c1b80d9ef5e32a2b3cafee55c08d38ad765c8ab861920db`；结构与状态断言复核通过。
