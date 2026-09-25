@@ -57,3 +57,15 @@
 - 共识/原标签：两人完全一致才形成共识，共 55/192（28.65%）；原标签与共识一致率 12.73%，Thin/Shadow IoU 分别为 14.29/10.53。该错配抽样设计没有 original clear/thick 支持，因此 clear/thick 的原标签 IoU 不作解释。
 - biome 一致性（双人精确一致率）：barren 15.00%、forest 33.33%、grass_crops 36.11%、shrubland 27.78%、snow_ice 31.03%、wetlands 30.56%；各 biome 均未显示高一致性，但缺失主要集中在 snow_ice（29/36 complete-case），只能作为临时诊断。
 - 产物：`review_metrics_preliminary.json` SHA256 `d24112930f1fa39c8c1b80d9ef5e32a2b3cafee55c08d38ad765c8ab861920db`；结构与状态断言复核通过。
+
+## 2026-09-25：61D 空值语义确认与正式封账
+
+- 目标：依据复核方说明，将 CSV 空值从“漏标”更正为“图像纯色、无有效信息，无法评估”的 reviewer abstention，并完成正式 61D 统计。
+- 改动：评分器新增显式 `unassessable_solid_image` 空值策略；非法标签仍失败，普通漏标仍只能生成临时结果。正式运行同时更新 blind-review packet 与 Phase61 总摘要，保留每位 reviewer 的空值 tile、原始 SHA 和 1 条无歧义拼写规范化记录。
+- 网络/读出：不训练、不推理、不修改网络；本地提交 `cd6061e`、`03fe36d` 均已 push，gzs 正常 pull 后在 `cloud-lite-pt210` 环境运行统计与摘要封账。
+- 数据口径：sealed 200 个单元；8 个单元因至少一位 reviewer 判定纯色无信息而排除成对统计，剩余 192 个共同可评单元。9 个 reviewer 空单元中有 1 个双方重叠；空值不是类别，也不参与 κ、IoU 或一致率分母。
+- 止损线：不得把不可评空值映射为 clear/uncertain 等类别；结论仅适用于从两类模型错配中分层抽取的 192 个可评位置，不能外推为全数据集随机样本的总体发生率。
+- 结果：正式 Cohen κ=0.1363，Fleiss κ=0.1286，双人精确一致率=28.65%；reviewer 间 clear/thin/thick/cloud-shadow/terrain-water-shadow/haze-cirrus/boundary IoU 分别为 41.56/8.06/5.88/19.35/0.00/7.84/9.84（%）。双方均使用 definite thin/shadow 的 17 条中二分类一致率为 64.71%。
+- 原标签/共识：55/192 形成双人共识，共识与原标签一致率 12.73%，Thin/Shadow IoU=14.29/10.53；A/B 各自与原标签精确一致率为 24.87%/11.11%。biome 双人一致率为 barren 15.00%、forest 33.33%、grass_crops 36.11%、shrubland 27.78%、snow_ice 31.03%、wetlands 30.56%。
+- 判定：Phase61 完成。独立复核为“选定错配位置存在显著 thin/shadow/边界语义歧义及协议不兼容”提供证据；但由于样本按模型错配条件抽取，不能单独证明两个数据集全局标签体系均不一致。
+- 正式产物：`review_metrics.json` SHA256 `19002ad19c80a899e094b0b994fd9c87ab8ed5efd1819b9798d5e27fc70d20d6`；`packet_summary.json` SHA256 `a9f3b70744e3e8304929a59923bf2411a4349f9c23eca3651063145d11c7105a`；`phase61_summary.json` SHA256 `2cc5f993cad471d4d25648d8e10c8f71bbcac58007aca417f9f9e65315a824d7`，状态 `phase61_complete`。
