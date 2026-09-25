@@ -1,8 +1,8 @@
 """Score two or more completed Phase 61D blind-review CSV files.
 
 The default is deliberately strict: every sealed unit must have a valid label.
-``--allow-incomplete`` enables an explicitly preliminary complete-case audit while
-retaining missing-unit and normalization provenance in the output.
+An explicit blank policy may instead mark blanks as incomplete or as reviewer
+abstentions caused by solid-color imagery with no assessable information.
 """
 
 from __future__ import annotations
@@ -35,7 +35,7 @@ def sha256(path):
     return digest.hexdigest()
 
 
-def read_review(path, expected_ids, allow_incomplete=False):
+def read_review(path, expected_ids, blank_policy="error"):
     path = Path(path)
     with path.open(newline="", encoding="utf-8-sig") as handle:
         rows = list(csv.DictReader(handle))
@@ -61,16 +61,20 @@ def read_review(path, expected_ids, allow_incomplete=False):
     invalid = sorted({value for value in values.values() if value is not None and value not in LABELS})
     if invalid:
         raise RuntimeError(f"Invalid labels in {path}: {invalid}")
-    missing = [tile_id for tile_id in expected_ids if values[tile_id] is None]
-    if missing and not allow_incomplete:
-        raise RuntimeError(f"Blank labels in {path}: {missing}")
+    blank = [tile_id for tile_id in expected_ids if values[tile_id] is None]
+    if blank and blank_policy == "error":
+        raise RuntimeError(f"Blank labels in {path}: {blank}")
     diagnostics = {
         "path": str(path),
         "sha256": sha256(path),
         "sealed_units": len(expected_ids),
-        "completed_units": len(expected_ids) - len(missing),
-        "missing_units": len(missing),
-        "missing_tile_ids": missing,
+        "labeled_units": len(expected_ids) - len(blank),
+        "blank_units": len(blank),
+        "blank_tile_ids": blank,
+        "blank_interpretation": (
+            "unassessable_solid_image" if blank_policy == "unassessable_solid_image"
+            else "incomplete" if blank_policy == "incomplete" else None
+        ),
         "canonicalized_labels": dict(sorted(aliases.items())),
     }
     return values, diagnostics
@@ -127,9 +131,14 @@ def main():
     parser.add_argument("--sealed", default="work_dirs/phase61/blind_review/sealed_manifest.json")
     parser.add_argument("--reviews", nargs="+", required=True)
     parser.add_argument("--output", default="work_dirs/phase61/blind_review/review_metrics.json")
-    parser.add_argument(
+    blank_group = parser.add_mutually_exclusive_group()
+    blank_group.add_argument(
         "--allow-incomplete", action="store_true",
         help="Score only units completed by every reviewer and mark output preliminary.",
+    )
+    blank_group.add_argument(
+        "--blank-means-unassessable-solid-image", action="store_true",
+        help="Treat blank cells as documented reviewer abstentions for solid-color, non-assessable imagery.",
     )
     args = parser.parse_args()
     if len(args.reviews) < 2:
@@ -143,13 +152,19 @@ def main():
         raise RuntimeError("Duplicate tile IDs in sealed manifest")
     record_by_id = {row["tile_id"]: row for row in records}
 
-    parsed = [read_review(path, ids, args.allow_incomplete) for path in args.reviews]
+    blank_policy = (
+        "unassessable_solid_image" if args.blank_means_unassessable_solid_image
+        else "incomplete" if args.allow_incomplete else "error"
+    )
+    parsed = [read_review(path, ids, blank_policy) for path in args.reviews]
     reviews = [item[0] for item in parsed]
     diagnostics = [item[1] for item in parsed]
     complete_ids = [tile_id for tile_id in ids if all(review[tile_id] is not None for review in reviews)]
     if not complete_ids:
         raise RuntimeError("No units have labels from every reviewer")
-    missing_any = len(complete_ids) != len(ids)
+    complete_id_set = set(complete_ids)
+    excluded_ids = [tile_id for tile_id in ids if tile_id not in complete_id_set]
+    blank_any = len(complete_ids) != len(ids)
 
     pairwise = {}
     for left in range(len(reviews)):
@@ -224,18 +239,32 @@ def main():
 
     consensus_valid = np.asarray(consensus)[consensus_mask]
     original_valid = np.asarray(original)[consensus_mask]
+    if blank_any and blank_policy == "unassessable_solid_image":
+        status = "complete_with_unassessable_units"
+        scope_note = (
+            "Metrics exclude reviewer abstentions explicitly documented as solid-color imagery "
+            "with no assessable information."
+        )
+    elif blank_any:
+        status = "incomplete_preliminary"
+        scope_note = "Complete-case metrics only; do not use as the final Phase 61D conclusion."
+    else:
+        status = "complete"
+        scope_note = None
     summary = {
         "phase": "61D-scored",
-        "status": "incomplete_preliminary" if missing_any else "complete",
-        "warning": (
-            "Complete-case metrics only; do not use as the final Phase 61D conclusion until all sealed units are labeled."
-            if missing_any else None
-        ),
+        "status": status,
+        "human_review_complete": status != "incomplete_preliminary",
+        "blank_policy": blank_policy,
+        "scope_note": scope_note,
         "sealed_manifest": {"path": str(sealed_path), "sha256": sha256(sealed_path)},
         "reviewers": len(reviews),
         "sealed_units": len(ids),
+        "jointly_evaluable_units": len(complete_ids),
         "complete_case_units": len(complete_ids),
-        "excluded_incomplete_units": len(ids) - len(complete_ids),
+        "excluded_from_pairwise_units": len(ids) - len(complete_ids),
+        "excluded_tile_ids": excluded_ids,
+        "excluded_unit_reason": "unassessable_solid_image" if blank_policy == "unassessable_solid_image" else "incomplete",
         "reviewer_files": diagnostics,
         "pairwise": pairwise,
         "fleiss_kappa_complete_cases": fleiss(count_matrix),
