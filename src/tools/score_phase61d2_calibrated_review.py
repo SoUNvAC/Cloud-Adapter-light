@@ -166,6 +166,8 @@ def read_calibration_lock(path, sealed):
 
 def write_adjudication_template(path, disagreements, review_a, review_b):
     path = Path(path)
+    if path.exists():
+        raise RuntimeError(f"Refusing to overwrite existing adjudication file: {path}")
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", newline="", encoding="utf-8") as handle:
         writer = csv.DictWriter(handle, fieldnames=(
@@ -334,10 +336,17 @@ def main():
         "human_result_warning": "No original-vs-final or hard-gate conclusion exists until disagreement-only adjudication is complete.",
     }
 
-    if args.adjudication:
-        adjudicated, adjudication_diagnostic = read_adjudication(
-            args.adjudication, disagreements, review_a, review_b
-        )
+    if args.adjudication or not disagreements:
+        if disagreements:
+            adjudicated, adjudication_diagnostic = read_adjudication(
+                args.adjudication, disagreements, review_a, review_b
+            )
+        else:
+            adjudicated = {}
+            adjudication_diagnostic = {
+                "path": None, "sha256": None, "units": 0,
+                "reason": "A and B had no disagreements",
+            }
         final = {
             tile_id: review_a[tile_id] if review_a[tile_id] == review_b[tile_id] else adjudicated[tile_id]
             for tile_id in main_ids
@@ -360,7 +369,7 @@ def main():
             for biome in sorted({row["biome"] for row in main_records})
         }
         summary.update({
-            "status": "complete_adjudicated",
+            "status": "complete_no_disagreements" if not disagreements else "complete_adjudicated",
             "adjudication": adjudication_diagnostic,
             "final_label_provenance": {
                 "exact_A_B_agreement_units": len(main_ids) - len(disagreements),

@@ -375,6 +375,21 @@ def main():
     parser.add_argument("--confirmation-budget", type=int, default=50)
     args = parser.parse_args()
 
+    output_root = Path(args.output_root)
+    protected_outputs = (
+        output_root / "sealed_manifest.json",
+        output_root / "reviewer_packet/reviewer_A_calibration.csv",
+        output_root / "reviewer_packet/reviewer_B_calibration.csv",
+        output_root / "reviewer_packet/reviewer_A_main.csv",
+        output_root / "reviewer_packet/reviewer_B_main.csv",
+    )
+    existing = [str(path) for path in protected_outputs if path.exists()]
+    if existing:
+        raise RuntimeError(
+            "Refusing to overwrite an existing Phase 61D2 packet or reviewer files: "
+            + ", ".join(existing)
+        )
+
     legacy_path = Path(args.legacy_sealed)
     legacy = json.loads(legacy_path.read_text(encoding="utf-8"))
     calibration, independent = split_legacy_records(legacy["records"], args.calibration_budget)
@@ -394,7 +409,6 @@ def main():
 
     calibration = assign_ids(calibration, "P61D2-CAL", "phase61d2-calibration-order")
     main_records = assign_ids(independent + confirmation, "P61D2-EVAL", "phase61d2-main-order")
-    output_root = Path(args.output_root)
     panel_root = output_root / "reviewer_packet" / "panels"
     sealed_records = []
     for index, row in enumerate(calibration + main_records, 1):

@@ -68,6 +68,8 @@ def main():
         "manual_amendments_or_confirmations": args.manual_amendment,
     }
     output = Path(args.output)
+    if output.exists():
+        raise RuntimeError(f"Refusing to overwrite existing calibration lock: {output}")
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(json.dumps(document, indent=2), encoding="utf-8")
     print(json.dumps(document, indent=2))
