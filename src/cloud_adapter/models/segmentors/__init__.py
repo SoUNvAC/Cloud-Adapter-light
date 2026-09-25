@@ -12,6 +12,7 @@ from .factorized_encoder_decoder import (
 )
 from .shadow_aux_encoder_decoder import ShadowAuxFrozenHeadEncoderDecoder
 from .shadow_residual_encoder_decoder import FrozenPhase52ShadowResidualEncoderDecoder
+from .partial_label_encoder_decoder import PartialLabelFrozenHeadEncoderDecoder
 
 __all__ = [
     "FrozenBackboneEncoderDecoder",
@@ -24,4 +25,5 @@ __all__ = [
     "PixelFeatureFactorizedEncoderDecoder",
     "ShadowAuxFrozenHeadEncoderDecoder",
     "FrozenPhase52ShadowResidualEncoderDecoder",
+    "PartialLabelFrozenHeadEncoderDecoder",
 ]

@@ -29,10 +29,21 @@ def load_usgs_shadow_status(path):
     return result
 
 
-def l8_target_to_source_label_map(shadow_status=None, mask_unlabelled_clear=False):
+def l8_target_to_source_label_map(
+    shadow_status=None,
+    mask_unlabelled_clear=False,
+    partial_unlabelled_clear=False,
+    partial_label_index=254,
+):
     label_map = {0: 0, 1: 3, 2: 2, 3: 1}
+    if mask_unlabelled_clear and partial_unlabelled_clear:
+        raise ValueError("Cannot both ignore and partially supervise raw target ID 0")
     if mask_unlabelled_clear and shadow_status == "no":
         label_map[0] = 255
+    if partial_unlabelled_clear and shadow_status == "no":
+        if int(partial_label_index) not in range(4, 255):
+            raise ValueError("partial_label_index must be an unused uint8 value in [4, 254]")
+        label_map[0] = int(partial_label_index)
     return label_map
 
 
@@ -55,6 +66,8 @@ class Phase45L8ManifestDataset(BaseSegDataset):
         usgs_shadow_metadata_path=None,
         usgs_shadows_filter=None,
         mask_unlabelled_shadow_clear=False,
+        partial_unlabelled_shadow_clear=False,
+        partial_label_index=254,
         **kwargs,
     ):
         self.manifest_path = Path(manifest_path)
@@ -67,10 +80,20 @@ class Phase45L8ManifestDataset(BaseSegDataset):
             raise ValueError("usgs_shadows_filter must be None, 'yes', or 'no'")
         self.usgs_shadows_filter = usgs_shadows_filter
         self.mask_unlabelled_shadow_clear = bool(mask_unlabelled_shadow_clear)
-        if self.mask_unlabelled_shadow_clear and not self.target_to_source:
+        self.partial_unlabelled_shadow_clear = bool(partial_unlabelled_shadow_clear)
+        self.partial_label_index = int(partial_label_index)
+        if self.mask_unlabelled_shadow_clear and self.partial_unlabelled_shadow_clear:
+            raise ValueError("Choose ignore or partial supervision for unlabelled raw ID 0")
+        if (
+            self.mask_unlabelled_shadow_clear or self.partial_unlabelled_shadow_clear
+        ) and not self.target_to_source:
             raise ValueError("Partial shadow labels require target_to_source=True")
         if (
-            (self.usgs_shadows_filter is not None or self.mask_unlabelled_shadow_clear)
+            (
+                self.usgs_shadows_filter is not None
+                or self.mask_unlabelled_shadow_clear
+                or self.partial_unlabelled_shadow_clear
+            )
             and self.usgs_shadow_status is None
         ):
             raise ValueError("USGS shadow metadata is required by the requested protocol")
@@ -97,6 +120,9 @@ class Phase45L8ManifestDataset(BaseSegDataset):
             if not selected_names:
                 raise RuntimeError(f"Empty selection in {self.selection_path}")
         rows = []
+        seen_selected_names = set()
+        split_selected_names = set()
+        eligible_selected_names = set()
         with self.manifest_path.open(newline="", encoding="utf-8") as handle:
             for row in csv.DictReader(handle):
                 shadow_status = (
@@ -105,6 +131,15 @@ class Phase45L8ManifestDataset(BaseSegDataset):
                 )
                 if self.usgs_shadow_status is not None and shadow_status is None:
                     raise RuntimeError(f"Missing USGS Shadows? value for {row['scene']}")
+                if selected_names is not None and row["name"] in selected_names:
+                    seen_selected_names.add(row["name"])
+                    if row["new_split"] == self.manifest_split:
+                        split_selected_names.add(row["name"])
+                        if (
+                            self.usgs_shadows_filter is None
+                            or shadow_status == self.usgs_shadows_filter
+                        ):
+                            eligible_selected_names.add(row["name"])
                 if (
                     row["new_split"] == self.manifest_split
                     and (selected_names is None or row["name"] in selected_names)
@@ -132,7 +167,10 @@ class Phase45L8ManifestDataset(BaseSegDataset):
                 # Landsat order: clear, shadow, thin, thick. CloudSEN/model
                 # order: clear, thick, thin, shadow.
                 item["label_map"] = l8_target_to_source_label_map(
-                    row["usgs_shadows"], self.mask_unlabelled_shadow_clear
+                    row["usgs_shadows"],
+                    self.mask_unlabelled_shadow_clear,
+                    self.partial_unlabelled_shadow_clear,
+                    self.partial_label_index,
                 )
                 if self.mask_unlabelled_shadow_clear and row["usgs_shadows"] == "no":
                     # A USGS Shadows?=no scene has no shadow truth mask. Its
@@ -140,12 +178,23 @@ class Phase45L8ManifestDataset(BaseSegDataset):
                     # so it cannot be used as a verified shadow negative.
                     # Thin/thick-cloud pixels remain valid supervision.
                     assert item["label_map"][0] == 255
+                if self.partial_unlabelled_shadow_clear and row["usgs_shadows"] == "no":
+                    # Keep raw target ID 0 distinguishable through the pipeline;
+                    # the Phase 62 segmentor supervises it with {clear, shadow}.
+                    assert item["label_map"][0] == self.partial_label_index
             data_list.append(item)
-        if selected_names is not None and len(data_list) != len(selected_names):
-            raise RuntimeError(
-                f"Selection has {len(selected_names)} names but dataset found "
-                f"{len(data_list)} records"
-            )
+        if selected_names is not None:
+            if seen_selected_names != selected_names:
+                raise RuntimeError("Selection contains names absent from the manifest")
+            if split_selected_names != selected_names:
+                raise RuntimeError(
+                    f"Selection contains names outside split {self.manifest_split!r}"
+                )
+            if len(data_list) != len(eligible_selected_names):
+                raise RuntimeError(
+                    f"Selection/filter expects {len(eligible_selected_names)} records "
+                    f"but dataset found {len(data_list)}"
+                )
         return data_list
 
 
