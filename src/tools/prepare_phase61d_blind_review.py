@@ -11,7 +11,7 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 import numpy as np
-from PIL import Image
+from PIL import Image, ImageDraw
 import torch
 import torch.nn.functional as F
 
@@ -32,6 +32,28 @@ LABELS = (
     "definite clear", "definite thin", "definite thick", "definite cloud shadow",
     "terrain/water shadow", "ambiguous haze/cirrus", "uncertain boundary",
 )
+
+
+def locator_image(image, target_x, target_y):
+    """Add label-neutral corner brackets without covering the queried pixel."""
+    marked = image.copy()
+    draw = ImageDraw.Draw(marked)
+    radius, arm = 9, 5
+    x, y = int(target_x), int(target_y)
+    segments = (
+        ((x - radius, y - radius), (x - radius + arm, y - radius)),
+        ((x - radius, y - radius), (x - radius, y - radius + arm)),
+        ((x + radius, y - radius), (x + radius - arm, y - radius)),
+        ((x + radius, y - radius), (x + radius, y - radius + arm)),
+        ((x - radius, y + radius), (x - radius + arm, y + radius)),
+        ((x - radius, y + radius), (x - radius, y + radius - arm)),
+        ((x + radius, y + radius), (x + radius - arm, y + radius)),
+        ((x + radius, y + radius), (x + radius, y + radius - arm)),
+    )
+    for width, color in ((5, (0, 0, 0)), (2, (255, 255, 0))):
+        for start, end in segments:
+            draw.line((start, end), fill=color, width=width)
+    return marked
 
 
 def stable_value(text):
@@ -190,7 +212,9 @@ def main():
     selected, confidence_threshold = choose_balanced(candidate_records, args.budget)
     output_root = Path(args.output_root)
     image_root = output_root / "images"
+    locator_root = output_root / "images_locator"
     image_root.mkdir(parents=True, exist_ok=True)
+    locator_root.mkdir(parents=True, exist_ok=True)
     sealed = []
     for index, row in enumerate(selected, 1):
         tile_id = f"P61D-{index:04d}-{stable_value(row['name'] + str(row['center_y']) + str(row['center_x'])):016x}"[-26:]
@@ -201,12 +225,15 @@ def main():
             top = min(max(row["center_y"] - half, 0), image.height - args.crop_size)
             crop = image.crop((left, top, left + args.crop_size, top + args.crop_size))
             crop.save(image_root / f"{tile_id}.png")
+            target_x, target_y = row["center_x"] - left, row["center_y"] - top
+            locator_image(crop, target_x, target_y).save(locator_root / f"{tile_id}.png")
         gt_source = int(load_source_order_mask(row)[row["center_y"], row["center_x"]])
         sealed.append({
             "tile_id": tile_id, **{key: value for key, value in row.items() if key not in ("image_path", "mask_path")},
             "original_source_order_label": gt_source,
             "original_label_name": ("definite clear", "definite thick", "definite thin", "definite cloud shadow")[gt_source],
             "crop_left": left, "crop_top": top, "crop_size": args.crop_size,
+            "target_x_in_crop": target_x, "target_y_in_crop": target_y,
         })
 
     output_root.mkdir(parents=True, exist_ok=True)
@@ -227,7 +254,10 @@ def main():
         "Review images independently. Do not open `sealed_manifest.json` until both CSV files are final. "
         "For each tile, enter exactly one label in the assigned reviewer CSV:\n\n"
         + "\n".join(f"- `{label}`" for label in LABELS)
-        + "\n\nDo not discuss labels between reviewers before locking both files.\n",
+        + "\n\nUse `images_locator/`, and label the semantic class at the location inside the "
+        "yellow corner brackets; use the rest of the crop only as context. Do not label the "
+        "majority class of the whole crop. The brackets reveal location only, never GT or model output. "
+        "Do not discuss labels between reviewers before locking both files.\n",
         encoding="utf-8",
     )
     strata = Counter((row["source_stratum"], row["biome"], row["confidence_stratum"], row["region"]) for row in sealed)
