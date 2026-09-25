@@ -91,7 +91,8 @@ def main():
         dataset = DATASETS.build(dataset_cfg)
         dataset.full_init()
         maps_by_status = {"yes": set(), "no": set()}
-        for item in dataset.data_list:
+        for item_index in range(len(dataset)):
+            item = dataset.get_data_info(item_index)
             scene = scene_by_image[item["img_path"]]
             maps_by_status[metadata[scene]].add(int(item["label_map"][0]))
         dataset_audit[group] = {
