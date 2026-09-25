@@ -126,11 +126,49 @@ def mean_or_none(values):
     return float(np.mean(values)) if values else None
 
 
+def finalize_summaries(packet_path, phase_path, metrics_path, summary):
+    """Advance Phase 61 summaries only after a non-preliminary review run."""
+    if summary["status"] == "incomplete_preliminary":
+        raise RuntimeError("Refusing to finalize Phase 61 from preliminary review metrics")
+    metrics_artifact = {"path": str(metrics_path), "sha256": sha256(metrics_path)}
+    if packet_path:
+        packet_path = Path(packet_path)
+        packet = json.loads(packet_path.read_text(encoding="utf-8"))
+        packet.update({
+            "status": summary["status"],
+            "reviewer_files_blank": False,
+            "human_agreement_metrics_available": True,
+            "human_review_complete": True,
+            "jointly_evaluable_units": summary["jointly_evaluable_units"],
+            "excluded_from_pairwise_units": summary["excluded_from_pairwise_units"],
+            "excluded_unit_reason": summary["excluded_unit_reason"],
+            "review_metrics": metrics_artifact,
+            "reason": summary["scope_note"],
+        })
+        packet_path.write_text(json.dumps(packet, indent=2), encoding="utf-8")
+    if phase_path:
+        phase_path = Path(phase_path)
+        phase = json.loads(phase_path.read_text(encoding="utf-8"))
+        phase.update({
+            "human_review_complete": True,
+            "status": "phase61_complete",
+            "phase61d_status": summary["status"],
+        })
+        phase.setdefault("artifacts", {})["61D_review"] = metrics_artifact
+        if packet_path:
+            phase["artifacts"]["61D_packet"] = {
+                "path": str(packet_path), "sha256": sha256(packet_path),
+            }
+        phase_path.write_text(json.dumps(phase, indent=2), encoding="utf-8")
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--sealed", default="work_dirs/phase61/blind_review/sealed_manifest.json")
     parser.add_argument("--reviews", nargs="+", required=True)
     parser.add_argument("--output", default="work_dirs/phase61/blind_review/review_metrics.json")
+    parser.add_argument("--packet-summary", help="Packet summary to finalize after an official run.")
+    parser.add_argument("--phase-summary", help="Phase 61 summary to finalize after an official run.")
     blank_group = parser.add_mutually_exclusive_group()
     blank_group.add_argument(
         "--allow-incomplete", action="store_true",
@@ -291,6 +329,8 @@ def main():
     output = Path(args.output)
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(json.dumps(summary, indent=2), encoding="utf-8")
+    if args.packet_summary or args.phase_summary:
+        finalize_summaries(args.packet_summary, args.phase_summary, output, summary)
     print(json.dumps(summary, indent=2))
 
 
