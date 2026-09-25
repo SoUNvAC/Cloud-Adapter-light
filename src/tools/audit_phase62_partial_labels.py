@@ -89,6 +89,7 @@ def main():
         model_configs.append(cfg.model.to_dict())
         dataset_cfg = cfg.train_dataloader.dataset.dataset
         dataset = DATASETS.build(dataset_cfg)
+        dataset.full_init()
         maps_by_status = {"yes": set(), "no": set()}
         for item in dataset.data_list:
             scene = scene_by_image[item["img_path"]]
