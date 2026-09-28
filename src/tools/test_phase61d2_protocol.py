@@ -17,6 +17,7 @@ from score_phase61d2_calibrated_review import (
     membership_iou,
     parse_label_set,
 )
+from audit_phase61d2_single_review import descriptive_subset
 
 
 class Phase61D2ProtocolTest(unittest.TestCase):
@@ -79,6 +80,27 @@ class Phase61D2ProtocolTest(unittest.TestCase):
         result = gate_decision(agreement, original)
         self.assertTrue(result["terminate_four_class_hard_label_route"])
         self.assertEqual(result["conclusion"], "terminate_four_class_hard_label_route")
+
+    def test_single_review_is_descriptive_only(self):
+        records = [
+            {"tile_id": "one", "original_label_name": "thin_cloud"},
+            {"tile_id": "two", "original_label_name": "cloud_shadow"},
+            {"tile_id": "three", "original_label_name": "thin_cloud"},
+        ]
+        review = {
+            "one": parse_label_set("thin_cloud"),
+            "two": parse_label_set("cloud_shadow|terrain_water_shadow"),
+            "three": parse_label_set("boundary_mixed"),
+        }
+        summary = descriptive_subset(records, review)
+        self.assertEqual(summary["units"], 3)
+        self.assertEqual(summary["set_valued_units"], 1)
+        self.assertEqual(summary["boundary_mixed_units"], 1)
+        self.assertEqual(summary["explicit_ambiguity_or_unassessable_units"], 2)
+        self.assertAlmostEqual(
+            summary["original_vs_single_reviewer_membership_iou_exploratory"]["thin_cloud"]["iou"],
+            0.5,
+        )
 
 
 if __name__ == "__main__":
