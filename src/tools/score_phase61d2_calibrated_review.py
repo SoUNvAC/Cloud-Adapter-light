@@ -281,6 +281,8 @@ def main():
     parser.add_argument("--adjudication")
     parser.add_argument("--adjudication-template", default="work_dirs/phase61d2_calibrated_review/adjudicator_disagreements.csv")
     parser.add_argument("--output", default="work_dirs/phase61d2_calibrated_review/review_metrics.json")
+    parser.add_argument("--packet-summary", default="work_dirs/phase61d2_calibrated_review/packet_summary.json")
+    parser.add_argument("--review-caveat", action="append", default=[])
     args = parser.parse_args()
 
     sealed_path = Path(args.sealed)
@@ -324,6 +326,7 @@ def main():
         "calibration_units_excluded_from_all_reported_statistics": len(calibration_ids),
         "main_units": len(main_records),
         "reviewer_files": {"A": diagnostic_a, "B": diagnostic_b},
+        "review_caveats": args.review_caveat,
         "agreement": agreement,
         "by_cohort": by_cohort,
         "by_biome": by_biome,
@@ -383,9 +386,36 @@ def main():
             "human_result_warning": None,
         })
 
+    packet_path = Path(args.packet_summary)
+    packet = None
+    if packet_path.is_file():
+        packet = json.loads(packet_path.read_text(encoding="utf-8"))
+        allowed_statuses = {
+            "calibration_locked_awaiting_independent_reviews",
+            "single_review_complete_insufficient_for_interrater_inference",
+            "double_review_complete_awaiting_adjudication",
+        }
+        if packet.get("status") not in allowed_statuses:
+            raise RuntimeError(f"Unexpected packet status for double-review scoring: {packet.get('status')}")
     output = Path(args.output)
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(json.dumps(summary, indent=2), encoding="utf-8")
+    if packet is not None:
+        complete = summary["status"] in {"complete_adjudicated", "complete_no_disagreements"}
+        packet.update({
+            "status": (
+                "double_review_complete" if complete
+                else "double_review_complete_awaiting_adjudication"
+            ),
+            "single_reviewer_complete": True,
+            "independent_double_review_complete": True,
+            "main_reviews_complete": True,
+            "agreement_metrics_available": True,
+            "formal_human_results_available": complete,
+            "human_results_available": True,
+            "review_metrics": {"path": str(output), "sha256": sha256(output)},
+        })
+        packet_path.write_text(json.dumps(packet, indent=2), encoding="utf-8")
     print(json.dumps(summary, indent=2))
 
 

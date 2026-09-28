@@ -18,6 +18,7 @@ from score_phase61d2_calibrated_review import (
     parse_label_set,
 )
 from audit_phase61d2_single_review import descriptive_subset
+from canonicalize_phase61d2_review import canonicalize_rows
 
 
 class Phase61D2ProtocolTest(unittest.TestCase):
@@ -101,6 +102,17 @@ class Phase61D2ProtocolTest(unittest.TestCase):
             summary["original_vs_single_reviewer_membership_iou_exploratory"]["thin_cloud"]["iou"],
             0.5,
         )
+
+    def test_blank_review_mapping_preserves_nonblank_labels(self):
+        rows = [
+            {"tile_id": "one", "label_set": "", "notes": ""},
+            {"tile_id": "two", "label_set": "thin_cloud", "notes": "keep"},
+        ]
+        result, mapped = canonicalize_rows(rows, "unobservable_nodata")
+        self.assertEqual(mapped, ["one"])
+        self.assertEqual(result[0]["label_set"], "unobservable_nodata")
+        self.assertEqual(result[1]["label_set"], "thin_cloud")
+        self.assertEqual(result[1]["notes"], "keep")
 
 
 if __name__ == "__main__":
