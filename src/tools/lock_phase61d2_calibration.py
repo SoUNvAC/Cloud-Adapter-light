@@ -70,8 +70,24 @@ def main():
     output = Path(args.output)
     if output.exists():
         raise RuntimeError(f"Refusing to overwrite existing calibration lock: {output}")
+    packet_summary = output.parent / "packet_summary.json"
+    packet = None
+    if packet_summary.is_file():
+        packet = json.loads(packet_summary.read_text(encoding="utf-8"))
+        if packet.get("status") != "awaiting_calibration_lock":
+            raise RuntimeError(
+                f"Unexpected packet status before calibration lock: {packet.get('status')}"
+            )
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(json.dumps(document, indent=2), encoding="utf-8")
+    if packet is not None:
+        packet.update({
+            "status": "calibration_locked_awaiting_independent_reviews",
+            "calibration_lock": {"path": str(output), "sha256": sha256(output)},
+            "main_reviews_complete": False,
+            "human_results_available": False,
+        })
+        packet_summary.write_text(json.dumps(packet, indent=2), encoding="utf-8")
     print(json.dumps(document, indent=2))
 
 
