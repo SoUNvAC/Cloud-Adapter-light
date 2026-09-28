@@ -61,3 +61,12 @@
 - 79项分歧中44项位于原分层的boundary区域，表示55.70%的分歧样本来自boundary stratum；这不等同于79项中有44项被reviewer标为`boundary_mixed`，实际分歧类型统计中的boundary为16项，二者不得混写。
 - snow/ice分层κ/AC1为0.2977/0.3297、Thin/Shadow IoU为0%/25%，该分层自身明确未过门。不得为了提高总体一致性而事后删除snow/ice；最终报告必须保留全体结果并单列snow/ice失败，是否对该biome采用粗粒度、拒识或独立协议只能作为后续新假设另行预注册。
 - 第三位专家只处理79项真实分歧，继续对原标签、模型预测、方法和抽样来源盲态，可见A/B判断与同一多光谱证据页，并必须记录裁决理由。裁决完成前不启动新模型、标签矩阵、辅助head或损失实验。
+
+## 2026-09-28：第三方裁决完成与最终封账
+
+- 目标：导入第三位专家对79项A/B真实分歧的最终标签，在不补写任何人工判断或理由的前提下执行预注册硬门；131项A/B一致样本直接保留其共同判断。
+- 改动：原始裁决表完整封存为`completed_reviews/adjudicator_completed_raw.csv`；新增显式`--allow-missing-adjudication-rationale`降级开关，默认严格模式仍拒绝空理由。7项本地和7项远端协议测试均通过。本地提交`8e3c114`已push，gzs已fast-forward；不训练、不推理、不修改模型。
+- 人工输入与降级：79/79项`final_label_set`合法且非空，计数为thin-cloud 24、cloud-shadow 15、thick-cloud 9、terrain/water-shadow 8、clear 6、haze/cirrus 6、unobservable 6、boundary 4、uncertain 1；集合标签0。`rationale`为0/79，故未满足交接包建议的解释完整性要求。本轮根据现实人力约束只接受标签，不生成、推断或代填理由；结果必须以“解释性降级、不能视为绝对真值”引用。裁决原表SHA256为`90fa08860ea01025b5c750db8b4506f65338e6c3f039017ba8e9b43e9231dce4`。
+- 网络/产物：GitHub push与gzs pull成功；远端非交互shell需显式加载`/home/scv/miniconda3/etc/profile.d/conda.sh`后使用`cloud-lite-pt210`。预裁决metrics/summary按原哈希`83be709e...`/`55cc57a7...`保留为快照；最终metrics SHA256 `929a59fe212921879c87c08e7007404f37ca69f825c5a30f8b90ae5fc9338be9`，最终packet summary SHA256 `f2e7440dbf8259c5bcf21e013043271023c7ed06650f04e1906b3f759321cca7`。
+- 真实结果：210项总体Cohen kappa=0.5314、Gwet AC1=0.5820，Thin/Shadow reviewer membership IoU=36.73%/72.73%。原标签与最终裁决标签的Thin/Shadow membership IoU=25.23%/40.46%。校准40项继续完全排除；最终状态为`complete_adjudicated`，packet标记`formal_human_results_available=true`，但必须同时携带三条人工不确定性与缺理由限定。
+- 止损线与结论：kappa/AC1均不低于0.40，Thin/Shadow reviewer IoU均不低于0.30，因此`four_class_miou_may_be_primary=true`且不触发四类硬标签主线终止；但Thin reviewer IoU未超过0.60，不能支持强“标注过程偏移”，而原标签—裁决Thin/Shadow IoU也未同时达到0.60，不能归回纯模型问题。预注册结论为`inconclusive_mixed_label_and_model_evidence`。snow/ice分层失败及人工标注困难保持不变；不得把本结果解释为原标签错误率、可靠金标准或对全部L8 Biome的发生率估计。
