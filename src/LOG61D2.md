@@ -25,3 +25,12 @@
 - 网络/读出：不训练、不推理、不读取 sealed 原标签用于校准；本地提交 `ed9b2a8` push 后，gzs 成功 fast-forward，并在 `cloud-lite-pt210` 中执行锁定。
 - 完整性：A/B 校准与共识均为 40/40、ID 集相同、无重复、无空标签、标签语法合法。SHA256：A `f547fdb08d2cd6379fcbc3a61399287919f093d342224d75962ce8482e55eeb2`，B `ff14ad31d411e27ac3150d3b8feadc3c808936aaca30fda05c48b6476aa71284`，共识 `8da009f62145dc4b0c36b3416902875d84f9618c3d7b03bbad26de80385b694d`，校准锁 `0ac14e4d9b384b19a1205cd6e78e050949c126d21884127beecb0c40622fb76f`。
 - 止损线与真实状态：40 个校准单元已永久排除最终统计；状态为 `calibration_locked_awaiting_independent_reviews`。A/B 的两个 main CSV 均为 210 行但标签 0/210，仍是空白模板，故 `main_reviews_complete=false`、`human_results_available=false`；未计算 κ、AC1、IoU，未生成第三方分歧裁决，不得宣称61D2已完成。
+
+## 2026-09-28：单 reviewer 主复核降级审计
+
+- 目标：在人力不足、仅 reviewer A 完成主复核的现实约束下，保留人工观察，但禁止把单人判断伪装为独立一致性或金标准。
+- 改动：新增单 reviewer 审计脚本，强制校验 210 个 main ID 与标签语法，结构性禁用 Cohen κ、Gwet AC1、reviewer IoU、第三方裁决共识、标注过程偏移门和“回到模型问题”门；packet 状态改为 `single_review_complete_insufficient_for_interrater_inference`。
+- 人工限定：reviewer 明确说明“标注本身充满不确定性，黄框内可能同时含有多个语义，引用时需慎重，不可百分比相信”。该说明原文写入审计产物。CSV 中集合标签为 0、notes 为 0；仅 13 个 `boundary_mixed`、2 个 `uncertain`、9 个 `unobservable_nodata`，合计 24/210（11.43%）显式非硬标签。这只能视为被文件编码的不确定性下限，不能据此认定其余 186 项确定无歧义。
+- 网络/读出：不训练、不推理；本地提交 `2aaf2ff` push 后由 gzs fast-forward，在 `cloud-lite-pt210` 中运行。reviewer A 文件 210/210 完整、无空值/重复/非法标签，SHA256 `9c00b9349862d7604884507955c64ddffe5eacab81983000016f2827eaf2fcda`；reviewer B 未完成且未作任何代填。
+- 探索性描述：A 的 clear/cloud-shadow/thin-cloud/haze-cirrus/boundary-mixed/terrain-water-shadow/thick-cloud/uncertain/unobservable-nodata 计数为 41/66/37/27/13/9/6/2/9。原标签与单 reviewer 的 Thin/Shadow membership IoU 为 25.23%/42.06%（Thin 交27并107，Shadow 交53并126）；这些数值不是 reviewer 一致性、数据集错误率或共识标签性能，只可用于提出假设。
+- 止损线与结论：`four_class_miou_may_be_primary_from_61d2=false`，原因是独立 reviewer 可重复性没有被测量。61D2 不能支持“标注过程偏移”或“回到模型问题”的核心结论；允许用途仅为带 reviewer 限定语的描述性、假设生成证据。单评审计 SHA256 `add477f6ede118c8221021e39b5d9ed4cb3c4d7672bb0f370c130df8980f907e`，packet summary SHA256 `5673d60f4ba0939e2e6ef4ab875abc39cb937fcffa9b87176bc9ccc15373d54d`。
