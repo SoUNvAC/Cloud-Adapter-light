@@ -44,3 +44,20 @@
 - 分层结果：旧错配分层160项的 κ/AC1=0.4828/0.5497，Thin/Shadow IoU=32.43%/72.73%；未见确认集50项为0.6635/0.6877、50.00%/72.73%。biome 差异明显，snow_ice 的 κ/AC1=0.2977/0.3297、Thin/Shadow IoU=0%/25%，其自身未过门；forest 的 Thin IoU=0% 但 union 仅1，不作稳定比例解释。
 - 分歧与止损：79/210 项需裁决，其中原分层 boundary/interior 为44/35；分歧类型含 boundary 16、clear↔cloud-shadow 5、cloud-shadow↔terrain/water-shadow 5、thin↔shadow 3、thin↔thick 6、unobservable 8、uncertain 1、其他35。第三方模板已生成但仍为空白，状态固定为 `double_review_complete_awaiting_adjudication`，`formal_human_results_available=false`；原标签—裁决标签 IoU、标注过程偏移门和模型问题门仍不可计算。
 - 产物：双评 metrics SHA256 `83be709e461469372952d085b670bdf01b423d31ae9d9dc1695d998414a13fc9`；裁决模板 SHA256 `a28c4201c8ede6ab8ea051b4ee17a5618adde231d275ad99bead61bea5372078`；packet summary SHA256 `55cc57a77ce007dc1c6ab1ea6cb625a4a9d7ddf0e944c707be3f09fff979db54`。
+
+## 2026-09-28：第三方裁决交接包
+
+- 目标：把第三位专家的工作量严格限制为 A/B 的 79 个真实分歧，不重复评审其余 131 个一致单元。
+- 改动：生成只含79张对应11波段证据页、统一手册、中文裁决说明、空白 `final_label_set/rationale` 裁决CSV及成员哈希的专用ZIP；不含 sealed manifest、原标签、模型预测或方法身份。
+- 操作口径：第三位专家可见 A/B 候选标签但不得按多数票，须依据相同证据和手册独立裁决；可使用最小二元素集合标签，`boundary_mixed/unobservable_nodata/uncertain` 必须单独使用；79行均须给出最终标签和简短理由，不得改写 tile ID 或 A/B 原判断。
+- 止损线与状态：第三方文件返回并通过ID、原判断不可变、标签语法和理由完整性校验前，不运行最终硬门。当前仍为 `double_review_complete_awaiting_adjudication`，无新增科学结论。
+- 产物：`phase61d2_adjudicator_packet.zip` 共83个成员、79张PNG、CRC通过、sealed成员0；SHA256 `1bcdd5848e5fb7c48a040e9d9c8a8cde50c9e55206171b2eda0dd68c189547bd`。
+
+## 2026-09-28：待裁决阶段解释冻结
+
+- 当前正式状态为`double_review_complete_awaiting_adjudication`，不是`phase61d2_complete`。A/B双评与总体最低reviewer门已完成，但79项真实分歧尚未裁决，故`formal_human_results_available=false`；原标签—裁决标签IoU、标注过程偏移门和模型问题门均不得提前填写。
+- 总体κ/AC1与Thin/Shadow reviewer IoU越过0.40/0.30最低门，只说明四类硬标签主线未被最低门直接终止，不等于四类mIoU已自动获得唯一主指标资格。确认集κ高于旧错配分层集，说明模型错配条件抽样确实富集了困难位置，不能把旧分层集或总体210项比例外推为L8 Biome总体发生率。
+- Thin reviewer IoU为0.3673，低于预注册“Thin和Shadow reviewer IoU均超过0.60”的强标注过程偏移门。因此在不修改事前规则的前提下，本Phase已不可能得到“强标注过程偏移”判定。第三方裁决仍有必要：若原标签—裁决标签的Thin与Shadow IoU均至少0.60，可按原规则回到模型问题；否则最终状态必须记为混合证据，不强行归因。
+- 79项分歧中44项位于原分层的boundary区域，表示55.70%的分歧样本来自boundary stratum；这不等同于79项中有44项被reviewer标为`boundary_mixed`，实际分歧类型统计中的boundary为16项，二者不得混写。
+- snow/ice分层κ/AC1为0.2977/0.3297、Thin/Shadow IoU为0%/25%，该分层自身明确未过门。不得为了提高总体一致性而事后删除snow/ice；最终报告必须保留全体结果并单列snow/ice失败，是否对该biome采用粗粒度、拒识或独立协议只能作为后续新假设另行预注册。
+- 第三位专家只处理79项真实分歧，继续对原标签、模型预测、方法和抽样来源盲态，可见A/B判断与同一多光谱证据页，并必须记录裁决理由。裁决完成前不启动新模型、标签矩阵、辅助head或损失实验。
