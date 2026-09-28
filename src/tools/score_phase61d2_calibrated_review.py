@@ -185,7 +185,7 @@ def write_adjudication_template(path, disagreements, review_a, review_b):
             })
 
 
-def read_adjudication(path, disagreement_ids, review_a, review_b):
+def read_adjudication(path, disagreement_ids, review_a, review_b, require_rationale=True):
     path = Path(path)
     with path.open(newline="", encoding="utf-8-sig") as handle:
         rows = list(csv.DictReader(handle))
@@ -198,7 +198,7 @@ def read_adjudication(path, disagreement_ids, review_a, review_b):
     ids = [row["tile_id"].strip() for row in rows]
     if set(ids) != set(disagreement_ids) or len(ids) != len(set(ids)):
         raise RuntimeError("Adjudicator file must contain each and only A/B disagreement exactly once")
-    final = {}
+    final, missing_rationale = {}, []
     for row in rows:
         tile_id = row["tile_id"].strip()
         if row["reviewer_A_label_set"].strip() != canonical(review_a[tile_id]):
@@ -206,12 +206,20 @@ def read_adjudication(path, disagreement_ids, review_a, review_b):
         if row["reviewer_B_label_set"].strip() != canonical(review_b[tile_id]):
             raise RuntimeError(f"Reviewer B value was altered in adjudication row {tile_id}")
         if not row["rationale"].strip():
-            raise RuntimeError(f"Missing adjudication rationale for {tile_id}")
+            missing_rationale.append(tile_id)
         try:
             final[tile_id] = parse_label_set(row["final_label_set"])
         except ValueError as error:
             raise RuntimeError(f"Invalid adjudication for {tile_id}: {error}") from error
-    return final, {"path": str(path), "sha256": sha256(path), "units": len(rows)}
+    if missing_rationale and require_rationale:
+        raise RuntimeError(f"Missing adjudication rationale for: {missing_rationale}")
+    return final, {
+        "path": str(path), "sha256": sha256(path), "units": len(rows),
+        "rationale_required": require_rationale,
+        "rationale_complete_units": len(rows) - len(missing_rationale),
+        "missing_rationale_units": len(missing_rationale),
+        "missing_rationale_tile_ids": missing_rationale,
+    }
 
 
 def subset_summary(records, review_a, review_b):
@@ -279,6 +287,10 @@ def main():
     parser.add_argument("--reviewer-a", required=True)
     parser.add_argument("--reviewer-b", required=True)
     parser.add_argument("--adjudication")
+    parser.add_argument(
+        "--allow-missing-adjudication-rationale", action="store_true",
+        help="Score completed final labels without inventing absent rationales; records every missing rationale.",
+    )
     parser.add_argument("--adjudication-template", default="work_dirs/phase61d2_calibrated_review/adjudicator_disagreements.csv")
     parser.add_argument("--output", default="work_dirs/phase61d2_calibrated_review/review_metrics.json")
     parser.add_argument("--packet-summary", default="work_dirs/phase61d2_calibrated_review/packet_summary.json")
@@ -342,7 +354,8 @@ def main():
     if args.adjudication or not disagreements:
         if disagreements:
             adjudicated, adjudication_diagnostic = read_adjudication(
-                args.adjudication, disagreements, review_a, review_b
+                args.adjudication, disagreements, review_a, review_b,
+                require_rationale=not args.allow_missing_adjudication_rationale,
             )
         else:
             adjudicated = {}

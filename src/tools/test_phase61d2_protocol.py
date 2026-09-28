@@ -1,6 +1,8 @@
 from __future__ import annotations
 
 import sys
+import csv
+import tempfile
 import unittest
 from pathlib import Path
 
@@ -16,6 +18,7 @@ from score_phase61d2_calibrated_review import (
     gwet_ac1,
     membership_iou,
     parse_label_set,
+    read_adjudication,
 )
 from audit_phase61d2_single_review import descriptive_subset
 from canonicalize_phase61d2_review import canonicalize_rows
@@ -113,6 +116,31 @@ class Phase61D2ProtocolTest(unittest.TestCase):
         self.assertEqual(result[0]["label_set"], "unobservable_nodata")
         self.assertEqual(result[1]["label_set"], "thin_cloud")
         self.assertEqual(result[1]["notes"], "keep")
+
+    def test_missing_adjudication_rationale_requires_explicit_downgrade(self):
+        review_a = {"one": parse_label_set("thin_cloud")}
+        review_b = {"one": parse_label_set("cloud_shadow")}
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "adjudication.csv"
+            with path.open("w", newline="", encoding="utf-8") as handle:
+                writer = csv.DictWriter(handle, fieldnames=(
+                    "tile_id", "reviewer_A_label_set", "reviewer_B_label_set",
+                    "final_label_set", "rationale",
+                ))
+                writer.writeheader()
+                writer.writerow({
+                    "tile_id": "one", "reviewer_A_label_set": "thin_cloud",
+                    "reviewer_B_label_set": "cloud_shadow", "final_label_set": "thin_cloud",
+                    "rationale": "",
+                })
+            with self.assertRaises(RuntimeError):
+                read_adjudication(path, ["one"], review_a, review_b)
+            final, diagnostic = read_adjudication(
+                path, ["one"], review_a, review_b, require_rationale=False
+            )
+            self.assertEqual(final["one"], parse_label_set("thin_cloud"))
+            self.assertEqual(diagnostic["missing_rationale_units"], 1)
+            self.assertEqual(diagnostic["rationale_complete_units"], 0)
 
 
 if __name__ == "__main__":
