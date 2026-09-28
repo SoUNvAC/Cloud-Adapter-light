@@ -34,3 +34,13 @@
 - 网络/读出：不训练、不推理；本地提交 `2aaf2ff` push 后由 gzs fast-forward，在 `cloud-lite-pt210` 中运行。reviewer A 文件 210/210 完整、无空值/重复/非法标签，SHA256 `9c00b9349862d7604884507955c64ddffe5eacab81983000016f2827eaf2fcda`；reviewer B 未完成且未作任何代填。
 - 探索性描述：A 的 clear/cloud-shadow/thin-cloud/haze-cirrus/boundary-mixed/terrain-water-shadow/thick-cloud/uncertain/unobservable-nodata 计数为 41/66/37/27/13/9/6/2/9。原标签与单 reviewer 的 Thin/Shadow membership IoU 为 25.23%/42.06%（Thin 交27并107，Shadow 交53并126）；这些数值不是 reviewer 一致性、数据集错误率或共识标签性能，只可用于提出假设。
 - 止损线与结论：`four_class_miou_may_be_primary_from_61d2=false`，原因是独立 reviewer 可重复性没有被测量。61D2 不能支持“标注过程偏移”或“回到模型问题”的核心结论；允许用途仅为带 reviewer 限定语的描述性、假设生成证据。单评审计 SHA256 `add477f6ede118c8221021e39b5d9ed4cb3c4d7672bb0f370c130df8980f907e`，packet summary SHA256 `5673d60f4ba0939e2e6ef4ab875abc39cb937fcffa9b87176bc9ccc15373d54d`。
+
+## 2026-09-28：双 reviewer 主复核检查与待裁决状态
+
+- 目标：导入 reviewer B 的尽力复核，恢复可计算的双人一致性端点，并只把真实分歧交给第三位专家。
+- 改动：B 原始 CSV 原样封存，SHA256 `2f3855752e3d9c0217d2a66c830e184dadee1705d65b83249a252b8b87645afd`。其中 207/210 有显式标签；依据用户既有定义“空值表示纯色、无有效信息、无法评估”，在独立派生副本中仅将 3 个空值映射为 `unobservable_nodata`，不覆盖原件；派生 SHA256 `a4166d07bcb03237d956d4c661f88a0483b60d2d0b63de5aba2e6fcb43bca525`，provenance 保留三个 tile ID、输入/输出哈希与原因。
+- 网络/读出：不训练、不推理；本地提交 `b8a4db4` push 后由 gzs fast-forward，在 `cloud-lite-pt210` 中通过 6 项测试并运行双评评分。A/B 均无集合标签和 notes，reviewer 关于多语义与低置信度的自述继续作为所有结果的强制限定。
+- 总体结果：210 项 exact/compatible agreement 均为 62.38%，Cohen κ=0.5314，Gwet AC1=0.5820；Thin/Shadow reviewer membership IoU=36.73%/72.73%。全局 κ/AC1 均高于 0.40，Thin/Shadow IoU 均高于 0.30，故仅“总体 reviewer 可重复性最低门”通过；这不是四类主指标已获授权。
+- 分层结果：旧错配分层160项的 κ/AC1=0.4828/0.5497，Thin/Shadow IoU=32.43%/72.73%；未见确认集50项为0.6635/0.6877、50.00%/72.73%。biome 差异明显，snow_ice 的 κ/AC1=0.2977/0.3297、Thin/Shadow IoU=0%/25%，其自身未过门；forest 的 Thin IoU=0% 但 union 仅1，不作稳定比例解释。
+- 分歧与止损：79/210 项需裁决，其中原分层 boundary/interior 为44/35；分歧类型含 boundary 16、clear↔cloud-shadow 5、cloud-shadow↔terrain/water-shadow 5、thin↔shadow 3、thin↔thick 6、unobservable 8、uncertain 1、其他35。第三方模板已生成但仍为空白，状态固定为 `double_review_complete_awaiting_adjudication`，`formal_human_results_available=false`；原标签—裁决标签 IoU、标注过程偏移门和模型问题门仍不可计算。
+- 产物：双评 metrics SHA256 `83be709e461469372952d085b670bdf01b423d31ae9d9dc1695d998414a13fc9`；裁决模板 SHA256 `a28c4201c8ede6ab8ea051b4ee17a5618adde231d275ad99bead61bea5372078`；packet summary SHA256 `55cc57a77ce007dc1c6ab1ea6cb625a4a9d7ddf0e944c707be3f09fff979db54`。
