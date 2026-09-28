@@ -17,3 +17,11 @@
 - 数据与产物：生成 40 个校准单元、160 个独立单元和 50 个确认单元，共 250 张证据页；确认集使用 50 张互不重复且未出现在旧 61D 包中的图块，原始 Thin/Shadow 各 25。主复核 210 个单元的 biome 数为 snow_ice 44、shrubland 22、grass_crops 40、barren 36、wetlands 38、forest 30。A/B 的校准和主复核 CSV 均保持全空白。
 - 质量核验：250/250 PNG 均为 1040×1210 RGB，ID 与 sealed manifest 一一对应；三张跨校准/主复核抽样证据页目视通过；ZIP 有 257 个 reviewer 可见成员和 250 张 PNG，不含 sealed manifest。ZIP SHA256 `df772757afedebab0a82599d59a10ad51bbd2e7b3858721f4862cf0fcb04af49`；sealed manifest SHA256 `7c9468778ccb44127610918ae537a64d7e1e0af95469c403a0c6c1453d587c77`；packet summary SHA256 `0c2f36c49ceeea87b43549d83c0677138adfdd6714b3edc37fe965a4873ea402`；manual SHA256 `cfa8ec5b65474dc4e6d4402cc9db0838db237afd715f081ff88f41cdb068d172`。
 - 止损线与结果：状态为 `awaiting_calibration_lock`，`human_results_available=false`。40 个校准单元完成共同讨论并锁定前不得开始主复核；当前没有人工标签、κ、AC1、reviewer IoU、原标签—裁决标签 IoU或四类主线结论，严禁提前填报。
+
+## 2026-09-28：校准文件封存与锁定
+
+- 目标：核验两位 reviewer 的校准提交并锁定统一协议，校准单元不得进入主统计。
+- 改动：将本地提交的 `reviewer_A_calibration.csv`、`reviewer_B_calibration.csv`、`calibration_consensus.csv` 原样复制到远端仓库 `completed_reviews/`，未覆盖 reviewer 模板；校准锁脚本同步更新 packet 状态。因共识文件未提供文字版 `rule_or_counterexample`，锁中如实记录“40 个共识标签已提交、无文字规则修订，手册 v1.0 保持不变”，不补写讨论内容。
+- 网络/读出：不训练、不推理、不读取 sealed 原标签用于校准；本地提交 `ed9b2a8` push 后，gzs 成功 fast-forward，并在 `cloud-lite-pt210` 中执行锁定。
+- 完整性：A/B 校准与共识均为 40/40、ID 集相同、无重复、无空标签、标签语法合法。SHA256：A `f547fdb08d2cd6379fcbc3a61399287919f093d342224d75962ce8482e55eeb2`，B `ff14ad31d411e27ac3150d3b8feadc3c808936aaca30fda05c48b6476aa71284`，共识 `8da009f62145dc4b0c36b3416902875d84f9618c3d7b03bbad26de80385b694d`，校准锁 `0ac14e4d9b384b19a1205cd6e78e050949c126d21884127beecb0c40622fb76f`。
+- 止损线与真实状态：40 个校准单元已永久排除最终统计；状态为 `calibration_locked_awaiting_independent_reviews`。A/B 的两个 main CSV 均为 210 行但标签 0/210，仍是空白模板，故 `main_reviews_complete=false`、`human_results_available=false`；未计算 κ、AC1、IoU，未生成第三方分歧裁决，不得宣称61D2已完成。
