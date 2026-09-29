@@ -309,12 +309,15 @@ def draw_solar_geometry(canvas, x, y, azimuth):
     draw.text((x, y + 148), "blue: expected shadow direction", fill="#68b5ff")
 
 
-def render_dossier(tile_id, row, values, mtl, raster_metadata, output_path, crop_size=192):
+def render_dossier(
+    tile_id, row, values, mtl, raster_metadata, output_path, crop_size=192,
+    phase_title="Phase 61D2",
+):
     bounds = crop_bounds(row["center_x"], row["center_y"], crop_size)
     left, top, _, _ = bounds
     canvas = Image.new("RGB", (1040, 1210), "#17191c")
     draw = ImageDraw.Draw(canvas)
-    draw.text((20, 12), f"Phase 61D2 | {tile_id} | classify the bracketed pixel", fill="white")
+    draw.text((20, 12), f"{phase_title} | {tile_id} | classify the bracketed pixel", fill="white")
     latitude = raster_metadata["target_latitude"]
     longitude = raster_metadata["target_longitude"]
     location = "lat=NA  lon=NA" if latitude is None else f"lat={latitude:.6f}  lon={longitude:.6f}"
