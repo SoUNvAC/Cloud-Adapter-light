@@ -89,3 +89,19 @@ A/B/C/D 的输出只有在共同数据哈希、标签语义和scene-lock一致�
 每页同时展示192×192上下文与21×21最近邻像元视图；上下文角标只定位，局部视图的空心方框严格包围一个源像元，十字线停在方框外，并显示512像元patch内的`(x,y)`坐标。填写顺序固定为：目标是否可定位；可细分类/混合边界/证据不足/nodata；仅当可细分类时填写单一语义类别；记录耗时。边界状态不再与语义类别处于同一竞争标签空间。
 
 UI可行性门在看新判断前锁定：双方目标可定位率均至少95%；可辨识性exact agreement至少70%且AC1至少0.40；双方均认为可细分的项目至少6个，且这些项目语义exact agreement至少50%。新图避免了记忆泄漏，但与旧40项不是同一批难度，故pilot只能判断新界面是否达到继续正式confirmation的最低可行性，不能把前后差异当作UI改动的因果效应。任一门失败则继续暂停confirmation，不得用讨论后共识替代独立复核。
+
+## 63A4：Semantic-Coverage Exact-Pixel UI Pilot（取代63A3随机点）
+
+63A3的16项坐标由无语义哈希生成，只能检查准星定位，不能保证Thin/Shadow等研究对象覆盖；该包在任何reviewer填写前标记为`superseded_before_review`，不得产生结果。63A2的50项正式confirmation中心同样无语义条件，其中32项来自`Shadows?=no` scene，不能保证Thin/Shadow coverage分母；文件保持未读取，但状态改为`suspended_not_formal_confirmation`，不再自动拥有正式确认集资格。
+
+新pilot固定为20项，名称为`Phase63 semantic-coverage exact-pixel UI pilot`。原始标签只在sealed端作为抽样层，不向reviewer展示，也不作为参考真值。抽样与坐标必须满足：
+
+- 名义interior：clear、thin、thick、cloud-shadow各4项；中心像元到任意8邻域标签边界的精确欧氏距离必须`>3 px`，优先`>=5 px`；
+- 名义boundary：thin↔thick 2项、cloud(thin或thick)↔shadow 1项、clear↔shadow 1项；中心像元到指定类别对的8邻域边界距离必须`<=1 px`，实现固定选择直接相邻的界面侧像元（距离0）；候选不足立即停止，不得目视换点或替换类别对；
+- 优先20个不同scene；若不存在合法解，则在每scene最多2点的约束下最大化不同scene数；四个interior类别各至少覆盖3个scene；同一patch最多1点；
+- 精确记录距离、边界两侧标签、scene、patch与缓存哈希，全部只进入sealed manifest；reviewer包不得包含名义标签、抽样层、距离或边界对；
+- 只读取冻结Phase54缓存的`source_label`数组，禁止读取同文件内模型特征、概率或预测用于选点；target-test保持封存。
+
+UI与标注流程门固定为：A/B目标可定位率均至少19/20；坐标、页面和提交格式错误为0；双方均可定位项的可辨识性exact agreement至少70%；16个名义interior项中双方均判可细分至少10项；这些项目语义exact agreement至少60%。每个名义层只报告原始计数，不报告每类准确率。两份原始判断必须先校验格式并冻结SHA256，之后才允许解封名义层作描述性`reviewer–nominal-label concordance`；该concordance不是人工准确率。
+
+本20项仅检验UI和标注流程。通过后也只能重新预注册scene独立、模型盲且按sealed名义类别分层的正式confirmation；不得用本pilot证明标签可复现、类别性能或Phase63风险模型有效。旧50项在新正式confirmation协议出现前持续暂停。
