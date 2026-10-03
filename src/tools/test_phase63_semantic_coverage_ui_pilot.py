@@ -96,6 +96,7 @@ class Phase63SemanticCoverageUIPilotTest(unittest.TestCase):
         self.assertEqual(audit["max_points_per_patch"], 1)
         self.assertEqual(audit["stratum_counts"], dict(sorted(QUOTAS.items())))
         self.assertGreaterEqual(min(audit["interior_class_scene_counts"].values()), 3)
+        self.assertEqual(audit["interior_preferred_ge_5px_selected"], 16)
 
     def test_assignment_falls_back_to_two_points_per_scene_without_impossible_search(self):
         candidates = []

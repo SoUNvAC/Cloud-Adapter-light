@@ -96,7 +96,7 @@ UI可行性门在看新判断前锁定：双方目标可定位率均至少95%；
 
 新pilot固定为20项，名称为`Phase63 semantic-coverage exact-pixel UI pilot`。原始标签只在sealed端作为抽样层，不向reviewer展示，也不作为参考真值。抽样与坐标必须满足：
 
-- 名义interior：clear、thin、thick、cloud-shadow各4项；中心像元到任意8邻域标签边界的精确欧氏距离必须`>3 px`，优先`>=5 px`；
+- 名义interior：clear、thin、thick、cloud-shadow各4项；中心像元到任意8邻域标签边界的精确欧氏距离必须`>3 px`；在不降低scene覆盖和其他硬约束时，求解器先排序具有`>=5 px`候选的scene，再在scene内先匹配`>=5 px`候选，并显式报告最终preferred计数；
 - 名义boundary：thin↔thick 2项、cloud(thin或thick)↔shadow 1项、clear↔shadow 1项；中心像元到指定类别对的8邻域边界距离必须`<=1 px`，实现固定选择直接相邻的界面侧像元（距离0）；候选不足立即停止，不得目视换点或替换类别对；
 - 优先20个不同scene；若不存在合法解，则在每scene最多2点的约束下最大化不同scene数；四个interior类别各至少覆盖3个scene；同一patch最多1点；
 - 可观测性先于名义语义分层：目标像元B2/B3/B4必须均为有限非零值，居中192×192上下文的RGB有效像元比例必须至少50%；纯色/nodata页面在交付前作废重抽，不能计入20项；

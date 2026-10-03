@@ -286,7 +286,13 @@ def solve_assignment(candidates: list[dict]) -> tuple[list[dict], dict]:
     if missing:
         raise RuntimeError(f"Insufficient pre-registered stratum candidates: {missing}")
     for stratum in by_stratum:
-        by_stratum[stratum].sort(key=lambda item: _candidate_order(item, stratum))
+        by_stratum[stratum].sort(
+            key=lambda item: (
+                stratum in INTERIOR_QUOTAS
+                and not item.get("interior_preferred_ge_5px", True),
+                _candidate_order(item, stratum),
+            )
+        )
 
     available_scenes = len({candidate["scene"] for candidate in candidates})
     if available_scenes < PILOT_UNITS // 2:
@@ -302,7 +308,14 @@ def solve_assignment(candidates: list[dict]) -> tuple[list[dict], dict]:
     scenes_by_stratum = {
         stratum: sorted(
             {item["scene"] for item in items},
-            key=lambda scene: stable_value(f"phase63-semantic-ui-scene:{stratum}:{scene}"),
+            key=lambda scene: (
+                stratum in INTERIOR_QUOTAS
+                and not any(
+                    item["scene"] == scene and item.get("interior_preferred_ge_5px", True)
+                    for item in items
+                ),
+                stable_value(f"phase63-semantic-ui-scene:{stratum}:{scene}"),
+            ),
         )
         for stratum, items in by_stratum.items()
     }
@@ -449,6 +462,9 @@ def solve_assignment(candidates: list[dict]) -> tuple[list[dict], dict]:
         "max_points_per_patch": max(patch_counts.values()),
         "stratum_counts": dict(sorted(stratum_counts.items())),
         "interior_class_scene_counts": dict(sorted(class_scene_counts.items())),
+        "interior_preferred_ge_5px_selected": sum(
+            row.get("interior_preferred_ge_5px") is True for row in solution
+        ),
         "scene_counts": dict(sorted(scene_counts.items())),
         "assignment_rule": (
             "try 20 distinct scenes first; if infeasible, maximize distinct scenes with <=2 points/scene"
@@ -583,6 +599,22 @@ def load_candidates(
         "candidate_scene_counts": {
             stratum: len({c["scene"] for c in all_candidates if c["sampling_stratum"] == stratum})
             for stratum in QUOTAS
+        },
+        "preferred_interior_candidate_counts": {
+            stratum: sum(
+                c["sampling_stratum"] == stratum
+                and c.get("interior_preferred_ge_5px") is True
+                for c in all_candidates
+            )
+            for stratum in INTERIOR_QUOTAS
+        },
+        "preferred_interior_candidate_scene_counts": {
+            stratum: len({
+                c["scene"] for c in all_candidates
+                if c["sampling_stratum"] == stratum
+                and c.get("interior_preferred_ge_5px") is True
+            })
+            for stratum in INTERIOR_QUOTAS
         },
     }
 
