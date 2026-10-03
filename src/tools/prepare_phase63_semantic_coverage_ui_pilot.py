@@ -603,6 +603,11 @@ def main() -> None:
         default="work_dirs/phase63_selective_multigranularity/semantic_coverage_ui_pilot",
     )
     parser.add_argument("--audit-only", action="store_true")
+    parser.add_argument(
+        "--candidate-audit-only",
+        action="store_true",
+        help="Report sealed candidate availability before attempting the constrained assignment.",
+    )
     args = parser.parse_args()
 
     manifest_hash = verify_hash(args.manifest, EXPECTED_MANIFEST_SHA256, "manifest")
@@ -635,6 +640,9 @@ def main() -> None:
         excluded_scenes,
         excluded_patches,
     )
+    if args.candidate_audit_only:
+        print(json.dumps({"status": "candidate_audit_only", **candidate_audit}, indent=2))
+        return
     selected, assignment_audit = solve_assignment(candidates)
     selected = assign_ids(selected, "P63-SCUI", "phase63-semantic-coverage-ui-pilot-order")
     audit = {
