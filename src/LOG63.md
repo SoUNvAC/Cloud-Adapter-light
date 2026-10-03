@@ -37,3 +37,13 @@
 - 核验结果：reviewer ZIP共23个成员、16张1040×1210 RGB图、A/B各16行空白表；包内无sealed manifest、原标签、模型预测或risk score。目视抽查普通biome与snow/ice页面，像元格、中心框、十字线、波段和太阳方向可读。ZIP SHA256 `3ea92af06157c405529e202768ce1b4e83919312dcd5f22f5b73ceb9912ff568`；sealed manifest SHA256 `7503977e55cd35be3c30c3c376efd2f51b09907ebd95df450bfa88da07153627`；packet summary SHA256 `bbbe6e3d47fd124f864f9831f13a6553af80a4afff165bf7338417de80ef1298`。
 - 网络/运行：首次SSH连接在密钥交换阶段被远端关闭，重试后正常；远端4项pilot测试通过并完成生成，SCP同步成功。只读访问`/home/scv/shared/data/l8_biome_raw`，写入仅发生在授权仓库；无GPU推理或训练。用户已有`LOG60.md`、`LOG61.md`、`LOG62.md`和`outputs/`未覆盖。
 - 止损线与当前结果：状态为`awaiting_independent_review`。当前只有UI与盲态核验结果，没有人工一致率、耗时、模型AUROC或Phase63生死门结果。A/B必须独立、每图仅一轮并在原始CSV冻结前不讨论；pilot通过预注册UI门后才允许重做正式confirmation。
+
+## 2026-10-04：semantic-coverage exact-pixel UI pilot 重新预注册并生成
+
+- 目标：废止无语义哈希生成的16项UI pilot，暂停原随机中心50项confirmation；以原标签仅作sealed抽样层，生成20项只检验UI与标注流程的精确像元pilot。固定配额为clear/thin/thick/cloud-shadow interior各4项及thin↔thick、cloud↔shadow、clear↔shadow边界2/1/1项；优先不同scene、每scene最多2点、每patch最多1点、每个interior类至少3个scene。
+- 改动：新增20项生成、冻结、评分与测试工具及操作手册；中心像元必须距任意标签边界`>3 px`，在不降低scene覆盖等硬约束时确定性优先`>=5 px`；边界点来自预注册类别对的真实界面。可观测性门固定为目标B2/B3/B4有限非零且居中192×192上下文RGB有效比例至少50%。纠正原始L8 fixedmask映射为`0=Fill,64=shadow,128=clear,192=thin,255=thick`，不得与转换后的四类ID0混淆。
+- QA过程：首个候选包因把原始Fill=0误当clear而出现3/20张纯黑页，已标记`qa_rejected_before_review`并隔离；第二包虽满足`>3 px`硬门，但在`>=5 px`偏好尚未成为确定性审计字段时即被`qa_superseded_before_review`隔离。两包均未交给reviewer、不得评分。旧16项标为`superseded_before_review`；旧50项保持未读取并标为`suspended_not_formal_confirmation`。
+- 真实结果：最终20项覆盖16个不同scene，最多2点/scene、1点/patch；四个interior名义类各覆盖4个scene，边界配额严格为2/1/1；16个interior中15个距离`>=5 px`，其余1个距离`3.606 px`，仍满足`>3 px`硬门；边界点最大类别对距离0 px。最小RGB有效上下文比例`0.6106`；20页均为1040×1210 RGB，无低信息/纯色页，最少上下文颜色数66。target-test读取0、模型数组读取0、与既有复核scene/patch重叠0。
+- 产物核验：A/B CSV各20行且除ID外全空，ID与20页完全一致；ZIP共27个成员，内部SHA清单全匹配。最终reviewer ZIP SHA256 `bdae9a616e40f894b7e780672d70467e72e94b456094bd7bb8b5b2d76446b74a`；sealed manifest SHA256 `38e1168cf3a34636debdccb89d2b1b1e54b0a52d1d58cc0020937e82f0678fd6`；packet summary SHA256 `21cde11833697ec187a600b4712462fa49158c8ed04257a30d9bfa4ee77fea7`。
+- 网络/运行：本地修改均先测试、commit和push，gzs授权仓库逐次fast-forward；远端固定使用`cloud-lite-pt210`，最终8项工具测试通过。只读访问授权的`/home/scv/shared/data/l8_biome_raw`，写入仅发生在本地/远端仓库Phase63 work dir；未训练、未启动GPU推理，未覆盖用户已有`LOG60.md`、`LOG61.md`、`LOG62.md`或`outputs/`改动。
+- 止损线：本20项只能检验UI与流程。A/B必须独立完成；两人可定位率各至少19/20、零坐标/页面/格式错误、可辨识性exact至少70%、interior中双方均判可细分至少10项且其语义exact至少60%才通过。只报告名义层原始计数；A/B原始判断冻结前禁止解封sampling字段。当前状态`awaiting_independent_review`，没有人工一致率、类别准确率、模型AUROC、coverage或Phase63C生死门结果。
