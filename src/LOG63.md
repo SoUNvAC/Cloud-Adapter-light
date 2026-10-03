@@ -20,3 +20,12 @@
 - 盲态核验：ZIP共98个成员；5份待填CSV分别为40/40/50/40/50行，除`tile_id`外全部为空；包内无sealed manifest、原标签、模型输出或风险分数。reviewer ZIP SHA256 `dc16956f960c4d7e86329d41b06ddd98b35ce26311cc1359b3965fd8cdafab85`；sealed manifest SHA256 `59f64b9063c37c2de367481dc8b3cc3be08c3ad8df50d5a031338650545fb3e1`；packet summary SHA256 `24ef62f883b3e66807bf3c5fe7be778f641ecfd06499c7b60c96e2c0fafcb828`。抽查snow/ice及非snow图板，波段、合成、中心标记和方位图可读。
 - 网络/运行：本地30项相关测试通过；代码push后，gzs授权仓库fast-forward到`af94a04`，远端`cloud-lite-pt210`中22项工具协议测试和8项无参数router测试通过。只读访问已授权的`/home/scv/shared/data/l8_biome_raw`生成图板，写入仅发生在远端仓库及本地仓库的Phase63 work dir；通过SSH/SCP同步成功。未启动GPU推理或训练，未改写用户已有`LOG60.md`、`LOG61.md`、`LOG62.md`或`outputs/`。
 - 止损线：当前状态为`awaiting_new_reviewer_calibration`，不是63C通过。A/B必须先独立完成40项校准并讨论记录共识，再独立完成50项确认；第三专家只裁决真实分歧。两份原始判断、裁决和哈希冻结前，禁止查看确认标签拟合风险、计算AUROC/coverage/bootstrap或启动新网络。最终必须分开报告32项严格确认队列与18项snow/ice压力队列；不得用合并50项冒充单一总体的无偏发生率。
+
+## 2026-10-03：校准读出与评价单位缺陷修正
+
+- 目标：核验新Phase63校准是否完成，并在继续confirmation前检查低一致率是否混入界面定位歧义。标注程序未覆盖根目录模板，真实完成记录位于`.annotation_history`最新快照；A、B与consensus各40行，其中同一第40项三方均为空，按用户既定规则记为纯色/无有效信息，39项可评价。
+- 真实校准读出：A/B exact及compatible agreement均为9/39（23.08%）；Cohen κ `0.1308`，Gwet AC1 `0.1253`；Thin membership IoU `16.67%`，cloud-shadow `41.67%`，thick `0%`，clear `14.29%`。30项分歧中13项涉及`boundary_mixed`、4项为cloud-shadow↔terrain/water-shadow、2项thin↔thick、1项thin↔cloud-shadow。A使用`boundary_mixed` 1次，B使用12次。讨论后consensus与A一致28/39、与B一致17/39，不能当作独立一致性证据。A/B/consensus快照SHA256依次为`09ced51a68c40a342264132b7dce2ab58f40ac892b73ebdfe143c856a7ca47e2`、`1d1b43e21893cd9ae4889c5ffb2a52cc69272bfa9f2f6880407ae572ac789ff3`、`e072d0fd5c09f31ada811c3285b10ab7dd5fd4ef00b731db119be674e057194c`。
+- 关键修正：旧图中文字虽称待判像元，但黄色角标在源分辨率上实际围住约20×20像元，不能唯一指定评价单位。因此上述低κ同时受目标定位歧义和语义歧义影响，不能全部归因于细粒度标签不可复现；Phase61D2旧数字不删除，但后续引用必须附此限制。
+- 改动：新增16项精确像元UI pilot生成与评分工具、4项测试及独立手册。页面分离192×192上下文与21×21最近邻像元视图；空心框只包围一个像元且不遮挡内部。先填目标可定位性，再填可辨识性；只有可细分时才填语义类别，并记录耗时。pilot按8个biome各2项抽取此前未人工复核、未被Phase50选中的target-train patch，排除所有既有复核scene和target-test；只用于UI，不进入模型或确认统计。
+- 网络/运行：本轮截至记录时仅完成本地语法检查及26项Phase工具测试，未访问远端原始数据、未生成pilot图、未启动GPU或训练。用户已有`LOG60.md`、`LOG61.md`、`LOG62.md`与`outputs/`未改动。
+- 止损线：正式confirmation继续暂停。UI pilot须由两人独立完成且每图只看一次；双方可定位率均≥95%、可辨识性exact≥70%且AC1≥0.40、双方均判可细分至少6项且其语义exact≥50%才允许重做正式confirmation。新旧项目难度不同，前后差异不得宣称为UI改动的因果效果；pilot尚无人工结果或Phase63生死门结果。
