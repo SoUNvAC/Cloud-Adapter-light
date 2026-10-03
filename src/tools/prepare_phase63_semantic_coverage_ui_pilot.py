@@ -299,58 +299,118 @@ def solve_assignment(candidates: list[dict]) -> tuple[list[dict], dict]:
     for stratum, quota in sorted(QUOTAS.items(), key=lambda item: len(by_stratum[item[0]])):
         slots.extend([stratum] * quota)
     node_limit = 1_000_000
+    scenes_by_stratum = {
+        stratum: sorted(
+            {item["scene"] for item in items},
+            key=lambda scene: stable_value(f"phase63-semantic-ui-scene:{stratum}:{scene}"),
+        )
+        for stratum, items in by_stratum.items()
+    }
 
     def attempt(max_per_scene: int, minimum_distinct_scenes: int):
         nodes = 0
-        selected: list[dict] = []
-        used_patches: set[str] = set()
+        selected_scene_slots: list[tuple[str, str]] = []
         scene_counts: Counter = Counter()
         interior_scenes: dict[str, set[str]] = defaultdict(set)
 
-        def recurse(index: int) -> bool:
+        def assign_unique_patches() -> list[dict] | None:
+            ordered_slots = sorted(
+                enumerate(selected_scene_slots),
+                key=lambda item: len(
+                    [
+                        row for row in by_stratum[item[1][0]]
+                        if row["scene"] == item[1][1]
+                    ]
+                ),
+            )
+            assigned: dict[int, dict] = {}
+            used_patches: set[str] = set()
+
+            def match(index: int) -> bool:
+                if index == len(ordered_slots):
+                    return True
+                original_index, (stratum, scene) = ordered_slots[index]
+                for candidate in by_stratum[stratum]:
+                    if candidate["scene"] != scene or candidate["name"] in used_patches:
+                        continue
+                    assigned[original_index] = candidate
+                    used_patches.add(candidate["name"])
+                    if match(index + 1):
+                        return True
+                    used_patches.remove(candidate["name"])
+                    del assigned[original_index]
+                return False
+
+            if not match(0):
+                return None
+            return [assigned[index] for index in range(len(selected_scene_slots))]
+
+        def recurse(index: int) -> list[dict] | None:
             nonlocal nodes
             nodes += 1
             if nodes > node_limit:
                 raise RuntimeError("Assignment search exceeded deterministic node limit")
+            remaining = len(slots) - index
+            if len(scene_counts) + remaining < minimum_distinct_scenes:
+                return None
+            remaining_strata = slots[index:]
+            possible_new_scenes = {
+                scene
+                for stratum in remaining_strata
+                for scene in scenes_by_stratum[stratum]
+                if scene not in scene_counts
+            }
+            if len(scene_counts) + min(remaining, len(possible_new_scenes)) < minimum_distinct_scenes:
+                return None
+            for interior_stratum in INTERIOR_QUOTAS:
+                still_available = remaining_strata.count(interior_stratum)
+                possible_class_scenes = {
+                    scene
+                    for scene in scenes_by_stratum[interior_stratum]
+                    if scene not in interior_scenes[interior_stratum]
+                }
+                if len(interior_scenes[interior_stratum]) + min(
+                    still_available, len(possible_class_scenes)
+                ) < 3:
+                    return None
             if index == len(slots):
                 if len(scene_counts) < minimum_distinct_scenes:
-                    return False
-                return all(len(interior_scenes[stratum]) >= 3 for stratum in INTERIOR_QUOTAS)
+                    return None
+                if not all(len(interior_scenes[stratum]) >= 3 for stratum in INTERIOR_QUOTAS):
+                    return None
+                return assign_unique_patches()
             stratum = slots[index]
             ordered = sorted(
-                by_stratum[stratum],
-                key=lambda item: (
-                    scene_counts[item["scene"]] > 0,
-                    scene_counts[item["scene"]],
-                    _candidate_order(item, stratum),
+                scenes_by_stratum[stratum],
+                key=lambda scene: (
+                    scene_counts[scene] > 0,
+                    scene_counts[scene],
+                    stable_value(f"phase63-semantic-ui-scene:{stratum}:{scene}"),
                 ),
             )
-            for candidate in ordered:
-                patch = candidate["name"]
-                scene = candidate["scene"]
-                if patch in used_patches or scene_counts[scene] >= max_per_scene:
+            for scene in ordered:
+                if scene_counts[scene] >= max_per_scene:
                     continue
-                selected.append(candidate)
-                used_patches.add(patch)
+                selected_scene_slots.append((stratum, scene))
                 scene_counts[scene] += 1
                 if stratum in INTERIOR_QUOTAS:
                     interior_scenes[stratum].add(scene)
-                if recurse(index + 1):
-                    return True
+                result = recurse(index + 1)
+                if result is not None:
+                    return result
                 if stratum in INTERIOR_QUOTAS:
                     if not any(
-                        item["sampling_stratum"] == stratum and item["scene"] == scene
-                        for item in selected[:-1]
+                        selected_stratum == stratum and selected_scene == scene
+                        for selected_stratum, selected_scene in selected_scene_slots[:-1]
                     ):
                         interior_scenes[stratum].discard(scene)
                 scene_counts[scene] -= 1
                 if scene_counts[scene] == 0:
                     del scene_counts[scene]
-                used_patches.remove(patch)
-                selected.pop()
-            return False
+                selected_scene_slots.pop()
+            return None
 
-        return (list(selected), nodes) if recurse(0) else (None, nodes)
+        return recurse(0), nodes
 
     solution, nodes = (None, 0)
     if available_scenes >= PILOT_UNITS:
