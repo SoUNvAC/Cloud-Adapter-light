@@ -20,6 +20,11 @@ from pathlib import Path
 import numpy as np
 from PIL import Image
 
+try:
+    from scipy.ndimage import distance_transform_edt as scipy_distance_transform_edt
+except ImportError:  # Local lightweight test environments use the exact bounded fallback.
+    scipy_distance_transform_edt = None
+
 from phase56_protocol import sha256
 from prepare_phase61d2_calibrated_review import assign_ids, read_all_bands, stable_value
 from prepare_phase63_pixel_locator_pilot import (
@@ -32,7 +37,7 @@ from prepare_phase63_pixel_locator_pilot import (
 
 
 EXPECTED_MANIFEST_SHA256 = "885c2d7f61cae23409a7b1ccbe65739c302fc1e59b089aab0cc05badf674872b"
-EXPECTED_SELECTION_SHA256 = "564ad4e2c27d2948c725cf4c5c482159888c2324fe0ab4bdeee25fe774cebc55"
+EXPECTED_METADATA_SHA256 = "34ece4293c8cc64425feb9650660aa101de753cfd0d0de26709b9add6b5e69ab"
 LABELS = {0: "clear", 1: "thick_cloud", 2: "thin_cloud", 3: "cloud_shadow"}
 INTERIOR_QUOTAS = {
     "interior_clear": 4,
@@ -135,20 +140,26 @@ def deterministic_coordinate(coordinates: np.ndarray, salt: str) -> tuple[int, i
 
 
 def extract_patch_candidates(
-    row: dict, mask: np.ndarray, cache_path: Path, cache_sha256: str | None = None
+    row: dict, mask: np.ndarray, mask_path: Path, mask_sha256: str | None = None
 ) -> list[dict]:
     if mask.shape != (512, 512):
-        raise RuntimeError(f"Expected 512x512 source_label: {cache_path}")
+        raise RuntimeError(f"Expected 512x512 source-label window: {mask_path}")
     values = set(np.unique(mask).tolist())
-    if not values.issubset(LABELS):
-        raise RuntimeError(f"Illegal source_label values {sorted(values)}: {cache_path}")
+    if not values.issubset(set(LABELS) | {255}):
+        raise RuntimeError(f"Illegal source-label values {sorted(values)}: {mask_path}")
     allowed = np.zeros(mask.shape, dtype=bool)
     allowed[MARGIN:512 - MARGIN, MARGIN:512 - MARGIN] = True
     boundary = any_label_boundary(mask)
-    within_3 = within_euclidean_distance(boundary, 3.0, inclusive=True)
-    within_lt_5 = within_euclidean_distance(boundary, 5.0, inclusive=False)
+    if scipy_distance_transform_edt is None:
+        within_3 = within_euclidean_distance(boundary, 3.0, inclusive=True)
+        within_lt_5 = within_euclidean_distance(boundary, 5.0, inclusive=False)
+        boundary_distance = None
+    else:
+        boundary_distance = scipy_distance_transform_edt(~boundary) if np.any(boundary) else None
+        within_3 = np.zeros(mask.shape, dtype=bool) if boundary_distance is None else boundary_distance <= 3.0
+        within_lt_5 = np.zeros(mask.shape, dtype=bool) if boundary_distance is None else boundary_distance < 5.0
     candidates: list[dict] = []
-    cache_digest = cache_sha256 or sha256(cache_path)
+    mask_digest = mask_sha256 or sha256(mask_path)
 
     for label_id, label_name in LABELS.items():
         stratum = f"interior_{label_name}"
@@ -158,7 +169,11 @@ def extract_patch_candidates(
         if len(pool) == 0:
             continue
         y, x = deterministic_coordinate(pool, f"phase63-semantic-ui:{stratum}:{row['name']}")
-        distance = exact_distance_to_seed(boundary, y, x)
+        distance = (
+            None if boundary_distance is None else float(boundary_distance[y, x])
+        )
+        if scipy_distance_transform_edt is None:
+            distance = exact_distance_to_seed(boundary, y, x)
         if distance is not None and distance <= 3.0:
             raise RuntimeError("Internal interior-distance computation failure")
         candidates.append(
@@ -174,8 +189,8 @@ def extract_patch_candidates(
                 "pair_boundary_distance_px": None,
                 "boundary_side_labels": [],
                 "interior_preferred_ge_5px": bool(distance is None or distance >= 5.0),
-                "label_cache_path": str(cache_path),
-                "label_cache_sha256": cache_digest,
+                "nominal_mask_path": str(mask_path),
+                "nominal_mask_sha256": mask_digest,
             }
         )
 
@@ -215,8 +230,8 @@ def extract_patch_candidates(
                 "pair_boundary_distance_px": pair_distance,
                 "boundary_side_labels": sorted(LABELS[value] for value in neighbor_values),
                 "interior_preferred_ge_5px": None,
-                "label_cache_path": str(cache_path),
-                "label_cache_sha256": cache_digest,
+                "nominal_mask_path": str(mask_path),
+                "nominal_mask_sha256": mask_digest,
             }
         )
     return candidates
@@ -342,44 +357,74 @@ def solve_assignment(candidates: list[dict]) -> tuple[list[dict], dict]:
     return solution, audit
 
 
+def read_raw_source_mask_window(dataset, row: dict) -> np.ndarray:
+    from rasterio.windows import Window
+
+    column, line = int(row["y"]), int(row["x"])
+    raw = dataset.read(
+        1, window=Window(column, line, 512, 512), boundless=True, fill_value=128
+    ).astype(np.uint8)
+    legal = {0, 64, 128, 192, 255}
+    values = set(np.unique(raw).tolist())
+    if not values.issubset(legal):
+        raise RuntimeError(f"Illegal raw fixedmask values: {sorted(values)}")
+    source = np.full(raw.shape, 255, dtype=np.int16)
+    source[raw == 0] = 0       # clear
+    source[raw == 255] = 1     # thick cloud
+    source[raw == 192] = 2     # thin cloud
+    source[raw == 64] = 3      # cloud shadow
+    # Raw 128 is Fill and remains invalid=255; it is never sampled as clear.
+    return source
+
+
 def load_candidates(
     manifest_rows: list[dict[str, str]],
-    phase50_selected: list[dict],
-    cache_root: Path,
+    shadow_status: dict[str, str],
+    raw_root: Path,
     excluded_scenes: set[str],
     excluded_patches: set[str],
 ) -> tuple[list[dict], dict]:
-    manifest_by_name = {row["name"]: row for row in manifest_rows}
+    try:
+        import rasterio
+    except ImportError as error:
+        raise RuntimeError("Raw fixedmask sampling requires rasterio") from error
     all_candidates: list[dict] = []
-    cache_files_read = []
+    mask_files_read = []
     skipped = Counter()
-    for selected in phase50_selected:
-        name = selected["name"]
-        row = manifest_by_name.get(name)
-        if row is None:
-            raise RuntimeError(f"Phase50 selected patch absent from frozen manifest: {name}")
-        if row["new_split"] != "target_train":
-            raise RuntimeError(f"Phase50 selected patch is not target_train: {name}")
+    by_scene: dict[str, list[dict]] = defaultdict(list)
+    for row in manifest_rows:
+        if row["new_split"] != "target_train" or shadow_status.get(row["scene"]) != "yes":
+            continue
         if row["scene"] in excluded_scenes:
             skipped["previously_reviewed_scene"] += 1
             continue
-        if name in excluded_patches:
+        if row["name"] in excluded_patches:
             skipped["previously_reviewed_patch"] += 1
             continue
-        cache_path = cache_root / f"{Path(name).stem}.npz"
-        if not cache_path.is_file():
-            raise RuntimeError(f"Missing frozen Phase54 source_label cache: {cache_path}")
-        cache_digest = sha256(cache_path)
-        with np.load(cache_path) as item:
-            if "source_label" not in item.files:
-                raise RuntimeError(f"source_label absent from frozen cache: {cache_path}")
-            mask = item["source_label"].astype(np.int16, copy=True)
-        cache_files_read.append(str(cache_path))
-        all_candidates.extend(extract_patch_candidates(row, mask, cache_path, cache_digest))
+        by_scene[row["scene"]].append(row)
+    for scene in sorted(by_scene):
+        rows = by_scene[scene]
+        biome = rows[0]["biome"]
+        fixedmask_path = raw_root / "l8biome" / biome / scene / f"{scene}_fixedmask.TIF"
+        if not fixedmask_path.is_file():
+            raise RuntimeError(f"Missing authorized raw fixedmask: {fixedmask_path}")
+        mask_digest = sha256(fixedmask_path)
+        with rasterio.open(fixedmask_path) as dataset:
+            for row in sorted(rows, key=lambda item: item["name"]):
+                mask = read_raw_source_mask_window(dataset, row)
+                all_candidates.extend(
+                    extract_patch_candidates(row, mask, fixedmask_path, mask_digest)
+                )
+        mask_files_read.append(str(fixedmask_path))
     return all_candidates, {
-        "cache_files_read": len(cache_files_read),
-        "cache_root": str(cache_root),
-        "only_array_read": "source_label",
+        "raw_fixedmask_scenes_read": len(mask_files_read),
+        "raw_root": str(raw_root),
+        "raw_value_to_source_order": {
+            "0": "clear", "64": "cloud_shadow", "128": "invalid_fill",
+            "192": "thin_cloud", "255": "thick_cloud",
+        },
+        "shadows_status_filter": "yes",
+        "model_arrays_read": [],
         "skipped": dict(sorted(skipped.items())),
         "candidate_counts": dict(sorted(Counter(c["sampling_stratum"] for c in all_candidates).items())),
         "candidate_scene_counts": {
@@ -392,8 +437,7 @@ def load_candidates(
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--manifest", default="work_dirs/phase45_protocol_audit/scene_disjoint_manifest.csv")
-    parser.add_argument("--selection", default="work_dirs/phase50_active_1pct/selection.json")
-    parser.add_argument("--cache-root", default="work_dirs/phase54_information_audit/cache/train")
+    parser.add_argument("--metadata", default="research_plans/protocol_data/l8_biome_usgs_shadow_status.csv")
     parser.add_argument(
         "--phase63-sealed",
         default="work_dirs/phase63_selective_multigranularity/human_confirmation_review/sealed_manifest.json",
@@ -414,9 +458,12 @@ def main() -> None:
     args = parser.parse_args()
 
     manifest_hash = verify_hash(args.manifest, EXPECTED_MANIFEST_SHA256, "manifest")
-    selection_hash = verify_hash(args.selection, EXPECTED_SELECTION_SHA256, "Phase50 selection")
+    metadata_hash = verify_hash(args.metadata, EXPECTED_METADATA_SHA256, "Shadows metadata")
     manifest_rows = read_csv(args.manifest)
-    selection = json.loads(Path(args.selection).read_text(encoding="utf-8"))
+    metadata_rows = read_csv(args.metadata)
+    shadow_status = {row["scene"]: row["usgs_shadows"].strip().lower() for row in metadata_rows}
+    if len(shadow_status) != 96 or set(shadow_status.values()) != {"yes", "no"}:
+        raise RuntimeError("Unexpected frozen Shadows? metadata")
     phase63 = json.loads(Path(args.phase63_sealed).read_text(encoding="utf-8"))
     old_ui = json.loads(Path(args.old_ui_sealed).read_text(encoding="utf-8"))
     excluded_scenes = set(phase63["selection_audit"]["scene_ids"])
@@ -429,8 +476,8 @@ def main() -> None:
 
     candidates, candidate_audit = load_candidates(
         manifest_rows,
-        selection["selected"],
-        Path(args.cache_root),
+        shadow_status,
+        Path(args.raw_root),
         excluded_scenes,
         excluded_patches,
     )
@@ -530,7 +577,7 @@ def main() -> None:
         },
         "inputs": {
             "manifest_sha256": manifest_hash,
-            "phase50_selection_sha256": selection_hash,
+            "shadow_metadata_sha256": metadata_hash,
             "phase63_sealed_sha256": sha256(args.phase63_sealed),
             "old_ui_sealed_sha256": sha256(args.old_ui_sealed),
             "manual_sha256": sha256(args.manual),
