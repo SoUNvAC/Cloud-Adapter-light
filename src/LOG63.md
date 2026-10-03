@@ -29,3 +29,11 @@
 - 改动：新增16项精确像元UI pilot生成与评分工具、4项测试及独立手册。页面分离192×192上下文与21×21最近邻像元视图；空心框只包围一个像元且不遮挡内部。先填目标可定位性，再填可辨识性；只有可细分时才填语义类别，并记录耗时。pilot按8个biome各2项抽取此前未人工复核、未被Phase50选中的target-train patch，排除所有既有复核scene和target-test；只用于UI，不进入模型或确认统计。
 - 网络/运行：本轮截至记录时仅完成本地语法检查及26项Phase工具测试，未访问远端原始数据、未生成pilot图、未启动GPU或训练。用户已有`LOG60.md`、`LOG61.md`、`LOG62.md`与`outputs/`未改动。
 - 止损线：正式confirmation继续暂停。UI pilot须由两人独立完成且每图只看一次；双方可定位率均≥95%、可辨识性exact≥70%且AC1≥0.40、双方均判可细分至少6项且其语义exact≥50%才允许重做正式confirmation。新旧项目难度不同，前后差异不得宣称为UI改动的因果效果；pilot尚无人工结果或Phase63生死门结果。
+
+## 2026-10-03：精确像元 UI pilot 包生成完成（等待独立复核）
+
+- 目标：以最小工作量检验“唯一中心像元 + 上下文/局部双视图 + 可辨识性先行”能否消除目标定位歧义；不训练、不评价模型、不读取confirmation标签。
+- 改动与产物：代码提交`c643977`在gzs fast-forward后，以`cloud-lite-pt210`和只读原始波段生成16项pilot。8个biome各2项、8个此前未人工复核的target-train scene；与既有复核scene重叠0、与Phase50实际选中patch重叠0、target-test读取0。每页含192×192上下文、4组21×21合成和11个21×21单波段最近邻视图，显示精确`(x,y)`；空心框只包围一个源像元且中心内部可见。
+- 核验结果：reviewer ZIP共23个成员、16张1040×1210 RGB图、A/B各16行空白表；包内无sealed manifest、原标签、模型预测或risk score。目视抽查普通biome与snow/ice页面，像元格、中心框、十字线、波段和太阳方向可读。ZIP SHA256 `3ea92af06157c405529e202768ce1b4e83919312dcd5f22f5b73ceb9912ff568`；sealed manifest SHA256 `7503977e55cd35be3c30c3c376efd2f51b09907ebd95df450bfa88da07153627`；packet summary SHA256 `bbbe6e3d47fd124f864f9831f13a6553af80a4afff165bf7338417de80ef1298`。
+- 网络/运行：首次SSH连接在密钥交换阶段被远端关闭，重试后正常；远端4项pilot测试通过并完成生成，SCP同步成功。只读访问`/home/scv/shared/data/l8_biome_raw`，写入仅发生在授权仓库；无GPU推理或训练。用户已有`LOG60.md`、`LOG61.md`、`LOG62.md`和`outputs/`未覆盖。
+- 止损线与当前结果：状态为`awaiting_independent_review`。当前只有UI与盲态核验结果，没有人工一致率、耗时、模型AUROC或Phase63生死门结果。A/B必须独立、每图仅一轮并在原始CSV冻结前不讨论；pilot通过预注册UI门后才允许重做正式confirmation。
