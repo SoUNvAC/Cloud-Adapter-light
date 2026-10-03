@@ -270,6 +270,13 @@ def solve_assignment(candidates: list[dict]) -> tuple[list[dict], dict]:
     for stratum in by_stratum:
         by_stratum[stratum].sort(key=lambda item: _candidate_order(item, stratum))
 
+    available_scenes = len({candidate["scene"] for candidate in candidates})
+    if available_scenes < PILOT_UNITS // 2:
+        raise RuntimeError(
+            "No assignment can satisfy 20 units with <=2 points/scene: "
+            f"only {available_scenes} candidate scenes"
+        )
+
     slots = []
     for stratum, quota in sorted(QUOTAS.items(), key=lambda item: len(by_stratum[item[0]])):
         slots.extend([stratum] * quota)
@@ -327,12 +334,16 @@ def solve_assignment(candidates: list[dict]) -> tuple[list[dict], dict]:
 
         return (list(selected), nodes) if recurse(0) else (None, nodes)
 
-    solution, nodes = attempt(max_per_scene=1, minimum_distinct_scenes=PILOT_UNITS)
+    solution, nodes = (None, 0)
+    if available_scenes >= PILOT_UNITS:
+        solution, nodes = attempt(max_per_scene=1, minimum_distinct_scenes=PILOT_UNITS)
     max_per_scene = 1
     minimum_distinct = PILOT_UNITS
     if solution is None:
         max_per_scene = 2
-        for minimum_distinct in range(PILOT_UNITS - 1, PILOT_UNITS // 2 - 1, -1):
+        for minimum_distinct in range(
+            min(PILOT_UNITS - 1, available_scenes), PILOT_UNITS // 2 - 1, -1
+        ):
             solution, nodes = attempt(max_per_scene=2, minimum_distinct_scenes=minimum_distinct)
             if solution is not None:
                 break
@@ -354,6 +365,7 @@ def solve_assignment(candidates: list[dict]) -> tuple[list[dict], dict]:
         raise RuntimeError(f"Interior class scene coverage failure: {class_scene_counts}")
     audit = {
         "units": len(solution),
+        "available_candidate_scenes": available_scenes,
         "distinct_scenes": len(scene_counts),
         "max_points_per_scene": max(scene_counts.values()),
         "max_points_per_patch": max(patch_counts.values()),

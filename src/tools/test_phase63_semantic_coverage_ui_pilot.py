@@ -75,6 +75,25 @@ class Phase63SemanticCoverageUIPilotTest(unittest.TestCase):
         self.assertEqual(audit["stratum_counts"], dict(sorted(QUOTAS.items())))
         self.assertGreaterEqual(min(audit["interior_class_scene_counts"].values()), 3)
 
+    def test_assignment_falls_back_to_two_points_per_scene_without_impossible_search(self):
+        candidates = []
+        for stratum in QUOTAS:
+            for scene_index in range(10):
+                candidates.append(
+                    {
+                        "sampling_stratum": stratum,
+                        "scene": f"SCENE-{scene_index:02d}",
+                        "name": f"{stratum}-patch-{scene_index:02d}.png",
+                        "center_y": 100,
+                        "center_x": 100,
+                    }
+                )
+        selected, audit = solve_assignment(candidates)
+        self.assertEqual(len(selected), 20)
+        self.assertEqual(audit["available_candidate_scenes"], 10)
+        self.assertEqual(audit["distinct_scenes"], 10)
+        self.assertEqual(audit["max_points_per_scene"], 2)
+
     def test_missing_boundary_pair_fails_closed(self):
         candidates = []
         for stratum, quota in QUOTAS.items():
