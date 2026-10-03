@@ -16,6 +16,7 @@ from prepare_phase63_semantic_coverage_ui_pilot import (  # noqa: E402
     QUOTAS,
     canonical_csv_sha256,
     extract_patch_candidates,
+    map_raw_fixedmask,
     solve_assignment,
 )
 from score_phase63_semantic_coverage_ui_pilot import score  # noqa: E402
@@ -62,6 +63,11 @@ class Phase63SemanticCoverageUIPilotTest(unittest.TestCase):
             np.zeros(mask.shape, dtype=np.float32),
         )
         self.assertEqual(candidates, [])
+
+    def test_documented_raw_fixedmask_mapping_keeps_fill_invalid(self):
+        raw = np.asarray([[0, 64, 128, 192, 255]], dtype=np.uint8)
+        mapped = map_raw_fixedmask(raw)
+        np.testing.assert_array_equal(mapped, [[255, 3, 0, 2, 1]])
 
     def test_metadata_hash_is_independent_of_platform_line_endings(self):
         with tempfile.TemporaryDirectory() as directory:

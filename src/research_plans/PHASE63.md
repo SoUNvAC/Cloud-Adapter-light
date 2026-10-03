@@ -101,7 +101,7 @@ UI可行性门在看新判断前锁定：双方目标可定位率均至少95%；
 - 优先20个不同scene；若不存在合法解，则在每scene最多2点的约束下最大化不同scene数；四个interior类别各至少覆盖3个scene；同一patch最多1点；
 - 可观测性先于名义语义分层：目标像元B2/B3/B4必须均为有限非零值，居中192×192上下文的RGB有效像元比例必须至少50%；纯色/nodata页面在交付前作废重抽，不能计入20项；
 - 精确记录距离、边界两侧标签、scene、patch与缓存哈希，全部只进入sealed manifest；reviewer包不得包含名义标签、抽样层、距离或边界对；
-- 只读取已授权L8 Biome原始`fixedmask.TIF`，并限定USGS `Shadows?=yes`的`target_train` scene；原始值固定映射为clear=0、shadow=64、thin=192、thick=255，fill=128保持无效且不得当clear抽样。禁止读取模型特征、概率或预测用于选点；target-test保持封存。
+- 只读取已授权L8 Biome原始`fixedmask.TIF`，并限定USGS `Shadows?=yes`的`target_train` scene；按数据集原始类序固定映射为fill=0、shadow=64、clear=128、thin=192、thick=255，fill保持无效且不得当clear抽样。这里的原始字节值不得与转换后四类ID0（clear）混淆。禁止读取模型特征、概率或预测用于选点；target-test保持封存。
 
 UI与标注流程门固定为：A/B目标可定位率均至少19/20；坐标、页面和提交格式错误为0；双方均可定位项的可辨识性exact agreement至少70%；16个名义interior项中双方均判可细分至少10项；这些项目语义exact agreement至少60%。每个名义层只报告原始计数，不报告每类准确率。两份原始判断必须先校验格式并冻结SHA256，之后才允许解封名义层作描述性`reviewer–nominal-label concordance`；该concordance不是人工准确率。
 

@@ -466,16 +466,21 @@ def read_raw_source_mask_window(dataset, row: dict) -> np.ndarray:
     raw = dataset.read(
         1, window=Window(column, line, 512, 512), boundless=True, fill_value=128
     ).astype(np.uint8)
+    return map_raw_fixedmask(raw)
+
+
+def map_raw_fixedmask(raw: np.ndarray) -> np.ndarray:
+    """Map the documented L8 Biome fixedmask bytes into source class order."""
     legal = {0, 64, 128, 192, 255}
     values = set(np.unique(raw).tolist())
     if not values.issubset(legal):
         raise RuntimeError(f"Illegal raw fixedmask values: {sorted(values)}")
     source = np.full(raw.shape, 255, dtype=np.int16)
-    source[raw == 0] = 0       # clear
+    source[raw == 128] = 0     # clear
     source[raw == 255] = 1     # thick cloud
     source[raw == 192] = 2     # thin cloud
     source[raw == 64] = 3      # cloud shadow
-    # Raw 128 is Fill and remains invalid=255; it is never sampled as clear.
+    # Raw 0 is Fill and remains invalid=255; it is never sampled as clear.
     return source
 
 
@@ -565,7 +570,7 @@ def load_candidates(
         "raw_fixedmask_scenes_read": len(mask_files_read),
         "raw_root": str(raw_root),
         "raw_value_to_source_order": {
-            "0": "clear", "64": "cloud_shadow", "128": "invalid_fill",
+            "0": "invalid_fill", "64": "cloud_shadow", "128": "clear",
             "192": "thin_cloud", "255": "thick_cloud",
         },
         "shadows_status_filter": "yes",
