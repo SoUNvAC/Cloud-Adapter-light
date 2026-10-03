@@ -60,6 +60,7 @@ PILOT_UNITS = 20
 MIN_INTERIOR_DISTANCE = 4.0
 PREFERRED_INTERIOR_DISTANCE = 5.0
 MAX_PAIR_BOUNDARY_DISTANCE = 1.0
+MIN_RGB_VALID_CONTEXT_FRACTION = 0.50
 MARGIN = 96
 
 
@@ -152,7 +153,12 @@ def deterministic_coordinate(coordinates: np.ndarray, salt: str) -> tuple[int, i
 
 
 def extract_patch_candidates(
-    row: dict, mask: np.ndarray, mask_path: Path, mask_sha256: str | None = None
+    row: dict,
+    mask: np.ndarray,
+    mask_path: Path,
+    mask_sha256: str | None = None,
+    observability_mask: np.ndarray | None = None,
+    rgb_valid_context_fraction: np.ndarray | None = None,
 ) -> list[dict]:
     if mask.shape != (512, 512):
         raise RuntimeError(f"Expected 512x512 source-label window: {mask_path}")
@@ -161,6 +167,10 @@ def extract_patch_candidates(
         raise RuntimeError(f"Illegal source-label values {sorted(values)}: {mask_path}")
     allowed = np.zeros(mask.shape, dtype=bool)
     allowed[MARGIN:512 - MARGIN, MARGIN:512 - MARGIN] = True
+    if observability_mask is not None:
+        if observability_mask.shape != mask.shape:
+            raise RuntimeError("Observability mask shape mismatch")
+        allowed &= observability_mask
     boundary = any_label_boundary(mask)
     if scipy_distance_transform_edt is None:
         within_3 = within_euclidean_distance(boundary, 3.0, inclusive=True)
@@ -203,6 +213,10 @@ def extract_patch_candidates(
                 "interior_preferred_ge_5px": bool(distance is None or distance >= 5.0),
                 "nominal_mask_path": str(mask_path),
                 "nominal_mask_sha256": mask_digest,
+                "rgb_valid_context_fraction": (
+                    None if rgb_valid_context_fraction is None
+                    else float(rgb_valid_context_fraction[y, x])
+                ),
             }
         )
 
@@ -244,6 +258,10 @@ def extract_patch_candidates(
                 "interior_preferred_ge_5px": None,
                 "nominal_mask_path": str(mask_path),
                 "nominal_mask_sha256": mask_digest,
+                "rgb_valid_context_fraction": (
+                    None if rgb_valid_context_fraction is None
+                    else float(rgb_valid_context_fraction[y, x])
+                ),
             }
         )
     return candidates
@@ -401,6 +419,33 @@ def read_raw_source_mask_window(dataset, row: dict) -> np.ndarray:
     return source
 
 
+def read_rgb_observability_window(dataset, row: dict) -> tuple[np.ndarray, np.ndarray]:
+    """Return target-valid/context-valid masks without using semantic labels."""
+    from rasterio.windows import Window
+
+    if dataset.count != 11:
+        raise RuntimeError(f"Expected 11 image bands, found {dataset.count}: {dataset.name}")
+    column, line = int(row["y"]), int(row["x"])
+    rgb = dataset.read(
+        (2, 3, 4), window=Window(column, line, 512, 512), boundless=True, fill_value=0
+    )
+    valid = np.all(np.isfinite(rgb) & (rgb != 0), axis=0)
+    integral = np.pad(valid.astype(np.int32), ((1, 0), (1, 0))).cumsum(0).cumsum(1)
+    size = 2 * MARGIN
+    counts = (
+        integral[size:, size:]
+        - integral[:-size, size:]
+        - integral[size:, :-size]
+        + integral[:-size, :-size]
+    )
+    context_fraction = np.zeros(valid.shape, dtype=np.float32)
+    context_fraction[MARGIN:512 - MARGIN, MARGIN:512 - MARGIN] = (
+        counts[: 512 - 2 * MARGIN, : 512 - 2 * MARGIN] / float(size * size)
+    )
+    observable = valid & (context_fraction >= MIN_RGB_VALID_CONTEXT_FRACTION)
+    return observable, context_fraction
+
+
 def load_candidates(
     manifest_rows: list[dict[str, str]],
     shadow_status: dict[str, str],
@@ -430,14 +475,30 @@ def load_candidates(
         rows = by_scene[scene]
         biome = rows[0]["biome"]
         fixedmask_path = raw_root / "l8biome" / biome / scene / f"{scene}_fixedmask.TIF"
+        image_path = raw_root / "l8biome" / biome / scene / f"{scene}.TIF"
         if not fixedmask_path.is_file():
             raise RuntimeError(f"Missing authorized raw fixedmask: {fixedmask_path}")
+        if not image_path.is_file():
+            raise RuntimeError(f"Missing authorized raw image: {image_path}")
         mask_digest = sha256(fixedmask_path)
-        with rasterio.open(fixedmask_path) as dataset:
+        with rasterio.open(fixedmask_path) as dataset, rasterio.open(image_path) as image_dataset:
+            if (dataset.width, dataset.height) != (image_dataset.width, image_dataset.height):
+                raise RuntimeError(f"Image/mask geometry mismatch: {scene}")
             for row in sorted(rows, key=lambda item: item["name"]):
                 mask = read_raw_source_mask_window(dataset, row)
+                observable, context_fraction = read_rgb_observability_window(image_dataset, row)
+                if not np.any(observable):
+                    skipped["unobservable_rgb_context"] += 1
+                    continue
                 all_candidates.extend(
-                    extract_patch_candidates(row, mask, fixedmask_path, mask_digest)
+                    extract_patch_candidates(
+                        row,
+                        mask,
+                        fixedmask_path,
+                        mask_digest,
+                        observable,
+                        context_fraction,
+                    )
                 )
         mask_files_read.append(str(fixedmask_path))
     return all_candidates, {
@@ -449,6 +510,9 @@ def load_candidates(
         },
         "shadows_status_filter": "yes",
         "model_arrays_read": [],
+        "observability_rule": (
+            "target B2/B3/B4 all finite and nonzero; centered 192x192 RGB-valid fraction >=0.50"
+        ),
         "skipped": dict(sorted(skipped.items())),
         "candidate_counts": dict(sorted(Counter(c["sampling_stratum"] for c in all_candidates).items())),
         "candidate_scene_counts": {

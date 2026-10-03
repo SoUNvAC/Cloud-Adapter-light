@@ -47,6 +47,22 @@ class Phase63SemanticCoverageUIPilotTest(unittest.TestCase):
             else:
                 self.assertLessEqual(item["pair_boundary_distance_px"], 1.0)
 
+    def test_unobservable_rgb_context_produces_no_candidates(self):
+        mask = self.striped_mask()
+        row = {
+            "new_split": "target_train", "scene": "SCENE", "biome": "forest",
+            "name": "patch.png", "x": "0", "y": "0",
+        }
+        candidates = extract_patch_candidates(
+            row,
+            mask,
+            Path("mask.tif"),
+            "frozen-mask-digest",
+            np.zeros(mask.shape, dtype=bool),
+            np.zeros(mask.shape, dtype=np.float32),
+        )
+        self.assertEqual(candidates, [])
+
     def test_metadata_hash_is_independent_of_platform_line_endings(self):
         with tempfile.TemporaryDirectory() as directory:
             lf = Path(directory) / "lf.csv"
