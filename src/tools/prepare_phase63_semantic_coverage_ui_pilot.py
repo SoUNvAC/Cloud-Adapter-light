@@ -37,7 +37,7 @@ from prepare_phase63_pixel_locator_pilot import (
 
 
 EXPECTED_MANIFEST_SHA256 = "885c2d7f61cae23409a7b1ccbe65739c302fc1e59b089aab0cc05badf674872b"
-EXPECTED_METADATA_SHA256 = "34ece4293c8cc64425feb9650660aa101de753cfd0d0de26709b9add6b5e69ab"
+EXPECTED_METADATA_CANONICAL_SHA256 = "31370f85fbac477b6f5fccf5a046191f44ccdb45acd0a12d65270f5811d0c6b7"
 LABELS = {0: "clear", 1: "thick_cloud", 2: "thin_cloud", 3: "cloud_shadow"}
 INTERIOR_QUOTAS = {
     "interior_clear": 4,
@@ -73,6 +73,18 @@ def verify_hash(path: str | Path, expected: str, label: str) -> str:
     if actual != expected:
         raise RuntimeError(f"Frozen {label} hash mismatch: expected={expected}, actual={actual}")
     return actual
+
+
+def canonical_csv_sha256(path: str | Path) -> str:
+    """Hash CSV records independent of UTF-8 BOM and platform line endings."""
+    rows = read_csv(path)
+    payload = json.dumps(
+        sorted(rows, key=lambda row: tuple(sorted(row.items()))),
+        sort_keys=True,
+        separators=(",", ":"),
+        ensure_ascii=False,
+    ).encode("utf-8")
+    return hashlib.sha256(payload).hexdigest()
 
 
 def shift(array: np.ndarray, dy: int, dx: int, fill: int = -999) -> np.ndarray:
@@ -458,7 +470,13 @@ def main() -> None:
     args = parser.parse_args()
 
     manifest_hash = verify_hash(args.manifest, EXPECTED_MANIFEST_SHA256, "manifest")
-    metadata_hash = verify_hash(args.metadata, EXPECTED_METADATA_SHA256, "Shadows metadata")
+    metadata_canonical_hash = canonical_csv_sha256(args.metadata)
+    if metadata_canonical_hash != EXPECTED_METADATA_CANONICAL_SHA256:
+        raise RuntimeError(
+            "Frozen Shadows metadata canonical hash mismatch: "
+            f"expected={EXPECTED_METADATA_CANONICAL_SHA256}, actual={metadata_canonical_hash}"
+        )
+    metadata_hash = sha256(args.metadata)
     manifest_rows = read_csv(args.manifest)
     metadata_rows = read_csv(args.metadata)
     shadow_status = {row["scene"]: row["usgs_shadows"].strip().lower() for row in metadata_rows}
@@ -578,6 +596,7 @@ def main() -> None:
         "inputs": {
             "manifest_sha256": manifest_hash,
             "shadow_metadata_sha256": metadata_hash,
+            "shadow_metadata_canonical_sha256": metadata_canonical_hash,
             "phase63_sealed_sha256": sha256(args.phase63_sealed),
             "old_ui_sealed_sha256": sha256(args.old_ui_sealed),
             "manual_sha256": sha256(args.manual),

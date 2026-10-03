@@ -14,6 +14,7 @@ if str(TOOLS_ROOT) not in sys.path:
 
 from prepare_phase63_semantic_coverage_ui_pilot import (  # noqa: E402
     QUOTAS,
+    canonical_csv_sha256,
     extract_patch_candidates,
     solve_assignment,
 )
@@ -45,6 +46,15 @@ class Phase63SemanticCoverageUIPilotTest(unittest.TestCase):
                 self.assertGreater(item["distance_to_any_label_boundary_px"], 3.0)
             else:
                 self.assertLessEqual(item["pair_boundary_distance_px"], 1.0)
+
+    def test_metadata_hash_is_independent_of_platform_line_endings(self):
+        with tempfile.TemporaryDirectory() as directory:
+            lf = Path(directory) / "lf.csv"
+            crlf = Path(directory) / "crlf.csv"
+            content = "scene,usgs_shadows,source_url\nS1,yes,url-1\nS2,no,url-2\n"
+            lf.write_bytes(content.encode("utf-8"))
+            crlf.write_bytes(content.replace("\n", "\r\n").encode("utf-8"))
+            self.assertEqual(canonical_csv_sha256(lf), canonical_csv_sha256(crlf))
 
     def test_assignment_prefers_twenty_distinct_scenes_and_one_point_per_patch(self):
         candidates = []
