@@ -16,3 +16,12 @@
 - 网络与真实观测：USGS 官方归档下载完成，大小 `1,555,733,976` bytes，SHA256 `5cde604615ee241950b5a0b641ae5de82b27738b51e39aa724d18faec0bbaa9a`。首次审计读到 400 个成员、80 个独立 Landsat scene、80 个 1000×1000 mask、标签仅 0–6；固定哈希划分为 60/10/10 scene，三个父类在每个 split 均有像元。target-test 的 native `flooded` 为 0 像元，后续不得为该 split 报告 flooded IoU。
 - 权限事件：随后发现 `/home/scv/Cloud-Adapter-light/data -> ../shared/data/`，所以归档与解压目录实际解析为未授权的 `/home/scv/shared/data/sparcs`。发现后立即停止对该目录的读取、移动和删除；首次审计结果只作故障记录，不作为正式执行就绪证据。代码已增加 `allowed_root` 的 symlink-resolved containment 硬门，并把默认目录改到仓库实体目录 `phase64_data/sparcs`。
 - 当前止损：在用户明确授权如何处置误落盘目录前，不再访问 `/home/scv/shared/data/sparcs`；正式 SPARCS 审计必须从官方 URL 重新下载到解析后仍位于 `/home/scv/Cloud-Adapter-light` 的路径并复跑。没有正式第二目标域前不得启动 Day 2 双域训练。
+
+## 2026-10-04 — Day 2 基线实现与训练前硬门
+
+- 目标：在不读取越界数据、不启动正式训练的前提下，把共享三父类 readout、full fine-tuning、标准 LoRA、MsRE 与 head-only 基线实现到可审计状态。
+- 改动：Day 2 快速筛选固定为 RGB，避免把标签层级收益与六波段输入变化混杂；公共六波段移至过门后的 Phase 64B。新增 CloudSEN/L8 父类 dataset view、SPARCS loader、标准 DINO LoRA、显式 full-FT backbone、父类 checkpoint 转换器、2 target × 4 method 配置矩阵及权重/参数审计。转换器只移除 `decode_head.cls_embed.{weight,bias}` 两个四类不兼容张量，其余 379 个张量保留。
+- 网络情况：USGS 官方 SPARCS 重下载在仓库实体目录续传到 `829,991,528 / 1,555,733,976` bytes 后，服务端连续返回 HTTP 500 或 TLS EOF；官方页面未发现第二下载镜像。保留部分文件等待同 URL 续传，未读取或利用共享区误落副本。
+- 止损线：正式训练前必须取得 CloudSEN derived 与 L8 derived 的明确只读授权；SPARCS 必须在仓库实体目录完成 SHA256/CRC/scene 审计；配置、checkpoint 和可训练参数硬门必须全部通过。任一额外缺失/意外权重、MsRE 超过 `0.50M` 或数据路径越界均停止。
+- 真实结果：配置矩阵 `8/8` 通过。Phase 22 输入 checkpoint SHA256 为 `d33a81337544e294a42007c6b353ee13c901ebb1e1f5261fd1d95a79e3888012`，转换输出 SHA256 为 `e518be667397ebb5a9f32781436bca6c2e0f22aa0c1ad7e6de9ad6448ac813b2`。模型实例化/加载审计通过；LoRA 可训练参数 `294,912`，MsRE `380,577`，二者训练名称与声明完全一致，MsRE 低于硬上限。尚未训练，因此没有 mIoU、Shadow IoU 或 source forgetting 结果。
+- 权限阻塞：仓库 `data` 实际解析到 `/home/scv/shared/data`；CloudSEN 根为 `/home/scv/shared/data/cloudsen12_high_l1c`，L8 manifest 指向 `data/l8_biome`（实际为 `/home/scv/shared/data/l8_biome`）。此前只授权 `/home/scv/shared/data/l8_biome_raw`，故未读取这两个 derived 目录，训练保持暂停。
