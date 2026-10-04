@@ -35,6 +35,9 @@ NATIVE_CLASS_NAMES = (
 )
 PARENT_BY_NATIVE = np.asarray([2, 2, 0, 0, 0, 1, 0], dtype=np.uint8)
 PARENT_CLASS_NAMES = ("surface_visible", "cloud", "shadow")
+REPO_ROOT = Path(__file__).resolve().parents[2]
+OFFICIAL_ARCHIVE_BYTES = 1555733976
+OFFICIAL_ARCHIVE_SHA256 = "5cde604615ee241950b5a0b641ae5de82b27738b51e39aa724d18faec0bbaa9a"
 
 
 def sha256_file(path: Path) -> str:
@@ -51,6 +54,20 @@ def sha256_rows(rows: list[dict[str, Any]], fields: tuple[str, ...]) -> str:
         digest.update(",".join(str(row[field]) for field in fields).encode("utf-8"))
         digest.update(b"\n")
     return digest.hexdigest()
+
+
+def ensure_within(path: Path, allowed_root: Path, label: str) -> Path:
+    """Resolve symlinks and reject paths that escape the authorized root."""
+
+    resolved_root = allowed_root.resolve()
+    resolved = path.resolve()
+    try:
+        resolved.relative_to(resolved_root)
+    except ValueError as exc:
+        raise ValueError(
+            f"{label} resolves outside allowed root: {resolved} not under {resolved_root}"
+        ) from exc
+    return resolved
 
 
 def validate_members(archive: zipfile.ZipFile) -> list[zipfile.ZipInfo]:
@@ -130,7 +147,10 @@ def discover_pairs(data_root: Path) -> list[dict[str, Any]]:
             f"missing_masks={missing_masks[:5]}"
         )
 
-    all_tiffs = [path for path in data_root.rglob("*.tif") if path.is_file()]
+    all_tiffs = [
+        path for path in data_root.rglob("*")
+        if path.is_file() and path.suffix.lower() in (".tif", ".tiff")
+    ]
     tiffs_by_key: dict[str, list[Path]] = defaultdict(list)
     for path in all_tiffs:
         lower = path.stem.lower()
@@ -219,6 +239,9 @@ def audit_dataset(
         "source_scene_recovered": all(row["scene"] for row in rows),
         "scene_disjoint_split": split_disjoint,
         "all_parents_in_each_split": all(np.all(parent_counts[split] > 0) for split in SPLITS),
+        "one_multispectral_tiff_per_sample": all(
+            row["non_qa_tiff_candidates"] == 1 for row in rows
+        ),
     }
     fields = (
         "new_split",
@@ -298,22 +321,39 @@ def write_outputs(rows: list[dict[str, Any]], summary: dict[str, Any], output_ro
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--archive", type=Path, default=Path("../data/sparcs/l8cloudmasks.zip"))
-    parser.add_argument("--data-root", type=Path, default=Path("../data/sparcs/extracted"))
+    parser.add_argument("--archive", type=Path, default=Path("../phase64_data/sparcs/l8cloudmasks.zip"))
+    parser.add_argument("--data-root", type=Path, default=Path("../phase64_data/sparcs/extracted"))
     parser.add_argument("--output-root", type=Path, default=Path("work_dirs/phase64_sparcs_protocol"))
+    parser.add_argument("--allowed-root", type=Path, default=REPO_ROOT)
     parser.add_argument("--extract", action="store_true")
     parser.add_argument("--expected-samples", type=int, default=80)
     parser.add_argument("--expected-size", type=int, default=1000)
+    parser.add_argument("--expected-archive-bytes", type=int, default=OFFICIAL_ARCHIVE_BYTES)
+    parser.add_argument("--expected-archive-sha256", default=OFFICIAL_ARCHIVE_SHA256)
     args = parser.parse_args()
+    archive = ensure_within(args.archive, args.allowed_root, "archive")
+    data_root = ensure_within(args.data_root, args.allowed_root, "data_root")
+    output_root = ensure_within(args.output_root, args.allowed_root, "output_root")
+    if archive.stat().st_size != args.expected_archive_bytes:
+        raise ValueError(
+            f"Archive byte size mismatch: {archive.stat().st_size} != "
+            f"{args.expected_archive_bytes}"
+        )
+    actual_sha256 = sha256_file(archive)
+    if actual_sha256.lower() != args.expected_archive_sha256.lower():
+        raise ValueError(
+            f"Archive SHA256 mismatch: {actual_sha256} != {args.expected_archive_sha256}"
+        )
     if args.extract:
-        safe_extract(args.archive, args.data_root)
+        safe_extract(archive, data_root)
     rows, summary = audit_dataset(
-        args.archive,
-        args.data_root,
+        archive,
+        data_root,
         expected_samples=args.expected_samples,
         expected_size=args.expected_size,
     )
-    write_outputs(rows, summary, args.output_root)
+    summary["allowed_root"] = args.allowed_root.resolve().as_posix()
+    write_outputs(rows, summary, output_root)
     print(json.dumps(summary, ensure_ascii=False, indent=2))
     if not summary["passed"]:
         raise SystemExit(1)

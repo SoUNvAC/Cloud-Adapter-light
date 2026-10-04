@@ -16,7 +16,7 @@ TOOLS = Path(__file__).resolve().parent
 if str(TOOLS) not in sys.path:
     sys.path.insert(0, str(TOOLS))
 
-from prepare_phase64_sparcs import audit_dataset, safe_extract  # noqa: E402
+from prepare_phase64_sparcs import audit_dataset, ensure_within, safe_extract  # noqa: E402
 
 
 class Phase64SparcsProtocolTest(unittest.TestCase):
@@ -31,6 +31,7 @@ class Phase64SparcsProtocolTest(unittest.TestCase):
             mask = np.tile(np.arange(8, dtype=np.uint8) % 7, (8, 1))
             Image.fromarray(photo).save(staging / f"{key}_photo.png")
             Image.fromarray(mask).save(staging / f"{key}_mask.png")
+            Image.fromarray(photo).save(staging / f"{key}_data.TIF")
         archive_path = root / "l8cloudmasks.zip"
         with zipfile.ZipFile(archive_path, "w", compression=zipfile.ZIP_STORED) as archive:
             for path in sorted(staging.rglob("*")):
@@ -64,6 +65,14 @@ class Phase64SparcsProtocolTest(unittest.TestCase):
             archive = self._make_release(root, unsafe=True)
             with self.assertRaisesRegex(ValueError, "Unsafe archive member"):
                 safe_extract(archive, root / "extracted")
+
+    def test_authorized_root_escape_is_rejected(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            allowed = Path(directory) / "workspace"
+            allowed.mkdir()
+            outside = allowed.parent / "shared" / "sparcs.zip"
+            with self.assertRaisesRegex(ValueError, "outside allowed root"):
+                ensure_within(outside, allowed, "archive")
 
 
 if __name__ == "__main__":
