@@ -17,6 +17,9 @@ REPO_ROOT = Path(__file__).resolve().parents[2]
 SRC_ROOT = REPO_ROOT / "src"
 SOURCE_CONFIG = SRC_ROOT / "configs/protocol/phase64_source_parent_rgb.py"
 TARGET_CONFIG = SRC_ROOT / "configs/protocol/phase64_target_parent_rgb.py"
+SOURCE_RETENTION_CONFIG = (
+    SRC_ROOT / "configs/protocol/phase64_source_retention_rgb.py"
+)
 TARGETS = ("l8", "sparcs")
 METHODS = ("shared_parent", "full", "lora", "msre")
 EXPECTED_MODEL_TYPES = {
@@ -132,16 +135,52 @@ def audit() -> dict:
                 }
             )
 
+    retention_rows = []
+    for target in TARGETS:
+        for method in METHODS:
+            with scoped_environment(
+                {
+                    "PHASE64_TARGET": target,
+                    "PHASE64_METHOD": method,
+                    "PHASE64_PARENT_CHECKPOINT": "work_dirs/frozen-parent.pth",
+                }
+            ):
+                config = Config.fromfile(SOURCE_RETENTION_CONFIG)
+            gates = {
+                "source_parent_dataset": (
+                    config.test_dataloader.dataset.type
+                    == "Phase64CloudSENParentDataset"
+                ),
+                "source_val_split": config.test_dataloader.dataset.data_prefix
+                == dict(img_path="img_dir/val", seg_map_path="ann_dir/val"),
+                "msre_target_path_gated": (
+                    method != "msre"
+                    or config.model.backbone.target_enabled is False
+                ),
+            }
+            retention_rows.append(
+                {
+                    "target": target,
+                    "method": method,
+                    "gates": gates,
+                    "passed": all(gates.values()),
+                }
+            )
+
     summary = {
         "phase": "64-day2-config-matrix",
         "source_config_sha256": sha256_file(SOURCE_CONFIG),
         "target_config_sha256": sha256_file(TARGET_CONFIG),
+        "source_retention_config_sha256": sha256_file(
+            SOURCE_RETENTION_CONFIG
+        ),
         "source_gates": source_gates,
         "matrix": rows,
+        "source_retention_matrix": retention_rows,
     }
     summary["passed"] = all(source_gates.values()) and all(
         row["passed"] for row in rows
-    )
+    ) and all(row["passed"] for row in retention_rows)
     summary["decision"] = (
         "proceed_to_model_and_data_preflight"
         if summary["passed"]
