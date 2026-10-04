@@ -35,3 +35,14 @@
 - 真实结果：SPARCS 正式审计通过：400 个归档成员、80 个样本/scene、60/10/10 split、mask 均为 1000×1000 且 ID 仅 0–6，manifest SHA256 为 `8b4305280331e42853e0cca726d54a1ca27feddc6f9e6d6c4fdfb10079353b99`。数据就绪审计通过：CloudSEN 8490/535/975、L8 `Shadows?=yes` 1560/963、SPARCS 60/10，路径、父类映射和三父类覆盖均合法。三类 source parent 训练 4000 step 完成，source-val mIoU `77.82`（surface/cloud/shadow `88.30/83.84/61.31`），checkpoint SHA256 `64dd9a20288c35ab3362b8b1c1dafc216d9c44d60868475177e139d6be859dc9`。
 - source-only 冻结基线：CloudSEN source-val mIoU `77.85`、L8 target-val `58.34`、SPARCS target-val `57.71`；对应 Shadow IoU 为 `61.38/27.15/22.03`。评估张数为 `535/963/10`，L8 为 8 个 scene、SPARCS 为 10 个 scene，均完成 2000 次分组 bootstrap；没有读取 target-test。CloudSEN 缺少可恢复的 scene ID，因此其 535 单位 bootstrap 实际是 patch 级，不能表述为独立 scene 证据。
 - 当前状态：`L8/shared_parent/seed64` 已由 source parent checkpoint 启动；iter 50 总 loss `15.2145`，各项有限，进程存活。CUDA/CuBLAS、grid sampler 和 cumsum 在 deterministic warn-only 模式下报告不可完全确定性，必须作为复现实验限制保留，不能宣称 bitwise deterministic。30 分钟心跳负责核对并串行推进矩阵。
+
+## 2026-10-05 — Day 3 单 seed 快速筛选与止损判定
+
+- 目标：完成 RGB、seed 64、4000 step 的 `L8/SPARCS × shared_parent/full/LoRA/MsRE` 冻结矩阵；每个真实最佳 target checkpoint 在同一 CloudSEN-val 535 张上复核 source forgetting，target-test 始终封存。
+- 改动：新增受保护的 source-retention launcher 与最终汇总/止损脚本；所有训练、评估均有 PID、exit 0 与完成标记。独立评估器的 CloudSEN 调色板 PNG 读取错误已用 Pillow 索引读取修复，远端回归测试通过。没有修改数据、标签、冻结超参或已有 Phase 60–62 记录。
+- 网络情况：远端 SSH 曾两次瞬时返回 `kex_exchange_identification: Connection closed by remote host`，重试后恢复；训练中 step 时间有波动，但项目内始终只有一个训练主进程，未发现 OOM、Traceback、NaN/Inf。共享目录仅只读使用，未修改或删除。
+- 止损线：核心 MsRE 必须在两个目标域相对 source-only 同向提升、平均父类 mIoU 增益至少 `+2.0`、每域 source 下降不超过 `1.0`、参数不超过 `0.50M`；Shadow 灾难性坍缩预先操作化为任一目标 Shadow `<10` 或相对基线下降超过 `10` 点。所有日志 loss 必须有限，target-test 必须封存。
+- L8 真实最佳结果（source-only `58.34`, Shadow `27.15`）：shared-parent `64.10/35.63`，source `63.21`；full `51.51/13.83`，source `38.21`；LoRA `62.80/35.71`，source `66.61`；MsRE `61.03/26.79`，source `77.81`。前三者分别 source 下降 `14.64/39.64/11.24`；MsRE 仅下降 `0.04`，目标 mIoU `+2.69`，Shadow `-0.36`。
+- SPARCS 真实最佳结果（source-only `57.71`, Shadow `22.03`）：shared-parent `69.65/42.98`，source `69.92`；full `61.05/34.56`，source `50.54`；LoRA `68.82/43.82`，source `68.16`；MsRE `67.15/41.60`，source `77.81`。前三者分别 source 下降 `7.93/27.31/9.69`；MsRE 仅下降 `0.04`，目标 mIoU `+9.44`，Shadow `+19.57`。
+- 判定：MsRE 两域同向，平均目标增益 `+6.07`，source 每域下降 `0.04`，可训练参数 `380,577`，Shadow 非灾难性坍缩；完整矩阵 loss 有限且 target-test 封存，所有预注册 Day 3 硬门通过，决策为 `continue_to_phase64b_common_six_band`。但这只是单 seed 点估计快速筛选，适配模型尚未做 scene bootstrap，CUDA warn-only 也非 bitwise deterministic；不得把它写成稳健性或统计显著性结论。
+- 产物：最终机器可读汇总位于 `src/work_dirs/phase64_final_summary/summary.json`；MsRE 最佳 checkpoint SHA256 为 L8 `fcfa934e37e1ed1569e4eded2547ee999626840a6e03e9a58395ab6d5e8a7d57`、SPARCS `88c925370b5fa08345c1b98578f657b9559eaec8e428348bd6895519ffe49fce`。
