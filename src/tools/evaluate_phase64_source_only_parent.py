@@ -20,7 +20,10 @@ import numpy as np
 import torch
 
 
-REPO_ROOT = Path(__file__).resolve().parents[1]
+TOOLS_ROOT = Path(__file__).resolve().parent
+REPO_ROOT = TOOLS_ROOT.parent
+if str(TOOLS_ROOT) not in sys.path:
+    sys.path.insert(0, str(TOOLS_ROOT))
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 

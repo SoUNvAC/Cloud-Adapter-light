@@ -11,6 +11,8 @@ import numpy as np
 
 
 TOOLS = Path(__file__).resolve().parent
+if str(TOOLS) not in sys.path:
+    sys.path.insert(0, str(TOOLS))
 MODULE_PATH = TOOLS / "evaluate_phase64_source_only_parent.py"
 SPEC = importlib.util.spec_from_file_location("evaluate_phase64_source_only_parent", MODULE_PATH)
 
