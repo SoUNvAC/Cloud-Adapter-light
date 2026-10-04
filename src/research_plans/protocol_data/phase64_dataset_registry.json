@@ -48,7 +48,7 @@
       "repository": {
         "loader": "src/dataset/cloudsen12_high.py and src/cloud_adapter/datasets/cloudsen12_high_l1c.py",
         "implemented": true,
-        "data_presence": "must_be_checked_on_execution_host"
+        "data_presence": "verified present on gzs at both /home/scv/Cloud-Adapter-light/data/cloudsen12_high_l1c and /home/scv/Cloud-Adapter-light/src/data/cloudsen12_high_l1c on 2026-10-04"
       },
       "references": [
         "https://cloudsen12.github.io/Legacy/",
@@ -91,7 +91,7 @@
       "repository": {
         "loader": "src/dataset/l8_biome.py and src/cloud_adapter/datasets/l8_biome.py",
         "implemented": true,
-        "data_presence": "raw archive may be read only at /home/scv/shared/data/l8_biome_raw; derived repository data must be checked"
+        "data_presence": "verified present on gzs in repository data paths; raw archive also present at the explicitly read-authorized /home/scv/shared/data/l8_biome_raw on 2026-10-04"
       },
       "references": [
         "https://landsat.usgs.gov/node/7",
