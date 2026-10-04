@@ -1,0 +1,194 @@
+{
+  "schema_version": 1,
+  "phase": 64,
+  "accessed_on": "2026-10-04",
+  "canonical_hierarchy": {
+    "parent_classes": [
+      "surface_visible",
+      "cloud",
+      "shadow"
+    ],
+    "display_alias": "Clear-surface / Cloud / Shadow",
+    "surface_definition": "A valid observed surface pixel not labeled as cloud or shadow. It is not restricted to clear-sky land and may have dataset-native children such as water or snow.",
+    "probability_rule": "Each native leaf belongs to exactly one parent. Parent probability is the sum of its dataset-native leaf probabilities, or is constructed directly and multiplied by conditional child probabilities.",
+    "forbidden_shortcut": "Do not silently relabel snow, water, flooded, fill, or nodata as clear-sky land."
+  },
+  "datasets": [
+    {
+      "id": "cloudsen12_high",
+      "role": "source",
+      "public": true,
+      "sensor": "Sentinel-2 MSI",
+      "product_level": "L1C TOA or L2A surface reflectance; Phase 64 freezes L1C",
+      "bands": "13 optical MSI bands at native 10/20/60 m; repository interface also exposes Sentinel-1 channels",
+      "working_resolution": "repository high-quality masks and images are 512 x 512; the selected band stack must be resampled by a frozen rule",
+      "native_labels": [
+        {"id": 0, "name": "clear", "parent": "surface_visible"},
+        {"id": 1, "name": "thick_cloud", "parent": "cloud"},
+        {"id": 2, "name": "thin_cloud", "parent": "cloud"},
+        {"id": 3, "name": "cloud_shadow", "parent": "shadow"}
+      ],
+      "ignore_labels": [],
+      "has_shadow": true,
+      "thin_thick_granularity": "pixel",
+      "shadow_annotation_scope": "complete high-quality four-class mask",
+      "full_parent_supervision_filter": "all valid high-quality pixels",
+      "splits": {
+        "type": "official_high_quality",
+        "scene_disjoint_claim": "not assumed by this registry; audit product/tile overlap before cross-dataset use",
+        "train": 8490,
+        "validation": 535,
+        "test": 975,
+        "unit": "patch"
+      },
+      "license": {
+        "name": "CC BY-NC-SA 4.0",
+        "status": "verified_on_official_project_page"
+      },
+      "repository": {
+        "loader": "src/dataset/cloudsen12_high.py and src/cloud_adapter/datasets/cloudsen12_high_l1c.py",
+        "implemented": true,
+        "data_presence": "must_be_checked_on_execution_host"
+      },
+      "references": [
+        "https://cloudsen12.github.io/Legacy/",
+        "https://doi.org/10.1038/s41597-022-01878-2"
+      ]
+    },
+    {
+      "id": "l8_biome",
+      "role": "target_primary",
+      "public": true,
+      "sensor": "Landsat-8 OLI/TIRS",
+      "product_level": "Pre-Collection Level-1T",
+      "bands": "B1-B11; OLI multispectral 30 m, pan 15 m, TIRS native 100 m delivered/resampled at 30 m",
+      "working_resolution": "30 m for the common optical protocol; B8/B10/B11 are excluded from the public-band main comparison",
+      "native_labels": [
+        {"id": 64, "name": "cloud_shadow", "parent": "shadow"},
+        {"id": 128, "name": "clear", "parent": "surface_visible"},
+        {"id": 192, "name": "thin_cloud", "parent": "cloud"},
+        {"id": 255, "name": "cloud", "parent": "cloud"}
+      ],
+      "ignore_labels": [
+        {"id": 0, "name": "fill"}
+      ],
+      "has_shadow": true,
+      "thin_thick_granularity": "pixel; native label 255 is named cloud rather than guaranteed optical-thickness-equivalent thick cloud",
+      "shadow_annotation_scope": "scene metadata field Shadows? declares whether shadow was annotated",
+      "full_parent_supervision_filter": "Shadows?=yes scenes only",
+      "splits": {
+        "type": "official_validation_collection_plus_project_locked_scene_split",
+        "scene_disjoint_claim": "the USGS release has no official train/validation/test split; Phase 45 creates a deterministic biome-stratified scene split",
+        "train": "project target_train manifest; observed historical patch count 6502",
+        "validation": "project target_val manifest; observed historical patch count 1905 before the Shadows?=yes evaluation filter",
+        "test": "project locked target_test manifest",
+        "unit": "original Landsat scene"
+      },
+      "license": {
+        "name": "USGS data release; USGS federal-data public-domain policy, subject to item metadata and required citation",
+        "status": "official_release_and_policy_verified"
+      },
+      "repository": {
+        "loader": "src/dataset/l8_biome.py and src/cloud_adapter/datasets/l8_biome.py",
+        "implemented": true,
+        "data_presence": "raw archive may be read only at /home/scv/shared/data/l8_biome_raw; derived repository data must be checked"
+      },
+      "references": [
+        "https://landsat.usgs.gov/node/7",
+        "https://doi.org/10.5066/F7251GDH",
+        "https://www.usgs.gov/data-management/data-licensing"
+      ]
+    },
+    {
+      "id": "deep_fmask",
+      "role": "target_secondary",
+      "public": true,
+      "sensor": "Sentinel-2 MSI",
+      "product_level": "L1C TOA",
+      "bands": "Sentinel-2 L1C SAFE products named by the release; common main protocol uses RGB+NIR+SWIR1+SWIR2",
+      "working_resolution": "20 m common stack, frozen before training",
+      "native_labels": [
+        {"id": 1, "name": "clear_sky_land", "parent": "surface_visible"},
+        {"id": 2, "name": "cloud", "parent": "cloud"},
+        {"id": 3, "name": "cloud_shadow", "parent": "shadow"},
+        {"id": 4, "name": "snow", "parent": "surface_visible"},
+        {"id": 5, "name": "water", "parent": "surface_visible"}
+      ],
+      "ignore_labels": [
+        {"id": 0, "name": "nodata"}
+      ],
+      "has_shadow": true,
+      "thin_thick_granularity": "none",
+      "shadow_annotation_scope": "native manually annotated shadow class",
+      "full_parent_supervision_filter": "all valid labeled pixels; snow and water remain named surface children and are separately reported",
+      "splits": {
+        "type": "official_validation_and_test_only",
+        "scene_disjoint_claim": "official release has 22 validation scenes and 23 test scenes; no manually labeled training split",
+        "train": "none; for supervised adaptation, relabel official validation as target_adapt and freeze all choices before official test",
+        "validation": 22,
+        "test": 23,
+        "unit": "Sentinel-2 SAFE scene"
+      },
+      "license": {
+        "name": "CC BY 4.0 for the label release; Copernicus terms apply to source imagery",
+        "status": "verified_on_PANGAEA_release"
+      },
+      "repository": {
+        "loader": null,
+        "implemented": false,
+        "data_presence": "official 2.1 MB label archive and SAFE lists verified locally; source Sentinel-2 SAFE imagery not downloaded",
+        "release_archive_sha256": "eb53c2dd795c1541afcef4f8cf5398953748883c82a79d9512dfa3fbb28e7bcd"
+      },
+      "references": [
+        "https://doi.org/10.1594/PANGAEA.942321",
+        "https://doi.org/10.3390/rs14081825",
+        "https://documentation.dataspace.copernicus.eu/Data/SentinelMissions/Sentinel2.html"
+      ]
+    },
+    {
+      "id": "sparcs",
+      "role": "target_backup",
+      "public": true,
+      "sensor": "Landsat-8 OLI/TIRS",
+      "product_level": "Pre-Collection validation subsets",
+      "bands": "Landsat-8 bands distributed with 1000 x 1000 subsets",
+      "working_resolution": "30 m common optical stack; fixed before use",
+      "native_labels": [
+        {"id": 0, "name": "shadow", "parent": "shadow"},
+        {"id": 1, "name": "shadow_over_water", "parent": "shadow"},
+        {"id": 2, "name": "water", "parent": "surface_visible"},
+        {"id": 3, "name": "snow", "parent": "surface_visible"},
+        {"id": 4, "name": "land", "parent": "surface_visible"},
+        {"id": 5, "name": "cloud", "parent": "cloud"},
+        {"id": 6, "name": "flooded", "parent": "surface_visible"}
+      ],
+      "ignore_labels": [],
+      "has_shadow": true,
+      "thin_thick_granularity": "none",
+      "shadow_annotation_scope": "native shadow and shadow-over-water classes; masks were produced by one analyst",
+      "full_parent_supervision_filter": "all valid labeled pixels; native surface and shadow subtypes remain separately reported",
+      "splits": {
+        "type": "official_validation_collection_without_train_val_test_split",
+        "scene_disjoint_claim": "80 independent 1000 x 1000 subsets; any development split must be preregistered and grouped by source scene",
+        "train": "none officially",
+        "validation": 80,
+        "test": "none officially",
+        "unit": "subset grouped by source Landsat scene"
+      },
+      "license": {
+        "name": "USGS data release; USGS federal-data public-domain policy, subject to item metadata and required citation",
+        "status": "official_release_and_policy_verified"
+      },
+      "repository": {
+        "loader": null,
+        "implemented": false,
+        "data_presence": "not_downloaded_as_of_day1_audit"
+      },
+      "references": [
+        "https://www.usgs.gov/landsat-missions/spatial-procedures-automated-removal-cloud-and-shadow-sparcs-validation-data",
+        "https://doi.org/10.5066/F7FB5146",
+        "https://www.usgs.gov/data-management/data-licensing"
+      ]
+    }
+  ]
+}
