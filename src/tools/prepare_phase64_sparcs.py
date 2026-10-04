@@ -162,7 +162,14 @@ def discover_pairs(data_root: Path) -> list[dict[str, Any]]:
     rows = []
     for key in sorted(photos):
         candidates = sorted(tiffs_by_key.get(key, []))
-        non_qa = [path for path in candidates if "qa" not in path.name.lower()]
+        # The official QA filename is ``*_qmask.tif`` and therefore does not
+        # contain the contiguous substring "qa".  Match the documented data
+        # product suffix exactly instead of relying on a loose QA exclusion.
+        non_qa = [
+            path
+            for path in candidates
+            if path.stem.lower() == f"{key.lower()}_data"
+        ]
         multispectral = non_qa[0] if len(non_qa) == 1 else None
         rows.append(
             {

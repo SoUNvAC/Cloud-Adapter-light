@@ -32,6 +32,9 @@ class Phase64SparcsProtocolTest(unittest.TestCase):
             Image.fromarray(photo).save(staging / f"{key}_photo.png")
             Image.fromarray(mask).save(staging / f"{key}_mask.png")
             Image.fromarray(photo).save(staging / f"{key}_data.TIF")
+            # Reproduce the official naming that exposed the old predicate:
+            # "qmask" does not contain the contiguous substring "qa".
+            Image.fromarray(mask).save(staging / f"{key}_qmask.tif")
         archive_path = root / "l8cloudmasks.zip"
         with zipfile.ZipFile(archive_path, "w", compression=zipfile.ZIP_STORED) as archive:
             for path in sorted(staging.rglob("*")):
