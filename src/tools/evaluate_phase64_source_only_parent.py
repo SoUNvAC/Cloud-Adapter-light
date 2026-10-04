@@ -18,6 +18,7 @@ os.environ.setdefault("XFORMERS_DISABLED", "1")
 import cv2
 import numpy as np
 import torch
+from PIL import Image
 
 
 TOOLS_ROOT = Path(__file__).resolve().parent
@@ -137,9 +138,11 @@ def bootstrap_scene_confusions(
 
 
 def load_parent_target(mask_path: Path, mapping: np.ndarray, size: tuple[int, int]) -> np.ndarray:
-    target = cv2.imread(str(mask_path), cv2.IMREAD_UNCHANGED)
-    if target is None:
-        raise RuntimeError(f"OpenCV could not read mask {mask_path}")
+    # Pillow preserves class indices in palette-mode PNGs.  OpenCV expands
+    # those masks to RGB/BGR palette colours and therefore destroys the
+    # semantic IDs used by mmseg's LoadAnnotations transform.
+    with Image.open(mask_path) as image:
+        target = np.asarray(image)
     if target.ndim == 3:
         if target.shape[2] != 1:
             raise RuntimeError(f"Mask is not single-channel: {mask_path} shape={target.shape}")

@@ -4,10 +4,12 @@ from __future__ import annotations
 
 import importlib.util
 import sys
+import tempfile
 import unittest
 from pathlib import Path
 
 import numpy as np
+from PIL import Image
 
 
 TOOLS = Path(__file__).resolve().parent
@@ -40,6 +42,21 @@ class Phase64SourceOnlyParentTest(unittest.TestCase):
         self.assertLessEqual(
             bootstrap["mIoU"]["ci95_low"], bootstrap["mIoU"]["ci95_high"]
         )
+
+    def test_palette_mask_keeps_class_indices(self) -> None:
+        labels = np.asarray([[0, 1], [2, 3]], dtype=np.uint8)
+        palette = [79, 253, 199, 255, 255, 255, 170, 170, 170, 85, 85, 85]
+        palette.extend([0] * (768 - len(palette)))
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "mask.png"
+            image = Image.fromarray(labels, mode="P")
+            image.putpalette(palette)
+            image.save(path)
+            target = self.module.load_parent_target(
+                path, self.module.SOURCE_TO_PARENT, labels.shape
+            )
+        expected = np.asarray([[0, 1], [1, 2]], dtype=np.int64)
+        np.testing.assert_array_equal(target, expected)
 
 
 if __name__ == "__main__":
