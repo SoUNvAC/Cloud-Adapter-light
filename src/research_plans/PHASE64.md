@@ -63,9 +63,10 @@ sum_{y:parent(y)=p} P_d(y | x) = q(p | x)
 
 ## 4. 输入与公平比较
 
-- Day 2 快速筛选主输入冻结为公共六波段：RGB+NIR+SWIR1+SWIR2。Sentinel-2 使用 B4/B3/B2/B8/B11/B12，Landsat-8 使用 B4/B3/B2/B5/B6/B7。
-- Sentinel-2 统一到 20 m；Landsat-8 维持 30 m。模型看到相同光谱语义，不声称像元物理尺度相同。
-- RGB 结果作为必报对照；Landsat 独有 pan/TIRS 与 Sentinel 独有 red-edge/cirrus 不进入 72 小时主门。
+- Day 2 的 72 小时标签空间止损筛选冻结为 RGB。原因是现有强 CloudSEN 源 checkpoint、L8 既有协议和 SPARCS 预览均为 RGB；同时改成六波段会把“标签层级”与“新增光谱信息”两个变量混在一起。
+- 仅在 Day 3 生死门通过后启动 Phase 64B 公共六波段复核：Sentinel-2 B4/B3/B2/B8/B11/B12，Landsat-8 B4/B3/B2/B5/B6/B7。该复核必须从源域重新训练同输入模型，不能把 RGB checkpoint 伪装成六波段初始化。
+- Sentinel-2 统一到 20 m、Landsat-8 维持 30 m 的方案留给 Phase 64B；任何结果都不得声称两者具有相同像元物理尺度。
+- Landsat 独有 pan/TIRS 与 Sentinel 独有 red-edge/cirrus 不进入 72 小时主门。
 - 同一目标域内，五个方法使用相同 target-adapt 样本、像素有效掩膜、增强、优化器步数、checkpoint 规则和评价集。
 - 每个目标域报告父类三类 IoU/mIoU、Shadow IoU、native 子类指标、source-val 父类与四类指标，以及训练参数量。
 - Deep Fmask 的 snow/water、SPARCS 的各 surface 子类必须原样分层；总体三类分数不能替代这些条件结果。
