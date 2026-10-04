@@ -47,3 +47,10 @@
 - 产物核验：A/B CSV各20行且除ID外全空，ID与20页完全一致；ZIP共27个成员，内部SHA清单全匹配。最终reviewer ZIP SHA256 `bdae9a616e40f894b7e780672d70467e72e94b456094bd7bb8b5b2d76446b74a`；sealed manifest SHA256 `38e1168cf3a34636debdccb89d2b1b1e54b0a52d1d58cc0020937e82f0678fd6`；packet summary SHA256 `21cde11833697ec187a600b4712462fa49158c8ed04257a30d9bfa4ee77fea7`。
 - 网络/运行：本地修改均先测试、commit和push，gzs授权仓库逐次fast-forward；远端固定使用`cloud-lite-pt210`，最终8项工具测试通过。只读访问授权的`/home/scv/shared/data/l8_biome_raw`，写入仅发生在本地/远端仓库Phase63 work dir；未训练、未启动GPU推理，未覆盖用户已有`LOG60.md`、`LOG61.md`、`LOG62.md`或`outputs/`改动。
 - 止损线：本20项只能检验UI与流程。A/B必须独立完成；两人可定位率各至少19/20、零坐标/页面/格式错误、可辨识性exact至少70%、interior中双方均判可细分至少10项且其语义exact至少60%才通过。只报告名义层原始计数；A/B原始判断冻结前禁止解封sampling字段。当前状态`awaiting_independent_review`，没有人工一致率、类别准确率、模型AUROC、coverage或Phase63C生死门结果。
+
+## 2026-10-04：semantic-coverage UI pilot 双评冻结与评分
+
+- 目标与冻结：A/B各完成20项。格式校验发现A最初有3项`target_locatable=no`但仍填`mixed_boundary`，由reviewer自行修正为`no`且后续判断留空后再次校验通过；程序未替改原始判断。nominal层解封前冻结A/B SHA256为`0ed3a23d7f93d3f1d4e102cb221153aaa8c0ddd418a0ad7a7e199b46e92d73bb`/`e4a165894e36e46e7aac0abd6f96eb09c86f3373589893143436b76b3235a63f`，lock SHA256为`6b43b587e33fbc46b347713a4178984b11f8e681c4b3849d74bce88a27ca862f`。
+- 真实结果：A/B可定位分别为17/20与20/20，共同可定位17项。可辨识性exact为15/17（88.24%），Cohen κ `-0.0625`、Gwet AC1 `0.8677`；负κ来自几乎全部选择`fine_classifiable`的极端边际分布，不能脱离exact/AC1解释。interior中双方均判可细分15项，语义exact为11/15（73.33%），κ `0.6429`、AC1 `0.6467`。平均耗时A/B为14.28/28.92秒。
+- 名义层原始计数：A在clear/shadow/thick/thin四个interior层的可细分数为4/3/4/4，另1个shadow为证据不足；B四层均为4。A的语义计数依次为`clear2+haze1+shadow1`、`shadow3`、`thick4`、`haze1+clear1+thick2`；B依次为`clear4`、`shadow3+terrain/water-shadow1`、`thick4`、`haze3+clear1`。A有3/4个名义boundary项不可定位，B的4个boundary项为2个可细分、2个证据不足。reviewer–nominal-label concordance为A 9/15、B 11/16，仅是描述性一致，不是人工准确率。
+- 止损与判定：六个预注册门中五个通过；唯一失败项为A可定位17/20低于19/20，因此`ui_pilot_pass=false`。本轮只说明当前UI/字段解释流程尚未稳定通过，不证明四类标签不可复现，也不评价模型。不得据此启动正式confirmation或Phase63C风险模型；metrics SHA256为`f163c36e903a2a6286682da4b31b936a32a08b2c0d3268aacdc22099b479e61e`。
