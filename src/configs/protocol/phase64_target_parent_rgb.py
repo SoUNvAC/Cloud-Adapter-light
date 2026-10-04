@@ -69,7 +69,7 @@ if target == "l8":
 else:
     sparcs_manifest = os.environ.get(
         "PHASE64_SPARCS_MANIFEST",
-        "work_dirs/phase64_sparcs_protocol/scene_disjoint_manifest.csv",
+        "work_dirs/phase64_sparcs_protocol_verified_v2/scene_disjoint_manifest.csv",
     )
     train_dataset = dict(
         type="Phase64SparcsManifestDataset",

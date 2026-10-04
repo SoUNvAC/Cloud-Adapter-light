@@ -237,7 +237,10 @@ def main() -> None:
     )
     parser.add_argument(
         "--sparcs-manifest",
-        default="work_dirs/phase64_sparcs_protocol/scene_disjoint_manifest.csv",
+        default=(
+            "work_dirs/phase64_sparcs_protocol_verified_v2/"
+            "scene_disjoint_manifest.csv"
+        ),
     )
     parser.add_argument("--output", default="work_dirs/phase64_source_only_parent/summary.json")
     parser.add_argument("--input-size", type=int, default=512)
