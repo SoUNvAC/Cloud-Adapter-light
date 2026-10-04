@@ -25,3 +25,13 @@
 - 止损线：正式训练前必须取得 CloudSEN derived 与 L8 derived 的明确只读授权；SPARCS 必须在仓库实体目录完成 SHA256/CRC/scene 审计；配置、checkpoint 和可训练参数硬门必须全部通过。任一额外缺失/意外权重、MsRE 超过 `0.50M` 或数据路径越界均停止。
 - 真实结果：配置矩阵 `8/8` 通过。Phase 22 输入 checkpoint SHA256 为 `d33a81337544e294a42007c6b353ee13c901ebb1e1f5261fd1d95a79e3888012`，转换输出 SHA256 为 `e518be667397ebb5a9f32781436bca6c2e0f22aa0c1ad7e6de9ad6448ac813b2`。模型实例化/加载审计通过；LoRA 可训练参数 `294,912`，MsRE `380,577`，二者训练名称与声明完全一致，MsRE 低于硬上限。尚未训练，因此没有 mIoU、Shadow IoU 或 source forgetting 结果。
 - 权限阻塞：仓库 `data` 实际解析到 `/home/scv/shared/data`；CloudSEN 根为 `/home/scv/shared/data/cloudsen12_high_l1c`，L8 manifest 指向 `data/l8_biome`（实际为 `/home/scv/shared/data/l8_biome`）。此前只授权 `/home/scv/shared/data/l8_biome_raw`，故未读取这两个 derived 目录，训练保持暂停。
+
+## 2026-10-04 — Day 2 数据解封、源基线与首个目标作业
+
+- 目标：在新增的 `/home/scv/shared/` 访问授权下完成第二目标域硬审计、冻结 source-only 父类基线，并按一次一个作业启动目标域快速筛选；共享目录保持只读。
+- 改动：从共享区已有完整 SPARCS 归档只读复制到仓库实体目录，修正 `*_qmask.tif` 与 `*_data.tif` 的精确配对规则；新增数据就绪审计、受保护训练 launcher、source retention 配置和显式父类 IoU metric。独立评估器改用 Pillow 保留 CloudSEN 调色板 PNG 的类别索引；OpenCV 会把该索引错误展开为三通道颜色。远端调色板回归测试 `2/2` 通过。
+- 网络情况：未再次联网下载数据。只读来源 `/home/scv/shared/data/sparcs/l8cloudmasks.zip` 与仓库副本均为 `1,555,733,976` bytes，SHA256 均为 `5cde604615ee241950b5a0b641ae5de82b27738b51e39aa724d18faec0bbaa9a`；失败的部分下载文件独立保留，未覆盖或删除。
+- 止损线：两个目标域相对 source-only 必须同向，父类 mIoU 平均提升至少 `+2.0`，source mIoU 下降不超过 `1.0`，MsRE 新增参数不超过 `0.50M`，Shadow 不得灾难性坍缩；target-test 继续封存。未满足即停止当前数据/骨干组合，不新增模块。
+- 真实结果：SPARCS 正式审计通过：400 个归档成员、80 个样本/scene、60/10/10 split、mask 均为 1000×1000 且 ID 仅 0–6，manifest SHA256 为 `8b4305280331e42853e0cca726d54a1ca27feddc6f9e6d6c4fdfb10079353b99`。数据就绪审计通过：CloudSEN 8490/535/975、L8 `Shadows?=yes` 1560/963、SPARCS 60/10，路径、父类映射和三父类覆盖均合法。三类 source parent 训练 4000 step 完成，source-val mIoU `77.82`（surface/cloud/shadow `88.30/83.84/61.31`），checkpoint SHA256 `64dd9a20288c35ab3362b8b1c1dafc216d9c44d60868475177e139d6be859dc9`。
+- source-only 冻结基线：CloudSEN source-val mIoU `77.85`、L8 target-val `58.34`、SPARCS target-val `57.71`；对应 Shadow IoU 为 `61.38/27.15/22.03`。评估张数为 `535/963/10`，L8 为 8 个 scene、SPARCS 为 10 个 scene，均完成 2000 次分组 bootstrap；没有读取 target-test。CloudSEN 缺少可恢复的 scene ID，因此其 535 单位 bootstrap 实际是 patch 级，不能表述为独立 scene 证据。
+- 当前状态：`L8/shared_parent/seed64` 已由 source parent checkpoint 启动；iter 50 总 loss `15.2145`，各项有限，进程存活。CUDA/CuBLAS、grid sampler 和 cumsum 在 deterministic warn-only 模式下报告不可完全确定性，必须作为复现实验限制保留，不能宣称 bitwise deterministic。30 分钟心跳负责核对并串行推进矩阵。
