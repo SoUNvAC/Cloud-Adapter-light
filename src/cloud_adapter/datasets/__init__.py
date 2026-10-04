@@ -5,6 +5,7 @@ from .cloudsen12_high_l1c import CLOUDSEN12HIGHL1CDataset
 from .cloudsen12_high_l2a import CLOUDSEN12HIGHL2ADataset
 from .l8_biome import L8BIOMEDataset
 from .manifest_seg import Phase45L8ManifestDataset, Phase50L8MappedDataset
+from .sparcs_manifest import Phase64SparcsManifestDataset
 from .weak_prevalence_sampler import WeakPrevalenceInfiniteSampler
 from .shadow_guarantee_sampler import ShadowGuaranteedInfiniteSampler
 
@@ -17,6 +18,7 @@ __all__ = [
     "L8BIOMEDataset",
     "Phase45L8ManifestDataset",
     "Phase50L8MappedDataset",
+    "Phase64SparcsManifestDataset",
     "WeakPrevalenceInfiniteSampler",
     "ShadowGuaranteedInfiniteSampler",
 ]
