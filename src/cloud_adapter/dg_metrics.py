@@ -1,4 +1,5 @@
 import os.path as osp
+import math
 from typing import Dict, Sequence
 
 import numpy as np
@@ -8,6 +9,27 @@ from PIL import Image
 from mmseg.registry import METRICS
 from mmseg.evaluation.metrics.iou_metric import IoUMetric
 from collections import defaultdict
+
+
+@METRICS.register_module()
+class Phase64IoUMetric(IoUMetric):
+    """IoUMetric that returns preregistered parent-class values explicitly."""
+
+    def compute_metrics(self, results: list) -> Dict[str, float]:
+        metrics = super().compute_metrics(results)
+        if not results:
+            raise ValueError("Phase64IoUMetric received no results")
+        total_intersect = sum((row[0] for row in results))
+        total_union = sum((row[1] for row in results))
+        iou = (total_intersect / total_union).detach().cpu().numpy() * 100.0
+        classes = tuple(self.dataset_meta["classes"])
+        if len(classes) != len(iou):
+            raise ValueError("Class metadata and confusion vectors disagree")
+        for name, value in zip(classes, iou.tolist()):
+            metrics[f"IoU/{name}"] = round(float(value), 2)
+        if not all(math.isfinite(float(value)) for value in metrics.values()):
+            raise ValueError("Phase 64 metric contains NaN or Inf")
+        return metrics
 
 
 @METRICS.register_module()

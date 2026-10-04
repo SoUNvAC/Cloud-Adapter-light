@@ -44,6 +44,10 @@ test_dataloader = dict(
         metainfo=parent_metainfo,
     ),
 )
+val_evaluator = dict(
+    type="Phase64IoUMetric", iou_metrics=["mIoU", "mDice", "mFscore"]
+)
+test_evaluator = val_evaluator
 
 load_from = (
     "work_dirs/phase64_source_parent_init/source_without_native_classifier.pth"
