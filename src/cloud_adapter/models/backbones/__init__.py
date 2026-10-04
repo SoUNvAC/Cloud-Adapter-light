@@ -31,3 +31,7 @@ from .target_msre_dinov2 import (
     SparseMsREResidual,
     TargetMsRECloudAdapterDinoVisionTransformer,
 )
+from .phase64_lora_dinov2 import (
+    Phase64FullFineTuneCloudAdapterDinoVisionTransformer,
+    Phase64LoRACloudAdapterDinoVisionTransformer,
+)
