@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+conda_hook="${PHASE64B_CONDA_HOOK:-/home/scv/miniconda3/etc/profile.d/conda.sh}"
+source "$conda_hook"
+conda activate cloud-lite-pt210
+
 ROOT="${PHASE64B_CLOUDSEN_MEMMAP_ROOT:-../phase64b_data/cloudsen12_high_raw}"
 OUT="${PHASE64B_DOWNLOAD_WORK_DIR:-work_dirs/phase64b_cloudsen_download}"
 mkdir -p "$ROOT" "$OUT"
