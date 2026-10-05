@@ -46,17 +46,18 @@ class FrozenHeadEncoderDecoder(EncoderDecoder):
 
 @MODELS.register_module()
 class Phase64BSourceEncoderDecoder(EncoderDecoder):
-    """Train only the six-band input stems and source decode head.
+    """Retrain the existing source adapter for explicit six-band input.
 
-    The DINO transformer and the post-stem adapter remain frozen.  This makes
-    the source retraining step explicit without changing the target method.
-    Target adaptation uses ``FrozenHeadEncoderDecoder`` and therefore freezes
-    these source-trained stems.
+    The frozen DINO transformer is unchanged.  Its six-channel patch stem,
+    the existing Cloud-Adapter, and the existing source decode head are
+    retrained, matching the source-model training role without introducing a
+    new head, loss, or router.  Target adaptation uses
+    ``FrozenHeadEncoderDecoder`` and freezes these source-trained components.
     """
 
     _TRAINABLE_BACKBONE_PREFIXES = (
         "patch_embed",
-        "cloud_adapter.cnn.proj_1x1",
+        "cloud_adapter",
     )
 
     def train(self, mode=True):
