@@ -7,7 +7,11 @@ conda activate cloud-lite-pt210
 
 ROOT="${PHASE64B_CLOUDSEN_MEMMAP_ROOT:-../phase64b_data/cloudsen12_high_raw}"
 OUT="${PHASE64B_DOWNLOAD_WORK_DIR:-work_dirs/phase64b_cloudsen_download}"
-mkdir -p "$ROOT" "$OUT"
+HF_ROOT="${PHASE64B_HF_HOME:-../phase64b_data/huggingface_home}"
+export HF_HOME="$HF_ROOT"
+export HF_HUB_CACHE="$HF_ROOT/hub"
+export HF_XET_CACHE="$HF_ROOT/xet"
+mkdir -p "$ROOT" "$OUT" "$HF_HUB_CACHE" "$HF_XET_CACHE"
 
 python - "$ROOT" <<'PY'
 import sys
