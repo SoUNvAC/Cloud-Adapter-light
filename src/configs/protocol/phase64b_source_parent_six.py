@@ -12,8 +12,7 @@ stats_path = os.environ.get(
 )
 if not os.path.isfile(stats_path):
     raise FileNotFoundError(f"Run the frozen Phase64B-0 audit first: {stats_path}")
-with open(stats_path, encoding="utf-8") as protocol_handle:
-    protocol = json.load(protocol_handle)
+protocol = json.loads(open(stats_path, encoding="utf-8").read())
 if protocol.get("target_test_reads") != 0:
     raise RuntimeError("Phase64B protocol must certify zero target-test reads")
 stats = protocol["source_train_stats"]
