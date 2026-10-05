@@ -3,6 +3,7 @@ __pycache__/
 **.pyc
 **.pth
 data/
+phase64b_data/
 data
 checkpoints/
 envs/

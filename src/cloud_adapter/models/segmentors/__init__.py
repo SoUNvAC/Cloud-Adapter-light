@@ -1,4 +1,7 @@
-from .frozen_encoder_decoder import FrozenBackboneEncoderDecoder
+from .frozen_encoder_decoder import (
+    FrozenBackboneEncoderDecoder,
+    Phase64BSourceEncoderDecoder,
+)
 from .logit_distill_encoder_decoder import LogitDistillEncoderDecoder
 from .pixel_feature_distill_encoder_decoder import PixelFeatureDistillEncoderDecoder
 from .label_remap_encoder_decoder import LabelRemapEncoderDecoder
@@ -16,6 +19,7 @@ from .partial_label_encoder_decoder import PartialLabelFrozenHeadEncoderDecoder
 
 __all__ = [
     "FrozenBackboneEncoderDecoder",
+    "Phase64BSourceEncoderDecoder",
     "LabelRemapEncoderDecoder",
     "LogitDistillEncoderDecoder",
     "PixelFeatureDistillEncoderDecoder",

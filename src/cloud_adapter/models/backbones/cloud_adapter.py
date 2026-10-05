@@ -496,6 +496,7 @@ class CloudAdapter(nn.Module):
     def __init__(self,
                  cnn_type="convnext",  # convnext or mobilenet
                  int_type="convnext",  # cross_attention or
+                 in_channels=3,
                  # 共同的参数 start
                  emd_dim=1024,
                  num_layers=24,
@@ -530,6 +531,7 @@ class CloudAdapter(nn.Module):
         self.net = nn.Identity()
         if cnn_type == "pmaa":
             self.cnn = PMAAConvBlock(
+                in_channels=in_channels,
                 hidden_channels=hidden_channels,
                 depth=depth,
                 norm=norm,
@@ -540,7 +542,8 @@ class CloudAdapter(nn.Module):
                 has_block=has_block
             )
         elif cnn_type == "convnext":
-            self.cnn = ConvNeXt(depths=[1]*4,
+            self.cnn = ConvNeXt(in_chans=in_channels,
+                                depths=[1]*4,
                                 dims=[context_dim]*4,
                                 return_multi_feats=return_multi_feats,
                                 return_last_feature=return_last_feature

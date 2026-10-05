@@ -15,6 +15,7 @@ class CloudAdapterDinoVisionTransformer(DinoVisionTransformer):
         cloud_adapter_config=None,
         has_cat=False,
         save_backbone=False,
+        save_input_stem=False,
         active_block_indices=None,
         # [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, ],
         adapter_index=[0, 6, 12, 18],  # Transformer Block 的索引
@@ -24,6 +25,7 @@ class CloudAdapterDinoVisionTransformer(DinoVisionTransformer):
         self.cloud_adapter: CloudAdapter = MODELS.build(cloud_adapter_config)
         self.has_cat = has_cat
         self.save_backbone = save_backbone
+        self.save_input_stem = bool(save_input_stem)
         self.adapter_index = adapter_index
         self.active_block_indices = resolve_active_block_indices(
             len(self.blocks),
@@ -131,7 +133,12 @@ class CloudAdapterDinoVisionTransformer(DinoVisionTransformer):
         )
         if self.save_backbone:
             return state
-        keys = [key for key in state if "cloud_adapter" not in key]
+        keys = [
+            key
+            for key in state
+            if "cloud_adapter" not in key
+            and not (self.save_input_stem and key.startswith("patch_embed."))
+        ]
         for key in keys:
             state.pop(key)
         return state
