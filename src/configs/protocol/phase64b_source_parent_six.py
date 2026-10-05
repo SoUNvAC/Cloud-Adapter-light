@@ -4,18 +4,16 @@ _base_ = ["./phase64_source_parent_rgb.py"]
 
 import json
 import os
-from pathlib import Path
 
 
-stats_path = Path(
-    os.environ.get(
-        "PHASE64B_PROTOCOL_SUMMARY",
-        "work_dirs/phase64b_input_protocol/summary.json",
-    )
+stats_path = os.environ.get(
+    "PHASE64B_PROTOCOL_SUMMARY",
+    "work_dirs/phase64b_input_protocol/summary.json",
 )
-if not stats_path.is_file():
+if not os.path.isfile(stats_path):
     raise FileNotFoundError(f"Run the frozen Phase64B-0 audit first: {stats_path}")
-protocol = json.loads(stats_path.read_text(encoding="utf-8"))
+with open(stats_path, encoding="utf-8") as protocol_handle:
+    protocol = json.load(protocol_handle)
 if protocol.get("target_test_reads") != 0:
     raise RuntimeError("Phase64B protocol must certify zero target-test reads")
 stats = protocol["source_train_stats"]
