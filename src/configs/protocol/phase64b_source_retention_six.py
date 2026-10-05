@@ -8,7 +8,10 @@ import os
 if os.environ.get("PHASE64B_METHOD", "").strip().lower() != "msre":
     raise ValueError("Phase64B source-retention config is defined only for MsRE")
 
-model = dict(backbone=dict(target_enabled=False))
+model = dict(
+    backbone=dict(target_enabled=False),
+    test_cfg=dict(mode="whole"),
+)
 memmap_root = os.environ.get(
     "PHASE64B_CLOUDSEN_MEMMAP_ROOT",
     "../phase64b_data/cloudsen12_high_raw",

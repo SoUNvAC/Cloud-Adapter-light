@@ -179,6 +179,13 @@ def plot(rows: list[dict], source_miou: float, out_dir: Path) -> None:
             bbox_inches="tight",
         )
     plt.close(fig)
+    from PIL import Image
+
+    with Image.open(out_dir / "phase64_rgb_pareto.png") as image:
+        image.convert("L").save(
+            out_dir / "phase64_rgb_pareto_grayscale.png",
+            dpi=(300, 300),
+        )
 
 
 def main() -> None:
