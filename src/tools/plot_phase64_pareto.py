@@ -81,7 +81,6 @@ def nondominated(rows: list[dict]) -> set[str]:
 
 def plot(rows: list[dict], source_miou: float, out_dir: Path) -> None:
     import matplotlib.pyplot as plt
-    from matplotlib.lines import Line2D
 
     plt.rcParams.update(
         {
@@ -103,10 +102,18 @@ def plot(rows: list[dict], source_miou: float, out_dir: Path) -> None:
     maximum = max(row["trainable_parameters"] for row in rows)
     fig, axes = plt.subplots(1, 2, figsize=(7.2, 3.15), sharex=True, sharey=True)
     offsets = {
-        "shared_parent": (5, 5),
-        "full": (5, -11),
-        "lora": (5, -11),
-        "msre": (5, 5),
+        "l8": {
+            "shared_parent": (6, -15),
+            "full": (5, -11),
+            "lora": (-39, 8),
+            "msre": (5, 5),
+        },
+        "sparcs": {
+            "shared_parent": (5, 5),
+            "full": (5, -11),
+            "lora": (5, -16),
+            "msre": (5, 5),
+        },
     }
     for ax, target in zip(axes, ("l8", "sparcs")):
         target_rows = [row for row in rows if row["target"] == target]
@@ -131,7 +138,7 @@ def plot(rows: list[dict], source_miou: float, out_dir: Path) -> None:
             ax.annotate(
                 LABELS[row["method"]],
                 (row["target_gain_miou"], row["source_retention_miou"]),
-                xytext=offsets[row["method"]],
+                xytext=offsets[target][row["method"]],
                 textcoords="offset points",
                 fontsize=6.5,
             )
@@ -141,14 +148,6 @@ def plot(rows: list[dict], source_miou: float, out_dir: Path) -> None:
         ax.set_ylim(0.0, 82.5)
         ax.grid(axis="both", color="#E5E5E5", linewidth=0.5, zorder=-1)
     axes[0].set_ylabel("Retained CloudSEN source mIoU (%)")
-    method_handles = [
-        Line2D(
-            [0], [0], marker=MARKERS[method], color="none",
-            markerfacecolor=COLORS[method], markeredgecolor="white",
-            markersize=6, label=LABELS[method]
-        )
-        for method in METHODS
-    ]
     parameter_examples = (0.3, 1.3, 23.6)
     size_handles = [
         plt.scatter(
@@ -158,14 +157,6 @@ def plot(rows: list[dict], source_miou: float, out_dir: Path) -> None:
         )
         for value in parameter_examples
     ]
-    first = axes[1].legend(
-        handles=method_handles,
-        title="Method",
-        frameon=False,
-        loc="lower right",
-        bbox_to_anchor=(1.0, 0.27),
-    )
-    axes[1].add_artist(first)
     axes[1].legend(
         handles=size_handles,
         title="Trainable params\n(log-scaled area)",
