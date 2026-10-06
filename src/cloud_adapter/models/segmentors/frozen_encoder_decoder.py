@@ -23,6 +23,7 @@ class FrozenBackboneEncoderDecoder(EncoderDecoder):
         self.backbone.eval()
         for param in self.backbone.parameters():
             param.requires_grad = False
+        return self
 
     def extract_feat(self, inputs: Tensor) -> List[Tensor]:
         """Extract features from images."""
