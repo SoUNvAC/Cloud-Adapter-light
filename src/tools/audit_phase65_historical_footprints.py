@@ -8,6 +8,7 @@ can overexclude but does not choose scenes using model outcomes or label pixels.
 import argparse
 import csv
 import json
+import math
 from pathlib import Path
 from phase65a_freeze import allowed, digest
 
@@ -59,15 +60,23 @@ def main():
             raise ValueError('Historical split leakage; test raster forbidden')
         try:
             with rasterio.open(path) as dataset:
-                epsg = dataset.crs.to_epsg() if dataset.crs else None
-                if not epsg or not (32601 <= epsg <= 32660 or 32701 <= epsg <= 32760):
-                    raise ValueError('Unknown/metre-based UTM CRS required')
+                if not dataset.crs or not dataset.crs.is_projected:
+                    raise ValueError('Known projected CRS required for native metre buffer')
+                epsg = dataset.crs.to_epsg()
+                units, metre_factor = dataset.crs.linear_units_factor
+                if not math.isfinite(metre_factor) or metre_factor <= 0:
+                    raise ValueError('Unknown projected-unit scale')
+                native_buffer = 100 / metre_factor
                 b = dataset.bounds
                 bounds = transform_bounds(dataset.crs, 'EPSG:4326',
-                                          b.left - 100, b.bottom - 100,
-                                          b.right + 100, b.top + 100, densify_pts=21)
+                                          b.left - native_buffer, b.bottom - native_buffer,
+                                          b.right + native_buffer, b.top + native_buffer, densify_pts=101)
+                if not all(math.isfinite(v) for v in bounds) or not -90 <= bounds[1] <= bounds[3] <= 90:
+                    raise ValueError('Invalid geographic bounds after reprojection')
                 metadata = dict(domain=domain, scene=scene, raster_path=str(path),
-                                native_epsg=epsg, raster_shape=[dataset.height, dataset.width],
+                                native_epsg=epsg, native_crs_wkt=dataset.crs.to_wkt(),
+                                native_units=units, native_unit_metre_factor=metre_factor,
+                                raster_shape=[dataset.height, dataset.width],
                                 buffered_wgs84_bounds=list(bounds))
             left, bottom, right, top = bounds
             rectangles = [box(left, bottom, right, top)] if right >= left else [
