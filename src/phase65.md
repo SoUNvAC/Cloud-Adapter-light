@@ -99,3 +99,10 @@
 - 网络情况：原receiver PID24076已退出，transfer.log明确Connection reset/Broken pipe，partial=3295805440 bytes。SSH重新连通；保留前缀本地与远端SHA256=ca93a3e0fe7ad146ad638d7db4ffcb071b14b7f2685c4fdd86080ff5d05cec29一致。SFTP尝试PID31176确认退出后，隐藏接收器PID20696启动；实际读取partial已增长至3311534080 bytes，未出现新的TRANSFER_EXIT_CODE。
 - 止损线：进程退出才恢复；前缀不匹配禁止追加，不覆盖partial、不删除远端结果。完整归档及逐文件SHA未通过不写BACKUP_VERIFIED；固定研究支持门不变，继续禁止训练及65b/65c。
 - 结果：断线已诊断，SSH二进制续传已实际恢复，历史备份尚未完成。双机7文件仍all_files_verified、清单审计退出码0，失败划分和审计报告SHA与本地备份一致，无新实验指标。原失败PID/退出码保存为outputs/phase65/backup/*failed_20261006_2040，日志保留。
+
+## 65a / 2026-10-06 21:10 巡检 / 长连接超时后分段续传
+- 目标：恢复再次超时的历史全量备份，缩短单次SSH连接时长。
+- 改动：receive_phase65_archive.py改为每连接最多32MiB的GNU dd字节范围读取，严格核对各段长度，断线保留已收前缀；原完整SHA/逐文件校验仍必需。新增3项测试覆盖精确分段续传、前缀不符禁止追加、断线保留已收字节；本地通过。首次远端测试因测试目录尚不存在而失败，修复夹具显式创建授权目录后两端3/3通过。493acc9/74611a1均本地push、远端pull后使用。
+- 网络情况：SSH长连接报Timeout, server frp-gap.com not responding，旧PID20696已退出、TRANSFER_EXIT_CODE=1，partial=3974168576 bytes。重新连接成功，远端HEAD=74611a1；前缀两端SHA256=f04df397c5fe0da103788e3be919317dad683f84cdcced2f4c5f36cb48f6b371一致。新隐藏接收器PID32212活跃，partial已增长至3976265728 bytes，无新TRANSFER_EXIT_CODE；尚不能声称分段方案已证明长期稳定。
+- 止损线：旧接收器退出才恢复；前缀错或段长度错停止，不覆盖已收数据、不删除远端结果。完整包及逐文件校验前禁止标记备份完成；研究支持门保持停止。
+- 结果：分段续传已实际开始，历史全量备份未完成。双机7文件仍all_files_verified、下载及审计退出码0，失败方案与审计报告SHA未变；无新模型预测/训练或性能指标。原超时PID及退出码保存outputs/phase65/backup/*timeout_20261006_2110，原日志保留。
