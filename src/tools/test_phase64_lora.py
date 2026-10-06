@@ -50,6 +50,16 @@ class Phase64LoRATest(unittest.TestCase):
         self.assertTrue(torch.equal(base_before, lora.weight))
         self.assertGreater(float(lora.lora_b.abs().sum()), 0.0)
 
+    def test_disabled_path_is_exact_base_linear(self) -> None:
+        torch.manual_seed(66)
+        linear = nn.Linear(7, 9)
+        lora = LoRALinear.from_linear(linear, rank=3, alpha=6.0)
+        with torch.no_grad():
+            lora.lora_b.normal_()
+        inputs = torch.randn(2, 5, 7)
+        lora.enabled = False
+        self.assertTrue(torch.equal(lora(inputs), linear(inputs)))
+
 
 if __name__ == "__main__":
     unittest.main()

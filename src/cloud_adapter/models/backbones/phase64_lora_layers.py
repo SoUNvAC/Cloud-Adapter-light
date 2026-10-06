@@ -37,6 +37,7 @@ class LoRALinear(nn.Linear):
         self.rank = int(rank)
         self.alpha = float(alpha)
         self.scaling = self.alpha / self.rank
+        self.enabled = True
         self.lora_dropout = nn.Dropout(dropout) if dropout else nn.Identity()
         self.lora_a = nn.Parameter(torch.empty(self.rank, in_features))
         self.lora_b = nn.Parameter(torch.zeros(out_features, self.rank))
@@ -65,6 +66,8 @@ class LoRALinear(nn.Linear):
 
     def forward(self, inputs: Tensor) -> Tensor:
         base = F.linear(inputs, self.weight, self.bias)
+        if not self.enabled:
+            return base
         low_rank = F.linear(F.linear(self.lora_dropout(inputs), self.lora_a), self.lora_b)
         return base + self.scaling * low_rank
 

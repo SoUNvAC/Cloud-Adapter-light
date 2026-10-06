@@ -20,12 +20,14 @@ class Phase64LoRACloudAdapterDinoVisionTransformer(CloudAdapterDinoVisionTransfo
         lora_alpha: float = 4.0,
         lora_dropout: float = 0.0,
         lora_targets=("qkv", "proj", "fc1", "fc2"),
+        lora_enabled: bool = True,
         **kwargs,
     ) -> None:
         super().__init__(**kwargs)
         self.lora_rank = int(lora_rank)
         self.lora_alpha = float(lora_alpha)
         self.lora_targets = tuple(lora_targets)
+        self.lora_enabled = bool(lora_enabled)
         allowed = {"qkv", "proj", "fc1", "fc2"}
         if not self.lora_targets or not set(self.lora_targets).issubset(allowed):
             raise ValueError(f"lora_targets must be a non-empty subset of {sorted(allowed)}")
@@ -52,6 +54,14 @@ class Phase64LoRACloudAdapterDinoVisionTransformer(CloudAdapterDinoVisionTransfo
                             dropout=lora_dropout,
                         ),
                     )
+        self.set_lora_enabled(self.lora_enabled)
+
+    def set_lora_enabled(self, enabled: bool) -> None:
+        """Enable the target low-rank residual without merging base weights."""
+        self.lora_enabled = bool(enabled)
+        for module in self.modules():
+            if isinstance(module, LoRALinear):
+                module.enabled = self.lora_enabled
 
     def train(self, mode: bool = True):
         nn.Module.train(self, mode)
