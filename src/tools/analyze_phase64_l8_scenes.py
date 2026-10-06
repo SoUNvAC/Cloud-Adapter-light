@@ -127,6 +127,15 @@ def main() -> None:
             "gt_shadow_pct": 100.0 * float(gt[2]) / valid,
             "source_parent_mIoU": source_metric["mIoU"],
             "source_parent_shadow_iou": source_metric["per_class_iou"]["shadow"],
+            "source_shadow_to_surface_pct": (
+                100.0 * float(source_confusion[2, 0]) / shadow_pixels
+            ),
+            "source_shadow_to_cloud_pct": (
+                100.0 * float(source_confusion[2, 1]) / shadow_pixels
+            ),
+            "source_shadow_correct_pct": (
+                100.0 * float(source_confusion[2, 2]) / shadow_pixels
+            ),
             "mean_delta_mIoU": float(
                 np.mean([row["delta_mIoU"] for row in per_seed])
             ),
@@ -144,6 +153,15 @@ def main() -> None:
             ),
             "mean_delta_shadow_to_cloud_pp": float(
                 np.mean([row["delta_shadow_to_cloud_pp"] for row in per_seed])
+            ),
+            "mean_delta_shadow_correct_pp": float(
+                -np.mean(
+                    [
+                        row["delta_shadow_to_surface_pp"]
+                        + row["delta_shadow_to_cloud_pp"]
+                        for row in per_seed
+                    ]
+                )
             ),
             "per_seed": per_seed,
         }
