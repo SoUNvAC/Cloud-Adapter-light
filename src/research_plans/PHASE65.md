@@ -21,6 +21,14 @@
 
 这是同传感器跨数据集诊断，不能据此宣称Landsat跨传感器收益。统计代码与新数据loader完成并冻结前，训练仍不启动。
 
+### 2026-10-06：元数据分组规则（尚未选取或评估确认集）
+
+对513个产品，按同MGRS tile或同采集日期+relative orbit作传递闭包分组，避免相关产品落在不同split。`shadows_marked=0`仅可作为分组连接节点，绝不进入训练/评估样本。group只要任一成员与source的MGRS tile（任意日期）相同、或合格候选与source/旧target-train-val空间footprint重叠，整个group排除。历史目标审计仅打开训练/验证TIFF头信息；sealed test只读取manifest的scene IDs，不打开对应栅格。旧历史L8 shadow-invalid场景只参与旧使用谱系排除，不作为新实验数据。
+
+source及历史geometry均保守扩张100m，历史用整个已使用scene栅格的地理外包矩形而非挑选patch；这会过度排除，须报告覆盖边界。保留极地投影场景并按头信息CRS+线性单位正确重投影，不猜坐标系。
+
+此规则尚只产生`groups_prepared_not_split_locked`元数据清单，不授权训练。最终group-based训练/开发验证/确认划分、每独立group的统计代表及H1/H2有效分母支持规则须在任何新模型预测或指标之前写清楚并冻结；不把产品数量当独立场景样本量。前述L8逐scene冻结脚本不可直接用于Sentinel相关产品池。
+
 ## phase65a：两周内判定是否值得继续
 
 冻结旧八场景探索产物及哈希，固定 hypothesis，不重新定义相关性追显著。
