@@ -33,10 +33,9 @@ try {
             "Verified resume prefix: $phase65PrefixSize bytes SHA256=$phase65PrefixActual" | Add-Content -LiteralPath $phase65Log
         }
     }
-    $phase65Batch = Join-Path $phase65Backup 'sftp_resume.batch'
-    $phase65SftpDestination = $phase65Partial.Replace('\', '/')
-    Set-Content -LiteralPath $phase65Batch -Encoding ascii -Value ('reget /home/scv/Cloud-Adapter-light/src/result_backups/phase65_20261006/all_work_dirs.tar "' + $phase65SftpDestination + '"')
-    & sftp -o ServerAliveInterval=30 -o ServerAliveCountMax=6 -b $phase65Batch gzs >> $phase65Log 2>&1
+    # Windows SFTP reget failed to open this retained large partial; use a binary
+    # SSH stream with Python file IO. The helper independently verifies the prefix.
+    & python (Join-Path $phase65Repo 'src\tools\receive_phase65_archive.py') --partial $phase65Partial >> $phase65Log 2>&1
     if ($LASTEXITCODE -ne 0) { throw 'Archive transfer failed; partial preserved' }
     Move-Item -LiteralPath $phase65Partial -Destination $phase65Tar
     & python (Join-Path $phase65Repo 'src\tools\backup_phase65.py') verify --archive $phase65Tar >> $phase65Log 2>&1
