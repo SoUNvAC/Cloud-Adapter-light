@@ -62,3 +62,11 @@
 - 结果：首轮历史审计解析134/142，8个场景因首版只接受UTM而blocked（产物保留）。检查头信息确认8个均为米制EPSG:3031；修复为按已知projected CRS及单位换算、101点加密重投影后，142/142解析完成，无未解析项，11个新shadow-valid候选与历史train/val的保守bounds重叠。仅打开train/val TIFF头，未读取任何栅格像元、标签或sealed test文件。
 - 分组：513产品按同MGRS tile或同采集date+relative orbit做传递闭包，得到493组；源tile任意日期/源footprint/历史footprint及shadow-invalid-only组排除后，377候选组含384个shadow-valid产品，116组排除。89个shadows_marked=0不作为样本，只可作为相关性连接节点。没有按difficulty、真值比例、预测或性能筛选。H1/H2支持分母和group-based模型选择/统计代表规则仍须预先定稿，完整下载、数组/loader审核及冻结仍待完成，训练未启动。
 - 验证与备份：3项分组测试本地/远端通过，原5项协议测试本地通过；两机完整group成员及排除标记相同，其canonical SHA256=a5a47c521f54adc1b5cdbc5eea1ab763a9bbb8e20429c37cccd1f8cd678c9acd。新work_dir结果已按原层级回传outputs/phase65/work_dirs/phase65a/source_provenance/并核对SHA：historical_overlap首版35ca7899679bc5333883bba33988617f0d55e74e38fdf2698ad3940e48365dd6；v2=5643bc9c3be55b8a9d467c6bed50d26f9cc4c702a745c9683e40e784c20a1ea5；远端scene_groups备份=41251fcc6177acd42782e2974cd76c82f333a14d0af65ee87aeb10114e79cb57。尚无新模型性能指标。
+
+## 65a / 2026-10-06 18:40–18:53 北京时间 / 预分析支持门停止
+- 目标：在新预测/性能分析前冻结独立组划分、统计代表、H1支持域和source checkpoint，检查是否允许进入训练准备。
+- 改动：PHASE65.md保留旧稿并明确预分析修订理由；按固定SHA顺序划分64组65a、64组65b、64组65c、32组开发验证、153组fit，固定每组代表。新增freeze_phase65_sentinel_split.py及3项划分/支持门测试，本地和远端均通过；代码已本地push、远端pull。失败方案写入split_lock.json，不重抽或放宽支持门。
+- 网络情况：18:52 SSH正常，远端HEAD=2a5b8b9、cloud-lite-pt210检查已完成；本地PID3236及远端launcher PID81799继续下载，两端6/7文件已验证，subscenes.zip.partial分别11923357696和11805917184/15197196473 bytes，无下载错误。旧34GB备份接收器PID24076仍活跃，partial=2098757632 bytes，未完成全包/逐文件校验。
+- 止损线：预先设定fit和65a_confirmation各至少16个固定代表的public shadow_percent>0，任一不足则停止主检验；该真值支持字段仅用于离线分析支持域，不得作部署风险输入。不借用65b/65c、不改相关性或抽样追显著；下载与安全备份继续。
+- 结果：fit支持41、65a_confirmation支持15（64个固定代表中），低于所需16。状态stopped_insufficient_h1_support，training_authorized=false；未训练、未读取新模型预测或目标像元，未估计相关性、AUROC或分割收益。此为支持样本门不足，不是H1/H2的实证否定；65b/65c不得推进。
+- 冻结和备份：source checkpoint SHA256=64dd9a20288c35ab3362b8b1c1dafc216d9c44d60868475177e139d6be859dc9；失败方案含377组完整固定分配及预注册SHA，远端src/work_dirs/phase65a/split_lock.json已传回outputs/phase65/work_dirs/phase65a/split_lock.json，两端SHA256=a431745e7a17bbd4a7b9e12ef3bf76767d4eb827911bd5cb5e632683c2177f7b一致。完整发布清单审核仍须等待双机7文件全部验证，不能称数据或历史全量备份完成。
