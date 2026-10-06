@@ -77,3 +77,11 @@
 - 网络情况：SSH正常，远端代码1ce6fce；双机下载进程仍活跃、日志无错误、partial持续增长，两端均6/7已验证。本地主影像状态13676576768/15197196473 bytes，远端13484687360/15197196473 bytes；本地备份接收器活跃，partial=2383511552 bytes，transfer.log无错误。
 - 止损线：7文件未全部校验不做双机完整清单审核；完整历史包未逐文件SHA校验不标记备份完成；固定15/16支持门继续禁止训练及65b/65c。
 - 结果：下载和备份尚未完成，未发现需要恢复的失败；BACKUP_VERIFIED及TRANSFER_EXIT_CODE均尚不存在，无新模型预测或实验指标。下一轮继续检查全文件校验条件。
+
+## 65a / 2026-10-06 19:40–19:43 北京时间 / 双机发布文件完整校验通过
+- 目标：完成授权Sentinel下载、双机一致性核验及metadata-only清单审计，备份本轮远端work_dir产物。
+- 改动：使用已push/pull的audit_phase65_sentinel_catalogue.py分别在本地及远端cloud-lite-pt210运行；互传download_status并检查7文件bytes、固定官方MD5、SHA256、ZIP CRC一致。不改失败划分，不训练。
+- 网络情况：SSH/scp正常；远端下载完成于UTC11:30:50，EXIT_CODE=0；本地完成于UTC11:39:04，下载进程已退出、error.log无错误。两端all_files_verified。历史34GB包接收器PID24076仍活跃，19:40读取partial=2813460480 bytes、transfer.log无错误，完整包尚未传回校验。
+- 止损线：完整发布文件校验不能替代独立scene或训练管线审核；15/16支持门保持停止，65b/65c不推进；历史包BACKUP_VERIFIED尚不存在，不称全量备份完成。
+- 结果：7/7文件长度/官方MD5通过，全部ZIP CRC通过且保存SHA256，两机逐文件一致。主影像15197196473 bytes、MD5=0ad1de0ebeaff529782f456cad2e966f、SHA256=04949b0d04250ace486386ac166caa4825289cd9d4f1bff67fa323ba23eaca88。两端清单审计通过：513唯一products与影像/主mask ZIP成员一致；424 shadows_marked=1（421 tiles），89无可靠shadow标注排除；MAIN453/VALIDATION50/CALIBRATION10仅标注阶段。未读取目标像元/标签或产生模型预测/性能指标。
+- 产物与备份：本地outputs/phase65/sentinel_download/remote_download_status.json及catalogue_audit.json；远端work_dirs/phase65a/sentinel_download/catalogue_audit.json、AUDIT_EXIT_CODE=0。该目录7个文件已传回outputs/phase65/work_dirs/phase65a/sentinel_download并逐文件SHA核对全部一致，清单保存outputs/phase65/sentinel_download/remote_workdir_sha256.txt；远端审计报告SHA256=6cdb58b0b069e706e6bb5b9f585eb72d3d74d3b294758b9cfd32eea1d2c23645。审计状态release_verified_not_training_ready；其通用pending列表不是既有source审计失败，也不覆盖已记录的支持门停止状态。
