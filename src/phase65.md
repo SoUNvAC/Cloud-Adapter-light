@@ -127,3 +127,10 @@
 - 网络情况：SSH正常，远端HEAD=7b6b144；接收器PID32212存活，partial=4945149952 bytes，比上轮4782620672增加162529280 bytes；transfer.log无新增错误，当前TRANSFER_EXIT_CODE及BACKUP_VERIFIED均不存在。
 - 止损线：完整归档及逐文件SHA未通过不标记备份完成；15/16支持门继续禁止训练及65b/65c。
 - 结果：两机7文件仍all_files_verified，远端下载/审计退出码0，失败划分及审计报告SHA未变；全量备份继续传输，暂无新模型预测或实验指标，无需恢复进程。
+
+## 65a / 2026-10-06 23:10–23:14 北京时间 / 备份远端断线恢复检查
+- 目标：恢复再次被远端关闭的历史备份连接，严格保留已收内容。
+- 改动：使用现有分段续传脚本，不修改代码或研究方案；确认PID32212已退出、TRANSFER_EXIT_CODE=1后，将原PID/退出码保留为outputs/phase65/backup/*disconnect_20261006_2310，启动隐藏接收器PID24452。
+- 网络情况：日志明确Connection to frp-gap.com closed by remote host和segment incomplete；partial保留5311561728 bytes。SSH巡检正常，远端HEAD=7bb6b5b。恢复脚本第一层前缀校验通过，SHA256=74ad8e19dc970fc92568f2a53bb7e8a81f5279d21bdfeeacb44472105bdbcdb2；Python接收辅助进程已启动，独立第二层前缀校验尚无完成输出，partial暂未增长，新接收器活跃、无新TRANSFER_EXIT_CODE。
+- 止损线：第二层校验通过才追加；已有前缀不匹配或段长度错误停止，完整包及逐文件SHA未通过不称备份完成；研究支持门停止不变。
+- 结果：恢复流程已启动，但本轮尚不能确认实际续传恢复，下一轮检查第二层校验结果及partial增长。双机7文件仍all_files_verified，远端下载/审计退出码均0，失败方案与审计报告SHA未变；无新训练或实验指标。进程详情CIM只读查询被系统拒绝，改用Get-Process检查存活，未修改权限或系统。
