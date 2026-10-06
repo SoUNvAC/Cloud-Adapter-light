@@ -46,3 +46,7 @@
 - `source_switch.json`: `44cb482b64dc4748e3d3dbcd9b6e517b07e8a0b3b3aa352e6e6cb769ea327576`
 - `paired_scene.json`（seed64）: `4929cbe23d6f712d572e298e646e60334fff034f88e9d4a5d86714ea7f2962bc`
 - `multiseed_summary.json`: `a2dded2d1e24578ce3f296c8f432175aa49d0cfa7eadd7b5ed6e6798982517f6`
+
+## 后续公平口径更正（2026-10-06）
+
+上述“多 seed 真实结果”中的 target delta 使用了旧四类 checkpoint 聚合三类的 source-only（L8 `58.3357`，SPARCS `57.7128`），而各适配模型实际从另训的三父类 source checkpoint 初始化。为保证只比较适配增量，后续以同一个三父类 checkpoint 重新推理 target-val，得到 L8 `58.0530` / Shadow `26.3248`，SPARCS `55.5775` / Shadow `20.3268`。据此：L8 三 seed 平均 `ΔmIoU=+3.4639`、`ΔShadow=+1.7768`；SPARCS 三 seed平均 `ΔmIoU=+11.8301`、`ΔShadow=+21.8396`。本更正只取代 target delta 的基线口径；源域开关审计、模型绝对指标、随机性和“L8 scene 不确定、SPARCS 稳定”的结论不变。完整终点审计见 `research_plans/PHASE64_FINAL_RESULT_AUDIT.md`。
