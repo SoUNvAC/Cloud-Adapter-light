@@ -7,6 +7,7 @@ import zipfile
 from pathlib import Path
 from unittest.mock import patch
 import download_phase65_sentinel as downloader
+from audit_phase65_sentinel_catalogue import archive_names, validate_status
 
 
 class Response(io.BytesIO):
@@ -60,6 +61,19 @@ class DownloadTests(unittest.TestCase):
                 downloader.transfer('https://example.test/file.csv', path, 6, {}, self.root / 'status.json')
         self.assertEqual(partial.read_bytes(), b'abc')
         self.assertFalse(path.exists())
+
+    def test_incomplete_download_not_training_ready(self):
+        with self.assertRaises(ValueError):
+            validate_status(dict(record='4172871', status='downloading', verified_files={}))
+        with self.assertRaises(ValueError):
+            validate_status(dict(record='4172871', status='all_files_verified', verified_files={}))
+
+    def test_zip_path_traversal_rejected(self):
+        path = self.root / 'unsafe.zip'
+        with zipfile.ZipFile(path, 'w') as z:
+            z.writestr('../outside.npy', b'fixture only')
+        with self.assertRaises(ValueError):
+            archive_names(path, '.npy')
 
 
 if __name__ == '__main__':
