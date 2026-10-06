@@ -70,3 +70,10 @@
 - 止损线：预先设定fit和65a_confirmation各至少16个固定代表的public shadow_percent>0，任一不足则停止主检验；该真值支持字段仅用于离线分析支持域，不得作部署风险输入。不借用65b/65c、不改相关性或抽样追显著；下载与安全备份继续。
 - 结果：fit支持41、65a_confirmation支持15（64个固定代表中），低于所需16。状态stopped_insufficient_h1_support，training_authorized=false；未训练、未读取新模型预测或目标像元，未估计相关性、AUROC或分割收益。此为支持样本门不足，不是H1/H2的实证否定；65b/65c不得推进。
 - 冻结和备份：source checkpoint SHA256=64dd9a20288c35ab3362b8b1c1dafc216d9c44d60868475177e139d6be859dc9；失败方案含377组完整固定分配及预注册SHA，远端src/work_dirs/phase65a/split_lock.json已传回outputs/phase65/work_dirs/phase65a/split_lock.json，两端SHA256=a431745e7a17bbd4a7b9e12ef3bf76767d4eb827911bd5cb5e632683c2177f7b一致。完整发布清单审核仍须等待双机7文件全部验证，不能称数据或历史全量备份完成。
+
+## 65a / 2026-10-06 19:10 北京时间 / 传输巡检
+- 目标：研究支持门停止后，继续完成已授权双机数据校验与全部work_dirs备份。
+- 改动：仅检查进程、状态及日志，不重复下载/传输，不修改失败划分或启动训练；保留用户现有改动。
+- 网络情况：SSH正常，远端代码1ce6fce；双机下载进程仍活跃、日志无错误、partial持续增长，两端均6/7已验证。本地主影像状态13676576768/15197196473 bytes，远端13484687360/15197196473 bytes；本地备份接收器活跃，partial=2383511552 bytes，transfer.log无错误。
+- 止损线：7文件未全部校验不做双机完整清单审核；完整历史包未逐文件SHA校验不标记备份完成；固定15/16支持门继续禁止训练及65b/65c。
+- 结果：下载和备份尚未完成，未发现需要恢复的失败；BACKUP_VERIFIED及TRANSFER_EXIT_CODE均尚不存在，无新模型预测或实验指标。下一轮继续检查全文件校验条件。
