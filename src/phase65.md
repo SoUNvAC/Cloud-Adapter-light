@@ -44,3 +44,12 @@
 - 结果：本地source metadata成功获取train4759992 bytes、val300257 bytes；固定官方commit=d97728dd61858a21c7d6bc61385687d328433cba，Git blob校验通过。train SHA256=d4a4bb41fba0e39d49328db29868273d093f982e84716d7f2b836e852f5349f4；val=35e7afd8f5feafa6ce6b04415a3e4426ad147b5beed3f84db68839ac12d29097。只读远端源train文件名确认8490个，0..8489连续编号；官方CSV index为原始索引而非同一数字序列，精确转换映射仍需核验，不能直接用PNG文件名join官方index。
 - 产物：本地outputs/phase65/source_metadata/acquired/中train_metadata.csv、val_metadata.csv、source_metadata_manifest.json。未读取新确认影像/标签，未训练，暂无实验性能指标。
 - 补充：远端同样获取官方train/val metadata，commit、bytes、SHA256与本地一致。新增audit_phase65_source_ids.py并运行：9025条source train/val metadata、8946唯一products，对424个shadow-valid目标候选，exact product重叠0、tile+acquisition重叠0、同tile任意日期重叠26。仅为ID层初审，不等于无空间重叠；本地PNG映射、空间footprint、历史谱系和独立group划分仍未完成。不删除或按模型表现筛选候选。可复现产物outputs/phase65/source_metadata/provisional_overlap.json。
+
+## 65a / 2026-10-06 17:40–17:48 北京时间 / 下载巡检与source空间审计
+- 目标：保持双机下载和历史备份正常运行，补齐源PNG谱系与真实空间重叠证据。
+- 改动：新增audit_phase65_source_png_mapping.py和audit_phase65_spatial_overlap.py；均本地检查/提交/push、远端pull后在cloud-lite-pt210执行。缺少的pyshp2.3.1仅放置src/work_dirs/phase65a/geospatial_python，临时目录亦在授权项目内；既有conda/系统安装未修改，安装报告已备份。
+- 网络情况：17:40读取时本地主影像4929355776/15197196473 bytes，远端5014290432 bytes，两端6/7文件已校验、原进程存活、无错误；未重复启动。旧全work_dirs备份partial=999424000 bytes，接收器存活，完整回传/校验未完成。
+- 止损线：源PNG行序不匹配、官方RGB SHA不符则不承认scene映射；source footprint重叠候选不得进入独立confirmation；空间、历史目标谱系及group划分未冻结，不训练。
+- 结果：源train8490/8490、val535/535 PNG均与对应官方原始RGB逐像元完全一致；6个原始RGB dat的官方LFS SHA256均通过。CSV按发布行序与raw/PNG ordinal对应，不能按原始index字段join。此证据解决原PNG行序映射缺口，不涉及标签、test或目标像元。
+- 空间结果：以原生UTM几何加100m保守缓冲后跨CRS检查，source train/val共有1805个唯一footprint；424个shadow-valid新候选中6个与source footprint重叠。无同产品/同采集ID不代表无空间重叠。状态source_spatial_audited_split_not_locked；尚未审计历史目标footprint/相关产品group、完整下载和数组loader，未冻结split、未训练，无新性能指标。
+- 备份：源映射和source_provenance新增work_dir结果已按目录层级传回outputs/phase65/work_dirs/phase65a/，与远端SHA核对一致；mapping_audit SHA256=c3c521a375c50f81ff0e58682621c7fcb72fc47472a7b37931c587036f12d0bb，spatial_overlap=4e9bef32a0f17d8119cb3f06c79d8dcf6db4113c0c17b246721c9268fbba715d。source映射EXIT_CODE=0。历史34GB包仍传回中，不称全量备份完成。
