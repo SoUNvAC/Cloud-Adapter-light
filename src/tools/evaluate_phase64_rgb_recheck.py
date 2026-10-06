@@ -424,7 +424,8 @@ def target_rows(args, target: str) -> tuple[list[dict[str, str]], np.ndarray]:
 def paired_scene(args) -> dict[str, object]:
     legacy_wrapper = build(args.legacy_source_config, args.legacy_source)
     domains: dict[str, object] = {}
-    for target in TARGETS:
+    selected_targets = (args.paired_target,) if args.paired_target else TARGETS
+    for target in selected_targets:
         rows, mapping = target_rows(args, target)
         baseline = evaluate_rows(
             legacy_wrapper,
@@ -433,14 +434,17 @@ def paired_scene(args) -> dict[str, object]:
             source_fine=True,
             label=f"{target}-source-only",
         )
-        checkpoint = (
-            args.experiment_root
-            / "phase64_target_parent"
-            / target
-            / "msre"
-            / "seed64"
-            / args.checkpoint_names[target]["msre"]
-        )
+        if args.paired_checkpoint:
+            checkpoint = args.paired_checkpoint
+        else:
+            checkpoint = (
+                args.experiment_root
+                / "phase64_target_parent"
+                / target
+                / "msre"
+                / "seed64"
+                / args.checkpoint_names[target]["msre"]
+            )
         set_target_environment(target, "msre", args.source_parent)
         wrapper = build(args.target_config, checkpoint)
         set_branch(wrapper, "msre", True)
@@ -467,6 +471,7 @@ def paired_scene(args) -> dict[str, object]:
     return {
         "task": "phase64-rgb-paired-scene-bootstrap",
         "input": "RGB",
+        "seed": args.paired_seed,
         "target_test_read": False,
         "domains": domains,
     }
@@ -529,11 +534,18 @@ def main() -> None:
     )
     parser.add_argument("--bootstrap-draws", type=int, default=10000)
     parser.add_argument("--bootstrap-seed", type=int, default=6401)
+    parser.add_argument("--paired-target", choices=TARGETS)
+    parser.add_argument("--paired-seed", type=int, default=64)
+    parser.add_argument("--paired-checkpoint", type=Path)
     parser.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
     args.checkpoint_names = checkpoint_names()
     if args.bootstrap_draws < 1000:
         raise ValueError("At least 1000 bootstrap draws are required")
+    if bool(args.paired_target) != bool(args.paired_checkpoint):
+        raise ValueError(
+            "--paired-target and --paired-checkpoint must be provided together"
+        )
 
     result = source_switch(args) if args.task == "source-switch" else paired_scene(args)
     result = json_safe(result)
