@@ -15,6 +15,12 @@ SPLIT_SIZES = [('65a_confirmation', 64), ('65b_confirmation', 64),
                ('65c_final', 64), ('development_val', 32)]
 
 
+class SupportGateError(ValueError):
+    def __init__(self, rows, counts):
+        self.rows, self.counts = rows, counts
+        super().__init__(f'Insufficient preregistered H1 support: {counts}; do not resample')
+
+
 def make_split(groups, tags):
     tagged = {r['scene']: r for r in tags}
     eligible = [g for g in groups if g['eligible']]
@@ -46,9 +52,10 @@ def make_split(groups, tags):
             assigned.append(dict(group_id=group['group_id'], split=split,
                                  products=sorted(products), representative=representative,
                                  h1_supported=percent > 0))
-    for split in ('fit', '65a_confirmation'):
-        if sum(row['h1_supported'] for row in assigned if row['split'] == split) < 16:
-            raise ValueError(f'Insufficient preregistered H1 support in {split}; do not resample')
+    counts = {split: sum(row['h1_supported'] for row in assigned if row['split'] == split)
+              for split in ('fit', '65a_confirmation')}
+    if any(count < 16 for count in counts.values()):
+        raise SupportGateError(assigned, counts)
     return assigned
 
 
@@ -69,7 +76,25 @@ def main():
     if actual != a.source_sha256:
         raise ValueError('Source checkpoint SHA mismatch')
     with allowed(a.tags).open(newline='', encoding='utf-8') as stream:
-        rows = make_split(groups['groups'], list(csv.DictReader(stream)))
+        tags = list(csv.DictReader(stream))
+    try:
+        rows = make_split(groups['groups'], tags)
+    except SupportGateError as error:
+        # Preserve the precise failed proposal, without training authorization or
+        # a replacement random draw. It must never be mistaken for a passed lock.
+        output = allowed(a.output)
+        output.parent.mkdir(parents=True, exist_ok=True)
+        report = dict(status='stopped_insufficient_h1_support', training_authorized=False,
+                      h1_support_counts=error.counts, required_each=16,
+                      proposed_rows=error.rows, source_checkpoint_sha256=actual,
+                      group_sha256=digest(a.groups), target_tags_sha256=digest(a.tags),
+                      preregistration_sha256=digest(Path(__file__).resolve().parents[1] /
+                                                   'research_plans/PHASE65.md'),
+                      new_model_predictions_read=False, target_pixels_read=False)
+        with output.open('x', encoding='utf-8') as stream:
+            json.dump(report, stream, indent=2)
+        print(json.dumps({k: v for k, v in report.items() if k != 'proposed_rows'}))
+        raise
     summary = {split: dict(groups=sum(r['split'] == split for r in rows),
                            products=sum(len(r['products']) for r in rows if r['split'] == split),
                            h1_support=sum(r['h1_supported'] for r in rows if r['split'] == split))
