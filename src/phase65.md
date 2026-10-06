@@ -183,3 +183,10 @@
 - 网络情况：日志明确Timeout, server frp-gap.com not responding及segment incomplete；partial=8091533312 bytes，比上轮8089239552增加2293760 bytes后中断。SSH巡检重新连通，远端HEAD=beece8f；恢复进程已启动，前缀校验及恢复增长尚待确认，不能声称已恢复实际传输。
 - 止损线：前缀SHA不匹配禁止追加，旧进程退出才恢复；完整归档及逐文件SHA未通过不称备份完成；15/16支持门仍禁止训练及65b/65c。
 - 结果：双机7文件仍all_files_verified，远端下载/审计退出码均0，失败划分及审计报告SHA未变；全量备份未完成，下一轮检查新接收器和partial增长，无新模型预测或实验指标。
+
+## 65a / 2026-10-07 03:10 北京时间 / 备份远端断线恢复流程
+- 目标：继续恢复不稳定SSH链路上的历史备份，保留新增已接收字节。
+- 改动：沿用已验证分段脚本，不改代码或研究划分；确认PID19920退出且TRANSFER_EXIT_CODE=1后，保留原PID/退出码为outputs/phase65/backup/*disconnect_20261007_0310，启动隐藏接收器PID12404，重新校验前缀后续传。
+- 网络情况：上轮8091533312-byte前缀两层SHA校验均通过，SHA256=263e25424b6009616a58fb0c1b6ccda7cedfb17fea1592ebaeb9f6ac45c4fd2b，实际续传到8198881280 bytes（增加107347968）后日志报Connection to frp-gap.com closed by remote host及segment incomplete。SSH巡检已重新连通，远端HEAD=26239dc；本轮新恢复流程尚未确认前缀校验完成或增长。
+- 止损线：旧进程退出才恢复，前缀不符禁止追加；完整归档及逐文件SHA未通过不称备份完成；15/16支持门保持停止，禁止训练及65b/65c。
+- 结果：全量备份未完成，恢复流程已启动，继续检查增长及退出码。两机7文件仍all_files_verified，远端下载/审计退出码0，失败划分及审计报告SHA未变；无新训练、预测或实验指标。
