@@ -27,15 +27,27 @@ def main():
     manifest_path = allowed(root / 'source_metadata_manifest.json')
     if manifest_path.exists():
         raise ValueError('Existing metadata acquisition; verify manifest instead of overwriting')
-    sha = load_json(f'https://huggingface.co/api/datasets/{REPO}')['sha']
+    revision_path = allowed(root / 'source_metadata_revision.json')
+    if revision_path.exists():
+        revision = json.loads(revision_path.read_text(encoding='utf-8'))
+        if revision['repository'] != REPO:
+            raise ValueError('Unexpected cached repository')
+        sha = revision['commit']
+    else:
+        sha = load_json(f'https://huggingface.co/api/datasets/{REPO}')['sha']
+        with revision_path.open('x', encoding='utf-8') as stream:
+            json.dump(dict(repository=REPO, commit=sha), stream)
     records = {}
     for split in ('train', 'val'):
         inventory = load_json(f'https://huggingface.co/api/datasets/{REPO}/tree/{sha}/{split}')
         item = next(row for row in inventory if row['path'] == f'{split}/metadata.csv')
         url = f'https://huggingface.co/datasets/{REPO}/resolve/{sha}/{split}/metadata.csv'
         path = allowed(root / f'{split}_metadata.csv')
-        with urllib.request.urlopen(url, timeout=60) as stream:
-            content = stream.read()
+        if path.exists():
+            content = path.read_bytes()  # incomplete earlier runs reuse verified CSV
+        else:
+            with urllib.request.urlopen(url, timeout=60) as stream:
+                content = stream.read()
         if len(content) != item['size']:
             raise ValueError('Metadata size mismatch')
         sha256 = hashlib.sha256(content).hexdigest()
@@ -46,8 +58,9 @@ def main():
             git_blob_sha = hashlib.sha1(f'blob {len(content)}\0'.encode() + content).hexdigest()
             if git_blob_sha != item['oid']:
                 raise ValueError('Metadata Git blob SHA1 mismatch')
-        with path.open('xb') as stream:
-            stream.write(content)
+        if not path.exists():
+            with path.open('xb') as stream:
+                stream.write(content)
         records[split] = dict(url=url, bytes=len(content), sha256=sha256,
                               published_inventory=item)
     manifest = dict(repository=REPO, commit=sha, splits=records,

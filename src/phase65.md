@@ -43,3 +43,4 @@
 - 止损线：校验未完成不训练；官方元数据未证实本地PNG映射则不能假定场景谱系完整，不能以新下载替代独立scene审计。
 - 结果：本地source metadata成功获取train4759992 bytes、val300257 bytes；固定官方commit=d97728dd61858a21c7d6bc61385687d328433cba，Git blob校验通过。train SHA256=d4a4bb41fba0e39d49328db29868273d093f982e84716d7f2b836e852f5349f4；val=35e7afd8f5feafa6ce6b04415a3e4426ad147b5beed3f84db68839ac12d29097。只读远端源train文件名确认8490个，0..8489连续编号；官方CSV index为原始索引而非同一数字序列，精确转换映射仍需核验，不能直接用PNG文件名join官方index。
 - 产物：本地outputs/phase65/source_metadata/acquired/中train_metadata.csv、val_metadata.csv、source_metadata_manifest.json。未读取新确认影像/标签，未训练，暂无实验性能指标。
+- 补充：远端同样获取官方train/val metadata，commit、bytes、SHA256与本地一致。新增audit_phase65_source_ids.py并运行：9025条source train/val metadata、8946唯一products，对424个shadow-valid目标候选，exact product重叠0、tile+acquisition重叠0、同tile任意日期重叠26。仅为ID层初审，不等于无空间重叠；本地PNG映射、空间footprint、历史谱系和独立group划分仍未完成。不删除或按模型表现筛选候选。可复现产物outputs/phase65/source_metadata/provisional_overlap.json。
