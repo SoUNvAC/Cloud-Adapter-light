@@ -477,6 +477,29 @@ def paired_scene(args) -> dict[str, object]:
     }
 
 
+def parent_target_baseline(args) -> dict[str, object]:
+    wrapper = build(args.source_parent_config, args.source_parent)
+    domains: dict[str, object] = {}
+    for target in TARGETS:
+        rows, mapping = target_rows(args, target)
+        domains[target] = evaluate_rows(
+            wrapper,
+            rows,
+            mapping,
+            source_fine=False,
+            label=f"{target}-three-parent-source-only",
+        )
+    release(wrapper)
+    return {
+        "task": "phase64-rgb-three-parent-target-baseline",
+        "input": "RGB",
+        "source_parent_checkpoint": str(args.source_parent),
+        "source_parent_checkpoint_sha256": sha256_file(args.source_parent),
+        "target_test_read": False,
+        "domains": domains,
+    }
+
+
 def checkpoint_names() -> dict[str, dict[str, str]]:
     return {
         "l8": {
@@ -492,7 +515,9 @@ def checkpoint_names() -> dict[str, dict[str, str]]:
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("task", choices=("source-switch", "paired-scene"))
+    parser.add_argument(
+        "task", choices=("source-switch", "paired-scene", "parent-target")
+    )
     parser.add_argument(
         "--legacy-source-config",
         default="configs/protocol/phase22_clean_v8_l1c.py",
@@ -547,7 +572,12 @@ def main() -> None:
             "--paired-target and --paired-checkpoint must be provided together"
         )
 
-    result = source_switch(args) if args.task == "source-switch" else paired_scene(args)
+    if args.task == "source-switch":
+        result = source_switch(args)
+    elif args.task == "paired-scene":
+        result = paired_scene(args)
+    else:
+        result = parent_target_baseline(args)
     result = json_safe(result)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(
