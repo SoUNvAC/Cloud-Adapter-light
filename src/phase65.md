@@ -53,3 +53,12 @@
 - 结果：源train8490/8490、val535/535 PNG均与对应官方原始RGB逐像元完全一致；6个原始RGB dat的官方LFS SHA256均通过。CSV按发布行序与raw/PNG ordinal对应，不能按原始index字段join。此证据解决原PNG行序映射缺口，不涉及标签、test或目标像元。
 - 空间结果：以原生UTM几何加100m保守缓冲后跨CRS检查，source train/val共有1805个唯一footprint；424个shadow-valid新候选中6个与source footprint重叠。无同产品/同采集ID不代表无空间重叠。状态source_spatial_audited_split_not_locked；尚未审计历史目标footprint/相关产品group、完整下载和数组loader，未冻结split、未训练，无新性能指标。
 - 备份：源映射和source_provenance新增work_dir结果已按目录层级传回outputs/phase65/work_dirs/phase65a/，与远端SHA核对一致；mapping_audit SHA256=c3c521a375c50f81ff0e58682621c7fcb72fc47472a7b37931c587036f12d0bb，spatial_overlap=4e9bef32a0f17d8119cb3f06c79d8dcf6db4113c0c17b246721c9268fbba715d。source映射EXIT_CODE=0。历史34GB包仍传回中，不称全量备份完成。
+
+## 65a / 2026-10-06 18:10–18:20 北京时间 / 历史目标footprint和相关产品分组
+- 目标：检查正常传输，补齐旧目标空间排除，避免相关Sentinel产品跨split。
+- 改动：新增audit_phase65_historical_footprints.py、prepare_phase65_scene_groups.py及3项有意义的分组独立性测试；本地提交push、远端pull。分组规则在新预测/指标之前写入PHASE65.md，暂不锁定split。
+- 网络情况：18:10读取时本地主影像7826571264/15197196473 bytes、远端7574913024 bytes，两端仍6/7文件已校验、下载进程存活无错误，未重启。历史work_dirs备份partial=1473413120 bytes，接收器存活无错误，未完成全量回传。
+- 止损线：未知CRS或未解析历史footprint不进入确认集；任何source tile/footprint或历史used-scene footprint重叠，整个相关group排除；仅metadata准备完成不授权训练，禁止将产品数量作为独立scene样本量。
+- 结果：首轮历史审计解析134/142，8个场景因首版只接受UTM而blocked（产物保留）。检查头信息确认8个均为米制EPSG:3031；修复为按已知projected CRS及单位换算、101点加密重投影后，142/142解析完成，无未解析项，11个新shadow-valid候选与历史train/val的保守bounds重叠。仅打开train/val TIFF头，未读取任何栅格像元、标签或sealed test文件。
+- 分组：513产品按同MGRS tile或同采集date+relative orbit做传递闭包，得到493组；源tile任意日期/源footprint/历史footprint及shadow-invalid-only组排除后，377候选组含384个shadow-valid产品，116组排除。89个shadows_marked=0不作为样本，只可作为相关性连接节点。没有按difficulty、真值比例、预测或性能筛选。H1/H2支持分母和group-based模型选择/统计代表规则仍须预先定稿，完整下载、数组/loader审核及冻结仍待完成，训练未启动。
+- 验证与备份：3项分组测试本地/远端通过，原5项协议测试本地通过；两机完整group成员及排除标记相同，其canonical SHA256=a5a47c521f54adc1b5cdbc5eea1ab763a9bbb8e20429c37cccd1f8cd678c9acd。新work_dir结果已按原层级回传outputs/phase65/work_dirs/phase65a/source_provenance/并核对SHA：historical_overlap首版35ca7899679bc5333883bba33988617f0d55e74e38fdf2698ad3940e48365dd6；v2=5643bc9c3be55b8a9d467c6bed50d26f9cc4c702a745c9683e40e784c20a1ea5；远端scene_groups备份=41251fcc6177acd42782e2974cd76c82f333a14d0af65ee87aeb10114e79cb57。尚无新模型性能指标。
