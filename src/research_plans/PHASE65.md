@@ -11,6 +11,16 @@
 - 新确认集从合格且具有可核验未使用 provenance 的目标训练池中按 scene 留出，不得看结果选场景。至少 8 个确认场景、8 个开发场景，否则报告不可识别并停止。按 SHA256('phase65:'+scene) 排序，前 8 个确认，其余开发。这是最低可行性约束，不代表统计功效已充分。
 - 确认集只最终评估一次，训练/早停/模型选择不得使用。开发池内部按 scene 划分拟合/验证，冻结后再启封新确认集。增加 seed 不增加独立场景数。
 
+### 2026-10-06：新数据入口（在新模型评估前登记）
+
+用户指定全新 Sentinel-2 Cloud Mask Catalogue，Zenodo record 4172871 / DOI 10.5281/zenodo.4172871，双机此前未下载。作为候选新目标池替代已用L8确认入口；不改变H1/H2终点或止损门，也不解封旧test。
+
+发布方定义：513个1022×1022子场景、20m、13波段float32 TOA；mask为三通道bool one-hot。仅使用classification_tags.csv的shadows_marked=1作为完整云影监督候选，其余89项排除并报告范围限制。MAIN/CALIBRATION/VALIDATION是作者标注过程分组，不能直接当本研究训练/测试划分。类别顺序与无效/非one-hot mask须依README及数组审计核实，不猜编码；RGB band indices [3,2,1]。
+
+下载全部七个发布文件，在本地data/sentinel2_cloud_mask_catalogue_4172871和远端/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871保存原始包、record.json、官方MD5+本地SHA256及ZIP CRC报告。安全断点续传，未校验包保留.partial。下载不等于训练就绪；冻结前必须审计源CloudSEN12及历史实验的产品ID、MGRS tile、采集时间与空间足迹交叉，按独立场景/相关产品组划分，无法核验的重叠候选不进入确认集。地表/云型等人工标签和真值比例不得用作部署风险特征。几何元数据缺失则明确标缺失，不捏造太阳角或云高。
+
+这是同传感器跨数据集诊断，不能据此宣称Landsat跨传感器收益。统计代码与新数据loader完成并冻结前，训练仍不启动。
+
 ## phase65a：两周内判定是否值得继续
 
 冻结旧八场景探索产物及哈希，固定 hypothesis，不重新定义相关性追显著。
