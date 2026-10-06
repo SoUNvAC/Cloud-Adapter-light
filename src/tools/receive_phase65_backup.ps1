@@ -21,7 +21,22 @@ try {
     if ((Get-PSDrive D).Free -lt 40GB) { throw 'Need at least 40 GB local free space' }
     & scp gzs:/home/scv/Cloud-Adapter-light/src/result_backups/phase65_20261006/all_work_dirs.tar.json $phase65Manifest >> $phase65Log 2>&1
     if ($LASTEXITCODE -ne 0) { throw 'Manifest transfer failed' }
-    & scp gzs:/home/scv/Cloud-Adapter-light/src/result_backups/phase65_20261006/all_work_dirs.tar $phase65Partial >> $phase65Log 2>&1
+    # reget resumes only after the retained prefix matches the immutable remote archive.
+    if (Test-Path -LiteralPath $phase65Partial) {
+        $phase65PrefixSize = (Get-Item -LiteralPath $phase65Partial).Length
+        if ($phase65PrefixSize -gt 0) {
+            $phase65PrefixRemote = & ssh -o ServerAliveInterval=30 -o ServerAliveCountMax=6 gzs "head -c $phase65PrefixSize /home/scv/Cloud-Adapter-light/src/result_backups/phase65_20261006/all_work_dirs.tar | sha256sum"
+            if ($LASTEXITCODE -ne 0 -or $phase65PrefixRemote -notmatch '^([0-9a-f]{64})\s') { throw 'Remote prefix SHA unavailable; no resume' }
+            $phase65PrefixExpected = $Matches[1]
+            $phase65PrefixActual = (Get-FileHash -LiteralPath $phase65Partial -Algorithm SHA256).Hash.ToLowerInvariant()
+            if ($phase65PrefixActual -ne $phase65PrefixExpected) { throw 'Partial prefix SHA mismatch; no resume' }
+            "Verified resume prefix: $phase65PrefixSize bytes SHA256=$phase65PrefixActual" | Add-Content -LiteralPath $phase65Log
+        }
+    }
+    $phase65Batch = Join-Path $phase65Backup 'sftp_resume.batch'
+    $phase65SftpDestination = $phase65Partial.Replace('\', '/')
+    Set-Content -LiteralPath $phase65Batch -Encoding ascii -Value ('reget /home/scv/Cloud-Adapter-light/src/result_backups/phase65_20261006/all_work_dirs.tar "' + $phase65SftpDestination + '"')
+    & sftp -o ServerAliveInterval=30 -o ServerAliveCountMax=6 -b $phase65Batch gzs >> $phase65Log 2>&1
     if ($LASTEXITCODE -ne 0) { throw 'Archive transfer failed; partial preserved' }
     Move-Item -LiteralPath $phase65Partial -Destination $phase65Tar
     & python (Join-Path $phase65Repo 'src\tools\backup_phase65.py') verify --archive $phase65Tar >> $phase65Log 2>&1
