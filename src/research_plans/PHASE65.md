@@ -29,6 +29,20 @@ source及历史geometry均保守扩张100m，历史用整个已使用scene栅格
 
 此规则尚只产生`groups_prepared_not_split_locked`元数据清单，不授权训练。最终group-based训练/开发验证/确认划分、每独立group的统计代表及H1/H2有效分母支持规则须在任何新模型预测或指标之前写清楚并冻结；不把产品数量当独立场景样本量。前述L8逐scene冻结脚本不可直接用于Sentinel相关产品池。
 
+### 2026-10-06：Sentinel确认设计定稿（新预测/指标仍未生成）
+
+初稿的8-scene留出针对当时未知的新数据可用性，是最低可行门。元数据审计现有377个合格相关组，可增加独立场景覆盖；因此本次在任何新source/adapter预测或相关性计算前改为：按SHA256('phase65:split:'+group_id)排序，前64组为65a_confirmation，接着64组为65b_confirmation，接着64组为65c_final，接着32组为development_val，其余为fit。各split互斥，65b/65c保留组不参与65a模型选择、诊断或评价。作者标注阶段及difficulty不参与选取。固定seed65与原4,000-step配方不变；目标标签预算精确登记fit中全部shadow-valid产品与最终有效像元数。
+
+每组固定一名统计代表：按SHA256('phase65:representative:'+product_id)排序的首个shadow-valid产品。训练使用fit组的全部合格产品；模型选择只用development_val代表。机制诊断、风险分类、置信区间均使用一组一个固定代表，增加同组产品不增加统计独立样本量。65a固定64代表独立确认，不能用65b/65c弥补失败或追加到显著。
+
+H1是以真Shadow为条件的离线诊断，空Shadow类不能定义条件概率。新Catalogue的shadows_marked=1含“可以标注，但实际未出现Shadow”的场景；旧初稿“任一scene无Shadow则停止”不适合无条件混合这两种支持。本次在看任何预测/指标前明确支持域：public metadata shadow_percent>0的固定代表组成H1支持集；其他代表不计算H1条件率，但保持在全64组总体mIoU与Surface→Shadow安全报告中。支持名单在split锁中冻结，禁止事后按误差、gain或difficulty删scene。若fit H1代表<16、65a_confirmation H1代表<16，停止主检验；若实际有效mask的Shadow存在性与冻结public支持名单不一致，停止并报告协议失配，不重新抽样或静默删scene。H1仍为同一d对delta Shadow IoU的Pearson正关联、95%场景bootstrap下界>0及预测RMSE优于冻结常数预测，两门不变。该支持域不能泛化成所有无Shadow场景的关联主张。
+
+H2使用fit全体代表。风险真值定义为适配后Shadow→Surface错误像元数增加（与有Shadow时条件率增加符号相同；无Shadow时增加数为0）。教师真值只用于训练风险标签，推理特征禁止真值/人工标签/标签比例。固定12个可观测输入：source的Surface/Cloud/Shadow概率均值、归一化熵均值、Shadow argmax比例、top1-top2 margin均值；原始TOA RGB平均亮度均值/标准差及亮度<0.08比例；原始TOA B8/B11/B12均值。source概率均在图像有效像元上汇总，不用GT-valid mask作部署特征。原始光谱不强行clip到[0,1]。暂不使用缺失的太阳角/云高或作者云型标签，不捏造几何信息。
+
+风险模型固定训练中位数补缺+缺失标记、StandardScaler及LogisticRegression(C=1, class_weight=None, solver=lbfgs, max_iter=1000, random_state=65)。fit正/负风险代表均>=8方可拟合；确认正/负代表均>=8方可估计场景AUROC CI，否则报告不可识别并停止，不选择新阈值/新特征。主要AUROC的64组bootstrap使用10000次、seed65；CI下界>0.5不变。H2可在额外光谱观测上确认风险可识别，但65a不训练六波段分割网络；65b须在另外保留的64组上，以匹配RGB/六波段及删除证据对照确定信息贡献。缺失列若在fit全缺失则停止输入门，不用确认数据补齐。
+
+此为新数据入口引起的预分析设计修订，不由新性能/相关性显著性触发；所有旧初稿条款保留用于审计上述变更。首次新模型评价前锁定本文件SHA、group/支持名单、source SHA、模型选择、数据管线与脚本。split冻结本身仍不授权训练，须完整下载、loader与统计代码检查通过。
+
 ## phase65a：两周内判定是否值得继续
 
 冻结旧八场景探索产物及哈希，固定 hypothesis，不重新定义相关性追显著。
