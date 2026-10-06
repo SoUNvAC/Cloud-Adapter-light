@@ -92,3 +92,10 @@
 - 网络情况：SSH正常，远端HEAD=250dac6；两机all_files_verified、7文件已验证，远端下载与清单审计退出码均0；本地error.log无错误。历史包接收器PID24076活跃，partial增至3266379776 bytes，transfer.log无错误。
 - 止损线：全包及逐文件校验前不称历史备份完成；支持门停止不变，不启动训练或65b/65c。
 - 结果：远端失败划分及审计报告SHA与既有本地备份一致；历史备份尚未完成，无新模型预测或指标，无需恢复进程。
+
+## 65a / 2026-10-06 20:40 巡检 / 历史备份断线恢复
+- 目标：恢复中断的全work_dirs备份，保留已接收内容并验证安全续传。
+- 改动：receive_phase65_backup.ps1新增远端前缀SHA校验与SSH keepalive；首轮SFTP reget在打开本地大partial时失败，保留全部失败记录。新增receive_phase65_archive.py，以Python二进制文件IO接收SSH远端tail流，独立再次校验已有前缀与最终长度，完成后仍执行原完整归档SHA及5230文件逐项核验。本地PowerShell语法及Python编译检查通过，5f42673/f4a3627均已push、远端pull后启动。
+- 网络情况：原receiver PID24076已退出，transfer.log明确Connection reset/Broken pipe，partial=3295805440 bytes。SSH重新连通；保留前缀本地与远端SHA256=ca93a3e0fe7ad146ad638d7db4ffcb071b14b7f2685c4fdd86080ff5d05cec29一致。SFTP尝试PID31176确认退出后，隐藏接收器PID20696启动；实际读取partial已增长至3311534080 bytes，未出现新的TRANSFER_EXIT_CODE。
+- 止损线：进程退出才恢复；前缀不匹配禁止追加，不覆盖partial、不删除远端结果。完整归档及逐文件SHA未通过不写BACKUP_VERIFIED；固定研究支持门不变，继续禁止训练及65b/65c。
+- 结果：断线已诊断，SSH二进制续传已实际恢复，历史备份尚未完成。双机7文件仍all_files_verified、清单审计退出码0，失败划分和审计报告SHA与本地备份一致，无新实验指标。原失败PID/退出码保存为outputs/phase65/backup/*failed_20261006_2040，日志保留。
