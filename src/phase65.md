@@ -176,3 +176,10 @@
 - 网络情况：SSH正常，远端HEAD=6a5533d；接收器PID24452活跃，partial=8089239552 bytes，比上轮7838629888增加250609664 bytes；日志无新增错误，当前TRANSFER_EXIT_CODE及BACKUP_VERIFIED均不存在。
 - 止损线：完整归档及逐文件SHA通过前不称备份完成；15/16支持门继续禁止训练及65b/65c。
 - 结果：两机7文件仍all_files_verified，远端下载/审计退出码0，失败划分与审计报告SHA未变；历史包继续传输，无新模型预测或实验指标，无需恢复进程。
+
+## 65a / 2026-10-07 02:40 北京时间 / 备份超时恢复流程
+- 目标：恢复超时的历史全量备份，保留已有partial和失败证据。
+- 改动：沿用现有分段接收脚本，不修改代码或研究划分；确认旧PID24452已退出、TRANSFER_EXIT_CODE=1后，将原PID/退出码保留为outputs/phase65/backup/*disconnect_20261007_0240，启动隐藏接收器PID19920执行前缀校验再续传。
+- 网络情况：日志明确Timeout, server frp-gap.com not responding及segment incomplete；partial=8091533312 bytes，比上轮8089239552增加2293760 bytes后中断。SSH巡检重新连通，远端HEAD=beece8f；恢复进程已启动，前缀校验及恢复增长尚待确认，不能声称已恢复实际传输。
+- 止损线：前缀SHA不匹配禁止追加，旧进程退出才恢复；完整归档及逐文件SHA未通过不称备份完成；15/16支持门仍禁止训练及65b/65c。
+- 结果：双机7文件仍all_files_verified，远端下载/审计退出码均0，失败划分及审计报告SHA未变；全量备份未完成，下一轮检查新接收器和partial增长，无新模型预测或实验指标。
