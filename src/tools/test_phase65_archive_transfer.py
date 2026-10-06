@@ -11,6 +11,7 @@ import receive_phase65_archive as transfer
 class TransferTests(unittest.TestCase):
     def setUp(self):
         base = Path(__file__).resolve().parents[2] / 'outputs/phase65/backup'
+        base.mkdir(parents=True, exist_ok=True)
         self.directory = tempfile.TemporaryDirectory(dir=base)
         self.addCleanup(self.directory.cleanup)
         self.partial = Path(self.directory.name) / 'test.partial'
