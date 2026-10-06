@@ -18,7 +18,10 @@ def pack(root, archive):
     inventory_path = archive.with_suffix(archive.suffix + '.json')
     if archive.exists() or inventory_path.exists():
         raise ValueError('Backup destination already exists')
-    files = sorted(p for p in root.rglob('*') if p.is_file())
+    entries = sorted(root.rglob('*'))
+    if any(p.is_symlink() for p in entries):
+        raise ValueError('Source includes symlinks; review before backing up')
+    files = [p for p in entries if p.is_file()]
     if not files:
         raise ValueError('No files to back up')
     inventory = {}
@@ -35,6 +38,8 @@ def pack(root, archive):
     for p in files:
         if digest(p) != inventory[p.relative_to(root).as_posix()]['sha256']:
             raise ValueError('Source changed during backup; archive is NOT verified')
+    if files != sorted(p for p in root.rglob('*') if p.is_file()):
+        raise ValueError('Source file list changed during backup; archive is NOT verified')
     payload = dict(files=inventory, archive_sha256=digest(archive), root=str(root))
     with inventory_path.open('x', encoding='utf-8') as stream:
         json.dump(payload, stream, indent=2)
