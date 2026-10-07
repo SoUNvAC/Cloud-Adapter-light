@@ -478,3 +478,10 @@
 - 网络情况：SSH和git同步正常；执行前未见训练进程。src/result_backups执行前已不存在，不是本轮删除。用户确认第三方备份，代理未访问或独立核验第三方。
 - 止损线：删除前严格限定授权目录、拒绝外链、核验文件列表/大小/mtime和关键source SHA；保留冻结支持门及training_authorized=false。自动备份仍禁用，定时任务已登记预期历史大文件缺失，不自动恢复或再次删除。
 - 结果：成功删除2365文件、35745742890 bytes（35.75GB），结果目录剩495114441 bytes（du483MiB）；文件系统可用748038963200 bytes。source SHA仍64dd9a20288c35ab3362b8b1c1dafc216d9c44d60868475177e139d6be859dc9，split SHA仍a431745e7a17bbd4a7b9e12ef3bf76767d4eb827911bd5cb5e632683c2177f7b。完整清单及逐文件删除日志在/home/scv/shared/phase65_cleanup/cleanup_20261007_2115.json、.deleted.jsonl、.completed.json。此次清理完成，无训练或新增实验指标。
+
+## 65a / 2026-10-07 22:25 北京时间 / 清理后保留项与数据状态巡检
+- 目标：核验关键source、冻结划分和双机数据状态，不恢复已清理历史文件。
+- 改动：仅只读巡检与追加日志，保留用户改动；不再清理，不打包续传，不重下载或覆盖审计。
+- 网络情况：SSH正常，远端HEAD=58c94e3；双机Catalogue 7文件及ALCD 1文件均all_files_verified，本地两下载error.log及远端ALCD error.log为空，远端两下载退出码0。
+- 止损线：保留固定支持门stopped_insufficient_h1_support、training_authorized=false；ALCD影像缺项未解决，不重抽、不降低门槛、不借65b/65c，不读取旧封存测试像素预测指标。
+- 结果：清理后重要source SHA仍64dd9a20288c35ab3362b8b1c1dafc216d9c44d60868475177e139d6be859dc9，split两端SHA仍a431745e7a17bbd4a7b9e12ef3bf76767d4eb827911bd5cb5e632683c2177f7b。无新独立H1场景数、模型预测或性能指标，无状态变化需通知。
