@@ -457,3 +457,10 @@
 - 网络情况：SSH连接及git push/pull成功；本地393471936 bytes/1399文件，远端36240857331 bytes/5259文件。远端src/result_backups另占约34GiB，src总约68GiB，未找到90多GB单work_dirs。
 - 止损线：不删除、移动、打包；不读取封存测试像素预测指标。当前Phase65源权重和冻结审计不可随清空失去引用，手动归档须先核验后清空。
 - 结果：明显临时候选仅68740 bytes pyc；同SHA重复checkpoint0、外链0。270权重23.84GB，cache路径11.21GB，95零文件多为状态标记，均不据名称认定垃圾。迭代权重17.05GB可后续按最佳/末次/引用需求精简，但此次未授权删除。详细结论见outputs/phase65/work_dir_audit/review_20261007.md，无新增训练或实验指标。
+
+## 65a / 2026-10-07 20:41 北京时间 / 双数据入口冻结巡检
+- 目标：确认Catalogue与ALCD两端校验完成状态及冻结研究停止记录。
+- 改动：仅核验和追加记录，保留用户改动；不重下载、不覆盖审计、不打包传输或清理work_dirs及result_backups。
+- 网络情况：SSH连接正常，远端HEAD=680a193；Catalogue与ALCD远端下载退出码0，本地两下载error.log和远端ALCD error.log均为空。
+- 止损线：保留旧支持门失败split，不启动训练或65b/65c；ALCD仍缺原始多光谱影像，未确认独立H1增量，不以37唯一产品替代有效场景支持。
+- 结果：双机Catalogue 7文件、ALCD 1文件均all_files_verified；ALCD SHA256仍5912fbcfe9edbc1c2cdffbb7ef0119ffdb3099bc9eec37efe301929008bf966d，gzip/TAR通过；split SHA两端未变。无新模型预测、性能指标或需要重复通知的状态变化。
