@@ -302,3 +302,10 @@
 - 网络情况：日志报kex_exchange_identification: Connection closed by remote host及segment incomplete；partial=12653920256 bytes，比上轮12519702528增加134217728 bytes后失败。常规SSH巡检成功，远端HEAD=820cb3d；本轮新恢复流程尚未确认前缀校验完成或增长。
 - 止损线：旧进程退出才恢复，前缀SHA不符禁止追加；完整包及逐文件SHA未通过不称备份完成；15/16支持门继续禁止训练及65b/65c。
 - 结果：历史全量备份未完成，恢复流程已启动，下一轮检查新接收器及增长。双机7文件仍all_files_verified，远端下载/审计退出码0，失败划分及审计报告SHA未变；无新训练、模型预测或实验指标。
+
+## 65a / 2026-10-07 11:41 北京时间 / 备份查询握手失败恢复
+- 目标：恢复未产生新字节的握手失败，减少瞬时SSH查询错误造成的提前退出。
+- 改动：receive_phase65_archive.py对远端长度/前缀SHA查询的SSH退出255加入最多3次尝试、10/20秒退避；校验不符、非255失败仍停止，校验完成前不追加。新增瞬时失败恢复及重试耗尽不追加测试，共5项两端通过。7d1f7d6本地push后首次远端同步握手失败，再次连接pull --ff-only成功后才启动新版接收器。
+- 网络情况：上轮第一层12653920256-byte前缀SHA通过，SHA256=736b1edfda2d775defe5765c0897b9c44cee083c58bf1a2b2bc9879864c2760b；随后helper查询远端长度时kex_exchange_identification: Connection closed by remote host、退出255。旧PID40868已退出、TRANSFER_EXIT_CODE=1，partial仍12653920256 bytes，无新增字节。原PID/退出码保存outputs/phase65/backup/*handshake_20261007_1141，新隐藏接收器PID33192启动，实际校验/增长尚待确认。
+- 止损线：有限重试不绕过主机或前缀校验；完整归档及逐文件SHA未通过不称备份完成；15/16支持门继续禁止训练及65b/65c。
+- 结果：恢复流程已启动，历史全量备份未完成。常规SSH审计此前成功，双机7文件仍all_files_verified、远端下载/审计退出码0，失败划分与审计报告SHA未变；无新训练、模型预测或实验指标。
