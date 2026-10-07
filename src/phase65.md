@@ -450,3 +450,10 @@
 - 网络情况：双机下载完成，官方长度234569318 bytes、MD5、gzip CRC、TAR完整性均通过；两端SHA256相同5912fbcfe9edbc1c2cdffbb7ef0119ffdb3099bc9eec37efe301929008bf966d。本地下载/审计退出码0，远端下载/审计退出码0；一次额外远端摘要读取未激活conda导致python不可用，非下载失败。
 - 止损线：保留旧失败split，不直接拼入确认或宣称支持门已过；无原始影像、足迹独立性及有效shadow支持核验前不训练，不查看旧sealed像素或指标。
 - 结果：本地metadata-only审计38目录、37唯一cloudy产品、15tiles；1256文件中76 TIFF全为classification_map/confidence_enhanced，无原始多光谱输入。11目录覆盖4个source同tile，1目录与4172871同tile；精确产品字符串重合0不能替代标准化采集ID/足迹审计。没有新增可用独立H1场景数结论、模型预测或性能指标。work_dirs未同步。
+
+## 65a / 2026-10-07 20:34 北京时间 / 用户请求work_dirs垃圾审计
+- 目标：只读检查结果目录容量和清理候选，不执行用户尚未要求的打包移动清空。
+- 改动：新增文件元信息/同大小checkpoint SHA重复审计脚本，本地验证push后远端pull执行；报告在outputs/phase65/work_dir_audit及远端shared/work_dir_audits，不同步work_dirs。
+- 网络情况：SSH连接及git push/pull成功；本地393471936 bytes/1399文件，远端36240857331 bytes/5259文件。远端src/result_backups另占约34GiB，src总约68GiB，未找到90多GB单work_dirs。
+- 止损线：不删除、移动、打包；不读取封存测试像素预测指标。当前Phase65源权重和冻结审计不可随清空失去引用，手动归档须先核验后清空。
+- 结果：明显临时候选仅68740 bytes pyc；同SHA重复checkpoint0、外链0。270权重23.84GB，cache路径11.21GB，95零文件多为状态标记，均不据名称认定垃圾。迭代权重17.05GB可后续按最佳/末次/引用需求精简，但此次未授权删除。详细结论见outputs/phase65/work_dir_audit/review_20261007.md，无新增训练或实验指标。
