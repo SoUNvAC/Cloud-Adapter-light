@@ -295,3 +295,10 @@
 - 网络情况：SSH严格既有主机校验连接正常，远端HEAD=d1a550f；接收器PID14724活跃。12419039232-byte前缀两层SHA均通过，SHA256=7053511e48e3adc13ab3e867f169b4fe9dbf865ab78ab70ff180173171b5a6dc；partial已增长至12519702528 bytes，增加100663296 bytes；日志无新增错误，当前TRANSFER_EXIT_CODE及BACKUP_VERIFIED均不存在。
 - 止损线：完整归档及逐文件SHA通过前不称备份完成；15/16支持门继续禁止训练及65b/65c。
 - 结果：实际续传恢复已确认，全量包仍传输中。两机7文件仍all_files_verified，远端下载/审计退出码0，失败划分及审计报告SHA未变；无新模型预测或实验指标，无需恢复进程。
+
+## 65a / 2026-10-07 11:11 北京时间 / 备份握手断线恢复流程
+- 目标：恢复历史备份连接，保留已有partial及失败证据。
+- 改动：沿用现有严格主机校验分段脚本；确认旧PID14724退出、TRANSFER_EXIT_CODE=1后，将原PID/退出码保存outputs/phase65/backup/*disconnect_20261007_1111，启动隐藏接收器PID40868进行前缀校验再续传。不修改代码或研究划分，保留用户改动。
+- 网络情况：日志报kex_exchange_identification: Connection closed by remote host及segment incomplete；partial=12653920256 bytes，比上轮12519702528增加134217728 bytes后失败。常规SSH巡检成功，远端HEAD=820cb3d；本轮新恢复流程尚未确认前缀校验完成或增长。
+- 止损线：旧进程退出才恢复，前缀SHA不符禁止追加；完整包及逐文件SHA未通过不称备份完成；15/16支持门继续禁止训练及65b/65c。
+- 结果：历史全量备份未完成，恢复流程已启动，下一轮检查新接收器及增长。双机7文件仍all_files_verified，远端下载/审计退出码0，失败划分及审计报告SHA未变；无新训练、模型预测或实验指标。
