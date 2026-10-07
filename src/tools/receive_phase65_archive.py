@@ -1,6 +1,7 @@
 """Resume the fixed immutable backup through SSH, preserving partial on failure."""
 import argparse
 import subprocess
+import time
 from pathlib import Path
 from phase65a_freeze import allowed, digest
 
@@ -11,14 +12,26 @@ SSH = ['ssh', '-o', 'ServerAliveInterval=30', '-o', 'ServerAliveCountMax=6',
 CHUNK_BYTES = 32 * 1024 * 1024
 
 
+def query(command):
+    for attempt in range(3):
+        try:
+            return subprocess.check_output(SSH + [command], text=True)
+        except subprocess.CalledProcessError as error:
+            if error.returncode != 255 or attempt == 2:
+                raise
+            delay = 10 * (attempt + 1)
+            print(f'SSH query failed (255); retry {attempt + 1}/2 after {delay}s', flush=True)
+            time.sleep(delay)
+
+
 def receive(destination):
     destination = allowed(destination)
-    size = int(subprocess.check_output(SSH + [f'stat -c %s {REMOTE}'], text=True).strip())
+    size = int(query(f'stat -c %s {REMOTE}').strip())
     offset = destination.stat().st_size if destination.exists() else 0
     if offset > size:
         raise ValueError('Partial larger than remote archive')
     if offset:
-        remote_hash = subprocess.check_output(SSH + [f'head -c {offset} {REMOTE} | sha256sum'], text=True).split()[0]
+        remote_hash = query(f'head -c {offset} {REMOTE} | sha256sum').split()[0]
         if digest(destination) != remote_hash:
             raise ValueError('Partial prefix SHA mismatch; no resume')
         print(f'Verified SSH resume prefix: {offset} bytes SHA256={remote_hash}', flush=True)

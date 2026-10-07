@@ -42,6 +42,22 @@ class TransferTests(unittest.TestCase):
                 transfer.receive(self.partial)
         self.assertEqual(self.partial.read_bytes(), b'abc')
 
+    def test_transient_query_handshake_failure_retries_before_append(self):
+        error = transfer.subprocess.CalledProcessError(255, ['ssh'])
+        with patch.object(transfer.subprocess, 'check_output', side_effect=[error] + self.answers()), patch.object(transfer.time, 'sleep') as sleep, patch.object(transfer.subprocess, 'Popen', return_value=self.process(b'cdef')):
+            transfer.receive(self.partial)
+        sleep.assert_called_once_with(10)
+        self.assertEqual(self.partial.read_bytes(), b'abcdef')
+
+    def test_query_retry_exhaustion_never_appends(self):
+        error = transfer.subprocess.CalledProcessError(255, ['ssh'])
+        with patch.object(transfer.subprocess, 'check_output', side_effect=[error, error, error]) as query, patch.object(transfer.time, 'sleep'), patch.object(transfer.subprocess, 'Popen') as spawn:
+            with self.assertRaises(transfer.subprocess.CalledProcessError):
+                transfer.receive(self.partial)
+        self.assertEqual(query.call_count, 3)
+        spawn.assert_not_called()
+        self.assertEqual(self.partial.read_bytes(), b'ab')
+
 
 if __name__ == '__main__':
     unittest.main()
