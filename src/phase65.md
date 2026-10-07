@@ -485,3 +485,10 @@
 - 网络情况：SSH正常，远端HEAD=58c94e3；双机Catalogue 7文件及ALCD 1文件均all_files_verified，本地两下载error.log及远端ALCD error.log为空，远端两下载退出码0。
 - 止损线：保留固定支持门stopped_insufficient_h1_support、training_authorized=false；ALCD影像缺项未解决，不重抽、不降低门槛、不借65b/65c，不读取旧封存测试像素预测指标。
 - 结果：清理后重要source SHA仍64dd9a20288c35ab3362b8b1c1dafc216d9c44d60868475177e139d6be859dc9，split两端SHA仍a431745e7a17bbd4a7b9e12ef3bf76767d4eb827911bd5cb5e632683c2177f7b。无新独立H1场景数、模型预测或性能指标，无状态变化需通知。
+
+## 65a / 2026-10-07 23:25 北京时间 / 双数据与保留关键项巡检
+- 目标：确认双机数据完成状态、重要source和固定支持门。
+- 改动：仅只读巡检并追加记录，保留用户改动，不下载或覆盖审计，不清理或恢复历史权重缓存，不打包或同步work_dirs。
+- 网络情况：SSH正常，远端HEAD=8ba202a；本地两下载console.log未变、error.log为空，ALCD退出码0；远端两下载退出码0、ALCD error.log为空。
+- 止损线：固定门仍stopped_insufficient_h1_support、training_authorized=false；ALCD仍缺原始影像，独立H1支持未成立，不重抽、不降门槛、不借65b/65c，不读取旧封存测试像素预测指标。
+- 结果：双机Catalogue 7文件、ALCD 1文件仍all_files_verified；保留source SHA仍64dd9a20288c35ab3362b8b1c1dafc216d9c44d60868475177e139d6be859dc9，split两端SHA仍a431745e7a17bbd4a7b9e12ef3bf76767d4eb827911bd5cb5e632683c2177f7b。无新增模型预测、性能指标或需通知变化。
