@@ -281,3 +281,10 @@
 - 网络情况：SSH正常，远端HEAD=8999a8f；接收器PID34600活跃，partial=12171182080 bytes，比上轮11872337920增加298844160 bytes；未出现新增传输失败，当前TRANSFER_EXIT_CODE及BACKUP_VERIFIED均不存在。SSH日志新增其自动记录转发IP的host-key提示，未手工访问或修改SSH配置、凭据或其他目录。
 - 止损线：完整归档及逐文件SHA通过前不称备份完成；15/16支持门继续禁止训练及65b/65c。
 - 结果：两机7文件仍all_files_verified，远端下载/审计退出码0，失败划分及审计报告SHA未变；历史全量包继续传输，无新模型预测或实验指标，无需恢复进程。
+
+## 65a / 2026-10-07 10:11 北京时间 / 备份连接重置恢复流程
+- 目标：恢复历史备份连接，保持只使用既有SSH主机信任的访问边界。
+- 改动：接收脚本与Python helper加入CheckHostIP=no、UpdateHostKeys=no、StrictHostKeyChecking=yes及20秒连接超时，防止转发IP变动导致自动新增host-key记录，仍校验既有主机密钥；不读取或修改SSH配置/凭据文件。PowerShell语法检查及3项续传测试本地通过，39177f6已本地push、远端pull后使用。前缀/段长度及最终完整SHA规则不变。
+- 网络情况：日志明确client_loop: send disconnect: Connection reset及segment incomplete；旧PID34600退出、TRANSFER_EXIT_CODE=1，partial=12419039232 bytes，比上轮12171182080增加247857152 bytes。SSH严格主机校验连接及远端pull成功。原PID/退出码保存outputs/phase65/backup/*disconnect_20261007_1011，新隐藏接收器PID14724启动，前缀校验和恢复增长尚待确认。
+- 止损线：旧进程退出才恢复，前缀SHA不符禁止追加；未知主机密钥拒绝连接，不自动写入；完整包及逐文件SHA未通过不称备份完成；研究支持门停止保持不变。
+- 结果：历史全量备份未完成，恢复流程已启动。双机7文件仍all_files_verified，远端下载/审计退出码0，失败划分及审计报告SHA未变；无新训练、模型预测或实验指标。
