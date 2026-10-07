@@ -5,7 +5,9 @@ from pathlib import Path
 from phase65a_freeze import allowed, digest
 
 REMOTE = '/home/scv/Cloud-Adapter-light/src/result_backups/phase65_20261006/all_work_dirs.tar'
-SSH = ['ssh', '-o', 'ServerAliveInterval=30', '-o', 'ServerAliveCountMax=6', 'gzs']
+SSH = ['ssh', '-o', 'ServerAliveInterval=30', '-o', 'ServerAliveCountMax=6',
+       '-o', 'CheckHostIP=no', '-o', 'UpdateHostKeys=no',
+       '-o', 'StrictHostKeyChecking=yes', '-o', 'ConnectTimeout=20', 'gzs']
 CHUNK_BYTES = 32 * 1024 * 1024
 
 
