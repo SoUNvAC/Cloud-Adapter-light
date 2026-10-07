@@ -471,3 +471,10 @@
 - 网络情况：SSH正常，远端HEAD=f82639b；本地Catalogue/ALCD日志未变且错误日志为空，ALCD退出码0；远端两下载退出码0、ALCD错误日志为空。
 - 止损线：旧split维持stopped_insufficient_h1_support及training_authorized=false；不重抽、不降低门槛、不借65b/65c，不读取旧封存测试像素预测指标。
 - 结果：双机Catalogue 7文件和ALCD 1文件均all_files_verified，ALCD固定SHA256及gzip/TAR通过状态未变；split两端SHA256仍a431745e7a17bbd4a7b9e12ef3bf76767d4eb827911bd5cb5e632683c2177f7b。ALCD原始影像缺项无新进展，没有新增独立H1支持数、模型预测或实验指标，不重复通知。
+
+## 65a / 2026-10-07 21:20 北京时间 / 用户确认第三方备份后的远端清理
+- 目标：依据用户明确授权尽量腾出远端空间，保留当前研究最重要的文件。
+- 改动：本地编写清单式删除脚本与3项保护规则测试，两端测试通过、push/pull后计划并执行；保留整个phase65a、Phase65源权重、JSON/CSV/日志/配置和小体积证据，删除已归档历史大权重、NPZ/NPY缓存、导出模型和ZIP。本地文件不动。
+- 网络情况：SSH和git同步正常；执行前未见训练进程。src/result_backups执行前已不存在，不是本轮删除。用户确认第三方备份，代理未访问或独立核验第三方。
+- 止损线：删除前严格限定授权目录、拒绝外链、核验文件列表/大小/mtime和关键source SHA；保留冻结支持门及training_authorized=false。自动备份仍禁用，定时任务已登记预期历史大文件缺失，不自动恢复或再次删除。
+- 结果：成功删除2365文件、35745742890 bytes（35.75GB），结果目录剩495114441 bytes（du483MiB）；文件系统可用748038963200 bytes。source SHA仍64dd9a20288c35ab3362b8b1c1dafc216d9c44d60868475177e139d6be859dc9，split SHA仍a431745e7a17bbd4a7b9e12ef3bf76767d4eb827911bd5cb5e632683c2177f7b。完整清单及逐文件删除日志在/home/scv/shared/phase65_cleanup/cleanup_20261007_2115.json、.deleted.jsonl、.completed.json。此次清理完成，无训练或新增实验指标。
