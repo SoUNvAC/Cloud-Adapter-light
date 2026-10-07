@@ -415,3 +415,10 @@
 - 网络情况：远端ff-only pull及状态核验再次在SSH握手阶段被关闭；接收脚本持续既有重试，日志14425 bytes。partial仍20217298944 bytes，与上轮相同，尚未完成本次前缀SHA核验或恢复传输；当前TRANSFER_EXIT_CODE及BACKUP_VERIFIED不存在。
 - 止损线：不绕过SSH严格既有主机校验、前缀SHA或完整逐文件验证；固定支持门保持禁止训练和65b/65c。
 - 结果：本地7官方文件仍all_files_verified，下载error.log为0 bytes；本轮远端数据和冻结SHA无法核验。没有新增实验指标；本轮记录本地验证后push，远端同步仍受同一SSH故障阻碍。
+
+## 65a / 2026-10-07 19:41 北京时间 / 既有SSH重试巡检
+- 目标：确认备份接收器状态并尝试补齐远端同步与核验。
+- 改动：仅巡检和追加记录，PID23340活跃，不重复启动或改动传输代码，保留用户改动。
+- 网络情况：SSH握手仍被远端关闭，远端pull和状态读取未执行成功；transfer.log增长至16693 bytes，内容为同一连接错误。partial仍20217298944 bytes，无恢复增长证据；当前TRANSFER_EXIT_CODE及BACKUP_VERIFIED不存在，既有接收器持续有限次数重试。
+- 止损线：保持严格主机校验和续传前缀SHA；完整5230文件校验前不称备份完成；固定支持门继续禁止训练及65b/65c。
+- 结果：本地7文件仍all_files_verified，下载console.log未变、error.log为空；本轮远端冻结SHA未能核验。没有新增模型预测或实验指标。记录本地验证后push，远端同步待SSH恢复。
