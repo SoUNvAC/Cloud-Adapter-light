@@ -309,3 +309,10 @@
 - 网络情况：上轮第一层12653920256-byte前缀SHA通过，SHA256=736b1edfda2d775defe5765c0897b9c44cee083c58bf1a2b2bc9879864c2760b；随后helper查询远端长度时kex_exchange_identification: Connection closed by remote host、退出255。旧PID40868已退出、TRANSFER_EXIT_CODE=1，partial仍12653920256 bytes，无新增字节。原PID/退出码保存outputs/phase65/backup/*handshake_20261007_1141，新隐藏接收器PID33192启动，实际校验/增长尚待确认。
 - 止损线：有限重试不绕过主机或前缀校验；完整归档及逐文件SHA未通过不称备份完成；15/16支持门继续禁止训练及65b/65c。
 - 结果：恢复流程已启动，历史全量备份未完成。常规SSH审计此前成功，双机7文件仍all_files_verified、远端下载/审计退出码0，失败划分与审计报告SHA未变；无新训练、模型预测或实验指标。
+
+## 65a / 2026-10-07 12:11 北京时间 / 恢复后的备份巡检
+- 目标：确认恢复校验及实际续传增长，继续安全备份。
+- 改动：仅巡检与追加记录，不重复启动接收器、下载或清单审计，保留用户改动。
+- 网络情况：SSH严格既有主机校验连接正常，远端HEAD=c83039f；接收器PID33192活跃。12653920256-byte前缀两层SHA校验通过，SHA256=736b1edfda2d775defe5765c0897b9c44cee083c58bf1a2b2bc9879864c2760b；partial已增长至13026164736 bytes，增加372244480 bytes；日志无新增错误，当前TRANSFER_EXIT_CODE及BACKUP_VERIFIED均不存在。
+- 止损线：完整归档及逐文件SHA通过前不称备份完成；15/16支持门继续禁止训练及65b/65c。
+- 结果：实际续传恢复已确认，全量包仍传输中。双机7文件仍all_files_verified，远端下载/审计退出码0，失败划分及审计报告SHA未变；无新模型预测或实验指标，无需恢复进程。
