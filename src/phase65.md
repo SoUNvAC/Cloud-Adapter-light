@@ -464,3 +464,10 @@
 - 网络情况：SSH连接正常，远端HEAD=680a193；Catalogue与ALCD远端下载退出码0，本地两下载error.log和远端ALCD error.log均为空。
 - 止损线：保留旧支持门失败split，不启动训练或65b/65c；ALCD仍缺原始多光谱影像，未确认独立H1增量，不以37唯一产品替代有效场景支持。
 - 结果：双机Catalogue 7文件、ALCD 1文件均all_files_verified；ALCD SHA256仍5912fbcfe9edbc1c2cdffbb7ef0119ffdb3099bc9eec37efe301929008bf966d，gzip/TAR通过；split SHA两端未变。无新模型预测、性能指标或需要重复通知的状态变化。
+
+## 65a / 2026-10-07 21:13 北京时间 / 双数据状态与研究门巡检
+- 目标：核验双机数据完成记录与固定停止门，保持用户手动同步安排。
+- 改动：仅只读巡检和追加日志，保留用户改动，不重下载、不覆盖审计、不巡检或恢复备份，不清理目录。
+- 网络情况：SSH正常，远端HEAD=f82639b；本地Catalogue/ALCD日志未变且错误日志为空，ALCD退出码0；远端两下载退出码0、ALCD错误日志为空。
+- 止损线：旧split维持stopped_insufficient_h1_support及training_authorized=false；不重抽、不降低门槛、不借65b/65c，不读取旧封存测试像素预测指标。
+- 结果：双机Catalogue 7文件和ALCD 1文件均all_files_verified，ALCD固定SHA256及gzip/TAR通过状态未变；split两端SHA256仍a431745e7a17bbd4a7b9e12ef3bf76767d4eb827911bd5cb5e632683c2177f7b。ALCD原始影像缺项无新进展，没有新增独立H1支持数、模型预测或实验指标，不重复通知。
