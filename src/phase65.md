@@ -616,3 +616,10 @@
 - 完成核验：远端PID511996已完成，EXIT_CODE=0，64/64代表准备及source/MsRE成对推理、9维/12维固定风险探针拟合和打乱证据分数均完成；原split SHA不变。产物仅保留远端src/work_dirs/phase65b_explore_20261008/evidence_report.json，未自动传回work_dirs。
 - 真实结果：64代表66837646有效像元，source→MsRE mIoU58.13830%→63.33544%、Shadow IoU13.95644%→24.48705%；真实Shadow分母1003961，正确Shadow591149→280731（召回58.8816%→27.9624%），Shadow→Surface375998→582688（37.4515%→58.0389%），Shadow→Cloud36814→140542。整体IoU增加不表示漏影受控。
 - 风险支持：fit19正134负；65b5正59负，恶化场景小于固定8门。按协议不报告三探针AUROC/CI或光谱增量显著性，不补抽、不改风险阈值；本次为完成的65b探索性证据首轮，不是正式65b全门通过。太阳几何/独立大上下文未执行，原输入审核/小样本95%/匹配六波段source保留门仍待完成；不启动65c。
+
+
+## 65D / 2026-10-08 / 用户授权分数排序及冻结阈值诊断
+- 目标：全像元提取Source/MsRE云影分数，PR/相同FPR召回，固定T18FYG暗地表排序诊断，development-only选择全局校准决策基线后冻结。ALCD不参与，不训练新机制，不改原split，不读取原65a确认/65c/旧sealed test。
+- 方法：先32 development双模型提分数、绑定固定checkpoint SHA及先前argmax confusion一致性；仅用development Source误报预算选择softmax/margin/原MsRE候选，独占写calibration_lock后才提取64已查看65b代表分数。精确ties AP/排序和固定FPR0.1/0.5/1/2/5/10%，按场景而非像元bootstrap；明示heldout/单景排序阈值为oracle诊断，不调确认阈值。
+- 核验：Mask2Former实现输出查询类别softmax与mask sigmoid的聚合，不是校准概率；保存聚合Shadow、此前softmaxShadow和决策margin三类分数。五项本地tie/AP/单调变换/保守FP预算/无效标签测试及Python语法通过。网络SSH正常，shared可用655GB，未开始新推理。
+- 交付：新分数、锁和诊断在shared数据目录，既有work_dirs只读，不自动同步。按本次画图请求交付新shared诊断/图到本地；科研绘图技能用于PR、工作点曲线和CDF，先数据剖析再图像自检。本次是事后探索诊断，不能称新独立确认。
