@@ -601,3 +601,7 @@
 ## 65a / 2026-10-08 / 探索训练完成，汇总依赖修复
 - 真实状态：seed65完成4000/4000步，最佳development checkpoint为2000步；source和适配均完成153 fit代表与32 development代表评估。主PID510296已退出，管线EXIT_CODE=1，唯一最终错误为汇总缺少sklearn；不重训、不重跑已完成评估。
 - 修复：改用远端已有SciPy L-BFGS-B实现同一固定C=1、fit标准化、无惩罚截距逻辑回归目标，保留特征、支持门和划分；本地运行时缺少SciPy，未执行sklearn动态对照；本地语法、固定目标解析梯度有限差分、常量标准化及AUROC平分规则通过，求解器需远端验证。只重跑尚未生成的汇总，保留原失败退出记录，不安装系统依赖。
+
+- 最终核验：汇总修复EXIT_CODE=0，原管线EXIT_CODE=1保留为缺依赖历史；4000步和185代表成对评估均完成，原split SHA不变。结果保留远端phase65a_explore_20261008；未自动传回任何work_dirs文件。
+- 真实描述结果：development像元汇总mIoU source67.13334%→MsRE77.70362%，Shadow IoU21.23065%→48.80934%；development场景均值mIoU变化+25.18420pp，分母32，与像元汇总定义不同。best checkpoint=2000。development Shadow→Surface像元166595→224074，准确率增益不表示所有错误流改善。
+- H1仅fit40、development7个有支持且有有效shadow代表，描述相关fit0.021025/development-0.133429；H2 fit19正134负、development4正28负，固定逻辑回归收敛，但development类别支持不足，不声称AUROC或正式假设通过。探索结果不替代原失败支持门，不授权65b/65c。
