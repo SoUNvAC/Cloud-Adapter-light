@@ -57,9 +57,11 @@ def main():
         for (i,j),v in np.ndenumerate(matrix):ax.text(j,i,f'{v:.2f}',ha='center',va='center',fontsize=6.5,color='black' if v>.6 else 'white')
         ax.set_xticks(range(len(names)),labels,rotation=45,ha='right',fontsize=7);ax.set_yticks(range(len(s['rows'])),[short(r['product']) for r in s['rows']],fontsize=7)
         ax.set_title(title,fontsize=8,loc='left')
-    fig.colorbar(im,ax=axes,label='ROC AUC',shrink=.8)
+    colorbar=fig.colorbar(im,ax=axes,label='ROC AUC',shrink=.8)
+    # Matplotlib rasterizes long colorbars by default, even with vector cells.
+    if colorbar.solids is not None:colorbar.solids.set_rasterized(False)
     fig.supxlabel('Fixed untrained band-darkness signals; no fusion, tuned weights, or model recovery. Seven reference-Shadow groups only.',fontsize=6.5)
-    save(fig,out,'development_spectral_screen_vector',a.final)
+    save(fig,out,'development_spectral_screen_vector_v2',a.final)
     print('Preview ready' if not a.final else 'Final PNG/PDF/SVG exported')
 
 if __name__=='__main__':main()
