@@ -529,3 +529,4 @@
 - 网络情况：git push→远端pull --ff-only成功；本地启动器PID32348，远端启动器PID23110；Google镜像双机下载实际进行，本地已校验172对象8480293689 bytes（快照），远端首波段已verified且partial增长，error日志未见报错，不重复启动或覆盖现有文件。作者9MB修订标签固定公开MD5、SHA和gzip CRC通过。
 - 止损线：不自动同步/备份work_dirs，不动旧split与source；无新训练/预测，旧sealed test持续封存。新数据质量与独立性未冻结前不能称训练就绪；版本差异不冒称真实错误或模型错误流向。
 - 结果：原版37景全部1830×1830/60m，重复目录标签一致，无异常类号，17655048格nodata、2景无类4。作者公开修订包29景全部格网匹配，27景在有效稳定60m内部格有标签差异；具体计数在独立审查文档及shared报告。影像全量下载和六波段联合有效mask审计尚未完成；远端label_intake与reference_disagreement报告来自shared，未传work_dirs。
+- 后续实测：geometry_progress_20261008.json对已齐备的前3景六波段完成JPEG2000解码、CRS/边界/原生格网核对，3景all_six_grids_match、34景pending_verified_bands、0景grid_mismatch；联合有效掩膜同时排除XML NODATA=0及SATURATED=65535。本地后续快照240对象11528805265 bytes已校验，远端较早快照27对象1471015235 bytes已校验且partial仍增长。两机继续下载，未宣布全量完成或标签语义认证。
