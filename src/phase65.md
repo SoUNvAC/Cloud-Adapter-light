@@ -562,3 +562,11 @@
 - 模型/SSH/下载网络：未训练或预测；SSH 状态读取成功。双机 Catalogue、ALCD 官方包均 all_files_verified；本地原始影像397对象17255829220 bytes全部 verified，EXIT_CODE=0、error.log为空。远端215对象10192246730 bytes verified，较上轮172对象继续推进；B04 partial为57671680 bytes，error.log为空，geometry_audit.json尚未生成。
 - 止损线：原失败 split 保持冻结，不重抽、不降低支持门、不推进65b/65c；活进程下载推进时不重复启动，不绕过锁或校验错误；旧 sealed test 像素、预测和指标禁读。
 - 真实结果：仍等待远端下载完整校验与自动几何审计；没有新的标签语义质量或独立场景支持结论，无需用户操作。
+
+
+## 65a / 2026-10-08 16:50 北京时间 / 原始影像巡检
+- 目标：核验双机原始影像下载、最终几何审计及冻结 split。
+- 改动：仅追加实际巡检记录，保留用户修改，不同步或清理 work_dirs。
+- 模型/SSH/下载网络：没有训练或预测；首次SSH握手被远端关闭，一次只读重试成功。本地Catalogue与ALCD官方包均all_files_verified；原始影像397对象17255829220 bytes全部verified，EXIT_CODE=0，error.log为空。远端原始影像279对象12927185966 bytes verified，较上轮215对象继续推进，主进程23117存活，B02 partial为58720256 bytes，error.log为空，geometry_audit.json尚未生成。
+- 止损线：原失败split SHA256仍为a431745e7a17bbd4a7b9e12ef3bf76767d4eb827911bd5cb5e632683c2177f7b；不重抽、不降门槛、不训练或推进65b/65c，不读旧sealed test像素/预测/指标；正常下载不重启，不绕过锁与校验。
+- 真实结果：瞬时SSH握手问题已恢复，下载继续推进，等待远端完整校验与几何审计。没有新标签语义可靠性或独立支持结论，无需用户操作。
