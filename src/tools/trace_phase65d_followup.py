@@ -105,7 +105,9 @@ def summarize_dev(root):
             category={s:'loss' if v<=-.01 else 'gain' if v>=.01 else 'stable' for s,v in deltas.items()},features=features[product]))
     x=np.asarray([r['features'] for r in structure]);y=np.asarray([r['delta_ap']['2000'] for r in structure])
     probes={'rgb_source':loo_ridge(x[:,:9],y),'rgb_source_nir_swir':loo_ridge(x,y)}
-    text=(RUN/'20261008_192141.log').read_text();last=0;logs=[]
+    log_paths=list(RUN.rglob('20261008_192141.log'))
+    if len(log_paths)!=1:raise ValueError('Training log must match exactly one retained file')
+    text=log_paths[0].read_text();last=0;logs=[]
     for line in text.splitlines():
         t=re.search(r'Iter\(train\)\s*\[\s*(\d+)/',line)
         if t:last=int(t.group(1))
