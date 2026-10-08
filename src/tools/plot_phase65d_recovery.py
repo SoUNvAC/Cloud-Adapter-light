@@ -25,12 +25,11 @@ def main():
         rs={r['product']:r for r in d['policies'][name]['rows']}
         ax.scatter([rs[p]['ranking']['ap'] for p in supported],np.arange(7)+(i-2)*.12,s=20,color=COLORS[i],marker=MARKERS[i],label=LABELS[i])
     ax.set_yticks(range(7),[short(p) for p in supported]);ax.set(xlim=(0,1),xlabel='Shadow AP',title='a  Seven related-group representatives');ax.grid(axis='x',alpha=.18)
-    ax=axes[0,1];pairs=d['comparisons']['msre_source_spectral_minus_msre_source']['pairs']
-    ax.axvline(0,color='.6',lw=.7);ax.axhline(0,color='.6',lw=.7)
-    for i,r in enumerate(pairs):
-        xx=r['delta_ap']*100;yy=r['delta_recall']*100
-        ax.scatter(xx,yy,s=20,color='#009E73',marker='D');ax.annotate(short(r['product']),(xx,yy),xytext=(3,3+i%2*5),textcoords='offset points',fontsize=6)
-    ax.margins(.3);ax.set(xlabel='L3 minus L2 AP (percentage points)',ylabel='L3 minus L2 locked recall (pp)',title='b  Spectral increment, fixed fit thresholds');ax.grid(alpha=.18)
+    ax=axes[0,1];ax.axvline(0,color='.6',lw=.7)
+    for offset,key,color,marker,label in [(-.1,'msre_source_minus_msre_calibration','#D55E00','^','L2 minus L1'),(.1,'msre_source_spectral_minus_msre_source','#009E73','D','L3 minus L2')]:
+        pairs={r['product']:r for r in d['comparisons'][key]['pairs']}
+        ax.scatter([pairs[p]['delta_ap']*100 for p in supported],np.arange(7)+offset,s=22,color=color,marker=marker,label=label)
+    ax.set_yticks(range(7),[short(p) for p in supported]);ax.set(xlabel='Paired AP increment (percentage points)',title='b  Source and spectral increments');ax.legend(fontsize=6);ax.grid(axis='x',alpha=.18)
     ax=axes[1,0]
     for i,name in enumerate(NAMES):
         vals=np.array([r['fpr'] for r in d['policies'][name]['rows']])*100
