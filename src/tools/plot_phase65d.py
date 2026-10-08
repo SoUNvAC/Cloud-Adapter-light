@@ -88,18 +88,24 @@ def main():
         axes[0,0].step(c['recall'],c['precision'],where='pre',color=color,ls=style,lw=1.2,label=f'{model.upper()} AP={c["ap"]:.3f}')
         rates=[float(k) for k in c['matched_fpr']];recall=[v['recall'] for v in c['matched_fpr'].values()]
         axes[0,1].plot(rates,recall,color=color,ls=style,marker='o' if model=='source' else '^',ms=4,label=model.upper())
-        for score,ax in [('score',axes[1,0]),('native_score',axes[1,1])]:
+        for score,ax in [('score',axes[1,0])]:
             for stratum in ['shadow','surface_all']:
                 dist=supplement['models'][model][score]['distributions'][stratum]
                 if not dist['n']:continue
                 line={'source':{'shadow':'-','surface_all':'-.'},'msre':{'shadow':'--','surface_all':':'}}[model][stratum]
                 ax.plot(dist['quantiles'],dist['q'],color=color,ls=line,lw=1.2,label=f'{model.upper()} '+('shadow' if stratum=='shadow' else 'reference Surface'))
+        if model=='msre':
+            for stratum,line in [('shadow','--'),('surface_all',':')]:
+                dist=supplement['models'][model]['score']['distributions'][stratum]
+                axes[1,1].plot(dist['quantiles'],dist['q'],color=color,ls=line,lw=1.2,
+                    label='MSRE '+('shadow' if stratum=='shadow' else 'reference Surface'))
     op=report['t18']['msre']['frozen_correction']
     if op['precision'] is not None:axes[0,0].plot(op['recall'],op['precision'],'D',color='black',ms=5,label='Frozen correction')
     axes[0,0].set(xlim=(0,1),ylim=(0,1.02),xlabel='Shadow recall',ylabel='Shadow precision',title='a  T18FYG PR (all valid pixels)')
     axes[0,1].set(xscale='log',xlim=(.0008,.12),ylim=(0,1),xlabel='Maximum allowed nonshadow FPR',ylabel='Shadow recall',title='b  T18FYG matched-FPR ranking')
     axes[1,0].set(xlabel='Softmax shadow score (not calibrated)',ylabel='Empirical cumulative fraction',title='c  Shadow and reference-Surface CDF',ylim=(0,1))
-    axes[1,1].set(xlabel='Native aggregated shadow score',ylabel='Empirical cumulative fraction',title='d  Native shadow-score CDF',ylim=(0,1))
+    axes[1,1].set(xlabel='Softmax shadow score (zoomed range)',ylabel='Empirical cumulative fraction',
+        title='d  MSRE shadow / Surface overlap (zoom)',xlim=(.211,.216),ylim=(0,1))
     for ax in axes.ravel():ax.grid(alpha=.18);ax.legend(loc='best')
     fig.supxlabel('Post-hoc T18FYG diagnostic. Absolute dark-Surface stratum has only 3 pixels; CDF uses all reference Surface.',fontsize=7)
     save(fig,out,'t18fyg_diagnostic',a.final)
