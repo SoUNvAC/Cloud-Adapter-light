@@ -513,3 +513,4 @@
 - 网络情况：两次远端巡检在SSH握手阶段报kex_exchange_identification: Connection closed by remote host，本轮远端命令未成功执行，未核验远端HEAD、source或split，不推断远端文件变化。本地两下载日志未变，error.log为空，ALCD退出码0。
 - 止损线：保持既有严格主机校验，不修改系统/凭据；原固定研究门与训练禁令继续生效，不重抽、不降低门槛、不借65b/65c，不读取封存测试像素预测指标。
 - 结果：本地Catalogue 7文件、ALCD 1文件仍all_files_verified，split SHA仍a431745e7a17bbd4a7b9e12ef3bf76767d4eb827911bd5cb5e632683c2177f7b。ALCD仍缺原始影像，无新独立H1支持或实验指标。记录push后尝试远端pull，若连接未恢复则留待后续同步，不反复通知相同SSH故障。
+- 同步结果：本轮git push及远端git pull --ff-only最终成功（6de9e2b），连接在同步尝试时恢复；此前两次数据巡检失败仍如实保留，未将代码同步成功替代数据与source校验。
