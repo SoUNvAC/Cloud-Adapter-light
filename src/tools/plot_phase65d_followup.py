@@ -41,7 +41,7 @@ def main():
     target=np.array([r['delta_ap']['2000'] for r in rows]);preds=d['loo_probes']
     for i,(name,label) in enumerate([('rgb_source','RGB + Source'),('rgb_source_nir_swir','RGB + Source + NIR/SWIR')]):
         axes[1].scatter(target,preds[name]['predictions'],color=COLORS[i],marker=['o','^'][i],s=24,label=label+'\nMAE='+format(preds[name]['mae'],'.3f'))
-    allv=np.r_[target,*[p['predictions'] for p in preds.values()]];lo=min(allv)-.05;hi=max(allv)+.05
+    allv=np.concatenate([target]+[np.asarray(p['predictions']) for p in preds.values()]);lo=min(allv)-.05;hi=max(allv)+.05
     axes[1].plot([lo,hi],[lo,hi],color='.5',ls=':',lw=.8);axes[1].set(xlim=(lo,hi),ylim=(lo,hi),xlabel='Observed 2000-step AP difference',ylabel='Leave-one-group-out prediction',title='b  Seven-group exploratory prediction');axes[1].legend(fontsize=6.5);axes[1].grid(alpha=.18)
     fig.supxlabel('Repeated checkpoints are not independent runs. Fold-local scaling; fixed ridge penalty 10; no GT proportions in predictors.',fontsize=6.5)
     save(fig,out,'development_group_structure',a.final)
