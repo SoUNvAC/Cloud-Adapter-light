@@ -593,3 +593,6 @@
 - 用户暂停人工复核并明确授权先做Phase65a；新增独立探索协议，只用原153 fit组155产品及32 development代表，不改变原失败split，不读取确认集或旧sealed test，不推进65b/65c。
 - 新增官方数组准备/原生有效mask、Catalogue加载器、seed65 MsRE配置、source与适配成对评估和描述性汇总；本地数据转换两项测试及Python语法检查通过。代码先push再远端pull后执行。
 - 远端CUDA/指定conda可用，source与split固定SHA匹配；新授权覆盖此前对本次探索训练的禁令，原主检验停止门继续保留。work_dirs自动同步仍取消；尚未产生训练结果。
+
+- 启动核验：远端703d98f、PID510296；187产品准备及185代表source评估完成，MsRE seed65已到400/4000步，loss=5.1531为有限值，lr=9.3071e-05；原split SHA不变。只读远端日志，无work_dirs传回。
+- 运行限制：沿用deterministic_warn_only，CUDA cumsum/grid_sample及CuBLAS报告非严格确定性；不声称逐位可复现。定时任务已更新为跟进本次明确授权的探索作业，保留原停止门、复核暂停和同步取消。
