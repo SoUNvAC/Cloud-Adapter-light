@@ -2,10 +2,31 @@
 import argparse,json
 from pathlib import Path
 import numpy as np
-from sklearn.pipeline import make_pipeline
-from sklearn.preprocessing import StandardScaler
-from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import roc_auc_score
+from scipy.optimize import minimize
+from scipy.special import expit
+
+
+def fixed_logistic(x, y, development):
+    """Standardize on fit only; fixed C=1 L2 logistic, unpenalized intercept."""
+    mean=x.mean(0);scale=x.std(0);scale[scale==0]=1
+    z=(x-mean)/scale;zd=(development-mean)/scale
+    def objective(theta):
+        logits=z@theta[:-1]+theta[-1]
+        loss=np.logaddexp(0,logits).sum()-y@logits+.5*(theta[:-1]@theta[:-1])
+        residual=expit(logits)-y
+        return loss,np.r_[z.T@residual+theta[:-1],residual.sum()]
+    result=minimize(objective,np.zeros(x.shape[1]+1),jac=True,method='L-BFGS-B',
+                    options={'maxiter':1000,'gtol':1e-4,'ftol':1e-12})
+    if not result.success:raise RuntimeError('Fixed logistic failed: '+result.message)
+    return expit(zd@result.x[:-1]+result.x[-1]),dict(
+        implementation='scipy L-BFGS-B; sum log-loss + 0.5*L2; C=1; fit-only population standardization',
+        optimizer_success=bool(result.success),optimizer_iterations=int(result.nit),
+        fit_mean=mean.tolist(),fit_scale=scale.tolist(),coefficients=result.x.tolist())
+
+
+def pairwise_auroc(y, probabilities):
+    differences=probabilities[y,None]-probabilities[~y][None,:]
+    return float(((differences>0)+.5*(differences==0)).mean())
 
 
 def main():
@@ -37,10 +58,10 @@ def main():
     yd=np.array([r['delta_shadow_to_surface_pixels']>0 for r in dev])
     out['h2']=dict(fit_positive=int(y.sum()),fit_negative=int((~y).sum()),development_positive=int(yd.sum()),development_negative=int((~yd).sum()))
     if min(y.sum(),(~y).sum())>=8 and np.isfinite(x).all():
-        risk=make_pipeline(StandardScaler(),LogisticRegression(C=1,max_iter=1000,solver='lbfgs',random_state=65))
-        risk.fit(x,y);prob=risk.predict_proba([r['source_features'] for r in dev])[:,1]
+        prob,details=fixed_logistic(x,y,np.asarray([r['source_features'] for r in dev]))
+        out['h2']['fit_details']=details
         out['h2']['development_probabilities']=prob.tolist()
-        if min(yd.sum(),(~yd).sum())>=8:out['h2']['descriptive_development_auroc']=float(roc_auc_score(yd,prob))
+        if min(yd.sum(),(~yd).sum())>=8:out['h2']['descriptive_development_auroc']=pairwise_auroc(yd,prob)
         else:out['h2']['interpretation']='Development class support insufficient; no AUROC claim'
     else:out['h2']['interpretation']='Fit support/input insufficient; risk model not fitted'
     a.output.write_text(json.dumps(out,indent=2,allow_nan=False))

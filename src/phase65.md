@@ -596,3 +596,8 @@
 
 - 启动核验：远端703d98f、PID510296；187产品准备及185代表source评估完成，MsRE seed65已到400/4000步，loss=5.1531为有限值，lr=9.3071e-05；原split SHA不变。只读远端日志，无work_dirs传回。
 - 运行限制：沿用deterministic_warn_only，CUDA cumsum/grid_sample及CuBLAS报告非严格确定性；不声称逐位可复现。定时任务已更新为跟进本次明确授权的探索作业，保留原停止门、复核暂停和同步取消。
+
+
+## 65a / 2026-10-08 / 探索训练完成，汇总依赖修复
+- 真实状态：seed65完成4000/4000步，最佳development checkpoint为2000步；source和适配均完成153 fit代表与32 development代表评估。主PID510296已退出，管线EXIT_CODE=1，唯一最终错误为汇总缺少sklearn；不重训、不重跑已完成评估。
+- 修复：改用远端已有SciPy L-BFGS-B实现同一固定C=1、fit标准化、无惩罚截距逻辑回归目标，保留特征、支持门和划分；本地与sklearn固定目标概率一致性及AUROC平分规则通过。只重跑尚未生成的汇总，保留原失败退出记录，不安装系统依赖。
