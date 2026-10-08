@@ -530,3 +530,11 @@
 - 止损线：不自动同步/备份work_dirs，不动旧split与source；无新训练/预测，旧sealed test持续封存。新数据质量与独立性未冻结前不能称训练就绪；版本差异不冒称真实错误或模型错误流向。
 - 结果：原版37景全部1830×1830/60m，重复目录标签一致，无异常类号，17655048格nodata、2景无类4。作者公开修订包29景全部格网匹配，27景在有效稳定60m内部格有标签差异；具体计数在独立审查文档及shared报告。影像全量下载和六波段联合有效mask审计尚未完成；远端label_intake与reference_disagreement报告来自shared，未传work_dirs。
 - 后续实测：geometry_progress_20261008.json对已齐备的前3景六波段完成JPEG2000解码、CRS/边界/原生格网核对，3景all_six_grids_match、34景pending_verified_bands、0景grid_mismatch；联合有效掩膜同时排除XML NODATA=0及SATURATED=65535。本地后续快照240对象11528805265 bytes已校验，远端较早快照27对象1471015235 bytes已校验且partial仍增长。两机继续下载，未宣布全量完成或标签语义认证。
+
+
+## 65a / 2026-10-08 12:50 北京时间 / 原始影像巡检
+- 目标：核验双机L1C六波段下载和原停止门，继续已授权数据审查。
+- 改动：仅只读巡检与追加本轮记录，保留用户改动；不重启下载，不同步work_dirs，不训练。
+- 网络情况：SSH正常；本地397对象17255829220 bytes均verified、退出码0、无partial/锁、error.log为空；Catalogue和ALCD官方包本地状态仍all_files_verified。远端89对象4406603375 bytes已verified，下载继续，error.log为空、geometry_audit.json尚未生成。
+- 止损线：活进程和partial增长时不重复下载、不绕过锁；原失败split不重抽、不降低门槛、不借65b/65c，封存测试不读像素/预测/指标。
+- 结果：本地原始影像已校验完成，远端仍进行中，双机完整校验与最终37景几何审计未完成；不把下载完成称实验完成，不新增模型指标。仅待远端下载与后续自动审计，暂无用户操作要求。
