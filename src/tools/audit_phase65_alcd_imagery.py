@@ -33,12 +33,18 @@ def main():
             member=row['label_members'][0]; raw=tar.extractfile(member).read(); r={'key':row['key'],'label_sha256':hashlib.sha256(raw).hexdigest(),'duplicate_labels_identical':all(hashlib.sha256(tar.extractfile(m).read()).hexdigest()==hashlib.sha256(raw).hexdigest() for m in row['label_members'])}
             xml_objects=[o for o in row.get('objects',[]) if o['name'].endswith('.xml') and '/GRANULE/' not in o['name']]
             r['product_radiometry']=[]
+            special_values={}
             for obj in xml_objects:
                 entry=download['files'].get(obj['name'])
                 if entry and entry['status']=='verified':
                     tree=ET.parse(a.root/entry['path'])
                     fields=[{'tag':e.tag.split('}')[-1],'value':e.text,'attributes':e.attrib} for e in tree.iter() if e.tag.split('}')[-1] in ('QUANTIFICATION_VALUE','PROCESSING_BASELINE','RADIO_ADD_OFFSET','SPECIAL_VALUE_TEXT','SPECIAL_VALUE_INDEX','PRODUCT_URI','SENSING_TIME')]
                     r['product_radiometry'].extend(fields)
+                    for parent in tree.iter():
+                        children={e.tag.split('}')[-1]:e.text for e in parent}
+                        if 'SPECIAL_VALUE_TEXT' in children and 'SPECIAL_VALUE_INDEX' in children:
+                            special_values[children['SPECIAL_VALUE_TEXT']]=int(children['SPECIAL_VALUE_INDEX'])
+            r['special_values']=special_values
             with MemoryFile(raw) as mem, mem.open() as lab:
                 labels=lab.read(1); vals,counts=np.unique(labels,return_counts=True)
                 r.update(shape=list(labels.shape),crs=str(lab.crs),transform=list(lab.transform)[:6],bounds=list(lab.bounds),resolution=list(lab.res),nodata=lab.nodata,label_class_counts={str(int(v)):int(c) for v,c in zip(vals,counts)})
@@ -63,7 +69,9 @@ def main():
                             # GDAL masks: all fine pixels must be valid, rather than
                             # nearest-neighbor hiding missing observations.
                             native=im.read(1)
-                            native_valid=(native!=0)&(im.read_masks(1)>0)
+                            native_valid=im.read_masks(1)>0
+                            for value in {0,*special_values.values()}:
+                                native_valid &= native!=value
                             # Sentinel-2 L1C special value zero is no observation,
                             # even when the JP2 driver does not expose nodata.
                             factor=int(ratio)
@@ -71,6 +79,7 @@ def main():
                             del native,native_valid
                             valid &= mask
                             r['bands'][band]['valid_native_label_cells']=int(mask.sum())
+                            r['bands'][band]['validity_policy']='GDAL mask AND exclude XML special values (including nodata and saturation); every contributing fine pixel valid'
                 complete &= set(r['bands'])=={'B02','B03','B04','B08','B11','B12'}
                 r['alignment_status']='all_six_grids_match' if complete and grid_valid else ('grid_mismatch' if not grid_valid else 'pending_verified_bands')
                 if complete and grid_valid:
