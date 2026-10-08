@@ -18,8 +18,17 @@ def setup():
 def audit(fig):
     fig.canvas.draw();renderer=fig.canvas.get_renderer();width,height=fig.canvas.get_width_height()
     issues=[]
+    # Matplotlib keeps Text objects for locator ticks outside the displayed limits.
+    # Those ticks are not drawn; audit only the ticks that actually appear.
+    hidden_ticks=set()
+    for ax in fig.axes:
+        for axis in [ax.xaxis,ax.yaxis]:
+            lo,hi=sorted(axis.get_view_interval())
+            for tick in axis.get_major_ticks()+axis.get_minor_ticks():
+                if not lo<=tick.get_loc()<=hi:
+                    hidden_ticks.update([id(tick.label1),id(tick.label2)])
     for t in fig.findobj(matplotlib.text.Text):
-        if not t.get_visible() or not t.get_text():continue
+        if not t.get_visible() or not t.get_text() or id(t) in hidden_ticks:continue
         box=t.get_window_extent(renderer)
         if box.x0 < -2 or box.y0 < -2 or box.x1>width+2 or box.y1>height+2:issues.append(t.get_text())
         if t.get_fontsize()<6:issues.append('small_font:'+t.get_text())
