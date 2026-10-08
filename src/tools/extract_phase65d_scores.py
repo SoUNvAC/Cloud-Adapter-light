@@ -47,6 +47,8 @@ def main():
     missing,unexpected=model.load_state_dict(torch.load(checkpoint,map_location='cpu')['state_dict'],strict=False)
     if unexpected or any(not k.startswith(('backbone.target_msre.','backbone.target_head_delta.')) for k in missing):raise ValueError('State mismatch')
     if a.model=='msre' and missing:raise ValueError('Adapted checkpoint missing parameters')
+    # Match the previous evaluator's module/freezing lifecycle exactly.
+    model.train()
     model.backbone.set_target_enabled(a.model=='msre');model.eval().cuda()
     dc=dict(cfg.val_dataloader.dataset);dc.update(cohort=a.cohort,prepared_manifest=str(manifest))
     if a.cohort=='phase65b_evidence':dc['type']='Phase65EvidenceDataset'
@@ -63,7 +65,9 @@ def main():
         pred=prediction.pred_sem_seg.data[0].cpu().numpy().astype(np.uint8)
         if not np.isfinite(native).all() or probability.shape!=truth.shape:raise ValueError('Invalid score/grid')
         cm=confusion(truth,pred)
-        if not np.array_equal(cm,np.asarray(old_rows[product]['confusion'])):raise ValueError('Argmax result drift: '+product)
+        if not np.array_equal(cm,np.asarray(old_rows[product]['confusion'])):
+            print('argmax_drift',product,'observed',cm.tolist(),'reference',old_rows[product]['confusion'],flush=True)
+            raise ValueError('Argmax result drift: '+product)
         dest=cohort/product;dest.mkdir(exist_ok=True)
         common={'truth':truth,'brightness':rgb.mean(-1,dtype=np.float32)/np.float32(255)}
         for name,array in common.items():

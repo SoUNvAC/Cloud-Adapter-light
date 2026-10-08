@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 repo=/home/scv/Cloud-Adapter-light
-root=/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/phase65d_20261008
+root=${1:-/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/phase65d_20261008}
+case "$root" in /home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/phase65d_20261008*) ;; *) exit 2 ;; esac
 test ! -e "$root" || { echo 'Existing 65D: inspect, do not overwrite or refit'; exit 2; }
 mkdir "$root"
 mkdir "$root/run_logs"
@@ -12,7 +13,7 @@ nohup bash -c '
   source /home/scv/miniconda3/etc/profile.d/conda.sh || exit 8
   conda activate cloud-lite-pt210 || exit 8
   cd /home/scv/Cloud-Adapter-light/src || exit 8
-  export XFORMERS_DISABLED=1 OMP_NUM_THREADS=4 CUBLAS_WORKSPACE_CONFIG=:4096:8
+  export XFORMERS_DISABLED=1 OMP_NUM_THREADS=4
   python -u tools/extract_phase65d_scores.py --cohort development_val --model source --output "$PHASE65D_ROOT"
   code=$?
   if test "$code" = 0; then python -u tools/extract_phase65d_scores.py --cohort development_val --model msre --output "$PHASE65D_ROOT"; code=$?; fi
