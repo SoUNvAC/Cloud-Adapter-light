@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 repo=/home/scv/Cloud-Adapter-light
-root=/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/phase65d_followup_20261008
+root=${1:-/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/phase65d_followup_20261008}
+case "$root" in /home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/phase65d_followup_20261008*) ;; *) exit 2 ;; esac
 test ! -e "$root" || { echo 'Existing followup; inspect without overwrite'; exit 2; }
 mkdir "$root"
 mkdir "$root/run_logs"

@@ -49,7 +49,7 @@ def extract(root,step,cohort):
     if cohort!='development_val':dc['type']='Phase65EvidenceDataset'
     ds=DATASETS.build(dc);rows=[]
     for i in range(len(ds)):
-        product=Path(ds.data_list[i]['img_path']).name.removesuffix('_rgb.npy')
+        product=Path(ds.get_data_info(i)['img_path']).name.removesuffix('_rgb.npy')
         if product not in records:continue
         r=records[product];prefix=r['rgb_path'].removesuffix('_rgb.npy')
         for suffix,sha in r['prepared_sha256'].items():assert digest(prepared/(prefix+suffix))==sha
