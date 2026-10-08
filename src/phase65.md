@@ -605,3 +605,10 @@
 - 最终核验：汇总修复EXIT_CODE=0，原管线EXIT_CODE=1保留为缺依赖历史；4000步和185代表成对评估均完成，原split SHA不变。结果保留远端phase65a_explore_20261008；未自动传回任何work_dirs文件。
 - 真实描述结果：development像元汇总mIoU source67.13334%→MsRE77.70362%，Shadow IoU21.23065%→48.80934%；development场景均值mIoU变化+25.18420pp，分母32，与像元汇总定义不同。best checkpoint=2000。development Shadow→Surface像元166595→224074，准确率增益不表示所有错误流改善。
 - H1仅fit40、development7个有支持且有有效shadow代表，描述相关fit0.021025/development-0.133429；H2 fit19正134负、development4正28负，固定逻辑回归收敛，但development类别支持不足，不声称AUROC或正式假设通过。探索结果不替代原失败支持门，不授权65b/65c。
+
+
+## 65b / 2026-10-08 / 新授权固定光谱风险证据对照
+- 用户明确要求推进65b查看结果；新增独立探索协议，使用原65b_confirmation的64固定代表作本轮信息诊断；原65a失败split不改、不重抽、不读取65a_confirmation/65c/旧sealed test。ALCD不参与。
+- 冻结source及65a最佳2000步MsRE SHA、153 fit代表风险拟合输入SHA，比较前9维RGB可观测特征与12维额外B08/B11/B12均值，并增加删除和打乱光谱对照。只拟合浅层风险探针，不重训分割模型。
+- 本地配对分母、组唯一性及零增量bootstrap三项测试和语法检查通过；远端无现存训练任务，65a汇总修复退出0。代码先push后远端pull执行，未产生65b结果。
+- 形式限制：官方数组内部格网匹配不能替代外部CRS/footprint、独立标签复核、小样本RGB/六波段分割95%及六波段source保留门；本次只探索证据，不称正式65b主门通过、不授权65c、不同步work_dirs。

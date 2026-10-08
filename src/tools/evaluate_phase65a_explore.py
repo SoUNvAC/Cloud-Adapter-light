@@ -28,6 +28,7 @@ def metric(cm):
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('--checkpoint',required=True)
     ap.add_argument('--source-only',action='store_true');ap.add_argument('--preflight',action='store_true')
+    ap.add_argument('--phase65b-manifest',type=Path)
     ap.add_argument('--output',type=Path,required=True);a=ap.parse_args()
     if a.output.exists():raise FileExistsError('Preserve previous evaluation')
     torch.manual_seed(65);np.random.seed(65)
@@ -41,14 +42,23 @@ def main():
     model.train();names=[n for n,p in model.named_parameters() if p.requires_grad]
     if not names or any(not n.startswith(permitted) for n in names):raise ValueError('Unexpected trainable source parameter')
     model.backbone.set_target_enabled(not a.source_only);model.eval().cuda()
-    manifest_path=Path(os.environ['PHASE65_PREPARED_MANIFEST']);manifest=json.loads(manifest_path.read_text())
+    manifest_path=a.phase65b_manifest or Path(os.environ['PHASE65_PREPARED_MANIFEST']);manifest=json.loads(manifest_path.read_text())
+    cohorts=['fit_representatives','development_val']
+    if a.phase65b_manifest:
+        if manifest['scope']!='exploratory_phase65b_evidence_only':raise ValueError('Unauthorized manifest')
+        expected=manifest['source_sha256'] if a.source_only else manifest['adapted_sha256']
+        if hashlib.sha256(Path(a.checkpoint).read_bytes()).hexdigest()!=expected:raise ValueError('Frozen checkpoint mismatch')
+        cohorts=['phase65b_evidence']
     records={r['product']:r for r in manifest['rows']}
-    output=dict(scope='exploratory_fit_development_only',primary_confirmation_test=False,
+    output=dict(scope=manifest['scope'],primary_confirmation_test=False,
                 checkpoint=a.checkpoint,checkpoint_sha256=hashlib.sha256(Path(a.checkpoint).read_bytes()).hexdigest(),
                 prepared_manifest_sha256=hashlib.sha256(manifest_path.read_bytes()).hexdigest(),
                 trainable_names=names,source_path_disabled=a.source_only,scenes=[])
-    for cohort in ['fit_representatives','development_val']:
-        dc=dict(cfg.val_dataloader.dataset);dc['cohort']=cohort;ds=DATASETS.build(dc)
+    for cohort in cohorts:
+        dc=dict(cfg.val_dataloader.dataset);dc['cohort']=cohort
+        if a.phase65b_manifest:
+            dc.update(type='Phase65EvidenceDataset',prepared_manifest=str(manifest_path))
+        ds=DATASETS.build(dc)
         for i in range(len(ds)):
             sample=ds[i];product=Path(sample['data_samples'].img_path).name.removesuffix('_rgb.npy')
             row=records[product];truth=np.load(manifest_path.parent/row['mask_path'])
@@ -71,7 +81,7 @@ def main():
         if a.preflight:break
     if not a.preflight:
         output['aggregate']={cohort:metric(np.sum([s['confusion'] for s in output['scenes'] if s['cohort']==cohort],axis=0))
-                             for cohort in ['fit_representatives','development_val']}
+                             for cohort in cohorts}
     a.output.parent.mkdir(parents=True,exist_ok=True)
     a.output.write_text(json.dumps(output,indent=2,allow_nan=False))
 

@@ -52,3 +52,25 @@ class Phase65CatalogueDataset(BaseSegDataset):
                      seg_map_path=str(self.prepared_manifest.parent/r['mask_path']),
                      label_map=None, reduce_zero_label=False, seg_fields=[])
                 for r in rows]
+
+
+@DATASETS.register_module()
+class Phase65EvidenceDataset(BaseSegDataset):
+    """Explicit new 65b authorization, separate from the original 65a loader."""
+    METAINFO = Phase65CatalogueDataset.METAINFO
+
+    def __init__(self, prepared_manifest, cohort, **kwargs):
+        if cohort != 'phase65b_evidence':
+            raise ValueError('Only newly authorized 65b evidence representatives')
+        self.prepared_manifest = Path(prepared_manifest)
+        super().__init__(reduce_zero_label=False, **kwargs)
+
+    def load_data_list(self):
+        d=json.loads(self.prepared_manifest.read_text())
+        if d['scope'] != 'exploratory_phase65b_evidence_only' or len(d['rows']) != 64:
+            raise ValueError('Unrecognized newly authorized evidence manifest')
+        if any(r['original_split'] != '65b_confirmation' for r in d['rows']):
+            raise ValueError('Forbidden cohort')
+        return [dict(img_path=str(self.prepared_manifest.parent/r['rgb_path']),
+                     seg_map_path=str(self.prepared_manifest.parent/r['mask_path']),
+                     label_map=None,reduce_zero_label=False,seg_fields=[]) for r in d['rows']]
