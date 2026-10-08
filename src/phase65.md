@@ -570,3 +570,11 @@
 - 模型/SSH/下载网络：没有训练或预测；首次SSH握手被远端关闭，一次只读重试成功。本地Catalogue与ALCD官方包均all_files_verified；原始影像397对象17255829220 bytes全部verified，EXIT_CODE=0，error.log为空。远端原始影像279对象12927185966 bytes verified，较上轮215对象继续推进，主进程23117存活，B02 partial为58720256 bytes，error.log为空，geometry_audit.json尚未生成。
 - 止损线：原失败split SHA256仍为a431745e7a17bbd4a7b9e12ef3bf76767d4eb827911bd5cb5e632683c2177f7b；不重抽、不降门槛、不训练或推进65b/65c，不读旧sealed test像素/预测/指标；正常下载不重启，不绕过锁与校验。
 - 真实结果：瞬时SSH握手问题已恢复，下载继续推进，等待远端完整校验与几何审计。没有新标签语义可靠性或独立支持结论，无需用户操作。
+
+
+## 65a / 2026-10-08 17:50 北京时间 / 双机影像校验及最终几何审计完成
+- 目标：核验远端下载完成与完整几何审计，冻结独立于模型的标签复核方案。
+- 改动：从shared数据目录取得完整下载状态及几何报告，仅用于数据审查；写入PHASE65_ALCD_VISUAL_REVIEW.md v1和本轮日志，不同步work_dirs，不清理文件。
+- 模型/SSH/网络：没有训练或预测；SSH正常，双机Catalogue与ALCD官方包均all_files_verified。本地原始影像退出0；远端397对象17255829220 bytes全部verified，无partial，error.log为空。逐对象size/md5_base64/SHA256/generation/status双机一致。
+- 真实结果：37/37景全部六波段原生格网匹配60m标签，联合有效106252111格，几何报告SHA256=a8729d197458b1a29c4024bda4cf8b071ee1094cd19ba7307b076ce7b861dcca。完整影像校验与几何审计完成；语义质量和新增独立H1支持仍未成立。复核方案冻结版本差异诊断与不依赖标签/模型的逐景空间抽样，视觉判读待执行。
+- 止损线：原split SHA仍a431745e7a17bbd4a7b9e12ef3bf76767d4eb827911bd5cb5e632683c2177f7b；不重抽、降门槛、训练或推进65b/65c，旧sealed test禁读像素/预测/指标。下载与几何审计完成不称实验完成。
