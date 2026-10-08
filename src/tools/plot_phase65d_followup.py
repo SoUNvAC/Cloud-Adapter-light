@@ -12,7 +12,7 @@ def short(p):
     parts=p.split('_');return parts[5]+' '+parts[2][:8]
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--root',required=True,type=Path);p.add_argument('--final',action='store_true');a=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument('--root',required=True,type=Path);p.add_argument('--final',action='store_true');p.add_argument('--spectral-only',action='store_true');a=p.parse_args()
     root=a.root;d=json.loads((root/'development_report.json').read_text());s=json.loads((root/'spectral_screen.json').read_text())
     assert d['status']=='development_frozen_before_t18';out=root/'figures';out.mkdir(exist_ok=True);setup()
     xs=[0,2000,3500,4000];pts=d['points']
@@ -32,7 +32,8 @@ def main():
         ax.set_xticks(xs,['Source\nbaseline','2000','3500','4000']);ax.set_ylabel(ylabel);ax.grid(alpha=.18);ax.legend(fontsize=6.5)
         ax.set_title(['a  Development AP (7 supported groups)','b  Fixed-FPR ranking diagnostic','c  Shadow prediction fraction (32 groups)','d  mIoU and retained checkpoints'][i],loc='left',fontsize=8)
     fig.supxlabel('Source is a baseline, not a target step-0 checkpoint. Earlier AP checkpoints are missing; no interpolation across that gap.',fontsize=6.5)
-    save(fig,out,'development_trajectory',a.final)
+    if not a.spectral_only:save(fig,out,'development_trajectory',a.final)
+    else:plt.close(fig)
     rows=d['structure'];fig,axes=plt.subplots(1,2,figsize=(7.2,4.4),layout='constrained')
     y=np.arange(len(rows))
     for i,step in enumerate(['2000','3500','4000']):
@@ -44,19 +45,21 @@ def main():
     allv=np.concatenate([target]+[np.asarray(p['predictions']) for p in preds.values()]);lo=min(allv)-.05;hi=max(allv)+.05
     axes[1].plot([lo,hi],[lo,hi],color='.5',ls=':',lw=.8);axes[1].set(xlim=(lo,hi),ylim=(lo,hi),xlabel='Observed 2000-step AP difference',ylabel='Leave-one-group-out prediction',title='b  Seven-group exploratory prediction');axes[1].legend(fontsize=6.5);axes[1].grid(alpha=.18)
     fig.supxlabel('Repeated checkpoints are not independent runs. Fold-local scaling; fixed ridge penalty 10; no GT proportions in predictors.',fontsize=6.5)
-    save(fig,out,'development_group_structure',a.final)
+    if not a.spectral_only:save(fig,out,'development_group_structure',a.final)
+    else:plt.close(fig)
     names=['source','msre2000','negative_rgb_mean','negative_b08','negative_b11','negative_b12','negative_nir_swir_mean']
     labels=['Source','MsRE','-RGB','-B08','-B11','-B12','-NIR/SWIR\nmean']
     fig,axes=plt.subplots(1,2,figsize=(7.2,4.4),layout='constrained')
     for ax,stratum,title in zip(axes,['surface_all','surface_lowest_decile'],['a  Shadow vs all reference Surface','b  Shadow vs lowest-brightness Surface decile']):
         matrix=np.array([[r['strata'][stratum][n]['roc_auc'] for n in names] for r in s['rows']],float)
-        im=ax.imshow(matrix,aspect='auto',vmin=0,vmax=1,cmap='viridis')
+        im=ax.pcolormesh(np.arange(len(names)+1)-.5,np.arange(len(s['rows'])+1)-.5,matrix,vmin=0,vmax=1,cmap='viridis',rasterized=False)
+        ax.set_ylim(len(s['rows'])-.5,-.5)
         for (i,j),v in np.ndenumerate(matrix):ax.text(j,i,f'{v:.2f}',ha='center',va='center',fontsize=6.5,color='black' if v>.6 else 'white')
         ax.set_xticks(range(len(names)),labels,rotation=45,ha='right',fontsize=7);ax.set_yticks(range(len(s['rows'])),[short(r['product']) for r in s['rows']],fontsize=7)
         ax.set_title(title,fontsize=8,loc='left')
     fig.colorbar(im,ax=axes,label='ROC AUC',shrink=.8)
     fig.supxlabel('Fixed untrained band-darkness signals; no fusion, tuned weights, or model recovery. Seven reference-Shadow groups only.',fontsize=6.5)
-    save(fig,out,'development_spectral_screen',a.final)
+    save(fig,out,'development_spectral_screen_vector',a.final)
     print('Preview ready' if not a.final else 'Final PNG/PDF/SVG exported')
 
 if __name__=='__main__':main()
