@@ -1,0 +1,7 @@
+# 65D T18FYG事后地表亮度诊断补充
+
+首次固定报告已完成，绝对RGB平均亮度<0.08的reference Surface仅3个有效像元。不得用其接近1的AP宣称暗地表分离良好；正负极不平衡且负类支持不足。
+
+补充计算前固定：仅T18FYG、固定旧分数及两模型，比较Shadow对全部reference Surface，以及Shadow对reference Surface中RGB平均亮度最低10%子集；10%分位数由影像亮度确定，边界ties一并纳入，不按模型分数或结果挑阈值。相对暗子集不代表经人工确认的暗地物。报告子集数量、AP、AUC、相同预设FPR召回及分数分布，不改变development阈值锁，不更新原报告、不训练、不进确认集。此补充完全事后描述，不形成预注册主检验或像元独立推断。
+
+补充报告独占写入新shared目录t18_surface_supplement.json，绑定原diagnostic_report和calibration_lock SHA。图的CDF改画全部reference Surface，明确绝对暗子集3像元不足。保留原固定诊断和失败提取现场。

@@ -65,6 +65,8 @@ def pr_panel(ax,data,report,cohort):
 def main():
     p=argparse.ArgumentParser();p.add_argument('--root',required=True,type=Path);p.add_argument('--final',action='store_true');a=p.parse_args()
     root=a.root;data=json.loads((root/'plot_data.json').read_text());report=json.loads((root/'diagnostic_report.json').read_text())
+    supplement=json.loads((root/'t18_surface_supplement.json').read_text())
+    if supplement['calibration_lock_sha256']!=report['calibration_lock_sha256']:raise ValueError('Supplement lock mismatch')
     out=root/'figures';out.mkdir(exist_ok=True);setup()
     fig,axes=plt.subplots(1,2,figsize=(7.2,3.5),layout='constrained')
     for ax,cohort,title in zip(axes,['development_val','phase65b_evidence'],['a  Development (32 scenes)','b  Previously inspected 65b (64 scenes)']):
@@ -87,19 +89,19 @@ def main():
         rates=[float(k) for k in c['matched_fpr']];recall=[v['recall'] for v in c['matched_fpr'].values()]
         axes[0,1].plot(rates,recall,color=color,ls=style,marker='o' if model=='source' else '^',ms=4,label=model.upper())
         for score,ax in [('score',axes[1,0]),('native_score',axes[1,1])]:
-            for stratum in ['shadow','dark_surface']:
-                dist=d['distributions'][score][stratum]
+            for stratum in ['shadow','surface_all']:
+                dist=supplement['models'][model][score]['distributions'][stratum]
                 if not dist['n']:continue
-                line={'source':{'shadow':'-','dark_surface':'-.'},'msre':{'shadow':'--','dark_surface':':'}}[model][stratum]
-                ax.plot(dist['quantiles'],dist['q'],color=color,ls=line,lw=1.2,label=f'{model.upper()} '+('shadow' if stratum=='shadow' else 'dark surface'))
+                line={'source':{'shadow':'-','surface_all':'-.'},'msre':{'shadow':'--','surface_all':':'}}[model][stratum]
+                ax.plot(dist['quantiles'],dist['q'],color=color,ls=line,lw=1.2,label=f'{model.upper()} '+('shadow' if stratum=='shadow' else 'reference Surface'))
     op=report['t18']['msre']['frozen_correction']
     if op['precision'] is not None:axes[0,0].plot(op['recall'],op['precision'],'D',color='black',ms=5,label='Frozen correction')
     axes[0,0].set(xlim=(0,1),ylim=(0,1.02),xlabel='Shadow recall',ylabel='Shadow precision',title='a  T18FYG PR (all valid pixels)')
     axes[0,1].set(xscale='log',xlim=(.0008,.12),ylim=(0,1),xlabel='Maximum allowed nonshadow FPR',ylabel='Shadow recall',title='b  T18FYG matched-FPR ranking')
-    axes[1,0].set(xlabel='Softmax shadow score (not calibrated)',ylabel='Empirical cumulative fraction',title='c  Shadow and dark-surface score CDF',ylim=(0,1))
+    axes[1,0].set(xlabel='Softmax shadow score (not calibrated)',ylabel='Empirical cumulative fraction',title='c  Shadow and reference-Surface CDF',ylim=(0,1))
     axes[1,1].set(xlabel='Native aggregated shadow score',ylabel='Empirical cumulative fraction',title='d  Native shadow-score CDF',ylim=(0,1))
     for ax in axes.ravel():ax.grid(alpha=.18);ax.legend(loc='best')
-    fig.supxlabel('Post-hoc fixed diagnostic: T18FYG selected after observed failure. Dark surface: reference Surface, TOA RGB mean <0.08.',fontsize=7)
+    fig.supxlabel('Post-hoc T18FYG diagnostic. Absolute dark-Surface stratum has only 3 pixels; CDF uses all reference Surface.',fontsize=7)
     save(fig,out,'t18fyg_diagnostic',a.final)
     print('Figure layout audit passed; '+('final PNG/PDF/SVG exported' if a.final else 'preview and grayscale ready'))
 
