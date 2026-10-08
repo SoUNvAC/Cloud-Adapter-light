@@ -538,3 +538,11 @@
 - 网络情况：SSH正常；本地397对象17255829220 bytes均verified、退出码0、无partial/锁、error.log为空；Catalogue和ALCD官方包本地状态仍all_files_verified。远端89对象4406603375 bytes已verified，下载继续，error.log为空、geometry_audit.json尚未生成。
 - 止损线：活进程和partial增长时不重复下载、不绕过锁；原失败split不重抽、不降低门槛、不借65b/65c，封存测试不读像素/预测/指标。
 - 结果：本地原始影像已校验完成，远端仍进行中，双机完整校验与最终37景几何审计未完成；不把下载完成称实验完成，不新增模型指标。仅待远端下载与后续自动审计，暂无用户操作要求。
+
+
+## 65a / 2026-10-08 13:50 北京时间 / 原始影像巡检
+- 目标：核验双机原始影像下载进展，保留既有研究停止门。
+- 改动：仅追加本轮记录，保留用户日志整理及 outputs 修改；不修改代码，不同步或清理 work_dirs。
+- 模型/网络：未训练、未预测。SSH 状态读取成功；本地 Catalogue 与 ALCD 官方包均 all_files_verified，原始影像397对象17255829220 bytes全部 verified，EXIT_CODE=0、error.log为空。远端官方包均 all_files_verified，原始影像144对象6766429815 bytes verified，较上轮89对象继续增长，B04 partial为6291456 bytes，error.log为空，geometry_audit.json尚未生成。
+- 止损线：不重复启动正常下载，不绕过 IMAGERY_LOCK 或校验；保持原失败 split，不重抽、不降低门槛、不推进65b/65c，不读取旧 sealed test 像素、预测或指标。
+- 真实结果：远端下载仍在推进，双机完整影像与最终几何审计尚未完成；没有新的标签语义可靠性或独立支持数量结论，无需用户操作。
