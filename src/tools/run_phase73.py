@@ -10,7 +10,7 @@ from phase65d_metrics import confusion,corrected
 REPO=Path('/home/scv/Cloud-Adapter-light')
 DATA=Path('/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871')
 OLD=DATA/'phase72_20261010'
-ROOT=DATA/'phase73_20261010'
+ROOT=DATA/'phase73_20261010_retry01'
 CATS=['new_FP','lost_TP','rescued_TP','stable_TP']
 COLORS=np.array([[0,158,115],[240,228,66],[0,114,178],[150,150,150]],dtype=np.uint8)
 
@@ -145,7 +145,7 @@ def main():
                     pack(tiles,3).save(ROOT/point['imagery_panel'])
                     label_tiles=[]
                     for name,label in [('GT',truth),('L3 prediction',pred['L3']),('B prediction',pred['B'])]:
-                        indices=np.where(label==255,3,label);label_tiles.append(marked(crop(COLORS[indices],y,x,150),name))
+                        color_indices=np.where(label==255,3,label);label_tiles.append(marked(crop(COLORS[color_indices],y,x,150),name))
                     # Scores remain logits, displayed using frozen sigmoid [0,1], identical across policies.
                     for name in ['L3','B']:
                         prob=1/(1+np.exp(-np.clip(score[name],-80,80)));g=np.repeat((np.nan_to_num(prob)*255).astype(np.uint8)[...,None],3,-1);g[~valid]=150

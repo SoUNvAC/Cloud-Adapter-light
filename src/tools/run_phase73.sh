@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -u
-control=/home/scv/shared/phase73_control_20261010
+control=/home/scv/shared/phase73_control_20261010_retry01
 mkdir "$control" || exit 1
 exec >"$control/console.log" 2>"$control/error.log"
 echo $$ >"$control/PID"
