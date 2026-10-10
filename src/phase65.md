@@ -666,3 +666,8 @@
 - 损伤/诊断：L3-L2最差T45STS AP−7.2548pp、召回−11.1572pp；T35MQV AP−1.8422pp；4个Shadow组冻结召回仍0。相对Source，T39XWB最差AP−24.9247pp，T53TLN最大召回下降83.8280pp；不同原操作点的代价不能当同FPR比较。池化1%FPR oracle召回L2 42.3951→L3 54.6058%，5%则69.7501→61.0385%，不把扫描阈值用于部署；光谱增量不等于所有预算/场景排序或实际识别全面恢复。
 - 解释/止损：按预先规则本批独立AP增量和平均FPR预算联合获支持，但只有15个Shadow相关组，CI宽12.4115pp、条件于冻结候选，不覆盖fit/选模型/标签质量不确定性。结束这轮development探索，不在确认集继续调参/阈值，不改原H1失败或自动推进65c；L3作为后续机制必须超过的基线，机制投入需新独立协议。
 - 本地交付：outputs/phase66/phase66_20261010/RESULTS.md分数据/探讨；报告、320行CSV、启封记录、输入manifest四份shared文件双机SHA一致，CSV独立重算主要配对AP及五策略FPR区间完全一致；模型原SHA及splitSHA再次确认不变。SSH瞬时握手关闭后恢复，无数据下载或新训练，2026-10-20预算保持。
+
+## Phase67 / 2026-10-10 / 三个必要输入对照（执行前）
+- 用户仅授权L2+RGB（同为五输入）、Source+NIR/SWIR、MsRE+NIR/SWIR；153 fit拟合/校准，32 development比较选择，固定原Source/2000步MsRE及原样本/组权重/标准化/0.001正则/优化器/1%fit误报规则。只新增3次浅层拟合，无CNN训练或新网络前向、无下载；不读取Phase66/65b/65c/sealed像元、分数或指标，不改Phase66结论及原H1失败。
+- 预写PHASE67_20261010.md：Source+光谱使用Source原Surface/Cloud胜者以完全删除MsRE依赖，另外两者沿用MsRE；Shadow排序/召回/FPR可直接比较，三类mIoU另含非Shadow分类规则影响。固定比较L3分别减三个对照，7组配对bootstrap仅作描述；旧L3在development必须逐像元分数、逐组confusion/AP复现。
+- development选择仅旧L3及3个新对照：实际32组平均FPR点估计<=1%中选7组平均AP最高，精确平手选低维及名称字典序；不因结果放宽预算/重新校准。输入映射/Source删除MsRE不变性/预算先于AP选择两项新测试及原4项拟合数学测试本地通过，语法通过。SSH正常、既有fit/dev缓存可用、原recovery锁SHA一致；代码push/远端pull后执行，产物仅新shared/phase67_20261010，不同步work_dirs。预算2026-10-20保持。
