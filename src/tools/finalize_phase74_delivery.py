@@ -8,7 +8,7 @@ def main(root):
     verification=verify(root)
     r=json.loads((root/'phase74_report.json').read_text(encoding='utf-8'));p=r['policies']
     text=['# Phase74：预测云邻居排除检验','','## 1 数据结果','',
-        '仅原153个fit相关组拟合、32个development相关组评价，其中7组具有有效参考云影。没有新网络前向、下载或确认池评价。原L3/B的32组AP与混淆矩阵精确复现。',
+        '数据为Sentinel-2 Cloud Mask Catalogue（Zenodo4172871），不含ALCD。仅原153个fit相关组拟合、32个development相关组评价，其中7组具有有效参考云影。没有新网络前向、下载或确认池评价。原L3/B的32组AP与混淆矩阵精确复现。',
         '', '固定61×61窗口、B08/B11/B12原生TOA；排除中心/无效观测，剩余邻居不足16时回退原B均值。E由冻结Source三类argmax的Cloud预测生成；R保留全景排除数量，但不匹配每个窗口的数量和空间结构。',
         '', '两个拟合版仅用原fit样本、组等权BCE、固定正则与优化器；全部fit负类按原规则冻结宏FPR≤1%阈值。固定参数版沿用原B全部参数及阈值。六行均使用原MsRE的非云影类别胜者。',
         '', '| 模型 | 宏AP % | 池化AP % | 宏召回 % | 全组宏FPR % | FPR单侧95%上界 % | 池化mIoU % | 零召回组 |',
@@ -48,6 +48,10 @@ def main(root):
     descriptions={'E_FPR_below_B':'E拟合版全组宏FPR低于B','E_recall_loss_le_1pp':'E拟合版相对B宏召回损失不超过1个百分点',
         'E_AP_ge_B':'E拟合版宏AP不低于B','E_AP_gt_R':'E拟合版宏AP高于R拟合版','E_FPR_le_R':'E拟合版全组宏FPR不高于R拟合版'}
     for key,value in r['continue_conditions'].items():text.append(f"- {descriptions[key]}：{'满足' if value else '未满足'}。")
+    c=r['comparisons']['B_E_fit_minus_B_R_fit'];fixed=r['comparisons']['B_E_fixed_minus_B']
+    text+=['',f"E拟合版相对R拟合版的宏AP差为{fmt(c['ap'])}个百分点，区间跨零，不能把正点估计解释成稳定排序增益；改善/稳定/下降为{c['improved']}/{c['stable']}/{c['declined']}组。",
+        f"固定参数排除E相对B：宏FPR差{fixed['fpr']['mean']*100:+.3f}、宏召回差{fixed['recall']['mean']*100:+.3f}个百分点。它降低误报也损失召回；公平重拟合后召回回升，但E拟合版的FPR高于B和R拟合版，未形成预设的恢复收益组合。",
+        f"E拟合版全组宏FPR点估计为{p['B_E_fit']['fpr_strata']['all']['mean']*100:.3f}%，低于1%；单侧95%上界为{p['B_E_fit']['fpr_strata']['all']['upper95']*100:.3f}%，高于1%，因此预算稳定性仍不确定。"]
     if r['continue_branch']:
         text+=['','五项条件全部满足，仅支持继续研究该排除方案；不证明云污染是成因，不代表独立确认通过。']
     else:
