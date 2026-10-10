@@ -671,3 +671,11 @@
 - 用户仅授权L2+RGB（同为五输入）、Source+NIR/SWIR、MsRE+NIR/SWIR；153 fit拟合/校准，32 development比较选择，固定原Source/2000步MsRE及原样本/组权重/标准化/0.001正则/优化器/1%fit误报规则。只新增3次浅层拟合，无CNN训练或新网络前向、无下载；不读取Phase66/65b/65c/sealed像元、分数或指标，不改Phase66结论及原H1失败。
 - 预写PHASE67_20261010.md：Source+光谱使用Source原Surface/Cloud胜者以完全删除MsRE依赖，另外两者沿用MsRE；Shadow排序/召回/FPR可直接比较，三类mIoU另含非Shadow分类规则影响。固定比较L3分别减三个对照，7组配对bootstrap仅作描述；旧L3在development必须逐像元分数、逐组confusion/AP复现。
 - development选择仅旧L3及3个新对照：实际32组平均FPR点估计<=1%中选7组平均AP最高，精确平手选低维及名称字典序；不因结果放宽预算/重新校准。输入映射/Source删除MsRE不变性/预算先于AP选择两项新测试及原4项拟合数学测试本地通过，语法通过。SSH正常、既有fit/dev缓存可用、原recovery锁SHA一致；代码push/远端pull后执行，产物仅新shared/phase67_20261010，不同步work_dirs。预算2026-10-20保持。
+
+## Phase67 / 2026-10-10 / 三个必要输入对照完成
+- 本地6项数学/输入/选择测试通过，push820b9fd后远端pull、bash语法及同6项测试通过。shared/phase67_20261010主PID556071完成EXIT_CODE=0；153 fit抽样索引/原五列样本/标签SHA逐项与65D相同，1253376样本/25473Shadow样本；L2_RGB、Source_spectral、MsRE_spectral仅3次逻辑拟合，分别25/17/20步收敛，同0.001正则及1%fit组均FPR校准，无新网络前向。
+- fit阈值分别-2.3724517822265625/-1.0312467813491821/-2.306410789489746，fit平均FPR均保守<=1%。先锁control_lock后评价32 development/7Shadow/25无Shadow，旧L3像元分数、逐组AP/confusion完全复现；Source+光谱使用Source的非Shadow分类输出，其他用MsRE，不把三类mIoU差异全归于Shadow融合。
+- 数据按L3/L2_RGB/Source+光谱/MsRE+光谱顺序：宏AP73.6307/71.3232/75.0050/73.5422%，池化AP67.1820/66.7388/21.6030/66.9700%，宏实际召回64.9087/63.2642/31.2227/64.9963%，宏FPR0.8645/1.0427/1.0880/0.8386%，池化mIoU78.0235/77.4485/66.9226/78.1946%。无Shadow25组FPR0.1045/0.0664/1.2094/0.0569%。完整精确率、三类IoU、漏影流向、预测比例及oracle诊断保存。
+- 三个L3减对照宏AP差为+2.3075/-1.3743/+0.0884pp，7组2000次seed65310条件bootstrap描述95%区间[0.6193,4.3077]/[-5.4050,2.1046]/[-0.8603,0.9354]pp，±1pp改善/稳定/下降5/1/1、3/2/2、1/5/1；均非独立确认。L3相对MsRE+光谱在T40XDR+1.9214pp、T32NKF-2.2350pp，不能说Source处处无贡献。
+- 解释/选择：匹配五输入RGB后L3平均AP仍更高，此development不支持单纯维数/RGB完全解释；纯Source+光谱逐组AP高但池化AP/实际召回很差且预算迁移超标，不能宣布Source+光谱足够。去Source的MsRE+光谱几乎持平，Source平均额外贡献未显示清楚，不能将跨零当严格等效；预设点FPR<=1%后宏AP最高规则仍选L3，不以0.0884pp微小领先夸大复杂组合必要性。L3/MsRE+光谱FPR单侧95%上界1.5099/1.4966%，development稳定预算仍不确定；不改阈值或选择规则。
+- 交付/边界：outputs/phase67/phase67_20261010/RESULTS.md分数据与探讨；8策略256行CSV、21行配对原始差、3模型参数锁/153组抽样审计/原L3选择参数保存。四份shared文件SHA双机一致，新4候选宏AP/FPR和3组bootstrap独立CSV重算完全一致。原split/recovery锁SHA未变；本轮程序无Phase66/65b/65c/sealed像元、分数或指标访问，不改原H1/Phase66结论，不自动同步work_dirs。SSH正常，无新下载/训练；仅完成3必要对照，停止追加特征/正则/阈值搜索，2026-10-20预算保持。
