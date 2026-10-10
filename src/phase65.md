@@ -828,3 +828,7 @@
 - sun相对orthogonal90/reverse/orthogonal270宏AP差+17.1091/+12.1103/+18.0588个百分点，各3/3景正；相对all -0.3137（2/3正），相对dark -15.7722（1/3正）。暗度必要条件失败，停止这组固定方案，不换方向/距离/聚合/符号/模型挽救。方向对照差异存在不等于超出简单暗度；all宏值更高，不宣称方向不可替代。未检出不否定所有几何方法；仅3fit及共同mask，未考虑云高/视角/地形/裁块外云，无显著性或独立确认结论；Phase77 unresolved和旧失败不变。
 - 有效参考原每景1044484；共同/评价T37LDL753424（72.1336%，Surface211367/Cloud400577/Shadow141480），T20PMQ802816（76.8625%，141063/566226/95527），T46RBU818867（78.3992%，312157/432865/73845）。严格支持丢失完整报告，不对外推。辅助AUC完整留表，不替代AP；不做mIoU/阈值决策。
 - 成功shared产物phase78_20261011_retry01已完成；报告/派生得分121MB正在单一接收器传回outputs/phase78/phase78_20261011，JP2留shared。SSH正常，传输较慢但partial持续增长，不重复接收；本地校验尚在传输后进行，未提前宣称交付校验完成。预算止2026-10-20北京保持。
+
+
+### 2026-10-11 Phase78 delivery verified
+原生3份大native_scores.npz完整留shared成功目录；大传输较慢，核对进程命令后仅停止本次自行启动的Python接收器及SSH子进程，partial原样保留。轻量报告包9603301 bytes成功传回规定outputs/phase78/phase78_20261011，含全部CSV、mask、3景固定总览及锁/日志，不涉及work_dirs。在shared用已部署独立排序/并列分组AP实现复算18项，全部与sklearn差<1e-12；三份大数组原SHA及共同支持/S_all关系复核通过，新增REMOTE_ARRAY_VERIFIED SHA=2e7d7c4e34374c3a1fef75af722912d952384e564dc2ffcfd84a1eca9911a445双端一致。本地20份远端产物逐SHA、3份shared大数组SHA记录、代码/helper/绑定Git blob、4个Phase76输入SHA、3个原mask成员SHA及共同mask/类计数、全部宏差/停止规则复核通过；没有把remote AP复算称本地数组复算。LOCAL_VERIFIED/DELIVERY_VERIFIED记录边界，3总览读图确认标题/色标无遮挡，README按数据结果与结论分开。最终screen_passed=false，停止固定方案；未新增下一阶段研究授权。代码/真实结果记录push后远端ff-only pull，用户无关修改保留。
