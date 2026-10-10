@@ -115,7 +115,7 @@ def main():
         for o in objects:
             if o['band']=='B11':
                 p=Path(o['path']);assert p.resolve().is_relative_to((a.data/'phase76_20261010/objects').resolve()) and prev.sha(p)==o['sha256'];paths[o['product']]=p
-        transforms=json.loads((oldroot/'B11_only_transforms.json').read_text())
+        transforms=[dict(product=r['product'],scope='B11 only; not a verified all-band cube affine',**r['B11_verified_mapping']) for r in old['scenes']]
         lock=dict(created_utc=dt.datetime.now(dt.timezone.utc).isoformat(),git_commit=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),
             code_sha256=prev.sha(Path(__file__)),helper_sha256=prev.sha(Path(prev.__file__)),bindings_sha256=prev.sha(a.bindings),
             previous=bindings['previous'],selected=[dict(product=r['product'],group_id=r['group_id'],member_sha256=r['member_sha256']) for r in selected],
