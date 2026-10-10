@@ -24,6 +24,7 @@ def fixture():
     tile=('<root><TILE_ID>S2B_OPER_MSI_L1C_TL_SGS__20180205T111142_A004794_T37LDL_N02.06</TILE_ID><SENSING_TIME>2018-02-05T07:36:50.888Z</SENSING_TIME>'
         '<HORIZONTAL_CS_CODE>EPSG:32737</HORIZONTAL_CS_CODE><Mean_Sun_Angle><ZENITH_ANGLE unit="deg">30</ZENITH_ANGLE><AZIMUTH_ANGLE unit="deg">110</AZIMUTH_ANGLE></Mean_Sun_Angle>'
         '<Sun_Angles_Grid><Zenith><ROW_STEP unit="m">5000</ROW_STEP><COL_STEP unit="m">5000</COL_STEP><Values_List><VALUES>30 31</VALUES><VALUES>32 33</VALUES></Values_List></Zenith></Sun_Angles_Grid>'+grid+'</root>').encode()
+    objects.append(dict(name=PREFIX+'GRANULE/'+GRANULE+'/MTD_TL.xml'))
     return product,tile,objects
 
 
@@ -49,7 +50,14 @@ class Tests(unittest.TestCase):
     def test_missing_angle_not_guessed(self):
         a,b,o=fixture();b=b.replace(b'<ZENITH_ANGLE unit="deg">30</ZENITH_ANGLE>',b'')
         self.assertFalse(m.parse_xml(a,b,PRODUCT,PREFIX,o)['solar_metadata_verified'])
-        self.assertFalse(m.parse_xml(a,b,PRODUCT,PREFIX,o[:-1])['source_grid_verified'])
+        self.assertFalse(m.parse_xml(a,b,PRODUCT,PREFIX,o[1:])['source_grid_verified'])
+
+    def test_long_identifier_and_compact_folder(self):
+        a,b,o=fixture()
+        long='S2B_OPER_MSI_L1C_TL_SGS__20180205T111142_A004794_T37LDL_N02.06'
+        a=a.replace(('granuleIdentifier="'+GRANULE+'"').encode(),('granuleIdentifier="'+long+'"').encode())
+        self.assertTrue(m.parse_xml(a,b,PRODUCT,PREFIX,o)['source_grid_verified'])
+        with self.assertRaises(ValueError):m.parse_xml(a,b.replace(long.encode(),b'wrong_T37LDL_ID'),PRODUCT,PREFIX,o)
 
     def test_http_budget_and_no_rasters(self):
         class Response(io.BytesIO):

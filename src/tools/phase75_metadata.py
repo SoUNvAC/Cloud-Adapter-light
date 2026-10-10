@@ -138,7 +138,15 @@ def parse_xml(product_bytes,tile_bytes,product,prefix,objects):
         linked=len(matches)==len(refs)==1 and (prefix+refs[0]).removesuffix('.jp2')==matches[0].removesuffix('.jp2')
         if linked:
             granule=matches[0].split('/GRANULE/')[1].split('/')[0]
-            if granule not in identity['granule_ids']:raise ValueError('Product XML to granule chain mismatch')
+            # PSD uses a long granuleIdentifier/TILE_ID but IMAGE_FILE uses the
+            # compact SAFE folder name. Verify BOTH links rather than equating names.
+            if granule not in identity['granule_ids'] and identity['tile_identifier'] not in identity['granule_ids']:
+                raise ValueError('Product XML granuleIdentifier does not match tile TILE_ID')
+            tile_metadata_path=prefix+'GRANULE/'+granule+'/MTD_TL.xml'
+            if not any(o['name']==tile_metadata_path for o in objects):raise ValueError('Band references do not share tile metadata folder')
+            identity.setdefault('archive_granule_folders',[])
+            if granule not in identity['archive_granule_folders']:identity['archive_granule_folders'].append(granule)
+            identity['granule_link_rule']='Product granuleIdentifier==tile TILE_ID (long ID), plus product IMAGE_FILE==archive band path under the same compact folder as tile XML; direct folder-ID equality also accepted'
         grid['bands'][band]=dict(native_resolution_m=resolution,grid=grid['resolutions'].get(resolution),
             product_xml_references=refs,archive_objects=matches,identity_chain_verified=linked,raster_downloaded=False)
     grid_ok=bool(grid['crs_code']) and all(str(v) in grid['resolutions'] for v in [10,20,60])

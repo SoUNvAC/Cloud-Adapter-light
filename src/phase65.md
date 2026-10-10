@@ -782,3 +782,4 @@
 - 只获取精确原L1C产品/粒度XML与必要公开Google目录清单，累计HTTP响应体上限20,000,000 bytes，generation固定、长度/MD5/SHA留痕，禁止JP2/SAFE/DEM下载。复用既有精确产品匹配及校验逻辑。
 - 官方README已本地逐页核对：20m、非20m双线性、1152带64边框、1024原计划最终裁1022。三景标注范围23040m与1022×20m=20440m不同，65像元对称裁切仅候选，不能赋cube affine或称方向几何ready。
 - 本地4项合成测试通过（选择边界、XML身份/角/格网、缺字段不猜、下载预算/禁止栅格），代码本地验证push后远端pull执行。保留用户日志整理和outputs，不同步work_dirs；Phase74排除分枝停止及旧失败结论不变。
+- Phase75解析修正：3景六个原XML均已长度/MD5/generation/SHA校验，累计HTTP2,308,090 bytes；初版解析错误要求长granuleIdentifier等于紧凑目录名。已查原XML确认产品granuleIdentifier与tile TILE_ID相同，IMAGE_FILE使用另一紧凑目录；修正为同时核对两条显式引用链。保留初次报告，新增reparse01，仅重解析现有XML，0新增HTTP/栅格；新增长ID/目录异名回归测试，5项通过。
