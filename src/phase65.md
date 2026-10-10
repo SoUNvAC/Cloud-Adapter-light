@@ -795,3 +795,11 @@
 
 ### 2026-10-10 Phase76 implementation freeze
 用户授权执行Phase76。仅Phase75原三景fit cube与精确原L1C B11/B04对应审计；6对象443120797 bytes，1GB按1000000000 bytes冻结。锁绑定Phase75最终reparse01、原XML/候选CSV及fit cube全成员SHA；80候选、25选择/24留出点、原容差固定。双线性采用显式绝对中心四邻点权重，无抗混叠，完整格网与窗口+2对照；XML special值严格传播无效。无标签/模型/确认像元读取，无训练。既有SSH正常，远端numpy1.26.4/rasterio1.3.11/GDAL3.9.2；本地bundled Python合成4项通过，affine项待远端既有环境验证。先本地验证push，再远端ff-only pull；初次像元前保存锁，超预算/校验不符立即停，不改容差。尚未下载/像元验证，不称完成。
+
+
+### 2026-10-11 Phase76 executed: B11 verified, B04 pending
+- 执行489dde9；远端五项合成检查通过，PID570247，EXIT_CODE=0。先冻结mapping_lock，再6对象全校验后读取像元。新下载443120797 bytes/1000000000 bytes上限；精确原产品、长度、固定generation、镜像MD5、SHA通过，实际CRS/transform/尺寸与Phase75最终XML一致。
+- 三景T37LDL/T20PMQ/T46RBU，各80固定候选唯一合格且RMSE最低均inset_65_65_d4_0；B11选择25/25、留出24/24有支持，整图1044484格全部有效，双方有效性一致100%，四分区无冻结误差异常。整图B11中位误差分别5.412102e-09/6.341934e-09/5.865097e-09，P99分别3.890991e-08/2.384186e-08/3.080368e-08，满足5e-6/2e-5门。
+- B04完整格网与窗口+2纯中心双线性两实现全图逐值相等、差值0，但两者对cube均失败：整图中位0.003674999/0.002325033/0.004350003，P99=0.042524985/0.020799996/0.074899984，超过5e-5/2e-4门；选择和留出亦失败，非支持不足。无参数/偏移/滤波变体补试。高相关不等于像素等价，不能确定作者处理差异的具体原因。
+- 最终3/3 B11_mapping_verified=true、B04_resampling_verified=false、cube_mapping_status=B11_verified_B04_pending。仅保留B11对应公式/CRS/边界；不赋全波段已验证cube affine、不推广185景、不进行太阳方向转换/云影投影/DEM/训练/方法比较。未读标签/预测/确认像元，旧失败门不改。
+- shared报告取回本地outputs/phase76/phase76_20261010；36远端报告文件逐文件SHA、12 Phase75输入、3个本地完整cube成员SHA及部署代码/绑定Git blob复核通过。保存候选/留出CSV、全图残差NPY、有效性计数、B11范围transform、README/本地验证记录及控制日志；JP2留shared。SCP两次SSH握手被远端关闭，既有SSH压缩流成功恢复报告传输，未重跑；无work_dirs同步/清理，保留用户修改。模型未运行，预算截止2026-10-20北京时间不变。结果记录本地push后远端ff-only pull。
