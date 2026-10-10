@@ -30,6 +30,19 @@ def main(root):
     for a in r['stratum_summary']:
         value='NA' if a['equal_group_mean_logit_change'] is None else f"{a['equal_group_mean_logit_change']:+.5f}"
         text.append(f"| {a['cohort']} | {a['variant']} | {a['stratum']} | {a['support_groups']} | {a['pixels']} | {value} |")
+    audits=json.loads((root/'neighbor_audit.json').read_text(encoding='utf-8'))
+    text+=['','| 队列 | 排除 | 组平均回退率 % | 排除的参考Surface / Cloud / Shadow / 无效像元 |',
+        '|---|---|---:|---|']
+    for cohort in ['fit','development']:
+        for variant in ['E','R']:
+            a=[x for x in audits if x['cohort']==cohort and x['variant']==variant]
+            counts=[sum(x['excluded_gt_crosscount_offline_only'][str(c)] for x in a) for c in [0,1,2,255]]
+            fallback=sum(x['fallback_eval_fraction'] for x in a)/len(a)*100
+            text.append(f"| {cohort} | {variant} | {fallback:.4f} | {' / '.join(map(str,counts))} |")
+    text+=['','主要E拟合版−R拟合版比较的逐组AP损伤（最差三组，非额外抽样）：','']
+    main=r['comparisons']['B_E_fit_minus_B_R_fit']
+    for a in sorted([x for x in main['pairs'] if x['delta_ap'] is not None],key=lambda x:x['delta_ap'])[:3]:
+        text.append(f"- {a['product']}：AP差{a['delta_ap']*100:+.3f}个百分点，召回差{a['delta_recall']*100:+.3f}个百分点。")
     text+=['','逐组剩余邻居/排除比例/回退比例及E/R与参考类别交叉计数见 `neighbor_audit.json`；局部均值、特征、logit变化与四种转移见 `fixed_interventions.json`。',
         '', '## 2 结论探讨','', '执行前锁定的继续研究条件：','']
     descriptions={'E_FPR_below_B':'E拟合版全组宏FPR低于B','E_recall_loss_le_1pp':'E拟合版相对B宏召回损失不超过1个百分点',
