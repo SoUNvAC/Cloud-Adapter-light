@@ -741,3 +741,4 @@
 ## 2026-10-10 Phase72执行授权（启封前）
 - 用户明确授权执行Phase72；沿用7b2858b冻结协议与B/L3/RGB_local参数锁，不改窗口、输入、阈值或统计门。新增一次性执行器、相关组统计与4项合成数据测试；本地全部通过。execution_lock单独记录本次授权与代码SHA，原confirmation_lock保留制定协议时的evaluation_authorized=false历史字段，不改写原锁。
 - 执行先重查访问元数据/谱系/输入/共享候选checkpoint并精确复现32组development三个策略，随后写启封收据再准备原65c_final64代表。仅两网络共128前向、三冻结决策，无拟合/训练；原H1及Phase70失败保留，禁读旧sealed，不同步work_dirs。最终结果仍按数据结果/结论探讨分开。
+- 启封前执行修复01：首次主进程566522已退出、EXIT1，phase72数据目录尚不存在，未启封。原候选JSON本地881处CRLF使本地SHA17c8d6…与Git/远端LF SHA018253…不同；字典参数未变。保留原execution_attempt01_lock和控制日志，将执行锁绑定实际Git部署字节SHA，新控制目录retry01；不绕过校验、不改候选/统计/阈值。

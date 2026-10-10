@@ -1,6 +1,6 @@
 {
   "authorization": "user_20261010_explicit_execute_phase72",
-  "confirmation_lock_sha256": "0182535f08f55b0930acf819859f68d3b15782783a4e704852351c2638f9fec1",
+  "confirmation_lock_sha256": "17c8d6fd65f5e05448756a50566c0100e05d18452dba5c12aa1156cbfc11fb74",
   "code_sha256": {
     "src/cloud_adapter/__init__.py": "9c30a0fa3567236d8ded82e127529238cfdf9b19ed4dd2da35d12ac2f5e98f0f",
     "src/cloud_adapter/datasets/__init__.py": "dca17d6e5ad8e6c6d036d2a7735d7f14927dc2d78a406322f0e68246040b5f2d",
@@ -357,7 +357,7 @@
     "src/tools/audit_phase72_metadata.py": "226af1632c1b9b6a05fdceaa2da3f0c77ebed3bb06317ac57fb8c9f73b634849",
     "src/tools/freeze_phase66.py": "e3e06ab64894ea2e2a8f911d658a25e4273771f5f2feaa079b1af651d646ba46",
     "src/tools/launch_phase66.sh": "f1861354ca1f132703e5a818a932f3d7e64bcc9d67f24df63038dabe96b81abc",
-    "src/tools/launch_phase72.sh": "3b750eb341122647c13a62b47982fb6d442799c4c663f6361cd4744b70ef1fe5",
+    "src/tools/launch_phase72.sh": "7fd56338abbf053df1b60715b982cf5a6aaaa5fedc01c2aae8ad5c070d182757",
     "src/tools/phase65d_metrics.py": "631782b1987816a4d0a444f3d220359bbc9dd84df0c52376da3a199a31dc4c17",
     "src/tools/phase65d_recovery_math.py": "ef0f76bc81cc348ce411c65f8459c5615d29df93477b62a52dc137e86af2c51e",
     "src/tools/phase66_statistics.py": "b5162439977e2357f21b15db50aafd1ce4c40be9a3ee1e40ad65648eaf13e04d",
@@ -379,7 +379,5 @@
   },
   "evaluation_pool": "65c_final",
   "refitting_allowed": false,
-  "threshold_changes_allowed": false,
-  "repair": "Attempt01 exited before unsealing: local CRLF metadata bytes differed from deployed Git LF blob; bind exact deployed candidate bytes without changing model parameters or statistical protocol",
-  "previous_attempt_execution_lock_git_sha256": "ac295726532d0e1f6d550b30a1e199596a592cf1145f4e4f3697498ed4e9c36b"
+  "threshold_changes_allowed": false
 }

@@ -4,7 +4,8 @@ cd /home/scv/Cloud-Adapter-light
 source /home/scv/miniconda3/etc/profile.d/conda.sh
 conda activate cloud-lite-pt210
 export XFORMERS_DISABLED=1 OMP_NUM_THREADS=4 OPENBLAS_NUM_THREADS=4 MKL_NUM_THREADS=4
-control=/home/scv/shared/phase72_control_20261010
+control="${1:-/home/scv/shared/phase72_control_20261010}"
+case "$control" in /home/scv/shared/phase72_control_20261010*) ;; *) exit 2 ;; esac
 test ! -e "$control/PID"
 test ! -d /home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/phase72_20261010
 echo $$ > "$control/PID"
