@@ -1,0 +1,1373 @@
+{
+  "phase75_inputs": {
+    "selected_products.json": "e4128165b829cd5b51569a460227dd69f2e7f067c7d03cc827b1f6e445150693",
+    "reparse01/metadata_audit.json": "73f5b3d18000942df7482dda083ce1a29e5272dce99f2744907de6f434764405",
+    "cube_mapping_candidates.csv": "5b58c167c57a59b1ad459124d8baa5c9c680435bb4441da6f063544a1f12d6c2",
+    "S2B_MSIL1C_20180205T073059_N0206_R049_T37LDL_20180205T111142/MTD_MSIL1C.xml": "bfd82579c15adb8bc831317d1f3445c2f9f2c41477be262876353e67efe8574d",
+    "S2B_MSIL1C_20180205T073059_N0206_R049_T37LDL_20180205T111142/MTD_TL.xml": "10d44c6fd0b87ac8773698770c74f59e16d3e9f76f6f6afd95be4effaa1077af",
+    "S2B_MSIL1C_20180205T073059_N0206_R049_T37LDL_20180205T111142/object_listing.json": "2e3482fdb0c206c380134eee93c505ee8ef4bcdc2f82b190671f06eb096f6d6a",
+    "S2A_MSIL1C_20180626T144731_N0206_R139_T20PMQ_20180626T163032/MTD_MSIL1C.xml": "62abc9b0187097ed41bf5fd260a2fc69f94104b99f5645da92fa921c5be0da14",
+    "S2A_MSIL1C_20180626T144731_N0206_R139_T20PMQ_20180626T163032/MTD_TL.xml": "71116fdb390161cd3481ba9b76f1645943693be00ccab37ef1170a5ebc36e112",
+    "S2A_MSIL1C_20180626T144731_N0206_R139_T20PMQ_20180626T163032/object_listing.json": "f44bf568a9fec6baf0882fdbcad150700aeb6c2b66c114ff8bb06ef506926a38",
+    "S2A_MSIL1C_20180430T043701_N0206_R033_T46RBU_20180430T082134/MTD_MSIL1C.xml": "a237ebfa10e528f8b6b33240622b71a9de86d86a9234b1ed5c0c1f8761258da1",
+    "S2A_MSIL1C_20180430T043701_N0206_R033_T46RBU_20180430T082134/MTD_TL.xml": "9a49fc17f648125821d3e201285f6c5eb1b100f4fff8a93e458c25627244b1f8",
+    "S2A_MSIL1C_20180430T043701_N0206_R033_T46RBU_20180430T082134/object_listing.json": "5bdaf42871b93cbb9e9abbb7efa1dffd9095e3c675ad5e92bfbc695fda586d08"
+  },
+  "rows": [
+    {
+      "product": "S2B_MSIL1C_20180205T073059_N0206_R049_T37LDL_20180205T111142",
+      "group_id": "4e42ea7b8ec2459f7ff6d4aa7c25d37672ba3177dd34231ce7bf324003392f7e",
+      "public_shadow_percent": 19.2560154104802,
+      "selection_sha256": "082eb305a02c7a65672911810dd92dcf46d8998eaa1d6c7f53e9ef37c6956b79",
+      "cube_chain": {
+        "cube_member": "subscenes/S2B_MSIL1C_20180205T073059_N0206_R049_T37LDL_20180205T111142.npy",
+        "shape": [
+          1022,
+          1022,
+          13
+        ],
+        "dtype": "float32",
+        "fortran_order": false,
+        "npy_header_only": true,
+        "npy_header_sha256": "caf783e44afe1f34e11a0b15b4e9691c6e1cb273366196e5324205c4a5431f2a",
+        "official_pixel_size_m": 20,
+        "cube_width_height_m": [
+          20440,
+          20440
+        ],
+        "annotation_crs_wkt": "PROJCS[\"WGS_1984_UTM_Zone_37S\",GEOGCS[\"GCS_WGS_1984\",DATUM[\"D_WGS_1984\",SPHEROID[\"WGS_1984\",6378137,298.257223563]],PRIMEM[\"Greenwich\",0],UNIT[\"Degree\",0.017453292519943295]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",39],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",10000000],UNIT[\"Meter\",1]]",
+        "annotation_epsg": "EPSG:32737",
+        "annotation_bounds": [
+          450440.0,
+          9037060.0,
+          473480.0,
+          9060100.0
+        ],
+        "annotation_extent_m": [
+          23040.0,
+          23040.0
+        ],
+        "annotation_shp_sha256": "7280fc0411ba41f72c2aca89de2307e8b82257d97fba5d0ef4591b31e0ecb620",
+        "annotation_prj_sha256": "dfde39368c93a90c6f43bdebcdca8c4c8035109fe70db657cd477f9f2dd60228",
+        "bounds_match_1022_at20m": false,
+        "annotation_extent_pixels_at20m": [
+          1152.0,
+          1152.0
+        ],
+        "official_readme_evidence": {
+          "pdf_sha256": "fe30cf507184ee3f3cf16e16bce271b0701763d00144b138e0b3edf075e50ce6",
+          "pages": [
+            1,
+            4,
+            6,
+            9
+          ],
+          "pixel_size": "20m",
+          "non20m_resampling": "bilinear",
+          "TOA": "original integer /10000",
+          "annotation_window": 1152,
+          "padding_per_side": 64,
+          "intended_export": 1024,
+          "final_export": 1022,
+          "export_bug": "border unfilled; final crop removes border",
+          "exact_affine_or_library_parameters": "not specified"
+        },
+        "candidate_mapping": {
+          "status": "untested_candidate_not_a_verified_affine",
+          "basis": "README 1152 padded scene, intended1024, final1022; centered65 pixel inset is plausible, not proven",
+          "inset_pixels_if_symmetric": [
+            65.0,
+            65.0
+          ],
+          "north_up_upper_left_if_symmetric": [
+            451740.0,
+            9058800.0
+          ],
+          "row_col_order_and_resampling_origin": "not verified; candidate assumes north-up and symmetric crop"
+        },
+        "cube_mapping_status": "pending",
+        "cube_affine_assigned": false,
+        "missing": [
+          "Exact original-to-published cube crop offset and pixel-center convention",
+          "Cube row/column orientation relative to native tile grid",
+          "Actual bilinear resampling implementation, grid origin and crop/resample order",
+          "Pixel consistency validation of a candidate mapping (not authorized this phase)"
+        ]
+      },
+      "exact_product_candidates": [
+        "tiles/37/L/DL/S2B_MSIL1C_20180205T073059_N0206_R049_T37LDL_20180205T111142.SAFE/"
+      ],
+      "identity": {
+        "catalogue_product_id": "S2B_MSIL1C_20180205T073059_N0206_R049_T37LDL_20180205T111142",
+        "archive_product_id": "S2B_MSIL1C_20180205T073059_N0206_R049_T37LDL_20180205T111142",
+        "xml_product_uri": "S2B_MSIL1C_20180205T073059_N0206_R049_T37LDL_20180205T111142.SAFE",
+        "product_sensing_start_utc": "2018-02-05T07:30:59.027Z",
+        "product_name_sensing_start_utc": "2018-02-05T07:30:59+00:00",
+        "tile_sensing_time_utc": "2018-02-05T07:48:46.749Z",
+        "processing_baseline": "02.06",
+        "tile": "37LDL",
+        "tile_identifier": "S2B_OPER_MSI_L1C_TL_SGS__20180205T111142_A004794_T37LDL_N02.06",
+        "granule_ids": [
+          "S2B_OPER_MSI_L1C_TL_SGS__20180205T111142_A004794_T37LDL_N02.06"
+        ],
+        "archive_prefix": "tiles/37/L/DL/S2B_MSIL1C_20180205T073059_N0206_R049_T37LDL_20180205T111142.SAFE/",
+        "processing_generation_token": "20180205T111142",
+        "archive_granule_folders": [
+          "L1C_T37LDL_A004794_20180205T074846"
+        ],
+        "granule_link_rule": "Product granuleIdentifier==tile TILE_ID (long ID), plus product IMAGE_FILE==archive band path under the same compact folder as tile XML; direct folder-ID equality also accepted"
+      },
+      "solar": {
+        "level": "original granule/tile metadata mean; not per-pixel angles",
+        "azimuth_definition": "clockwise from local North at the node; zenith from ellipsoid normal; degrees",
+        "definition_source": "https://sentiwiki.copernicus.eu/web/s2-processing",
+        "grid_north_conversion": "not performed; geographic local North is not silently treated as image-row North",
+        "azimuth": 108.103027882348,
+        "azimuth_unit": "deg",
+        "zenith": 27.1868152328675,
+        "zenith_unit": "deg",
+        "angle_grids": [
+          {
+            "axis": "Zenith",
+            "rows": 23,
+            "columns": [
+              23
+            ],
+            "row_step": "5000",
+            "col_step": "5000",
+            "row_step_unit": "m",
+            "col_step_unit": "m",
+            "values_level": "coarse angle nodes; no pixel interpolation executed"
+          },
+          {
+            "axis": "Azimuth",
+            "rows": 23,
+            "columns": [
+              23
+            ],
+            "row_step": "5000",
+            "col_step": "5000",
+            "row_step_unit": "m",
+            "col_step_unit": "m",
+            "values_level": "coarse angle nodes; no pixel interpolation executed"
+          }
+        ],
+        "grid_present": true
+      },
+      "source_grid": {
+        "crs_name": "WGS84 / UTM zone 37S",
+        "crs_code": "EPSG:32737",
+        "resolutions": {
+          "10": {
+            "NROWS": 10980,
+            "NCOLS": 10980,
+            "ULX": 399960.0,
+            "ULY": 9100000.0,
+            "XDIM": 10.0,
+            "YDIM": -10.0,
+            "bounds": [
+              399960.0,
+              8990200.0,
+              509760.0,
+              9100000.0
+            ]
+          },
+          "20": {
+            "NROWS": 5490,
+            "NCOLS": 5490,
+            "ULX": 399960.0,
+            "ULY": 9100000.0,
+            "XDIM": 20.0,
+            "YDIM": -20.0,
+            "bounds": [
+              399960.0,
+              8990200.0,
+              509760.0,
+              9100000.0
+            ]
+          },
+          "60": {
+            "NROWS": 1830,
+            "NCOLS": 1830,
+            "ULX": 399960.0,
+            "ULY": 9100000.0,
+            "XDIM": 60.0,
+            "YDIM": -60.0,
+            "bounds": [
+              399960.0,
+              8990200.0,
+              509760.0,
+              9100000.0
+            ]
+          }
+        },
+        "bands": {
+          "B04": {
+            "native_resolution_m": "10",
+            "grid": {
+              "NROWS": 10980,
+              "NCOLS": 10980,
+              "ULX": 399960.0,
+              "ULY": 9100000.0,
+              "XDIM": 10.0,
+              "YDIM": -10.0,
+              "bounds": [
+                399960.0,
+                8990200.0,
+                509760.0,
+                9100000.0
+              ]
+            },
+            "product_xml_references": [
+              "GRANULE/L1C_T37LDL_A004794_20180205T074846/IMG_DATA/T37LDL_20180205T073059_B04"
+            ],
+            "archive_objects": [
+              "tiles/37/L/DL/S2B_MSIL1C_20180205T073059_N0206_R049_T37LDL_20180205T111142.SAFE/GRANULE/L1C_T37LDL_A004794_20180205T074846/IMG_DATA/T37LDL_20180205T073059_B04.jp2"
+            ],
+            "identity_chain_verified": true,
+            "raster_downloaded": false
+          },
+          "B03": {
+            "native_resolution_m": "10",
+            "grid": {
+              "NROWS": 10980,
+              "NCOLS": 10980,
+              "ULX": 399960.0,
+              "ULY": 9100000.0,
+              "XDIM": 10.0,
+              "YDIM": -10.0,
+              "bounds": [
+                399960.0,
+                8990200.0,
+                509760.0,
+                9100000.0
+              ]
+            },
+            "product_xml_references": [
+              "GRANULE/L1C_T37LDL_A004794_20180205T074846/IMG_DATA/T37LDL_20180205T073059_B03"
+            ],
+            "archive_objects": [
+              "tiles/37/L/DL/S2B_MSIL1C_20180205T073059_N0206_R049_T37LDL_20180205T111142.SAFE/GRANULE/L1C_T37LDL_A004794_20180205T074846/IMG_DATA/T37LDL_20180205T073059_B03.jp2"
+            ],
+            "identity_chain_verified": true,
+            "raster_downloaded": false
+          },
+          "B02": {
+            "native_resolution_m": "10",
+            "grid": {
+              "NROWS": 10980,
+              "NCOLS": 10980,
+              "ULX": 399960.0,
+              "ULY": 9100000.0,
+              "XDIM": 10.0,
+              "YDIM": -10.0,
+              "bounds": [
+                399960.0,
+                8990200.0,
+                509760.0,
+                9100000.0
+              ]
+            },
+            "product_xml_references": [
+              "GRANULE/L1C_T37LDL_A004794_20180205T074846/IMG_DATA/T37LDL_20180205T073059_B02"
+            ],
+            "archive_objects": [
+              "tiles/37/L/DL/S2B_MSIL1C_20180205T073059_N0206_R049_T37LDL_20180205T111142.SAFE/GRANULE/L1C_T37LDL_A004794_20180205T074846/IMG_DATA/T37LDL_20180205T073059_B02.jp2"
+            ],
+            "identity_chain_verified": true,
+            "raster_downloaded": false
+          },
+          "B08": {
+            "native_resolution_m": "10",
+            "grid": {
+              "NROWS": 10980,
+              "NCOLS": 10980,
+              "ULX": 399960.0,
+              "ULY": 9100000.0,
+              "XDIM": 10.0,
+              "YDIM": -10.0,
+              "bounds": [
+                399960.0,
+                8990200.0,
+                509760.0,
+                9100000.0
+              ]
+            },
+            "product_xml_references": [
+              "GRANULE/L1C_T37LDL_A004794_20180205T074846/IMG_DATA/T37LDL_20180205T073059_B08"
+            ],
+            "archive_objects": [
+              "tiles/37/L/DL/S2B_MSIL1C_20180205T073059_N0206_R049_T37LDL_20180205T111142.SAFE/GRANULE/L1C_T37LDL_A004794_20180205T074846/IMG_DATA/T37LDL_20180205T073059_B08.jp2"
+            ],
+            "identity_chain_verified": true,
+            "raster_downloaded": false
+          },
+          "B11": {
+            "native_resolution_m": "20",
+            "grid": {
+              "NROWS": 5490,
+              "NCOLS": 5490,
+              "ULX": 399960.0,
+              "ULY": 9100000.0,
+              "XDIM": 20.0,
+              "YDIM": -20.0,
+              "bounds": [
+                399960.0,
+                8990200.0,
+                509760.0,
+                9100000.0
+              ]
+            },
+            "product_xml_references": [
+              "GRANULE/L1C_T37LDL_A004794_20180205T074846/IMG_DATA/T37LDL_20180205T073059_B11"
+            ],
+            "archive_objects": [
+              "tiles/37/L/DL/S2B_MSIL1C_20180205T073059_N0206_R049_T37LDL_20180205T111142.SAFE/GRANULE/L1C_T37LDL_A004794_20180205T074846/IMG_DATA/T37LDL_20180205T073059_B11.jp2"
+            ],
+            "identity_chain_verified": true,
+            "raster_downloaded": false
+          },
+          "B12": {
+            "native_resolution_m": "20",
+            "grid": {
+              "NROWS": 5490,
+              "NCOLS": 5490,
+              "ULX": 399960.0,
+              "ULY": 9100000.0,
+              "XDIM": 20.0,
+              "YDIM": -20.0,
+              "bounds": [
+                399960.0,
+                8990200.0,
+                509760.0,
+                9100000.0
+              ]
+            },
+            "product_xml_references": [
+              "GRANULE/L1C_T37LDL_A004794_20180205T074846/IMG_DATA/T37LDL_20180205T073059_B12"
+            ],
+            "archive_objects": [
+              "tiles/37/L/DL/S2B_MSIL1C_20180205T073059_N0206_R049_T37LDL_20180205T111142.SAFE/GRANULE/L1C_T37LDL_A004794_20180205T074846/IMG_DATA/T37LDL_20180205T073059_B12.jp2"
+            ],
+            "identity_chain_verified": true,
+            "raster_downloaded": false
+          }
+        }
+      },
+      "radiometry": {
+        "quantification_value": "10000",
+        "special_values": {
+          "NODATA": 0,
+          "SATURATED": 65535
+        },
+        "reflectance_offsets": [],
+        "offset_status": "absent_in_exact_original_XML; no guessed field inserted"
+      },
+      "solar_metadata_verified": true,
+      "source_grid_verified": true,
+      "cube_mapping_status": "pending",
+      "direction_geometry_ready": false,
+      "missing": [
+        "Exact original-to-published cube crop offset and pixel-center convention",
+        "Cube row/column orientation relative to native tile grid",
+        "Actual bilinear resampling implementation, grid origin and crop/resample order",
+        "Pixel consistency validation of a candidate mapping (not authorized this phase)"
+      ],
+      "annotation_matches_native_crs": true,
+      "xml_object_metadata": {
+        "product": {
+          "kind": "storage#object",
+          "id": "gcp-public-data-sentinel-2/tiles/37/L/DL/S2B_MSIL1C_20180205T073059_N0206_R049_T37LDL_20180205T111142.SAFE/MTD_MSIL1C.xml/1518197821338241",
+          "selfLink": "https://www.googleapis.com/storage/v1/b/gcp-public-data-sentinel-2/o/tiles%2F37%2FL%2FDL%2FS2B_MSIL1C_20180205T073059_N0206_R049_T37LDL_20180205T111142.SAFE%2FMTD_MSIL1C.xml",
+          "mediaLink": "https://storage.googleapis.com/download/storage/v1/b/gcp-public-data-sentinel-2/o/tiles%2F37%2FL%2FDL%2FS2B_MSIL1C_20180205T073059_N0206_R049_T37LDL_20180205T111142.SAFE%2FMTD_MSIL1C.xml?generation=1518197821338241&alt=media",
+          "name": "tiles/37/L/DL/S2B_MSIL1C_20180205T073059_N0206_R049_T37LDL_20180205T111142.SAFE/MTD_MSIL1C.xml",
+          "bucket": "gcp-public-data-sentinel-2",
+          "generation": "1518197821338241",
+          "metageneration": "1",
+          "contentType": "application/octet-stream",
+          "storageClass": "STANDARD",
+          "size": "44461",
+          "md5Hash": "ALWbYABpl3RznCNcjApqWQ==",
+          "crc32c": "LLegsQ==",
+          "etag": "CIHl286vmdkCEAE=",
+          "timeCreated": "2018-02-09T17:37:01.330Z",
+          "updated": "2018-02-09T17:37:01.330Z",
+          "timeStorageClassUpdated": "2018-02-09T17:37:01.330Z",
+          "timeFinalized": "2018-02-09T17:37:01.330Z"
+        },
+        "tile": {
+          "kind": "storage#object",
+          "id": "gcp-public-data-sentinel-2/tiles/37/L/DL/S2B_MSIL1C_20180205T073059_N0206_R049_T37LDL_20180205T111142.SAFE/GRANULE/L1C_T37LDL_A004794_20180205T074846/MTD_TL.xml/1518197757253029",
+          "selfLink": "https://www.googleapis.com/storage/v1/b/gcp-public-data-sentinel-2/o/tiles%2F37%2FL%2FDL%2FS2B_MSIL1C_20180205T073059_N0206_R049_T37LDL_20180205T111142.SAFE%2FGRANULE%2FL1C_T37LDL_A004794_20180205T074846%2FMTD_TL.xml",
+          "mediaLink": "https://storage.googleapis.com/download/storage/v1/b/gcp-public-data-sentinel-2/o/tiles%2F37%2FL%2FDL%2FS2B_MSIL1C_20180205T073059_N0206_R049_T37LDL_20180205T111142.SAFE%2FGRANULE%2FL1C_T37LDL_A004794_20180205T074846%2FMTD_TL.xml?generation=1518197757253029&alt=media",
+          "name": "tiles/37/L/DL/S2B_MSIL1C_20180205T073059_N0206_R049_T37LDL_20180205T111142.SAFE/GRANULE/L1C_T37LDL_A004794_20180205T074846/MTD_TL.xml",
+          "bucket": "gcp-public-data-sentinel-2",
+          "generation": "1518197757253029",
+          "metageneration": "1",
+          "contentType": "application/octet-stream",
+          "storageClass": "STANDARD",
+          "size": "551547",
+          "md5Hash": "4fSnf7boqHS3CIG53vOJ/A==",
+          "crc32c": "DzClrw==",
+          "etag": "CKWrlLCvmdkCEAE=",
+          "timeCreated": "2018-02-09T17:35:57.242Z",
+          "updated": "2018-02-09T17:35:57.242Z",
+          "timeStorageClassUpdated": "2018-02-09T17:35:57.242Z",
+          "timeFinalized": "2018-02-09T17:35:57.242Z"
+        }
+      }
+    },
+    {
+      "product": "S2A_MSIL1C_20180626T144731_N0206_R139_T20PMQ_20180626T163032",
+      "group_id": "18565d32be3444f4173fe15df760ab7d7588595ceb01450c84715b33754fee97",
+      "public_shadow_percent": 10.24572899154032,
+      "selection_sha256": "0a27dd95ce4cab89d96a845cbe44bd46ea3d5cbb802fd0c3fb6331cfe92e2c1f",
+      "cube_chain": {
+        "cube_member": "subscenes/S2A_MSIL1C_20180626T144731_N0206_R139_T20PMQ_20180626T163032.npy",
+        "shape": [
+          1022,
+          1022,
+          13
+        ],
+        "dtype": "float32",
+        "fortran_order": false,
+        "npy_header_only": true,
+        "npy_header_sha256": "caf783e44afe1f34e11a0b15b4e9691c6e1cb273366196e5324205c4a5431f2a",
+        "official_pixel_size_m": 20,
+        "cube_width_height_m": [
+          20440,
+          20440
+        ],
+        "annotation_crs_wkt": "PROJCS[\"WGS_1984_UTM_Zone_20N\",GEOGCS[\"GCS_WGS_1984\",DATUM[\"D_WGS_1984\",SPHEROID[\"WGS_1984\",6378137,298.257223563]],PRIMEM[\"Greenwich\",0],UNIT[\"Degree\",0.017453292519943295]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",-63],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"Meter\",1]]",
+        "annotation_epsg": "EPSG:32620",
+        "annotation_bounds": [
+          430940.0,
+          972160.0,
+          453980.0,
+          995200.0
+        ],
+        "annotation_extent_m": [
+          23040.0,
+          23040.0
+        ],
+        "annotation_shp_sha256": "306ae20df67173c33dad6da5e61b65c6e9756fcb8ad6a0e72e12496a11967c90",
+        "annotation_prj_sha256": "ca13947722e1b5af1fcffb54082b359deb3f9713cac8c8fc36bd04f6d627088c",
+        "bounds_match_1022_at20m": false,
+        "annotation_extent_pixels_at20m": [
+          1152.0,
+          1152.0
+        ],
+        "official_readme_evidence": {
+          "pdf_sha256": "fe30cf507184ee3f3cf16e16bce271b0701763d00144b138e0b3edf075e50ce6",
+          "pages": [
+            1,
+            4,
+            6,
+            9
+          ],
+          "pixel_size": "20m",
+          "non20m_resampling": "bilinear",
+          "TOA": "original integer /10000",
+          "annotation_window": 1152,
+          "padding_per_side": 64,
+          "intended_export": 1024,
+          "final_export": 1022,
+          "export_bug": "border unfilled; final crop removes border",
+          "exact_affine_or_library_parameters": "not specified"
+        },
+        "candidate_mapping": {
+          "status": "untested_candidate_not_a_verified_affine",
+          "basis": "README 1152 padded scene, intended1024, final1022; centered65 pixel inset is plausible, not proven",
+          "inset_pixels_if_symmetric": [
+            65.0,
+            65.0
+          ],
+          "north_up_upper_left_if_symmetric": [
+            432240.0,
+            993900.0
+          ],
+          "row_col_order_and_resampling_origin": "not verified; candidate assumes north-up and symmetric crop"
+        },
+        "cube_mapping_status": "pending",
+        "cube_affine_assigned": false,
+        "missing": [
+          "Exact original-to-published cube crop offset and pixel-center convention",
+          "Cube row/column orientation relative to native tile grid",
+          "Actual bilinear resampling implementation, grid origin and crop/resample order",
+          "Pixel consistency validation of a candidate mapping (not authorized this phase)"
+        ]
+      },
+      "exact_product_candidates": [
+        "tiles/20/P/MQ/S2A_MSIL1C_20180626T144731_N0206_R139_T20PMQ_20180626T163032.SAFE/"
+      ],
+      "identity": {
+        "catalogue_product_id": "S2A_MSIL1C_20180626T144731_N0206_R139_T20PMQ_20180626T163032",
+        "archive_product_id": "S2A_MSIL1C_20180626T144731_N0206_R139_T20PMQ_20180626T163032",
+        "xml_product_uri": "S2A_MSIL1C_20180626T144731_N0206_R139_T20PMQ_20180626T163032.SAFE",
+        "product_sensing_start_utc": "2018-06-26T14:47:31.024Z",
+        "product_name_sensing_start_utc": "2018-06-26T14:47:31+00:00",
+        "tile_sensing_time_utc": "2018-06-26T14:47:31.464Z",
+        "processing_baseline": "02.06",
+        "tile": "20PMQ",
+        "tile_identifier": "S2A_OPER_MSI_L1C_TL_SGS__20180626T163032_A015723_T20PMQ_N02.06",
+        "granule_ids": [
+          "S2A_OPER_MSI_L1C_TL_SGS__20180626T163032_A015723_T20PMQ_N02.06"
+        ],
+        "archive_prefix": "tiles/20/P/MQ/S2A_MSIL1C_20180626T144731_N0206_R139_T20PMQ_20180626T163032.SAFE/",
+        "processing_generation_token": "20180626T163032",
+        "archive_granule_folders": [
+          "L1C_T20PMQ_A015723_20180626T144731"
+        ],
+        "granule_link_rule": "Product granuleIdentifier==tile TILE_ID (long ID), plus product IMAGE_FILE==archive band path under the same compact folder as tile XML; direct folder-ID equality also accepted"
+      },
+      "solar": {
+        "level": "original granule/tile metadata mean; not per-pixel angles",
+        "azimuth_definition": "clockwise from local North at the node; zenith from ellipsoid normal; degrees",
+        "definition_source": "https://sentiwiki.copernicus.eu/web/s2-processing",
+        "grid_north_conversion": "not performed; geographic local North is not silently treated as image-row North",
+        "azimuth": 51.8139580824051,
+        "azimuth_unit": "deg",
+        "zenith": 25.3682582788311,
+        "zenith_unit": "deg",
+        "angle_grids": [
+          {
+            "axis": "Zenith",
+            "rows": 23,
+            "columns": [
+              23
+            ],
+            "row_step": "5000",
+            "col_step": "5000",
+            "row_step_unit": "m",
+            "col_step_unit": "m",
+            "values_level": "coarse angle nodes; no pixel interpolation executed"
+          },
+          {
+            "axis": "Azimuth",
+            "rows": 23,
+            "columns": [
+              23
+            ],
+            "row_step": "5000",
+            "col_step": "5000",
+            "row_step_unit": "m",
+            "col_step_unit": "m",
+            "values_level": "coarse angle nodes; no pixel interpolation executed"
+          }
+        ],
+        "grid_present": true
+      },
+      "source_grid": {
+        "crs_name": "WGS84 / UTM zone 20N",
+        "crs_code": "EPSG:32620",
+        "resolutions": {
+          "10": {
+            "NROWS": 10980,
+            "NCOLS": 10980,
+            "ULX": 399960.0,
+            "ULY": 1000020.0,
+            "XDIM": 10.0,
+            "YDIM": -10.0,
+            "bounds": [
+              399960.0,
+              890220.0,
+              509760.0,
+              1000020.0
+            ]
+          },
+          "20": {
+            "NROWS": 5490,
+            "NCOLS": 5490,
+            "ULX": 399960.0,
+            "ULY": 1000020.0,
+            "XDIM": 20.0,
+            "YDIM": -20.0,
+            "bounds": [
+              399960.0,
+              890220.0,
+              509760.0,
+              1000020.0
+            ]
+          },
+          "60": {
+            "NROWS": 1830,
+            "NCOLS": 1830,
+            "ULX": 399960.0,
+            "ULY": 1000020.0,
+            "XDIM": 60.0,
+            "YDIM": -60.0,
+            "bounds": [
+              399960.0,
+              890220.0,
+              509760.0,
+              1000020.0
+            ]
+          }
+        },
+        "bands": {
+          "B04": {
+            "native_resolution_m": "10",
+            "grid": {
+              "NROWS": 10980,
+              "NCOLS": 10980,
+              "ULX": 399960.0,
+              "ULY": 1000020.0,
+              "XDIM": 10.0,
+              "YDIM": -10.0,
+              "bounds": [
+                399960.0,
+                890220.0,
+                509760.0,
+                1000020.0
+              ]
+            },
+            "product_xml_references": [
+              "GRANULE/L1C_T20PMQ_A015723_20180626T144731/IMG_DATA/T20PMQ_20180626T144731_B04"
+            ],
+            "archive_objects": [
+              "tiles/20/P/MQ/S2A_MSIL1C_20180626T144731_N0206_R139_T20PMQ_20180626T163032.SAFE/GRANULE/L1C_T20PMQ_A015723_20180626T144731/IMG_DATA/T20PMQ_20180626T144731_B04.jp2"
+            ],
+            "identity_chain_verified": true,
+            "raster_downloaded": false
+          },
+          "B03": {
+            "native_resolution_m": "10",
+            "grid": {
+              "NROWS": 10980,
+              "NCOLS": 10980,
+              "ULX": 399960.0,
+              "ULY": 1000020.0,
+              "XDIM": 10.0,
+              "YDIM": -10.0,
+              "bounds": [
+                399960.0,
+                890220.0,
+                509760.0,
+                1000020.0
+              ]
+            },
+            "product_xml_references": [
+              "GRANULE/L1C_T20PMQ_A015723_20180626T144731/IMG_DATA/T20PMQ_20180626T144731_B03"
+            ],
+            "archive_objects": [
+              "tiles/20/P/MQ/S2A_MSIL1C_20180626T144731_N0206_R139_T20PMQ_20180626T163032.SAFE/GRANULE/L1C_T20PMQ_A015723_20180626T144731/IMG_DATA/T20PMQ_20180626T144731_B03.jp2"
+            ],
+            "identity_chain_verified": true,
+            "raster_downloaded": false
+          },
+          "B02": {
+            "native_resolution_m": "10",
+            "grid": {
+              "NROWS": 10980,
+              "NCOLS": 10980,
+              "ULX": 399960.0,
+              "ULY": 1000020.0,
+              "XDIM": 10.0,
+              "YDIM": -10.0,
+              "bounds": [
+                399960.0,
+                890220.0,
+                509760.0,
+                1000020.0
+              ]
+            },
+            "product_xml_references": [
+              "GRANULE/L1C_T20PMQ_A015723_20180626T144731/IMG_DATA/T20PMQ_20180626T144731_B02"
+            ],
+            "archive_objects": [
+              "tiles/20/P/MQ/S2A_MSIL1C_20180626T144731_N0206_R139_T20PMQ_20180626T163032.SAFE/GRANULE/L1C_T20PMQ_A015723_20180626T144731/IMG_DATA/T20PMQ_20180626T144731_B02.jp2"
+            ],
+            "identity_chain_verified": true,
+            "raster_downloaded": false
+          },
+          "B08": {
+            "native_resolution_m": "10",
+            "grid": {
+              "NROWS": 10980,
+              "NCOLS": 10980,
+              "ULX": 399960.0,
+              "ULY": 1000020.0,
+              "XDIM": 10.0,
+              "YDIM": -10.0,
+              "bounds": [
+                399960.0,
+                890220.0,
+                509760.0,
+                1000020.0
+              ]
+            },
+            "product_xml_references": [
+              "GRANULE/L1C_T20PMQ_A015723_20180626T144731/IMG_DATA/T20PMQ_20180626T144731_B08"
+            ],
+            "archive_objects": [
+              "tiles/20/P/MQ/S2A_MSIL1C_20180626T144731_N0206_R139_T20PMQ_20180626T163032.SAFE/GRANULE/L1C_T20PMQ_A015723_20180626T144731/IMG_DATA/T20PMQ_20180626T144731_B08.jp2"
+            ],
+            "identity_chain_verified": true,
+            "raster_downloaded": false
+          },
+          "B11": {
+            "native_resolution_m": "20",
+            "grid": {
+              "NROWS": 5490,
+              "NCOLS": 5490,
+              "ULX": 399960.0,
+              "ULY": 1000020.0,
+              "XDIM": 20.0,
+              "YDIM": -20.0,
+              "bounds": [
+                399960.0,
+                890220.0,
+                509760.0,
+                1000020.0
+              ]
+            },
+            "product_xml_references": [
+              "GRANULE/L1C_T20PMQ_A015723_20180626T144731/IMG_DATA/T20PMQ_20180626T144731_B11"
+            ],
+            "archive_objects": [
+              "tiles/20/P/MQ/S2A_MSIL1C_20180626T144731_N0206_R139_T20PMQ_20180626T163032.SAFE/GRANULE/L1C_T20PMQ_A015723_20180626T144731/IMG_DATA/T20PMQ_20180626T144731_B11.jp2"
+            ],
+            "identity_chain_verified": true,
+            "raster_downloaded": false
+          },
+          "B12": {
+            "native_resolution_m": "20",
+            "grid": {
+              "NROWS": 5490,
+              "NCOLS": 5490,
+              "ULX": 399960.0,
+              "ULY": 1000020.0,
+              "XDIM": 20.0,
+              "YDIM": -20.0,
+              "bounds": [
+                399960.0,
+                890220.0,
+                509760.0,
+                1000020.0
+              ]
+            },
+            "product_xml_references": [
+              "GRANULE/L1C_T20PMQ_A015723_20180626T144731/IMG_DATA/T20PMQ_20180626T144731_B12"
+            ],
+            "archive_objects": [
+              "tiles/20/P/MQ/S2A_MSIL1C_20180626T144731_N0206_R139_T20PMQ_20180626T163032.SAFE/GRANULE/L1C_T20PMQ_A015723_20180626T144731/IMG_DATA/T20PMQ_20180626T144731_B12.jp2"
+            ],
+            "identity_chain_verified": true,
+            "raster_downloaded": false
+          }
+        }
+      },
+      "radiometry": {
+        "quantification_value": "10000",
+        "special_values": {
+          "NODATA": 0,
+          "SATURATED": 65535
+        },
+        "reflectance_offsets": [],
+        "offset_status": "absent_in_exact_original_XML; no guessed field inserted"
+      },
+      "solar_metadata_verified": true,
+      "source_grid_verified": true,
+      "cube_mapping_status": "pending",
+      "direction_geometry_ready": false,
+      "missing": [
+        "Exact original-to-published cube crop offset and pixel-center convention",
+        "Cube row/column orientation relative to native tile grid",
+        "Actual bilinear resampling implementation, grid origin and crop/resample order",
+        "Pixel consistency validation of a candidate mapping (not authorized this phase)"
+      ],
+      "annotation_matches_native_crs": true,
+      "xml_object_metadata": {
+        "product": {
+          "kind": "storage#object",
+          "id": "gcp-public-data-sentinel-2/tiles/20/P/MQ/S2A_MSIL1C_20180626T144731_N0206_R139_T20PMQ_20180626T163032.SAFE/MTD_MSIL1C.xml/1530200702496517",
+          "selfLink": "https://www.googleapis.com/storage/v1/b/gcp-public-data-sentinel-2/o/tiles%2F20%2FP%2FMQ%2FS2A_MSIL1C_20180626T144731_N0206_R139_T20PMQ_20180626T163032.SAFE%2FMTD_MSIL1C.xml",
+          "mediaLink": "https://storage.googleapis.com/download/storage/v1/b/gcp-public-data-sentinel-2/o/tiles%2F20%2FP%2FMQ%2FS2A_MSIL1C_20180626T144731_N0206_R139_T20PMQ_20180626T163032.SAFE%2FMTD_MSIL1C.xml?generation=1530200702496517&alt=media",
+          "name": "tiles/20/P/MQ/S2A_MSIL1C_20180626T144731_N0206_R139_T20PMQ_20180626T163032.SAFE/MTD_MSIL1C.xml",
+          "bucket": "gcp-public-data-sentinel-2",
+          "generation": "1530200702496517",
+          "metageneration": "1",
+          "contentType": "application/octet-stream",
+          "storageClass": "STANDARD",
+          "size": "44261",
+          "md5Hash": "bBMNqV4nvoznoZnXqHgjXg==",
+          "crc32c": "JMss+g==",
+          "etag": "CIXeuurZ9tsCEAE=",
+          "timeCreated": "2018-06-28T15:45:02.496Z",
+          "updated": "2018-06-28T15:45:02.496Z",
+          "timeStorageClassUpdated": "2018-06-28T15:45:02.496Z",
+          "timeFinalized": "2018-06-28T15:45:02.496Z"
+        },
+        "tile": {
+          "kind": "storage#object",
+          "id": "gcp-public-data-sentinel-2/tiles/20/P/MQ/S2A_MSIL1C_20180626T144731_N0206_R139_T20PMQ_20180626T163032.SAFE/GRANULE/L1C_T20PMQ_A015723_20180626T144731/MTD_TL.xml/1530200620408896",
+          "selfLink": "https://www.googleapis.com/storage/v1/b/gcp-public-data-sentinel-2/o/tiles%2F20%2FP%2FMQ%2FS2A_MSIL1C_20180626T144731_N0206_R139_T20PMQ_20180626T163032.SAFE%2FGRANULE%2FL1C_T20PMQ_A015723_20180626T144731%2FMTD_TL.xml",
+          "mediaLink": "https://storage.googleapis.com/download/storage/v1/b/gcp-public-data-sentinel-2/o/tiles%2F20%2FP%2FMQ%2FS2A_MSIL1C_20180626T144731_N0206_R139_T20PMQ_20180626T163032.SAFE%2FGRANULE%2FL1C_T20PMQ_A015723_20180626T144731%2FMTD_TL.xml?generation=1530200620408896&alt=media",
+          "name": "tiles/20/P/MQ/S2A_MSIL1C_20180626T144731_N0206_R139_T20PMQ_20180626T163032.SAFE/GRANULE/L1C_T20PMQ_A015723_20180626T144731/MTD_TL.xml",
+          "bucket": "gcp-public-data-sentinel-2",
+          "generation": "1530200620408896",
+          "metageneration": "1",
+          "contentType": "application/octet-stream",
+          "storageClass": "STANDARD",
+          "size": "629771",
+          "md5Hash": "+UEXMk1KAfDgxCKzovdLEg==",
+          "crc32c": "1BIy6w==",
+          "etag": "CMDAqMPZ9tsCEAE=",
+          "timeCreated": "2018-06-28T15:43:40.408Z",
+          "updated": "2018-06-28T15:43:40.408Z",
+          "timeStorageClassUpdated": "2018-06-28T15:43:40.408Z",
+          "timeFinalized": "2018-06-28T15:43:40.408Z"
+        }
+      }
+    },
+    {
+      "product": "S2A_MSIL1C_20180430T043701_N0206_R033_T46RBU_20180430T082134",
+      "group_id": "be2177736a0749fc6c3d8b8b9d6abd318d9ab011b0b09e8f439eea85622b39df",
+      "public_shadow_percent": 9.43480225642518,
+      "selection_sha256": "12b353748a0eb32c85802c927870c07d79e1044093a41a435b98c91bc9594373",
+      "cube_chain": {
+        "cube_member": "subscenes/S2A_MSIL1C_20180430T043701_N0206_R033_T46RBU_20180430T082134.npy",
+        "shape": [
+          1022,
+          1022,
+          13
+        ],
+        "dtype": "float32",
+        "fortran_order": false,
+        "npy_header_only": true,
+        "npy_header_sha256": "caf783e44afe1f34e11a0b15b4e9691c6e1cb273366196e5324205c4a5431f2a",
+        "official_pixel_size_m": 20,
+        "cube_width_height_m": [
+          20440,
+          20440
+        ],
+        "annotation_crs_wkt": "PROJCS[\"WGS_1984_UTM_Zone_46N\",GEOGCS[\"GCS_WGS_1984\",DATUM[\"D_WGS_1984\",SPHEROID[\"WGS_1984\",6378137,298.257223563]],PRIMEM[\"Greenwich\",0],UNIT[\"Degree\",0.017453292519943295]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",93],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"Meter\",1]]",
+        "annotation_epsg": "EPSG:32646",
+        "annotation_bounds": [
+          255300.0,
+          3337140.0,
+          278340.0,
+          3360180.0
+        ],
+        "annotation_extent_m": [
+          23040.0,
+          23040.0
+        ],
+        "annotation_shp_sha256": "3856236832750169e6266e58a1f407e7c3dfc5c2228db29ec12f7398306ee0f7",
+        "annotation_prj_sha256": "2da250bdebb2da51ca8771c3cab535c4d8b07d724a3e6b34842597d52669739c",
+        "bounds_match_1022_at20m": false,
+        "annotation_extent_pixels_at20m": [
+          1152.0,
+          1152.0
+        ],
+        "official_readme_evidence": {
+          "pdf_sha256": "fe30cf507184ee3f3cf16e16bce271b0701763d00144b138e0b3edf075e50ce6",
+          "pages": [
+            1,
+            4,
+            6,
+            9
+          ],
+          "pixel_size": "20m",
+          "non20m_resampling": "bilinear",
+          "TOA": "original integer /10000",
+          "annotation_window": 1152,
+          "padding_per_side": 64,
+          "intended_export": 1024,
+          "final_export": 1022,
+          "export_bug": "border unfilled; final crop removes border",
+          "exact_affine_or_library_parameters": "not specified"
+        },
+        "candidate_mapping": {
+          "status": "untested_candidate_not_a_verified_affine",
+          "basis": "README 1152 padded scene, intended1024, final1022; centered65 pixel inset is plausible, not proven",
+          "inset_pixels_if_symmetric": [
+            65.0,
+            65.0
+          ],
+          "north_up_upper_left_if_symmetric": [
+            256600.0,
+            3358880.0
+          ],
+          "row_col_order_and_resampling_origin": "not verified; candidate assumes north-up and symmetric crop"
+        },
+        "cube_mapping_status": "pending",
+        "cube_affine_assigned": false,
+        "missing": [
+          "Exact original-to-published cube crop offset and pixel-center convention",
+          "Cube row/column orientation relative to native tile grid",
+          "Actual bilinear resampling implementation, grid origin and crop/resample order",
+          "Pixel consistency validation of a candidate mapping (not authorized this phase)"
+        ]
+      },
+      "exact_product_candidates": [
+        "tiles/46/R/BU/S2A_MSIL1C_20180430T043701_N0206_R033_T46RBU_20180430T082134.SAFE/"
+      ],
+      "identity": {
+        "catalogue_product_id": "S2A_MSIL1C_20180430T043701_N0206_R033_T46RBU_20180430T082134",
+        "archive_product_id": "S2A_MSIL1C_20180430T043701_N0206_R033_T46RBU_20180430T082134",
+        "xml_product_uri": "S2A_MSIL1C_20180430T043701_N0206_R033_T46RBU_20180430T082134.SAFE",
+        "product_sensing_start_utc": "2018-04-30T04:37:01.024Z",
+        "product_name_sensing_start_utc": "2018-04-30T04:37:01+00:00",
+        "tile_sensing_time_utc": "2018-04-30T04:45:39.371Z",
+        "processing_baseline": "02.06",
+        "tile": "46RBU",
+        "tile_identifier": "S2A_OPER_MSI_L1C_TL_MTI__20180430T082134_A014902_T46RBU_N02.06",
+        "granule_ids": [
+          "S2A_OPER_MSI_L1C_TL_MTI__20180430T082134_A014902_T46RBU_N02.06"
+        ],
+        "archive_prefix": "tiles/46/R/BU/S2A_MSIL1C_20180430T043701_N0206_R033_T46RBU_20180430T082134.SAFE/",
+        "processing_generation_token": "20180430T082134",
+        "archive_granule_folders": [
+          "L1C_T46RBU_A014902_20180430T044539"
+        ],
+        "granule_link_rule": "Product granuleIdentifier==tile TILE_ID (long ID), plus product IMAGE_FILE==archive band path under the same compact folder as tile XML; direct folder-ID equality also accepted"
+      },
+      "solar": {
+        "level": "original granule/tile metadata mean; not per-pixel angles",
+        "azimuth_definition": "clockwise from local North at the node; zenith from ellipsoid normal; degrees",
+        "definition_source": "https://sentiwiki.copernicus.eu/web/s2-processing",
+        "grid_north_conversion": "not performed; geographic local North is not silently treated as image-row North",
+        "azimuth": 132.318467569056,
+        "azimuth_unit": "deg",
+        "zenith": 21.5278842911593,
+        "zenith_unit": "deg",
+        "angle_grids": [
+          {
+            "axis": "Zenith",
+            "rows": 23,
+            "columns": [
+              23
+            ],
+            "row_step": "5000",
+            "col_step": "5000",
+            "row_step_unit": "m",
+            "col_step_unit": "m",
+            "values_level": "coarse angle nodes; no pixel interpolation executed"
+          },
+          {
+            "axis": "Azimuth",
+            "rows": 23,
+            "columns": [
+              23
+            ],
+            "row_step": "5000",
+            "col_step": "5000",
+            "row_step_unit": "m",
+            "col_step_unit": "m",
+            "values_level": "coarse angle nodes; no pixel interpolation executed"
+          }
+        ],
+        "grid_present": true
+      },
+      "source_grid": {
+        "crs_name": "WGS84 / UTM zone 46N",
+        "crs_code": "EPSG:32646",
+        "resolutions": {
+          "10": {
+            "NROWS": 10980,
+            "NCOLS": 10980,
+            "ULX": 199980.0,
+            "ULY": 3400020.0,
+            "XDIM": 10.0,
+            "YDIM": -10.0,
+            "bounds": [
+              199980.0,
+              3290220.0,
+              309780.0,
+              3400020.0
+            ]
+          },
+          "20": {
+            "NROWS": 5490,
+            "NCOLS": 5490,
+            "ULX": 199980.0,
+            "ULY": 3400020.0,
+            "XDIM": 20.0,
+            "YDIM": -20.0,
+            "bounds": [
+              199980.0,
+              3290220.0,
+              309780.0,
+              3400020.0
+            ]
+          },
+          "60": {
+            "NROWS": 1830,
+            "NCOLS": 1830,
+            "ULX": 199980.0,
+            "ULY": 3400020.0,
+            "XDIM": 60.0,
+            "YDIM": -60.0,
+            "bounds": [
+              199980.0,
+              3290220.0,
+              309780.0,
+              3400020.0
+            ]
+          }
+        },
+        "bands": {
+          "B04": {
+            "native_resolution_m": "10",
+            "grid": {
+              "NROWS": 10980,
+              "NCOLS": 10980,
+              "ULX": 199980.0,
+              "ULY": 3400020.0,
+              "XDIM": 10.0,
+              "YDIM": -10.0,
+              "bounds": [
+                199980.0,
+                3290220.0,
+                309780.0,
+                3400020.0
+              ]
+            },
+            "product_xml_references": [
+              "GRANULE/L1C_T46RBU_A014902_20180430T044539/IMG_DATA/T46RBU_20180430T043701_B04"
+            ],
+            "archive_objects": [
+              "tiles/46/R/BU/S2A_MSIL1C_20180430T043701_N0206_R033_T46RBU_20180430T082134.SAFE/GRANULE/L1C_T46RBU_A014902_20180430T044539/IMG_DATA/T46RBU_20180430T043701_B04.jp2"
+            ],
+            "identity_chain_verified": true,
+            "raster_downloaded": false
+          },
+          "B03": {
+            "native_resolution_m": "10",
+            "grid": {
+              "NROWS": 10980,
+              "NCOLS": 10980,
+              "ULX": 199980.0,
+              "ULY": 3400020.0,
+              "XDIM": 10.0,
+              "YDIM": -10.0,
+              "bounds": [
+                199980.0,
+                3290220.0,
+                309780.0,
+                3400020.0
+              ]
+            },
+            "product_xml_references": [
+              "GRANULE/L1C_T46RBU_A014902_20180430T044539/IMG_DATA/T46RBU_20180430T043701_B03"
+            ],
+            "archive_objects": [
+              "tiles/46/R/BU/S2A_MSIL1C_20180430T043701_N0206_R033_T46RBU_20180430T082134.SAFE/GRANULE/L1C_T46RBU_A014902_20180430T044539/IMG_DATA/T46RBU_20180430T043701_B03.jp2"
+            ],
+            "identity_chain_verified": true,
+            "raster_downloaded": false
+          },
+          "B02": {
+            "native_resolution_m": "10",
+            "grid": {
+              "NROWS": 10980,
+              "NCOLS": 10980,
+              "ULX": 199980.0,
+              "ULY": 3400020.0,
+              "XDIM": 10.0,
+              "YDIM": -10.0,
+              "bounds": [
+                199980.0,
+                3290220.0,
+                309780.0,
+                3400020.0
+              ]
+            },
+            "product_xml_references": [
+              "GRANULE/L1C_T46RBU_A014902_20180430T044539/IMG_DATA/T46RBU_20180430T043701_B02"
+            ],
+            "archive_objects": [
+              "tiles/46/R/BU/S2A_MSIL1C_20180430T043701_N0206_R033_T46RBU_20180430T082134.SAFE/GRANULE/L1C_T46RBU_A014902_20180430T044539/IMG_DATA/T46RBU_20180430T043701_B02.jp2"
+            ],
+            "identity_chain_verified": true,
+            "raster_downloaded": false
+          },
+          "B08": {
+            "native_resolution_m": "10",
+            "grid": {
+              "NROWS": 10980,
+              "NCOLS": 10980,
+              "ULX": 199980.0,
+              "ULY": 3400020.0,
+              "XDIM": 10.0,
+              "YDIM": -10.0,
+              "bounds": [
+                199980.0,
+                3290220.0,
+                309780.0,
+                3400020.0
+              ]
+            },
+            "product_xml_references": [
+              "GRANULE/L1C_T46RBU_A014902_20180430T044539/IMG_DATA/T46RBU_20180430T043701_B08"
+            ],
+            "archive_objects": [
+              "tiles/46/R/BU/S2A_MSIL1C_20180430T043701_N0206_R033_T46RBU_20180430T082134.SAFE/GRANULE/L1C_T46RBU_A014902_20180430T044539/IMG_DATA/T46RBU_20180430T043701_B08.jp2"
+            ],
+            "identity_chain_verified": true,
+            "raster_downloaded": false
+          },
+          "B11": {
+            "native_resolution_m": "20",
+            "grid": {
+              "NROWS": 5490,
+              "NCOLS": 5490,
+              "ULX": 199980.0,
+              "ULY": 3400020.0,
+              "XDIM": 20.0,
+              "YDIM": -20.0,
+              "bounds": [
+                199980.0,
+                3290220.0,
+                309780.0,
+                3400020.0
+              ]
+            },
+            "product_xml_references": [
+              "GRANULE/L1C_T46RBU_A014902_20180430T044539/IMG_DATA/T46RBU_20180430T043701_B11"
+            ],
+            "archive_objects": [
+              "tiles/46/R/BU/S2A_MSIL1C_20180430T043701_N0206_R033_T46RBU_20180430T082134.SAFE/GRANULE/L1C_T46RBU_A014902_20180430T044539/IMG_DATA/T46RBU_20180430T043701_B11.jp2"
+            ],
+            "identity_chain_verified": true,
+            "raster_downloaded": false
+          },
+          "B12": {
+            "native_resolution_m": "20",
+            "grid": {
+              "NROWS": 5490,
+              "NCOLS": 5490,
+              "ULX": 199980.0,
+              "ULY": 3400020.0,
+              "XDIM": 20.0,
+              "YDIM": -20.0,
+              "bounds": [
+                199980.0,
+                3290220.0,
+                309780.0,
+                3400020.0
+              ]
+            },
+            "product_xml_references": [
+              "GRANULE/L1C_T46RBU_A014902_20180430T044539/IMG_DATA/T46RBU_20180430T043701_B12"
+            ],
+            "archive_objects": [
+              "tiles/46/R/BU/S2A_MSIL1C_20180430T043701_N0206_R033_T46RBU_20180430T082134.SAFE/GRANULE/L1C_T46RBU_A014902_20180430T044539/IMG_DATA/T46RBU_20180430T043701_B12.jp2"
+            ],
+            "identity_chain_verified": true,
+            "raster_downloaded": false
+          }
+        }
+      },
+      "radiometry": {
+        "quantification_value": "10000",
+        "special_values": {
+          "NODATA": 0,
+          "SATURATED": 65535
+        },
+        "reflectance_offsets": [],
+        "offset_status": "absent_in_exact_original_XML; no guessed field inserted"
+      },
+      "solar_metadata_verified": true,
+      "source_grid_verified": true,
+      "cube_mapping_status": "pending",
+      "direction_geometry_ready": false,
+      "missing": [
+        "Exact original-to-published cube crop offset and pixel-center convention",
+        "Cube row/column orientation relative to native tile grid",
+        "Actual bilinear resampling implementation, grid origin and crop/resample order",
+        "Pixel consistency validation of a candidate mapping (not authorized this phase)"
+      ],
+      "annotation_matches_native_crs": true,
+      "xml_object_metadata": {
+        "product": {
+          "kind": "storage#object",
+          "id": "gcp-public-data-sentinel-2/tiles/46/R/BU/S2A_MSIL1C_20180430T043701_N0206_R033_T46RBU_20180430T082134.SAFE/MTD_MSIL1C.xml/1525457557957308",
+          "selfLink": "https://www.googleapis.com/storage/v1/b/gcp-public-data-sentinel-2/o/tiles%2F46%2FR%2FBU%2FS2A_MSIL1C_20180430T043701_N0206_R033_T46RBU_20180430T082134.SAFE%2FMTD_MSIL1C.xml",
+          "mediaLink": "https://storage.googleapis.com/download/storage/v1/b/gcp-public-data-sentinel-2/o/tiles%2F46%2FR%2FBU%2FS2A_MSIL1C_20180430T043701_N0206_R033_T46RBU_20180430T082134.SAFE%2FMTD_MSIL1C.xml?generation=1525457557957308&alt=media",
+          "name": "tiles/46/R/BU/S2A_MSIL1C_20180430T043701_N0206_R033_T46RBU_20180430T082134.SAFE/MTD_MSIL1C.xml",
+          "bucket": "gcp-public-data-sentinel-2",
+          "generation": "1525457557957308",
+          "metageneration": "1",
+          "contentType": "application/octet-stream",
+          "storageClass": "STANDARD",
+          "size": "44297",
+          "md5Hash": "sz6TuCXGqtV+R+E4hyU2KA==",
+          "crc32c": "K/KhcA==",
+          "etag": "CLzV8p7U7NoCEAE=",
+          "timeCreated": "2018-05-04T18:12:37.949Z",
+          "updated": "2018-05-04T18:12:37.949Z",
+          "timeStorageClassUpdated": "2018-05-04T18:12:37.949Z",
+          "timeFinalized": "2018-05-04T18:12:37.949Z"
+        },
+        "tile": {
+          "kind": "storage#object",
+          "id": "gcp-public-data-sentinel-2/tiles/46/R/BU/S2A_MSIL1C_20180430T043701_N0206_R033_T46RBU_20180430T082134.SAFE/GRANULE/L1C_T46RBU_A014902_20180430T044539/MTD_TL.xml/1525457495915794",
+          "selfLink": "https://www.googleapis.com/storage/v1/b/gcp-public-data-sentinel-2/o/tiles%2F46%2FR%2FBU%2FS2A_MSIL1C_20180430T043701_N0206_R033_T46RBU_20180430T082134.SAFE%2FGRANULE%2FL1C_T46RBU_A014902_20180430T044539%2FMTD_TL.xml",
+          "mediaLink": "https://storage.googleapis.com/download/storage/v1/b/gcp-public-data-sentinel-2/o/tiles%2F46%2FR%2FBU%2FS2A_MSIL1C_20180430T043701_N0206_R033_T46RBU_20180430T082134.SAFE%2FGRANULE%2FL1C_T46RBU_A014902_20180430T044539%2FMTD_TL.xml?generation=1525457495915794&alt=media",
+          "name": "tiles/46/R/BU/S2A_MSIL1C_20180430T043701_N0206_R033_T46RBU_20180430T082134.SAFE/GRANULE/L1C_T46RBU_A014902_20180430T044539/MTD_TL.xml",
+          "bucket": "gcp-public-data-sentinel-2",
+          "generation": "1525457495915794",
+          "metageneration": "1",
+          "contentType": "application/octet-stream",
+          "storageClass": "STANDARD",
+          "size": "551446",
+          "md5Hash": "vutaVlpv3FW44AfvhstUOQ==",
+          "crc32c": "d6veyQ==",
+          "etag": "CJL6p4HU7NoCEAE=",
+          "timeCreated": "2018-05-04T18:11:35.907Z",
+          "updated": "2018-05-04T18:11:35.907Z",
+          "timeStorageClassUpdated": "2018-05-04T18:11:35.907Z",
+          "timeFinalized": "2018-05-04T18:11:35.907Z"
+        }
+      }
+    }
+  ],
+  "objects": [
+    {
+      "product": "S2B_MSIL1C_20180205T073059_N0206_R049_T37LDL_20180205T111142",
+      "band": "B11",
+      "object": {
+        "kind": "storage#object",
+        "id": "gcp-public-data-sentinel-2/tiles/37/L/DL/S2B_MSIL1C_20180205T073059_N0206_R049_T37LDL_20180205T111142.SAFE/GRANULE/L1C_T37LDL_A004794_20180205T074846/IMG_DATA/T37LDL_20180205T073059_B11.jp2/1518197733070810",
+        "selfLink": "https://www.googleapis.com/storage/v1/b/gcp-public-data-sentinel-2/o/tiles%2F37%2FL%2FDL%2FS2B_MSIL1C_20180205T073059_N0206_R049_T37LDL_20180205T111142.SAFE%2FGRANULE%2FL1C_T37LDL_A004794_20180205T074846%2FIMG_DATA%2FT37LDL_20180205T073059_B11.jp2",
+        "mediaLink": "https://storage.googleapis.com/download/storage/v1/b/gcp-public-data-sentinel-2/o/tiles%2F37%2FL%2FDL%2FS2B_MSIL1C_20180205T073059_N0206_R049_T37LDL_20180205T111142.SAFE%2FGRANULE%2FL1C_T37LDL_A004794_20180205T074846%2FIMG_DATA%2FT37LDL_20180205T073059_B11.jp2?generation=1518197733070810&alt=media",
+        "name": "tiles/37/L/DL/S2B_MSIL1C_20180205T073059_N0206_R049_T37LDL_20180205T111142.SAFE/GRANULE/L1C_T37LDL_A004794_20180205T074846/IMG_DATA/T37LDL_20180205T073059_B11.jp2",
+        "bucket": "gcp-public-data-sentinel-2",
+        "generation": "1518197733070810",
+        "metageneration": "1",
+        "contentType": "application/octet-stream",
+        "storageClass": "STANDARD",
+        "size": "33710074",
+        "md5Hash": "qI5YEEXVFE7VSW1xZCqmAg==",
+        "crc32c": "SEk/EA==",
+        "etag": "CNqv0KSvmdkCEAE=",
+        "timeCreated": "2018-02-09T17:35:33.062Z",
+        "updated": "2018-02-09T17:35:33.062Z",
+        "timeStorageClassUpdated": "2018-02-09T17:35:33.062Z",
+        "timeFinalized": "2018-02-09T17:35:33.062Z"
+      }
+    },
+    {
+      "product": "S2B_MSIL1C_20180205T073059_N0206_R049_T37LDL_20180205T111142",
+      "band": "B04",
+      "object": {
+        "kind": "storage#object",
+        "id": "gcp-public-data-sentinel-2/tiles/37/L/DL/S2B_MSIL1C_20180205T073059_N0206_R049_T37LDL_20180205T111142.SAFE/GRANULE/L1C_T37LDL_A004794_20180205T074846/IMG_DATA/T37LDL_20180205T073059_B04.jp2/1518197698420951",
+        "selfLink": "https://www.googleapis.com/storage/v1/b/gcp-public-data-sentinel-2/o/tiles%2F37%2FL%2FDL%2FS2B_MSIL1C_20180205T073059_N0206_R049_T37LDL_20180205T111142.SAFE%2FGRANULE%2FL1C_T37LDL_A004794_20180205T074846%2FIMG_DATA%2FT37LDL_20180205T073059_B04.jp2",
+        "mediaLink": "https://storage.googleapis.com/download/storage/v1/b/gcp-public-data-sentinel-2/o/tiles%2F37%2FL%2FDL%2FS2B_MSIL1C_20180205T073059_N0206_R049_T37LDL_20180205T111142.SAFE%2FGRANULE%2FL1C_T37LDL_A004794_20180205T074846%2FIMG_DATA%2FT37LDL_20180205T073059_B04.jp2?generation=1518197698420951&alt=media",
+        "name": "tiles/37/L/DL/S2B_MSIL1C_20180205T073059_N0206_R049_T37LDL_20180205T111142.SAFE/GRANULE/L1C_T37LDL_A004794_20180205T074846/IMG_DATA/T37LDL_20180205T073059_B04.jp2",
+        "bucket": "gcp-public-data-sentinel-2",
+        "generation": "1518197698420951",
+        "metageneration": "1",
+        "contentType": "application/octet-stream",
+        "storageClass": "STANDARD",
+        "size": "118049122",
+        "md5Hash": "LNWPu2AUzt+C9dWzjJRclw==",
+        "crc32c": "MPc87g==",
+        "etag": "CNfBjZSvmdkCEAE=",
+        "timeCreated": "2018-02-09T17:34:58.412Z",
+        "updated": "2018-02-09T17:34:58.412Z",
+        "timeStorageClassUpdated": "2018-02-09T17:34:58.412Z",
+        "timeFinalized": "2018-02-09T17:34:58.412Z"
+      }
+    },
+    {
+      "product": "S2A_MSIL1C_20180626T144731_N0206_R139_T20PMQ_20180626T163032",
+      "band": "B11",
+      "object": {
+        "kind": "storage#object",
+        "id": "gcp-public-data-sentinel-2/tiles/20/P/MQ/S2A_MSIL1C_20180626T144731_N0206_R139_T20PMQ_20180626T163032.SAFE/GRANULE/L1C_T20PMQ_A015723_20180626T144731/IMG_DATA/T20PMQ_20180626T144731_B11.jp2/1530200599470738",
+        "selfLink": "https://www.googleapis.com/storage/v1/b/gcp-public-data-sentinel-2/o/tiles%2F20%2FP%2FMQ%2FS2A_MSIL1C_20180626T144731_N0206_R139_T20PMQ_20180626T163032.SAFE%2FGRANULE%2FL1C_T20PMQ_A015723_20180626T144731%2FIMG_DATA%2FT20PMQ_20180626T144731_B11.jp2",
+        "mediaLink": "https://storage.googleapis.com/download/storage/v1/b/gcp-public-data-sentinel-2/o/tiles%2F20%2FP%2FMQ%2FS2A_MSIL1C_20180626T144731_N0206_R139_T20PMQ_20180626T163032.SAFE%2FGRANULE%2FL1C_T20PMQ_A015723_20180626T144731%2FIMG_DATA%2FT20PMQ_20180626T144731_B11.jp2?generation=1530200599470738&alt=media",
+        "name": "tiles/20/P/MQ/S2A_MSIL1C_20180626T144731_N0206_R139_T20PMQ_20180626T163032.SAFE/GRANULE/L1C_T20PMQ_A015723_20180626T144731/IMG_DATA/T20PMQ_20180626T144731_B11.jp2",
+        "bucket": "gcp-public-data-sentinel-2",
+        "generation": "1530200599470738",
+        "metageneration": "1",
+        "contentType": "application/octet-stream",
+        "storageClass": "STANDARD",
+        "size": "30759335",
+        "md5Hash": "ecUIirhdnJE7aC4CY3sKcQ==",
+        "crc32c": "UF34og==",
+        "etag": "CJLFqrnZ9tsCEAE=",
+        "timeCreated": "2018-06-28T15:43:19.469Z",
+        "updated": "2018-06-28T15:43:19.469Z",
+        "timeStorageClassUpdated": "2018-06-28T15:43:19.469Z",
+        "timeFinalized": "2018-06-28T15:43:19.469Z"
+      }
+    },
+    {
+      "product": "S2A_MSIL1C_20180626T144731_N0206_R139_T20PMQ_20180626T163032",
+      "band": "B04",
+      "object": {
+        "kind": "storage#object",
+        "id": "gcp-public-data-sentinel-2/tiles/20/P/MQ/S2A_MSIL1C_20180626T144731_N0206_R139_T20PMQ_20180626T163032.SAFE/GRANULE/L1C_T20PMQ_A015723_20180626T144731/IMG_DATA/T20PMQ_20180626T144731_B04.jp2/1530200566562673",
+        "selfLink": "https://www.googleapis.com/storage/v1/b/gcp-public-data-sentinel-2/o/tiles%2F20%2FP%2FMQ%2FS2A_MSIL1C_20180626T144731_N0206_R139_T20PMQ_20180626T163032.SAFE%2FGRANULE%2FL1C_T20PMQ_A015723_20180626T144731%2FIMG_DATA%2FT20PMQ_20180626T144731_B04.jp2",
+        "mediaLink": "https://storage.googleapis.com/download/storage/v1/b/gcp-public-data-sentinel-2/o/tiles%2F20%2FP%2FMQ%2FS2A_MSIL1C_20180626T144731_N0206_R139_T20PMQ_20180626T163032.SAFE%2FGRANULE%2FL1C_T20PMQ_A015723_20180626T144731%2FIMG_DATA%2FT20PMQ_20180626T144731_B04.jp2?generation=1530200566562673&alt=media",
+        "name": "tiles/20/P/MQ/S2A_MSIL1C_20180626T144731_N0206_R139_T20PMQ_20180626T163032.SAFE/GRANULE/L1C_T20PMQ_A015723_20180626T144731/IMG_DATA/T20PMQ_20180626T144731_B04.jp2",
+        "bucket": "gcp-public-data-sentinel-2",
+        "generation": "1530200566562673",
+        "metageneration": "1",
+        "contentType": "application/octet-stream",
+        "storageClass": "STANDARD",
+        "size": "110669880",
+        "md5Hash": "hYoSzFsZEDQdiEjR7T2cUg==",
+        "crc32c": "Hov61w==",
+        "etag": "CPH+0anZ9tsCEAE=",
+        "timeCreated": "2018-06-28T15:42:46.562Z",
+        "updated": "2018-06-28T15:42:46.562Z",
+        "timeStorageClassUpdated": "2018-06-28T15:42:46.562Z",
+        "timeFinalized": "2018-06-28T15:42:46.562Z"
+      }
+    },
+    {
+      "product": "S2A_MSIL1C_20180430T043701_N0206_R033_T46RBU_20180430T082134",
+      "band": "B11",
+      "object": {
+        "kind": "storage#object",
+        "id": "gcp-public-data-sentinel-2/tiles/46/R/BU/S2A_MSIL1C_20180430T043701_N0206_R033_T46RBU_20180430T082134.SAFE/GRANULE/L1C_T46RBU_A014902_20180430T044539/IMG_DATA/T46RBU_20180430T043701_B11.jp2/1525457476095971",
+        "selfLink": "https://www.googleapis.com/storage/v1/b/gcp-public-data-sentinel-2/o/tiles%2F46%2FR%2FBU%2FS2A_MSIL1C_20180430T043701_N0206_R033_T46RBU_20180430T082134.SAFE%2FGRANULE%2FL1C_T46RBU_A014902_20180430T044539%2FIMG_DATA%2FT46RBU_20180430T043701_B11.jp2",
+        "mediaLink": "https://storage.googleapis.com/download/storage/v1/b/gcp-public-data-sentinel-2/o/tiles%2F46%2FR%2FBU%2FS2A_MSIL1C_20180430T043701_N0206_R033_T46RBU_20180430T082134.SAFE%2FGRANULE%2FL1C_T46RBU_A014902_20180430T044539%2FIMG_DATA%2FT46RBU_20180430T043701_B11.jp2?generation=1525457476095971&alt=media",
+        "name": "tiles/46/R/BU/S2A_MSIL1C_20180430T043701_N0206_R033_T46RBU_20180430T082134.SAFE/GRANULE/L1C_T46RBU_A014902_20180430T044539/IMG_DATA/T46RBU_20180430T043701_B11.jp2",
+        "bucket": "gcp-public-data-sentinel-2",
+        "generation": "1525457476095971",
+        "metageneration": "1",
+        "contentType": "application/octet-stream",
+        "storageClass": "STANDARD",
+        "size": "28987571",
+        "md5Hash": "wBqcQEjjwzAJWTIo+/C7BA==",
+        "crc32c": "kL9mcQ==",
+        "etag": "COOf7vfT7NoCEAE=",
+        "timeCreated": "2018-05-04T18:11:16.087Z",
+        "updated": "2018-05-04T18:11:16.087Z",
+        "timeStorageClassUpdated": "2018-05-04T18:11:16.087Z",
+        "timeFinalized": "2018-05-04T18:11:16.087Z"
+      }
+    },
+    {
+      "product": "S2A_MSIL1C_20180430T043701_N0206_R033_T46RBU_20180430T082134",
+      "band": "B04",
+      "object": {
+        "kind": "storage#object",
+        "id": "gcp-public-data-sentinel-2/tiles/46/R/BU/S2A_MSIL1C_20180430T043701_N0206_R033_T46RBU_20180430T082134.SAFE/GRANULE/L1C_T46RBU_A014902_20180430T044539/IMG_DATA/T46RBU_20180430T043701_B04.jp2/1525457435179211",
+        "selfLink": "https://www.googleapis.com/storage/v1/b/gcp-public-data-sentinel-2/o/tiles%2F46%2FR%2FBU%2FS2A_MSIL1C_20180430T043701_N0206_R033_T46RBU_20180430T082134.SAFE%2FGRANULE%2FL1C_T46RBU_A014902_20180430T044539%2FIMG_DATA%2FT46RBU_20180430T043701_B04.jp2",
+        "mediaLink": "https://storage.googleapis.com/download/storage/v1/b/gcp-public-data-sentinel-2/o/tiles%2F46%2FR%2FBU%2FS2A_MSIL1C_20180430T043701_N0206_R033_T46RBU_20180430T082134.SAFE%2FGRANULE%2FL1C_T46RBU_A014902_20180430T044539%2FIMG_DATA%2FT46RBU_20180430T043701_B04.jp2?generation=1525457435179211&alt=media",
+        "name": "tiles/46/R/BU/S2A_MSIL1C_20180430T043701_N0206_R033_T46RBU_20180430T082134.SAFE/GRANULE/L1C_T46RBU_A014902_20180430T044539/IMG_DATA/T46RBU_20180430T043701_B04.jp2",
+        "bucket": "gcp-public-data-sentinel-2",
+        "generation": "1525457435179211",
+        "metageneration": "1",
+        "contentType": "application/octet-stream",
+        "storageClass": "STANDARD",
+        "size": "120944815",
+        "md5Hash": "iHBjQyQi2RztdOD06AFLvw==",
+        "crc32c": "UfYkZQ==",
+        "etag": "CMvxrOTT7NoCEAE=",
+        "timeCreated": "2018-05-04T18:10:35.171Z",
+        "updated": "2018-05-04T18:10:35.171Z",
+        "timeStorageClassUpdated": "2018-05-04T18:10:35.171Z",
+        "timeFinalized": "2018-05-04T18:10:35.171Z"
+      }
+    }
+  ]
+}
