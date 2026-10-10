@@ -1,0 +1,9 @@
+{
+  "previous": {
+    "mapping_lock.json": "f4a3fa9c73f34adb5cf9db9cd6c59d14c73e080f62c0df932199f44c8a92e0a4",
+    "summary.json": "79d7e7d1dbb7278fd8179c6215c61a46fa367d0c82f31169cb6ab23b0e193863",
+    "artifact_hashes.json": "919a00dc3607458f07a9a7f8104031f01c1156fc878582ed65773439810b26d0",
+    "object_verification.json": "4bd8248aaa0360cf9bc2dd42d68c97b64f755a527b7ea7554bf3f650e56ddb8d",
+    "B11_only_transforms.json": "60ae7909e42adb57503e524dfbee787af8dca132e4d462d61b1369e7a5a23586"
+  }
+}

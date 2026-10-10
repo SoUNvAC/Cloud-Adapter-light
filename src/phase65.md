@@ -815,3 +815,7 @@
 - 仅诊断：三景整图最低RMSE均integer_0_0；T37LDL中位0.001100005/P99=0.009599970/RMSE=0.002823275；T20PMQ中位0.000700012/P99=0.005000017/RMSE=0.001511714；T46RBU中位0.001200008/P99=0.021699950/RMSE=0.004960517。仍明显超过中位5e-5/P99=2e-4门，不把最近对照写成通过、不推断作者采用最近邻、不改README。
 - 按协议关闭本轮重采样搜索，不加候选/改容差/拟合gain-offset/改B11内裁65与原方向。边界：B11坐标证据可用，RGB预处理溯源未闭合；不验证其余波段/全185景、不自动扩展方向信息实验或云影投影，无训练或方法性能结论。具体发布预处理原因未知，未来限定B11方向实验须另立协议；旧失败和2026-10-20北京时间预算线不变。
 - shared报告成功取回outputs/phase77/phase77_20261011；65远端报告逐文件SHA、部署代码/Phase76 helper/绑定Git blob、4个Phase76输入SHA复核通过。独立从36个残差NPY重算整图统计，并汇总72个固定25/24点分组误差，结果与原门一致；保存全部候选/逐点/整图/四象限CSV、12×3残差、等价/选择冻结、状态、README与LOCAL_VERIFIED。JP2留shared，仅传审计产物，保留用户改动。模型未运行，SSH/传输正常；结果记录push后远端ff-only pull。
+
+
+### 2026-10-11 Phase78 B11 geographic direction screen freeze
+用户授权执行PHASE78_B11_DIRECTION_20261011.md；仅原三景fit，复用已验证B11及原参考mask，不下载影像、不读模型/确认/旧sealed、不拟合、不恢复Phase77。冻结五距离100/200/400/800/1600m、四地理方向、max减中心及all/dark对照，严格四邻有效且不越当前裁块，先独立共同mask后交原one-hot有效参考。WGS84 Geod.fwd投影往返，逆affine减0.5，不将太阳方位当UTM角。先核输入SHA及三景旧B11残差逐值复现，所有新分数前锁公式/类序/版本/判据。依赖pyproj和scikit-learn现有环境缺失，隔离置outputs/phase78/dependencies及shared/phase78_control_20261011/dependencies，不改系统/conda。无方向对照不可省略，三个方向宏差正且至少2/3景正、相对dark宏差正才初筛继续；不满足停止固定方案。仅shared结果交付，本次无work_dirs同步。预算止2026-10-20北京保持。
