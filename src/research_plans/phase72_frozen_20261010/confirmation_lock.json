@@ -804,7 +804,7 @@
   },
   "gates": {
     "primary": "B-L3 mean AP two-sided95 lower>0",
-    "secondary": "B-RGB mean AP two-sided95 lower>0, tested only after primary passes",
+    "secondary": "B-RGB mean AP two-sided95 lower>0, tested only after primary and all safety gates pass",
     "B_mean_fpr_one_sided_upper95_max": 0.01,
     "B_minus_L3_mean_recall_one_sided_lower95_min": -0.01,
     "B_minus_L3_mean_miou_pp_one_sided_lower95_min": -1
@@ -821,7 +821,7 @@
     "between_distinct_65c_groups": [],
     "limitation": "Conservative buffered WGS84 bounds, conditional on original footprint metadata accuracy"
   },
-  "protocol_sha256": "3ae1ffa4e1b31b60726d9f5aa731f253fba4d81d3092e365690ac2c04ffd7c27",
+  "protocol_sha256": "1f35bf95b87afb211546ebdbf0331ff9e6d661d9ce5ccbf4ae2d5167fcabcdf1",
   "official_files": {
     "classification_tags.csv": {
       "bytes": 77940,

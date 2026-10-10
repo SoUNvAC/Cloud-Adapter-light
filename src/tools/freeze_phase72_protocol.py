@@ -67,7 +67,7 @@ def main():
         msre_checkpoint_sha256='82f88d235948ef0a9202cebaa026e7f9fb1e1ad5c0aa361d9045c3e6991ee16d',
         local_window=61,formula='(center-mean)/(abs(mean)+1e-6)',center_excluded=True,image_valid_neighbors_only=True,
         bootstrap=dict(seed=72010,resamples=10000,method='paired equal related-group percentile; two-sided AP 2.5/97.5; one-sided safety 5/95'),
-        gates=dict(primary='B-L3 mean AP two-sided95 lower>0',secondary='B-RGB mean AP two-sided95 lower>0, tested only after primary passes',
+        gates=dict(primary='B-L3 mean AP two-sided95 lower>0',secondary='B-RGB mean AP two-sided95 lower>0, tested only after primary and all safety gates pass',
                    B_mean_fpr_one_sided_upper95_max=.01, B_minus_L3_mean_recall_one_sided_lower95_min=-.01,
                    B_minus_L3_mean_miou_pp_one_sided_lower95_min=-1),
         user_confirmed_safety_margins=True, pixels_read=False,
