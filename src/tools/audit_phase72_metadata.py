@@ -21,10 +21,11 @@ def main():
     assert len(selected) == 64 and not products & others
     scanned, hits, errors, provenance = {}, [], [], []
     # Limit reads to recognized access metadata, never metric reports or score arrays.
-    for folder in sorted(DATA.glob('phase*')):
+    folders = list(DATA.glob('phase*')) + [REPO/'src/work_dirs']
+    for folder in sorted(folders):
         if not folder.is_dir():
             continue
-        paths = set(folder.rglob('manifest.json')) | set(folder.rglob('index*.json')) | set(folder.rglob('unseal_receipt.json'))
+        paths = set(folder.rglob('manifest.json')) | set(folder.rglob('*index*.json')) | set(folder.rglob('unseal_receipt.json'))
         for p in sorted(paths):
             try:
                 raw = p.read_bytes()
