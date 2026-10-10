@@ -41,7 +41,8 @@ def main():
         checks['B_minus_'+name]=dict(group_means_and_paired_intervals_recomputed=True)
     (ROOT/'verification.json').write_text(json.dumps(dict(status='passed',checks=checks,raw_group_csv_sha256=hashlib.sha256((ROOT/'delivery/groups.csv').read_bytes()).hexdigest()),indent=2),encoding='utf-8')
     lines=['# Phase72：完整B独立确认','', '## 1. 数据结果','',
-        f"固定65c：64相关组、64原代表；实际有Shadow {report['actual_shadow_support']}组，公开元数据支持{report['public_shadow_support']}组；无重拟合、无阈值修改。",'',
+        f"固定65c：64相关组、64原代表；实际有Shadow {report['actual_shadow_support']}组，公开元数据支持{report['public_shadow_support']}组；无重拟合、无阈值修改。",
+        '公开/实际支持不一致产品：'+', '.join(report['support_disagreements'])+'；无有效Shadow的AP保持null，不替换代表，继续参与FPR/mIoU。','',
         '| 策略 | 宏AP% | 池化AP% | 宏召回% | 宏精确率% | 宏FPR% | FPR单侧U95% | 宏mIoU% | 池化mIoU% | 零召回组 | FPR>1%组 |',
         '|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|']
     for n in ['B','L3','RGB_local']:
@@ -78,6 +79,7 @@ def main():
         '## 2. 结论探讨','',
         ('B相对L3的AP与全部冻结决策约束获得本批联合支持。' if d['joint_B_vs_L3_confirmed'] else 'B相对L3未通过全部冻结联合条件；改善的辅助指标不能替代失败的主要终点或约束。'),
         ('局部光谱相对匹配RGB对照的AP增量也获得独立支持。' if d['spectral_specificity_confirmed'] else '局部光谱特异性未获本次正式确认；若前置联合规则失败，B−RGB区间只能描述。'),
+        '冻结阈值下B召回提高，同时平均误报上升、池化精确率与mIoU下降；不能凭召回或池化AP提高判成功。L3平均FPR点估计虽低于1%，其单侧上界也超过1%，同样不能宣称稳定满足预算。',
         '区间按相关组配对bootstrap（10000次、seed72010），条件于已冻结模型；有Shadow组数较少，标签可靠性和未记录访问仍属局限。原H1支持门失败及Phase70未晋级结论保持。确认后不调参、不补样。',
         '', '完整192行、三类混淆、逐组分层FPR、无Shadow组、零召回ID及扫描诊断见delivery/groups.csv和phase72_report.json。所有表中无支持项留空/null；扫描阈值不用于实际结果。']
     (ROOT/'README.md').write_text('\n'.join(lines)+'\n',encoding='utf-8')
