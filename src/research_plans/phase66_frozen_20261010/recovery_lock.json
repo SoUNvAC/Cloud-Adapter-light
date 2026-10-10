@@ -1,0 +1,106 @@
+{
+  "status": "frozen_fit_only_before_development",
+  "models": {
+    "msre_calibration": {
+      "mean": [
+        -1.3142327509122438
+      ],
+      "scale": [
+        0.1737724481346097
+      ],
+      "theta": [
+        0.9130971128200888,
+        -4.648918831597128
+      ],
+      "iterations": 12,
+      "optimizer_success": true,
+      "objective": 0.05846813027967318,
+      "penalty": 0.001,
+      "positive_features": 1,
+      "threshold": -2.7238662242889404,
+      "fit_macro_fpr": 0.009999998333965698
+    },
+    "msre_source": {
+      "mean": [
+        -1.3142327509126066,
+        -1.301737637564308
+      ],
+      "scale": [
+        0.17377244813463405,
+        0.4721539930750304
+      ],
+      "theta": [
+        0.8374923432395553,
+        0.18174157596581894,
+        -4.66464091206451
+      ],
+      "iterations": 12,
+      "optimizer_success": true,
+      "objective": 0.05824554425131389,
+      "penalty": 0.001,
+      "positive_features": 2,
+      "threshold": -2.679197072982788,
+      "fit_macro_fpr": 0.009999999988481485
+    },
+    "msre_source_spectral": {
+      "mean": [
+        -1.3142327509126066,
+        -1.301737637564308,
+        0.39505300565151297,
+        0.24701699410548553,
+        0.19859101917178637
+      ],
+      "scale": [
+        0.17377244813463405,
+        0.4721539930750304,
+        0.25285773867446293,
+        0.1593840265487835,
+        0.12964792447248388
+      ],
+      "theta": [
+        0.7162856583227254,
+        0.1393420004600035,
+        -0.49789865757839236,
+        -0.3726311421900463,
+        -0.8397253836854021,
+        -5.563495923826469
+      ],
+      "iterations": 20,
+      "optimizer_success": true,
+      "objective": 0.05091100487673938,
+      "penalty": 0.001,
+      "positive_features": 2,
+      "threshold": -2.2208902835845947,
+      "fit_macro_fpr": 0.009999992832049201
+    }
+  },
+  "level_inputs": {
+    "msre_calibration": 1,
+    "msre_source": 2,
+    "msre_source_spectral": 5
+  },
+  "fit_groups": 153,
+  "fit_samples": 1253376,
+  "sample_positive": 25473,
+  "fit_fpr_budget": 0.01,
+  "threshold_rule": "equal-group full fit negative FPR, conservative exact ties",
+  "protocol_sha256": "612d324ddda21b8808bca94b5cd8f0c7adf7bc7ae38195e2a56a1981ff582ff5",
+  "code_sha256": {
+    "run_phase65d_recovery.py": "a8553f58629e528a4ff02a6fac91bd8ab08915b7d6e914f0f8db95b9c3547129",
+    "phase65d_recovery_math.py": "ef0f76bc81cc348ce411c65f8459c5615d29df93477b62a52dc137e86af2c51e"
+  },
+  "original_split_sha256": "a431745e7a17bbd4a7b9e12ef3bf76767d4eb827911bd5cb5e632683c2177f7b",
+  "source_checkpoint_sha256": "64dd9a20288c35ab3362b8b1c1dafc216d9c44d60868475177e139d6be859dc9",
+  "msre_checkpoint_sha256": "82f88d235948ef0a9202cebaa026e7f9fb1e1ad5c0aa361d9045c3e6991ee16d",
+  "prepared_manifest_sha256": "afe39e4af254d7dad356cacdf594bf19d3d501a829e67d055811da4db0a9a3eb",
+  "fit_input_sha256": {
+    "fit_source/index.json": "51044a1ecc6d8a8c6e58802551ce78ad0ce205f2344235154b629fe2c1c4b534",
+    "fit_msre/index.json": "1b9fe63bc90383f92b62a09ee04f9f2164464b0fe606accf05eb7a5b0f3bf8e0",
+    "fit_feature_index.json": "0db1b08b1cd44be259de5970cfa9656c2134bd7e3058ab5864e4c0249dd19b34"
+  },
+  "development_fitting": false,
+  "development_prior_model_selection": true,
+  "no_t18_access": true,
+  "no_gt_proportions_in_predictors": true,
+  "phase65c_authorized": false
+}
