@@ -22,6 +22,21 @@ def main():
         assert int(r['rescued_TP'])-int(r['lost_TP'])==b['true_positive']-a['true_positive']
     points=list(csv.DictReader((root/'sampled_points.csv').open()))
     assert len({p['point_id'] for p in points})==len(points)
+    sampling=read(root/'sampling_audit.json')
+    flow_by_product={r['product']:r for r in rows}
+    categories=['new_FP','lost_TP','rescued_TP','stable_TP']
+    for rec in sampling:
+        product=rec['product'];cat=rec['category']
+        assert rec['candidates']==int(flow_by_product[product][cat])
+        assert rec['seed']==73010+int(hashlib.sha256(product.encode()).hexdigest()[:8],16)+categories.index(cat)
+        matching=[p for p in points if p['product']==product and p['category']==cat]
+        assert len(matching)==min(4,rec['candidates'])
+        assert len({(p['row'],p['column']) for p in matching})==len(matching)
+        selected=rec['selected_indices']
+        assert len(set(selected))==len(selected)==len(matching)
+        assert all(0<=i<rec['candidates'] for i in selected)
+        expected=np.random.default_rng(rec['seed']).choice(rec['candidates'],4,replace=False).tolist() if rec['candidates']>=4 else list(range(rec['candidates']))
+        assert selected==expected
     panels=list((root/'panels').glob('*.png'));assert len(panels)==2*len(points)
     for p in points:
         assert 0<=int(p['row'])<1022 and 0<=int(p['column'])<1022
@@ -36,7 +51,7 @@ def main():
     summary=read(root/'summary.json')
     for k,v in summary['totals'].items():assert sum(int(r[k]) for r in rows)==v
     result=dict(groups=64,points=len(points),panels=len(panels),transferred_files_sha_verified=verified,
-                group_confusion_and_transition_identities_verified=True,all_panels_native_dimensions=True)
+                group_confusion_and_transition_identities_verified=True,all_panels_native_dimensions=True,sampling_seeds_counts_and_indices_verified=True)
     (root/'local_verification.json').write_text(json.dumps(result,indent=2),encoding='utf-8')
     print(json.dumps(result))
 
