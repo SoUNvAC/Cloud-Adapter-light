@@ -37,7 +37,8 @@ def verify():
     assert digest(DATA/'phase71_20261010/policy_lock.json')=='ec409be4f85085c3cbdffdb0ab97ef0ec09b7c60d34351b397136dc7e19d834c'
     for n in NAMES:assert frozen['models'][n]==policy['models'][n]
     for local,sha in frozen['existing_input_locks'].items():
-        assert digest(DATA/'phase71_20261010/delivery'/Path(local).name)==sha,('frozen input drift',local)
+        filename=local.replace('\\','/').rsplit('/',1)[-1]
+        assert digest(DATA/'phase71_20261010/delivery'/filename)==sha,('frozen input drift',local)
     status=read(DATA/'download_status.json');assert status['status']=='all_files_verified'
     for name,reference in frozen['official_files'].items():
         assert status['verified_files'][name]['sha256']==reference['sha256']

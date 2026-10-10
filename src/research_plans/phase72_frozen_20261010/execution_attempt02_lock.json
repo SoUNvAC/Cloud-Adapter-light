@@ -373,7 +373,7 @@
     "src/tools/run_phase67.py": "4aaf7856810499697beed13173f27f35b695df7fdc27d0d40831c1e0f54a28c1",
     "src/tools/run_phase70.py": "45e8be4822539d27b88147bd977066a1888217e8e2a81cf230ef903d04120873",
     "src/tools/run_phase71.py": "9a4019451701e6455928ebe130d976a0f0099b5557a97b9d0cfe72dff139c4e8",
-    "src/tools/run_phase72.py": "1e01776268cdb5e8912072057b3bdc8428d5de7a985bf6beb70c27ec9957c976",
+    "src/tools/run_phase72.py": "b13e5df83cdd6f0d7709e40e2b64340adf540fc1e4b40373a6d13f1186600934",
     "src/tools/test_phase66.py": "796c81e8227591d9a18cb8e6022cb086f0fcad239644a9273ac39ff02437b323",
     "src/tools/test_phase72.py": "bda0936654e004f28b195931142b673bba3bc520c45136f0474e704abc7760bf"
   },
@@ -381,6 +381,5 @@
   "refitting_allowed": false,
   "threshold_changes_allowed": false,
   "repair": "Attempt01 exited before unsealing: local CRLF metadata bytes differed from deployed Git LF blob; bind exact deployed candidate bytes without changing model parameters or statistical protocol",
-  "previous_attempt_execution_lock_git_sha256": "ac295726532d0e1f6d550b30a1e199596a592cf1145f4e4f3697498ed4e9c36b",
-  "repair02": "Attempt02 exited before unsealing: normalize Windows path separators in frozen metadata input keys before resolving remote delivery basename; no data/model/statistic changes"
+  "previous_attempt_execution_lock_git_sha256": "ac295726532d0e1f6d550b30a1e199596a592cf1145f4e4f3697498ed4e9c36b"
 }
