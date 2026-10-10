@@ -819,3 +819,12 @@
 
 ### 2026-10-11 Phase78 B11 geographic direction screen freeze
 用户授权执行PHASE78_B11_DIRECTION_20261011.md；仅原三景fit，复用已验证B11及原参考mask，不下载影像、不读模型/确认/旧sealed、不拟合、不恢复Phase77。冻结五距离100/200/400/800/1600m、四地理方向、max减中心及all/dark对照，严格四邻有效且不越当前裁块，先独立共同mask后交原one-hot有效参考。WGS84 Geod.fwd投影往返，逆affine减0.5，不将太阳方位当UTM角。先核输入SHA及三景旧B11残差逐值复现，所有新分数前锁公式/类序/版本/判据。依赖pyproj和scikit-learn现有环境缺失，隔离置outputs/phase78/dependencies及shared/phase78_control_20261011/dependencies，不改系统/conda。无方向对照不可省略，三个方向宏差正且至少2/3景正、相对dark宏差正才初筛继续；不满足停止固定方案。仅shared结果交付，本次无work_dirs同步。预算止2026-10-20北京保持。
+
+
+### 2026-10-11 Phase78 executed: directional screen stopped
+- 本地/远端6项合成检查通过。首次9d88169在任何新像元读取前因将本地衍生B11_only_transforms表当作远端文件而退出1，PID已退出；失败目录保留。修正为从SHA锁定的Phase76原始summary中读取等同三景B11_verified_mapping，本地逐字段核对等同，算法/输入产品/判据不变。a20a04e push/远端ff-only pull后新retry01目录成功，EXIT_CODE=0，三景B11完整残差逐值复现后计算得分。
+- 原三fit景、0新影像下载、无模型/训练/确认/旧sealed/work_dirs访问同步。pyproj3.6.1与scikit-learn1.5.2及依赖仅隔离在指定任务目录；既有conda/系统不改。五距离、四地理方向、严格四邻纯双线性、裁块外无效固定；共同mask在标签读取前保存，评价与原one-hot参考交集。120行五点/八方位验证通过测地线反算、东右北上/反向关系，未将太阳角当UTM角。
+- AP百分比按sun/orthogonal90/reverse/orthogonal270/all/dark顺序：T37LDL 65.0822/42.2703/47.2211/37.8033/67.3072/95.4620；T20PMQ 31.1428/26.7231/25.3934/21.6633/30.2369/63.1796；T46RBU 58.6907/34.5950/45.9704/41.2728/58.3126/43.5908。全6项同mask，无逐方向有利支持选择。
+- sun相对orthogonal90/reverse/orthogonal270宏AP差+17.1091/+12.1103/+18.0588个百分点，各3/3景正；相对all -0.3137（2/3正），相对dark -15.7722（1/3正）。暗度必要条件失败，停止这组固定方案，不换方向/距离/聚合/符号/模型挽救。方向对照差异存在不等于超出简单暗度；all宏值更高，不宣称方向不可替代。未检出不否定所有几何方法；仅3fit及共同mask，未考虑云高/视角/地形/裁块外云，无显著性或独立确认结论；Phase77 unresolved和旧失败不变。
+- 有效参考原每景1044484；共同/评价T37LDL753424（72.1336%，Surface211367/Cloud400577/Shadow141480），T20PMQ802816（76.8625%，141063/566226/95527），T46RBU818867（78.3992%，312157/432865/73845）。严格支持丢失完整报告，不对外推。辅助AUC完整留表，不替代AP；不做mIoU/阈值决策。
+- 成功shared产物phase78_20261011_retry01已完成；报告/派生得分121MB正在单一接收器传回outputs/phase78/phase78_20261011，JP2留shared。SSH正常，传输较慢但partial持续增长，不重复接收；本地校验尚在传输后进行，未提前宣称交付校验完成。预算止2026-10-20北京保持。
