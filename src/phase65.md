@@ -783,3 +783,11 @@
 - 官方README已本地逐页核对：20m、非20m双线性、1152带64边框、1024原计划最终裁1022。三景标注范围23040m与1022×20m=20440m不同，65像元对称裁切仅候选，不能赋cube affine或称方向几何ready。
 - 本地4项合成测试通过（选择边界、XML身份/角/格网、缺字段不猜、下载预算/禁止栅格），代码本地验证push后远端pull执行。保留用户日志整理和outputs，不同步work_dirs；Phase74排除分枝停止及旧失败结论不变。
 - Phase75解析修正：3景六个原XML均已长度/MD5/generation/SHA校验，累计HTTP2,308,090 bytes；初版解析错误要求长granuleIdentifier等于紧凑目录名。已查原XML确认产品granuleIdentifier与tile TILE_ID相同，IMAGE_FILE使用另一紧凑目录；修正为同时核对两条显式引用链。保留初次报告，新增reparse01，仅重解析现有XML，0新增HTTP/栅格；新增长ID/目录异名回归测试，5项通过。
+
+### Phase75完成（2026-10-10）：太阳角与原始格网可核验，cube映射仍pending
+- 固定从153fit代表中41个公开Shadow比例>0候选取SHA前三：T37LDL、T20PMQ、T46RBU。初次Git edd1ec6/PID569487/EXIT_CODE=0；命名链修正Git9ee8bd2，仅用原XML重解析，新增HTTP=0。6原XML+6目录响应累计2,308,090 bytes<20,000,000；长度/镜像MD5/generation/SHA通过，无JP2/SAFE/DEM/新栅格下载，0拟合/预测/方法优劣评价。
+- 数据结果：三景精确产品URI、product granuleIdentifier=tile TILE_ID（长ID）及IMAGE_FILE与紧凑granule目录/MTD_TL显式引用均核验。太阳方位/天顶角deg：T37LDL108.103027882348/27.1868152328675、T20PMQ51.8139580824051/25.3682582788311、T46RBU132.318467569056/21.5278842911593。角网格均23×23、步长5000m，未插值；平均角不是逐像元角。
+- 原始CRS分别EPSG32737/32620/32646，10/20/60m格网和六波段原生分辨率引用核验；三景量化10000、NODATA0、SATURATED65535，精确原XML无RADIO_ADD_OFFSET字段，未补猜测字段。产品采集起始时间与tile SENSING_TIME分层保存，不用同tile同日期替代身份链。
+- 对应链：三景cube头1022×1022×13 float32、官方20m意味着20440m；shapefile均23040m=1152×20m且CRS与原始tile匹配。README64边框/1024原计划/最终1022支持对称65像元内裁假说，但缺精确偏移、像元中心、行列方向及真实双线性实现的像素验证。6条外框/对称内裁候选均在原始tile整数格网内仍不能证明对应；3/3 cube_mapping=pending，direction_geometry_ready=false，不赋affine、不投影、不把输入缺项称几何方法失败。
+- 交付outputs/phase75/phase75_20261010，最终逐景表/报告在reparse01/metadata_audit.csv/json；初次解析报告和日志保留。固定选景、24远端审计文件SHA、XML长度/MD5/SHA重解析、cube头/shapefile链和部署代码/协议Git blob均本地复核。README按已核验/未核验/下一步最小需求；仅列三景B11原生20m+B04原生10m的像素一致性方案，不执行、不加入标签/模型配准。
+- SSH正常，模型未运行/下载网络仅公开元数据；不扩展3景、不重复下载、不触及旧确认像元/ALCD，不同步work_dirs，保留用户改动。Phase74排除分枝停止、旧失败及2026-10-20预算线保持。最终代码/记录push并远端pull --ff-only。

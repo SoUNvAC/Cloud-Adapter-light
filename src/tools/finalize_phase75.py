@@ -13,7 +13,8 @@ def main(root,repo):
     corrected=root/'reparse01'
     report=read(corrected/'metadata_audit.json');selection=read(root/'selected_products.json');lock=read(root/'input_lock.json')
     repaired=read(corrected/'input_lock.json')
-    for name,h in read(corrected/'artifact_hashes.json').items():assert sha(corrected/name)==h
+    corrected_hashes=read(corrected/'artifact_hashes.json')
+    for name,h in corrected_hashes.items():assert sha(corrected/name)==h
     assert report['reparse_input_lock_sha256']==sha(corrected/'input_lock.json')
     assert repaired['original_artifact_hashes_sha256']==sha(root/'artifact_hashes.json')
     assert repaired['new_http_requests']==0 and report['additional_HTTP_bytes']==0
@@ -55,11 +56,25 @@ def main(root,repo):
     assert report['products']==len(selection['selected'])<=3
     for key in ['solar_metadata_verified','source_grid_verified']:assert report[key]==sum(r[key] for r in report['rows'])
     assert report['new_original_rasters_downloaded']==report['new_predictions']==report['new_fits']==0
-    result=dict(status='verified',remote_artifacts_sha_verified=len(hashes),
+    candidates=[]
+    for row in report['rows']:
+        grid=row['source_grid']['resolutions']['20'];chain=row['cube_chain'];bounds=chain['annotation_bounds']
+        for name,inset,width in [('annotation_outer_extent',0,chain['annotation_extent_pixels_at20m'][0]),('symmetric65_inset_hypothesis',65,chain['shape'][1])]:
+            x,y=bounds[0]+inset*20,bounds[3]-inset*20
+            col=(x-grid['ULX'])/grid['XDIM'];r=(y-grid['ULY'])/grid['YDIM']
+            candidates.append(dict(product=row['product'],candidate=name,upper_left_x=x,upper_left_y=y,
+                native20m_col_offset=col,native20m_row_offset=r,width_pixels=width,height_pixels=width,
+                integer_native_grid_offset=abs(col-round(col))<1e-9 and abs(r-round(r))<1e-9,
+                inside_native_tile=0<=col and 0<=r and col+width<=grid['NCOLS'] and r+width<=grid['NROWS'],
+                orientation='candidate assumes north-up; cube orientation unverified',pixel_consistency_tested=False,cube_affine_assigned=False))
+    with (root/'cube_mapping_candidates.csv').open('x',newline='',encoding='utf-8') as f:
+        w=csv.DictWriter(f,fieldnames=list(candidates[0]));w.writeheader();w.writerows(candidates)
+    result=dict(status='verified',remote_artifacts_sha_verified=len(hashes)+len(corrected_hashes),
         fixed_three_product_selection_reproduced=True,public_http_response_bytes=total,
         XML_lengths_MD5_SHA_and_reparse_verified=True,cube_header_and_shapefile_chain_reproduced_locally=True,
         deployed_code_and_protocol_match_git_blobs=True,no_work_dirs_sync=True)
-    with (root/'LOCAL_VERIFIED.json').open('x',encoding='utf-8') as f:json.dump(result,f,indent=2)
+    verification_path=root/('LOCAL_VERIFIED_FINAL.json' if (root/'LOCAL_VERIFIED.json').exists() else 'LOCAL_VERIFIED.json')
+    with verification_path.open('x',encoding='utf-8') as f:json.dump(result,f,indent=2)
     lines=['# Phase75：方向几何输入可行性审计','','## 已核验','',
         f"按固定哈希规则从153个fit代表中选择公开Shadow比例>0的前三景（合格{selection['eligible_products']}景）。只获取精确原L1C产品XML、所属tile XML及目录清单，新增公开HTTP响应体共{total:,} bytes，上限20,000,000 bytes。0栅格下载、0网络预测、0拟合、0方法优劣评价。名单先于请求保存。",'',
         '| Tile | 太阳方位角° | 太阳天顶角° | 原始CRS | 太阳元数据 | 原始格网 | cube映射 | 方向几何ready |',
@@ -72,7 +87,7 @@ def main(root,repo):
         '', '原始格网按XML记录10/20/60m的尺寸、ULX/ULY/XDIM/YDIM和CRS；B04/B03/B02/B08为原生10m，B11/B12为20m。这里核验的是元数据及引用链，没有下载JP2来核验栅格内容。量化因子、nodata/饱和值和offset是否存在均保存在逐景radiometry，不为缺失字段补猜测值。',
         '', '## 未核验','',
         '三景NPY头均为1022×1022×13、float32，按官方20m声明宽高20,440m；shapefile范围均为23,040m，对应1152×1152。两者不能直接作为同一个完整范围。shapefile CRS与原始tile CRS的匹配也不能消除裁切偏移、行列方向和重采样格网的不确定性。',
-        '', '官方README第1/4/6/9页说明20m、非20m双线性重采样、1152带边框窗口、64像元边框、原计划1024以及最终去边缘后的1022。由这些信息推测对称向内裁65个20m像元是一个候选，但本轮没有像素一致性证据，因此不指定cube affine。每景候选位置与缺项保存在cube_chain中。',
+        '', '官方README第1/4/6/9页说明20m、非20m双线性重采样、1152带边框窗口、64像元边框、原计划1024以及最终去边缘后的1022。由这些信息推测对称向内裁65个20m像元是一个候选，但本轮没有像素一致性证据，因此不指定cube affine。每景候选位置与缺项保存在cube_chain中；cube_mapping_candidates.csv列出外框和对称裁切假说的原始20m格网行列偏移，即使偏移是整数且位于tile内，也不是像素对应已验证。',
         '', '所以太阳角/原始格网可用，不等于方向几何实验已就绪。cube映射仍pending，direction_geometry_ready=false。输入链未闭合不是几何方法实验失败；Phase74停止结论、旧独立评价失败结论均不改写。',
         '', '## 下一步最小需求','',
         '另立像素验证协议后，仅需先获取这3个精确产品的B11原生20m与B04原生10m：B11检查裁切/格网偏移与数值对应；B04检查双线性插值、像元中心约定及裁切/重采样顺序。先冻结候选、分布采样位置、数值容差和歧义拒绝规则，再用影像自身比较；不用标签或模型结果配准。此步骤本轮没有执行，也未下载DEM或投影云影。',
