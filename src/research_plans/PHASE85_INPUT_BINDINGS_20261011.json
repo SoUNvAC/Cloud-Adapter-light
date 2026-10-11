@@ -1,0 +1,13 @@
+{
+  "phase80": {
+    "training_completed.json": "1e5a1650c79401e82eda788a72ab2c82c0ba519dd23a6af05cebcbf851a6ece0",
+    "training_lock.json": "be716de0aeea67dda466c804c78182ca84df746d967765afa456f6bd769d3da3",
+    "calibration_lock.json": "8c4ba67a8b1fe77cea6e5e972fdad452891789802ffa81e5754c0c7060db1925",
+    "fit_input_audit.json": "486edc37fba2b857b49658856248189b294a8957f55aabc44dba469e564caa2d",
+    "phase80_report.json": "62e5d6ae31300e0b53edb27b50f9524c7235f7a778ac29c32da55cc0de66f159"
+  },
+  "phase81": {
+    "phase81_report.json": "3f48aac6d9c704edba00943746b44019850c328310a7e59636f69e64984c44b0",
+    "input_configuration_lock.json": "8520c564ac369e19a302c8ab8a0dd2ca59dfa6bbe58e55ba0d2d45caa3f6346b"
+  }
+}
