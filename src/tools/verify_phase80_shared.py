@@ -29,9 +29,14 @@ def capacity():
 def main():
     base_check();rep=read(ROOT/'phase80_report.json');cl=read(ROOT/'calibration_lock.json')
     base=read(RECOVERY/'recovery_lock.json');ctl=read(CONTROL/'control_lock.json')
+    for rel,h in base['fit_input_sha256'].items():assert digest(RECOVERY/rel)==h,rel
+    historical=read(RECOVERY/'recovery_report.json')
+    for n in ['source','msre']:
+        assert digest(OLD/'development_val'/('index_'+n+'.json'))==historical['development_cache_index_sha256'][n]
+    assert digest(CONTROL/'fit_input_audit.json')==ctl['fit_input_audit_sha256']
     li=index(ROOT,'development_val/index.json');ss=index(OLD,'development_val/index_source.json');ms=index(OLD,'development_val/index_msre.json')
     refs={n:{r['product']:r for r in v['rows']} for n,v in rep['policies'].items()}
-    checks=[]
+    checks=[];pools={n:[] for n in rep['policies']};labels=[]
     with zipfile.ZipFile(DATA/'subscenes.zip') as z:
         for product,r in records('development_val').items():
             prepare_verify(r);truth=np.load(PREP/r['mask_path']);valid=truth!=255;y=truth[valid]==2
@@ -54,7 +59,14 @@ def main():
                 ap=independent_AP(y,scores[n]);ref=refs[n][product]['ranking']['ap']
                 assert (ap is None and ref is None) or abs(ap-ref)<1e-12,(n,product,ap,ref)
                 checks.append(dict(policy=n,product=product,AP=ap,confusion_identical=True))
+                pools[n].append(scores[n])
+            labels.append(y)
             print('Phase80 independent shared pixel check',product,flush=True)
+    labels=np.concatenate(labels);pooled={}
+    for n in rep['policies']:
+        ap=independent_AP(labels,np.concatenate(pools.pop(n)))
+        assert abs(ap-rep['policies'][n]['ranking']['ap'])<1e-12
+        pooled[n]=ap
     audit=read(ROOT/'fit_input_audit.json');fitrows=records('fit_representatives');fitcheck={}
     for n,cols in [('L',[0]),('L+S',[0,1,2,3])]:
         model=cl['models'][n];rates=[];below=[];counts=[]
@@ -76,7 +88,8 @@ def main():
             next_lower_macro_fpr=float(np.mean(candidate_rates)) if candidate_rates else None,rows=counts)
     capacity()
     write(ROOT/'SHARED_PIXEL_VERIFIED.json',dict(status='verified_no_new_inference_or_fitting',
-        per_scene_AP_independent_tie_endpoint_implementation=checks,fit_full_negative_operating_points=fitcheck,
+        per_scene_AP_independent_tie_endpoint_implementation=checks,pooled_AP_independent_implementation=pooled,
+        fit_full_negative_operating_points=fitcheck,
         native_network_cache_retained_shared=True,local_pixel_cache_recomputation=False,
         code_sha256=digest(Path(__file__)),independent_ap_code_sha256=digest(Path(__file__).with_name('verify_phase78_local.py'))))
 

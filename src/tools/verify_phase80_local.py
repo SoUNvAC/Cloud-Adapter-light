@@ -26,6 +26,13 @@ def main():
     assert set(r['policies'])==expected_names
     csvrows=list(csv.DictReader((root/'development_groups.csv').open()))
     assert len(csvrows)==256
+    lookup={(n,v['product']):v for n,q in r['policies'].items() for v in q['rows']}
+    assert len({(v['policy'],v['product']) for v in csvrows})==256
+    for row in csvrows:
+        ref=lookup[row['policy'],row['product']];assert row['group_id']==ref['group_id']
+        for k in ['positive','negative','recall','precision','fpr','miou_percent','shadow_to_surface','shadow_to_cloud','predicted_shadow_fraction']:
+            near(float(row[k]) if row[k] else None,ref[k])
+        near(float(row['ap']) if row['ap'] else None,ref['ranking']['ap'])
     for n,q in r['policies'].items():
         rr=q['rows'];assert len(rr)==len({v['group_id'] for v in rr})==32
         supported=[x for x in rr if x['positive']];assert len(supported)==7
