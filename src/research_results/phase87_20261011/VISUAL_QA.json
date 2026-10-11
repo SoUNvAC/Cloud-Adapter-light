@@ -1,0 +1,21 @@
+{
+  "reviewer": "AI GPT-6 / Codex; exact runtime snapshot not exposed",
+  "date": "2026-10-11",
+  "viewed_preview_files": ["reveal_preview_1.png", "reveal_preview_2.png", "reveal_preview_3.png"],
+  "viewed_preview_ids": ["A108", "A005", "A018", "A039", "A084", "A078", "A033", "A031", "A040"],
+  "scope": "Post-lock visual QA of one priority evidence card per fixed representative. Complete Stage B CSV is a rule comparison of locked initial judgments with reference center metadata, not 240 new visual adjudications.",
+  "rendering": "RGB and falsecolor panels, red 60m boxes, original/revised label panels visible without overlap. Three representatives explicitly lack revised reference; black missing-reference panels are not Surface.",
+  "observations": {
+    "A108": "Dark center; original Shadow, revised absent. Darkness alone does not resolve water/terrain/cloud shadow.",
+    "A005": "Dark center amid bright terrain; original Shadow, revised absent. Context remains insufficient.",
+    "A018": "Dark linear center; original Shadow, revised absent. Linear terrain/vegetation structure remains a competing interpretation.",
+    "A039": "Dark narrow feature; original Surface versus revised Shadow. Reference version discrepancy visible, no truth selection.",
+    "A084": "Gray diffuse center near bright cloud/dark edge; revised center mixes Shadow and Surface. Preserve mixed reference, no majority vote.",
+    "A078": "Dark center below bright object; original Shadow versus revised Surface. Need larger context/clear-date evidence.",
+    "A033": "Diffuse bright/dark transition; original Shadow versus revised Cloud. Thin-cloud/edge ambiguity retained.",
+    "A031": "Bright small center object in dark surround; original Shadow versus revised Cloud. Boundary/mixing remains relevant.",
+    "A040": "Dark patch against textured green terrain; both references Shadow. Agreement does not independently establish cloud-shadow origin."
+  },
+  "initial_judgments_modified": false,
+  "confirmation_ready_groups": 0
+}

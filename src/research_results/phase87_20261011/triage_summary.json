@@ -1,0 +1,41 @@
+{
+  "groups": 9,
+  "unique_positions": 240,
+  "strata": {
+    "uniform": {
+      "positions": 210,
+      "decidable": 86,
+      "mixed": 47,
+      "uncertain": 77,
+      "Cloud": 9,
+      "Shadow": 0,
+      "Surface": 77,
+      "original_possible_conflict": 7,
+      "revised_possible_conflict": 6,
+      "revised_missing": 70
+    },
+    "difference": {
+      "positions": 30,
+      "decidable": 13,
+      "mixed": 4,
+      "uncertain": 13,
+      "Cloud": 2,
+      "Shadow": 0,
+      "Surface": 11,
+      "original_possible_conflict": 8,
+      "revised_possible_conflict": 8,
+      "revised_missing": 0
+    }
+  },
+  "missing_directions": 24,
+  "empty_uniform_blocks": 15,
+  "priorities": {
+    "P3": 78,
+    "P2": 132,
+    "P1": 30
+  },
+  "confirmation_ready_groups": 0,
+  "stage_B_method": "Rule comparison of locked AI center judgment with existing reference center categories; not truth adjudication",
+  "actual_stage_A_materials": "20 anonymous contact sheets containing 240 RGB/falsecolor/valid-mask cards",
+  "stage_B_visual_QA": "Recorded separately in VISUAL_QA.json after delivery preview"
+}

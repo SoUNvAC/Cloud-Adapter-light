@@ -1,0 +1,48 @@
+{
+  "stage": "A_complete_before_B",
+  "locked_utc": "2026-10-11T10:53:52.160272+00:00",
+  "blind_initial_sha256": "1d90445a05dc821ef9945353e2b6c444466d4686823342e4e47c56cdf32da2c4",
+  "batch_sha256": {
+    "blind_batch_01_02.json": "9ff4f1206e7a8c735584a01c50c2993fb566bcbf2cf1a1f9512ec4a0f6a438f8",
+    "blind_batch_03_04.json": "932953250751c3af9198ea8f8993029149d08b9cc096912529ce4be6f911002e",
+    "blind_batch_05_06.json": "f3ca93208e2bea87408bc213fc0e23057ec3aedc46c5f5e0236176e756ccd5fe",
+    "blind_batch_07_08.json": "8f791b840838066a0f0287f200738fd7afd0e131aef88d34fb89c3ac8abc6e6f",
+    "blind_batch_09_10.json": "a2b1cba934e19ce7a65052459c3d22be2ca41a6d134c548b0624847c90ca6d47",
+    "blind_batch_11_12.json": "612a24bf7435d0d974810e1a65a303f2c9ada9003f8b84b28e84e8223eab3fba",
+    "blind_batch_13_14.json": "d3e0a7f5c2b2e6c7ce310e7f0cf39255c3baf4b996157e84c10af735e19dd07f",
+    "blind_batch_15_16.json": "86752f0ba10ba2995f7fb8f7da10290d8e759a2720d1ee72c47a87a3c9b85147",
+    "blind_batch_17_18.json": "ad8737a03185bd1478be48f485d1180814242dc5d7b61e250d8362410ef4f338",
+    "blind_batch_19_20.json": "d150c91f6d7a4a0e73f3b7c8f13ac7d55a6601296338ac9178ac80f9c76f4972"
+  },
+  "sample_lock_sha256": "6808f82f352cd05cac57d845f97b7d7998691ccf97e314c4bff4b408bff02616",
+  "blind_input_lock_sha256": "95f0a3f9b74f1388f5bcfac629821c09ff25f577f581fcb4f5ee844764a0826b",
+  "reviewed_positions": 240,
+  "viewed_sheets": [
+    "01.png",
+    "02.png",
+    "03.png",
+    "04.png",
+    "05.png",
+    "06.png",
+    "07.png",
+    "08.png",
+    "09.png",
+    "10.png",
+    "11.png",
+    "12.png",
+    "13.png",
+    "14.png",
+    "15.png",
+    "16.png",
+    "17.png",
+    "18.png",
+    "19.png",
+    "20.png"
+  ],
+  "judgments": {
+    "Surface": 88,
+    "Cloud": 11,
+    "无法判定": 90,
+    "混合": 51
+  }
+}

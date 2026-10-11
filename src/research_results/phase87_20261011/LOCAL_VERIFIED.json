@@ -1,0 +1,16 @@
+{
+  "verified_utc": "2026-10-11T10:55:57.742183+00:00",
+  "checks": [
+    "nine_fixed_representatives",
+    "240_unique_positions",
+    "uniform_exact_membership",
+    "directed_selection_SHA256_winners_and_caps",
+    "Stage_A_complete_before_reference_reveal",
+    "Stage_A_CSV_and_batch_hashes_unchanged",
+    "all_original_window_and_blind_input_hashes",
+    "480_HTML_image_targets_exist",
+    "nine_representative_preview_QA"
+  ],
+  "stage_A_sha256": "1d90445a05dc821ef9945353e2b6c444466d4686823342e4e47c56cdf32da2c4",
+  "confirmation_ready_groups": 0
+}
