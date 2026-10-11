@@ -1,0 +1,50 @@
+{
+  "strata": {
+    "P1": {
+      "selected": 30,
+      "submitted_judgments": 30,
+      "unreviewed": 0,
+      "Cloud": 5,
+      "Shadow": 11,
+      "Surface": 8,
+      "mixed": 4,
+      "unknown": 2,
+      "missing_reason": 15,
+      "missing_small_sufficient": 25,
+      "missing_large_sufficient": 25,
+      "missing_clear_date_flag": 30,
+      "missing_DEM_flag": 30,
+      "missing_review_date": 30
+    },
+    "regular_control": {
+      "selected": 27,
+      "submitted_judgments": 27,
+      "unreviewed": 0,
+      "Cloud": 8,
+      "Shadow": 1,
+      "Surface": 14,
+      "mixed": 1,
+      "unknown": 3,
+      "missing_reason": 18,
+      "missing_small_sufficient": 23,
+      "missing_large_sufficient": 24,
+      "missing_clear_date_flag": 27,
+      "missing_DEM_flag": 27,
+      "missing_review_date": 27
+    }
+  },
+  "unique_reviewers": 1,
+  "qualification": "self-reported; remote-sensing expertise not independently established by role description",
+  "submitted_judgments": 57,
+  "field_missing_counts": {
+    "judgment": 0,
+    "reason": 33,
+    "small_sufficient": 48,
+    "large_sufficient": 49,
+    "needs_clear_date": 57,
+    "needs_DEM": 57,
+    "review_date": 57
+  },
+  "stage_B": "not_executed; no original/revised conflict conclusions",
+  "confirmation_ready_groups": 0
+}

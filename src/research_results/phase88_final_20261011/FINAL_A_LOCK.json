@@ -1,0 +1,16 @@
+{
+  "accepted_utc": "2026-10-11T12:03:19.215615+00:00",
+  "authorization": "2026-10-11 user explicitly designated expert_A_draft.json as final due to limited human resources",
+  "original_sha256": "59e018e486357b60b3b494abbefebdb95bf22bbd709428a8d1526f696ec47faf",
+  "csv_sha256": "b296e537a5b2fcbb434a97ddcf5d04291383cf789eb4d6a91acafe91c2f36e36",
+  "sampling_lock_sha256": "c750ecdd91331a1594913cb7d94935d01e0a2d5b83f9608ded604b923e7828e2",
+  "browser_complete_flag": false,
+  "reviewer_type": "human",
+  "reviewer_id": "cme",
+  "experience_as_submitted": "主要负责人",
+  "exported_utc": "2026-10-11T12:00:36.524Z",
+  "qualification": "self-reported; remote-sensing expertise not independently established by role description",
+  "no_missing_fields_filled": true,
+  "stage_B_human_adjudication": "not_executed",
+  "confirmation_ready_groups": 0
+}
