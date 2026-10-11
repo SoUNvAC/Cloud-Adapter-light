@@ -1,0 +1,17 @@
+{
+  "CPU_AP_DEPENDENCY_ADDENDUM.json": "dffafc3761da560134a916a5e26400e22ca8708326d01690adc47e5837d63dfb",
+  "CPU_AP_DEPENDENCY_ADDENDUM_V2.json": "dfc7725928deae341e75aaf660ae08f5ab22bfea63794f8b3db3a018e58d0289",
+  "CPU_FLOAT64_REDUCTION_CHECK.json": "2949f39e9880728859a07e42138ceaa2e60e824303c7b641a290dd7dcf517b92",
+  "CPU_VERIFIED.json": "fa295c6fe785920e861d8432b3b070774a313ffaf7c67e92ae0de0737d97ef1b",
+  "POOLED_CPU_VERIFIED.json": "5278a48be901b257a667db3943ddc43fd762750c1dcf160b59bc3b52f1024ce4",
+  "README.md": "84d588c71ad97760dc41f93240aee747b468e34ffdf341cd6665d644448befeb",
+  "catalogue_reproduction.json": "6a2e195f1957525bc1ce458341b834b62e19f2ab29233a5ac0fecb048e6d71b1",
+  "four_policy_tables.csv": "b9c0c2bceafb73df799065793238bffa70f5c4a0a27e89c4dd8012dc4395ec46",
+  "human57_automatic_comparison.csv": "0ff623ae484e56ab4aa52a3387207ba4357c2359ab2ce99660b14e8f351c66ad",
+  "input_and_runtime_index.json": "8e5bb5aacf0297174514a2188eceadcd0178abd190968499784e73db1a080510",
+  "input_scale_threshold_reference_lock.json": "d1c367f461833f5c3f543f9f85a8e8237bc324e065adeb72a3541047d3125ed0",
+  "paired_AP_changes.csv": "9cce4ba0b878d81e006803dbd6a108a7b1fb257fa186e300e753fd6d6a98b1ff",
+  "per_group.csv": "e51bed8beb554449fe7e11bcc8f96bdf7cc2662144d4a4338807f8f62e1f11f1",
+  "phase89_report.json": "8827f8546b52d83e9da567ddec0bff9290eec9bbf4b05c4fcd68a13b6d14c254",
+  "reference_support.csv": "20ce974a30102fe9608d6840913a2430fc7e47aaefa978666b6ad219024c90e9"
+}

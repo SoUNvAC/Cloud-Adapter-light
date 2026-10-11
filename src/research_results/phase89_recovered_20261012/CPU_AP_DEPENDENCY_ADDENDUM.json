@@ -1,0 +1,14 @@
+{
+  "created_utc": "2026-10-11T16:12:31.023978+00:00",
+  "tests": {
+    "hand_calculated_tie_cases": 3,
+    "brute_force_threshold_cases": 60,
+    "sklearn_not_installed_not_claimed": true
+  },
+  "reason": "Existing conda has no sklearn; preserve all inference outputs and frozen production metrics.",
+  "algorithm": "Non-interpolated AP: positive mass in each tied score bin times cumulative precision at that threshold.",
+  "production_AP_unchanged": true,
+  "no_forward_no_fit_no_tuning": true,
+  "helper_sha256": "a5c14bc216d714a0af43d7fa0ddaabf9714577b6c7f1e0a7d661616649eb93a5",
+  "oracle_sha256": "9bedbc46503916362564a0f34b1748d75d095edce436f70f533372895a42062e"
+}

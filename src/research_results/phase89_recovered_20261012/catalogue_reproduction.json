@@ -1,0 +1,1481 @@
+{
+  "created_utc": "2026-10-11T12:30:42.171875+00:00",
+  "groups": 32,
+  "rows": [
+    {
+      "product": "S2A_MSIL1C_20180310T165111_N0206_R026_T17VNJ_20180310T220933",
+      "group_id": "939442aa2d28f4a9befbb03559ae9e97d3d2bd6838df5270fb28702f64a42127",
+      "L2": {
+        "score_sha256": "7a00bd7543076a71df272f9e9ecb1a6d0dd88bd16faf0be3a0cd666e6ab8b1c9",
+        "confusion": [
+          [
+            1044484,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "score_bitwise_equal": true
+      },
+      "L3": {
+        "score_sha256": "346dfdefec28f48b7accd89b8c2eb9011ceaf02689bf224d8dc5e3cb01dc8469",
+        "confusion": [
+          [
+            1044484,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "score_bitwise_equal": true
+      }
+    },
+    {
+      "product": "S2B_MSIL1C_20180822T014649_N0206_R017_T56WNB_20180822T032508",
+      "group_id": "2912a1d22565a8ccdc422c8926598ba79303b57ba83a9699bd100bfbfacd5b71",
+      "L2": {
+        "score_sha256": "faa55ac84de4528fb3f6cf4dc022bfe2440dabb3809b248d16c263ea0d3645f1",
+        "confusion": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1044484,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "score_bitwise_equal": true
+      },
+      "L3": {
+        "score_sha256": "f0c54e63d0345984eadbd505e65277cc313470166dff4f64e7e4157a664a17e4",
+        "confusion": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1044484,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "score_bitwise_equal": true
+      }
+    },
+    {
+      "product": "S2A_MSIL1C_20180321T075621_N0206_R035_T34HGK_20180321T101406",
+      "group_id": "9bf33cddf082423bbac9aaa2b8af7017afaf29ea6fbfb7ab41164406ea1b9aa6",
+      "L2": {
+        "score_sha256": "730fb582a0c03811e8e63b295320cb0566ee017799b0e441e4ed0ce49e04cdeb",
+        "confusion": [
+          [
+            1044484,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "score_bitwise_equal": true
+      },
+      "L3": {
+        "score_sha256": "01afd3eccc87194a16bdcd2edb220cca9f48f034f727c711f3f803d48a316edf",
+        "confusion": [
+          [
+            1044484,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "score_bitwise_equal": true
+      }
+    },
+    {
+      "product": "S2B_MSIL1C_20180612T171859_N0206_R012_T15UVU_20180612T204912",
+      "group_id": "e4c96f5ad8a0d2bdc2856a163a49b90c4a2a91709481bdfc20df0e972196360c",
+      "L2": {
+        "score_sha256": "cc314c0ceb23a1841773748d3a39ae408eda7950e9f054d44b0aa6234d13a915",
+        "confusion": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1043948,
+            536
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "score_bitwise_equal": true
+      },
+      "L3": {
+        "score_sha256": "834847ab309e66a2a71e5087f71c41e1d93f7b90323c730b9da81eeb5789aa2c",
+        "confusion": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1044039,
+            445
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "score_bitwise_equal": true
+      }
+    },
+    {
+      "product": "S2B_MSIL1C_20180824T111239_N0206_R051_T28LGP_20180824T164334",
+      "group_id": "646618dd0ca2b4b2fdaf830e42b5c7841ec1d558f16aba6d400fbde04d577278",
+      "L2": {
+        "score_sha256": "14db0f1ceb3ac31013b0a28ecb91ae2eff469e85832a57feee0d3070faaa3e6e",
+        "confusion": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1037142,
+            7342
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "score_bitwise_equal": true
+      },
+      "L3": {
+        "score_sha256": "b1e1c3d36fac74e6764e618a721dc02267480492d1ea39db576584505a3b570c",
+        "confusion": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1033735,
+            10749
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "score_bitwise_equal": true
+      }
+    },
+    {
+      "product": "S2A_MSIL1C_20180410T214911_N0206_R043_T02LKH_20180410T231102",
+      "group_id": "140a08cf98d8a79e1c38b8903719256bdf8c6c631d6495bd7c56fecd26097e26",
+      "L2": {
+        "score_sha256": "4c54cc1e57a8138121eadf0ab14c49c2fb198f58d99d2c83d11bed851d9b004a",
+        "confusion": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            11076,
+            1031892,
+            1516
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "score_bitwise_equal": true
+      },
+      "L3": {
+        "score_sha256": "2fbe1814ea46a466e43e4a54fc847101e972469ea31618e1ea4421731d38108c",
+        "confusion": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            10933,
+            1025729,
+            7822
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "score_bitwise_equal": true
+      }
+    },
+    {
+      "product": "S2B_MSIL1C_20180701T074609_N0206_R135_T38TNN_20180701T100320",
+      "group_id": "8fd6358af16a4eb15ba4d38a7365844bc3cb5c9c343ade539f8e88e242cd420b",
+      "L2": {
+        "score_sha256": "a86741be6aa204ec2e92b666b58ff0548bbfd0031f33cda383c4ffb6c7bb500f",
+        "confusion": [
+          [
+            1031616,
+            394,
+            1326
+          ],
+          [
+            3679,
+            3763,
+            116
+          ],
+          [
+            1390,
+            66,
+            2134
+          ]
+        ],
+        "score_bitwise_equal": true
+      },
+      "L3": {
+        "score_sha256": "1ff8bdbdb91e15342455eeb2331808222fe7acd0fb4b8c24386fd96a9b4957a9",
+        "confusion": [
+          [
+            1031857,
+            403,
+            1076
+          ],
+          [
+            3697,
+            3792,
+            69
+          ],
+          [
+            1357,
+            56,
+            2177
+          ]
+        ],
+        "score_bitwise_equal": true
+      }
+    },
+    {
+      "product": "S2B_MSIL1C_20181218T043159_N0207_R133_T46RDT_20181218T072156",
+      "group_id": "5ae729c6b6efccd197016be42bc8d0d7b269c30b04d48b7e8999e4c58191a607",
+      "L2": {
+        "score_sha256": "08f67b0da8ece58c034fe70cf2c21e9ed4e00fc63142de426f3b28c726f1674e",
+        "confusion": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1044484,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "score_bitwise_equal": true
+      },
+      "L3": {
+        "score_sha256": "f13f592ef89d20420b7f1a7a21ab8e64b01ec4d54f1741ddb5ef41331192ce70",
+        "confusion": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1044484,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "score_bitwise_equal": true
+      }
+    },
+    {
+      "product": "S2A_MSIL1C_20180710T090601_N0206_R050_T34QBG_20180710T112311",
+      "group_id": "f9c24c9b6029766e0c62dc9375251f6fdad6c3dc0dadcac647bc80d66d22ab28",
+      "L2": {
+        "score_sha256": "969eb0b6de132d488ae7fb85bc88f7001ae0dbcda15839dbcfa2cafc0e5cbd52",
+        "confusion": [
+          [
+            1044484,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "score_bitwise_equal": true
+      },
+      "L3": {
+        "score_sha256": "6bffdf30c5e992861f50c1f15d93e52c7e01777832ceb00c7d2fab4d8ea39b16",
+        "confusion": [
+          [
+            1044484,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "score_bitwise_equal": true
+      }
+    },
+    {
+      "product": "S2B_MSIL1C_20180131T082149_N0206_R121_T34JDL_20180131T120726",
+      "group_id": "8a8bb46c20fbcc5e573176a6c6145d72749f160f9545f15b018ef5396b82389d",
+      "L2": {
+        "score_sha256": "e3f079b9dad449484f0bb4b1a065eb8715a4dd5157fedfbeb6259b46622e2a4d",
+        "confusion": [
+          [
+            763823,
+            9794,
+            23180
+          ],
+          [
+            29400,
+            104852,
+            11530
+          ],
+          [
+            19026,
+            1968,
+            80911
+          ]
+        ],
+        "score_bitwise_equal": true
+      },
+      "L3": {
+        "score_sha256": "95846a4d41e8faa65f9408ee4a9b706327d6934993b2090b386ce988f6cfad1a",
+        "confusion": [
+          [
+            775712,
+            10175,
+            10910
+          ],
+          [
+            31012,
+            106756,
+            8014
+          ],
+          [
+            22605,
+            2266,
+            77034
+          ]
+        ],
+        "score_bitwise_equal": true
+      }
+    },
+    {
+      "product": "S2B_MSIL1C_20180214T025819_N0206_R032_T51TUM_20180214T072411",
+      "group_id": "1cfce2528bc2fcf176d11f38ec8132d791f1762735fa1cc1c1f2ae349223ad12",
+      "L2": {
+        "score_sha256": "8221324ea3472e4cca0d7ce589f9b6f6125634c7d886c2f7099a292cbdd54491",
+        "confusion": [
+          [
+            1044484,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "score_bitwise_equal": true
+      },
+      "L3": {
+        "score_sha256": "5cf9ec5b3b35a8453f5b968c530c123ffd3a3e526b663ff6aaaaa405eaa451d3",
+        "confusion": [
+          [
+            1044484,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "score_bitwise_equal": true
+      }
+    },
+    {
+      "product": "S2A_MSIL1C_20181118T084231_N0207_R064_T35RPM_20181118T101007",
+      "group_id": "f75a22fdd7b8a18e2a48389aa30ff6b2e9d62236713d45e90ea1902ba4a20ef2",
+      "L2": {
+        "score_sha256": "6aafd4e7bb129cab0e6e8409460acb665316841881189429846967cae38c31d0",
+        "confusion": [
+          [
+            178276,
+            23184,
+            23704
+          ],
+          [
+            87528,
+            363863,
+            131901
+          ],
+          [
+            23771,
+            4666,
+            207591
+          ]
+        ],
+        "score_bitwise_equal": true
+      },
+      "L3": {
+        "score_sha256": "779d98b4e386507af48df470a43ace787c26bcf5550c719050cb283e39c5ef77",
+        "confusion": [
+          [
+            197444,
+            26013,
+            1707
+          ],
+          [
+            111060,
+            401509,
+            70723
+          ],
+          [
+            50820,
+            11184,
+            174024
+          ]
+        ],
+        "score_bitwise_equal": true
+      }
+    },
+    {
+      "product": "S2A_MSIL1C_20180703T023551_N0206_R089_T50PLR_20180703T053714",
+      "group_id": "ae93b6cb56e3c05137355ffd83e2d95bf4cbd2fa11e4c61322b45ccfbe090a12",
+      "L2": {
+        "score_sha256": "49031cfc09694338f6ca401e54fa4b9f73fe4996962e8f844aafaad08738eabc",
+        "confusion": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1044484,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "score_bitwise_equal": true
+      },
+      "L3": {
+        "score_sha256": "1a8d880d21d1a41f32e641b69207351d0177104d71589b4d9b6c556640195e24",
+        "confusion": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1044484,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "score_bitwise_equal": true
+      }
+    },
+    {
+      "product": "S2A_MSIL1C_20180805T024551_N0206_R132_T52UDG_20180805T054920",
+      "group_id": "6086b24be5e9e183e82b7585ebe885909747b726ec67ccadc7ca2b1c167801f5",
+      "L2": {
+        "score_sha256": "21caac4a98c9d9a7972be5f3f44dda8cb9dc921cad1a0174a919933f1f7fe7b1",
+        "confusion": [
+          [
+            609828,
+            41773,
+            68167
+          ],
+          [
+            14579,
+            240520,
+            7934
+          ],
+          [
+            4234,
+            8011,
+            49438
+          ]
+        ],
+        "score_bitwise_equal": true
+      },
+      "L3": {
+        "score_sha256": "eb8c1b4b975ac77b9150d09adbe66917b55fcfc14965de72b0ae886d05143ebd",
+        "confusion": [
+          [
+            615572,
+            42067,
+            62129
+          ],
+          [
+            14871,
+            241059,
+            7103
+          ],
+          [
+            3189,
+            6751,
+            51743
+          ]
+        ],
+        "score_bitwise_equal": true
+      }
+    },
+    {
+      "product": "S2A_MSIL1C_20180211T234711_N0206_R073_T60WWT_20180212T011403",
+      "group_id": "f2381df323f89c657500585513ba32695bff189c66ec9e974a2a573d7a28f432",
+      "L2": {
+        "score_sha256": "fd508765b7e9533b663106b558d559f9d69530b1e40bfcac80b5dbf67d623e7a",
+        "confusion": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1044484,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "score_bitwise_equal": true
+      },
+      "L3": {
+        "score_sha256": "2dc0e90a842683cd3f9a760ae2c73dba3e7d1311b55987aba6c1d8134a101a57",
+        "confusion": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1044484,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "score_bitwise_equal": true
+      }
+    },
+    {
+      "product": "S2A_MSIL1C_20180804T045701_N0206_R119_T45RTH_20180804T075337",
+      "group_id": "c2a41ae0294bc9db9eb04bcfbf2650fe1c7bdaf285b7713938de8bfac54cba54",
+      "L2": {
+        "score_sha256": "d365a1cf8c1e86bfd6594f755baff62eac347b93e6a1dae62cb5f4593cd42add",
+        "confusion": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1044484,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "score_bitwise_equal": true
+      },
+      "L3": {
+        "score_sha256": "94526ce650d8feac828642c5a98676acf344d1b082ef88787ea64a721426feb4",
+        "confusion": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1044484,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "score_bitwise_equal": true
+      }
+    },
+    {
+      "product": "S2B_MSIL1C_20181004T102019_N0206_R065_T32TML_20181004T141056",
+      "group_id": "6208a338d14f2674799eb7d6b1b4f55d159e2e8f3b23a83c12dbb43b4f5cd4ef",
+      "L2": {
+        "score_sha256": "e54b605eb38d9c058f2d0de14a5e8840fd35fecd8f9f6690111edacf4aa675b0",
+        "confusion": [
+          [
+            677157,
+            2718,
+            12225
+          ],
+          [
+            23798,
+            207103,
+            11278
+          ],
+          [
+            19476,
+            750,
+            89979
+          ]
+        ],
+        "score_bitwise_equal": true
+      },
+      "L3": {
+        "score_sha256": "f1ff0b675416eeda81a6d8f7ed8de88f352130f0fdba5a1dea0bd05dbbf45802",
+        "confusion": [
+          [
+            667223,
+            2306,
+            22571
+          ],
+          [
+            20483,
+            205166,
+            16530
+          ],
+          [
+            16140,
+            636,
+            93429
+          ]
+        ],
+        "score_bitwise_equal": true
+      }
+    },
+    {
+      "product": "S2A_MSIL1C_20180602T081011_N0206_R078_T36PWC_20180602T115947",
+      "group_id": "59b71cbd6e0a8dd40404706487ccbd2fcd8e85d825523d3a052bae1ab5f167b5",
+      "L2": {
+        "score_sha256": "34ef4d4476c55ec614e4075b873ff355b2497fddb92947da8f853cf6d3408b31",
+        "confusion": [
+          [
+            1044484,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "score_bitwise_equal": true
+      },
+      "L3": {
+        "score_sha256": "85e9d41ac5c8c34b08409f1ae2d5146616bb9ba0e1892cca91367ebb975a2364",
+        "confusion": [
+          [
+            1044484,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "score_bitwise_equal": true
+      }
+    },
+    {
+      "product": "S2B_MSIL1C_20180508T150719_N0206_R082_T18MYV_20180508T202621",
+      "group_id": "c7e7a075f679fb9b65a472b172abde8f2d95fd6b7261370e72a9d2522849fb43",
+      "L2": {
+        "score_sha256": "3dbe3ad639550d26fdb5dec9a02e738c590a7a71ae488686831382ef0c9dda3d",
+        "confusion": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1043683,
+            801
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "score_bitwise_equal": true
+      },
+      "L3": {
+        "score_sha256": "9261c7fb9ac55db383700007531eb7a3aaf8715c982d8e9093edf589a7fcdce0",
+        "confusion": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1043683,
+            801
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "score_bitwise_equal": true
+      }
+    },
+    {
+      "product": "S2B_MSIL1C_20180420T103019_N0206_R108_T31TGF_20180420T114307",
+      "group_id": "acee9848efe8570d1198119ec4aa2a53a904443472ca0646c320c7b2fab89e53",
+      "L2": {
+        "score_sha256": "932244411eb285674ba04cb4d638380f39e6a51fef2998530c0a55a52f583850",
+        "confusion": [
+          [
+            1044484,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "score_bitwise_equal": true
+      },
+      "L3": {
+        "score_sha256": "798acb79a0d62649e7b6d20c5f67e56dea463547e62e1aa4e2959f4debbc2fe1",
+        "confusion": [
+          [
+            1044484,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "score_bitwise_equal": true
+      }
+    },
+    {
+      "product": "S2A_MSIL1C_20180430T111621_N0206_R037_T40XDR_20180430T132750",
+      "group_id": "f55d113c0d378ebf46f9a0e9ec28337ea3301758e7d4d26a7e6113d556aa403e",
+      "L2": {
+        "score_sha256": "becb57263cf44a8604e554956724ea40a0a9e8ded0e74bd45a6d76a22e5ca027",
+        "confusion": [
+          [
+            893801,
+            0,
+            10041
+          ],
+          [
+            54425,
+            0,
+            715
+          ],
+          [
+            44306,
+            0,
+            41196
+          ]
+        ],
+        "score_bitwise_equal": true
+      },
+      "L3": {
+        "score_sha256": "32b7af73d4a402bac4d38ca8f397e06e64714a4b851a434dd68f4d4de1b1c6d2",
+        "confusion": [
+          [
+            900123,
+            0,
+            3719
+          ],
+          [
+            54992,
+            0,
+            148
+          ],
+          [
+            45631,
+            0,
+            39871
+          ]
+        ],
+        "score_bitwise_equal": true
+      }
+    },
+    {
+      "product": "S2A_MSIL1C_20180909T151911_N0206_R068_T25XEG_20180909T205122",
+      "group_id": "f4766b335797560339a903cef2910fbb6a4436a282b64d036c6354f68717a2c1",
+      "L2": {
+        "score_sha256": "aeaaead84a3232d69d08edf43cc80f5e906f29cac82270a2a08ba3f72e76b8c4",
+        "confusion": [
+          [
+            468155,
+            576329,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "score_bitwise_equal": true
+      },
+      "L3": {
+        "score_sha256": "b257f3529c89a0c05a11b677d98143bdc9085590d416e0878905dc151cea724f",
+        "confusion": [
+          [
+            468155,
+            576329,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "score_bitwise_equal": true
+      }
+    },
+    {
+      "product": "S2A_MSIL1C_20180707T021601_N0206_R003_T51SXR_20180707T041118",
+      "group_id": "18e5a8b99775c466f1f4c3b18610d90ec94d16598d32bbb2361ae69249049020",
+      "L2": {
+        "score_sha256": "d8726369c6b9158ce6c82019b091323963b97a67214d9357377a36dfb4e14c43",
+        "confusion": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1041245,
+            3239
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "score_bitwise_equal": true
+      },
+      "L3": {
+        "score_sha256": "0dd82ba7dcef34bfd8b81adc773e3ca534e617eb05012d103b2ec7dd8b40bf59",
+        "confusion": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1041332,
+            3152
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "score_bitwise_equal": true
+      }
+    },
+    {
+      "product": "S2A_MSIL1C_20180522T183921_N0206_R070_T12VVH_20180522T233949",
+      "group_id": "338616d4467f5a91aa9c8c34abcbe296dd7aca061c0f780d6861d590655e2f1f",
+      "L2": {
+        "score_sha256": "342244199cc64dc7690f07deee739c7327fb0716f6e2dc2000facd8112b4358e",
+        "confusion": [
+          [
+            1044484,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "score_bitwise_equal": true
+      },
+      "L3": {
+        "score_sha256": "ecf611d0e9aa7575d6e6c6783815bfb7238f3687cdeda23eaf6137a13e8efe50",
+        "confusion": [
+          [
+            1044484,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "score_bitwise_equal": true
+      }
+    },
+    {
+      "product": "S2A_MSIL1C_20180317T045651_N0206_R119_T50XMG_20180317T075452",
+      "group_id": "f1712665f0fe8eec4694c7da49ce2dfabf6c2ebe1547ff7a6ba59a051366ec3a",
+      "L2": {
+        "score_sha256": "c27dd1455a06b1c72d574cd79625e9110f28d36518153c5be436122d19c1b775",
+        "confusion": [
+          [
+            1044484,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "score_bitwise_equal": true
+      },
+      "L3": {
+        "score_sha256": "e75690db3217c3ff3de37eccd9e01f6afe46f1b55bfe1abdc6250adb102de618",
+        "confusion": [
+          [
+            1044484,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "score_bitwise_equal": true
+      }
+    },
+    {
+      "product": "S2B_MSIL1C_20181001T165109_N0206_R026_T16UDV_20181001T221311",
+      "group_id": "ff26582f3cbe6eba262e621e7ea9de9dc72b2d8a821ecfddf74e74b249728286",
+      "L2": {
+        "score_sha256": "c2eeca764ef1ff9e2f26aa92a32c9e46f3775aa9d92c27192dc5ae745b226cba",
+        "confusion": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1044484,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "score_bitwise_equal": true
+      },
+      "L3": {
+        "score_sha256": "fed2763de86ec4b3a99843f5eb45ecfb3247eb1027c5b8098cfc8089888547d0",
+        "confusion": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1044484,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "score_bitwise_equal": true
+      }
+    },
+    {
+      "product": "S2A_MSIL1C_20180608T152641_N0206_R025_T18MUA_20180608T202221",
+      "group_id": "f3c0fdae99da17df642fb987b86059960905cabb5eda09b0d5e4c3d7172c8396",
+      "L2": {
+        "score_sha256": "c67ba957c190be060f4a710ded6079a2e56cb18b7e52600551a32558de80a161",
+        "confusion": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1044484,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "score_bitwise_equal": true
+      },
+      "L3": {
+        "score_sha256": "550640ec4f4f7a030bfd6674369e4c61589815a3cf242d0558bfaa6249a395ce",
+        "confusion": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1044484,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "score_bitwise_equal": true
+      }
+    },
+    {
+      "product": "S2A_MSIL1C_20181114T054101_N0207_R005_T44UNA_20181114T093234",
+      "group_id": "79aa19a7b0464ac5ac354f17f9fe96b109c7550cde405ab4e7a304c2e361e16c",
+      "L2": {
+        "score_sha256": "3d2fb8c7f0cf00c5506625bf39c7608792ef5ad64bd8c955bffd1da84b236255",
+        "confusion": [
+          [
+            1044484,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "score_bitwise_equal": true
+      },
+      "L3": {
+        "score_sha256": "27ee352de341c337d5737dff6bbb758298e151f516aefb0f1fe041dd6dfdee01",
+        "confusion": [
+          [
+            1044484,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "score_bitwise_equal": true
+      }
+    },
+    {
+      "product": "S2A_MSIL1C_20181118T152621_N0207_R068_T20VPK_20181118T172424",
+      "group_id": "90c4becf227f62264ee7e5f1b31b05fbee8f59464f744a77e1ecfb16624fbd44",
+      "L2": {
+        "score_sha256": "117ef7bbf3fa53232a80be857decf65ebf668dcc59fe3a3db4af4fbfcb64fbf2",
+        "confusion": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1044484,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "score_bitwise_equal": true
+      },
+      "L3": {
+        "score_sha256": "7cd24cd367929e28aad143d48f3f621ffdf08882aee62647b1cbddc369d18b44",
+        "confusion": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1044484,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "score_bitwise_equal": true
+      }
+    },
+    {
+      "product": "S2A_MSIL1C_20180922T185101_N0206_R113_T10SEE_20180922T225409",
+      "group_id": "0e28969b45fbf20e3aa6d65331a994c914ac07abfdc2593c6d55264d4cd7c53c",
+      "L2": {
+        "score_sha256": "b66cd231c08bd7f01d22c93972c7b77431806373df5ee29a03638dc0952a5b74",
+        "confusion": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1044484,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "score_bitwise_equal": true
+      },
+      "L3": {
+        "score_sha256": "713187d6b241adb9639e129a6edfb8e4d11b2c8a88b51bffaf54d3d3f6db5e4d",
+        "confusion": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1044484,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "score_bitwise_equal": true
+      }
+    },
+    {
+      "product": "S2B_MSIL1C_20181111T094229_N0207_R036_T32NKF_20181111T131623",
+      "group_id": "ed188cfd4fad4684fafc74170d129ca0591b418d0c9df514b6929431f6d46fe3",
+      "L2": {
+        "score_sha256": "520d4e0c50d08e2b46c9cd9aa8d58592cfd0ca0d65b774559e98daf7a08234c0",
+        "confusion": [
+          [
+            593835,
+            4531,
+            11043
+          ],
+          [
+            208109,
+            167612,
+            2306
+          ],
+          [
+            39281,
+            3230,
+            14537
+          ]
+        ],
+        "score_bitwise_equal": true
+      },
+      "L3": {
+        "score_sha256": "acbb1b556b6f8d084a573c21b207a264b86db41e9a09acb891f9aca942061a35",
+        "confusion": [
+          [
+            587039,
+            4419,
+            17951
+          ],
+          [
+            205551,
+            167308,
+            5168
+          ],
+          [
+            37457,
+            2989,
+            16602
+          ]
+        ],
+        "score_bitwise_equal": true
+      }
+    },
+    {
+      "product": "S2A_MSIL1C_20181021T160311_N0206_R097_T20WNV_20181021T192258",
+      "group_id": "0876b85f78d99180dd199fef6b0e29b964106f55b1224e5ec9d05aa8443fe33b",
+      "L2": {
+        "score_sha256": "073976996d704ae7bce35fbbe69c811931e90963ea618cc7634f7b91d88dad5b",
+        "confusion": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            254,
+            1043766,
+            464
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "score_bitwise_equal": true
+      },
+      "L3": {
+        "score_sha256": "b0701bad307962a9cd954d5adc27e4c557250915bd580587d46a255a7110cb5b",
+        "confusion": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            254,
+            1039909,
+            4321
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "score_bitwise_equal": true
+      }
+    }
+  ],
+  "recovery_sha256": "bcb91cf56d3b796c22bbf60891fb8d045dd8e6af80f5c42a00818fa72501f31f",
+  "reference_report_sha256": "5e48cd76418d45a3bf6ee1c056f63792aa893e03aef43885cd37171c67030e8c",
+  "no_fit_no_forward": true
+}

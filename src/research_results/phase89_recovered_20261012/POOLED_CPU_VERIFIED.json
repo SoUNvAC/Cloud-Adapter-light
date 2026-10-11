@@ -1,0 +1,91 @@
+{
+  "created_utc": "2026-10-11T16:17:53.685571+00:00",
+  "rows": [
+    {
+      "version": "original_main",
+      "policy": "Source",
+      "pooled_independent_score_bin_AP": 0.4696587653886532,
+      "pooled_confusion_exact": true,
+      "macro_mean_CI_verified": true
+    },
+    {
+      "version": "original_main",
+      "policy": "MsRE",
+      "pooled_independent_score_bin_AP": 0.5359340642424325,
+      "pooled_confusion_exact": true,
+      "macro_mean_CI_verified": true
+    },
+    {
+      "version": "original_main",
+      "policy": "L2",
+      "pooled_independent_score_bin_AP": 0.5605966673754512,
+      "pooled_confusion_exact": true,
+      "macro_mean_CI_verified": true
+    },
+    {
+      "version": "original_main",
+      "policy": "L3",
+      "pooled_independent_score_bin_AP": 0.5812489603445082,
+      "pooled_confusion_exact": true,
+      "macro_mean_CI_verified": true
+    },
+    {
+      "version": "original_common",
+      "policy": "Source",
+      "pooled_independent_score_bin_AP": 0.49234025598563275,
+      "pooled_confusion_exact": true,
+      "macro_mean_CI_verified": true
+    },
+    {
+      "version": "original_common",
+      "policy": "MsRE",
+      "pooled_independent_score_bin_AP": 0.5545785684542905,
+      "pooled_confusion_exact": true,
+      "macro_mean_CI_verified": true
+    },
+    {
+      "version": "original_common",
+      "policy": "L2",
+      "pooled_independent_score_bin_AP": 0.5810562807731585,
+      "pooled_confusion_exact": true,
+      "macro_mean_CI_verified": true
+    },
+    {
+      "version": "original_common",
+      "policy": "L3",
+      "pooled_independent_score_bin_AP": 0.5990632886837207,
+      "pooled_confusion_exact": true,
+      "macro_mean_CI_verified": true
+    },
+    {
+      "version": "revised_common",
+      "policy": "Source",
+      "pooled_independent_score_bin_AP": 0.48698291315498227,
+      "pooled_confusion_exact": true,
+      "macro_mean_CI_verified": true
+    },
+    {
+      "version": "revised_common",
+      "policy": "MsRE",
+      "pooled_independent_score_bin_AP": 0.5447771930614463,
+      "pooled_confusion_exact": true,
+      "macro_mean_CI_verified": true
+    },
+    {
+      "version": "revised_common",
+      "policy": "L2",
+      "pooled_independent_score_bin_AP": 0.5729059686102307,
+      "pooled_confusion_exact": true,
+      "macro_mean_CI_verified": true
+    },
+    {
+      "version": "revised_common",
+      "policy": "L3",
+      "pooled_independent_score_bin_AP": 0.5692130573294419,
+      "pooled_confusion_exact": true,
+      "macro_mean_CI_verified": true
+    }
+  ],
+  "checks": 12,
+  "no_forward_no_fit": true
+}

@@ -1,0 +1,22 @@
+{
+  "completed_utc": "2026-10-11T16:17:53.721656+00:00",
+  "delivery_manifest_sha256": "a2320cb6e34cdaf6cc60cfd76e5c8adbe6d893c46dd39f682ddae5484ad8c812",
+  "models": [
+    "Source",
+    "MsRE_2000",
+    "L2",
+    "L3"
+  ],
+  "groups": 9,
+  "zero_training_fitting_tuning_downloads": true,
+  "external_reference_consistency_not_formal_confirmation": true,
+  "human_B": "not_executed",
+  "no_work_dirs_transfer": true,
+  "unique_network_block_model_pairs": 648,
+  "new_recovery_forwards": 594,
+  "reused_blocks": 54,
+  "authorized_damaged_block_repeats": 112,
+  "historical_forward_total": null,
+  "recovery_lock_sha256": "eaec3cc77ad3b050834ef7cfb4a2740d830eaaa36f2b8f1c9653c14a53b9c3d3",
+  "cpu_AP": "independent_score_bin_formula; sklearn unavailable"
+}

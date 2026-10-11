@@ -1,0 +1,16 @@
+{
+  "created_utc": "2026-10-11T16:14:38.055035+00:00",
+  "tests": {
+    "hand_calculated_tie_cases": 3,
+    "brute_force_threshold_cases": 60,
+    "sklearn_not_installed_not_claimed": true
+  },
+  "reason": "Existing conda has no sklearn; preserve all inference outputs and frozen production metrics.",
+  "algorithm": "Non-interpolated AP: positive mass in each tied score bin times cumulative precision at that threshold.",
+  "production_AP_unchanged": true,
+  "no_forward_no_fit_no_tuning": true,
+  "float64_mean_check_atol": 2e-15,
+  "reason_for_mean_check_bound": "Independent nine-term sum order differs from reshape mean; prior 3e-16 check observed 4.44e-16. New bound covers nine float64 additions of probabilities in [0,1], without changing saved arrays or decisions.",
+  "helper_sha256": "aa98f3c7fbed25d5779241acef4fd7827bb6bbb5b12cd459148e8ac34e464fda",
+  "oracle_sha256": "9bedbc46503916362564a0f34b1748d75d095edce436f70f533372895a42062e"
+}
