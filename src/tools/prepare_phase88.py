@@ -234,6 +234,44 @@ def make_page(ids, available):
     with (OUT/'index.html').open('x',encoding='utf-8') as f:f.write(text)
 
 
+def render_metric():
+    """Preserve the first layout; final contexts retain metric aspect at tile edges."""
+    import numpy as np
+    from PIL import Image, ImageDraw
+    audit=read(OUT/'extraction_audit.json');records=[]
+    for s in audit['support']:
+        y0,y1,x0,x1=s['window_60m'];width=(x1-x0)*20;height=(y1-y0)*20
+        path=OUT/'images'/(s['review_id']+'_context.png');assert not path.exists()
+        panel=Image.new('RGB',(width*2,height+60),'white');draw=ImageDraw.Draw(panel)
+        with np.load(OUT/'windows'/(s['review_id']+'.npz'),allow_pickle=False) as z:
+            assert 'labels' not in z.files
+            for i,bands in enumerate([['B04','B03','B02'],['B08','B11','B12']]):
+                channels=[]
+                for band in bands:
+                    lo,hi=s['stretch'][band]
+                    ar=np.uint8(np.clip((z[band].astype(float)-lo)/max(hi-lo,1),0,1)*255)
+                    channels.append(np.asarray(Image.fromarray(ar).resize((width,height),Image.Resampling.NEAREST)))
+                image=Image.fromarray(np.stack(channels,axis=-1));invalid=Image.fromarray(np.uint8(~z['joint_valid_60m'])*255).resize((width,height),Image.Resampling.NEAREST)
+                image.paste((96,96,96),(0,0,width,height),invalid)
+                d=ImageDraw.Draw(image);cy,cx=s['center_offset_60m'];cx=(cx+.5)*20;cy=(cy+.5)*20
+                d.rectangle((cx-10,cy-10,cx+10,cy+10),outline='red',width=3)
+                d.line((30,height-30,230,height-30),fill='white',width=5);d.text((30,height-53),'600m',fill='white')
+                panel.paste(image,(i*width,60))
+        draw.text((10,8),s['review_id']+' | RGB / B08 B11 B12 | red box = 60m; gray = invalid',fill='black')
+        draw.text((10,30),f'{60*(x1-x0)} x {60*(y1-y0)} m true support; 20 display pixels per 60m cell; no edge padding',fill='black')
+        panel.save(path)
+        records.append(dict(review_id=s['review_id'],path='images/'+path.name,sha256=sha(path),display_size=list(panel.size),metres_per_display_pixel=3))
+    write(OUT/'metric_display_audit.json',dict(extraction_audit_sha256=sha(OUT/'extraction_audit.json'),contexts=records,
+        note='Final large-context display preserves metric aspect, including nine clipped windows. Initial square preview layout retained separately; never used as final expert view.'))
+    prior=OUT/'layout_v1.html';assert not prior.exists()
+    (OUT/'index.html').rename(prior)
+    template=(ROOT/'src/tools/phase88_blind_page.html').read_text(encoding='utf-8')
+    text=template.replace('__IDS__',json.dumps([s['review_id'] for s in read(OUT/'sample_input_lock.json')['samples']])).replace('__AVAILABLE__',json.dumps([r['review_id'] for r in records])).replace('__LOCK_SHA__',sha(OUT/'sample_input_lock.json'))
+    text=text.replace("id+'_'+k+'.png'", "id+(k==='large'?'_context.png':'_small.png')")
+    with (OUT/'index.html').open('x',encoding='utf-8') as f:f.write(text)
+    print('Final metric-aspect context images and anonymous index prepared:',len(records))
+
+
 def lock_human(path):
     assert path.resolve().is_relative_to(ROOT), 'Place returned human file inside authorized repository'
     packet=read(path);lock=read(OUT/'sample_input_lock.json')
@@ -256,7 +294,7 @@ def lock_human(path):
           identity_is_self_reported_not_independently_certified=True,confirmation_ready_groups=0))
     # Only now provide the separate B page. Never embed references in the A page.
     old={s['id']:s for s in read(OLD/'sample_manifest.json')['samples']}
-    content=['<!doctype html><meta charset="utf-8"><title>Phase88 B</title><h1>B阶段：A判断已锁定</h1><p>逐点填写expert_B_template.csv；保留A判断。参考图左右为原版／修订版，白云、蓝云影、绿地表。参考不是真值。</p>']
+    content=['<!doctype html><meta charset="utf-8"><title>Phase88 B</title><h1>B阶段：A判断已锁定</h1><p>逐点填写expert_B_template.csv；保留A判断。参考图左右为原版／修订版，白云、蓝云影、绿地表，灰无效；缺失参考不是Surface。原类号2/3云、4云影、5/6/7地表；修订64云影、128地表、255云。多类中心保留混合，不多数投票。参考不是真值。</p><p>原版与修订版分别填：未发现明确冲突／有证据支持可能冲突／仍无法裁决，并写理由和证据需求；修订缺失时注明缺失。不能仅因与参考一致就认定云影。</p>']
     expected=read(OLD/'SHA256.json');expected={k.replace(chr(92),'/'):v for k,v in expected.items()}
     for s in lock['samples']:
         p=OLD/'images'/(s['source_id']+'_label.png');assert sha(p)==expected[p.relative_to(OLD).as_posix()]
@@ -267,9 +305,10 @@ def lock_human(path):
 
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('action',choices=['freeze','build','lock-human']);p.add_argument('--file',type=Path)
+    p=argparse.ArgumentParser();p.add_argument('action',choices=['freeze','build','render-metric','lock-human']);p.add_argument('--file',type=Path)
     args=p.parse_args()
     if args.action=='freeze':freeze()
     elif args.action=='build':build()
+    elif args.action=='render-metric':render_metric()
     else:
         assert args.file is not None;lock_human(args.file)

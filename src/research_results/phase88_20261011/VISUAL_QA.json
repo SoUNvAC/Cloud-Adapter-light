@@ -1,0 +1,12 @@
+{
+  "purpose": "image_layout_only_not_human_judgment",
+  "reviewer": "AI GPT-6 / Codex; exact runtime snapshot not exposed",
+  "date": "2026-10-11",
+  "viewed_review_ids": ["E007", "E003", "E027"],
+  "actual_materials": ["E007_small.png", "E007_large.png (first preview)", "E007_context.png", "E003_context.png", "E027_context.png"],
+  "observations": "Final metric-aspect RGB/falsecolor pairs render without overlap. E007 full3060x3060m; E003 clipped2940x1560m has center at bottom edge; E027 clipped1860x3060m has off-center red box. Original small window retained. Red60m boxes and actual extent labels visible; no fabricated edge terrain or reference classes. White scale bar may have lower contrast on bright areas; quantitative header extents and fixed20 display pixels per60m remain available.",
+  "display_resolution_note": "Display enlargement is not new spatial information: native bands remain10/20m and reference grid remains60m;3m per display pixel is a drawing scale only.",
+  "semantic_judgments_entered": false,
+  "human_results_entered": false,
+  "confirmation_ready_groups": 0
+}

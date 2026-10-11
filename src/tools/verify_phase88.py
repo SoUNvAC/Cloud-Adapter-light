@@ -33,6 +33,15 @@ def main():
     assert len(audit['source_objects'])==54
     assert len({s['source_id'] for s in lock['samples']})==57
     page=(OUT/'index.html').read_text(encoding='utf-8')
+    display=read(OUT/'metric_display_audit.json')
+    qa=read(OUT/'VISUAL_QA.json')
+    assert qa['purpose']=='image_layout_only_not_human_judgment' and len(qa['viewed_review_ids'])>=3
+    assert display['extraction_audit_sha256']==sha(OUT/'extraction_audit.json')
+    assert len(display['contexts'])==57 and '_context.png' in page
+    for r in display['contexts']:
+        assert sha(OUT/r['path'])==r['sha256']
+        s=next(s for s in audit['support'] if s['review_id']==r['review_id'])
+        h,w=s['shape_60m'];assert r['display_size']==[w*40,h*20+60]
     assert sha(OUT/'sample_input_lock.json') in page
     for forbidden in ['phase88_stratum','original_reference','revised_reference','initial_judgment','stage_B.html','_label.png']:
         assert forbidden not in page
@@ -52,8 +61,8 @@ def main():
     csvwrite(OUT/'group_status.csv',summaries)
     write(OUT/'LOCAL_VERIFIED.json',dict(verified=True,checks=['all30_P1_unchanged','27_controls_hash_selected_without_class_or_AI_sort',
         'nine_fixed_representatives','54_source_SHA256_and_generation','57_large_windows_match_existing_small_native_pixels_and_valid_masks',
-        'clip_edges_no_mirrored_support','original_stretches_reused','no_identity_stratum_or_reference_in_A_page',
-        'empty_A_and_B_templates_57_each','no_human_results_or_B_reveal_before_human_A_lock'],
+        'clip_edges_no_mirrored_support_and_metric_aspect','original_stretches_reused','no_identity_stratum_or_reference_in_A_page',
+        'empty_A_and_B_templates_57_each','no_human_results_or_B_reveal_before_human_A_lock','normal_and_edge_image_layout_QA'],
         assignment='user_volunteered; identity_and_experience_pending',actual_human_reviewers=0,actually_reviewed=0,
         confirmation_ready_groups=0,prepared=57,clipped_windows=sum(s['shape_60m']!=[51,51] for s in audit['support']),
         decoder_note='JPEG2000 SIZ precision read; Pillow integer display expansion reversed exactly; every selected small band/mask compared with prior GDAL-derived NPZ'))

@@ -1,0 +1,3924 @@
+{
+  "sampling_lock_sha256": "c750ecdd91331a1594913cb7d94935d01e0a2d5b83f9608ded604b923e7828e2",
+  "support": [
+    {
+      "review_id": "E028",
+      "product": "S2A_MSIL1C_20160417T111159_N0201_R137_T29RPQ_20160417T203056",
+      "crs": "EPSG:32629",
+      "row": 295,
+      "col": 97,
+      "center_xy": [
+        605850.0,
+        3482310.0
+      ],
+      "window_60m": [
+        270,
+        321,
+        72,
+        123
+      ],
+      "bounds": [
+        604320.0,
+        3480780.0,
+        607380.0,
+        3483840.0
+      ],
+      "center_offset_60m": [
+        25,
+        25
+      ],
+      "shape_60m": [
+        51,
+        51
+      ],
+      "stretch": {
+        "B04": [
+          698.0,
+          2929.199999999997
+        ],
+        "B03": [
+          785.1,
+          2663.199999999997
+        ],
+        "B02": [
+          958.0,
+          2706.499999999998
+        ],
+        "B08": [
+          811.0,
+          3439.699999999999
+        ],
+        "B11": [
+          743.0,
+          3789.0
+        ],
+        "B12": [
+          577.52,
+          2939.6400000000003
+        ]
+      },
+      "mask_policy": "valid original-label support AND all six bands exclude XML special values at every contributing native pixel; small-mask exact equality checked",
+      "original_small_native_pixels_match": true,
+      "window_sha256": "3afb429d2bf85ae63f76d4ea37885873bf04f1eec989f62f62ca09f8d1572c6f",
+      "small_sha256": "f25eb0c261c684690572ed5da8e6d55c48283a2299ac5a50c41e9e0d824481d5",
+      "large_sha256": "0c6f8d2e9b30f4379d2d0e24d5917e8fc891c3a0470eff431b69c08c43809f81"
+    },
+    {
+      "review_id": "E031",
+      "product": "S2A_MSIL1C_20160417T111159_N0201_R137_T29RPQ_20160417T203056",
+      "crs": "EPSG:32629",
+      "row": 1579,
+      "col": 112,
+      "center_xy": [
+        606750.0,
+        3405270.0
+      ],
+      "window_60m": [
+        1554,
+        1605,
+        87,
+        138
+      ],
+      "bounds": [
+        605220.0,
+        3403740.0,
+        608280.0,
+        3406800.0
+      ],
+      "center_offset_60m": [
+        25,
+        25
+      ],
+      "shape_60m": [
+        51,
+        51
+      ],
+      "stretch": {
+        "B04": [
+          1712.0,
+          2550.8999999999996
+        ],
+        "B03": [
+          1502.1,
+          2332.8999999999996
+        ],
+        "B02": [
+          1499.0,
+          2409.0
+        ],
+        "B08": [
+          2155.3,
+          3034.0
+        ],
+        "B11": [
+          2019.04,
+          2844.24
+        ],
+        "B12": [
+          1612.0,
+          2344.24
+        ]
+      },
+      "mask_policy": "valid original-label support AND all six bands exclude XML special values at every contributing native pixel; small-mask exact equality checked",
+      "original_small_native_pixels_match": true,
+      "window_sha256": "95e665276c2a51c55ac5916c3fa954b41e5d775a005daf3a838bcc2e9ecff98d",
+      "small_sha256": "a08fb637f0803c02485872d7b5c966e2a7c1ff2797042ab4d05f7e17b8545814",
+      "large_sha256": "e8d8c84a15a50e6c45159d970a874e6bed8af9794f366efb68fc477105f0056a"
+    },
+    {
+      "review_id": "E041",
+      "product": "S2A_MSIL1C_20160417T111159_N0201_R137_T29RPQ_20160417T203056",
+      "crs": "EPSG:32629",
+      "row": 397,
+      "col": 291,
+      "center_xy": [
+        617490.0,
+        3476190.0
+      ],
+      "window_60m": [
+        372,
+        423,
+        266,
+        317
+      ],
+      "bounds": [
+        615960.0,
+        3474660.0,
+        619020.0,
+        3477720.0
+      ],
+      "center_offset_60m": [
+        25,
+        25
+      ],
+      "shape_60m": [
+        51,
+        51
+      ],
+      "stretch": {
+        "B04": [
+          603.0,
+          2057.499999999998
+        ],
+        "B03": [
+          727.0,
+          1869.0999999999967
+        ],
+        "B02": [
+          870.0,
+          1825.699999999999
+        ],
+        "B08": [
+          1217.2,
+          3498.8999999999996
+        ],
+        "B11": [
+          820.84,
+          3223.0
+        ],
+        "B12": [
+          501.96000000000004,
+          2441.48
+        ]
+      },
+      "mask_policy": "valid original-label support AND all six bands exclude XML special values at every contributing native pixel; small-mask exact equality checked",
+      "original_small_native_pixels_match": true,
+      "window_sha256": "9b108c33245e6a91d6d91f69903082653bda1425b7c676792d322b463e0b3cb8",
+      "small_sha256": "a8fefd9470dbe39ab0b0c1cf8d99325e74c2e007fd1004f4b7bb2c5d614e014d",
+      "large_sha256": "a0097c7916df9192b7c88214064a96140d9b09e8e0287deff140fcb657a3fd4a"
+    },
+    {
+      "review_id": "E057",
+      "product": "S2A_MSIL1C_20160417T111159_N0201_R137_T29RPQ_20160417T203056",
+      "crs": "EPSG:32629",
+      "row": 312,
+      "col": 709,
+      "center_xy": [
+        642570.0,
+        3481290.0
+      ],
+      "window_60m": [
+        287,
+        338,
+        684,
+        735
+      ],
+      "bounds": [
+        641040.0,
+        3479760.0,
+        644100.0,
+        3482820.0
+      ],
+      "center_offset_60m": [
+        25,
+        25
+      ],
+      "shape_60m": [
+        51,
+        51
+      ],
+      "stretch": {
+        "B04": [
+          814.1,
+          5609.0
+        ],
+        "B03": [
+          894.0,
+          5181.0
+        ],
+        "B02": [
+          1008.0,
+          5301.9
+        ],
+        "B08": [
+          1275.0,
+          6075.9
+        ],
+        "B11": [
+          1276.0,
+          6132.24
+        ],
+        "B12": [
+          950.0,
+          5190.2
+        ]
+      },
+      "mask_policy": "valid original-label support AND all six bands exclude XML special values at every contributing native pixel; small-mask exact equality checked",
+      "original_small_native_pixels_match": true,
+      "window_sha256": "67bf575a740f929bd11f31cd65c0cf35c9199a4a49d4ac03de7ca4a3a5405499",
+      "small_sha256": "8fdafba71a9d7e8dda8808d529d02a4ef2069cf18e89e55fbf2d9c76867239f0",
+      "large_sha256": "a325e760c3e211637edfbc0f42cd84a2d6d3991e13bb1be66afe48477e60f7cc"
+    },
+    {
+      "review_id": "E015",
+      "product": "S2A_MSIL1C_20160817T101032_N0204_R022_T33UUU_20160817T230018",
+      "crs": "EPSG:32633",
+      "row": 1827,
+      "col": 777,
+      "center_xy": [
+        346650.0,
+        5790390.0
+      ],
+      "window_60m": [
+        1802,
+        1830,
+        752,
+        803
+      ],
+      "bounds": [
+        345120.0,
+        5790240.0,
+        348180.0,
+        5791920.0
+      ],
+      "center_offset_60m": [
+        25,
+        25
+      ],
+      "shape_60m": [
+        28,
+        51
+      ],
+      "stretch": {
+        "B04": [
+          2404.34,
+          6869.98
+        ],
+        "B03": [
+          2453.08,
+          6317.66
+        ],
+        "B02": [
+          2666.34,
+          6436.0
+        ],
+        "B08": [
+          3394.04,
+          7689.299999999999
+        ],
+        "B11": [
+          2379.1,
+          6594.959999999999
+        ],
+        "B12": [
+          1760.1,
+          5414.7199999999975
+        ]
+      },
+      "mask_policy": "valid original-label support AND all six bands exclude XML special values at every contributing native pixel; small-mask exact equality checked",
+      "original_small_native_pixels_match": true,
+      "window_sha256": "f6a71aef030dec040ab0943a6126e2e954a7dc30478e49138307e57a1dbfb9dc",
+      "small_sha256": "162a31030e3cfb3490ccc853cab1444777eb4164b8eb17c367b350e520f74edd",
+      "large_sha256": "cfa1640386dcb0fad411d7f2ff7428813ff03431d9373935e89b5905eb331d90"
+    },
+    {
+      "review_id": "E034",
+      "product": "S2A_MSIL1C_20160817T101032_N0204_R022_T33UUU_20160817T230018",
+      "crs": "EPSG:32633",
+      "row": 1597,
+      "col": 1477,
+      "center_xy": [
+        388650.0,
+        5804190.0
+      ],
+      "window_60m": [
+        1572,
+        1623,
+        1452,
+        1503
+      ],
+      "bounds": [
+        387120.0,
+        5802660.0,
+        390180.0,
+        5805720.0
+      ],
+      "center_offset_60m": [
+        25,
+        25
+      ],
+      "shape_60m": [
+        51,
+        51
+      ],
+      "stretch": {
+        "B04": [
+          416.0,
+          849.0
+        ],
+        "B03": [
+          638.1,
+          1250.0
+        ],
+        "B02": [
+          925.1,
+          1206.0
+        ],
+        "B08": [
+          799.0,
+          4002.5999999999985
+        ],
+        "B11": [
+          394.52,
+          2061.0
+        ],
+        "B12": [
+          213.76,
+          978.0
+        ]
+      },
+      "mask_policy": "valid original-label support AND all six bands exclude XML special values at every contributing native pixel; small-mask exact equality checked",
+      "original_small_native_pixels_match": true,
+      "window_sha256": "4946e875f49363cfe3ef6fce2976e9b224e4ab29cac7fd8bc4f740449635b801",
+      "small_sha256": "5a79559909ac6f21725ab89e60cb05ce1f62c6f8a6b5382fa83a1231ce532a1b",
+      "large_sha256": "fa9bffe4d5e3902bf0f2fdb880b7da8e88a9eb1ae1453c6a1877ebb7b80b73a4"
+    },
+    {
+      "review_id": "E036",
+      "product": "S2A_MSIL1C_20160817T101032_N0204_R022_T33UUU_20160817T230018",
+      "crs": "EPSG:32633",
+      "row": 605,
+      "col": 888,
+      "center_xy": [
+        353310.0,
+        5863710.0
+      ],
+      "window_60m": [
+        580,
+        631,
+        863,
+        914
+      ],
+      "bounds": [
+        351780.0,
+        5862180.0,
+        354840.0,
+        5865240.0
+      ],
+      "center_offset_60m": [
+        25,
+        25
+      ],
+      "shape_60m": [
+        51,
+        51
+      ],
+      "stretch": {
+        "B04": [
+          332.0,
+          1917.0
+        ],
+        "B03": [
+          590.1,
+          1532.0
+        ],
+        "B02": [
+          825.0,
+          1521.0
+        ],
+        "B08": [
+          197.0,
+          3619.8999999999996
+        ],
+        "B11": [
+          61.0,
+          3557.0
+        ],
+        "B12": [
+          37.760000000000005,
+          3196.0
+        ]
+      },
+      "mask_policy": "valid original-label support AND all six bands exclude XML special values at every contributing native pixel; small-mask exact equality checked",
+      "original_small_native_pixels_match": true,
+      "window_sha256": "02b2e5ef7372ad29d0bda9398b4b421e1d72d160b49c264bcf439266cd64045b",
+      "small_sha256": "e1b37a6bd51a1421f3d2d61aa2f759d5096fe389a825893afc370ccdcbcce2ee",
+      "large_sha256": "24db9a89b7d8b664ea5804d3d6f636f6035f11241f962bac8ae95099e1808679"
+    },
+    {
+      "review_id": "E039",
+      "product": "S2A_MSIL1C_20160817T101032_N0204_R022_T33UUU_20160817T230018",
+      "crs": "EPSG:32633",
+      "row": 772,
+      "col": 1804,
+      "center_xy": [
+        408270.0,
+        5853690.0
+      ],
+      "window_60m": [
+        747,
+        798,
+        1779,
+        1830
+      ],
+      "bounds": [
+        406740.0,
+        5852160.0,
+        409800.0,
+        5855220.0
+      ],
+      "center_offset_60m": [
+        25,
+        25
+      ],
+      "shape_60m": [
+        51,
+        51
+      ],
+      "stretch": {
+        "B04": [
+          399.0,
+          3913.899999999996
+        ],
+        "B03": [
+          642.0,
+          3720.0
+        ],
+        "B02": [
+          840.0,
+          3948.8999999999996
+        ],
+        "B08": [
+          1614.0,
+          5078.9
+        ],
+        "B11": [
+          834.0,
+          4879.52
+        ],
+        "B12": [
+          370.0,
+          3818.92
+        ]
+      },
+      "mask_policy": "valid original-label support AND all six bands exclude XML special values at every contributing native pixel; small-mask exact equality checked",
+      "original_small_native_pixels_match": true,
+      "window_sha256": "d632033de1d06bf666423f91210e311f1ccd54fbc2dee41b621d478bb641e206",
+      "small_sha256": "63d18a90df2c643c21fe50bbaeb89b28e437edeedab06234379c3ec507fd34a3",
+      "large_sha256": "2256689ebd270faf1c46946604dd33a05ff6cf7d9304d8fe46ffe39a7683a96a"
+    },
+    {
+      "review_id": "E047",
+      "product": "S2A_MSIL1C_20160817T101032_N0204_R022_T33UUU_20160817T230018",
+      "crs": "EPSG:32633",
+      "row": 1462,
+      "col": 909,
+      "center_xy": [
+        354570.0,
+        5812290.0
+      ],
+      "window_60m": [
+        1437,
+        1488,
+        884,
+        935
+      ],
+      "bounds": [
+        353040.0,
+        5810760.0,
+        356100.0,
+        5813820.0
+      ],
+      "center_offset_60m": [
+        25,
+        25
+      ],
+      "shape_60m": [
+        51,
+        51
+      ],
+      "stretch": {
+        "B04": [
+          329.0,
+          6928.0
+        ],
+        "B03": [
+          560.0,
+          6396.5999999999985
+        ],
+        "B02": [
+          855.0,
+          6509.9
+        ],
+        "B08": [
+          470.20000000000005,
+          8064.299999999994
+        ],
+        "B11": [
+          219.52,
+          7203.96
+        ],
+        "B12": [
+          127.0,
+          5505.76
+        ]
+      },
+      "mask_policy": "valid original-label support AND all six bands exclude XML special values at every contributing native pixel; small-mask exact equality checked",
+      "original_small_native_pixels_match": true,
+      "window_sha256": "b7dd86c7450a0edce06dc09b2038dfd6e3a9102cb1dedf7c863002accb7bd842",
+      "small_sha256": "eb0345ac9de52f43f46c7b81ee5ed3fd86cb3a1e16978f4ced30b609885331c7",
+      "large_sha256": "143088848dde889c35ac3fceead2b1319537c9e6eae9d6904f12cab2baca15b3"
+    },
+    {
+      "review_id": "E052",
+      "product": "S2A_MSIL1C_20160817T101032_N0204_R022_T33UUU_20160817T230018",
+      "crs": "EPSG:32633",
+      "row": 1330,
+      "col": 1469,
+      "center_xy": [
+        388170.0,
+        5820210.0
+      ],
+      "window_60m": [
+        1305,
+        1356,
+        1444,
+        1495
+      ],
+      "bounds": [
+        386640.0,
+        5818680.0,
+        389700.0,
+        5821740.0
+      ],
+      "center_offset_60m": [
+        25,
+        25
+      ],
+      "shape_60m": [
+        51,
+        51
+      ],
+      "stretch": {
+        "B04": [
+          400.0,
+          1633.7999999999993
+        ],
+        "B03": [
+          626.1,
+          1564.8999999999996
+        ],
+        "B02": [
+          899.0,
+          1684.0
+        ],
+        "B08": [
+          414.1,
+          4366.499999999998
+        ],
+        "B11": [
+          398.28000000000003,
+          2291.92
+        ],
+        "B12": [
+          186.56,
+          1719.6000000000001
+        ]
+      },
+      "mask_policy": "valid original-label support AND all six bands exclude XML special values at every contributing native pixel; small-mask exact equality checked",
+      "original_small_native_pixels_match": true,
+      "window_sha256": "7b0d10b290620513b1dd9b4bcf4ef1a6a01e3358f05ecb051af8b68d3e57cc39",
+      "small_sha256": "7ee9eb24323763bbdaeae3ea28dd148ab3c2a6c822befafe9ca8b782e0dad0ab",
+      "large_sha256": "36c9dbeb8bef1319e722c679f663af32c3a9d010352e9bb05f9590e1e3d6af63"
+    },
+    {
+      "review_id": "E007",
+      "product": "S2A_MSIL1C_20161108T102232_N0204_R065_T32TNR_20161109T224916",
+      "crs": "EPSG:32632",
+      "row": 1728,
+      "col": 911,
+      "center_xy": [
+        554670.0,
+        4996290.0
+      ],
+      "window_60m": [
+        1703,
+        1754,
+        886,
+        937
+      ],
+      "bounds": [
+        553140.0,
+        4994760.0,
+        556200.0,
+        4997820.0
+      ],
+      "center_offset_60m": [
+        25,
+        25
+      ],
+      "shape_60m": [
+        51,
+        51
+      ],
+      "stretch": {
+        "B04": [
+          693.0,
+          1271.0
+        ],
+        "B03": [
+          936.0,
+          1299.7999999999993
+        ],
+        "B02": [
+          1197.0,
+          1482.0
+        ],
+        "B08": [
+          1019.2,
+          2492.8999999999996
+        ],
+        "B11": [
+          965.76,
+          2423.8
+        ],
+        "B12": [
+          623.8,
+          1794.2
+        ]
+      },
+      "mask_policy": "valid original-label support AND all six bands exclude XML special values at every contributing native pixel; small-mask exact equality checked",
+      "original_small_native_pixels_match": true,
+      "window_sha256": "93534ad6c018b5c55d034734a8ed17483d5ff7b53baae3f4b0501b562019b461",
+      "small_sha256": "7b1f65ac7af1ac7eedad2a71799bb94e82e6bde63d4368cd149071c0d0caabe7",
+      "large_sha256": "8e452dae35c74a8800977bd8b911b43ffcb6360994e1d67d9d27dda437b29673"
+    },
+    {
+      "review_id": "E008",
+      "product": "S2A_MSIL1C_20161108T102232_N0204_R065_T32TNR_20161109T224916",
+      "crs": "EPSG:32632",
+      "row": 932,
+      "col": 1320,
+      "center_xy": [
+        579210.0,
+        5044050.0
+      ],
+      "window_60m": [
+        907,
+        958,
+        1295,
+        1346
+      ],
+      "bounds": [
+        577680.0,
+        5042520.0,
+        580740.0,
+        5045580.0
+      ],
+      "center_offset_60m": [
+        25,
+        25
+      ],
+      "shape_60m": [
+        51,
+        51
+      ],
+      "stretch": {
+        "B04": [
+          509.1,
+          1028.8999999999996
+        ],
+        "B03": [
+          741.0,
+          1123.0
+        ],
+        "B02": [
+          1055.0,
+          1378.0
+        ],
+        "B08": [
+          603.0,
+          2282.199999999997
+        ],
+        "B11": [
+          350.76,
+          1712.68
+        ],
+        "B12": [
+          201.76,
+          1104.92
+        ]
+      },
+      "mask_policy": "valid original-label support AND all six bands exclude XML special values at every contributing native pixel; small-mask exact equality checked",
+      "original_small_native_pixels_match": true,
+      "window_sha256": "71d0e26b1d04842ca3040429b776bcf6e4c527db5e676d379cfa5b3fe86925f1",
+      "small_sha256": "fbf6cfac9fd7bec8bfbd88121356287922aa8f4d79a275bcb5459b8c6c068356",
+      "large_sha256": "52caed1dce2a40d00c5a888b4d160128d918fb50f02e4e2e18aac4926aa4d377"
+    },
+    {
+      "review_id": "E043",
+      "product": "S2A_MSIL1C_20161108T102232_N0204_R065_T32TNR_20161109T224916",
+      "crs": "EPSG:32632",
+      "row": 1300,
+      "col": 1304,
+      "center_xy": [
+        578250.0,
+        5021970.0
+      ],
+      "window_60m": [
+        1275,
+        1326,
+        1279,
+        1330
+      ],
+      "bounds": [
+        576720.0,
+        5020440.0,
+        579780.0,
+        5023500.0
+      ],
+      "center_offset_60m": [
+        25,
+        25
+      ],
+      "shape_60m": [
+        51,
+        51
+      ],
+      "stretch": {
+        "B04": [
+          980.0,
+          3162.8999999999996
+        ],
+        "B03": [
+          1093.0,
+          2966.8999999999996
+        ],
+        "B02": [
+          1379.0,
+          3193.8999999999996
+        ],
+        "B08": [
+          1292.0,
+          3807.699999999999
+        ],
+        "B11": [
+          1310.52,
+          3976.96
+        ],
+        "B12": [
+          1003.12,
+          3601.2
+        ]
+      },
+      "mask_policy": "valid original-label support AND all six bands exclude XML special values at every contributing native pixel; small-mask exact equality checked",
+      "original_small_native_pixels_match": true,
+      "window_sha256": "0021989ee66b059f24e1066f851c332102a40ab358e1de697ab5fac6531b8655",
+      "small_sha256": "279c3a8450e3333f6b57e4db7cf6681eb5d135836f7e4c78e2f4682fafa864f2",
+      "large_sha256": "ac58ca166839f531f1aec5d063a0e37c45fa37c5b6336e479886e8ace0d5e226"
+    },
+    {
+      "review_id": "E048",
+      "product": "S2A_MSIL1C_20161108T102232_N0204_R065_T32TNR_20161109T224916",
+      "crs": "EPSG:32632",
+      "row": 202,
+      "col": 307,
+      "center_xy": [
+        518430.0,
+        5087850.0
+      ],
+      "window_60m": [
+        177,
+        228,
+        282,
+        333
+      ],
+      "bounds": [
+        516900.0,
+        5086320.0,
+        519960.0,
+        5089380.0
+      ],
+      "center_offset_60m": [
+        25,
+        25
+      ],
+      "shape_60m": [
+        51,
+        51
+      ],
+      "stretch": {
+        "B04": [
+          328.0,
+          983.8999999999996
+        ],
+        "B03": [
+          521.0,
+          1025.0
+        ],
+        "B02": [
+          844.0,
+          1149.0
+        ],
+        "B08": [
+          389.0,
+          3639.8999999999996
+        ],
+        "B11": [
+          367.08000000000004,
+          2682.6400000000003
+        ],
+        "B12": [
+          213.52,
+          1523.44
+        ]
+      },
+      "mask_policy": "valid original-label support AND all six bands exclude XML special values at every contributing native pixel; small-mask exact equality checked",
+      "original_small_native_pixels_match": true,
+      "window_sha256": "8f4d483686cb87c5b5fb65e34e7fb71541cd1e68e42ed510f81e81562784be51",
+      "small_sha256": "e4141d76e1b34c70a3b230d216a32fff19340f6f1fa8878763992c1dcad8e231",
+      "large_sha256": "43a2bc5f320c613d0f72b7c9ae7d5709af526457ae137c678b4cecfd8e589b53"
+    },
+    {
+      "review_id": "E003",
+      "product": "S2A_MSIL1C_20170313T074931_N0204_R135_T35JPM_20170313T081339",
+      "crs": "EPSG:32735",
+      "row": 1829,
+      "col": 23,
+      "center_xy": [
+        601410.0,
+        7090270.0
+      ],
+      "window_60m": [
+        1804,
+        1830,
+        0,
+        49
+      ],
+      "bounds": [
+        600000.0,
+        7090240.0,
+        602940.0,
+        7091800.0
+      ],
+      "center_offset_60m": [
+        25,
+        23
+      ],
+      "shape_60m": [
+        26,
+        49
+      ],
+      "stretch": {
+        "B04": [
+          397.0,
+          647.5
+        ],
+        "B03": [
+          594.5,
+          804.0
+        ],
+        "B02": [
+          752.0,
+          857.0
+        ],
+        "B08": [
+          931.0,
+          2289.5
+        ],
+        "B11": [
+          534.16,
+          1574.28
+        ],
+        "B12": [
+          256.0,
+          799.14
+        ]
+      },
+      "mask_policy": "valid original-label support AND all six bands exclude XML special values at every contributing native pixel; small-mask exact equality checked",
+      "original_small_native_pixels_match": true,
+      "window_sha256": "7d0c89bb6bd62bcb2f32597dd02eee9d56dacb89aced2a10b72ae3e7cb6b79cf",
+      "small_sha256": "8adee49dfbe28720dac3141cf77c5a0a6df4c69aac5991b8463dd9d5051af1ce",
+      "large_sha256": "de4f20938d8f0915bf5a4e30a36fadc69777b5942a6da99f26af5a02689d622e"
+    },
+    {
+      "review_id": "E013",
+      "product": "S2A_MSIL1C_20170313T074931_N0204_R135_T35JPM_20170313T081339",
+      "crs": "EPSG:32735",
+      "row": 613,
+      "col": 1814,
+      "center_xy": [
+        708870.0,
+        7163230.0
+      ],
+      "window_60m": [
+        588,
+        639,
+        1789,
+        1830
+      ],
+      "bounds": [
+        707340.0,
+        7161700.0,
+        709800.0,
+        7164760.0
+      ],
+      "center_offset_60m": [
+        25,
+        25
+      ],
+      "shape_60m": [
+        51,
+        41
+      ],
+      "stretch": {
+        "B04": [
+          392.1,
+          963.8999999999996
+        ],
+        "B03": [
+          556.0,
+          917.0
+        ],
+        "B02": [
+          690.0,
+          929.0
+        ],
+        "B08": [
+          780.2,
+          2500.699999999999
+        ],
+        "B11": [
+          674.0,
+          2261.48
+        ],
+        "B12": [
+          389.76,
+          1410.44
+        ]
+      },
+      "mask_policy": "valid original-label support AND all six bands exclude XML special values at every contributing native pixel; small-mask exact equality checked",
+      "original_small_native_pixels_match": true,
+      "window_sha256": "becd7664533977ccf81ae596b065aa2a2044048c2e09846bfaa765fcec49bd5a",
+      "small_sha256": "53eb6b1ab0987b69859adcf515e114d6de8e9290b46effbaeecfc4f766d7039a",
+      "large_sha256": "033f3f5f56b0460197c12c5f44c26a18d8e448b39daa4fb1af744908847eefa2"
+    },
+    {
+      "review_id": "E020",
+      "product": "S2A_MSIL1C_20170313T074931_N0204_R135_T35JPM_20170313T081339",
+      "crs": "EPSG:32735",
+      "row": 1766,
+      "col": 870,
+      "center_xy": [
+        652230.0,
+        7094050.0
+      ],
+      "window_60m": [
+        1741,
+        1792,
+        845,
+        896
+      ],
+      "bounds": [
+        650700.0,
+        7092520.0,
+        653760.0,
+        7095580.0
+      ],
+      "center_offset_60m": [
+        25,
+        25
+      ],
+      "shape_60m": [
+        51,
+        51
+      ],
+      "stretch": {
+        "B04": [
+          526.0,
+          1154.7999999999993
+        ],
+        "B03": [
+          703.0,
+          1304.0
+        ],
+        "B02": [
+          840.0,
+          1410.7999999999993
+        ],
+        "B08": [
+          1111.1,
+          2459.0
+        ],
+        "B11": [
+          714.0,
+          1876.96
+        ],
+        "B12": [
+          348.52,
+          1036.44
+        ]
+      },
+      "mask_policy": "valid original-label support AND all six bands exclude XML special values at every contributing native pixel; small-mask exact equality checked",
+      "original_small_native_pixels_match": true,
+      "window_sha256": "1449e7035483259f0110f151f25490abb6449b879c26adf758662497cdbc132f",
+      "small_sha256": "5a4c7b4e94dc9c25acbef9d74df1b2756adaebd4e6afb2a51d3aeacda7a3da7c",
+      "large_sha256": "d8da8705fa4e5c8905c0b9be2f3ca67a3ffc8b36564504da95f7e86111abb21c"
+    },
+    {
+      "review_id": "E030",
+      "product": "S2A_MSIL1C_20170313T074931_N0204_R135_T35JPM_20170313T081339",
+      "crs": "EPSG:32735",
+      "row": 1611,
+      "col": 1762,
+      "center_xy": [
+        705750.0,
+        7103350.0
+      ],
+      "window_60m": [
+        1586,
+        1637,
+        1737,
+        1788
+      ],
+      "bounds": [
+        704220.0,
+        7101820.0,
+        707280.0,
+        7104880.0
+      ],
+      "center_offset_60m": [
+        25,
+        25
+      ],
+      "shape_60m": [
+        51,
+        51
+      ],
+      "stretch": {
+        "B04": [
+          610.0,
+          1821.699999999999
+        ],
+        "B03": [
+          866.1,
+          1636.699999999999
+        ],
+        "B02": [
+          924.0,
+          1588.699999999999
+        ],
+        "B08": [
+          2179.0,
+          5032.499999999998
+        ],
+        "B11": [
+          1545.76,
+          2896.76
+        ],
+        "B12": [
+          749.0,
+          2150.0
+        ]
+      },
+      "mask_policy": "valid original-label support AND all six bands exclude XML special values at every contributing native pixel; small-mask exact equality checked",
+      "original_small_native_pixels_match": true,
+      "window_sha256": "bc9c32131529f2dad4710f6b668229620d6528fd63269c85447f954c8cddcfa1",
+      "small_sha256": "d50540054029f23a2aff606f2de94a3e7a2571196ea9f0024d61d509d9964f77",
+      "large_sha256": "deb8f91beea9d8dcfef93dacb1e1e4bf6a3b7d3c91f28ec32eadc93354328d14"
+    },
+    {
+      "review_id": "E032",
+      "product": "S2A_MSIL1C_20170313T074931_N0204_R135_T35JPM_20170313T081339",
+      "crs": "EPSG:32735",
+      "row": 1732,
+      "col": 1091,
+      "center_xy": [
+        665490.0,
+        7096090.0
+      ],
+      "window_60m": [
+        1707,
+        1758,
+        1066,
+        1117
+      ],
+      "bounds": [
+        663960.0,
+        7094560.0,
+        667020.0,
+        7097620.0
+      ],
+      "center_offset_60m": [
+        25,
+        25
+      ],
+      "shape_60m": [
+        51,
+        51
+      ],
+      "stretch": {
+        "B04": [
+          400.0,
+          827.8999999999996
+        ],
+        "B03": [
+          631.0,
+          917.0
+        ],
+        "B02": [
+          768.1,
+          954.0
+        ],
+        "B08": [
+          1064.1,
+          4701.799999999999
+        ],
+        "B11": [
+          648.76,
+          2220.92
+        ],
+        "B12": [
+          310.0,
+          1053.0
+        ]
+      },
+      "mask_policy": "valid original-label support AND all six bands exclude XML special values at every contributing native pixel; small-mask exact equality checked",
+      "original_small_native_pixels_match": true,
+      "window_sha256": "624146e647c84e4defd9a08401374a5d4520687684a3dd527c6cc6966e106877",
+      "small_sha256": "9a8340205959a21c70b56ee97db5571290ee64b11961587eecba2e3c8bc09a30",
+      "large_sha256": "d6f81e7cea48a30bd26cc959b249482376fda39460a1800c8d431818b89534e7"
+    },
+    {
+      "review_id": "E042",
+      "product": "S2A_MSIL1C_20170313T074931_N0204_R135_T35JPM_20170313T081339",
+      "crs": "EPSG:32735",
+      "row": 0,
+      "col": 125,
+      "center_xy": [
+        607530.0,
+        7200010.0
+      ],
+      "window_60m": [
+        0,
+        26,
+        100,
+        151
+      ],
+      "bounds": [
+        606000.0,
+        7198480.0,
+        609060.0,
+        7200040.0
+      ],
+      "center_offset_60m": [
+        0,
+        25
+      ],
+      "shape_60m": [
+        26,
+        51
+      ],
+      "stretch": {
+        "B04": [
+          657.5,
+          1017.5
+        ],
+        "B03": [
+          891.5,
+          1140.0
+        ],
+        "B02": [
+          966.5,
+          1156.5
+        ],
+        "B08": [
+          1963.5,
+          2687.5
+        ],
+        "B11": [
+          1527.0,
+          2206.2799999999997
+        ],
+        "B12": [
+          851.58,
+          1383.12
+        ]
+      },
+      "mask_policy": "valid original-label support AND all six bands exclude XML special values at every contributing native pixel; small-mask exact equality checked",
+      "original_small_native_pixels_match": true,
+      "window_sha256": "441213006ab15f9714606612a59763c31ca927a47a7c4f801c38d80ef9f357e1",
+      "small_sha256": "48174040b51c3fef49cf9def6e5d7b3ef1ab97ba1cbb90934b3e7e2b0ac15fd1",
+      "large_sha256": "bc9cb2a564181a5dca9699089c70e9ed72ca52727eb773a5641769bfc104867c"
+    },
+    {
+      "review_id": "E044",
+      "product": "S2A_MSIL1C_20170313T074931_N0204_R135_T35JPM_20170313T081339",
+      "crs": "EPSG:32735",
+      "row": 1448,
+      "col": 1126,
+      "center_xy": [
+        667590.0,
+        7113130.0
+      ],
+      "window_60m": [
+        1423,
+        1474,
+        1101,
+        1152
+      ],
+      "bounds": [
+        666060.0,
+        7111600.0,
+        669120.0,
+        7114660.0
+      ],
+      "center_offset_60m": [
+        25,
+        25
+      ],
+      "shape_60m": [
+        51,
+        51
+      ],
+      "stretch": {
+        "B04": [
+          649.2,
+          1281.699999999999
+        ],
+        "B03": [
+          812.0,
+          1165.7999999999993
+        ],
+        "B02": [
+          897.0,
+          1168.0
+        ],
+        "B08": [
+          1375.0,
+          2884.399999999998
+        ],
+        "B11": [
+          1560.0,
+          2276.2400000000002
+        ],
+        "B12": [
+          859.52,
+          1405.8400000000001
+        ]
+      },
+      "mask_policy": "valid original-label support AND all six bands exclude XML special values at every contributing native pixel; small-mask exact equality checked",
+      "original_small_native_pixels_match": true,
+      "window_sha256": "f3ad700eb63d0df0b46facc710540e0d6ce7c215266a4240dd6ab26e9a9cfd31",
+      "small_sha256": "1f2e50146371df7cdc99721056d259d650cd1a3f6fa39495a15a5342d00ece65",
+      "large_sha256": "62b53b630d0468aad7ae19c7a4815c440b00cf11ff4c7d1351d337ad3a6df263"
+    },
+    {
+      "review_id": "E051",
+      "product": "S2A_MSIL1C_20170313T074931_N0204_R135_T35JPM_20170313T081339",
+      "crs": "EPSG:32735",
+      "row": 498,
+      "col": 1342,
+      "center_xy": [
+        680550.0,
+        7170130.0
+      ],
+      "window_60m": [
+        473,
+        524,
+        1317,
+        1368
+      ],
+      "bounds": [
+        679020.0,
+        7168600.0,
+        682080.0,
+        7171660.0
+      ],
+      "center_offset_60m": [
+        25,
+        25
+      ],
+      "shape_60m": [
+        51,
+        51
+      ],
+      "stretch": {
+        "B04": [
+          706.2,
+          1654.699999999999
+        ],
+        "B03": [
+          782.0,
+          1218.7999999999993
+        ],
+        "B02": [
+          871.1,
+          1063.8999999999996
+        ],
+        "B08": [
+          1589.0,
+          2291.8999999999996
+        ],
+        "B11": [
+          1910.84,
+          3168.7200000000003
+        ],
+        "B12": [
+          1059.76,
+          2282.36
+        ]
+      },
+      "mask_policy": "valid original-label support AND all six bands exclude XML special values at every contributing native pixel; small-mask exact equality checked",
+      "original_small_native_pixels_match": true,
+      "window_sha256": "3676ce365c51e539a966cc65d945634f10b4523748a884e566457bd12e1641ed",
+      "small_sha256": "5f7cf95709b1f6bd802c87ee268720e890bb7d2f469c7f228333c6fab093c814",
+      "large_sha256": "71b7edf91a8a9cd11c505ab59f10266f1e7fe32da6e693e53b11b5d8041b1117"
+    },
+    {
+      "review_id": "E001",
+      "product": "S2A_MSIL1C_20170501T183311_N0205_R127_T11SPC_20170501T183311",
+      "crs": "EPSG:32611",
+      "row": 448,
+      "col": 682,
+      "center_xy": [
+        640950.0,
+        4273110.0
+      ],
+      "window_60m": [
+        423,
+        474,
+        657,
+        708
+      ],
+      "bounds": [
+        639420.0,
+        4271580.0,
+        642480.0,
+        4274640.0
+      ],
+      "center_offset_60m": [
+        25,
+        25
+      ],
+      "shape_60m": [
+        51,
+        51
+      ],
+      "stretch": {
+        "B04": [
+          1003.0,
+          1741.0
+        ],
+        "B03": [
+          974.1,
+          1486.8999999999996
+        ],
+        "B02": [
+          1010.0,
+          1412.7999999999993
+        ],
+        "B08": [
+          1783.1,
+          2588.8999999999996
+        ],
+        "B11": [
+          1836.28,
+          2614.92
+        ],
+        "B12": [
+          1421.8,
+          2081.7200000000003
+        ]
+      },
+      "mask_policy": "valid original-label support AND all six bands exclude XML special values at every contributing native pixel; small-mask exact equality checked",
+      "original_small_native_pixels_match": true,
+      "window_sha256": "628b9fc91f73a8c709fa4d1eb93a256634ecddcfea3b7062f69b1cbfc7212d02",
+      "small_sha256": "8d8574384949b28f69cabce40546bdd95321c0dabbbe83cb0d8720642f07b653",
+      "large_sha256": "32d3f59928e2588e8278d957345a2a7dc7d1348245ba427cab435a11c5b1abc5"
+    },
+    {
+      "review_id": "E014",
+      "product": "S2A_MSIL1C_20170501T183311_N0205_R127_T11SPC_20170501T183311",
+      "crs": "EPSG:32611",
+      "row": 31,
+      "col": 1531,
+      "center_xy": [
+        691890.0,
+        4298130.0
+      ],
+      "window_60m": [
+        6,
+        57,
+        1506,
+        1557
+      ],
+      "bounds": [
+        690360.0,
+        4296600.0,
+        693420.0,
+        4299660.0
+      ],
+      "center_offset_60m": [
+        25,
+        25
+      ],
+      "shape_60m": [
+        51,
+        51
+      ],
+      "stretch": {
+        "B04": [
+          366.0,
+          2672.8999999999996
+        ],
+        "B03": [
+          480.0,
+          2541.0
+        ],
+        "B02": [
+          648.0,
+          2666.899999999996
+        ],
+        "B08": [
+          546.0,
+          3314.8999999999996
+        ],
+        "B11": [
+          476.0,
+          3833.24
+        ],
+        "B12": [
+          364.76,
+          2926.24
+        ]
+      },
+      "mask_policy": "valid original-label support AND all six bands exclude XML special values at every contributing native pixel; small-mask exact equality checked",
+      "original_small_native_pixels_match": true,
+      "window_sha256": "f533c392c262772459c0484ee8c7ef7d9462eff3e95832619f7d3365f07db135",
+      "small_sha256": "4650ad94b21be44f3354f664d2cd023bc904673d4fcc7a633cf2d790bf2ce045",
+      "large_sha256": "43df335170199b922058b8cc94039b9b873a8530f2608ab0a9232b3ff52ea57b"
+    },
+    {
+      "review_id": "E018",
+      "product": "S2A_MSIL1C_20170501T183311_N0205_R127_T11SPC_20170501T183311",
+      "crs": "EPSG:32611",
+      "row": 968,
+      "col": 1060,
+      "center_xy": [
+        663630.0,
+        4241910.0
+      ],
+      "window_60m": [
+        943,
+        994,
+        1035,
+        1086
+      ],
+      "bounds": [
+        662100.0,
+        4240380.0,
+        665160.0,
+        4243440.0
+      ],
+      "center_offset_60m": [
+        25,
+        25
+      ],
+      "shape_60m": [
+        51,
+        51
+      ],
+      "stretch": {
+        "B04": [
+          542.0,
+          2610.499999999998
+        ],
+        "B03": [
+          626.0,
+          2113.0
+        ],
+        "B02": [
+          818.1,
+          1985.8999999999996
+        ],
+        "B08": [
+          529.1,
+          3060.7999999999993
+        ],
+        "B11": [
+          503.76,
+          3325.7200000000003
+        ],
+        "B12": [
+          441.76,
+          2916.2
+        ]
+      },
+      "mask_policy": "valid original-label support AND all six bands exclude XML special values at every contributing native pixel; small-mask exact equality checked",
+      "original_small_native_pixels_match": true,
+      "window_sha256": "c34cfacdc088f42e3b7df936e3c8a66f7fa71a433f1d0a58852446bcf1c7c7f6",
+      "small_sha256": "0e036126bca04bfdd113be85672646770829431a325f50f75f4c3bd973c268a6",
+      "large_sha256": "a3f84c09add927c2c01592fb968b10050e1a82f6504e3e976d18caa3cd0d7c59"
+    },
+    {
+      "review_id": "E019",
+      "product": "S2A_MSIL1C_20170501T183311_N0205_R127_T11SPC_20170501T183311",
+      "crs": "EPSG:32611",
+      "row": 1819,
+      "col": 199,
+      "center_xy": [
+        611970.0,
+        4190850.0
+      ],
+      "window_60m": [
+        1794,
+        1830,
+        174,
+        225
+      ],
+      "bounds": [
+        610440.0,
+        4190220.0,
+        613500.0,
+        4192380.0
+      ],
+      "center_offset_60m": [
+        25,
+        25
+      ],
+      "shape_60m": [
+        36,
+        51
+      ],
+      "stretch": {
+        "B04": [
+          2508.1,
+          2962.8999999999996
+        ],
+        "B03": [
+          2075.0,
+          2438.0
+        ],
+        "B02": [
+          1911.1,
+          2197.0
+        ],
+        "B08": [
+          2998.1,
+          3559.0
+        ],
+        "B11": [
+          3325.76,
+          3972.96
+        ],
+        "B12": [
+          2951.76,
+          3463.24
+        ]
+      },
+      "mask_policy": "valid original-label support AND all six bands exclude XML special values at every contributing native pixel; small-mask exact equality checked",
+      "original_small_native_pixels_match": true,
+      "window_sha256": "35056fdc5c698a04e95d993e725e9f2cd223b5cd268bbf246dd13832400db52c",
+      "small_sha256": "cbbc77701d2c5bd53a961c616cb13717e97e76448f41bd1fd6cc96abebe0d579",
+      "large_sha256": "529baf008ebaa2c5bda980dd0aff7c8793327232a4d306625d0b05d4639d00f9"
+    },
+    {
+      "review_id": "E022",
+      "product": "S2A_MSIL1C_20170501T183311_N0205_R127_T11SPC_20170501T183311",
+      "crs": "EPSG:32611",
+      "row": 839,
+      "col": 1092,
+      "center_xy": [
+        665550.0,
+        4249650.0
+      ],
+      "window_60m": [
+        814,
+        865,
+        1067,
+        1118
+      ],
+      "bounds": [
+        664020.0,
+        4248120.0,
+        667080.0,
+        4251180.0
+      ],
+      "center_offset_60m": [
+        25,
+        25
+      ],
+      "shape_60m": [
+        51,
+        51
+      ],
+      "stretch": {
+        "B04": [
+          317.1,
+          3926.0
+        ],
+        "B03": [
+          464.0,
+          3459.2999999999975
+        ],
+        "B02": [
+          668.0,
+          3180.8999999999996
+        ],
+        "B08": [
+          198.0,
+          4444.599999999995
+        ],
+        "B11": [
+          109.76,
+          5043.16
+        ],
+        "B12": [
+          94.0,
+          4116.4400000000005
+        ]
+      },
+      "mask_policy": "valid original-label support AND all six bands exclude XML special values at every contributing native pixel; small-mask exact equality checked",
+      "original_small_native_pixels_match": true,
+      "window_sha256": "4fadcc95760e61412bfd7ab1c4775fc3a6c7cfa4122c075e5946c04daee0421a",
+      "small_sha256": "6054ab977eceb2eed6f270a331e5eec258690989d1d207b70594e3afd62cb6e3",
+      "large_sha256": "6840c12bccc1207f5354f097e00eafd79940c8e01fadd68ba7cf72ca51b22427"
+    },
+    {
+      "review_id": "E029",
+      "product": "S2A_MSIL1C_20170501T183311_N0205_R127_T11SPC_20170501T183311",
+      "crs": "EPSG:32611",
+      "row": 991,
+      "col": 1355,
+      "center_xy": [
+        681330.0,
+        4240530.0
+      ],
+      "window_60m": [
+        966,
+        1017,
+        1330,
+        1381
+      ],
+      "bounds": [
+        679800.0,
+        4239000.0,
+        682860.0,
+        4242060.0
+      ],
+      "center_offset_60m": [
+        25,
+        25
+      ],
+      "shape_60m": [
+        51,
+        51
+      ],
+      "stretch": {
+        "B04": [
+          541.1,
+          2152.0
+        ],
+        "B03": [
+          621.0,
+          1774.0
+        ],
+        "B02": [
+          792.0,
+          1755.8999999999996
+        ],
+        "B08": [
+          587.1,
+          2913.0
+        ],
+        "B11": [
+          582.04,
+          3348.16
+        ],
+        "B12": [
+          442.52,
+          2688.32
+        ]
+      },
+      "mask_policy": "valid original-label support AND all six bands exclude XML special values at every contributing native pixel; small-mask exact equality checked",
+      "original_small_native_pixels_match": true,
+      "window_sha256": "7206eaebda304490334970302df1b9601d426cd3ddc14c0cd393611e4e2dbbf3",
+      "small_sha256": "e7ef10e9f974786a3ff842618d334861599dd305fe623f78ac194f1e0f82aa4d",
+      "large_sha256": "b89c2cf48b6901cc4b8456fb41beaa5b367b6dd6c422eb6331731ad4feca4c3a"
+    },
+    {
+      "review_id": "E037",
+      "product": "S2A_MSIL1C_20170501T183311_N0205_R127_T11SPC_20170501T183311",
+      "crs": "EPSG:32611",
+      "row": 769,
+      "col": 1063,
+      "center_xy": [
+        663810.0,
+        4253850.0
+      ],
+      "window_60m": [
+        744,
+        795,
+        1038,
+        1089
+      ],
+      "bounds": [
+        662280.0,
+        4252320.0,
+        665340.0,
+        4255380.0
+      ],
+      "center_offset_60m": [
+        25,
+        25
+      ],
+      "shape_60m": [
+        51,
+        51
+      ],
+      "stretch": {
+        "B04": [
+          930.1,
+          4062.7999999999993
+        ],
+        "B03": [
+          960.2,
+          3428.0999999999967
+        ],
+        "B02": [
+          1090.0,
+          3097.8999999999996
+        ],
+        "B08": [
+          1013.1,
+          4725.899999999996
+        ],
+        "B11": [
+          1117.52,
+          4925.76
+        ],
+        "B12": [
+          920.76,
+          4174.68
+        ]
+      },
+      "mask_policy": "valid original-label support AND all six bands exclude XML special values at every contributing native pixel; small-mask exact equality checked",
+      "original_small_native_pixels_match": true,
+      "window_sha256": "630acab48b9c27cfe5006e343ce066e403f95f8affe97ad252074e4fffbd17cb",
+      "small_sha256": "e3b843f29904748ea0881701be44404c2bbffdaa005ab3316e302a089a118d76",
+      "large_sha256": "d148534180c96fd5abf143dde711d8e2446b5330a60c5ad6be6a38a1eedceef7"
+    },
+    {
+      "review_id": "E038",
+      "product": "S2A_MSIL1C_20170501T183311_N0205_R127_T11SPC_20170501T183311",
+      "crs": "EPSG:32611",
+      "row": 50,
+      "col": 703,
+      "center_xy": [
+        642210.0,
+        4296990.0
+      ],
+      "window_60m": [
+        25,
+        76,
+        678,
+        729
+      ],
+      "bounds": [
+        640680.0,
+        4295460.0,
+        643740.0,
+        4298520.0
+      ],
+      "center_offset_60m": [
+        25,
+        25
+      ],
+      "shape_60m": [
+        51,
+        51
+      ],
+      "stretch": {
+        "B04": [
+          1011.2,
+          2384.699999999999
+        ],
+        "B03": [
+          1029.0,
+          1962.0
+        ],
+        "B02": [
+          1066.0,
+          1712.8999999999996
+        ],
+        "B08": [
+          1748.2,
+          2945.5999999999985
+        ],
+        "B11": [
+          1705.04,
+          3578.16
+        ],
+        "B12": [
+          1262.76,
+          2867.48
+        ]
+      },
+      "mask_policy": "valid original-label support AND all six bands exclude XML special values at every contributing native pixel; small-mask exact equality checked",
+      "original_small_native_pixels_match": true,
+      "window_sha256": "c78bb0199caa90deff6d44166f1368eb68ccfcb835f5ccb8a8322c088a77946c",
+      "small_sha256": "915b0754db90e660f31db33d12c717b39acd15bd7ecf3a3c4083a81e8f678671",
+      "large_sha256": "30d1571a04224bcfb7abcf47dc5adf2629cf0e1932cfaebbcd80879c1a1a2aa4"
+    },
+    {
+      "review_id": "E012",
+      "product": "S2A_MSIL1C_20170516T105031_N0205_R051_T31UDP_20170516T105322",
+      "crs": "EPSG:32631",
+      "row": 1768,
+      "col": 1177,
+      "center_xy": [
+        470610.0,
+        5293890.0
+      ],
+      "window_60m": [
+        1743,
+        1794,
+        1152,
+        1203
+      ],
+      "bounds": [
+        469080.0,
+        5292360.0,
+        472140.0,
+        5295420.0
+      ],
+      "center_offset_60m": [
+        25,
+        25
+      ],
+      "shape_60m": [
+        51,
+        51
+      ],
+      "stretch": {
+        "B04": [
+          1765.1,
+          2469.0
+        ],
+        "B03": [
+          1954.2,
+          2594.0
+        ],
+        "B02": [
+          2119.0,
+          2770.0
+        ],
+        "B08": [
+          3692.0,
+          4186.0
+        ],
+        "B11": [
+          1653.76,
+          1986.0
+        ],
+        "B12": [
+          1143.76,
+          1580.44
+        ]
+      },
+      "mask_policy": "valid original-label support AND all six bands exclude XML special values at every contributing native pixel; small-mask exact equality checked",
+      "original_small_native_pixels_match": true,
+      "window_sha256": "208d21ab2d27f4231e02d15e06a91b5fb75b975707fb2c1301df5814d6393a92",
+      "small_sha256": "05cae256bcbd8c958da4717f5ad26f24e2e7ddd91d9af0ca52ce324600a2f02a",
+      "large_sha256": "c2255fac0fdc1e55e214fdde4be70374211d3b83f0c576644aabe9f585cf69d6"
+    },
+    {
+      "review_id": "E016",
+      "product": "S2A_MSIL1C_20170516T105031_N0205_R051_T31UDP_20170516T105322",
+      "crs": "EPSG:32631",
+      "row": 1633,
+      "col": 526,
+      "center_xy": [
+        431550.0,
+        5301990.0
+      ],
+      "window_60m": [
+        1608,
+        1659,
+        501,
+        552
+      ],
+      "bounds": [
+        430020.0,
+        5300460.0,
+        433080.0,
+        5303520.0
+      ],
+      "center_offset_60m": [
+        25,
+        25
+      ],
+      "shape_60m": [
+        51,
+        51
+      ],
+      "stretch": {
+        "B04": [
+          626.0,
+          1892.8999999999996
+        ],
+        "B03": [
+          874.1,
+          1873.0
+        ],
+        "B02": [
+          1039.0,
+          1920.8999999999996
+        ],
+        "B08": [
+          1103.3,
+          3812.0
+        ],
+        "B11": [
+          859.5600000000001,
+          2506.0
+        ],
+        "B12": [
+          568.76,
+          1896.0
+        ]
+      },
+      "mask_policy": "valid original-label support AND all six bands exclude XML special values at every contributing native pixel; small-mask exact equality checked",
+      "original_small_native_pixels_match": true,
+      "window_sha256": "c7d3c80b16a924f2f3211bb0c05c4698e008042a56c10397b459ead60693758b",
+      "small_sha256": "1ff13c19392e752eb98adbf7b5a4ecef68fd6420ad0bb70b92ebf30187602fc4",
+      "large_sha256": "4f425da206e65181ba87aae4e845ebf3aa7a62b273a8216c2d454c535aa8dd16"
+    },
+    {
+      "review_id": "E026",
+      "product": "S2A_MSIL1C_20170516T105031_N0205_R051_T31UDP_20170516T105322",
+      "crs": "EPSG:32631",
+      "row": 482,
+      "col": 158,
+      "center_xy": [
+        409470.0,
+        5371050.0
+      ],
+      "window_60m": [
+        457,
+        508,
+        133,
+        184
+      ],
+      "bounds": [
+        407940.0,
+        5369520.0,
+        411000.0,
+        5372580.0
+      ],
+      "center_offset_60m": [
+        25,
+        25
+      ],
+      "shape_60m": [
+        51,
+        51
+      ],
+      "stretch": {
+        "B04": [
+          352.1,
+          2391.7999999999993
+        ],
+        "B03": [
+          631.0,
+          1901.8999999999996
+        ],
+        "B02": [
+          789.0,
+          1586.8999999999996
+        ],
+        "B08": [
+          2647.3,
+          5285.0
+        ],
+        "B11": [
+          978.76,
+          3935.24
+        ],
+        "B12": [
+          390.76,
+          3276.16
+        ]
+      },
+      "mask_policy": "valid original-label support AND all six bands exclude XML special values at every contributing native pixel; small-mask exact equality checked",
+      "original_small_native_pixels_match": true,
+      "window_sha256": "7173833feaf213f356dda8353fda6a513a0525e25b01126dfe396f864ae20c55",
+      "small_sha256": "751c93c08310cda4caf6ad612ecedb8934ecfb4d9f1ae401a5612064742b6d57",
+      "large_sha256": "224c8b71534299c64d15ccec7e21d84ff1074103c6b2575a1d6a114c5c23d6c8"
+    },
+    {
+      "review_id": "E035",
+      "product": "S2A_MSIL1C_20170516T105031_N0205_R051_T31UDP_20170516T105322",
+      "crs": "EPSG:32631",
+      "row": 1829,
+      "col": 937,
+      "center_xy": [
+        456210.0,
+        5290230.0
+      ],
+      "window_60m": [
+        1804,
+        1830,
+        912,
+        963
+      ],
+      "bounds": [
+        454680.0,
+        5290200.0,
+        457740.0,
+        5291760.0
+      ],
+      "center_offset_60m": [
+        25,
+        25
+      ],
+      "shape_60m": [
+        26,
+        51
+      ],
+      "stretch": {
+        "B04": [
+          341.0,
+          1726.0
+        ],
+        "B03": [
+          597.0,
+          1492.5
+        ],
+        "B02": [
+          767.0,
+          1424.5
+        ],
+        "B08": [
+          2025.5,
+          3264.0
+        ],
+        "B11": [
+          613.0,
+          2360.2799999999997
+        ],
+        "B12": [
+          270.86,
+          1935.28
+        ]
+      },
+      "mask_policy": "valid original-label support AND all six bands exclude XML special values at every contributing native pixel; small-mask exact equality checked",
+      "original_small_native_pixels_match": true,
+      "window_sha256": "7a13158733e193317c9d6b81d995400d66ad27402c0251c543cbe3ed81ba62cf",
+      "small_sha256": "4ad8567fd184cb7e47b99469089bf2c39bbbb9a01dbc14a08680c66e8d012ccf",
+      "large_sha256": "a3e14dabd823a1eefe8df397d03c0511ce0109b839b46f31b71940922cd77bbb"
+    },
+    {
+      "review_id": "E046",
+      "product": "S2A_MSIL1C_20170516T105031_N0205_R051_T31UDP_20170516T105322",
+      "crs": "EPSG:32631",
+      "row": 1572,
+      "col": 1051,
+      "center_xy": [
+        463050.0,
+        5305650.0
+      ],
+      "window_60m": [
+        1547,
+        1598,
+        1026,
+        1077
+      ],
+      "bounds": [
+        461520.0,
+        5304120.0,
+        464580.0,
+        5307180.0
+      ],
+      "center_offset_60m": [
+        25,
+        25
+      ],
+      "shape_60m": [
+        51,
+        51
+      ],
+      "stretch": {
+        "B04": [
+          688.0,
+          2285.0
+        ],
+        "B03": [
+          907.1,
+          2068.8999999999996
+        ],
+        "B02": [
+          1011.0,
+          1978.0
+        ],
+        "B08": [
+          2409.2,
+          4831.0
+        ],
+        "B11": [
+          1356.56,
+          3740.44
+        ],
+        "B12": [
+          762.28,
+          2815.7200000000003
+        ]
+      },
+      "mask_policy": "valid original-label support AND all six bands exclude XML special values at every contributing native pixel; small-mask exact equality checked",
+      "original_small_native_pixels_match": true,
+      "window_sha256": "e59cb6fe089dd093475a3a915b2bf97e2459fc7e0a2cd6e0cccaab266c973c0f",
+      "small_sha256": "e0800abe6a386a2a2b6db9921a2c01a156d36ebd31c8d47a5252cd369a78b993",
+      "large_sha256": "f0fcb6fcbad4b8fa81d48e441e9e154fddc8659309aceb1831c2b1d20be2176a"
+    },
+    {
+      "review_id": "E053",
+      "product": "S2A_MSIL1C_20170516T105031_N0205_R051_T31UDP_20170516T105322",
+      "crs": "EPSG:32631",
+      "row": 125,
+      "col": 665,
+      "center_xy": [
+        439890.0,
+        5392470.0
+      ],
+      "window_60m": [
+        100,
+        151,
+        640,
+        691
+      ],
+      "bounds": [
+        438360.0,
+        5390940.0,
+        441420.0,
+        5394000.0
+      ],
+      "center_offset_60m": [
+        25,
+        25
+      ],
+      "shape_60m": [
+        51,
+        51
+      ],
+      "stretch": {
+        "B04": [
+          571.1,
+          2950.0
+        ],
+        "B03": [
+          733.2,
+          2948.0
+        ],
+        "B02": [
+          881.0,
+          3122.8999999999996
+        ],
+        "B08": [
+          1180.2,
+          4252.9
+        ],
+        "B11": [
+          972.76,
+          3278.24
+        ],
+        "B12": [
+          640.0,
+          2557.24
+        ]
+      },
+      "mask_policy": "valid original-label support AND all six bands exclude XML special values at every contributing native pixel; small-mask exact equality checked",
+      "original_small_native_pixels_match": true,
+      "window_sha256": "f161b1c2c16aabd55bafc41beffabaddff49244be64c85882648d70e5d0afaba",
+      "small_sha256": "48d90d675d9af0fd935971a2924881fb60a69878cdc136479d66b35585c8a081",
+      "large_sha256": "b4e5bef66a53d8f5a806880b7a9858fbaa60f2e1f9664c5e784eb95627ce395d"
+    },
+    {
+      "review_id": "E054",
+      "product": "S2A_MSIL1C_20170516T105031_N0205_R051_T31UDP_20170516T105322",
+      "crs": "EPSG:32631",
+      "row": 1600,
+      "col": 1720,
+      "center_xy": [
+        503190.0,
+        5303970.0
+      ],
+      "window_60m": [
+        1575,
+        1626,
+        1695,
+        1746
+      ],
+      "bounds": [
+        501660.0,
+        5302440.0,
+        504720.0,
+        5305500.0
+      ],
+      "center_offset_60m": [
+        25,
+        25
+      ],
+      "shape_60m": [
+        51,
+        51
+      ],
+      "stretch": {
+        "B04": [
+          833.0,
+          1306.0
+        ],
+        "B03": [
+          1061.0,
+          1495.0
+        ],
+        "B02": [
+          1188.0,
+          1659.8999999999996
+        ],
+        "B08": [
+          2566.0,
+          3502.0
+        ],
+        "B11": [
+          858.76,
+          1323.0
+        ],
+        "B12": [
+          536.76,
+          935.96
+        ]
+      },
+      "mask_policy": "valid original-label support AND all six bands exclude XML special values at every contributing native pixel; small-mask exact equality checked",
+      "original_small_native_pixels_match": true,
+      "window_sha256": "9672b826edf251fc10d342036f21760ade9015b3477bb8a6da16b9bcc5c45e7d",
+      "small_sha256": "d8365ac80ae590573ff853dfa74081edcf9adb66c54713365ce6f67615a0bcd4",
+      "large_sha256": "16bc0e32f079b85caa329efd5e4e73627892c5e1acd24816b0a255aecd3d0681"
+    },
+    {
+      "review_id": "E009",
+      "product": "S2A_MSIL1C_20170917T103021_N0205_R108_T31TFJ_20170917T103018",
+      "crs": "EPSG:32631",
+      "row": 1003,
+      "col": 605,
+      "center_xy": [
+        636330.0,
+        4839810.0
+      ],
+      "window_60m": [
+        978,
+        1029,
+        580,
+        631
+      ],
+      "bounds": [
+        634800.0,
+        4838280.0,
+        637860.0,
+        4841340.0
+      ],
+      "center_offset_60m": [
+        25,
+        25
+      ],
+      "shape_60m": [
+        51,
+        51
+      ],
+      "stretch": {
+        "B04": [
+          1167.0,
+          2192.699999999999
+        ],
+        "B03": [
+          1312.1,
+          2121.8999999999996
+        ],
+        "B02": [
+          1524.0,
+          2261.699999999999
+        ],
+        "B08": [
+          2147.1,
+          3325.8999999999996
+        ],
+        "B11": [
+          1436.8,
+          2564.24
+        ],
+        "B12": [
+          865.28,
+          1857.5600000000002
+        ]
+      },
+      "mask_policy": "valid original-label support AND all six bands exclude XML special values at every contributing native pixel; small-mask exact equality checked",
+      "original_small_native_pixels_match": true,
+      "window_sha256": "bde212cb3709224d6e5f88ef7e3a9b9d3b9462122522e44e18305cd556d50207",
+      "small_sha256": "68a6324e15c5586f34c319f54cdae867cc0928e8a95669b258298f9c2d1c9527",
+      "large_sha256": "c1c415ff85de5997043e23b6ef2f57f035b178f4b65d3b582573d66542e83b3e"
+    },
+    {
+      "review_id": "E010",
+      "product": "S2A_MSIL1C_20170917T103021_N0205_R108_T31TFJ_20170917T103018",
+      "crs": "EPSG:32631",
+      "row": 755,
+      "col": 1384,
+      "center_xy": [
+        683070.0,
+        4854690.0
+      ],
+      "window_60m": [
+        730,
+        781,
+        1359,
+        1410
+      ],
+      "bounds": [
+        681540.0,
+        4853160.0,
+        684600.0,
+        4856220.0
+      ],
+      "center_offset_60m": [
+        25,
+        25
+      ],
+      "shape_60m": [
+        51,
+        51
+      ],
+      "stretch": {
+        "B04": [
+          508.1,
+          1524.8999999999996
+        ],
+        "B03": [
+          743.0,
+          1474.7999999999993
+        ],
+        "B02": [
+          904.0,
+          1508.0
+        ],
+        "B08": [
+          1468.1,
+          3083.7999999999993
+        ],
+        "B11": [
+          971.52,
+          2708.28
+        ],
+        "B12": [
+          468.76,
+          1724.9600000000003
+        ]
+      },
+      "mask_policy": "valid original-label support AND all six bands exclude XML special values at every contributing native pixel; small-mask exact equality checked",
+      "original_small_native_pixels_match": true,
+      "window_sha256": "e8dd767faa549dad95f0d48cc96b36c289b681239267a7bf92a8c7a1a786cede",
+      "small_sha256": "3e9f3e78686ffaeba68fca54a48ca963327ba1fe47ce07e46df95dd3e0d779b9",
+      "large_sha256": "234053fe5cd792735ca1bf0d2d7f85b15b4624b24c149cb5160ed754030096d2"
+    },
+    {
+      "review_id": "E017",
+      "product": "S2A_MSIL1C_20170917T103021_N0205_R108_T31TFJ_20170917T103018",
+      "crs": "EPSG:32631",
+      "row": 1431,
+      "col": 17,
+      "center_xy": [
+        601050.0,
+        4814130.0
+      ],
+      "window_60m": [
+        1406,
+        1457,
+        0,
+        43
+      ],
+      "bounds": [
+        600000.0,
+        4812600.0,
+        602580.0,
+        4815660.0
+      ],
+      "center_offset_60m": [
+        25,
+        17
+      ],
+      "shape_60m": [
+        51,
+        43
+      ],
+      "stretch": {
+        "B04": [
+          3547.2,
+          4849.9
+        ],
+        "B03": [
+          3545.5,
+          4676.0
+        ],
+        "B02": [
+          3837.3,
+          5006.0
+        ],
+        "B08": [
+          3709.0,
+          5045.9
+        ],
+        "B11": [
+          3341.28,
+          4497.24
+        ],
+        "B12": [
+          2839.52,
+          3711.0
+        ]
+      },
+      "mask_policy": "valid original-label support AND all six bands exclude XML special values at every contributing native pixel; small-mask exact equality checked",
+      "original_small_native_pixels_match": true,
+      "window_sha256": "a44ddcd2a4cd860a9b23c57a88ef6a47a8c1f8fd7a6f9c5f4344c5b110bb890c",
+      "small_sha256": "6cbaebc4cce2d39adc95d24a05ae286c1ae3bedf3439595d149b6dd9e16161e3",
+      "large_sha256": "1f5e9c2faf80e3db3407a752e42b489ce2d1dc4aa8b72f710dbcb791ace6742b"
+    },
+    {
+      "review_id": "E021",
+      "product": "S2A_MSIL1C_20170917T103021_N0205_R108_T31TFJ_20170917T103018",
+      "crs": "EPSG:32631",
+      "row": 1073,
+      "col": 1437,
+      "center_xy": [
+        686250.0,
+        4835610.0
+      ],
+      "window_60m": [
+        1048,
+        1099,
+        1412,
+        1463
+      ],
+      "bounds": [
+        684720.0,
+        4834080.0,
+        687780.0,
+        4837140.0
+      ],
+      "center_offset_60m": [
+        25,
+        25
+      ],
+      "shape_60m": [
+        51,
+        51
+      ],
+      "stretch": {
+        "B04": [
+          400.0,
+          1889.3999999999978
+        ],
+        "B03": [
+          620.0,
+          1547.4999999999982
+        ],
+        "B02": [
+          824.0,
+          1483.8999999999996
+        ],
+        "B08": [
+          1120.1,
+          2763.0
+        ],
+        "B11": [
+          706.04,
+          2991.3200000000006
+        ],
+        "B12": [
+          334.28000000000003,
+          2040.8000000000004
+        ]
+      },
+      "mask_policy": "valid original-label support AND all six bands exclude XML special values at every contributing native pixel; small-mask exact equality checked",
+      "original_small_native_pixels_match": true,
+      "window_sha256": "5954f056ea7d009191f58b774308f9e87d66045cfa6807d62754752fe61bb161",
+      "small_sha256": "119c71e57f56db6168a1ae09c545ba8502748f76c693a50fb5d823ad4cf07a9c",
+      "large_sha256": "6951b53585435e8f9ae93f260eb7ee9d7c5371e310c40aa4df53ea91a0f75b9d"
+    },
+    {
+      "review_id": "E024",
+      "product": "S2A_MSIL1C_20170917T103021_N0205_R108_T31TFJ_20170917T103018",
+      "crs": "EPSG:32631",
+      "row": 58,
+      "col": 1423,
+      "center_xy": [
+        685410.0,
+        4896510.0
+      ],
+      "window_60m": [
+        33,
+        84,
+        1398,
+        1449
+      ],
+      "bounds": [
+        683880.0,
+        4894980.0,
+        686940.0,
+        4898040.0
+      ],
+      "center_offset_60m": [
+        25,
+        25
+      ],
+      "shape_60m": [
+        51,
+        51
+      ],
+      "stretch": {
+        "B04": [
+          298.0,
+          1107.8999999999996
+        ],
+        "B03": [
+          498.0,
+          1233.699999999999
+        ],
+        "B02": [
+          769.0,
+          1351.0
+        ],
+        "B08": [
+          499.1,
+          2760.5999999999985
+        ],
+        "B11": [
+          225.0,
+          2023.72
+        ],
+        "B12": [
+          107.0,
+          1144.2
+        ]
+      },
+      "mask_policy": "valid original-label support AND all six bands exclude XML special values at every contributing native pixel; small-mask exact equality checked",
+      "original_small_native_pixels_match": true,
+      "window_sha256": "e79c1e48f5df5904bcecf1eb37e8e14225645e49e1ee8611319078445c1aa06e",
+      "small_sha256": "b3873c81fde1d895607fb4980a141ef88fb988f5c7fcda7bc4919f63646ab890",
+      "large_sha256": "de823c23abc2c02ee1a5278e292ad1945aadd5ee33a2ec653c37e98eb8d8f627"
+    },
+    {
+      "review_id": "E040",
+      "product": "S2A_MSIL1C_20170917T103021_N0205_R108_T31TFJ_20170917T103018",
+      "crs": "EPSG:32631",
+      "row": 6,
+      "col": 1179,
+      "center_xy": [
+        670770.0,
+        4899630.0
+      ],
+      "window_60m": [
+        0,
+        32,
+        1154,
+        1205
+      ],
+      "bounds": [
+        669240.0,
+        4898100.0,
+        672300.0,
+        4900020.0
+      ],
+      "center_offset_60m": [
+        6,
+        25
+      ],
+      "shape_60m": [
+        32,
+        51
+      ],
+      "stretch": {
+        "B04": [
+          415.0,
+          1696.8999999999996
+        ],
+        "B03": [
+          643.1,
+          1730.8999999999996
+        ],
+        "B02": [
+          879.0,
+          1869.8999999999996
+        ],
+        "B08": [
+          955.0,
+          3600.699999999999
+        ],
+        "B11": [
+          534.76,
+          2587.6800000000003
+        ],
+        "B12": [
+          260.28000000000003,
+          1810.68
+        ]
+      },
+      "mask_policy": "valid original-label support AND all six bands exclude XML special values at every contributing native pixel; small-mask exact equality checked",
+      "original_small_native_pixels_match": true,
+      "window_sha256": "c41d9c5c4c093580b2e0343ac5cd1981cba443bfd5f53328196a3094d60cdc90",
+      "small_sha256": "71092edc712672389f42cb5cb314b6de4a2451d00fcbd9971a31ad9be7839f82",
+      "large_sha256": "e2b939303f3664a65fa67c849f2a118f00e8c94b8c50642a7778165853ccdad0"
+    },
+    {
+      "review_id": "E045",
+      "product": "S2A_MSIL1C_20170917T103021_N0205_R108_T31TFJ_20170917T103018",
+      "crs": "EPSG:32631",
+      "row": 1654,
+      "col": 254,
+      "center_xy": [
+        615270.0,
+        4800750.0
+      ],
+      "window_60m": [
+        1629,
+        1680,
+        229,
+        280
+      ],
+      "bounds": [
+        613740.0,
+        4799220.0,
+        616800.0,
+        4802280.0
+      ],
+      "center_offset_60m": [
+        25,
+        25
+      ],
+      "shape_60m": [
+        51,
+        51
+      ],
+      "stretch": {
+        "B04": [
+          258.0,
+          280.0
+        ],
+        "B03": [
+          533.0,
+          570.0
+        ],
+        "B02": [
+          913.0,
+          954.0
+        ],
+        "B08": [
+          118.0,
+          138.89999999999964
+        ],
+        "B11": [
+          21.0,
+          36.0
+        ],
+        "B12": [
+          12.0,
+          26.0
+        ]
+      },
+      "mask_policy": "valid original-label support AND all six bands exclude XML special values at every contributing native pixel; small-mask exact equality checked",
+      "original_small_native_pixels_match": true,
+      "window_sha256": "e582edec3b3e96d580ac036d01256de14bc7cfe0179559d752e6db1418c50dc7",
+      "small_sha256": "111424a8fcd97c813de745d5813cb9cb5c122d3b42f38d5c069f0aaa0a1f2d40",
+      "large_sha256": "db20e1c34577faa31d99bd864556e040391fca5e98e3977e9cd424f64d116f61"
+    },
+    {
+      "review_id": "E049",
+      "product": "S2A_MSIL1C_20170917T103021_N0205_R108_T31TFJ_20170917T103018",
+      "crs": "EPSG:32631",
+      "row": 383,
+      "col": 1056,
+      "center_xy": [
+        663390.0,
+        4877010.0
+      ],
+      "window_60m": [
+        358,
+        409,
+        1031,
+        1082
+      ],
+      "bounds": [
+        661860.0,
+        4875480.0,
+        664920.0,
+        4878540.0
+      ],
+      "center_offset_60m": [
+        25,
+        25
+      ],
+      "shape_60m": [
+        51,
+        51
+      ],
+      "stretch": {
+        "B04": [
+          675.1,
+          2672.8999999999996
+        ],
+        "B03": [
+          852.0,
+          2465.5999999999985
+        ],
+        "B02": [
+          998.0,
+          2510.399999999994
+        ],
+        "B08": [
+          1482.1,
+          3338.699999999999
+        ],
+        "B11": [
+          1384.76,
+          3478.6400000000003
+        ],
+        "B12": [
+          739.52,
+          2384.6400000000003
+        ]
+      },
+      "mask_policy": "valid original-label support AND all six bands exclude XML special values at every contributing native pixel; small-mask exact equality checked",
+      "original_small_native_pixels_match": true,
+      "window_sha256": "b9306a3362a06b058275059b8462ec963caff6a77cdb0ae336dc8c83d12b26a1",
+      "small_sha256": "25b929cea2946bbd01dcd705dbcab2dfdb79f72ce312384c3151ed15e9518ef4",
+      "large_sha256": "7790d363c7f23cc2ca284e83b556d552cffb5f3415d95b1e2cbc31fb6d138aa6"
+    },
+    {
+      "review_id": "E050",
+      "product": "S2A_MSIL1C_20170917T103021_N0205_R108_T31TFJ_20170917T103018",
+      "crs": "EPSG:32631",
+      "row": 793,
+      "col": 1504,
+      "center_xy": [
+        690270.0,
+        4852410.0
+      ],
+      "window_60m": [
+        768,
+        819,
+        1479,
+        1530
+      ],
+      "bounds": [
+        688740.0,
+        4850880.0,
+        691800.0,
+        4853940.0
+      ],
+      "center_offset_60m": [
+        25,
+        25
+      ],
+      "shape_60m": [
+        51,
+        51
+      ],
+      "stretch": {
+        "B04": [
+          1047.0,
+          2165.699999999999
+        ],
+        "B03": [
+          1228.0,
+          2203.8999999999996
+        ],
+        "B02": [
+          1351.1,
+          2360.0
+        ],
+        "B08": [
+          2634.1,
+          3639.0
+        ],
+        "B11": [
+          1812.04,
+          2802.48
+        ],
+        "B12": [
+          1081.04,
+          2009.0
+        ]
+      },
+      "mask_policy": "valid original-label support AND all six bands exclude XML special values at every contributing native pixel; small-mask exact equality checked",
+      "original_small_native_pixels_match": true,
+      "window_sha256": "cac685a5d8c2e3d7c57f1cb031f29b42d3837f6f86c33a9b5aa730b5956fc6ee",
+      "small_sha256": "64411c42dee9b3232d331d3b2be3b3a32174ecc3aa7eb2da1cde15d41a67aae9",
+      "large_sha256": "8be26f7431cb8ecddea326cf5844d2e8bf70d32bcd07fb60c12cf645e49e7d8b"
+    },
+    {
+      "review_id": "E004",
+      "product": "S2A_MSIL1C_20180422T102031_N0206_R065_T32UPU_20180422T141352",
+      "crs": "EPSG:32632",
+      "row": 1294,
+      "col": 1673,
+      "center_xy": [
+        700410.0,
+        5322330.0
+      ],
+      "window_60m": [
+        1269,
+        1320,
+        1648,
+        1699
+      ],
+      "bounds": [
+        698880.0,
+        5320800.0,
+        701940.0,
+        5323860.0
+      ],
+      "center_offset_60m": [
+        25,
+        25
+      ],
+      "shape_60m": [
+        51,
+        51
+      ],
+      "stretch": {
+        "B04": [
+          289.0,
+          1519.8999999999996
+        ],
+        "B03": [
+          469.0,
+          1600.0
+        ],
+        "B02": [
+          693.1,
+          1806.4999999999982
+        ],
+        "B08": [
+          459.0,
+          2449.7999999999993
+        ],
+        "B11": [
+          129.76,
+          2051.48
+        ],
+        "B12": [
+          62.0,
+          1325.2
+        ]
+      },
+      "mask_policy": "valid original-label support AND all six bands exclude XML special values at every contributing native pixel; small-mask exact equality checked",
+      "original_small_native_pixels_match": true,
+      "window_sha256": "1097e7a3342fbcec331d284c19a87819e439bff0b43ec4a75a8cdd03d809e74d",
+      "small_sha256": "4b8acacd1bdc9538c9891179f6165fb47a28b21e5ade412c61945d9f2b507e6e",
+      "large_sha256": "a757a02ba7eaeb223bbe773a725cdfbf6b37f842db45f73879752b3064e52e09"
+    },
+    {
+      "review_id": "E005",
+      "product": "S2A_MSIL1C_20180422T102031_N0206_R065_T32UPU_20180422T141352",
+      "crs": "EPSG:32632",
+      "row": 41,
+      "col": 863,
+      "center_xy": [
+        651810.0,
+        5397510.0
+      ],
+      "window_60m": [
+        16,
+        67,
+        838,
+        889
+      ],
+      "bounds": [
+        650280.0,
+        5395980.0,
+        653340.0,
+        5399040.0
+      ],
+      "center_offset_60m": [
+        25,
+        25
+      ],
+      "shape_60m": [
+        51,
+        51
+      ],
+      "stretch": {
+        "B04": [
+          490.0,
+          1761.7999999999993
+        ],
+        "B03": [
+          737.1,
+          1490.0
+        ],
+        "B02": [
+          900.0,
+          1409.0
+        ],
+        "B08": [
+          1476.0,
+          3503.5999999999985
+        ],
+        "B11": [
+          1054.04,
+          2941.6000000000004
+        ],
+        "B12": [
+          506.52,
+          2442.84
+        ]
+      },
+      "mask_policy": "valid original-label support AND all six bands exclude XML special values at every contributing native pixel; small-mask exact equality checked",
+      "original_small_native_pixels_match": true,
+      "window_sha256": "e0330d8f664c275163b4ace9715234a709a8788baad03e573b13a6e0eb3d2c5d",
+      "small_sha256": "76652132bb53c0d25efc85e04435c6555840dd76e26f61613bb5a0571f52990c",
+      "large_sha256": "d8c05351d2f036cee76a3b3ed4f0d8aefbd0008af7c46866d9120f6dcce7dab5"
+    },
+    {
+      "review_id": "E011",
+      "product": "S2A_MSIL1C_20180422T102031_N0206_R065_T32UPU_20180422T141352",
+      "crs": "EPSG:32632",
+      "row": 778,
+      "col": 474,
+      "center_xy": [
+        628470.0,
+        5353290.0
+      ],
+      "window_60m": [
+        753,
+        804,
+        449,
+        500
+      ],
+      "bounds": [
+        626940.0,
+        5351760.0,
+        630000.0,
+        5354820.0
+      ],
+      "center_offset_60m": [
+        25,
+        25
+      ],
+      "shape_60m": [
+        51,
+        51
+      ],
+      "stretch": {
+        "B04": [
+          436.1,
+          1588.8999999999996
+        ],
+        "B03": [
+          726.0,
+          1393.8999999999996
+        ],
+        "B02": [
+          830.1,
+          1332.8999999999996
+        ],
+        "B08": [
+          1854.4,
+          4466.9
+        ],
+        "B11": [
+          1297.32,
+          2686.24
+        ],
+        "B12": [
+          585.6,
+          2255.36
+        ]
+      },
+      "mask_policy": "valid original-label support AND all six bands exclude XML special values at every contributing native pixel; small-mask exact equality checked",
+      "original_small_native_pixels_match": true,
+      "window_sha256": "6c7460fb168d4cb069d0ef91d5ee2bc828d87b2f5814410822470f0e40a80e35",
+      "small_sha256": "8a3fa37343feb2df5f5055ecd7728d157c2c405f59a7204e1ebde84ce40572cb",
+      "large_sha256": "9b2a0049547643e71dde2a626f09493f756f2060598685758a6c110cdc013069"
+    },
+    {
+      "review_id": "E023",
+      "product": "S2A_MSIL1C_20180422T102031_N0206_R065_T32UPU_20180422T141352",
+      "crs": "EPSG:32632",
+      "row": 1508,
+      "col": 816,
+      "center_xy": [
+        648990.0,
+        5309490.0
+      ],
+      "window_60m": [
+        1483,
+        1534,
+        791,
+        842
+      ],
+      "bounds": [
+        647460.0,
+        5307960.0,
+        650520.0,
+        5311020.0
+      ],
+      "center_offset_60m": [
+        25,
+        25
+      ],
+      "shape_60m": [
+        51,
+        51
+      ],
+      "stretch": {
+        "B04": [
+          374.0,
+          1643.8999999999996
+        ],
+        "B03": [
+          598.1,
+          1526.8999999999996
+        ],
+        "B02": [
+          780.0,
+          1413.0
+        ],
+        "B08": [
+          1484.0,
+          5107.799999999999
+        ],
+        "B11": [
+          636.52,
+          2893.96
+        ],
+        "B12": [
+          279.0,
+          2179.96
+        ]
+      },
+      "mask_policy": "valid original-label support AND all six bands exclude XML special values at every contributing native pixel; small-mask exact equality checked",
+      "original_small_native_pixels_match": true,
+      "window_sha256": "7c416f198cdc9ed8b478c007ddda1cef65110a401ee29fc8bf3896cd69e132e0",
+      "small_sha256": "82d0d450cadc4e0f152a4af012fd1fd9365fe652db32741d23b020b32a9f026b",
+      "large_sha256": "398ac09de6a7ffb323e8e46a01fe51dbae61f71e202c81a0252ed70b278d990d"
+    },
+    {
+      "review_id": "E025",
+      "product": "S2A_MSIL1C_20180422T102031_N0206_R065_T32UPU_20180422T141352",
+      "crs": "EPSG:32632",
+      "row": 508,
+      "col": 272,
+      "center_xy": [
+        616350.0,
+        5369490.0
+      ],
+      "window_60m": [
+        483,
+        534,
+        247,
+        298
+      ],
+      "bounds": [
+        614820.0,
+        5367960.0,
+        617880.0,
+        5371020.0
+      ],
+      "center_offset_60m": [
+        25,
+        25
+      ],
+      "shape_60m": [
+        51,
+        51
+      ],
+      "stretch": {
+        "B04": [
+          413.0,
+          1706.899999999996
+        ],
+        "B03": [
+          626.0,
+          1457.7999999999993
+        ],
+        "B02": [
+          828.0,
+          1365.8999999999996
+        ],
+        "B08": [
+          1026.1,
+          4278.799999999999
+        ],
+        "B11": [
+          431.76,
+          2986.24
+        ],
+        "B12": [
+          212.08,
+          2435.12
+        ]
+      },
+      "mask_policy": "valid original-label support AND all six bands exclude XML special values at every contributing native pixel; small-mask exact equality checked",
+      "original_small_native_pixels_match": true,
+      "window_sha256": "ee4cd2ef3ca90c6a549853b98c0a215fd01a9eb4a87a76d81badc772e35151f9",
+      "small_sha256": "64a4618de32dbc0a3158f9b45213108af092bd23b4b6846425b79b75d8e11a1c",
+      "large_sha256": "22dcea40e96e83d2ee4e21aa672bdd9a85408be112692bf807f660ab6f972154"
+    },
+    {
+      "review_id": "E027",
+      "product": "S2A_MSIL1C_20180422T102031_N0206_R065_T32UPU_20180422T141352",
+      "crs": "EPSG:32632",
+      "row": 183,
+      "col": 5,
+      "center_xy": [
+        600330.0,
+        5388990.0
+      ],
+      "window_60m": [
+        158,
+        209,
+        0,
+        31
+      ],
+      "bounds": [
+        600000.0,
+        5387460.0,
+        601860.0,
+        5390520.0
+      ],
+      "center_offset_60m": [
+        25,
+        5
+      ],
+      "shape_60m": [
+        51,
+        31
+      ],
+      "stretch": {
+        "B04": [
+          434.0,
+          2761.8999999999996
+        ],
+        "B03": [
+          683.0,
+          2799.2999999999975
+        ],
+        "B02": [
+          893.0,
+          2991.7999999999993
+        ],
+        "B08": [
+          1230.3,
+          4447.799999999999
+        ],
+        "B11": [
+          513.76,
+          3595.24
+        ],
+        "B12": [
+          245.52,
+          2757.0
+        ]
+      },
+      "mask_policy": "valid original-label support AND all six bands exclude XML special values at every contributing native pixel; small-mask exact equality checked",
+      "original_small_native_pixels_match": true,
+      "window_sha256": "5cb81fa13b14fd0f4f2d774fc12a22396fca1ebfb0076844d34327136513b7ae",
+      "small_sha256": "e8d288e04d9ad1a6b201006d59a521e5c48bfc2fac8a2f09837b165c9a65646a",
+      "large_sha256": "4bc2702f711e81a266c1c0e0127a735bb75d82fc95dce71df9abf2478907f621"
+    },
+    {
+      "review_id": "E056",
+      "product": "S2A_MSIL1C_20180422T102031_N0206_R065_T32UPU_20180422T141352",
+      "crs": "EPSG:32632",
+      "row": 1787,
+      "col": 655,
+      "center_xy": [
+        639330.0,
+        5292750.0
+      ],
+      "window_60m": [
+        1762,
+        1813,
+        630,
+        681
+      ],
+      "bounds": [
+        637800.0,
+        5291220.0,
+        640860.0,
+        5294280.0
+      ],
+      "center_offset_60m": [
+        25,
+        25
+      ],
+      "shape_60m": [
+        51,
+        51
+      ],
+      "stretch": {
+        "B04": [
+          426.1,
+          1560.7999999999993
+        ],
+        "B03": [
+          644.0,
+          1698.8999999999996
+        ],
+        "B02": [
+          810.0,
+          1650.0
+        ],
+        "B08": [
+          666.0,
+          4727.9
+        ],
+        "B11": [
+          151.0,
+          2462.7200000000003
+        ],
+        "B12": [
+          87.76,
+          1596.48
+        ]
+      },
+      "mask_policy": "valid original-label support AND all six bands exclude XML special values at every contributing native pixel; small-mask exact equality checked",
+      "original_small_native_pixels_match": true,
+      "window_sha256": "1bb3ed5ac0fee05cc01471483e0b825220b63dc291996077c4438f03ddcc598c",
+      "small_sha256": "54157c44c2616009f9af67571a1d4299a2c960c1c511a89d1964875797499756",
+      "large_sha256": "b5ff7c361692e7bdc8f1d40f94184bb5c9656262e46691d139135c806e2b7a71"
+    },
+    {
+      "review_id": "E002",
+      "product": "S2A_MSIL1C_20180505T141051_N0206_R110_T21LWK_20180505T160911",
+      "crs": "EPSG:32721",
+      "row": 965,
+      "col": 794,
+      "center_xy": [
+        547650.0,
+        8942110.0
+      ],
+      "window_60m": [
+        940,
+        991,
+        769,
+        820
+      ],
+      "bounds": [
+        546120.0,
+        8940580.0,
+        549180.0,
+        8943640.0
+      ],
+      "center_offset_60m": [
+        25,
+        25
+      ],
+      "shape_60m": [
+        51,
+        51
+      ],
+      "stretch": {
+        "B04": [
+          285.0,
+          377.89999999999964
+        ],
+        "B03": [
+          533.0,
+          705.0
+        ],
+        "B02": [
+          695.0,
+          765.0
+        ],
+        "B08": [
+          1887.2,
+          3433.7999999999993
+        ],
+        "B11": [
+          1127.76,
+          1568.0
+        ],
+        "B12": [
+          374.76,
+          537.24
+        ]
+      },
+      "mask_policy": "valid original-label support AND all six bands exclude XML special values at every contributing native pixel; small-mask exact equality checked",
+      "original_small_native_pixels_match": true,
+      "window_sha256": "38bbf840838e5abedc07fd8e1088207221e861864e08c076eceee3cbaa1903a3",
+      "small_sha256": "09c6ee229d8a1b6de1796e3503e234e85d87d74be151f11a2c40799cc7aed298",
+      "large_sha256": "96e66f82af5b2ecda3680d64f4cde7fd746387b1f38b48e9c6466b05766c463c"
+    },
+    {
+      "review_id": "E006",
+      "product": "S2A_MSIL1C_20180505T141051_N0206_R110_T21LWK_20180505T160911",
+      "crs": "EPSG:32721",
+      "row": 968,
+      "col": 1126,
+      "center_xy": [
+        567570.0,
+        8941930.0
+      ],
+      "window_60m": [
+        943,
+        994,
+        1101,
+        1152
+      ],
+      "bounds": [
+        566040.0,
+        8940400.0,
+        569100.0,
+        8943460.0
+      ],
+      "center_offset_60m": [
+        25,
+        25
+      ],
+      "shape_60m": [
+        51,
+        51
+      ],
+      "stretch": {
+        "B04": [
+          284.0,
+          375.0
+        ],
+        "B03": [
+          535.0,
+          687.0
+        ],
+        "B02": [
+          694.1,
+          759.0
+        ],
+        "B08": [
+          1935.0,
+          3240.7999999999993
+        ],
+        "B11": [
+          1136.84,
+          1475.24
+        ],
+        "B12": [
+          367.76,
+          511.0
+        ]
+      },
+      "mask_policy": "valid original-label support AND all six bands exclude XML special values at every contributing native pixel; small-mask exact equality checked",
+      "original_small_native_pixels_match": true,
+      "window_sha256": "8861288fd5feec0428a8fb0624e1b9eb4529d7fd0d072c8013b19b20b80855a5",
+      "small_sha256": "33f256020a995d8c541487dcc0e853c4eea1b88e54051c96b0696ed7e4dd9f66",
+      "large_sha256": "da671f326970895021cf6e1ee73a457a5fc312a14ac687efbf87578e23e38081"
+    },
+    {
+      "review_id": "E033",
+      "product": "S2A_MSIL1C_20180505T141051_N0206_R110_T21LWK_20180505T160911",
+      "crs": "EPSG:32721",
+      "row": 466,
+      "col": 152,
+      "center_xy": [
+        509130.0,
+        8972050.0
+      ],
+      "window_60m": [
+        441,
+        492,
+        127,
+        178
+      ],
+      "bounds": [
+        507600.0,
+        8970520.0,
+        510660.0,
+        8973580.0
+      ],
+      "center_offset_60m": [
+        25,
+        25
+      ],
+      "shape_60m": [
+        51,
+        51
+      ],
+      "stretch": {
+        "B04": [
+          243.0,
+          933.2999999999975
+        ],
+        "B03": [
+          445.0,
+          1070.8999999999996
+        ],
+        "B02": [
+          688.0,
+          1047.699999999999
+        ],
+        "B08": [
+          543.1,
+          3346.0
+        ],
+        "B11": [
+          232.76,
+          2428.8
+        ],
+        "B12": [
+          75.0,
+          1216.0
+        ]
+      },
+      "mask_policy": "valid original-label support AND all six bands exclude XML special values at every contributing native pixel; small-mask exact equality checked",
+      "original_small_native_pixels_match": true,
+      "window_sha256": "f89f02d0b57366e9fe1a695dc1216b0313daa7a92dca6d9805a67c9f6f173cf4",
+      "small_sha256": "ad7c3d248e0e5f87b9ab1fe3b9d27b0036443ae205ad9c799d19bc777691d17e",
+      "large_sha256": "c8478da0496965d383fcc5105843b7685a1ccfa15f5c7e79e79640d59b814a19"
+    },
+    {
+      "review_id": "E055",
+      "product": "S2A_MSIL1C_20180505T141051_N0206_R110_T21LWK_20180505T160911",
+      "crs": "EPSG:32721",
+      "row": 484,
+      "col": 1196,
+      "center_xy": [
+        571770.0,
+        8970970.0
+      ],
+      "window_60m": [
+        459,
+        510,
+        1171,
+        1222
+      ],
+      "bounds": [
+        570240.0,
+        8969440.0,
+        573300.0,
+        8972500.0
+      ],
+      "center_offset_60m": [
+        25,
+        25
+      ],
+      "shape_60m": [
+        51,
+        51
+      ],
+      "stretch": {
+        "B04": [
+          317.0,
+          1054.0
+        ],
+        "B03": [
+          572.0,
+          1041.7999999999993
+        ],
+        "B02": [
+          712.0,
+          989.0
+        ],
+        "B08": [
+          1939.2,
+          3545.399999999998
+        ],
+        "B11": [
+          1165.8,
+          2214.48
+        ],
+        "B12": [
+          397.0,
+          1113.24
+        ]
+      },
+      "mask_policy": "valid original-label support AND all six bands exclude XML special values at every contributing native pixel; small-mask exact equality checked",
+      "original_small_native_pixels_match": true,
+      "window_sha256": "fa28ee6ebd1379d98db47424a9de1e9ffdd482bc6abab2aaceaa6db4f79bd6bd",
+      "small_sha256": "e6139d5c6486f0c6248a00a0c5359f7a34f5796578d765c13b71bf460f6ac71f",
+      "large_sha256": "7b067449f1ee5a4b4848a12741e1c5d38e28217d9b85b9b1c366108537ad2c32"
+    }
+  ],
+  "missing": [],
+  "source_objects": {
+    "tiles/29/R/PQ/S2A_MSIL1C_20160417T111159_N0201_R137_T29RPQ_20160417T203056.SAFE/GRANULE/S2A_OPER_MSI_L1C_TL_SGS__20160417T165340_A004281_T29RPQ_N02.01/IMG_DATA/S2A_OPER_MSI_L1C_TL_SGS__20160417T165340_A004281_T29RPQ_B02.jp2": {
+      "sha256": "956ad1cc877c750ccdc38ceb4799e5fdf3b8685637e53157f913c9547f577fb4",
+      "size": 106688311,
+      "generation": "1475055668701000",
+      "codestream_precision": 15,
+      "pillow_to_native_right_shift": 1
+    },
+    "tiles/29/R/PQ/S2A_MSIL1C_20160417T111159_N0201_R137_T29RPQ_20160417T203056.SAFE/GRANULE/S2A_OPER_MSI_L1C_TL_SGS__20160417T165340_A004281_T29RPQ_N02.01/IMG_DATA/S2A_OPER_MSI_L1C_TL_SGS__20160417T165340_A004281_T29RPQ_B03.jp2": {
+      "sha256": "b32d02b1ed26bd6b6a5a2cbe020166ab0599774ecabdec26a90f2dab3aed1b73",
+      "size": 111526374,
+      "generation": "1475055671205000",
+      "codestream_precision": 15,
+      "pillow_to_native_right_shift": 1
+    },
+    "tiles/29/R/PQ/S2A_MSIL1C_20160417T111159_N0201_R137_T29RPQ_20160417T203056.SAFE/GRANULE/S2A_OPER_MSI_L1C_TL_SGS__20160417T165340_A004281_T29RPQ_N02.01/IMG_DATA/S2A_OPER_MSI_L1C_TL_SGS__20160417T165340_A004281_T29RPQ_B04.jp2": {
+      "sha256": "83ba7b9ba9dc455fe622e9e775bc6bd5e1a21991cdef0720c185667849c73f11",
+      "size": 120297734,
+      "generation": "1475055677494000",
+      "codestream_precision": 15,
+      "pillow_to_native_right_shift": 1
+    },
+    "tiles/29/R/PQ/S2A_MSIL1C_20160417T111159_N0201_R137_T29RPQ_20160417T203056.SAFE/GRANULE/S2A_OPER_MSI_L1C_TL_SGS__20160417T165340_A004281_T29RPQ_N02.01/IMG_DATA/S2A_OPER_MSI_L1C_TL_SGS__20160417T165340_A004281_T29RPQ_B08.jp2": {
+      "sha256": "86e73b69cc5fe2e94c39daf747b991875343baf07589a03a013a532beab676d0",
+      "size": 122611165,
+      "generation": "1475055676254000",
+      "codestream_precision": 15,
+      "pillow_to_native_right_shift": 1
+    },
+    "tiles/29/R/PQ/S2A_MSIL1C_20160417T111159_N0201_R137_T29RPQ_20160417T203056.SAFE/GRANULE/S2A_OPER_MSI_L1C_TL_SGS__20160417T165340_A004281_T29RPQ_N02.01/IMG_DATA/S2A_OPER_MSI_L1C_TL_SGS__20160417T165340_A004281_T29RPQ_B11.jp2": {
+      "sha256": "507fee87e1dd3c32f07772dba4ac82bd80e4bcfa89cbedd1b3e39200c1fc52ca",
+      "size": 33437490,
+      "generation": "1475055673705000",
+      "codestream_precision": 15,
+      "pillow_to_native_right_shift": 1
+    },
+    "tiles/29/R/PQ/S2A_MSIL1C_20160417T111159_N0201_R137_T29RPQ_20160417T203056.SAFE/GRANULE/S2A_OPER_MSI_L1C_TL_SGS__20160417T165340_A004281_T29RPQ_N02.01/IMG_DATA/S2A_OPER_MSI_L1C_TL_SGS__20160417T165340_A004281_T29RPQ_B12.jp2": {
+      "sha256": "ade775712061b9a54c065ad7d53116b3c0605d0d9996726d61e4d4073689f1d1",
+      "size": 33118334,
+      "generation": "1475055665046000",
+      "codestream_precision": 15,
+      "pillow_to_native_right_shift": 1
+    },
+    "tiles/33/U/UU/S2A_MSIL1C_20160817T101032_N0204_R022_T33UUU_20160817T230018.SAFE/GRANULE/S2A_OPER_MSI_L1C_TL_SGS__20160817T171509_A006025_T33UUU_N02.04/IMG_DATA/S2A_OPER_MSI_L1C_TL_SGS__20160817T171509_A006025_T33UUU_B02.jp2": {
+      "sha256": "6fd70d12ad307910c8549d0c319c4ca8c135d6c0a7816140c2b34dba49545316",
+      "size": 75402604,
+      "generation": "1474988557637000",
+      "codestream_precision": 15,
+      "pillow_to_native_right_shift": 1
+    },
+    "tiles/33/U/UU/S2A_MSIL1C_20160817T101032_N0204_R022_T33UUU_20160817T230018.SAFE/GRANULE/S2A_OPER_MSI_L1C_TL_SGS__20160817T171509_A006025_T33UUU_N02.04/IMG_DATA/S2A_OPER_MSI_L1C_TL_SGS__20160817T171509_A006025_T33UUU_B03.jp2": {
+      "sha256": "3834404efcd9d87948426d431066b5dda197c19e332e8f83abc68bbfb1f60d88",
+      "size": 77385739,
+      "generation": "1474988561024000",
+      "codestream_precision": 15,
+      "pillow_to_native_right_shift": 1
+    },
+    "tiles/33/U/UU/S2A_MSIL1C_20160817T101032_N0204_R022_T33UUU_20160817T230018.SAFE/GRANULE/S2A_OPER_MSI_L1C_TL_SGS__20160817T171509_A006025_T33UUU_N02.04/IMG_DATA/S2A_OPER_MSI_L1C_TL_SGS__20160817T171509_A006025_T33UUU_B04.jp2": {
+      "sha256": "9e4bba24bf25e23dd1e63ca67b67375f1a4bb4647470d3890c51b40d85fb7c8c",
+      "size": 78406621,
+      "generation": "1474988559952000",
+      "codestream_precision": 15,
+      "pillow_to_native_right_shift": 1
+    },
+    "tiles/33/U/UU/S2A_MSIL1C_20160817T101032_N0204_R022_T33UUU_20160817T230018.SAFE/GRANULE/S2A_OPER_MSI_L1C_TL_SGS__20160817T171509_A006025_T33UUU_N02.04/IMG_DATA/S2A_OPER_MSI_L1C_TL_SGS__20160817T171509_A006025_T33UUU_B08.jp2": {
+      "sha256": "2a8b2ca5536c99536fe937afe1299992cba437c2788fc3defd89781494fa8cbb",
+      "size": 92400917,
+      "generation": "1474988555226000",
+      "codestream_precision": 15,
+      "pillow_to_native_right_shift": 1
+    },
+    "tiles/33/U/UU/S2A_MSIL1C_20160817T101032_N0204_R022_T33UUU_20160817T230018.SAFE/GRANULE/S2A_OPER_MSI_L1C_TL_SGS__20160817T171509_A006025_T33UUU_N02.04/IMG_DATA/S2A_OPER_MSI_L1C_TL_SGS__20160817T171509_A006025_T33UUU_B11.jp2": {
+      "sha256": "faaa320ce9d7a36b97308f36e8af3c65d022d900f5dc8c4a84231e4576d5e0f5",
+      "size": 23753907,
+      "generation": "1474988550330000",
+      "codestream_precision": 15,
+      "pillow_to_native_right_shift": 1
+    },
+    "tiles/33/U/UU/S2A_MSIL1C_20160817T101032_N0204_R022_T33UUU_20160817T230018.SAFE/GRANULE/S2A_OPER_MSI_L1C_TL_SGS__20160817T171509_A006025_T33UUU_N02.04/IMG_DATA/S2A_OPER_MSI_L1C_TL_SGS__20160817T171509_A006025_T33UUU_B12.jp2": {
+      "sha256": "3a19d2bee1e2111be48ee5e3f4059c62d1286ea2c09f52df0a97eb72006038b4",
+      "size": 23104316,
+      "generation": "1474988556452000",
+      "codestream_precision": 15,
+      "pillow_to_native_right_shift": 1
+    },
+    "tiles/32/T/NR/S2A_MSIL1C_20161108T102232_N0204_R065_T32TNR_20161109T224916.SAFE/GRANULE/S2A_OPER_MSI_L1C_TL_SGS__20161108T154744_A007212_T32TNR_N02.04/IMG_DATA/S2A_OPER_MSI_L1C_TL_SGS__20161108T154744_A007212_T32TNR_B02.jp2": {
+      "sha256": "a2dcad5ffeec2597171465d610ab0854e371efd2c8fa07b5d9e8188c583645ff",
+      "size": 111249311,
+      "generation": "1479091850732034",
+      "codestream_precision": 15,
+      "pillow_to_native_right_shift": 1
+    },
+    "tiles/32/T/NR/S2A_MSIL1C_20161108T102232_N0204_R065_T32TNR_20161109T224916.SAFE/GRANULE/S2A_OPER_MSI_L1C_TL_SGS__20161108T154744_A007212_T32TNR_N02.04/IMG_DATA/S2A_OPER_MSI_L1C_TL_SGS__20161108T154744_A007212_T32TNR_B03.jp2": {
+      "sha256": "daabd5985f167887bac23032e60107a6495c2939aa9be22b7baf3d1fb8d55b45",
+      "size": 113744379,
+      "generation": "1479091863517295",
+      "codestream_precision": 15,
+      "pillow_to_native_right_shift": 1
+    },
+    "tiles/32/T/NR/S2A_MSIL1C_20161108T102232_N0204_R065_T32TNR_20161109T224916.SAFE/GRANULE/S2A_OPER_MSI_L1C_TL_SGS__20161108T154744_A007212_T32TNR_N02.04/IMG_DATA/S2A_OPER_MSI_L1C_TL_SGS__20161108T154744_A007212_T32TNR_B04.jp2": {
+      "sha256": "ee9930f18683c6c919354a2cced0974fd5b60cfbb95d966fe3cab9ea496129f9",
+      "size": 118811649,
+      "generation": "1479091875267297",
+      "codestream_precision": 15,
+      "pillow_to_native_right_shift": 1
+    },
+    "tiles/32/T/NR/S2A_MSIL1C_20161108T102232_N0204_R065_T32TNR_20161109T224916.SAFE/GRANULE/S2A_OPER_MSI_L1C_TL_SGS__20161108T154744_A007212_T32TNR_N02.04/IMG_DATA/S2A_OPER_MSI_L1C_TL_SGS__20161108T154744_A007212_T32TNR_B08.jp2": {
+      "sha256": "167472b144c7d01c24579a6385cd17b9bc0bc543796b4c50b8487fa410618100",
+      "size": 133496613,
+      "generation": "1479091902336512",
+      "codestream_precision": 15,
+      "pillow_to_native_right_shift": 1
+    },
+    "tiles/32/T/NR/S2A_MSIL1C_20161108T102232_N0204_R065_T32TNR_20161109T224916.SAFE/GRANULE/S2A_OPER_MSI_L1C_TL_SGS__20161108T154744_A007212_T32TNR_N02.04/IMG_DATA/S2A_OPER_MSI_L1C_TL_SGS__20161108T154744_A007212_T32TNR_B11.jp2": {
+      "sha256": "5b42057b11f6b768454cad55cbf9c1312b49d71e7ffe351c13a1708eac487832",
+      "size": 33789271,
+      "generation": "1479091910085426",
+      "codestream_precision": 15,
+      "pillow_to_native_right_shift": 1
+    },
+    "tiles/32/T/NR/S2A_MSIL1C_20161108T102232_N0204_R065_T32TNR_20161109T224916.SAFE/GRANULE/S2A_OPER_MSI_L1C_TL_SGS__20161108T154744_A007212_T32TNR_N02.04/IMG_DATA/S2A_OPER_MSI_L1C_TL_SGS__20161108T154744_A007212_T32TNR_B12.jp2": {
+      "sha256": "34d6864cf8762cdc21ae89f501fa0a33c838bfbbb26d4f1c0ca4a31c35eca9e0",
+      "size": 33723443,
+      "generation": "1479091913692547",
+      "codestream_precision": 15,
+      "pillow_to_native_right_shift": 1
+    },
+    "tiles/35/J/PM/S2A_MSIL1C_20170313T074931_N0204_R135_T35JPM_20170313T081339.SAFE/GRANULE/L1C_T35JPM_A008998_20170313T081339/IMG_DATA/T35JPM_20170313T074931_B02.jp2": {
+      "sha256": "ed691e72e9d8426fec0f982ec4bd8d4fd27c8b6dc590f415cdf26fdda7735729",
+      "size": 103266365,
+      "generation": "1489730059149466",
+      "codestream_precision": 15,
+      "pillow_to_native_right_shift": 1
+    },
+    "tiles/35/J/PM/S2A_MSIL1C_20170313T074931_N0204_R135_T35JPM_20170313T081339.SAFE/GRANULE/L1C_T35JPM_A008998_20170313T081339/IMG_DATA/T35JPM_20170313T074931_B03.jp2": {
+      "sha256": "b65812faab0aad03b756428c2bb3e077d9e1870aa5223dafc433288c61852e25",
+      "size": 107920098,
+      "generation": "1489730131322592",
+      "codestream_precision": 15,
+      "pillow_to_native_right_shift": 1
+    },
+    "tiles/35/J/PM/S2A_MSIL1C_20170313T074931_N0204_R135_T35JPM_20170313T081339.SAFE/GRANULE/L1C_T35JPM_A008998_20170313T081339/IMG_DATA/T35JPM_20170313T074931_B04.jp2": {
+      "sha256": "05a7e286edb886dc95ba35ee7ac2f1927a375b1f4f39d1728ce91ff74869edc9",
+      "size": 117217364,
+      "generation": "1489730145412920",
+      "codestream_precision": 15,
+      "pillow_to_native_right_shift": 1
+    },
+    "tiles/35/J/PM/S2A_MSIL1C_20170313T074931_N0204_R135_T35JPM_20170313T081339.SAFE/GRANULE/L1C_T35JPM_A008998_20170313T081339/IMG_DATA/T35JPM_20170313T074931_B08.jp2": {
+      "sha256": "418eb2aaf25baed3efe89159c937127402c95b5037597a70c7d9f44651062ee0",
+      "size": 128264547,
+      "generation": "1489730181984722",
+      "codestream_precision": 15,
+      "pillow_to_native_right_shift": 1
+    },
+    "tiles/35/J/PM/S2A_MSIL1C_20170313T074931_N0204_R135_T35JPM_20170313T081339.SAFE/GRANULE/L1C_T35JPM_A008998_20170313T081339/IMG_DATA/T35JPM_20170313T074931_B11.jp2": {
+      "sha256": "b60d9195fa0238fcfd012277c307e6645026229bb7998a11c9739b209bd420ee",
+      "size": 33529976,
+      "generation": "1489730190582430",
+      "codestream_precision": 15,
+      "pillow_to_native_right_shift": 1
+    },
+    "tiles/35/J/PM/S2A_MSIL1C_20170313T074931_N0204_R135_T35JPM_20170313T081339.SAFE/GRANULE/L1C_T35JPM_A008998_20170313T081339/IMG_DATA/T35JPM_20170313T074931_B12.jp2": {
+      "sha256": "37ac87fbf12bdf5b1cbe5a05ccbc324cda5eca7ba71c59fc8a90f3729db42c8d",
+      "size": 33423484,
+      "generation": "1489730195915691",
+      "codestream_precision": 15,
+      "pillow_to_native_right_shift": 1
+    },
+    "tiles/11/S/PC/S2A_MSIL1C_20170501T183311_N0205_R127_T11SPC_20170501T183311.SAFE/GRANULE/L1C_T11SPC_A009705_20170501T183311/IMG_DATA/T11SPC_20170501T183311_B02.jp2": {
+      "sha256": "b9411c39ab15204aebfd3c5887bfee4393e150fde0421bb8e79861e6d0550835",
+      "size": 111102268,
+      "generation": "1493866891841388",
+      "codestream_precision": 15,
+      "pillow_to_native_right_shift": 1
+    },
+    "tiles/11/S/PC/S2A_MSIL1C_20170501T183311_N0205_R127_T11SPC_20170501T183311.SAFE/GRANULE/L1C_T11SPC_A009705_20170501T183311/IMG_DATA/T11SPC_20170501T183311_B03.jp2": {
+      "sha256": "950be2abdd6251ddcc7eff098dddc12b02ab5695fa686c63f3062c3071703089",
+      "size": 114303418,
+      "generation": "1493866914558805",
+      "codestream_precision": 15,
+      "pillow_to_native_right_shift": 1
+    },
+    "tiles/11/S/PC/S2A_MSIL1C_20170501T183311_N0205_R127_T11SPC_20170501T183311.SAFE/GRANULE/L1C_T11SPC_A009705_20170501T183311/IMG_DATA/T11SPC_20170501T183311_B04.jp2": {
+      "sha256": "70270fb546d0060bb06ea3d971e5ed651bbfcc8e91feff152b7811bf692e4e30",
+      "size": 119165754,
+      "generation": "1493866934425220",
+      "codestream_precision": 15,
+      "pillow_to_native_right_shift": 1
+    },
+    "tiles/11/S/PC/S2A_MSIL1C_20170501T183311_N0205_R127_T11SPC_20170501T183311.SAFE/GRANULE/L1C_T11SPC_A009705_20170501T183311/IMG_DATA/T11SPC_20170501T183311_B08.jp2": {
+      "sha256": "01ed3c92652ca5d8edee8b6c2c78600d801a0d5cda43fd14831b2e6a7a781548",
+      "size": 117333666,
+      "generation": "1493866977212570",
+      "codestream_precision": 15,
+      "pillow_to_native_right_shift": 1
+    },
+    "tiles/11/S/PC/S2A_MSIL1C_20170501T183311_N0205_R127_T11SPC_20170501T183311.SAFE/GRANULE/L1C_T11SPC_A009705_20170501T183311/IMG_DATA/T11SPC_20170501T183311_B11.jp2": {
+      "sha256": "20d9892d030793ce047bd40de9c79a3dc624df3f03ac5ad71767fe17d466feb6",
+      "size": 31464020,
+      "generation": "1493866997929205",
+      "codestream_precision": 15,
+      "pillow_to_native_right_shift": 1
+    },
+    "tiles/11/S/PC/S2A_MSIL1C_20170501T183311_N0205_R127_T11SPC_20170501T183311.SAFE/GRANULE/L1C_T11SPC_A009705_20170501T183311/IMG_DATA/T11SPC_20170501T183311_B12.jp2": {
+      "sha256": "f54359a5f3fd5e5f387b99efc3cdd3a48336189aa7e2ad1f824c4351a92ddd6f",
+      "size": 31378547,
+      "generation": "1493867004861521",
+      "codestream_precision": 15,
+      "pillow_to_native_right_shift": 1
+    },
+    "tiles/31/U/DP/S2A_MSIL1C_20170516T105031_N0205_R051_T31UDP_20170516T105322.SAFE/GRANULE/L1C_T31UDP_A009915_20170516T105322/IMG_DATA/T31UDP_20170516T105031_B02.jp2": {
+      "sha256": "c90852508af1974429cfebc3d05fec96a683519bcc5ac3ee9721d66be17ca231",
+      "size": 100658885,
+      "generation": "1495077706230806",
+      "codestream_precision": 15,
+      "pillow_to_native_right_shift": 1
+    },
+    "tiles/31/U/DP/S2A_MSIL1C_20170516T105031_N0205_R051_T31UDP_20170516T105322.SAFE/GRANULE/L1C_T31UDP_A009915_20170516T105322/IMG_DATA/T31UDP_20170516T105031_B03.jp2": {
+      "sha256": "78de91b4f670c83bd9732109e954aa79eca61635c8344dd7bf6fd35855d294a1",
+      "size": 103751629,
+      "generation": "1495077725791581",
+      "codestream_precision": 15,
+      "pillow_to_native_right_shift": 1
+    },
+    "tiles/31/U/DP/S2A_MSIL1C_20170516T105031_N0205_R051_T31UDP_20170516T105322.SAFE/GRANULE/L1C_T31UDP_A009915_20170516T105322/IMG_DATA/T31UDP_20170516T105031_B04.jp2": {
+      "sha256": "ecb2f822058aa5b1d0ba7f69967c2e39f5db5041307a918ce63b10ff0aa6360b",
+      "size": 105440763,
+      "generation": "1495077746147700",
+      "codestream_precision": 15,
+      "pillow_to_native_right_shift": 1
+    },
+    "tiles/31/U/DP/S2A_MSIL1C_20170516T105031_N0205_R051_T31UDP_20170516T105322.SAFE/GRANULE/L1C_T31UDP_A009915_20170516T105322/IMG_DATA/T31UDP_20170516T105031_B08.jp2": {
+      "sha256": "f42720ccb2a6eb8d8842958c0305a533674afb8467576b7c6bd241ee0231ab33",
+      "size": 124410026,
+      "generation": "1495077790814190",
+      "codestream_precision": 15,
+      "pillow_to_native_right_shift": 1
+    },
+    "tiles/31/U/DP/S2A_MSIL1C_20170516T105031_N0205_R051_T31UDP_20170516T105322.SAFE/GRANULE/L1C_T31UDP_A009915_20170516T105322/IMG_DATA/T31UDP_20170516T105031_B11.jp2": {
+      "sha256": "ac3f6c51beb22517edf6d411681b4c361c234fb03cc9774010a15602d489b99c",
+      "size": 30989076,
+      "generation": "1495077800166584",
+      "codestream_precision": 15,
+      "pillow_to_native_right_shift": 1
+    },
+    "tiles/31/U/DP/S2A_MSIL1C_20170516T105031_N0205_R051_T31UDP_20170516T105322.SAFE/GRANULE/L1C_T31UDP_A009915_20170516T105322/IMG_DATA/T31UDP_20170516T105031_B12.jp2": {
+      "sha256": "2d1b22851f4e21c28b058d80beabbb3dbdea96debe323120716a5031e32f7f1e",
+      "size": 30150788,
+      "generation": "1495077806501187",
+      "codestream_precision": 15,
+      "pillow_to_native_right_shift": 1
+    },
+    "tiles/31/T/FJ/S2A_MSIL1C_20170917T103021_N0205_R108_T31TFJ_20170917T103018.SAFE/GRANULE/L1C_T31TFJ_A011688_20170917T103018/IMG_DATA/T31TFJ_20170917T103021_B02.jp2": {
+      "sha256": "8c13c2c22f72320d4bc63d7ad6fbc1b18950f4b4f755cca74e9359489d7f9d8e",
+      "size": 110949919,
+      "generation": "1505847302012445",
+      "codestream_precision": 15,
+      "pillow_to_native_right_shift": 1
+    },
+    "tiles/31/T/FJ/S2A_MSIL1C_20170917T103021_N0205_R108_T31TFJ_20170917T103018.SAFE/GRANULE/L1C_T31TFJ_A011688_20170917T103018/IMG_DATA/T31TFJ_20170917T103021_B03.jp2": {
+      "sha256": "8199ca08705a4db9c625736c0bb2b707e347d8bd6c63cc5bc4c5e1ccd7a190f6",
+      "size": 110945175,
+      "generation": "1505847314134298",
+      "codestream_precision": 15,
+      "pillow_to_native_right_shift": 1
+    },
+    "tiles/31/T/FJ/S2A_MSIL1C_20170917T103021_N0205_R108_T31TFJ_20170917T103018.SAFE/GRANULE/L1C_T31TFJ_A011688_20170917T103018/IMG_DATA/T31TFJ_20170917T103021_B04.jp2": {
+      "sha256": "dd961447e6c80aa48843475752197b3ff94a63afaf30f2c4869969ef1505d6cf",
+      "size": 113673003,
+      "generation": "1505847325549080",
+      "codestream_precision": 15,
+      "pillow_to_native_right_shift": 1
+    },
+    "tiles/31/T/FJ/S2A_MSIL1C_20170917T103021_N0205_R108_T31TFJ_20170917T103018.SAFE/GRANULE/L1C_T31TFJ_A011688_20170917T103018/IMG_DATA/T31TFJ_20170917T103021_B08.jp2": {
+      "sha256": "b8fa07c4d984adb58740b8a6543197505cb0958270f2ce943ecc03386c4bef30",
+      "size": 117370876,
+      "generation": "1505847349499277",
+      "codestream_precision": 15,
+      "pillow_to_native_right_shift": 1
+    },
+    "tiles/31/T/FJ/S2A_MSIL1C_20170917T103021_N0205_R108_T31TFJ_20170917T103018.SAFE/GRANULE/L1C_T31TFJ_A011688_20170917T103018/IMG_DATA/T31TFJ_20170917T103021_B11.jp2": {
+      "sha256": "4a990e5e2127b9a6be11727b69b78d728c53f7de07c1e9ad88db163f43f8cd0c",
+      "size": 31480091,
+      "generation": "1505847356349965",
+      "codestream_precision": 15,
+      "pillow_to_native_right_shift": 1
+    },
+    "tiles/31/T/FJ/S2A_MSIL1C_20170917T103021_N0205_R108_T31TFJ_20170917T103018.SAFE/GRANULE/L1C_T31TFJ_A011688_20170917T103018/IMG_DATA/T31TFJ_20170917T103021_B12.jp2": {
+      "sha256": "8a611aa28b18d2548129d92dae78884011e6ada27005d320d3ad43f9fcd28090",
+      "size": 31212887,
+      "generation": "1505847360354893",
+      "codestream_precision": 15,
+      "pillow_to_native_right_shift": 1
+    },
+    "tiles/32/U/PU/S2A_MSIL1C_20180422T102031_N0206_R065_T32UPU_20180422T141352.SAFE/GRANULE/L1C_T32UPU_A014791_20180422T102115/IMG_DATA/T32UPU_20180422T102031_B02.jp2": {
+      "sha256": "407874a94e134fe099452ff94c900484a67ea82fec01c23342daa5b79d830971",
+      "size": 105692625,
+      "generation": "1524511962479339",
+      "codestream_precision": 15,
+      "pillow_to_native_right_shift": 1
+    },
+    "tiles/32/U/PU/S2A_MSIL1C_20180422T102031_N0206_R065_T32UPU_20180422T141352.SAFE/GRANULE/L1C_T32UPU_A014791_20180422T102115/IMG_DATA/T32UPU_20180422T102031_B03.jp2": {
+      "sha256": "b429696f250b0f45d4a855f6242d0a3babd64b009d3004cd107425ee6c5f1bc0",
+      "size": 111236156,
+      "generation": "1524511978670058",
+      "codestream_precision": 15,
+      "pillow_to_native_right_shift": 1
+    },
+    "tiles/32/U/PU/S2A_MSIL1C_20180422T102031_N0206_R065_T32UPU_20180422T141352.SAFE/GRANULE/L1C_T32UPU_A014791_20180422T102115/IMG_DATA/T32UPU_20180422T102031_B04.jp2": {
+      "sha256": "5857dbfb77e0834e0a9912a2ce969067ce7ba67e51c8918229ac80e4d6b81375",
+      "size": 115491210,
+      "generation": "1524511996120478",
+      "codestream_precision": 15,
+      "pillow_to_native_right_shift": 1
+    },
+    "tiles/32/U/PU/S2A_MSIL1C_20180422T102031_N0206_R065_T32UPU_20180422T141352.SAFE/GRANULE/L1C_T32UPU_A014791_20180422T102115/IMG_DATA/T32UPU_20180422T102031_B08.jp2": {
+      "sha256": "5117678f58d23474f24e9c3478b00697c60171a5a28775d31da252ed0db301e8",
+      "size": 135305344,
+      "generation": "1524512039259952",
+      "codestream_precision": 15,
+      "pillow_to_native_right_shift": 1
+    },
+    "tiles/32/U/PU/S2A_MSIL1C_20180422T102031_N0206_R065_T32UPU_20180422T141352.SAFE/GRANULE/L1C_T32UPU_A014791_20180422T102115/IMG_DATA/T32UPU_20180422T102031_B11.jp2": {
+      "sha256": "9f8ef69dd4310a80ed345a7a9f5383dfbda310af4f090fc43a35cbd7ee81b401",
+      "size": 33728123,
+      "generation": "1524512051171361",
+      "codestream_precision": 15,
+      "pillow_to_native_right_shift": 1
+    },
+    "tiles/32/U/PU/S2A_MSIL1C_20180422T102031_N0206_R065_T32UPU_20180422T141352.SAFE/GRANULE/L1C_T32UPU_A014791_20180422T102115/IMG_DATA/T32UPU_20180422T102031_B12.jp2": {
+      "sha256": "f8e8cec34bb3e3b4a6bb7a2ba4ec75df2960f350f403d57444d0b1867170cbc5",
+      "size": 33558548,
+      "generation": "1524512062019687",
+      "codestream_precision": 15,
+      "pillow_to_native_right_shift": 1
+    },
+    "tiles/21/L/WK/S2A_MSIL1C_20180505T141051_N0206_R110_T21LWK_20180505T160911.SAFE/GRANULE/L1C_T21LWK_A014979_20180505T141048/IMG_DATA/T21LWK_20180505T141051_B02.jp2": {
+      "sha256": "f7f19a9daa6d5589839208cbbe437f1e162c12cf4edf10593ce0e130edb83fea",
+      "size": 60684493,
+      "generation": "1525799389784089",
+      "codestream_precision": 15,
+      "pillow_to_native_right_shift": 1
+    },
+    "tiles/21/L/WK/S2A_MSIL1C_20180505T141051_N0206_R110_T21LWK_20180505T160911.SAFE/GRANULE/L1C_T21LWK_A014979_20180505T141048/IMG_DATA/T21LWK_20180505T141051_B03.jp2": {
+      "sha256": "c3ec6e8ec24b9254114cf99b477b3160a1f5216c86cb8e2ec4d3753876b44bfa",
+      "size": 67666138,
+      "generation": "1525799396338980",
+      "codestream_precision": 15,
+      "pillow_to_native_right_shift": 1
+    },
+    "tiles/21/L/WK/S2A_MSIL1C_20180505T141051_N0206_R110_T21LWK_20180505T160911.SAFE/GRANULE/L1C_T21LWK_A014979_20180505T141048/IMG_DATA/T21LWK_20180505T141051_B04.jp2": {
+      "sha256": "9fc344f4715b23fa4e33991780340c381a6f3abfe1a09ee9f75a51f333925a62",
+      "size": 65353728,
+      "generation": "1525799402069953",
+      "codestream_precision": 15,
+      "pillow_to_native_right_shift": 1
+    },
+    "tiles/21/L/WK/S2A_MSIL1C_20180505T141051_N0206_R110_T21LWK_20180505T160911.SAFE/GRANULE/L1C_T21LWK_A014979_20180505T141048/IMG_DATA/T21LWK_20180505T141051_B08.jp2": {
+      "sha256": "d5abfe8ffa6942fd5ebf075b0f03c69bc844227de6b4c32417b4ef9b5e2f3adb",
+      "size": 90158111,
+      "generation": "1525799421133612",
+      "codestream_precision": 15,
+      "pillow_to_native_right_shift": 1
+    },
+    "tiles/21/L/WK/S2A_MSIL1C_20180505T141051_N0206_R110_T21LWK_20180505T160911.SAFE/GRANULE/L1C_T21LWK_A014979_20180505T141048/IMG_DATA/T21LWK_20180505T141051_B11.jp2": {
+      "sha256": "4cdf2f61cac3aa47a847dc351a9ae4f64995ca8e8ca5d0d93e87bfe0c7414f4a",
+      "size": 21776365,
+      "generation": "1525799427158887",
+      "codestream_precision": 15,
+      "pillow_to_native_right_shift": 1
+    },
+    "tiles/21/L/WK/S2A_MSIL1C_20180505T141051_N0206_R110_T21LWK_20180505T160911.SAFE/GRANULE/L1C_T21LWK_A014979_20180505T141048/IMG_DATA/T21LWK_20180505T141051_B12.jp2": {
+      "sha256": "30d5d93f2aac294efe9d31665a6a3f59262bb33ab5307e12cbce88aa2f6f7d43",
+      "size": 19633722,
+      "generation": "1525799429472495",
+      "codestream_precision": 15,
+      "pillow_to_native_right_shift": 1
+    }
+  },
+  "original_archive_sha256": "5912fbcfe9edbc1c2cdffbb7ef0119ffdb3099bc9eec37efe301929008bf966d",
+  "method": "Pillow OpenJPEG native pixels; verified existing CRS/grid audit; no resampling of reference labels",
+  "human_review_status": "not_executed",
+  "confirmation_ready_groups": 0
+}

@@ -1,0 +1,3386 @@
+{
+  "created_utc": "2026-10-11T11:14:06.416670+00:00",
+  "protocol_sha256": "dcb95e11548fdad9a730e2bbd058b4511c46420b4c3da824a9951d71fc1ecaa4",
+  "phase87_delivery_sha256": "dafd0ccf560c2a63dced88ecd66f11596dd2628c169a2f833aace8a7cb7874a7",
+  "phase86_candidate_sha256": "7d800c587daee6e805eb9774aab780e80f2ca508d0b8d6acce7c871e0fce0141",
+  "imagery_manifest_sha256": "2ead8cc9f9701973fce918ddff4797190ee6a0cd493c452421d06338cc597ca9",
+  "local_imagery_status_sha256": "3099b5ed1dec0aa0c3a4ab03d60e88c7e0f76f4a9300b3980f9f3db31f30f244",
+  "geometry_audit_sha256": "a8729d197458b1a29c4024bda4cf8b071ee1094cd19ba7307b076ce7b861dcca",
+  "aliases": [
+    {
+      "group_id": "dce297076c4e57e685927135c8ba86a0bcfa19bd6b9eb832ace73d97608e8f10",
+      "representative": "S2A_MSIL1C_20160417T111159_N0201_R137_T29RPQ_20160417T203056",
+      "alias": "S2A_OPER_PRD_MSIL1C_PDMC_20160417T203056_R137_V20160417T111159_20160417T111159__29RPQ",
+      "tile": "29RPQ",
+      "uniform_count": 25,
+      "missing_uniform_blocks": 0,
+      "available_directions": []
+    },
+    {
+      "group_id": "152728a590814dcebe27eaa787e700e67a0df96fd49c0eb12114019f09ed663c",
+      "representative": "S2A_MSIL1C_20160817T101032_N0204_R022_T33UUU_20160817T230018",
+      "alias": "S2A_OPER_PRD_MSIL1C_PDMC_20160817T230018_R022_V20160817T101032_20160817T101559__33UUU",
+      "tile": "33UUU",
+      "uniform_count": 20,
+      "missing_uniform_blocks": 5,
+      "available_directions": []
+    },
+    {
+      "group_id": "1cdd88eeb7acb39608712d444a53314adc04144d281510a8a7ebc9302679cbdb",
+      "representative": "S2A_MSIL1C_20161108T102232_N0204_R065_T32TNR_20161109T224916",
+      "alias": "S2A_OPER_PRD_MSIL1C_PDMC_20161109T224916_R065_V20161108T102232_20161108T102232__32TNR",
+      "tile": "32TNR",
+      "uniform_count": 25,
+      "missing_uniform_blocks": 0,
+      "available_directions": []
+    },
+    {
+      "group_id": "8c8c1e0e6661b3979995a288ab636b4aa160b0df1bbd56a1d4c1a491af8a8e36",
+      "representative": "S2A_MSIL1C_20170313T074931_N0204_R135_T35JPM_20170313T081339",
+      "alias": "S2A_MSIL1C_20170313T074931_N0204_R135_T35JPM_20170313T081339__35JPM",
+      "tile": "35JPM",
+      "uniform_count": 25,
+      "missing_uniform_blocks": 0,
+      "available_directions": [
+        "Shadow_to_Cloud",
+        "Shadow_to_Surface",
+        "Cloud_to_Shadow",
+        "Cloud_to_Surface",
+        "Surface_to_Shadow",
+        "Surface_to_Cloud"
+      ]
+    },
+    {
+      "group_id": "8c931fc7e32ec7d7032098c562cb311383c373d8ebdfa7d0ba2dccb89d437f2c",
+      "representative": "S2A_MSIL1C_20170501T183311_N0205_R127_T11SPC_20170501T183311",
+      "alias": "S2A_MSIL1C_20170501T183311_N0205_R127_T11SPC_20170501T183311__11SPC",
+      "tile": "11SPC",
+      "uniform_count": 22,
+      "missing_uniform_blocks": 3,
+      "available_directions": [
+        "Shadow_to_Cloud",
+        "Shadow_to_Surface",
+        "Cloud_to_Shadow",
+        "Cloud_to_Surface",
+        "Surface_to_Shadow",
+        "Surface_to_Cloud"
+      ]
+    },
+    {
+      "group_id": "78ceda653f7e8b67dfd9ce4b3d778b7155a1c71e6f44605f43cea9237b43ab62",
+      "representative": "S2A_MSIL1C_20170516T105031_N0205_R051_T31UDP_20170516T105322",
+      "alias": "S2A_MSIL1C_20170516T105031_N0205_R051_T31UDP_20170516T105322__31UDP",
+      "tile": "31UDP",
+      "uniform_count": 25,
+      "missing_uniform_blocks": 0,
+      "available_directions": [
+        "Shadow_to_Cloud",
+        "Shadow_to_Surface",
+        "Cloud_to_Shadow",
+        "Cloud_to_Surface",
+        "Surface_to_Shadow",
+        "Surface_to_Cloud"
+      ]
+    },
+    {
+      "group_id": "b9f7bda664a5b264af024c182fcd8d06332976a0b1fab7d57394149b499590ac",
+      "representative": "S2A_MSIL1C_20170917T103021_N0205_R108_T31TFJ_20170917T103018",
+      "alias": "S2A_MSIL1C_20170917T103021_N0205_R108_T31TFJ_20170917T103018__31TFJ",
+      "tile": "31TFJ",
+      "uniform_count": 24,
+      "missing_uniform_blocks": 1,
+      "available_directions": [
+        "Shadow_to_Cloud",
+        "Shadow_to_Surface",
+        "Cloud_to_Shadow",
+        "Cloud_to_Surface",
+        "Surface_to_Shadow",
+        "Surface_to_Cloud"
+      ]
+    },
+    {
+      "group_id": "51385a6aa14de86f4b01adeb8d0ec7c857f3877e95b6f87d6da2220bea57cd82",
+      "representative": "S2A_MSIL1C_20180422T102031_N0206_R065_T32UPU_20180422T141352",
+      "alias": "S2A_MSIL1C_20180422T102031_N0206_R065_T32UPU_20180422T141352__32UPU",
+      "tile": "32UPU",
+      "uniform_count": 25,
+      "missing_uniform_blocks": 0,
+      "available_directions": [
+        "Shadow_to_Cloud",
+        "Shadow_to_Surface",
+        "Cloud_to_Shadow",
+        "Cloud_to_Surface",
+        "Surface_to_Shadow",
+        "Surface_to_Cloud"
+      ]
+    },
+    {
+      "group_id": "791eb119239d0f864b14bac2dde37e3b45c09cd33d96798ef315d7b42876916e",
+      "representative": "S2A_MSIL1C_20180505T141051_N0206_R110_T21LWK_20180505T160911",
+      "alias": "S2A_MSIL1C_20180505T141051_N0206_R110_T21LWK_20180505T160911__21LWK",
+      "tile": "21LWK",
+      "uniform_count": 19,
+      "missing_uniform_blocks": 6,
+      "available_directions": []
+    }
+  ],
+  "samples": [
+    {
+      "group_id": "8c931fc7e32ec7d7032098c562cb311383c373d8ebdfa7d0ba2dccb89d437f2c",
+      "product": "S2A_MSIL1C_20170501T183311_N0205_R127_T11SPC_20170501T183311",
+      "alias": "S2A_MSIL1C_20170501T183311_N0205_R127_T11SPC_20170501T183311__11SPC",
+      "source_id": "R0981",
+      "sources": [
+        "uniform"
+      ],
+      "row": 448,
+      "col": 682,
+      "window": [
+        443,
+        454,
+        677,
+        688
+      ],
+      "stretch": {
+        "B04": [
+          1003.0,
+          1741.0
+        ],
+        "B03": [
+          974.1,
+          1486.8999999999996
+        ],
+        "B02": [
+          1010.0,
+          1412.7999999999993
+        ],
+        "B08": [
+          1783.1,
+          2588.8999999999996
+        ],
+        "B11": [
+          1836.28,
+          2614.92
+        ],
+        "B12": [
+          1421.8,
+          2081.7200000000003
+        ]
+      },
+      "input_band_sha256": {
+        "B02": "b9411c39ab15204aebfd3c5887bfee4393e150fde0421bb8e79861e6d0550835",
+        "B03": "950be2abdd6251ddcc7eff098dddc12b02ab5695fa686c63f3062c3071703089",
+        "B04": "70270fb546d0060bb06ea3d971e5ed651bbfcc8e91feff152b7811bf692e4e30",
+        "B08": "01ed3c92652ca5d8edee8b6c2c78600d801a0d5cda43fd14831b2e6a7a781548",
+        "B11": "20d9892d030793ce047bd40de9c79a3dc624df3f03ac5ad71767fe17d466feb6",
+        "B12": "f54359a5f3fd5e5f387b99efc3cdd3a48336189aa7e2ad1f824c4351a92ddd6f"
+      },
+      "anonymous_id": "A022",
+      "window_sha256": "b49aa022373190643899c53f2cd13702c84a2e542c1cf5227eb29715a9108374",
+      "original_blind_panel_sha256": "e58d5f4a578e4133e0002566f77f75fa332fd595ee06b0bb616687638d5cc788",
+      "blind_panel_sha256": "cd2364127a72561e7346dd99b9c8a700f4ec677e51515a0c2d6d409b3ba16bc2",
+      "phase88_stratum": "regular_control",
+      "review_id": "E001"
+    },
+    {
+      "group_id": "791eb119239d0f864b14bac2dde37e3b45c09cd33d96798ef315d7b42876916e",
+      "product": "S2A_MSIL1C_20180505T141051_N0206_R110_T21LWK_20180505T160911",
+      "alias": "S2A_MSIL1C_20180505T141051_N0206_R110_T21LWK_20180505T160911__21LWK",
+      "source_id": "R1398",
+      "sources": [
+        "uniform"
+      ],
+      "row": 965,
+      "col": 794,
+      "window": [
+        960,
+        971,
+        789,
+        800
+      ],
+      "stretch": {
+        "B04": [
+          285.0,
+          377.89999999999964
+        ],
+        "B03": [
+          533.0,
+          705.0
+        ],
+        "B02": [
+          695.0,
+          765.0
+        ],
+        "B08": [
+          1887.2,
+          3433.7999999999993
+        ],
+        "B11": [
+          1127.76,
+          1568.0
+        ],
+        "B12": [
+          374.76,
+          537.24
+        ]
+      },
+      "input_band_sha256": {
+        "B02": "f7f19a9daa6d5589839208cbbe437f1e162c12cf4edf10593ce0e130edb83fea",
+        "B03": "c3ec6e8ec24b9254114cf99b477b3160a1f5216c86cb8e2ec4d3753876b44bfa",
+        "B04": "9fc344f4715b23fa4e33991780340c381a6f3abfe1a09ee9f75a51f333925a62",
+        "B08": "d5abfe8ffa6942fd5ebf075b0f03c69bc844227de6b4c32417b4ef9b5e2f3adb",
+        "B11": "4cdf2f61cac3aa47a847dc351a9ae4f64995ca8e8ca5d0d93e87bfe0c7414f4a",
+        "B12": "30d5d93f2aac294efe9d31665a6a3f59262bb33ab5307e12cbce88aa2f6f7d43"
+      },
+      "anonymous_id": "A123",
+      "window_sha256": "8e236711a2ad79bdb0621fb8411fc3cfa43cf2c612b28c5bf6fd63af410a869b",
+      "original_blind_panel_sha256": "ca0d00e1327c7d85ed3b4164a2400a166290e1499c49be8ab298401725e3291e",
+      "blind_panel_sha256": "3708ff89d0e97d099d5a680e90a919eae36f0c315b7d0ccdf47129539e4e0f0f",
+      "phase88_stratum": "regular_control",
+      "review_id": "E002"
+    },
+    {
+      "group_id": "8c8c1e0e6661b3979995a288ab636b4aa160b0df1bbd56a1d4c1a491af8a8e36",
+      "product": "S2A_MSIL1C_20170313T074931_N0204_R135_T35JPM_20170313T081339",
+      "alias": "S2A_MSIL1C_20170313T074931_N0204_R135_T35JPM_20170313T081339__35JPM",
+      "source_id": "R1172",
+      "sources": [
+        "Shadow_to_Surface"
+      ],
+      "row": 1829,
+      "col": 23,
+      "window": [
+        1824,
+        1830,
+        18,
+        29
+      ],
+      "stretch": {
+        "B04": [
+          397.0,
+          647.5
+        ],
+        "B03": [
+          594.5,
+          804.0
+        ],
+        "B02": [
+          752.0,
+          857.0
+        ],
+        "B08": [
+          931.0,
+          2289.5
+        ],
+        "B11": [
+          534.16,
+          1574.28
+        ],
+        "B12": [
+          256.0,
+          799.14
+        ]
+      },
+      "input_band_sha256": {
+        "B02": "ed691e72e9d8426fec0f982ec4bd8d4fd27c8b6dc590f415cdf26fdda7735729",
+        "B03": "b65812faab0aad03b756428c2bb3e077d9e1870aa5223dafc433288c61852e25",
+        "B04": "05a7e286edb886dc95ba35ee7ac2f1927a375b1f4f39d1728ce91ff74869edc9",
+        "B08": "418eb2aaf25baed3efe89159c937127402c95b5037597a70c7d9f44651062ee0",
+        "B11": "b60d9195fa0238fcfd012277c307e6645026229bb7998a11c9739b209bd420ee",
+        "B12": "37ac87fbf12bdf5b1cbe5a05ccbc324cda5eca7ba71c59fc8a90f3729db42c8d"
+      },
+      "anonymous_id": "A081",
+      "window_sha256": "cc720e82716cd5a7db7e891203cc9208402e50ae4d403c2c073e620a57c0308c",
+      "original_blind_panel_sha256": "894b4ac284faa5b51bbc6e75576db3d174441e6c45b94bffd4d50d21866b0560",
+      "blind_panel_sha256": "e7f8d3ffd4befa74844fc00763ea0e73a54f9370bc8ba5434bad213d4d90dc96",
+      "phase88_stratum": "P1",
+      "review_id": "E003"
+    },
+    {
+      "group_id": "51385a6aa14de86f4b01adeb8d0ec7c857f3877e95b6f87d6da2220bea57cd82",
+      "product": "S2A_MSIL1C_20180422T102031_N0206_R065_T32UPU_20180422T141352",
+      "alias": "S2A_MSIL1C_20180422T102031_N0206_R065_T32UPU_20180422T141352__32UPU",
+      "source_id": "R1265",
+      "sources": [
+        "Shadow_to_Cloud"
+      ],
+      "row": 1294,
+      "col": 1673,
+      "window": [
+        1289,
+        1300,
+        1668,
+        1679
+      ],
+      "stretch": {
+        "B04": [
+          289.0,
+          1519.8999999999996
+        ],
+        "B03": [
+          469.0,
+          1600.0
+        ],
+        "B02": [
+          693.1,
+          1806.4999999999982
+        ],
+        "B08": [
+          459.0,
+          2449.7999999999993
+        ],
+        "B11": [
+          129.76,
+          2051.48
+        ],
+        "B12": [
+          62.0,
+          1325.2
+        ]
+      },
+      "input_band_sha256": {
+        "B02": "407874a94e134fe099452ff94c900484a67ea82fec01c23342daa5b79d830971",
+        "B03": "b429696f250b0f45d4a855f6242d0a3babd64b009d3004cd107425ee6c5f1bc0",
+        "B04": "5857dbfb77e0834e0a9912a2ce969067ce7ba67e51c8918229ac80e4d6b81375",
+        "B08": "5117678f58d23474f24e9c3478b00697c60171a5a28775d31da252ed0db301e8",
+        "B11": "9f8ef69dd4310a80ed345a7a9f5383dfbda310af4f090fc43a35cbd7ee81b401",
+        "B12": "f8e8cec34bb3e3b4a6bb7a2ba4ec75df2960f350f403d57444d0b1867170cbc5"
+      },
+      "anonymous_id": "A031",
+      "window_sha256": "2fdee78212c4d0081c9165821406be616d6dbd92b65fde8350790923f0f8b4ce",
+      "original_blind_panel_sha256": "528e8231c87fdde4c8481ef40a0912108313d8811f90e3a6991403b23e68ff0b",
+      "blind_panel_sha256": "5ff28d55d5f89a1c74462c5726d2f4fc70745adf219159269d0686658eca831d",
+      "phase88_stratum": "P1",
+      "review_id": "E004"
+    },
+    {
+      "group_id": "51385a6aa14de86f4b01adeb8d0ec7c857f3877e95b6f87d6da2220bea57cd82",
+      "product": "S2A_MSIL1C_20180422T102031_N0206_R065_T32UPU_20180422T141352",
+      "alias": "S2A_MSIL1C_20180422T102031_N0206_R065_T32UPU_20180422T141352__32UPU",
+      "source_id": "R1235",
+      "sources": [
+        "uniform"
+      ],
+      "row": 41,
+      "col": 863,
+      "window": [
+        36,
+        47,
+        858,
+        869
+      ],
+      "stretch": {
+        "B04": [
+          490.0,
+          1761.7999999999993
+        ],
+        "B03": [
+          737.1,
+          1490.0
+        ],
+        "B02": [
+          900.0,
+          1409.0
+        ],
+        "B08": [
+          1476.0,
+          3503.5999999999985
+        ],
+        "B11": [
+          1054.04,
+          2941.6000000000004
+        ],
+        "B12": [
+          506.52,
+          2442.84
+        ]
+      },
+      "input_band_sha256": {
+        "B02": "407874a94e134fe099452ff94c900484a67ea82fec01c23342daa5b79d830971",
+        "B03": "b429696f250b0f45d4a855f6242d0a3babd64b009d3004cd107425ee6c5f1bc0",
+        "B04": "5857dbfb77e0834e0a9912a2ce969067ce7ba67e51c8918229ac80e4d6b81375",
+        "B08": "5117678f58d23474f24e9c3478b00697c60171a5a28775d31da252ed0db301e8",
+        "B11": "9f8ef69dd4310a80ed345a7a9f5383dfbda310af4f090fc43a35cbd7ee81b401",
+        "B12": "f8e8cec34bb3e3b4a6bb7a2ba4ec75df2960f350f403d57444d0b1867170cbc5"
+      },
+      "anonymous_id": "A239",
+      "window_sha256": "dfdf03e0fb2a9a9088d1c9708fb42782bcd948fcc42ddf290889deee0f107594",
+      "original_blind_panel_sha256": "97da3972b10d566a6267865e4ca52e5008be096cecf1014ca56fea99791826bb",
+      "blind_panel_sha256": "bc80e2be24e19ae621361432b2f66610adbc9b6ab346eed7cd1960b27f8f158a",
+      "phase88_stratum": "regular_control",
+      "review_id": "E005"
+    },
+    {
+      "group_id": "791eb119239d0f864b14bac2dde37e3b45c09cd33d96798ef315d7b42876916e",
+      "product": "S2A_MSIL1C_20180505T141051_N0206_R110_T21LWK_20180505T160911",
+      "alias": "S2A_MSIL1C_20180505T141051_N0206_R110_T21LWK_20180505T160911__21LWK",
+      "source_id": "R1399",
+      "sources": [
+        "uniform"
+      ],
+      "row": 968,
+      "col": 1126,
+      "window": [
+        963,
+        974,
+        1121,
+        1132
+      ],
+      "stretch": {
+        "B04": [
+          284.0,
+          375.0
+        ],
+        "B03": [
+          535.0,
+          687.0
+        ],
+        "B02": [
+          694.1,
+          759.0
+        ],
+        "B08": [
+          1935.0,
+          3240.7999999999993
+        ],
+        "B11": [
+          1136.84,
+          1475.24
+        ],
+        "B12": [
+          367.76,
+          511.0
+        ]
+      },
+      "input_band_sha256": {
+        "B02": "f7f19a9daa6d5589839208cbbe437f1e162c12cf4edf10593ce0e130edb83fea",
+        "B03": "c3ec6e8ec24b9254114cf99b477b3160a1f5216c86cb8e2ec4d3753876b44bfa",
+        "B04": "9fc344f4715b23fa4e33991780340c381a6f3abfe1a09ee9f75a51f333925a62",
+        "B08": "d5abfe8ffa6942fd5ebf075b0f03c69bc844227de6b4c32417b4ef9b5e2f3adb",
+        "B11": "4cdf2f61cac3aa47a847dc351a9ae4f64995ca8e8ca5d0d93e87bfe0c7414f4a",
+        "B12": "30d5d93f2aac294efe9d31665a6a3f59262bb33ab5307e12cbce88aa2f6f7d43"
+      },
+      "anonymous_id": "A109",
+      "window_sha256": "0b58c070e4e96db99657981a25dba9033c81c3d1487f3ae39f56def41e5814c8",
+      "original_blind_panel_sha256": "c2cde819d6ba30f6dd9305fc7bd58f3f92089cd86a7da6eaa3038ff18bd2fefb",
+      "blind_panel_sha256": "525003a3ed66e77f29820b447052d6222ed9e5cfb755577e039a383c18f0c47a",
+      "phase88_stratum": "regular_control",
+      "review_id": "E006"
+    },
+    {
+      "group_id": "1cdd88eeb7acb39608712d444a53314adc04144d281510a8a7ebc9302679cbdb",
+      "product": "S2A_MSIL1C_20161108T102232_N0204_R065_T32TNR_20161109T224916",
+      "alias": "S2A_OPER_PRD_MSIL1C_PDMC_20161109T224916_R065_V20161108T102232_20161108T102232__32TNR",
+      "source_id": "R0045",
+      "sources": [
+        "uniform"
+      ],
+      "row": 1728,
+      "col": 911,
+      "window": [
+        1723,
+        1734,
+        906,
+        917
+      ],
+      "stretch": {
+        "B04": [
+          693.0,
+          1271.0
+        ],
+        "B03": [
+          936.0,
+          1299.7999999999993
+        ],
+        "B02": [
+          1197.0,
+          1482.0
+        ],
+        "B08": [
+          1019.2,
+          2492.8999999999996
+        ],
+        "B11": [
+          965.76,
+          2423.8
+        ],
+        "B12": [
+          623.8,
+          1794.2
+        ]
+      },
+      "input_band_sha256": {
+        "B02": "a2dcad5ffeec2597171465d610ab0854e371efd2c8fa07b5d9e8188c583645ff",
+        "B03": "daabd5985f167887bac23032e60107a6495c2939aa9be22b7baf3d1fb8d55b45",
+        "B04": "ee9930f18683c6c919354a2cced0974fd5b60cfbb95d966fe3cab9ea496129f9",
+        "B08": "167472b144c7d01c24579a6385cd17b9bc0bc543796b4c50b8487fa410618100",
+        "B11": "5b42057b11f6b768454cad55cbf9c1312b49d71e7ffe351c13a1708eac487832",
+        "B12": "34d6864cf8762cdc21ae89f501fa0a33c838bfbbb26d4f1c0ca4a31c35eca9e0"
+      },
+      "anonymous_id": "A105",
+      "window_sha256": "b6d14535c8dd7fb7219e492dbe9fff9fffbc00988236cd3c62578b282bcf0756",
+      "original_blind_panel_sha256": "a3d11a49408ad53179ecfddfe1ccb426f4fde41e12e0812856240780c55ae89b",
+      "blind_panel_sha256": "ce5916d113897cdec936be1ab0b43330b2065e4010f033ea60a9b89a15cd1e1e",
+      "phase88_stratum": "regular_control",
+      "review_id": "E007"
+    },
+    {
+      "group_id": "1cdd88eeb7acb39608712d444a53314adc04144d281510a8a7ebc9302679cbdb",
+      "product": "S2A_MSIL1C_20161108T102232_N0204_R065_T32TNR_20161109T224916",
+      "alias": "S2A_OPER_PRD_MSIL1C_PDMC_20161109T224916_R065_V20161108T102232_20161108T102232__32TNR",
+      "source_id": "R0035",
+      "sources": [
+        "uniform"
+      ],
+      "row": 932,
+      "col": 1320,
+      "window": [
+        927,
+        938,
+        1315,
+        1326
+      ],
+      "stretch": {
+        "B04": [
+          509.1,
+          1028.8999999999996
+        ],
+        "B03": [
+          741.0,
+          1123.0
+        ],
+        "B02": [
+          1055.0,
+          1378.0
+        ],
+        "B08": [
+          603.0,
+          2282.199999999997
+        ],
+        "B11": [
+          350.76,
+          1712.68
+        ],
+        "B12": [
+          201.76,
+          1104.92
+        ]
+      },
+      "input_band_sha256": {
+        "B02": "a2dcad5ffeec2597171465d610ab0854e371efd2c8fa07b5d9e8188c583645ff",
+        "B03": "daabd5985f167887bac23032e60107a6495c2939aa9be22b7baf3d1fb8d55b45",
+        "B04": "ee9930f18683c6c919354a2cced0974fd5b60cfbb95d966fe3cab9ea496129f9",
+        "B08": "167472b144c7d01c24579a6385cd17b9bc0bc543796b4c50b8487fa410618100",
+        "B11": "5b42057b11f6b768454cad55cbf9c1312b49d71e7ffe351c13a1708eac487832",
+        "B12": "34d6864cf8762cdc21ae89f501fa0a33c838bfbbb26d4f1c0ca4a31c35eca9e0"
+      },
+      "anonymous_id": "A018",
+      "window_sha256": "77f071ed584842d8286460982184495107c3094e3b03c87b05f4e6d2bc2a480c",
+      "original_blind_panel_sha256": "591d3c44fd08b074a99b14414cefb69c245fd07ce2b7b6275bd97e0795714b29",
+      "blind_panel_sha256": "418764228d584adc9953157e8d9c9f0adc715d3299dc8501a570f83ace09f370",
+      "phase88_stratum": "P1",
+      "review_id": "E008"
+    },
+    {
+      "group_id": "b9f7bda664a5b264af024c182fcd8d06332976a0b1fab7d57394149b499590ac",
+      "product": "S2A_MSIL1C_20170917T103021_N0205_R108_T31TFJ_20170917T103018",
+      "alias": "S2A_MSIL1C_20170917T103021_N0205_R108_T31TFJ_20170917T103018__31TFJ",
+      "source_id": "R1203",
+      "sources": [
+        "Cloud_to_Shadow"
+      ],
+      "row": 1003,
+      "col": 605,
+      "window": [
+        998,
+        1009,
+        600,
+        611
+      ],
+      "stretch": {
+        "B04": [
+          1167.0,
+          2192.699999999999
+        ],
+        "B03": [
+          1312.1,
+          2121.8999999999996
+        ],
+        "B02": [
+          1524.0,
+          2261.699999999999
+        ],
+        "B08": [
+          2147.1,
+          3325.8999999999996
+        ],
+        "B11": [
+          1436.8,
+          2564.24
+        ],
+        "B12": [
+          865.28,
+          1857.5600000000002
+        ]
+      },
+      "input_band_sha256": {
+        "B02": "8c13c2c22f72320d4bc63d7ad6fbc1b18950f4b4f755cca74e9359489d7f9d8e",
+        "B03": "8199ca08705a4db9c625736c0bb2b707e347d8bd6c63cc5bc4c5e1ccd7a190f6",
+        "B04": "dd961447e6c80aa48843475752197b3ff94a63afaf30f2c4869969ef1505d6cf",
+        "B08": "b8fa07c4d984adb58740b8a6543197505cb0958270f2ce943ecc03386c4bef30",
+        "B11": "4a990e5e2127b9a6be11727b69b78d728c53f7de07c1e9ad88db163f43f8cd0c",
+        "B12": "8a611aa28b18d2548129d92dae78884011e6ada27005d320d3ad43f9fcd28090"
+      },
+      "anonymous_id": "A225",
+      "window_sha256": "e1d1ff30da0b29bd4a0eb26556091b4469f6ae43e41349832fa63d89ba7ae929",
+      "original_blind_panel_sha256": "13e385b8eb2166fe5d5d962320df7a47a934cb126f9ae7c3b8e71f46c207ba74",
+      "blind_panel_sha256": "c3ac22b981b1199d7359dce6d4a603902ca0a5421a6e785343777919fb90c763",
+      "phase88_stratum": "P1",
+      "review_id": "E009"
+    },
+    {
+      "group_id": "b9f7bda664a5b264af024c182fcd8d06332976a0b1fab7d57394149b499590ac",
+      "product": "S2A_MSIL1C_20170917T103021_N0205_R108_T31TFJ_20170917T103018",
+      "alias": "S2A_MSIL1C_20170917T103021_N0205_R108_T31TFJ_20170917T103018__31TFJ",
+      "source_id": "R1199",
+      "sources": [
+        "uniform"
+      ],
+      "row": 755,
+      "col": 1384,
+      "window": [
+        750,
+        761,
+        1379,
+        1390
+      ],
+      "stretch": {
+        "B04": [
+          508.1,
+          1524.8999999999996
+        ],
+        "B03": [
+          743.0,
+          1474.7999999999993
+        ],
+        "B02": [
+          904.0,
+          1508.0
+        ],
+        "B08": [
+          1468.1,
+          3083.7999999999993
+        ],
+        "B11": [
+          971.52,
+          2708.28
+        ],
+        "B12": [
+          468.76,
+          1724.9600000000003
+        ]
+      },
+      "input_band_sha256": {
+        "B02": "8c13c2c22f72320d4bc63d7ad6fbc1b18950f4b4f755cca74e9359489d7f9d8e",
+        "B03": "8199ca08705a4db9c625736c0bb2b707e347d8bd6c63cc5bc4c5e1ccd7a190f6",
+        "B04": "dd961447e6c80aa48843475752197b3ff94a63afaf30f2c4869969ef1505d6cf",
+        "B08": "b8fa07c4d984adb58740b8a6543197505cb0958270f2ce943ecc03386c4bef30",
+        "B11": "4a990e5e2127b9a6be11727b69b78d728c53f7de07c1e9ad88db163f43f8cd0c",
+        "B12": "8a611aa28b18d2548129d92dae78884011e6ada27005d320d3ad43f9fcd28090"
+      },
+      "anonymous_id": "A095",
+      "window_sha256": "8837cdee0f4ae8985ec1f81fa8c9247d68a5f88a1ea23175a16731eeb3a85510",
+      "original_blind_panel_sha256": "92c788d56a2d52e09584a49ad6c1c4b5d5f1cba3f78e125933bddfcb0fececa5",
+      "blind_panel_sha256": "17a877a7138f15b885965f1a69d9a15232d3b6ad4c0d6681dcffa13f37c9675b",
+      "phase88_stratum": "P1",
+      "review_id": "E010"
+    },
+    {
+      "group_id": "51385a6aa14de86f4b01adeb8d0ec7c857f3877e95b6f87d6da2220bea57cd82",
+      "product": "S2A_MSIL1C_20180422T102031_N0206_R065_T32UPU_20180422T141352",
+      "alias": "S2A_MSIL1C_20180422T102031_N0206_R065_T32UPU_20180422T141352__32UPU",
+      "source_id": "R1257",
+      "sources": [
+        "uniform"
+      ],
+      "row": 778,
+      "col": 474,
+      "window": [
+        773,
+        784,
+        469,
+        480
+      ],
+      "stretch": {
+        "B04": [
+          436.1,
+          1588.8999999999996
+        ],
+        "B03": [
+          726.0,
+          1393.8999999999996
+        ],
+        "B02": [
+          830.1,
+          1332.8999999999996
+        ],
+        "B08": [
+          1854.4,
+          4466.9
+        ],
+        "B11": [
+          1297.32,
+          2686.24
+        ],
+        "B12": [
+          585.6,
+          2255.36
+        ]
+      },
+      "input_band_sha256": {
+        "B02": "407874a94e134fe099452ff94c900484a67ea82fec01c23342daa5b79d830971",
+        "B03": "b429696f250b0f45d4a855f6242d0a3babd64b009d3004cd107425ee6c5f1bc0",
+        "B04": "5857dbfb77e0834e0a9912a2ce969067ce7ba67e51c8918229ac80e4d6b81375",
+        "B08": "5117678f58d23474f24e9c3478b00697c60171a5a28775d31da252ed0db301e8",
+        "B11": "9f8ef69dd4310a80ed345a7a9f5383dfbda310af4f090fc43a35cbd7ee81b401",
+        "B12": "f8e8cec34bb3e3b4a6bb7a2ba4ec75df2960f350f403d57444d0b1867170cbc5"
+      },
+      "anonymous_id": "A240",
+      "window_sha256": "f042fb5cd491faea61e9ba790c1a44e8873fb55f8cbb8b75ca5035f6bf9e003e",
+      "original_blind_panel_sha256": "b28e148666fd8742befdd698fa0bee290a2ae0d65acbe7ec3f737cd69e5c34b0",
+      "blind_panel_sha256": "12ada4d0dc48e4faaf61e908c4c6b5e4b087eaef925ea98b60b1b2834c996699",
+      "phase88_stratum": "regular_control",
+      "review_id": "E011"
+    },
+    {
+      "group_id": "78ceda653f7e8b67dfd9ce4b3d778b7155a1c71e6f44605f43cea9237b43ab62",
+      "product": "S2A_MSIL1C_20170516T105031_N0205_R051_T31UDP_20170516T105322",
+      "alias": "S2A_MSIL1C_20170516T105031_N0205_R051_T31UDP_20170516T105322__31UDP",
+      "source_id": "R0747",
+      "sources": [
+        "uniform"
+      ],
+      "row": 1768,
+      "col": 1177,
+      "window": [
+        1763,
+        1774,
+        1172,
+        1183
+      ],
+      "stretch": {
+        "B04": [
+          1765.1,
+          2469.0
+        ],
+        "B03": [
+          1954.2,
+          2594.0
+        ],
+        "B02": [
+          2119.0,
+          2770.0
+        ],
+        "B08": [
+          3692.0,
+          4186.0
+        ],
+        "B11": [
+          1653.76,
+          1986.0
+        ],
+        "B12": [
+          1143.76,
+          1580.44
+        ]
+      },
+      "input_band_sha256": {
+        "B02": "c90852508af1974429cfebc3d05fec96a683519bcc5ac3ee9721d66be17ca231",
+        "B03": "78de91b4f670c83bd9732109e954aa79eca61635c8344dd7bf6fd35855d294a1",
+        "B04": "ecb2f822058aa5b1d0ba7f69967c2e39f5db5041307a918ce63b10ff0aa6360b",
+        "B08": "f42720ccb2a6eb8d8842958c0305a533674afb8467576b7c6bd241ee0231ab33",
+        "B11": "ac3f6c51beb22517edf6d411681b4c361c234fb03cc9774010a15602d489b99c",
+        "B12": "2d1b22851f4e21c28b058d80beabbb3dbdea96debe323120716a5031e32f7f1e"
+      },
+      "anonymous_id": "A032",
+      "window_sha256": "25722558aedf4b3d77abe01affbcc0792d86629526301ddd6e269b43b486b44b",
+      "original_blind_panel_sha256": "83a69a7c08863689d854dd7535260c36f8dbefd9a3d0891b5d69e7078c4242ad",
+      "blind_panel_sha256": "f28f356d74b2f72b8fc467484e2ea120569455eb37ae0fd7249c4dbfecb54922",
+      "phase88_stratum": "regular_control",
+      "review_id": "E012"
+    },
+    {
+      "group_id": "8c8c1e0e6661b3979995a288ab636b4aa160b0df1bbd56a1d4c1a491af8a8e36",
+      "product": "S2A_MSIL1C_20170313T074931_N0204_R135_T35JPM_20170313T081339",
+      "alias": "S2A_MSIL1C_20170313T074931_N0204_R135_T35JPM_20170313T081339__35JPM",
+      "source_id": "R1136",
+      "sources": [
+        "uniform"
+      ],
+      "row": 613,
+      "col": 1814,
+      "window": [
+        608,
+        619,
+        1809,
+        1820
+      ],
+      "stretch": {
+        "B04": [
+          392.1,
+          963.8999999999996
+        ],
+        "B03": [
+          556.0,
+          917.0
+        ],
+        "B02": [
+          690.0,
+          929.0
+        ],
+        "B08": [
+          780.2,
+          2500.699999999999
+        ],
+        "B11": [
+          674.0,
+          2261.48
+        ],
+        "B12": [
+          389.76,
+          1410.44
+        ]
+      },
+      "input_band_sha256": {
+        "B02": "ed691e72e9d8426fec0f982ec4bd8d4fd27c8b6dc590f415cdf26fdda7735729",
+        "B03": "b65812faab0aad03b756428c2bb3e077d9e1870aa5223dafc433288c61852e25",
+        "B04": "05a7e286edb886dc95ba35ee7ac2f1927a375b1f4f39d1728ce91ff74869edc9",
+        "B08": "418eb2aaf25baed3efe89159c937127402c95b5037597a70c7d9f44651062ee0",
+        "B11": "b60d9195fa0238fcfd012277c307e6645026229bb7998a11c9739b209bd420ee",
+        "B12": "37ac87fbf12bdf5b1cbe5a05ccbc324cda5eca7ba71c59fc8a90f3729db42c8d"
+      },
+      "anonymous_id": "A124",
+      "window_sha256": "220ec27e2ac58226dd466a90617539aaf0325d666c37beb36f0b41075135312b",
+      "original_blind_panel_sha256": "618d227090c148f841c7f243b85714c30ff7e86ba4e64075b9d5c050e0ba502c",
+      "blind_panel_sha256": "86867ea5c6057af2007f4751ccb7785586b5d2f20bc352df1807e3e68ff351c5",
+      "phase88_stratum": "P1",
+      "review_id": "E013"
+    },
+    {
+      "group_id": "8c931fc7e32ec7d7032098c562cb311383c373d8ebdfa7d0ba2dccb89d437f2c",
+      "product": "S2A_MSIL1C_20170501T183311_N0205_R127_T11SPC_20170501T183311",
+      "alias": "S2A_MSIL1C_20170501T183311_N0205_R127_T11SPC_20170501T183311__11SPC",
+      "source_id": "R0970",
+      "sources": [
+        "Shadow_to_Cloud"
+      ],
+      "row": 31,
+      "col": 1531,
+      "window": [
+        26,
+        37,
+        1526,
+        1537
+      ],
+      "stretch": {
+        "B04": [
+          366.0,
+          2672.8999999999996
+        ],
+        "B03": [
+          480.0,
+          2541.0
+        ],
+        "B02": [
+          648.0,
+          2666.899999999996
+        ],
+        "B08": [
+          546.0,
+          3314.8999999999996
+        ],
+        "B11": [
+          476.0,
+          3833.24
+        ],
+        "B12": [
+          364.76,
+          2926.24
+        ]
+      },
+      "input_band_sha256": {
+        "B02": "b9411c39ab15204aebfd3c5887bfee4393e150fde0421bb8e79861e6d0550835",
+        "B03": "950be2abdd6251ddcc7eff098dddc12b02ab5695fa686c63f3062c3071703089",
+        "B04": "70270fb546d0060bb06ea3d971e5ed651bbfcc8e91feff152b7811bf692e4e30",
+        "B08": "01ed3c92652ca5d8edee8b6c2c78600d801a0d5cda43fd14831b2e6a7a781548",
+        "B11": "20d9892d030793ce047bd40de9c79a3dc624df3f03ac5ad71767fe17d466feb6",
+        "B12": "f54359a5f3fd5e5f387b99efc3cdd3a48336189aa7e2ad1f824c4351a92ddd6f"
+      },
+      "anonymous_id": "A216",
+      "window_sha256": "510d655784d383615ec78ec4edb3ea35744dca9077a17a66dc410d6c70fea3db",
+      "original_blind_panel_sha256": "5397a2c8f803c92814927292c4806206c47806e275baff479377014208776155",
+      "blind_panel_sha256": "69becde3b762fc2978bb94feadaed98d4eef1aa827567d85d9b61cb6aae3fbb6",
+      "phase88_stratum": "P1",
+      "review_id": "E014"
+    },
+    {
+      "group_id": "152728a590814dcebe27eaa787e700e67a0df96fd49c0eb12114019f09ed663c",
+      "product": "S2A_MSIL1C_20160817T101032_N0204_R022_T33UUU_20160817T230018",
+      "alias": "S2A_OPER_PRD_MSIL1C_PDMC_20160817T230018_R022_V20160817T101032_20160817T101559__33UUU",
+      "source_id": "R0066",
+      "sources": [
+        "uniform"
+      ],
+      "row": 1827,
+      "col": 777,
+      "window": [
+        1822,
+        1830,
+        772,
+        783
+      ],
+      "stretch": {
+        "B04": [
+          2404.34,
+          6869.98
+        ],
+        "B03": [
+          2453.08,
+          6317.66
+        ],
+        "B02": [
+          2666.34,
+          6436.0
+        ],
+        "B08": [
+          3394.04,
+          7689.299999999999
+        ],
+        "B11": [
+          2379.1,
+          6594.959999999999
+        ],
+        "B12": [
+          1760.1,
+          5414.7199999999975
+        ]
+      },
+      "input_band_sha256": {
+        "B02": "6fd70d12ad307910c8549d0c319c4ca8c135d6c0a7816140c2b34dba49545316",
+        "B03": "3834404efcd9d87948426d431066b5dda197c19e332e8f83abc68bbfb1f60d88",
+        "B04": "9e4bba24bf25e23dd1e63ca67b67375f1a4bb4647470d3890c51b40d85fb7c8c",
+        "B08": "2a8b2ca5536c99536fe937afe1299992cba437c2788fc3defd89781494fa8cbb",
+        "B11": "faaa320ce9d7a36b97308f36e8af3c65d022d900f5dc8c4a84231e4576d5e0f5",
+        "B12": "3a19d2bee1e2111be48ee5e3f4059c62d1286ea2c09f52df0a97eb72006038b4"
+      },
+      "anonymous_id": "A119",
+      "window_sha256": "e4cb3080eb0d93e57bf65aafa6778453426d187deaaff7b5093f26ee7f3472f1",
+      "original_blind_panel_sha256": "9848d001802110ca3e007158045a6e3cee1b371e46f2aac736e491eb34aba365",
+      "blind_panel_sha256": "26d19783f5bdd69b77be0758a7dae7b3d1d30a43d23a4520b40927c2d4aef5ef",
+      "phase88_stratum": "regular_control",
+      "review_id": "E015"
+    },
+    {
+      "group_id": "78ceda653f7e8b67dfd9ce4b3d778b7155a1c71e6f44605f43cea9237b43ab62",
+      "product": "S2A_MSIL1C_20170516T105031_N0205_R051_T31UDP_20170516T105322",
+      "alias": "S2A_MSIL1C_20170516T105031_N0205_R051_T31UDP_20170516T105322__31UDP",
+      "source_id": "R0744",
+      "sources": [
+        "uniform"
+      ],
+      "row": 1633,
+      "col": 526,
+      "window": [
+        1628,
+        1639,
+        521,
+        532
+      ],
+      "stretch": {
+        "B04": [
+          626.0,
+          1892.8999999999996
+        ],
+        "B03": [
+          874.1,
+          1873.0
+        ],
+        "B02": [
+          1039.0,
+          1920.8999999999996
+        ],
+        "B08": [
+          1103.3,
+          3812.0
+        ],
+        "B11": [
+          859.5600000000001,
+          2506.0
+        ],
+        "B12": [
+          568.76,
+          1896.0
+        ]
+      },
+      "input_band_sha256": {
+        "B02": "c90852508af1974429cfebc3d05fec96a683519bcc5ac3ee9721d66be17ca231",
+        "B03": "78de91b4f670c83bd9732109e954aa79eca61635c8344dd7bf6fd35855d294a1",
+        "B04": "ecb2f822058aa5b1d0ba7f69967c2e39f5db5041307a918ce63b10ff0aa6360b",
+        "B08": "f42720ccb2a6eb8d8842958c0305a533674afb8467576b7c6bd241ee0231ab33",
+        "B11": "ac3f6c51beb22517edf6d411681b4c361c234fb03cc9774010a15602d489b99c",
+        "B12": "2d1b22851f4e21c28b058d80beabbb3dbdea96debe323120716a5031e32f7f1e"
+      },
+      "anonymous_id": "A223",
+      "window_sha256": "1d01d56a9d768cbc186d6cb0e8093afc9f3f41f6fc7461fd7c1b2d0fda1ba9af",
+      "original_blind_panel_sha256": "09c74e99df4344aadbe565f379b00230881121e66a952c632097e606e10f07a4",
+      "blind_panel_sha256": "e695393593b90df0057a9268e83a0d934c0a88b30298c95fcc65204441c302b0",
+      "phase88_stratum": "regular_control",
+      "review_id": "E016"
+    },
+    {
+      "group_id": "b9f7bda664a5b264af024c182fcd8d06332976a0b1fab7d57394149b499590ac",
+      "product": "S2A_MSIL1C_20170917T103021_N0205_R108_T31TFJ_20170917T103018",
+      "alias": "S2A_MSIL1C_20170917T103021_N0205_R108_T31TFJ_20170917T103018__31TFJ",
+      "source_id": "R1216",
+      "sources": [
+        "uniform"
+      ],
+      "row": 1431,
+      "col": 17,
+      "window": [
+        1426,
+        1437,
+        12,
+        23
+      ],
+      "stretch": {
+        "B04": [
+          3547.2,
+          4849.9
+        ],
+        "B03": [
+          3545.5,
+          4676.0
+        ],
+        "B02": [
+          3837.3,
+          5006.0
+        ],
+        "B08": [
+          3709.0,
+          5045.9
+        ],
+        "B11": [
+          3341.28,
+          4497.24
+        ],
+        "B12": [
+          2839.52,
+          3711.0
+        ]
+      },
+      "input_band_sha256": {
+        "B02": "8c13c2c22f72320d4bc63d7ad6fbc1b18950f4b4f755cca74e9359489d7f9d8e",
+        "B03": "8199ca08705a4db9c625736c0bb2b707e347d8bd6c63cc5bc4c5e1ccd7a190f6",
+        "B04": "dd961447e6c80aa48843475752197b3ff94a63afaf30f2c4869969ef1505d6cf",
+        "B08": "b8fa07c4d984adb58740b8a6543197505cb0958270f2ce943ecc03386c4bef30",
+        "B11": "4a990e5e2127b9a6be11727b69b78d728c53f7de07c1e9ad88db163f43f8cd0c",
+        "B12": "8a611aa28b18d2548129d92dae78884011e6ada27005d320d3ad43f9fcd28090"
+      },
+      "anonymous_id": "A217",
+      "window_sha256": "72d79033dde10301410ea527b37912320d290650109312370915226a9e2fceca",
+      "original_blind_panel_sha256": "73527bf356945532323d696c94e1fcd520e4894a7ca68e4007eb0b99fdecc77d",
+      "blind_panel_sha256": "58cb8d93e40cc1bf947273d216a38a8a8cb70f60e91ebec485e5ac5800531d03",
+      "phase88_stratum": "regular_control",
+      "review_id": "E017"
+    },
+    {
+      "group_id": "8c931fc7e32ec7d7032098c562cb311383c373d8ebdfa7d0ba2dccb89d437f2c",
+      "product": "S2A_MSIL1C_20170501T183311_N0205_R127_T11SPC_20170501T183311",
+      "alias": "S2A_MSIL1C_20170501T183311_N0205_R127_T11SPC_20170501T183311__11SPC",
+      "source_id": "R0998",
+      "sources": [
+        "Cloud_to_Shadow"
+      ],
+      "row": 968,
+      "col": 1060,
+      "window": [
+        963,
+        974,
+        1055,
+        1066
+      ],
+      "stretch": {
+        "B04": [
+          542.0,
+          2610.499999999998
+        ],
+        "B03": [
+          626.0,
+          2113.0
+        ],
+        "B02": [
+          818.1,
+          1985.8999999999996
+        ],
+        "B08": [
+          529.1,
+          3060.7999999999993
+        ],
+        "B11": [
+          503.76,
+          3325.7200000000003
+        ],
+        "B12": [
+          441.76,
+          2916.2
+        ]
+      },
+      "input_band_sha256": {
+        "B02": "b9411c39ab15204aebfd3c5887bfee4393e150fde0421bb8e79861e6d0550835",
+        "B03": "950be2abdd6251ddcc7eff098dddc12b02ab5695fa686c63f3062c3071703089",
+        "B04": "70270fb546d0060bb06ea3d971e5ed651bbfcc8e91feff152b7811bf692e4e30",
+        "B08": "01ed3c92652ca5d8edee8b6c2c78600d801a0d5cda43fd14831b2e6a7a781548",
+        "B11": "20d9892d030793ce047bd40de9c79a3dc624df3f03ac5ad71767fe17d466feb6",
+        "B12": "f54359a5f3fd5e5f387b99efc3cdd3a48336189aa7e2ad1f824c4351a92ddd6f"
+      },
+      "anonymous_id": "A151",
+      "window_sha256": "cc72e28de207332a645f5ec715689e5ad2874f35daa5159c0401e243bb7364d4",
+      "original_blind_panel_sha256": "633300cd29df5082bf3ac8813240c6cec0c362eb5b1f61f93e6866242d48c208",
+      "blind_panel_sha256": "5c8944cb2a81de6d82a11fb889d435b7e8a98a0fc25cc405aa1caae936c39144",
+      "phase88_stratum": "P1",
+      "review_id": "E018"
+    },
+    {
+      "group_id": "8c931fc7e32ec7d7032098c562cb311383c373d8ebdfa7d0ba2dccb89d437f2c",
+      "product": "S2A_MSIL1C_20170501T183311_N0205_R127_T11SPC_20170501T183311",
+      "alias": "S2A_MSIL1C_20170501T183311_N0205_R127_T11SPC_20170501T183311__11SPC",
+      "source_id": "R1011",
+      "sources": [
+        "uniform"
+      ],
+      "row": 1819,
+      "col": 199,
+      "window": [
+        1814,
+        1825,
+        194,
+        205
+      ],
+      "stretch": {
+        "B04": [
+          2508.1,
+          2962.8999999999996
+        ],
+        "B03": [
+          2075.0,
+          2438.0
+        ],
+        "B02": [
+          1911.1,
+          2197.0
+        ],
+        "B08": [
+          2998.1,
+          3559.0
+        ],
+        "B11": [
+          3325.76,
+          3972.96
+        ],
+        "B12": [
+          2951.76,
+          3463.24
+        ]
+      },
+      "input_band_sha256": {
+        "B02": "b9411c39ab15204aebfd3c5887bfee4393e150fde0421bb8e79861e6d0550835",
+        "B03": "950be2abdd6251ddcc7eff098dddc12b02ab5695fa686c63f3062c3071703089",
+        "B04": "70270fb546d0060bb06ea3d971e5ed651bbfcc8e91feff152b7811bf692e4e30",
+        "B08": "01ed3c92652ca5d8edee8b6c2c78600d801a0d5cda43fd14831b2e6a7a781548",
+        "B11": "20d9892d030793ce047bd40de9c79a3dc624df3f03ac5ad71767fe17d466feb6",
+        "B12": "f54359a5f3fd5e5f387b99efc3cdd3a48336189aa7e2ad1f824c4351a92ddd6f"
+      },
+      "anonymous_id": "A130",
+      "window_sha256": "953c89944004c57236e43200bf632e101c9ba17caa010e7d905eceffb3b757c6",
+      "original_blind_panel_sha256": "bf7c98316bef6d4d3ac144b76a7a87c7c26c198cb325c48935be4de2ba4de787",
+      "blind_panel_sha256": "bb49aeae01020f1385f27a27999696cbc1e8991eb78cec448539314982dbc686",
+      "phase88_stratum": "regular_control",
+      "review_id": "E019"
+    },
+    {
+      "group_id": "8c8c1e0e6661b3979995a288ab636b4aa160b0df1bbd56a1d4c1a491af8a8e36",
+      "product": "S2A_MSIL1C_20170313T074931_N0204_R135_T35JPM_20170313T081339",
+      "alias": "S2A_MSIL1C_20170313T074931_N0204_R135_T35JPM_20170313T081339__35JPM",
+      "source_id": "R1168",
+      "sources": [
+        "Cloud_to_Shadow"
+      ],
+      "row": 1766,
+      "col": 870,
+      "window": [
+        1761,
+        1772,
+        865,
+        876
+      ],
+      "stretch": {
+        "B04": [
+          526.0,
+          1154.7999999999993
+        ],
+        "B03": [
+          703.0,
+          1304.0
+        ],
+        "B02": [
+          840.0,
+          1410.7999999999993
+        ],
+        "B08": [
+          1111.1,
+          2459.0
+        ],
+        "B11": [
+          714.0,
+          1876.96
+        ],
+        "B12": [
+          348.52,
+          1036.44
+        ]
+      },
+      "input_band_sha256": {
+        "B02": "ed691e72e9d8426fec0f982ec4bd8d4fd27c8b6dc590f415cdf26fdda7735729",
+        "B03": "b65812faab0aad03b756428c2bb3e077d9e1870aa5223dafc433288c61852e25",
+        "B04": "05a7e286edb886dc95ba35ee7ac2f1927a375b1f4f39d1728ce91ff74869edc9",
+        "B08": "418eb2aaf25baed3efe89159c937127402c95b5037597a70c7d9f44651062ee0",
+        "B11": "b60d9195fa0238fcfd012277c307e6645026229bb7998a11c9739b209bd420ee",
+        "B12": "37ac87fbf12bdf5b1cbe5a05ccbc324cda5eca7ba71c59fc8a90f3729db42c8d"
+      },
+      "anonymous_id": "A107",
+      "window_sha256": "46200fb9d26d23550a175a43e9e638004638d04d9461490e94721923e992e6db",
+      "original_blind_panel_sha256": "c9ef98ab587e20ff112c557f26aa2a188bf50b8d23b9c4ab8c5f9ea0a57f96e3",
+      "blind_panel_sha256": "669ae5d60e8358548c00ff06110a8be488ce387c7515c14b441c964da8ce4bc3",
+      "phase88_stratum": "P1",
+      "review_id": "E020"
+    },
+    {
+      "group_id": "b9f7bda664a5b264af024c182fcd8d06332976a0b1fab7d57394149b499590ac",
+      "product": "S2A_MSIL1C_20170917T103021_N0205_R108_T31TFJ_20170917T103018",
+      "alias": "S2A_MSIL1C_20170917T103021_N0205_R108_T31TFJ_20170917T103018__31TFJ",
+      "source_id": "R1207",
+      "sources": [
+        "Shadow_to_Surface"
+      ],
+      "row": 1073,
+      "col": 1437,
+      "window": [
+        1068,
+        1079,
+        1432,
+        1443
+      ],
+      "stretch": {
+        "B04": [
+          400.0,
+          1889.3999999999978
+        ],
+        "B03": [
+          620.0,
+          1547.4999999999982
+        ],
+        "B02": [
+          824.0,
+          1483.8999999999996
+        ],
+        "B08": [
+          1120.1,
+          2763.0
+        ],
+        "B11": [
+          706.04,
+          2991.3200000000006
+        ],
+        "B12": [
+          334.28000000000003,
+          2040.8000000000004
+        ]
+      },
+      "input_band_sha256": {
+        "B02": "8c13c2c22f72320d4bc63d7ad6fbc1b18950f4b4f755cca74e9359489d7f9d8e",
+        "B03": "8199ca08705a4db9c625736c0bb2b707e347d8bd6c63cc5bc4c5e1ccd7a190f6",
+        "B04": "dd961447e6c80aa48843475752197b3ff94a63afaf30f2c4869969ef1505d6cf",
+        "B08": "b8fa07c4d984adb58740b8a6543197505cb0958270f2ce943ecc03386c4bef30",
+        "B11": "4a990e5e2127b9a6be11727b69b78d728c53f7de07c1e9ad88db163f43f8cd0c",
+        "B12": "8a611aa28b18d2548129d92dae78884011e6ada27005d320d3ad43f9fcd28090"
+      },
+      "anonymous_id": "A112",
+      "window_sha256": "ad9f3d2c11fa4c971014daa4250c1f6df3352ce96a13ceed93b3c81ba91c09e9",
+      "original_blind_panel_sha256": "4e6eb1f4d2a7bf9ccafdbeb3785ec2c572fa1287c3e2eef08d8d36ce604d6ab7",
+      "blind_panel_sha256": "82cc837c4856060400b06f72edf6198be65bca18761984c5bef3a3269cafb0c7",
+      "phase88_stratum": "P1",
+      "review_id": "E021"
+    },
+    {
+      "group_id": "8c931fc7e32ec7d7032098c562cb311383c373d8ebdfa7d0ba2dccb89d437f2c",
+      "product": "S2A_MSIL1C_20170501T183311_N0205_R127_T11SPC_20170501T183311",
+      "alias": "S2A_MSIL1C_20170501T183311_N0205_R127_T11SPC_20170501T183311__11SPC",
+      "source_id": "R0995",
+      "sources": [
+        "Shadow_to_Surface"
+      ],
+      "row": 839,
+      "col": 1092,
+      "window": [
+        834,
+        845,
+        1087,
+        1098
+      ],
+      "stretch": {
+        "B04": [
+          317.1,
+          3926.0
+        ],
+        "B03": [
+          464.0,
+          3459.2999999999975
+        ],
+        "B02": [
+          668.0,
+          3180.8999999999996
+        ],
+        "B08": [
+          198.0,
+          4444.599999999995
+        ],
+        "B11": [
+          109.76,
+          5043.16
+        ],
+        "B12": [
+          94.0,
+          4116.4400000000005
+        ]
+      },
+      "input_band_sha256": {
+        "B02": "b9411c39ab15204aebfd3c5887bfee4393e150fde0421bb8e79861e6d0550835",
+        "B03": "950be2abdd6251ddcc7eff098dddc12b02ab5695fa686c63f3062c3071703089",
+        "B04": "70270fb546d0060bb06ea3d971e5ed651bbfcc8e91feff152b7811bf692e4e30",
+        "B08": "01ed3c92652ca5d8edee8b6c2c78600d801a0d5cda43fd14831b2e6a7a781548",
+        "B11": "20d9892d030793ce047bd40de9c79a3dc624df3f03ac5ad71767fe17d466feb6",
+        "B12": "f54359a5f3fd5e5f387b99efc3cdd3a48336189aa7e2ad1f824c4351a92ddd6f"
+      },
+      "anonymous_id": "A174",
+      "window_sha256": "4933fd1095d087eba2a2db77b081d68564aa2d85395e310a21d7c5456d5287e8",
+      "original_blind_panel_sha256": "b911b0ed55f7ed8b30b7f7cd00845c6ec1275b601550a1505258e61c34c4e656",
+      "blind_panel_sha256": "b323e4328a8abbcad66b78462d0a2fb4e65374fbdc79c63bf5d63d962bf7696a",
+      "phase88_stratum": "P1",
+      "review_id": "E022"
+    },
+    {
+      "group_id": "51385a6aa14de86f4b01adeb8d0ec7c857f3877e95b6f87d6da2220bea57cd82",
+      "product": "S2A_MSIL1C_20180422T102031_N0206_R065_T32UPU_20180422T141352",
+      "alias": "S2A_MSIL1C_20180422T102031_N0206_R065_T32UPU_20180422T141352__32UPU",
+      "source_id": "R1272",
+      "sources": [
+        "uniform"
+      ],
+      "row": 1508,
+      "col": 816,
+      "window": [
+        1503,
+        1514,
+        811,
+        822
+      ],
+      "stretch": {
+        "B04": [
+          374.0,
+          1643.8999999999996
+        ],
+        "B03": [
+          598.1,
+          1526.8999999999996
+        ],
+        "B02": [
+          780.0,
+          1413.0
+        ],
+        "B08": [
+          1484.0,
+          5107.799999999999
+        ],
+        "B11": [
+          636.52,
+          2893.96
+        ],
+        "B12": [
+          279.0,
+          2179.96
+        ]
+      },
+      "input_band_sha256": {
+        "B02": "407874a94e134fe099452ff94c900484a67ea82fec01c23342daa5b79d830971",
+        "B03": "b429696f250b0f45d4a855f6242d0a3babd64b009d3004cd107425ee6c5f1bc0",
+        "B04": "5857dbfb77e0834e0a9912a2ce969067ce7ba67e51c8918229ac80e4d6b81375",
+        "B08": "5117678f58d23474f24e9c3478b00697c60171a5a28775d31da252ed0db301e8",
+        "B11": "9f8ef69dd4310a80ed345a7a9f5383dfbda310af4f090fc43a35cbd7ee81b401",
+        "B12": "f8e8cec34bb3e3b4a6bb7a2ba4ec75df2960f350f403d57444d0b1867170cbc5"
+      },
+      "anonymous_id": "A168",
+      "window_sha256": "0bae960791450c8fe77ef0792cbce0ba994a8927b36a0a851f312a53236e348c",
+      "original_blind_panel_sha256": "e0e79c1084e77de89165afaaa500c4844504d73614cf6a7266562bd23ce684bd",
+      "blind_panel_sha256": "b17abc735dac42e03115de819ec36a05603b12cf496b378cf50385d52f32a5c6",
+      "phase88_stratum": "regular_control",
+      "review_id": "E023"
+    },
+    {
+      "group_id": "b9f7bda664a5b264af024c182fcd8d06332976a0b1fab7d57394149b499590ac",
+      "product": "S2A_MSIL1C_20170917T103021_N0205_R108_T31TFJ_20170917T103018",
+      "alias": "S2A_MSIL1C_20170917T103021_N0205_R108_T31TFJ_20170917T103018__31TFJ",
+      "source_id": "R1181",
+      "sources": [
+        "uniform"
+      ],
+      "row": 58,
+      "col": 1423,
+      "window": [
+        53,
+        64,
+        1418,
+        1429
+      ],
+      "stretch": {
+        "B04": [
+          298.0,
+          1107.8999999999996
+        ],
+        "B03": [
+          498.0,
+          1233.699999999999
+        ],
+        "B02": [
+          769.0,
+          1351.0
+        ],
+        "B08": [
+          499.1,
+          2760.5999999999985
+        ],
+        "B11": [
+          225.0,
+          2023.72
+        ],
+        "B12": [
+          107.0,
+          1144.2
+        ]
+      },
+      "input_band_sha256": {
+        "B02": "8c13c2c22f72320d4bc63d7ad6fbc1b18950f4b4f755cca74e9359489d7f9d8e",
+        "B03": "8199ca08705a4db9c625736c0bb2b707e347d8bd6c63cc5bc4c5e1ccd7a190f6",
+        "B04": "dd961447e6c80aa48843475752197b3ff94a63afaf30f2c4869969ef1505d6cf",
+        "B08": "b8fa07c4d984adb58740b8a6543197505cb0958270f2ce943ecc03386c4bef30",
+        "B11": "4a990e5e2127b9a6be11727b69b78d728c53f7de07c1e9ad88db163f43f8cd0c",
+        "B12": "8a611aa28b18d2548129d92dae78884011e6ada27005d320d3ad43f9fcd28090"
+      },
+      "anonymous_id": "A192",
+      "window_sha256": "64a7679ed036cfe17905bcdfb3c99d9b6002c713a83855606fc5dd766f4269ff",
+      "original_blind_panel_sha256": "567ba0e83357ca448379eacce047cf0d78d42da466121f0b667efe44b959846f",
+      "blind_panel_sha256": "d442d9ece1e9003fcd07bf525e8381905ad74364ba12dd41f1db2171d0fb7ffa",
+      "phase88_stratum": "P1",
+      "review_id": "E024"
+    },
+    {
+      "group_id": "51385a6aa14de86f4b01adeb8d0ec7c857f3877e95b6f87d6da2220bea57cd82",
+      "product": "S2A_MSIL1C_20180422T102031_N0206_R065_T32UPU_20180422T141352",
+      "alias": "S2A_MSIL1C_20180422T102031_N0206_R065_T32UPU_20180422T141352__32UPU",
+      "source_id": "R1249",
+      "sources": [
+        "Surface_to_Shadow"
+      ],
+      "row": 508,
+      "col": 272,
+      "window": [
+        503,
+        514,
+        267,
+        278
+      ],
+      "stretch": {
+        "B04": [
+          413.0,
+          1706.899999999996
+        ],
+        "B03": [
+          626.0,
+          1457.7999999999993
+        ],
+        "B02": [
+          828.0,
+          1365.8999999999996
+        ],
+        "B08": [
+          1026.1,
+          4278.799999999999
+        ],
+        "B11": [
+          431.76,
+          2986.24
+        ],
+        "B12": [
+          212.08,
+          2435.12
+        ]
+      },
+      "input_band_sha256": {
+        "B02": "407874a94e134fe099452ff94c900484a67ea82fec01c23342daa5b79d830971",
+        "B03": "b429696f250b0f45d4a855f6242d0a3babd64b009d3004cd107425ee6c5f1bc0",
+        "B04": "5857dbfb77e0834e0a9912a2ce969067ce7ba67e51c8918229ac80e4d6b81375",
+        "B08": "5117678f58d23474f24e9c3478b00697c60171a5a28775d31da252ed0db301e8",
+        "B11": "9f8ef69dd4310a80ed345a7a9f5383dfbda310af4f090fc43a35cbd7ee81b401",
+        "B12": "f8e8cec34bb3e3b4a6bb7a2ba4ec75df2960f350f403d57444d0b1867170cbc5"
+      },
+      "anonymous_id": "A237",
+      "window_sha256": "2c1b6abd030ac80171dce6b0b5bd543a60193ec4f66af929e0efc9be0c35cac8",
+      "original_blind_panel_sha256": "b8a81d0910f63e9141d83abd181a1a1213f2b781da6131b8bb60ef4f3623d5e8",
+      "blind_panel_sha256": "e35e94c4fe8fbbd4bce883308426f71b631cea7f63132edc045e62785761553d",
+      "phase88_stratum": "P1",
+      "review_id": "E025"
+    },
+    {
+      "group_id": "78ceda653f7e8b67dfd9ce4b3d778b7155a1c71e6f44605f43cea9237b43ab62",
+      "product": "S2A_MSIL1C_20170516T105031_N0205_R051_T31UDP_20170516T105322",
+      "alias": "S2A_MSIL1C_20170516T105031_N0205_R051_T31UDP_20170516T105322__31UDP",
+      "source_id": "R0709",
+      "sources": [
+        "uniform"
+      ],
+      "row": 482,
+      "col": 158,
+      "window": [
+        477,
+        488,
+        153,
+        164
+      ],
+      "stretch": {
+        "B04": [
+          352.1,
+          2391.7999999999993
+        ],
+        "B03": [
+          631.0,
+          1901.8999999999996
+        ],
+        "B02": [
+          789.0,
+          1586.8999999999996
+        ],
+        "B08": [
+          2647.3,
+          5285.0
+        ],
+        "B11": [
+          978.76,
+          3935.24
+        ],
+        "B12": [
+          390.76,
+          3276.16
+        ]
+      },
+      "input_band_sha256": {
+        "B02": "c90852508af1974429cfebc3d05fec96a683519bcc5ac3ee9721d66be17ca231",
+        "B03": "78de91b4f670c83bd9732109e954aa79eca61635c8344dd7bf6fd35855d294a1",
+        "B04": "ecb2f822058aa5b1d0ba7f69967c2e39f5db5041307a918ce63b10ff0aa6360b",
+        "B08": "f42720ccb2a6eb8d8842958c0305a533674afb8467576b7c6bd241ee0231ab33",
+        "B11": "ac3f6c51beb22517edf6d411681b4c361c234fb03cc9774010a15602d489b99c",
+        "B12": "2d1b22851f4e21c28b058d80beabbb3dbdea96debe323120716a5031e32f7f1e"
+      },
+      "anonymous_id": "A132",
+      "window_sha256": "237bb5657a664886ea08e0d8944f7f83244c19226f537f047175497d34375d92",
+      "original_blind_panel_sha256": "ec119ace4d5ab7be484973eb7b07ec8d67993def0c514ae781c08f09f7ea2812",
+      "blind_panel_sha256": "6ab4a508e11dcee75b27a8c4af2ec402d4cdffa56094b6c04b7f4bab98434154",
+      "phase88_stratum": "regular_control",
+      "review_id": "E026"
+    },
+    {
+      "group_id": "51385a6aa14de86f4b01adeb8d0ec7c857f3877e95b6f87d6da2220bea57cd82",
+      "product": "S2A_MSIL1C_20180422T102031_N0206_R065_T32UPU_20180422T141352",
+      "alias": "S2A_MSIL1C_20180422T102031_N0206_R065_T32UPU_20180422T141352__32UPU",
+      "source_id": "R1242",
+      "sources": [
+        "Cloud_to_Shadow"
+      ],
+      "row": 183,
+      "col": 5,
+      "window": [
+        178,
+        189,
+        0,
+        11
+      ],
+      "stretch": {
+        "B04": [
+          434.0,
+          2761.8999999999996
+        ],
+        "B03": [
+          683.0,
+          2799.2999999999975
+        ],
+        "B02": [
+          893.0,
+          2991.7999999999993
+        ],
+        "B08": [
+          1230.3,
+          4447.799999999999
+        ],
+        "B11": [
+          513.76,
+          3595.24
+        ],
+        "B12": [
+          245.52,
+          2757.0
+        ]
+      },
+      "input_band_sha256": {
+        "B02": "407874a94e134fe099452ff94c900484a67ea82fec01c23342daa5b79d830971",
+        "B03": "b429696f250b0f45d4a855f6242d0a3babd64b009d3004cd107425ee6c5f1bc0",
+        "B04": "5857dbfb77e0834e0a9912a2ce969067ce7ba67e51c8918229ac80e4d6b81375",
+        "B08": "5117678f58d23474f24e9c3478b00697c60171a5a28775d31da252ed0db301e8",
+        "B11": "9f8ef69dd4310a80ed345a7a9f5383dfbda310af4f090fc43a35cbd7ee81b401",
+        "B12": "f8e8cec34bb3e3b4a6bb7a2ba4ec75df2960f350f403d57444d0b1867170cbc5"
+      },
+      "anonymous_id": "A161",
+      "window_sha256": "c7cb527b57686b69faf5496fd569471645bddd60491d3ac38262e4f5c05de391",
+      "original_blind_panel_sha256": "8c926724efb1ebe14560260cf2389bb2d9a98cbec7a4da16236461cbfc3ab425",
+      "blind_panel_sha256": "8065251aa0b769aba674991989de7f06106e8a8be33a5c03b9829e0d3a5ef399",
+      "phase88_stratum": "P1",
+      "review_id": "E027"
+    },
+    {
+      "group_id": "dce297076c4e57e685927135c8ba86a0bcfa19bd6b9eb832ace73d97608e8f10",
+      "product": "S2A_MSIL1C_20160417T111159_N0201_R137_T29RPQ_20160417T203056",
+      "alias": "S2A_OPER_PRD_MSIL1C_PDMC_20160417T203056_R137_V20160417T111159_20160417T111159__29RPQ",
+      "source_id": "R0145",
+      "sources": [
+        "uniform"
+      ],
+      "row": 295,
+      "col": 97,
+      "window": [
+        290,
+        301,
+        92,
+        103
+      ],
+      "stretch": {
+        "B04": [
+          698.0,
+          2929.199999999997
+        ],
+        "B03": [
+          785.1,
+          2663.199999999997
+        ],
+        "B02": [
+          958.0,
+          2706.499999999998
+        ],
+        "B08": [
+          811.0,
+          3439.699999999999
+        ],
+        "B11": [
+          743.0,
+          3789.0
+        ],
+        "B12": [
+          577.52,
+          2939.6400000000003
+        ]
+      },
+      "input_band_sha256": {
+        "B02": "956ad1cc877c750ccdc38ceb4799e5fdf3b8685637e53157f913c9547f577fb4",
+        "B03": "b32d02b1ed26bd6b6a5a2cbe020166ab0599774ecabdec26a90f2dab3aed1b73",
+        "B04": "83ba7b9ba9dc455fe622e9e775bc6bd5e1a21991cdef0720c185667849c73f11",
+        "B08": "86e73b69cc5fe2e94c39daf747b991875343baf07589a03a013a532beab676d0",
+        "B11": "507fee87e1dd3c32f07772dba4ac82bd80e4bcfa89cbedd1b3e39200c1fc52ca",
+        "B12": "ade775712061b9a54c065ad7d53116b3c0605d0d9996726d61e4d4073689f1d1"
+      },
+      "anonymous_id": "A108",
+      "window_sha256": "e915bbf3e6cb7e6576b69b8134a76ca0217bdc38ed8646df60798973b74326ba",
+      "original_blind_panel_sha256": "4df9af3eca6dc7cab46407ccbf52916c40080534d72bca69e6dd334820c18838",
+      "blind_panel_sha256": "897da17038a25959c2dc1e54e72e44c9cc87094d12cf79f56f76ea20f98818f2",
+      "phase88_stratum": "P1",
+      "review_id": "E028"
+    },
+    {
+      "group_id": "8c931fc7e32ec7d7032098c562cb311383c373d8ebdfa7d0ba2dccb89d437f2c",
+      "product": "S2A_MSIL1C_20170501T183311_N0205_R127_T11SPC_20170501T183311",
+      "alias": "S2A_MSIL1C_20170501T183311_N0205_R127_T11SPC_20170501T183311__11SPC",
+      "source_id": "R0999",
+      "sources": [
+        "uniform"
+      ],
+      "row": 991,
+      "col": 1355,
+      "window": [
+        986,
+        997,
+        1350,
+        1361
+      ],
+      "stretch": {
+        "B04": [
+          541.1,
+          2152.0
+        ],
+        "B03": [
+          621.0,
+          1774.0
+        ],
+        "B02": [
+          792.0,
+          1755.8999999999996
+        ],
+        "B08": [
+          587.1,
+          2913.0
+        ],
+        "B11": [
+          582.04,
+          3348.16
+        ],
+        "B12": [
+          442.52,
+          2688.32
+        ]
+      },
+      "input_band_sha256": {
+        "B02": "b9411c39ab15204aebfd3c5887bfee4393e150fde0421bb8e79861e6d0550835",
+        "B03": "950be2abdd6251ddcc7eff098dddc12b02ab5695fa686c63f3062c3071703089",
+        "B04": "70270fb546d0060bb06ea3d971e5ed651bbfcc8e91feff152b7811bf692e4e30",
+        "B08": "01ed3c92652ca5d8edee8b6c2c78600d801a0d5cda43fd14831b2e6a7a781548",
+        "B11": "20d9892d030793ce047bd40de9c79a3dc624df3f03ac5ad71767fe17d466feb6",
+        "B12": "f54359a5f3fd5e5f387b99efc3cdd3a48336189aa7e2ad1f824c4351a92ddd6f"
+      },
+      "anonymous_id": "A084",
+      "window_sha256": "baf6558a1de3a85356dcac18400b00c04780d34e760702dd36d502814a2f6341",
+      "original_blind_panel_sha256": "f1207212b868212a37e785632c954c716170bf1ae02d65ebaf66bca9ea824204",
+      "blind_panel_sha256": "6408bdd87d9713fcfafc03426a7bbf98e43aae4ef54327b1cc45e38be11223ad",
+      "phase88_stratum": "P1",
+      "review_id": "E029"
+    },
+    {
+      "group_id": "8c8c1e0e6661b3979995a288ab636b4aa160b0df1bbd56a1d4c1a491af8a8e36",
+      "product": "S2A_MSIL1C_20170313T074931_N0204_R135_T35JPM_20170313T081339",
+      "alias": "S2A_MSIL1C_20170313T074931_N0204_R135_T35JPM_20170313T081339__35JPM",
+      "source_id": "R1161",
+      "sources": [
+        "uniform"
+      ],
+      "row": 1611,
+      "col": 1762,
+      "window": [
+        1606,
+        1617,
+        1757,
+        1768
+      ],
+      "stretch": {
+        "B04": [
+          610.0,
+          1821.699999999999
+        ],
+        "B03": [
+          866.1,
+          1636.699999999999
+        ],
+        "B02": [
+          924.0,
+          1588.699999999999
+        ],
+        "B08": [
+          2179.0,
+          5032.499999999998
+        ],
+        "B11": [
+          1545.76,
+          2896.76
+        ],
+        "B12": [
+          749.0,
+          2150.0
+        ]
+      },
+      "input_band_sha256": {
+        "B02": "ed691e72e9d8426fec0f982ec4bd8d4fd27c8b6dc590f415cdf26fdda7735729",
+        "B03": "b65812faab0aad03b756428c2bb3e077d9e1870aa5223dafc433288c61852e25",
+        "B04": "05a7e286edb886dc95ba35ee7ac2f1927a375b1f4f39d1728ce91ff74869edc9",
+        "B08": "418eb2aaf25baed3efe89159c937127402c95b5037597a70c7d9f44651062ee0",
+        "B11": "b60d9195fa0238fcfd012277c307e6645026229bb7998a11c9739b209bd420ee",
+        "B12": "37ac87fbf12bdf5b1cbe5a05ccbc324cda5eca7ba71c59fc8a90f3729db42c8d"
+      },
+      "anonymous_id": "A159",
+      "window_sha256": "af61a74662b3d865543259bf66e29aaf446d01bdab3c777f91e5fdb72e9aca9d",
+      "original_blind_panel_sha256": "54140a843592a3c073e3c3dd533cb9665d338580bb0e8b8a4ffc2cb11ee25847",
+      "blind_panel_sha256": "e5db985a02c6961cc94bb8d476e344afb9e1f9e4ffb329d75a468cd4b227ee3b",
+      "phase88_stratum": "regular_control",
+      "review_id": "E030"
+    },
+    {
+      "group_id": "dce297076c4e57e685927135c8ba86a0bcfa19bd6b9eb832ace73d97608e8f10",
+      "product": "S2A_MSIL1C_20160417T111159_N0201_R137_T29RPQ_20160417T203056",
+      "alias": "S2A_OPER_PRD_MSIL1C_PDMC_20160417T203056_R137_V20160417T111159_20160417T111159__29RPQ",
+      "source_id": "R0164",
+      "sources": [
+        "uniform"
+      ],
+      "row": 1579,
+      "col": 112,
+      "window": [
+        1574,
+        1585,
+        107,
+        118
+      ],
+      "stretch": {
+        "B04": [
+          1712.0,
+          2550.8999999999996
+        ],
+        "B03": [
+          1502.1,
+          2332.8999999999996
+        ],
+        "B02": [
+          1499.0,
+          2409.0
+        ],
+        "B08": [
+          2155.3,
+          3034.0
+        ],
+        "B11": [
+          2019.04,
+          2844.24
+        ],
+        "B12": [
+          1612.0,
+          2344.24
+        ]
+      },
+      "input_band_sha256": {
+        "B02": "956ad1cc877c750ccdc38ceb4799e5fdf3b8685637e53157f913c9547f577fb4",
+        "B03": "b32d02b1ed26bd6b6a5a2cbe020166ab0599774ecabdec26a90f2dab3aed1b73",
+        "B04": "83ba7b9ba9dc455fe622e9e775bc6bd5e1a21991cdef0720c185667849c73f11",
+        "B08": "86e73b69cc5fe2e94c39daf747b991875343baf07589a03a013a532beab676d0",
+        "B11": "507fee87e1dd3c32f07772dba4ac82bd80e4bcfa89cbedd1b3e39200c1fc52ca",
+        "B12": "ade775712061b9a54c065ad7d53116b3c0605d0d9996726d61e4d4073689f1d1"
+      },
+      "anonymous_id": "A003",
+      "window_sha256": "6231c230188bd244edf2f3c56194a784df027295bd47d6cb680e729e1c9756da",
+      "original_blind_panel_sha256": "161f41c1b0c4f989438d601c74408b18fcc3f6cea478e160d7dac6d6dc3dc738",
+      "blind_panel_sha256": "69b134c8499bd3ca3770b501bb51d9ea664d306f7bd83a6f5118d33b0f4a16f1",
+      "phase88_stratum": "regular_control",
+      "review_id": "E031"
+    },
+    {
+      "group_id": "8c8c1e0e6661b3979995a288ab636b4aa160b0df1bbd56a1d4c1a491af8a8e36",
+      "product": "S2A_MSIL1C_20170313T074931_N0204_R135_T35JPM_20170313T081339",
+      "alias": "S2A_MSIL1C_20170313T074931_N0204_R135_T35JPM_20170313T081339__35JPM",
+      "source_id": "R1165",
+      "sources": [
+        "Shadow_to_Cloud"
+      ],
+      "row": 1732,
+      "col": 1091,
+      "window": [
+        1727,
+        1738,
+        1086,
+        1097
+      ],
+      "stretch": {
+        "B04": [
+          400.0,
+          827.8999999999996
+        ],
+        "B03": [
+          631.0,
+          917.0
+        ],
+        "B02": [
+          768.1,
+          954.0
+        ],
+        "B08": [
+          1064.1,
+          4701.799999999999
+        ],
+        "B11": [
+          648.76,
+          2220.92
+        ],
+        "B12": [
+          310.0,
+          1053.0
+        ]
+      },
+      "input_band_sha256": {
+        "B02": "ed691e72e9d8426fec0f982ec4bd8d4fd27c8b6dc590f415cdf26fdda7735729",
+        "B03": "b65812faab0aad03b756428c2bb3e077d9e1870aa5223dafc433288c61852e25",
+        "B04": "05a7e286edb886dc95ba35ee7ac2f1927a375b1f4f39d1728ce91ff74869edc9",
+        "B08": "418eb2aaf25baed3efe89159c937127402c95b5037597a70c7d9f44651062ee0",
+        "B11": "b60d9195fa0238fcfd012277c307e6645026229bb7998a11c9739b209bd420ee",
+        "B12": "37ac87fbf12bdf5b1cbe5a05ccbc324cda5eca7ba71c59fc8a90f3729db42c8d"
+      },
+      "anonymous_id": "A213",
+      "window_sha256": "4f6d193058b8ab6a62e8365dca3db4bcdaef6d4a9741e1212e1194376d06087f",
+      "original_blind_panel_sha256": "f4ba07a491a7e6ddccdb5145db914a58d773e0303dbcad5bddb3d44ab222dc1d",
+      "blind_panel_sha256": "48e5c2c2cd8a1954d2e49261f2b8ad475f96796e00fabc0c84c95f2e587a611d",
+      "phase88_stratum": "P1",
+      "review_id": "E032"
+    },
+    {
+      "group_id": "791eb119239d0f864b14bac2dde37e3b45c09cd33d96798ef315d7b42876916e",
+      "product": "S2A_MSIL1C_20180505T141051_N0206_R110_T21LWK_20180505T160911",
+      "alias": "S2A_MSIL1C_20180505T141051_N0206_R110_T21LWK_20180505T160911__21LWK",
+      "source_id": "R1394",
+      "sources": [
+        "uniform"
+      ],
+      "row": 466,
+      "col": 152,
+      "window": [
+        461,
+        472,
+        147,
+        158
+      ],
+      "stretch": {
+        "B04": [
+          243.0,
+          933.2999999999975
+        ],
+        "B03": [
+          445.0,
+          1070.8999999999996
+        ],
+        "B02": [
+          688.0,
+          1047.699999999999
+        ],
+        "B08": [
+          543.1,
+          3346.0
+        ],
+        "B11": [
+          232.76,
+          2428.8
+        ],
+        "B12": [
+          75.0,
+          1216.0
+        ]
+      },
+      "input_band_sha256": {
+        "B02": "f7f19a9daa6d5589839208cbbe437f1e162c12cf4edf10593ce0e130edb83fea",
+        "B03": "c3ec6e8ec24b9254114cf99b477b3160a1f5216c86cb8e2ec4d3753876b44bfa",
+        "B04": "9fc344f4715b23fa4e33991780340c381a6f3abfe1a09ee9f75a51f333925a62",
+        "B08": "d5abfe8ffa6942fd5ebf075b0f03c69bc844227de6b4c32417b4ef9b5e2f3adb",
+        "B11": "4cdf2f61cac3aa47a847dc351a9ae4f64995ca8e8ca5d0d93e87bfe0c7414f4a",
+        "B12": "30d5d93f2aac294efe9d31665a6a3f59262bb33ab5307e12cbce88aa2f6f7d43"
+      },
+      "anonymous_id": "A040",
+      "window_sha256": "d32226a86d3fbd82e4bda13fb27b0fd0dfdf8a1bef3091f8f69927df2e4fca0d",
+      "original_blind_panel_sha256": "67aa5347fdd8b35ac887541fdaffd7001f21cc67f7a15e816660e001c6f2fd0a",
+      "blind_panel_sha256": "9bd60bfea780e2b6fd9039a65654464141c176c0b614387579ddc22c3d0bec4f",
+      "phase88_stratum": "P1",
+      "review_id": "E033"
+    },
+    {
+      "group_id": "152728a590814dcebe27eaa787e700e67a0df96fd49c0eb12114019f09ed663c",
+      "product": "S2A_MSIL1C_20160817T101032_N0204_R022_T33UUU_20160817T230018",
+      "alias": "S2A_OPER_PRD_MSIL1C_PDMC_20160817T230018_R022_V20160817T101032_20160817T101559__33UUU",
+      "source_id": "R0062",
+      "sources": [
+        "uniform"
+      ],
+      "row": 1597,
+      "col": 1477,
+      "window": [
+        1592,
+        1603,
+        1472,
+        1483
+      ],
+      "stretch": {
+        "B04": [
+          416.0,
+          849.0
+        ],
+        "B03": [
+          638.1,
+          1250.0
+        ],
+        "B02": [
+          925.1,
+          1206.0
+        ],
+        "B08": [
+          799.0,
+          4002.5999999999985
+        ],
+        "B11": [
+          394.52,
+          2061.0
+        ],
+        "B12": [
+          213.76,
+          978.0
+        ]
+      },
+      "input_band_sha256": {
+        "B02": "6fd70d12ad307910c8549d0c319c4ca8c135d6c0a7816140c2b34dba49545316",
+        "B03": "3834404efcd9d87948426d431066b5dda197c19e332e8f83abc68bbfb1f60d88",
+        "B04": "9e4bba24bf25e23dd1e63ca67b67375f1a4bb4647470d3890c51b40d85fb7c8c",
+        "B08": "2a8b2ca5536c99536fe937afe1299992cba437c2788fc3defd89781494fa8cbb",
+        "B11": "faaa320ce9d7a36b97308f36e8af3c65d022d900f5dc8c4a84231e4576d5e0f5",
+        "B12": "3a19d2bee1e2111be48ee5e3f4059c62d1286ea2c09f52df0a97eb72006038b4"
+      },
+      "anonymous_id": "A005",
+      "window_sha256": "ca7c33e73546ce09e35eefa1670f20e6f186f85bcb84b41f40849af4201fb471",
+      "original_blind_panel_sha256": "17fa4b73564cef47e6ba3c71e6dc6fa8a8921da2943310591a326c1177e45017",
+      "blind_panel_sha256": "39f325b2342935512a436bb4ef1802e545e92e5222e0486a5901d4a798486723",
+      "phase88_stratum": "P1",
+      "review_id": "E034"
+    },
+    {
+      "group_id": "78ceda653f7e8b67dfd9ce4b3d778b7155a1c71e6f44605f43cea9237b43ab62",
+      "product": "S2A_MSIL1C_20170516T105031_N0205_R051_T31UDP_20170516T105322",
+      "alias": "S2A_MSIL1C_20170516T105031_N0205_R051_T31UDP_20170516T105322__31UDP",
+      "source_id": "R0749",
+      "sources": [
+        "Shadow_to_Surface"
+      ],
+      "row": 1829,
+      "col": 937,
+      "window": [
+        1824,
+        1830,
+        932,
+        943
+      ],
+      "stretch": {
+        "B04": [
+          341.0,
+          1726.0
+        ],
+        "B03": [
+          597.0,
+          1492.5
+        ],
+        "B02": [
+          767.0,
+          1424.5
+        ],
+        "B08": [
+          2025.5,
+          3264.0
+        ],
+        "B11": [
+          613.0,
+          2360.2799999999997
+        ],
+        "B12": [
+          270.86,
+          1935.28
+        ]
+      },
+      "input_band_sha256": {
+        "B02": "c90852508af1974429cfebc3d05fec96a683519bcc5ac3ee9721d66be17ca231",
+        "B03": "78de91b4f670c83bd9732109e954aa79eca61635c8344dd7bf6fd35855d294a1",
+        "B04": "ecb2f822058aa5b1d0ba7f69967c2e39f5db5041307a918ce63b10ff0aa6360b",
+        "B08": "f42720ccb2a6eb8d8842958c0305a533674afb8467576b7c6bd241ee0231ab33",
+        "B11": "ac3f6c51beb22517edf6d411681b4c361c234fb03cc9774010a15602d489b99c",
+        "B12": "2d1b22851f4e21c28b058d80beabbb3dbdea96debe323120716a5031e32f7f1e"
+      },
+      "anonymous_id": "A078",
+      "window_sha256": "ec2275ac55d3385610907a325078dcc7791a716bbe8a33a526ca14c7696b384d",
+      "original_blind_panel_sha256": "40bd333c822216fdd81003a5bfa3674c8c2fa248354fbb1fb824d4548154a410",
+      "blind_panel_sha256": "7b3565343d2d9aca2597f1ae0413652a9e142d207caf9d5292ed7da2a9e76f33",
+      "phase88_stratum": "P1",
+      "review_id": "E035"
+    },
+    {
+      "group_id": "152728a590814dcebe27eaa787e700e67a0df96fd49c0eb12114019f09ed663c",
+      "product": "S2A_MSIL1C_20160817T101032_N0204_R022_T33UUU_20160817T230018",
+      "alias": "S2A_OPER_PRD_MSIL1C_PDMC_20160817T230018_R022_V20160817T101032_20160817T101559__33UUU",
+      "source_id": "R0052",
+      "sources": [
+        "uniform"
+      ],
+      "row": 605,
+      "col": 888,
+      "window": [
+        600,
+        611,
+        883,
+        894
+      ],
+      "stretch": {
+        "B04": [
+          332.0,
+          1917.0
+        ],
+        "B03": [
+          590.1,
+          1532.0
+        ],
+        "B02": [
+          825.0,
+          1521.0
+        ],
+        "B08": [
+          197.0,
+          3619.8999999999996
+        ],
+        "B11": [
+          61.0,
+          3557.0
+        ],
+        "B12": [
+          37.760000000000005,
+          3196.0
+        ]
+      },
+      "input_band_sha256": {
+        "B02": "6fd70d12ad307910c8549d0c319c4ca8c135d6c0a7816140c2b34dba49545316",
+        "B03": "3834404efcd9d87948426d431066b5dda197c19e332e8f83abc68bbfb1f60d88",
+        "B04": "9e4bba24bf25e23dd1e63ca67b67375f1a4bb4647470d3890c51b40d85fb7c8c",
+        "B08": "2a8b2ca5536c99536fe937afe1299992cba437c2788fc3defd89781494fa8cbb",
+        "B11": "faaa320ce9d7a36b97308f36e8af3c65d022d900f5dc8c4a84231e4576d5e0f5",
+        "B12": "3a19d2bee1e2111be48ee5e3f4059c62d1286ea2c09f52df0a97eb72006038b4"
+      },
+      "anonymous_id": "A007",
+      "window_sha256": "9a4a5ea1d1b0bdb590b5769f9de250775b63356c54f34b5c0d5057d420c73770",
+      "original_blind_panel_sha256": "01dc911aac6e72a5993ad05eb1334b14024e6beabfc447ca4dea32ec41610d51",
+      "blind_panel_sha256": "a94a3cce6b8c6cd60f2b67503026b2b451937e589cafeb1867906f30adbf4b58",
+      "phase88_stratum": "P1",
+      "review_id": "E036"
+    },
+    {
+      "group_id": "8c931fc7e32ec7d7032098c562cb311383c373d8ebdfa7d0ba2dccb89d437f2c",
+      "product": "S2A_MSIL1C_20170501T183311_N0205_R127_T11SPC_20170501T183311",
+      "alias": "S2A_MSIL1C_20170501T183311_N0205_R127_T11SPC_20170501T183311__11SPC",
+      "source_id": "R0990",
+      "sources": [
+        "Surface_to_Shadow"
+      ],
+      "row": 769,
+      "col": 1063,
+      "window": [
+        764,
+        775,
+        1058,
+        1069
+      ],
+      "stretch": {
+        "B04": [
+          930.1,
+          4062.7999999999993
+        ],
+        "B03": [
+          960.2,
+          3428.0999999999967
+        ],
+        "B02": [
+          1090.0,
+          3097.8999999999996
+        ],
+        "B08": [
+          1013.1,
+          4725.899999999996
+        ],
+        "B11": [
+          1117.52,
+          4925.76
+        ],
+        "B12": [
+          920.76,
+          4174.68
+        ]
+      },
+      "input_band_sha256": {
+        "B02": "b9411c39ab15204aebfd3c5887bfee4393e150fde0421bb8e79861e6d0550835",
+        "B03": "950be2abdd6251ddcc7eff098dddc12b02ab5695fa686c63f3062c3071703089",
+        "B04": "70270fb546d0060bb06ea3d971e5ed651bbfcc8e91feff152b7811bf692e4e30",
+        "B08": "01ed3c92652ca5d8edee8b6c2c78600d801a0d5cda43fd14831b2e6a7a781548",
+        "B11": "20d9892d030793ce047bd40de9c79a3dc624df3f03ac5ad71767fe17d466feb6",
+        "B12": "f54359a5f3fd5e5f387b99efc3cdd3a48336189aa7e2ad1f824c4351a92ddd6f"
+      },
+      "anonymous_id": "A180",
+      "window_sha256": "c38a8482ece3b9d82d84143c0d2017d33b21f0e17cd69f8d436998863d70600c",
+      "original_blind_panel_sha256": "7b3217209d3d437f6b09f75e53724019ff82e386ad61c5b85b6079022370e0e1",
+      "blind_panel_sha256": "73a9000b303ea7fa2d615e2ee7c39868f72230ec860e3fdccfdb99e0ef241977",
+      "phase88_stratum": "P1",
+      "review_id": "E037"
+    },
+    {
+      "group_id": "8c931fc7e32ec7d7032098c562cb311383c373d8ebdfa7d0ba2dccb89d437f2c",
+      "product": "S2A_MSIL1C_20170501T183311_N0205_R127_T11SPC_20170501T183311",
+      "alias": "S2A_MSIL1C_20170501T183311_N0205_R127_T11SPC_20170501T183311__11SPC",
+      "source_id": "R0971",
+      "sources": [
+        "uniform"
+      ],
+      "row": 50,
+      "col": 703,
+      "window": [
+        45,
+        56,
+        698,
+        709
+      ],
+      "stretch": {
+        "B04": [
+          1011.2,
+          2384.699999999999
+        ],
+        "B03": [
+          1029.0,
+          1962.0
+        ],
+        "B02": [
+          1066.0,
+          1712.8999999999996
+        ],
+        "B08": [
+          1748.2,
+          2945.5999999999985
+        ],
+        "B11": [
+          1705.04,
+          3578.16
+        ],
+        "B12": [
+          1262.76,
+          2867.48
+        ]
+      },
+      "input_band_sha256": {
+        "B02": "b9411c39ab15204aebfd3c5887bfee4393e150fde0421bb8e79861e6d0550835",
+        "B03": "950be2abdd6251ddcc7eff098dddc12b02ab5695fa686c63f3062c3071703089",
+        "B04": "70270fb546d0060bb06ea3d971e5ed651bbfcc8e91feff152b7811bf692e4e30",
+        "B08": "01ed3c92652ca5d8edee8b6c2c78600d801a0d5cda43fd14831b2e6a7a781548",
+        "B11": "20d9892d030793ce047bd40de9c79a3dc624df3f03ac5ad71767fe17d466feb6",
+        "B12": "f54359a5f3fd5e5f387b99efc3cdd3a48336189aa7e2ad1f824c4351a92ddd6f"
+      },
+      "anonymous_id": "A037",
+      "window_sha256": "9e3e9bf4d152c29a3776b9dd5ed41467b5cc7d3c288104d48c967dab8ad287a1",
+      "original_blind_panel_sha256": "5cb4db32595661f6ca95cac09b4ae75c8bb20f9da52d113390002c23ee00a8b9",
+      "blind_panel_sha256": "1d9a31b9cdc74854e97bf0680767e75baf8d34a15a513a6171ccfca1a7c64fb7",
+      "phase88_stratum": "regular_control",
+      "review_id": "E038"
+    },
+    {
+      "group_id": "152728a590814dcebe27eaa787e700e67a0df96fd49c0eb12114019f09ed663c",
+      "product": "S2A_MSIL1C_20160817T101032_N0204_R022_T33UUU_20160817T230018",
+      "alias": "S2A_OPER_PRD_MSIL1C_PDMC_20160817T230018_R022_V20160817T101032_20160817T101559__33UUU",
+      "source_id": "R0054",
+      "sources": [
+        "uniform"
+      ],
+      "row": 772,
+      "col": 1804,
+      "window": [
+        767,
+        778,
+        1799,
+        1810
+      ],
+      "stretch": {
+        "B04": [
+          399.0,
+          3913.899999999996
+        ],
+        "B03": [
+          642.0,
+          3720.0
+        ],
+        "B02": [
+          840.0,
+          3948.8999999999996
+        ],
+        "B08": [
+          1614.0,
+          5078.9
+        ],
+        "B11": [
+          834.0,
+          4879.52
+        ],
+        "B12": [
+          370.0,
+          3818.92
+        ]
+      },
+      "input_band_sha256": {
+        "B02": "6fd70d12ad307910c8549d0c319c4ca8c135d6c0a7816140c2b34dba49545316",
+        "B03": "3834404efcd9d87948426d431066b5dda197c19e332e8f83abc68bbfb1f60d88",
+        "B04": "9e4bba24bf25e23dd1e63ca67b67375f1a4bb4647470d3890c51b40d85fb7c8c",
+        "B08": "2a8b2ca5536c99536fe937afe1299992cba437c2788fc3defd89781494fa8cbb",
+        "B11": "faaa320ce9d7a36b97308f36e8af3c65d022d900f5dc8c4a84231e4576d5e0f5",
+        "B12": "3a19d2bee1e2111be48ee5e3f4059c62d1286ea2c09f52df0a97eb72006038b4"
+      },
+      "anonymous_id": "A209",
+      "window_sha256": "7c215fbdaba687c69e8e4d027be9abe68fabad8ef75c5723ee202cc3539555af",
+      "original_blind_panel_sha256": "2562dfeecfb1ad1c90bcb1c63b2fb10907645c0b002fa4aef50165be47d84e39",
+      "blind_panel_sha256": "c4ae432d2e352b834f9be4374c81e7cc2467fdfe1ce11eaf1bc4cb3b46e3e346",
+      "phase88_stratum": "regular_control",
+      "review_id": "E039"
+    },
+    {
+      "group_id": "b9f7bda664a5b264af024c182fcd8d06332976a0b1fab7d57394149b499590ac",
+      "product": "S2A_MSIL1C_20170917T103021_N0205_R108_T31TFJ_20170917T103018",
+      "alias": "S2A_MSIL1C_20170917T103021_N0205_R108_T31TFJ_20170917T103018__31TFJ",
+      "source_id": "R1179",
+      "sources": [
+        "Shadow_to_Cloud"
+      ],
+      "row": 6,
+      "col": 1179,
+      "window": [
+        1,
+        12,
+        1174,
+        1185
+      ],
+      "stretch": {
+        "B04": [
+          415.0,
+          1696.8999999999996
+        ],
+        "B03": [
+          643.1,
+          1730.8999999999996
+        ],
+        "B02": [
+          879.0,
+          1869.8999999999996
+        ],
+        "B08": [
+          955.0,
+          3600.699999999999
+        ],
+        "B11": [
+          534.76,
+          2587.6800000000003
+        ],
+        "B12": [
+          260.28000000000003,
+          1810.68
+        ]
+      },
+      "input_band_sha256": {
+        "B02": "8c13c2c22f72320d4bc63d7ad6fbc1b18950f4b4f755cca74e9359489d7f9d8e",
+        "B03": "8199ca08705a4db9c625736c0bb2b707e347d8bd6c63cc5bc4c5e1ccd7a190f6",
+        "B04": "dd961447e6c80aa48843475752197b3ff94a63afaf30f2c4869969ef1505d6cf",
+        "B08": "b8fa07c4d984adb58740b8a6543197505cb0958270f2ce943ecc03386c4bef30",
+        "B11": "4a990e5e2127b9a6be11727b69b78d728c53f7de07c1e9ad88db163f43f8cd0c",
+        "B12": "8a611aa28b18d2548129d92dae78884011e6ada27005d320d3ad43f9fcd28090"
+      },
+      "anonymous_id": "A033",
+      "window_sha256": "0ab6a502a9b2a90864312a3df00e18b217e06314e925a6b00633dd601de736c9",
+      "original_blind_panel_sha256": "13f77d97931b05749f4819dadcd6db104fe03035aa8e2cd022122a6bd4cb4461",
+      "blind_panel_sha256": "2232d9f78330ffe79da14590220dc93ceff697446b4813a3998fbd4664f234dd",
+      "phase88_stratum": "P1",
+      "review_id": "E040"
+    },
+    {
+      "group_id": "dce297076c4e57e685927135c8ba86a0bcfa19bd6b9eb832ace73d97608e8f10",
+      "product": "S2A_MSIL1C_20160417T111159_N0201_R137_T29RPQ_20160417T203056",
+      "alias": "S2A_OPER_PRD_MSIL1C_PDMC_20160417T203056_R137_V20160417T111159_20160417T111159__29RPQ",
+      "source_id": "R0147",
+      "sources": [
+        "uniform"
+      ],
+      "row": 397,
+      "col": 291,
+      "window": [
+        392,
+        403,
+        286,
+        297
+      ],
+      "stretch": {
+        "B04": [
+          603.0,
+          2057.499999999998
+        ],
+        "B03": [
+          727.0,
+          1869.0999999999967
+        ],
+        "B02": [
+          870.0,
+          1825.699999999999
+        ],
+        "B08": [
+          1217.2,
+          3498.8999999999996
+        ],
+        "B11": [
+          820.84,
+          3223.0
+        ],
+        "B12": [
+          501.96000000000004,
+          2441.48
+        ]
+      },
+      "input_band_sha256": {
+        "B02": "956ad1cc877c750ccdc38ceb4799e5fdf3b8685637e53157f913c9547f577fb4",
+        "B03": "b32d02b1ed26bd6b6a5a2cbe020166ab0599774ecabdec26a90f2dab3aed1b73",
+        "B04": "83ba7b9ba9dc455fe622e9e775bc6bd5e1a21991cdef0720c185667849c73f11",
+        "B08": "86e73b69cc5fe2e94c39daf747b991875343baf07589a03a013a532beab676d0",
+        "B11": "507fee87e1dd3c32f07772dba4ac82bd80e4bcfa89cbedd1b3e39200c1fc52ca",
+        "B12": "ade775712061b9a54c065ad7d53116b3c0605d0d9996726d61e4d4073689f1d1"
+      },
+      "anonymous_id": "A170",
+      "window_sha256": "386377ae750404b243dcb601aa2e1ab199ccbba6bb6fdd4b579e4061697ff3ef",
+      "original_blind_panel_sha256": "3ddc0fd17872eabbd959c8156907bb66aef2d7bbe2c7bb8df4f844fdf301762d",
+      "blind_panel_sha256": "9a7bc83d25dcf7833eca6fd887a725f3de41883b4aa802ece64b436b4ec107a8",
+      "phase88_stratum": "regular_control",
+      "review_id": "E041"
+    },
+    {
+      "group_id": "8c8c1e0e6661b3979995a288ab636b4aa160b0df1bbd56a1d4c1a491af8a8e36",
+      "product": "S2A_MSIL1C_20170313T074931_N0204_R135_T35JPM_20170313T081339",
+      "alias": "S2A_MSIL1C_20170313T074931_N0204_R135_T35JPM_20170313T081339__35JPM",
+      "source_id": "R1119",
+      "sources": [
+        "Surface_to_Shadow"
+      ],
+      "row": 0,
+      "col": 125,
+      "window": [
+        0,
+        6,
+        120,
+        131
+      ],
+      "stretch": {
+        "B04": [
+          657.5,
+          1017.5
+        ],
+        "B03": [
+          891.5,
+          1140.0
+        ],
+        "B02": [
+          966.5,
+          1156.5
+        ],
+        "B08": [
+          1963.5,
+          2687.5
+        ],
+        "B11": [
+          1527.0,
+          2206.2799999999997
+        ],
+        "B12": [
+          851.58,
+          1383.12
+        ]
+      },
+      "input_band_sha256": {
+        "B02": "ed691e72e9d8426fec0f982ec4bd8d4fd27c8b6dc590f415cdf26fdda7735729",
+        "B03": "b65812faab0aad03b756428c2bb3e077d9e1870aa5223dafc433288c61852e25",
+        "B04": "05a7e286edb886dc95ba35ee7ac2f1927a375b1f4f39d1728ce91ff74869edc9",
+        "B08": "418eb2aaf25baed3efe89159c937127402c95b5037597a70c7d9f44651062ee0",
+        "B11": "b60d9195fa0238fcfd012277c307e6645026229bb7998a11c9739b209bd420ee",
+        "B12": "37ac87fbf12bdf5b1cbe5a05ccbc324cda5eca7ba71c59fc8a90f3729db42c8d"
+      },
+      "anonymous_id": "A039",
+      "window_sha256": "8c3d12becbfe1123bddcba209b3782668ca9987dae903865533881fd520cf331",
+      "original_blind_panel_sha256": "e8614a5b25798cf67ddaffa85c46798c4dde19d0bc5bdda85ec54197e0e77bc8",
+      "blind_panel_sha256": "57300e6150eb356ac731de56938c72ce5959beb858305ba2b93569ad882f72d5",
+      "phase88_stratum": "P1",
+      "review_id": "E042"
+    },
+    {
+      "group_id": "1cdd88eeb7acb39608712d444a53314adc04144d281510a8a7ebc9302679cbdb",
+      "product": "S2A_MSIL1C_20161108T102232_N0204_R065_T32TNR_20161109T224916",
+      "alias": "S2A_OPER_PRD_MSIL1C_PDMC_20161109T224916_R065_V20161108T102232_20161108T102232__32TNR",
+      "source_id": "R0040",
+      "sources": [
+        "uniform"
+      ],
+      "row": 1300,
+      "col": 1304,
+      "window": [
+        1295,
+        1306,
+        1299,
+        1310
+      ],
+      "stretch": {
+        "B04": [
+          980.0,
+          3162.8999999999996
+        ],
+        "B03": [
+          1093.0,
+          2966.8999999999996
+        ],
+        "B02": [
+          1379.0,
+          3193.8999999999996
+        ],
+        "B08": [
+          1292.0,
+          3807.699999999999
+        ],
+        "B11": [
+          1310.52,
+          3976.96
+        ],
+        "B12": [
+          1003.12,
+          3601.2
+        ]
+      },
+      "input_band_sha256": {
+        "B02": "a2dcad5ffeec2597171465d610ab0854e371efd2c8fa07b5d9e8188c583645ff",
+        "B03": "daabd5985f167887bac23032e60107a6495c2939aa9be22b7baf3d1fb8d55b45",
+        "B04": "ee9930f18683c6c919354a2cced0974fd5b60cfbb95d966fe3cab9ea496129f9",
+        "B08": "167472b144c7d01c24579a6385cd17b9bc0bc543796b4c50b8487fa410618100",
+        "B11": "5b42057b11f6b768454cad55cbf9c1312b49d71e7ffe351c13a1708eac487832",
+        "B12": "34d6864cf8762cdc21ae89f501fa0a33c838bfbbb26d4f1c0ca4a31c35eca9e0"
+      },
+      "anonymous_id": "A233",
+      "window_sha256": "617fa3534707f644a3f984fec31af5fcab14703176e5735c38d1a2b891a41c85",
+      "original_blind_panel_sha256": "4298352e6e2f4bb9a905ceb7dd2a56847742e3dfa471a947b6f2ff86f6576999",
+      "blind_panel_sha256": "8d3ed135c10086b92772e2ee9485bc44eb8d8fd9d57f320a3ecf5a8908cf521e",
+      "phase88_stratum": "regular_control",
+      "review_id": "E043"
+    },
+    {
+      "group_id": "8c8c1e0e6661b3979995a288ab636b4aa160b0df1bbd56a1d4c1a491af8a8e36",
+      "product": "S2A_MSIL1C_20170313T074931_N0204_R135_T35JPM_20170313T081339",
+      "alias": "S2A_MSIL1C_20170313T074931_N0204_R135_T35JPM_20170313T081339__35JPM",
+      "source_id": "R1155",
+      "sources": [
+        "uniform"
+      ],
+      "row": 1448,
+      "col": 1126,
+      "window": [
+        1443,
+        1454,
+        1121,
+        1132
+      ],
+      "stretch": {
+        "B04": [
+          649.2,
+          1281.699999999999
+        ],
+        "B03": [
+          812.0,
+          1165.7999999999993
+        ],
+        "B02": [
+          897.0,
+          1168.0
+        ],
+        "B08": [
+          1375.0,
+          2884.399999999998
+        ],
+        "B11": [
+          1560.0,
+          2276.2400000000002
+        ],
+        "B12": [
+          859.52,
+          1405.8400000000001
+        ]
+      },
+      "input_band_sha256": {
+        "B02": "ed691e72e9d8426fec0f982ec4bd8d4fd27c8b6dc590f415cdf26fdda7735729",
+        "B03": "b65812faab0aad03b756428c2bb3e077d9e1870aa5223dafc433288c61852e25",
+        "B04": "05a7e286edb886dc95ba35ee7ac2f1927a375b1f4f39d1728ce91ff74869edc9",
+        "B08": "418eb2aaf25baed3efe89159c937127402c95b5037597a70c7d9f44651062ee0",
+        "B11": "b60d9195fa0238fcfd012277c307e6645026229bb7998a11c9739b209bd420ee",
+        "B12": "37ac87fbf12bdf5b1cbe5a05ccbc324cda5eca7ba71c59fc8a90f3729db42c8d"
+      },
+      "anonymous_id": "A024",
+      "window_sha256": "c637e8d5735cefb528c9682bd9fb9c38ec7b39d36e068fc3969a6cb288d40790",
+      "original_blind_panel_sha256": "b185f996044fa54856e846afcb23939b00bb261d239cb85bb2f395f321dd84ab",
+      "blind_panel_sha256": "d2d018ad4ce51b24289e4bf67621b3f79e550647b9272f63890e89fcafd3915b",
+      "phase88_stratum": "regular_control",
+      "review_id": "E044"
+    },
+    {
+      "group_id": "b9f7bda664a5b264af024c182fcd8d06332976a0b1fab7d57394149b499590ac",
+      "product": "S2A_MSIL1C_20170917T103021_N0205_R108_T31TFJ_20170917T103018",
+      "alias": "S2A_MSIL1C_20170917T103021_N0205_R108_T31TFJ_20170917T103018__31TFJ",
+      "source_id": "R1222",
+      "sources": [
+        "uniform"
+      ],
+      "row": 1654,
+      "col": 254,
+      "window": [
+        1649,
+        1660,
+        249,
+        260
+      ],
+      "stretch": {
+        "B04": [
+          258.0,
+          280.0
+        ],
+        "B03": [
+          533.0,
+          570.0
+        ],
+        "B02": [
+          913.0,
+          954.0
+        ],
+        "B08": [
+          118.0,
+          138.89999999999964
+        ],
+        "B11": [
+          21.0,
+          36.0
+        ],
+        "B12": [
+          12.0,
+          26.0
+        ]
+      },
+      "input_band_sha256": {
+        "B02": "8c13c2c22f72320d4bc63d7ad6fbc1b18950f4b4f755cca74e9359489d7f9d8e",
+        "B03": "8199ca08705a4db9c625736c0bb2b707e347d8bd6c63cc5bc4c5e1ccd7a190f6",
+        "B04": "dd961447e6c80aa48843475752197b3ff94a63afaf30f2c4869969ef1505d6cf",
+        "B08": "b8fa07c4d984adb58740b8a6543197505cb0958270f2ce943ecc03386c4bef30",
+        "B11": "4a990e5e2127b9a6be11727b69b78d728c53f7de07c1e9ad88db163f43f8cd0c",
+        "B12": "8a611aa28b18d2548129d92dae78884011e6ada27005d320d3ad43f9fcd28090"
+      },
+      "anonymous_id": "A178",
+      "window_sha256": "7f0f59e5b7c163beefea15bc2b053d739dc67658d06931516be5e466a302787c",
+      "original_blind_panel_sha256": "526f2b91d408e1825aa784b773b20b1d236b89ca5c5d697ef0c6c4cc2b8a6104",
+      "blind_panel_sha256": "de4c6c160f29d82324480548ac12c75b50bf14aa0721a691c1e2b8962a281465",
+      "phase88_stratum": "regular_control",
+      "review_id": "E045"
+    },
+    {
+      "group_id": "78ceda653f7e8b67dfd9ce4b3d778b7155a1c71e6f44605f43cea9237b43ab62",
+      "product": "S2A_MSIL1C_20170516T105031_N0205_R051_T31UDP_20170516T105322",
+      "alias": "S2A_MSIL1C_20170516T105031_N0205_R051_T31UDP_20170516T105322__31UDP",
+      "source_id": "R0739",
+      "sources": [
+        "Surface_to_Shadow"
+      ],
+      "row": 1572,
+      "col": 1051,
+      "window": [
+        1567,
+        1578,
+        1046,
+        1057
+      ],
+      "stretch": {
+        "B04": [
+          688.0,
+          2285.0
+        ],
+        "B03": [
+          907.1,
+          2068.8999999999996
+        ],
+        "B02": [
+          1011.0,
+          1978.0
+        ],
+        "B08": [
+          2409.2,
+          4831.0
+        ],
+        "B11": [
+          1356.56,
+          3740.44
+        ],
+        "B12": [
+          762.28,
+          2815.7200000000003
+        ]
+      },
+      "input_band_sha256": {
+        "B02": "c90852508af1974429cfebc3d05fec96a683519bcc5ac3ee9721d66be17ca231",
+        "B03": "78de91b4f670c83bd9732109e954aa79eca61635c8344dd7bf6fd35855d294a1",
+        "B04": "ecb2f822058aa5b1d0ba7f69967c2e39f5db5041307a918ce63b10ff0aa6360b",
+        "B08": "f42720ccb2a6eb8d8842958c0305a533674afb8467576b7c6bd241ee0231ab33",
+        "B11": "ac3f6c51beb22517edf6d411681b4c361c234fb03cc9774010a15602d489b99c",
+        "B12": "2d1b22851f4e21c28b058d80beabbb3dbdea96debe323120716a5031e32f7f1e"
+      },
+      "anonymous_id": "A152",
+      "window_sha256": "72ece6dec33f57057604bfcb69a70171176bb71847ecf74cde1fe12f74950900",
+      "original_blind_panel_sha256": "24098a7035661fc6907e40257ffc01df7b157bda0050dfb9dd8cfe505e3a43bb",
+      "blind_panel_sha256": "7605b6bde85bbf1bcde7b50d4a9a576e938e65cf07a0e2a9a9d0705647c26b85",
+      "phase88_stratum": "P1",
+      "review_id": "E046"
+    },
+    {
+      "group_id": "152728a590814dcebe27eaa787e700e67a0df96fd49c0eb12114019f09ed663c",
+      "product": "S2A_MSIL1C_20160817T101032_N0204_R022_T33UUU_20160817T230018",
+      "alias": "S2A_OPER_PRD_MSIL1C_PDMC_20160817T230018_R022_V20160817T101032_20160817T101559__33UUU",
+      "source_id": "R0061",
+      "sources": [
+        "uniform"
+      ],
+      "row": 1462,
+      "col": 909,
+      "window": [
+        1457,
+        1468,
+        904,
+        915
+      ],
+      "stretch": {
+        "B04": [
+          329.0,
+          6928.0
+        ],
+        "B03": [
+          560.0,
+          6396.5999999999985
+        ],
+        "B02": [
+          855.0,
+          6509.9
+        ],
+        "B08": [
+          470.20000000000005,
+          8064.299999999994
+        ],
+        "B11": [
+          219.52,
+          7203.96
+        ],
+        "B12": [
+          127.0,
+          5505.76
+        ]
+      },
+      "input_band_sha256": {
+        "B02": "6fd70d12ad307910c8549d0c319c4ca8c135d6c0a7816140c2b34dba49545316",
+        "B03": "3834404efcd9d87948426d431066b5dda197c19e332e8f83abc68bbfb1f60d88",
+        "B04": "9e4bba24bf25e23dd1e63ca67b67375f1a4bb4647470d3890c51b40d85fb7c8c",
+        "B08": "2a8b2ca5536c99536fe937afe1299992cba437c2788fc3defd89781494fa8cbb",
+        "B11": "faaa320ce9d7a36b97308f36e8af3c65d022d900f5dc8c4a84231e4576d5e0f5",
+        "B12": "3a19d2bee1e2111be48ee5e3f4059c62d1286ea2c09f52df0a97eb72006038b4"
+      },
+      "anonymous_id": "A135",
+      "window_sha256": "36efa76c0f0783c2b36d8533a938a878a0c0d0ef371abacc6ae47db8831514c7",
+      "original_blind_panel_sha256": "879584ff45b5a7973b6415fa0d7e776503ddbdee30e0ae3c3f841e76719919fa",
+      "blind_panel_sha256": "d5b491650798d0b31a718ce46b80bc1def370888a73f077163b767852163f3ff",
+      "phase88_stratum": "P1",
+      "review_id": "E047"
+    },
+    {
+      "group_id": "1cdd88eeb7acb39608712d444a53314adc04144d281510a8a7ebc9302679cbdb",
+      "product": "S2A_MSIL1C_20161108T102232_N0204_R065_T32TNR_20161109T224916",
+      "alias": "S2A_OPER_PRD_MSIL1C_PDMC_20161109T224916_R065_V20161108T102232_20161108T102232__32TNR",
+      "source_id": "R0024",
+      "sources": [
+        "uniform"
+      ],
+      "row": 202,
+      "col": 307,
+      "window": [
+        197,
+        208,
+        302,
+        313
+      ],
+      "stretch": {
+        "B04": [
+          328.0,
+          983.8999999999996
+        ],
+        "B03": [
+          521.0,
+          1025.0
+        ],
+        "B02": [
+          844.0,
+          1149.0
+        ],
+        "B08": [
+          389.0,
+          3639.8999999999996
+        ],
+        "B11": [
+          367.08000000000004,
+          2682.6400000000003
+        ],
+        "B12": [
+          213.52,
+          1523.44
+        ]
+      },
+      "input_band_sha256": {
+        "B02": "a2dcad5ffeec2597171465d610ab0854e371efd2c8fa07b5d9e8188c583645ff",
+        "B03": "daabd5985f167887bac23032e60107a6495c2939aa9be22b7baf3d1fb8d55b45",
+        "B04": "ee9930f18683c6c919354a2cced0974fd5b60cfbb95d966fe3cab9ea496129f9",
+        "B08": "167472b144c7d01c24579a6385cd17b9bc0bc543796b4c50b8487fa410618100",
+        "B11": "5b42057b11f6b768454cad55cbf9c1312b49d71e7ffe351c13a1708eac487832",
+        "B12": "34d6864cf8762cdc21ae89f501fa0a33c838bfbbb26d4f1c0ca4a31c35eca9e0"
+      },
+      "anonymous_id": "A144",
+      "window_sha256": "6a8a6ec24da55c4e2ecc173f3d1fbd1e30af8b3b114302de46da18e4ecb4c888",
+      "original_blind_panel_sha256": "4a055f168afa7cbc95880a6752488d3413106aab3cdcaa3bb39c0c3ade86040e",
+      "blind_panel_sha256": "2723ef2e8130ffae4f16ce8957764b08f982a878cbfe2694176caf616fb4dc6a",
+      "phase88_stratum": "regular_control",
+      "review_id": "E048"
+    },
+    {
+      "group_id": "b9f7bda664a5b264af024c182fcd8d06332976a0b1fab7d57394149b499590ac",
+      "product": "S2A_MSIL1C_20170917T103021_N0205_R108_T31TFJ_20170917T103018",
+      "alias": "S2A_MSIL1C_20170917T103021_N0205_R108_T31TFJ_20170917T103018__31TFJ",
+      "source_id": "R1188",
+      "sources": [
+        "Surface_to_Shadow"
+      ],
+      "row": 383,
+      "col": 1056,
+      "window": [
+        378,
+        389,
+        1051,
+        1062
+      ],
+      "stretch": {
+        "B04": [
+          675.1,
+          2672.8999999999996
+        ],
+        "B03": [
+          852.0,
+          2465.5999999999985
+        ],
+        "B02": [
+          998.0,
+          2510.399999999994
+        ],
+        "B08": [
+          1482.1,
+          3338.699999999999
+        ],
+        "B11": [
+          1384.76,
+          3478.6400000000003
+        ],
+        "B12": [
+          739.52,
+          2384.6400000000003
+        ]
+      },
+      "input_band_sha256": {
+        "B02": "8c13c2c22f72320d4bc63d7ad6fbc1b18950f4b4f755cca74e9359489d7f9d8e",
+        "B03": "8199ca08705a4db9c625736c0bb2b707e347d8bd6c63cc5bc4c5e1ccd7a190f6",
+        "B04": "dd961447e6c80aa48843475752197b3ff94a63afaf30f2c4869969ef1505d6cf",
+        "B08": "b8fa07c4d984adb58740b8a6543197505cb0958270f2ce943ecc03386c4bef30",
+        "B11": "4a990e5e2127b9a6be11727b69b78d728c53f7de07c1e9ad88db163f43f8cd0c",
+        "B12": "8a611aa28b18d2548129d92dae78884011e6ada27005d320d3ad43f9fcd28090"
+      },
+      "anonymous_id": "A153",
+      "window_sha256": "dcfb1438f98974abddea9b4926c8b6160f704be9fa2c9b7097eb308c87452d30",
+      "original_blind_panel_sha256": "0b8fc5ccabca9812166713c91a2304b35e460c43c66a9596c94725d4fc87eb2e",
+      "blind_panel_sha256": "e2ff400c883cf523ecbb49cfac2b1bb5c51ea2347ba3f10ce464a2a10ae2a7dc",
+      "phase88_stratum": "P1",
+      "review_id": "E049"
+    },
+    {
+      "group_id": "b9f7bda664a5b264af024c182fcd8d06332976a0b1fab7d57394149b499590ac",
+      "product": "S2A_MSIL1C_20170917T103021_N0205_R108_T31TFJ_20170917T103018",
+      "alias": "S2A_MSIL1C_20170917T103021_N0205_R108_T31TFJ_20170917T103018__31TFJ",
+      "source_id": "R1200",
+      "sources": [
+        "uniform"
+      ],
+      "row": 793,
+      "col": 1504,
+      "window": [
+        788,
+        799,
+        1499,
+        1510
+      ],
+      "stretch": {
+        "B04": [
+          1047.0,
+          2165.699999999999
+        ],
+        "B03": [
+          1228.0,
+          2203.8999999999996
+        ],
+        "B02": [
+          1351.1,
+          2360.0
+        ],
+        "B08": [
+          2634.1,
+          3639.0
+        ],
+        "B11": [
+          1812.04,
+          2802.48
+        ],
+        "B12": [
+          1081.04,
+          2009.0
+        ]
+      },
+      "input_band_sha256": {
+        "B02": "8c13c2c22f72320d4bc63d7ad6fbc1b18950f4b4f755cca74e9359489d7f9d8e",
+        "B03": "8199ca08705a4db9c625736c0bb2b707e347d8bd6c63cc5bc4c5e1ccd7a190f6",
+        "B04": "dd961447e6c80aa48843475752197b3ff94a63afaf30f2c4869969ef1505d6cf",
+        "B08": "b8fa07c4d984adb58740b8a6543197505cb0958270f2ce943ecc03386c4bef30",
+        "B11": "4a990e5e2127b9a6be11727b69b78d728c53f7de07c1e9ad88db163f43f8cd0c",
+        "B12": "8a611aa28b18d2548129d92dae78884011e6ada27005d320d3ad43f9fcd28090"
+      },
+      "anonymous_id": "A056",
+      "window_sha256": "eafbc6b83094bb8a79a6c4b5aa14bdb2a3096534282ad190bc09116330de454e",
+      "original_blind_panel_sha256": "278fa50a8b411e0d27fe675c632f5981f94252b8e66120057caa6aba0ac96114",
+      "blind_panel_sha256": "8f724551a92ad5ef7dfec21142c89f88a1309f1bb26ecda40a614315a017b4aa",
+      "phase88_stratum": "regular_control",
+      "review_id": "E050"
+    },
+    {
+      "group_id": "8c8c1e0e6661b3979995a288ab636b4aa160b0df1bbd56a1d4c1a491af8a8e36",
+      "product": "S2A_MSIL1C_20170313T074931_N0204_R135_T35JPM_20170313T081339",
+      "alias": "S2A_MSIL1C_20170313T074931_N0204_R135_T35JPM_20170313T081339__35JPM",
+      "source_id": "R1134",
+      "sources": [
+        "uniform"
+      ],
+      "row": 498,
+      "col": 1342,
+      "window": [
+        493,
+        504,
+        1337,
+        1348
+      ],
+      "stretch": {
+        "B04": [
+          706.2,
+          1654.699999999999
+        ],
+        "B03": [
+          782.0,
+          1218.7999999999993
+        ],
+        "B02": [
+          871.1,
+          1063.8999999999996
+        ],
+        "B08": [
+          1589.0,
+          2291.8999999999996
+        ],
+        "B11": [
+          1910.84,
+          3168.7200000000003
+        ],
+        "B12": [
+          1059.76,
+          2282.36
+        ]
+      },
+      "input_band_sha256": {
+        "B02": "ed691e72e9d8426fec0f982ec4bd8d4fd27c8b6dc590f415cdf26fdda7735729",
+        "B03": "b65812faab0aad03b756428c2bb3e077d9e1870aa5223dafc433288c61852e25",
+        "B04": "05a7e286edb886dc95ba35ee7ac2f1927a375b1f4f39d1728ce91ff74869edc9",
+        "B08": "418eb2aaf25baed3efe89159c937127402c95b5037597a70c7d9f44651062ee0",
+        "B11": "b60d9195fa0238fcfd012277c307e6645026229bb7998a11c9739b209bd420ee",
+        "B12": "37ac87fbf12bdf5b1cbe5a05ccbc324cda5eca7ba71c59fc8a90f3729db42c8d"
+      },
+      "anonymous_id": "A137",
+      "window_sha256": "7ab4423d7be503ac0c8d62de25f4b5736e21eba7597fc7d3855aadc9b02481a4",
+      "original_blind_panel_sha256": "600e8af65cf23b060eab889f3ad63f7737015b2f5dcea44c77974066179d2c31",
+      "blind_panel_sha256": "255238bfa9e771e74544babfeafb7a43d0ee0e7360d2eff2fb775eaa3864e03d",
+      "phase88_stratum": "regular_control",
+      "review_id": "E051"
+    },
+    {
+      "group_id": "152728a590814dcebe27eaa787e700e67a0df96fd49c0eb12114019f09ed663c",
+      "product": "S2A_MSIL1C_20160817T101032_N0204_R022_T33UUU_20160817T230018",
+      "alias": "S2A_OPER_PRD_MSIL1C_PDMC_20160817T230018_R022_V20160817T101032_20160817T101559__33UUU",
+      "source_id": "R0058",
+      "sources": [
+        "uniform"
+      ],
+      "row": 1330,
+      "col": 1469,
+      "window": [
+        1325,
+        1336,
+        1464,
+        1475
+      ],
+      "stretch": {
+        "B04": [
+          400.0,
+          1633.7999999999993
+        ],
+        "B03": [
+          626.1,
+          1564.8999999999996
+        ],
+        "B02": [
+          899.0,
+          1684.0
+        ],
+        "B08": [
+          414.1,
+          4366.499999999998
+        ],
+        "B11": [
+          398.28000000000003,
+          2291.92
+        ],
+        "B12": [
+          186.56,
+          1719.6000000000001
+        ]
+      },
+      "input_band_sha256": {
+        "B02": "6fd70d12ad307910c8549d0c319c4ca8c135d6c0a7816140c2b34dba49545316",
+        "B03": "3834404efcd9d87948426d431066b5dda197c19e332e8f83abc68bbfb1f60d88",
+        "B04": "9e4bba24bf25e23dd1e63ca67b67375f1a4bb4647470d3890c51b40d85fb7c8c",
+        "B08": "2a8b2ca5536c99536fe937afe1299992cba437c2788fc3defd89781494fa8cbb",
+        "B11": "faaa320ce9d7a36b97308f36e8af3c65d022d900f5dc8c4a84231e4576d5e0f5",
+        "B12": "3a19d2bee1e2111be48ee5e3f4059c62d1286ea2c09f52df0a97eb72006038b4"
+      },
+      "anonymous_id": "A048",
+      "window_sha256": "cf82a4b1320b90050d2469f653a9578f79c36b2b9c0f82b81cd14f01ce16caf0",
+      "original_blind_panel_sha256": "253bb5939f4a28dbbb169cde5bab5fd54df54974a49bb403d22b7cbd9227017a",
+      "blind_panel_sha256": "bea1e032e4f5f736e99ee4930c49609bc6ca26efc31467d16a6440c7c8598a87",
+      "phase88_stratum": "regular_control",
+      "review_id": "E052"
+    },
+    {
+      "group_id": "78ceda653f7e8b67dfd9ce4b3d778b7155a1c71e6f44605f43cea9237b43ab62",
+      "product": "S2A_MSIL1C_20170516T105031_N0205_R051_T31UDP_20170516T105322",
+      "alias": "S2A_MSIL1C_20170516T105031_N0205_R051_T31UDP_20170516T105322__31UDP",
+      "source_id": "R0703",
+      "sources": [
+        "Shadow_to_Cloud"
+      ],
+      "row": 125,
+      "col": 665,
+      "window": [
+        120,
+        131,
+        660,
+        671
+      ],
+      "stretch": {
+        "B04": [
+          571.1,
+          2950.0
+        ],
+        "B03": [
+          733.2,
+          2948.0
+        ],
+        "B02": [
+          881.0,
+          3122.8999999999996
+        ],
+        "B08": [
+          1180.2,
+          4252.9
+        ],
+        "B11": [
+          972.76,
+          3278.24
+        ],
+        "B12": [
+          640.0,
+          2557.24
+        ]
+      },
+      "input_band_sha256": {
+        "B02": "c90852508af1974429cfebc3d05fec96a683519bcc5ac3ee9721d66be17ca231",
+        "B03": "78de91b4f670c83bd9732109e954aa79eca61635c8344dd7bf6fd35855d294a1",
+        "B04": "ecb2f822058aa5b1d0ba7f69967c2e39f5db5041307a918ce63b10ff0aa6360b",
+        "B08": "f42720ccb2a6eb8d8842958c0305a533674afb8467576b7c6bd241ee0231ab33",
+        "B11": "ac3f6c51beb22517edf6d411681b4c361c234fb03cc9774010a15602d489b99c",
+        "B12": "2d1b22851f4e21c28b058d80beabbb3dbdea96debe323120716a5031e32f7f1e"
+      },
+      "anonymous_id": "A184",
+      "window_sha256": "42b4df2c86381cb24dfb947c4b97ce477b80f98ecfc30deef26aff9ec44662de",
+      "original_blind_panel_sha256": "e7f1cefeca21901e656a04cfae37ebe413f0b9126d1b2c18e84c077e0250d9e5",
+      "blind_panel_sha256": "522e308b566a23849363b92770ca165ab5769fac8ca8035a04c098e47e370367",
+      "phase88_stratum": "P1",
+      "review_id": "E053"
+    },
+    {
+      "group_id": "78ceda653f7e8b67dfd9ce4b3d778b7155a1c71e6f44605f43cea9237b43ab62",
+      "product": "S2A_MSIL1C_20170516T105031_N0205_R051_T31UDP_20170516T105322",
+      "alias": "S2A_MSIL1C_20170516T105031_N0205_R051_T31UDP_20170516T105322__31UDP",
+      "source_id": "R0741",
+      "sources": [
+        "Cloud_to_Shadow"
+      ],
+      "row": 1600,
+      "col": 1720,
+      "window": [
+        1595,
+        1606,
+        1715,
+        1726
+      ],
+      "stretch": {
+        "B04": [
+          833.0,
+          1306.0
+        ],
+        "B03": [
+          1061.0,
+          1495.0
+        ],
+        "B02": [
+          1188.0,
+          1659.8999999999996
+        ],
+        "B08": [
+          2566.0,
+          3502.0
+        ],
+        "B11": [
+          858.76,
+          1323.0
+        ],
+        "B12": [
+          536.76,
+          935.96
+        ]
+      },
+      "input_band_sha256": {
+        "B02": "c90852508af1974429cfebc3d05fec96a683519bcc5ac3ee9721d66be17ca231",
+        "B03": "78de91b4f670c83bd9732109e954aa79eca61635c8344dd7bf6fd35855d294a1",
+        "B04": "ecb2f822058aa5b1d0ba7f69967c2e39f5db5041307a918ce63b10ff0aa6360b",
+        "B08": "f42720ccb2a6eb8d8842958c0305a533674afb8467576b7c6bd241ee0231ab33",
+        "B11": "ac3f6c51beb22517edf6d411681b4c361c234fb03cc9774010a15602d489b99c",
+        "B12": "2d1b22851f4e21c28b058d80beabbb3dbdea96debe323120716a5031e32f7f1e"
+      },
+      "anonymous_id": "A203",
+      "window_sha256": "d526e85e6876a25adcc13ba381766821d83986cd0f72b235e896d63268e0f769",
+      "original_blind_panel_sha256": "05ff942e341a15f23128612bb0ced67aa610756e2b4b52fc1a21454be22092c0",
+      "blind_panel_sha256": "b0188a16fce2cdc1ff0d11dad3ddf129fbf1a4caba566e2682570608527b90fe",
+      "phase88_stratum": "P1",
+      "review_id": "E054"
+    },
+    {
+      "group_id": "791eb119239d0f864b14bac2dde37e3b45c09cd33d96798ef315d7b42876916e",
+      "product": "S2A_MSIL1C_20180505T141051_N0206_R110_T21LWK_20180505T160911",
+      "alias": "S2A_MSIL1C_20180505T141051_N0206_R110_T21LWK_20180505T160911__21LWK",
+      "source_id": "R1395",
+      "sources": [
+        "uniform"
+      ],
+      "row": 484,
+      "col": 1196,
+      "window": [
+        479,
+        490,
+        1191,
+        1202
+      ],
+      "stretch": {
+        "B04": [
+          317.0,
+          1054.0
+        ],
+        "B03": [
+          572.0,
+          1041.7999999999993
+        ],
+        "B02": [
+          712.0,
+          989.0
+        ],
+        "B08": [
+          1939.2,
+          3545.399999999998
+        ],
+        "B11": [
+          1165.8,
+          2214.48
+        ],
+        "B12": [
+          397.0,
+          1113.24
+        ]
+      },
+      "input_band_sha256": {
+        "B02": "f7f19a9daa6d5589839208cbbe437f1e162c12cf4edf10593ce0e130edb83fea",
+        "B03": "c3ec6e8ec24b9254114cf99b477b3160a1f5216c86cb8e2ec4d3753876b44bfa",
+        "B04": "9fc344f4715b23fa4e33991780340c381a6f3abfe1a09ee9f75a51f333925a62",
+        "B08": "d5abfe8ffa6942fd5ebf075b0f03c69bc844227de6b4c32417b4ef9b5e2f3adb",
+        "B11": "4cdf2f61cac3aa47a847dc351a9ae4f64995ca8e8ca5d0d93e87bfe0c7414f4a",
+        "B12": "30d5d93f2aac294efe9d31665a6a3f59262bb33ab5307e12cbce88aa2f6f7d43"
+      },
+      "anonymous_id": "A235",
+      "window_sha256": "cffbc72bf6b469ee934d589fef31729ffde396cc52a0757ed2c598c07517b7d3",
+      "original_blind_panel_sha256": "d85c5d3478687a763666c4bb2ce3a387399afb7abeecd343b57b6bab36ffc397",
+      "blind_panel_sha256": "3fbd3f523426a339480ef94089ab71e7680e4c3b4fa78c26ed1319671c3b460c",
+      "phase88_stratum": "regular_control",
+      "review_id": "E055"
+    },
+    {
+      "group_id": "51385a6aa14de86f4b01adeb8d0ec7c857f3877e95b6f87d6da2220bea57cd82",
+      "product": "S2A_MSIL1C_20180422T102031_N0206_R065_T32UPU_20180422T141352",
+      "alias": "S2A_MSIL1C_20180422T102031_N0206_R065_T32UPU_20180422T141352__32UPU",
+      "source_id": "R1278",
+      "sources": [
+        "Shadow_to_Surface"
+      ],
+      "row": 1787,
+      "col": 655,
+      "window": [
+        1782,
+        1793,
+        650,
+        661
+      ],
+      "stretch": {
+        "B04": [
+          426.1,
+          1560.7999999999993
+        ],
+        "B03": [
+          644.0,
+          1698.8999999999996
+        ],
+        "B02": [
+          810.0,
+          1650.0
+        ],
+        "B08": [
+          666.0,
+          4727.9
+        ],
+        "B11": [
+          151.0,
+          2462.7200000000003
+        ],
+        "B12": [
+          87.76,
+          1596.48
+        ]
+      },
+      "input_band_sha256": {
+        "B02": "407874a94e134fe099452ff94c900484a67ea82fec01c23342daa5b79d830971",
+        "B03": "b429696f250b0f45d4a855f6242d0a3babd64b009d3004cd107425ee6c5f1bc0",
+        "B04": "5857dbfb77e0834e0a9912a2ce969067ce7ba67e51c8918229ac80e4d6b81375",
+        "B08": "5117678f58d23474f24e9c3478b00697c60171a5a28775d31da252ed0db301e8",
+        "B11": "9f8ef69dd4310a80ed345a7a9f5383dfbda310af4f090fc43a35cbd7ee81b401",
+        "B12": "f8e8cec34bb3e3b4a6bb7a2ba4ec75df2960f350f403d57444d0b1867170cbc5"
+      },
+      "anonymous_id": "A070",
+      "window_sha256": "8c9def62782cd5cd3e1c7126224e901e08b103e64113849da41deb91d741309f",
+      "original_blind_panel_sha256": "0519cdf702bb0f643c480aac458a3fa24039eb1e9f1c50d6976b63da2a958818",
+      "blind_panel_sha256": "ea8f2c71321a5dcd33e04991d42a06d4c32c39e96f462238e4d73af7d4c39db6",
+      "phase88_stratum": "P1",
+      "review_id": "E056"
+    },
+    {
+      "group_id": "dce297076c4e57e685927135c8ba86a0bcfa19bd6b9eb832ace73d97608e8f10",
+      "product": "S2A_MSIL1C_20160417T111159_N0201_R137_T29RPQ_20160417T203056",
+      "alias": "S2A_OPER_PRD_MSIL1C_PDMC_20160417T203056_R137_V20160417T111159_20160417T111159__29RPQ",
+      "source_id": "R0146",
+      "sources": [
+        "uniform"
+      ],
+      "row": 312,
+      "col": 709,
+      "window": [
+        307,
+        318,
+        704,
+        715
+      ],
+      "stretch": {
+        "B04": [
+          814.1,
+          5609.0
+        ],
+        "B03": [
+          894.0,
+          5181.0
+        ],
+        "B02": [
+          1008.0,
+          5301.9
+        ],
+        "B08": [
+          1275.0,
+          6075.9
+        ],
+        "B11": [
+          1276.0,
+          6132.24
+        ],
+        "B12": [
+          950.0,
+          5190.2
+        ]
+      },
+      "input_band_sha256": {
+        "B02": "956ad1cc877c750ccdc38ceb4799e5fdf3b8685637e53157f913c9547f577fb4",
+        "B03": "b32d02b1ed26bd6b6a5a2cbe020166ab0599774ecabdec26a90f2dab3aed1b73",
+        "B04": "83ba7b9ba9dc455fe622e9e775bc6bd5e1a21991cdef0720c185667849c73f11",
+        "B08": "86e73b69cc5fe2e94c39daf747b991875343baf07589a03a013a532beab676d0",
+        "B11": "507fee87e1dd3c32f07772dba4ac82bd80e4bcfa89cbedd1b3e39200c1fc52ca",
+        "B12": "ade775712061b9a54c065ad7d53116b3c0605d0d9996726d61e4d4073689f1d1"
+      },
+      "anonymous_id": "A196",
+      "window_sha256": "2f7fbb22406012a147ad17695eda9b4b89525de48f16efefdad494e1bebd114d",
+      "original_blind_panel_sha256": "73d04bd1e0182402f122275319c35f9be51abfb2f1c328f2e5db751885770e43",
+      "blind_panel_sha256": "29ce0c56bccb4e2aefb5a56644a167151d63e7e1d2d113d8073b24c928073eac",
+      "phase88_stratum": "regular_control",
+      "review_id": "E057"
+    }
+  ],
+  "short_controls": [],
+  "total": 57,
+  "strata": {
+    "regular_control": 27,
+    "P1": 30
+  },
+  "human_review_status": "not_executed",
+  "confirmation_ready_groups": 0
+}

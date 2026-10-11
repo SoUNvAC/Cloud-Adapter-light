@@ -1,0 +1,23 @@
+{
+  "verified": true,
+  "checks": [
+    "all30_P1_unchanged",
+    "27_controls_hash_selected_without_class_or_AI_sort",
+    "nine_fixed_representatives",
+    "54_source_SHA256_and_generation",
+    "57_large_windows_match_existing_small_native_pixels_and_valid_masks",
+    "clip_edges_no_mirrored_support_and_metric_aspect",
+    "original_stretches_reused",
+    "no_identity_stratum_or_reference_in_A_page",
+    "empty_A_and_B_templates_57_each",
+    "no_human_results_or_B_reveal_before_human_A_lock",
+    "normal_and_edge_image_layout_QA"
+  ],
+  "assignment": "user_volunteered; identity_and_experience_pending",
+  "actual_human_reviewers": 0,
+  "actually_reviewed": 0,
+  "confirmation_ready_groups": 0,
+  "prepared": 57,
+  "clipped_windows": 9,
+  "decoder_note": "JPEG2000 SIZ precision read; Pillow integer display expansion reversed exactly; every selected small band/mask compared with prior GDAL-derived NPZ"
+}

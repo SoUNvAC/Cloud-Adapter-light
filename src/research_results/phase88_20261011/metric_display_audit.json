@@ -1,0 +1,576 @@
+{
+  "extraction_audit_sha256": "afdd5f36f66d3b3be97159f3e0b379a32a2a34145590528aa95708c410d84a56",
+  "contexts": [
+    {
+      "review_id": "E028",
+      "path": "images/E028_context.png",
+      "sha256": "49d08b8abc0a873e16a9ae4beb55fb212ca7ec19b5e8bb0b32fc8f647d27efd8",
+      "display_size": [
+        2040,
+        1080
+      ],
+      "metres_per_display_pixel": 3
+    },
+    {
+      "review_id": "E031",
+      "path": "images/E031_context.png",
+      "sha256": "0394a4c16e4d872b714d599f0e4ebc374daf37468c3c5b3f937af2a56c831d93",
+      "display_size": [
+        2040,
+        1080
+      ],
+      "metres_per_display_pixel": 3
+    },
+    {
+      "review_id": "E041",
+      "path": "images/E041_context.png",
+      "sha256": "71c8edc9cf318cdd60976b64370ed479538ae1146e333eb3e19e0bfb53bb4380",
+      "display_size": [
+        2040,
+        1080
+      ],
+      "metres_per_display_pixel": 3
+    },
+    {
+      "review_id": "E057",
+      "path": "images/E057_context.png",
+      "sha256": "601df0b04c0d5b6b6f087f4b04215553da9f634b21750975b9429c75da38f6c5",
+      "display_size": [
+        2040,
+        1080
+      ],
+      "metres_per_display_pixel": 3
+    },
+    {
+      "review_id": "E015",
+      "path": "images/E015_context.png",
+      "sha256": "f5006f3bda4977c669ced092bbc801a6d2596d5e948f080535c975bb4a8b5003",
+      "display_size": [
+        2040,
+        620
+      ],
+      "metres_per_display_pixel": 3
+    },
+    {
+      "review_id": "E034",
+      "path": "images/E034_context.png",
+      "sha256": "97acc0018dabf9188ff87e47d1f350ebc2b46f5d79e7ed8b111c741bcbbb7e2b",
+      "display_size": [
+        2040,
+        1080
+      ],
+      "metres_per_display_pixel": 3
+    },
+    {
+      "review_id": "E036",
+      "path": "images/E036_context.png",
+      "sha256": "47462128af7baa0f1c7d02005c9a03f88910de456adcddfa9207c6b1d1749d7f",
+      "display_size": [
+        2040,
+        1080
+      ],
+      "metres_per_display_pixel": 3
+    },
+    {
+      "review_id": "E039",
+      "path": "images/E039_context.png",
+      "sha256": "9fb1dae77248b4ae81a5cac10e91c95afbc94ac07ccf891fb8b1a2ca04269e12",
+      "display_size": [
+        2040,
+        1080
+      ],
+      "metres_per_display_pixel": 3
+    },
+    {
+      "review_id": "E047",
+      "path": "images/E047_context.png",
+      "sha256": "bf3506e4a61611b6224688455a69f5157363d0334ca3f33c35f87411a7928b59",
+      "display_size": [
+        2040,
+        1080
+      ],
+      "metres_per_display_pixel": 3
+    },
+    {
+      "review_id": "E052",
+      "path": "images/E052_context.png",
+      "sha256": "8f7c3a8688d75a6180bf03f3edc388a5c89b8a825c69473ac318c110636ca65c",
+      "display_size": [
+        2040,
+        1080
+      ],
+      "metres_per_display_pixel": 3
+    },
+    {
+      "review_id": "E007",
+      "path": "images/E007_context.png",
+      "sha256": "f15e49d296b3af705ac28315413c877aacd2b6dae308c9e2e375cacf62096e55",
+      "display_size": [
+        2040,
+        1080
+      ],
+      "metres_per_display_pixel": 3
+    },
+    {
+      "review_id": "E008",
+      "path": "images/E008_context.png",
+      "sha256": "79fc306433e3ecbde27eb0ec77de2e4c573196c1427356995eb6e020f006d031",
+      "display_size": [
+        2040,
+        1080
+      ],
+      "metres_per_display_pixel": 3
+    },
+    {
+      "review_id": "E043",
+      "path": "images/E043_context.png",
+      "sha256": "0de25270e82c49e0ba1dade0868d8049919e147cd31e6ff6bd43b4f2059cfd81",
+      "display_size": [
+        2040,
+        1080
+      ],
+      "metres_per_display_pixel": 3
+    },
+    {
+      "review_id": "E048",
+      "path": "images/E048_context.png",
+      "sha256": "0a2aac5132717209aa318de5a420658201c2965a9712825226ba7dcb3fff1837",
+      "display_size": [
+        2040,
+        1080
+      ],
+      "metres_per_display_pixel": 3
+    },
+    {
+      "review_id": "E003",
+      "path": "images/E003_context.png",
+      "sha256": "689bac39a15f9a89a7348391e5f7b40585c7f6c93b8e9bbc856288aebbc0b686",
+      "display_size": [
+        1960,
+        580
+      ],
+      "metres_per_display_pixel": 3
+    },
+    {
+      "review_id": "E013",
+      "path": "images/E013_context.png",
+      "sha256": "44053424d45f3f7cea01c9c2a90056b6d65a2da51fc51ee9636fb88f8e4a1d8c",
+      "display_size": [
+        1640,
+        1080
+      ],
+      "metres_per_display_pixel": 3
+    },
+    {
+      "review_id": "E020",
+      "path": "images/E020_context.png",
+      "sha256": "20a828682413cb141efe89c292f020162e2c0ad9babb482f8164ceaf6e159f18",
+      "display_size": [
+        2040,
+        1080
+      ],
+      "metres_per_display_pixel": 3
+    },
+    {
+      "review_id": "E030",
+      "path": "images/E030_context.png",
+      "sha256": "1a6650d8271ebfc014dcad14193e288b6a809cc642bc5c768fb8d0bedb1591fe",
+      "display_size": [
+        2040,
+        1080
+      ],
+      "metres_per_display_pixel": 3
+    },
+    {
+      "review_id": "E032",
+      "path": "images/E032_context.png",
+      "sha256": "8c238cd85163b4be2413b033599854145db359722eee83fc7d2a51b7784231a0",
+      "display_size": [
+        2040,
+        1080
+      ],
+      "metres_per_display_pixel": 3
+    },
+    {
+      "review_id": "E042",
+      "path": "images/E042_context.png",
+      "sha256": "0ba7d46bd7684e439ca9237c2a2c90ae13e1da555c2e18ad124ef95490c22759",
+      "display_size": [
+        2040,
+        580
+      ],
+      "metres_per_display_pixel": 3
+    },
+    {
+      "review_id": "E044",
+      "path": "images/E044_context.png",
+      "sha256": "c8d12bc815d125a20a8c13b807f9d7c849153f2ff4f8db1b31027aea134719c7",
+      "display_size": [
+        2040,
+        1080
+      ],
+      "metres_per_display_pixel": 3
+    },
+    {
+      "review_id": "E051",
+      "path": "images/E051_context.png",
+      "sha256": "354f6d5bb15f2314fa835393398bd29c5ad7a9ee5833caa0a953db3a2147a2f6",
+      "display_size": [
+        2040,
+        1080
+      ],
+      "metres_per_display_pixel": 3
+    },
+    {
+      "review_id": "E001",
+      "path": "images/E001_context.png",
+      "sha256": "0469cce8b3e602c81fcbdf4a84b59cce92d94c6c557cc0c0ae7eb5e324e0b44e",
+      "display_size": [
+        2040,
+        1080
+      ],
+      "metres_per_display_pixel": 3
+    },
+    {
+      "review_id": "E014",
+      "path": "images/E014_context.png",
+      "sha256": "bf1c5b104bccd567ecf830a44b70ed47676c53cbbfb29d128a1f1096d5f4b5f6",
+      "display_size": [
+        2040,
+        1080
+      ],
+      "metres_per_display_pixel": 3
+    },
+    {
+      "review_id": "E018",
+      "path": "images/E018_context.png",
+      "sha256": "75a255c5100a81e120167e9dc277368123092f30ef71fc6d82ca6da73e48a13f",
+      "display_size": [
+        2040,
+        1080
+      ],
+      "metres_per_display_pixel": 3
+    },
+    {
+      "review_id": "E019",
+      "path": "images/E019_context.png",
+      "sha256": "d777f90efd5f89ffc975b95c53a61b508d7dc4d018315210c5e4c30a6c1aa55d",
+      "display_size": [
+        2040,
+        780
+      ],
+      "metres_per_display_pixel": 3
+    },
+    {
+      "review_id": "E022",
+      "path": "images/E022_context.png",
+      "sha256": "d0f59600e8830b3e0c6b4234e8bbcc60acbcecc3b9a6130ed8ac52f7167fc289",
+      "display_size": [
+        2040,
+        1080
+      ],
+      "metres_per_display_pixel": 3
+    },
+    {
+      "review_id": "E029",
+      "path": "images/E029_context.png",
+      "sha256": "b9bc0456ac3dd4258a09ae6cd4f1a3bea1cd86b063ddf426c3de5a550bb19022",
+      "display_size": [
+        2040,
+        1080
+      ],
+      "metres_per_display_pixel": 3
+    },
+    {
+      "review_id": "E037",
+      "path": "images/E037_context.png",
+      "sha256": "b409a1cc58d1c3bb0d5b9bcf31f5b96b2202557b001f32fd0709b638058ce2a1",
+      "display_size": [
+        2040,
+        1080
+      ],
+      "metres_per_display_pixel": 3
+    },
+    {
+      "review_id": "E038",
+      "path": "images/E038_context.png",
+      "sha256": "44fafa4cb9723a5e1db8674292cb64c19d2838d758d79d5e2763be43e204d22f",
+      "display_size": [
+        2040,
+        1080
+      ],
+      "metres_per_display_pixel": 3
+    },
+    {
+      "review_id": "E012",
+      "path": "images/E012_context.png",
+      "sha256": "2023b88fa0c6ade259c17982819ec695036563c956fec1be6a1277b9702848d9",
+      "display_size": [
+        2040,
+        1080
+      ],
+      "metres_per_display_pixel": 3
+    },
+    {
+      "review_id": "E016",
+      "path": "images/E016_context.png",
+      "sha256": "367b42374072c84553b2e55960b1a1c65c30e5fe60c90d97216fad9c8d54c184",
+      "display_size": [
+        2040,
+        1080
+      ],
+      "metres_per_display_pixel": 3
+    },
+    {
+      "review_id": "E026",
+      "path": "images/E026_context.png",
+      "sha256": "d051332730dbe1de4ac4338cd42db362d68693005b4c17717e069fec8031ee35",
+      "display_size": [
+        2040,
+        1080
+      ],
+      "metres_per_display_pixel": 3
+    },
+    {
+      "review_id": "E035",
+      "path": "images/E035_context.png",
+      "sha256": "463d0e8c57fbebdde18bcdd7539d46b806c9c130560a8b35c59abdd31a050653",
+      "display_size": [
+        2040,
+        580
+      ],
+      "metres_per_display_pixel": 3
+    },
+    {
+      "review_id": "E046",
+      "path": "images/E046_context.png",
+      "sha256": "99d865b3ca86b5e35c697ff0be7cad011ec80b12c5b601017e321a5fb1b12677",
+      "display_size": [
+        2040,
+        1080
+      ],
+      "metres_per_display_pixel": 3
+    },
+    {
+      "review_id": "E053",
+      "path": "images/E053_context.png",
+      "sha256": "8dc4737fc7133a65dd5caf176da1ae3e543a96bbe5929a1bd4dbff635728e734",
+      "display_size": [
+        2040,
+        1080
+      ],
+      "metres_per_display_pixel": 3
+    },
+    {
+      "review_id": "E054",
+      "path": "images/E054_context.png",
+      "sha256": "9962043632cce4e547e49b8e6aa111e07cf4b6be2367a79019b883a3c40d48fa",
+      "display_size": [
+        2040,
+        1080
+      ],
+      "metres_per_display_pixel": 3
+    },
+    {
+      "review_id": "E009",
+      "path": "images/E009_context.png",
+      "sha256": "86583b57176b2c6f3ed05fef12b680fdb3809e19cfa94f859dd6301b7a1ef284",
+      "display_size": [
+        2040,
+        1080
+      ],
+      "metres_per_display_pixel": 3
+    },
+    {
+      "review_id": "E010",
+      "path": "images/E010_context.png",
+      "sha256": "9562b8724d903ed124e12fdf2ace3219e17514479b292787011be33a01030e4d",
+      "display_size": [
+        2040,
+        1080
+      ],
+      "metres_per_display_pixel": 3
+    },
+    {
+      "review_id": "E017",
+      "path": "images/E017_context.png",
+      "sha256": "a4014daf11f56e7c76db5bad0dad4504c46f81f04916c0e95d2b9a1b78597eda",
+      "display_size": [
+        1720,
+        1080
+      ],
+      "metres_per_display_pixel": 3
+    },
+    {
+      "review_id": "E021",
+      "path": "images/E021_context.png",
+      "sha256": "84c200aee241cd147e8f965e966b87394101f46526caa9b641d8db0ea8bce69a",
+      "display_size": [
+        2040,
+        1080
+      ],
+      "metres_per_display_pixel": 3
+    },
+    {
+      "review_id": "E024",
+      "path": "images/E024_context.png",
+      "sha256": "706b5249bef6f654bc1be60e13feeeb60f4a27e3addfad90886a0a2f718f2b6a",
+      "display_size": [
+        2040,
+        1080
+      ],
+      "metres_per_display_pixel": 3
+    },
+    {
+      "review_id": "E040",
+      "path": "images/E040_context.png",
+      "sha256": "57c04d930a344c68fbcf871d5904e000e6bbdb10da8122e40a37fef1ec0f5ac4",
+      "display_size": [
+        2040,
+        700
+      ],
+      "metres_per_display_pixel": 3
+    },
+    {
+      "review_id": "E045",
+      "path": "images/E045_context.png",
+      "sha256": "64ec9fe1110138021d355c3fd8273533012ccd1d9109b5de56db929fa89ac71c",
+      "display_size": [
+        2040,
+        1080
+      ],
+      "metres_per_display_pixel": 3
+    },
+    {
+      "review_id": "E049",
+      "path": "images/E049_context.png",
+      "sha256": "4a389c2f5578d02355db40d87d83763610e5dd74d03819e0adb4b8ef21c0a216",
+      "display_size": [
+        2040,
+        1080
+      ],
+      "metres_per_display_pixel": 3
+    },
+    {
+      "review_id": "E050",
+      "path": "images/E050_context.png",
+      "sha256": "9a43c644892eb8baace5cfc3e9028b1944017e698c9097a5017618216e025f9b",
+      "display_size": [
+        2040,
+        1080
+      ],
+      "metres_per_display_pixel": 3
+    },
+    {
+      "review_id": "E004",
+      "path": "images/E004_context.png",
+      "sha256": "265fad2cf5ec0d1dceffeca90baf4b84a2670e138caf3a765ac920d145bbf12a",
+      "display_size": [
+        2040,
+        1080
+      ],
+      "metres_per_display_pixel": 3
+    },
+    {
+      "review_id": "E005",
+      "path": "images/E005_context.png",
+      "sha256": "ee003e6a5c72d6374e7ba251d51ff69112664aeb6f160c3e037a00b6be9cb5b4",
+      "display_size": [
+        2040,
+        1080
+      ],
+      "metres_per_display_pixel": 3
+    },
+    {
+      "review_id": "E011",
+      "path": "images/E011_context.png",
+      "sha256": "9545b0e54f1333272de41f39644887f49d93562d677f5b07e36aff531b636a50",
+      "display_size": [
+        2040,
+        1080
+      ],
+      "metres_per_display_pixel": 3
+    },
+    {
+      "review_id": "E023",
+      "path": "images/E023_context.png",
+      "sha256": "6c0cbdec07807d8522e24457553e90488266748d4579b508d1d6e7cc7ff823f9",
+      "display_size": [
+        2040,
+        1080
+      ],
+      "metres_per_display_pixel": 3
+    },
+    {
+      "review_id": "E025",
+      "path": "images/E025_context.png",
+      "sha256": "7a601e68ce5ff367277784fb5751c5787bc3c9bf2ee58c21d5e7b18b71d16f11",
+      "display_size": [
+        2040,
+        1080
+      ],
+      "metres_per_display_pixel": 3
+    },
+    {
+      "review_id": "E027",
+      "path": "images/E027_context.png",
+      "sha256": "e6dd2197f9558c892f8109689b91796cbdde9b882616a185f247018dc750a0ea",
+      "display_size": [
+        1240,
+        1080
+      ],
+      "metres_per_display_pixel": 3
+    },
+    {
+      "review_id": "E056",
+      "path": "images/E056_context.png",
+      "sha256": "70f84c8c499d8420054386e97386a65d1c9c2103f8ef2718c9218f040e0b88ff",
+      "display_size": [
+        2040,
+        1080
+      ],
+      "metres_per_display_pixel": 3
+    },
+    {
+      "review_id": "E002",
+      "path": "images/E002_context.png",
+      "sha256": "59433d95a1238ffe7e225ad84469543140b1f5dc3149cae0e9e7ac793f4f6d23",
+      "display_size": [
+        2040,
+        1080
+      ],
+      "metres_per_display_pixel": 3
+    },
+    {
+      "review_id": "E006",
+      "path": "images/E006_context.png",
+      "sha256": "69c340fe058ea6933973db08d91794e9f8a7ad0f136d0e598a5d3e5c58571c77",
+      "display_size": [
+        2040,
+        1080
+      ],
+      "metres_per_display_pixel": 3
+    },
+    {
+      "review_id": "E033",
+      "path": "images/E033_context.png",
+      "sha256": "c1eb1b1c46af4aea3221bdba9a831b370e80c2969b49408fa443af4066f8a997",
+      "display_size": [
+        2040,
+        1080
+      ],
+      "metres_per_display_pixel": 3
+    },
+    {
+      "review_id": "E055",
+      "path": "images/E055_context.png",
+      "sha256": "237f8b4dff5b25923ac82f4a611fe8368c66a3593651a71b16a165faa240f77b",
+      "display_size": [
+        2040,
+        1080
+      ],
+      "metres_per_display_pixel": 3
+    }
+  ],
+  "note": "Final large-context display preserves metric aspect, including nine clipped windows. Initial square preview layout retained separately; never used as final expert view."
+}
