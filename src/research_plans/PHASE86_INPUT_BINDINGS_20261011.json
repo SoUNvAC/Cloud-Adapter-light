@@ -2828,5 +2828,13 @@
     "mismatches": [],
     "payload_rehashed": false
   },
-  "protocol_sha256": "d6a8cdf0e1f91c1f707b2198e92cfdc204d49d85d15a4c8f4776fc15c5ed1f80"
+  "protocol_sha256": "d6a8cdf0e1f91c1f707b2198e92cfdc204d49d85d15a4c8f4776fc15c5ed1f80",
+  "intake_equivalence": {
+    "remote_sha256": "55e9db55e52f97fc544abaa5bfe897915ccf1859e1ca273b1f192c20a29d185b",
+    "local_sha256": "8829e248ddb6a4365382f40589b939ffca063e8255fffa68053a1af3b5896f5d",
+    "semantic_sha256": "d14311c346c31626e08b66d9127affe0fee35e2a5ba70c336538f7ccc137de7a",
+    "status": "resolved_exact_JSON_equality_LF_vs_CRLF_only",
+    "local_CRLF": 673,
+    "remote_CRLF": 0
+  }
 }

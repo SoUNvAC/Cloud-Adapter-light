@@ -12,7 +12,7 @@ REPO=Path('/home/scv/Cloud-Adapter-light')
 SHARED=Path('/home/scv/shared')
 DATA=SHARED/'data/sentinel2_cloud_mask_catalogue_4172871'
 ALCD=SHARED/'data/sentinel2_alcd_1460961'
-ROOT=SHARED/'phase86_20261011'
+ROOT=SHARED/'phase86_20261011_run03'
 PROV=REPO/'src/work_dirs/phase65a/source_provenance'
 BIND=REPO/'src/research_plans/PHASE86_INPUT_BINDINGS_20261011.json'
 BANDS=['B02','B03','B04','B08','B11','B12']
@@ -93,7 +93,8 @@ def main():
     status=read(ALCD/'imagery/imagery_download_status.json','current remote verified object index')
     geom=pinned(ALCD/'imagery/geometry_audit.json','outputs/phase65/alcd_imagery/remote_geometry_audit.json','completed 37-scene six-band geometry report')
     ref=pinned(ALCD/'imagery/reference_disagreement_20261008.json','outputs/phase65/alcd_imagery/reference_disagreement_20261008.json','quality-only version comparison, not error rate')
-    intake=pinned(ALCD/'run_logs/catalogue_audit.json','outputs/phase65/alcd_download/catalogue_audit.json','38 directory intake; historical imagery absence superseded')
+    intake=read(ALCD/'run_logs/catalogue_audit.json','38 directory intake; LF/CRLF-only local byte difference independently resolved',b['intake_equivalence']['remote_sha256'])
+    assert hashlib.sha256(json.dumps(intake,sort_keys=True,separators=(',',':')).encode()).hexdigest()==b['intake_equivalence']['semantic_sha256']
     oldover=pinned(ALCD/'run_logs/overlap_audit.json','outputs/phase65/alcd_download/overlap_audit.json','historical provisional ID-only overlap') if (ALCD/'run_logs/overlap_audit.json').exists() else None
     review=pinned(ALCD/'imagery/visual_review_v1/sample_manifest.json','outputs/phase65/alcd_visual_review_v1/sample_manifest.json','quality-review panels; no evidence of completed human judgments')
     assert manifest['resolved_scenes']==37 and geom['scenes_all_six_grids_match']==37
@@ -104,7 +105,7 @@ def main():
         p=allowed(ALCD/'imagery'/rv.get('path','MISSING'))
         if not p.is_file() or p.stat().st_size!=v['size']:bad.append(dict(object=name,reason='remote stat disagreement'))
     if set(status['files'])!=set(b['local_object_index']):bad.append(dict(reason='object index membership mismatch'))
-    write('integrity_check.json',dict(objects=len(b['local_object_index']),bytes=sum(v['size'] for v in b['local_object_index'].values()),mismatches=bad,local_stat=b['local_stat_check'],payload_rehashed=False,prior_geometry_sha256=sha(ALCD/'imagery/geometry_audit.json')))
+    write('integrity_check.json',dict(objects=len(b['local_object_index']),bytes=sum(v['size'] for v in b['local_object_index'].values()),mismatches=bad,local_stat=b['local_stat_check'],payload_rehashed=False,prior_geometry_sha256=sha(ALCD/'imagery/geometry_audit.json'),old_intake_byte_difference=b['intake_equivalence']))
     gaps=[];history=[];edges=[]
     if bad:gaps.append('Object index/stat mismatches: affected products remain pending; no overwrite or rehash attempted.')
 
@@ -137,13 +138,13 @@ def main():
     map_a=read(REPO/'src/work_dirs/phase65a/source_mapping/mapping_audit.json','actual Source PNG-to-product ordinal verification','c3c521a375c50f81ff0e58682621c7fcb72fc47472a7b37931c587036f12d0bb')
     assert map_a['status']=='verified_rgb_ordinal_mapping'
     mapped={(r['split'],r['png_ordinal']):r for r in map_a['mappings']}
-    seen=set();source_products=set()
+    seen=set();source_products=set();source_roles=defaultdict(set)
     for split in ['train','val']:
         p=smeta/(split+'_metadata.csv');rows=read(p,'actual Source '+split,sm['splits'][split]['sha256'])
         assert len(rows)==map_a['splits'][split]['rows']
         for i,r in enumerate(rows):
             assert mapped[(split,i)]['product']==r['s2_id'] and mapped[(split,i)]['exact_rgb_match']
-            c=canonical(r['s2_id']);source_products.add(c['canonical_product']);key=(r['s2_id'],r['proj_epsg'],r['proj_geometry'],split)
+            c=canonical(r['s2_id']);source_products.add(c['canonical_product']);source_roles[c['canonical_product']].add(split);key=(r['s2_id'],r['proj_epsg'],r['proj_geometry'],split)
             if key not in seen:
                 seen.add(key);add(c['canonical_product'],c['tile'],'Source_'+split,to_wgs(wkt.loads(r['proj_geometry']),int(r['proj_epsg'])),str(p))
     read(REPO/'src/configs/protocol/phase64_source_parent_rgb.py','Source actual training config')
@@ -244,6 +245,15 @@ def main():
           object_status='pending' if any(o['name'] in badnames for o in s['objects']) else 'verified_index_and_stat',
           evidence_geometry=str(ALCD/'imagery/geometry_audit.json'),evidence_identity=str(ALCD/'imagery/product_manifest.json'),evidence_exposure='exposure_scan.json',confirmation_ready=False)
         products.append(p)
+        # Positive direct-use evidence overrides a negative retrospective scan.
+        if product in source_roles:
+            p['development_exposure_status']='recorded_Source_'+','.join(sorted(source_roles[product]))
+            p['fit_or_selection_exposure']='recorded_Source_'+','.join(sorted(source_roles[product]))
+            p['performance_seen']='recorded_Source_val' if 'val' in source_roles[product] else 'not_found_in_scanned_records'
+        if product in roles:
+            p['development_exposure_status']='recorded_Catalogue_'+roles[product]
+            p['fit_or_selection_exposure']='recorded_fit' if roles[product]=='fit' else ('recorded_selection' if roles[product]=='development_val' else 'not_fit_selection_by_split')
+            p['performance_seen']='recorded_already_used_confirmation' if 'confirmation' in roles[product] or roles[product]=='65c_final' else 'recorded_development' if roles[product]=='development_val' else 'not_found_in_scanned_records'
     by={p['canonical_product']:p for p in products}
 
     validhist=[h for h in history if h['geom'] is not None]
