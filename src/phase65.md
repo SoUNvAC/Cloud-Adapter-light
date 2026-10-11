@@ -924,3 +924,7 @@
 
 ### 2026-10-11 Phase85 startup-only path repair
 - 首次f957f0f已完成原MM/LL65/LM65全96缓存复现；seed66在磁盘预检调用尚不存在的WORK.parent时FileNotFoundError，EXIT1。尚未mkdir seed目录、未做预检前向、未初始化/训练/拟合任何新seed，非数值或科研失败。修复磁盘检查指向已存在src/work_dirs，仍需≥10GiB；新shared/control/work根均_run02，首次日志和空运行根保留，不覆盖。其余seed/4000步/两拟合/抽样/门/边界不改；确认旧PID退出后按本地测试push远端ff-only pull重启唯一串行作业，没有消耗追加训练预算。
+
+
+### 2026-10-11 Phase85 Source-preflight deterministic-control repair
+- _run02历史缓存复现完成；新seed66在Source零残差参考前向的CuBLAS调用时因提前set_random_seed(deterministic=True)打开严格torch deterministic、但warn_only尚未设定而异常停止EXIT1。尚未初始化LoRA/执行梯度预检/任何训练更新/提取或浅层拟合；是实现中的开关顺序问题，不是训练数值失败或科研结果。修复为两处设置随机种子后立即torch.use_deterministic_algorithms(True,warn_only=True)，Runner后也沿用原Phase80 warn-only；不设置系统/凭据或新增CuBLAS环境策略。原失败根/日志及空权重目录保留，确认退出后改_run03，不改两个seed/训练预算或其他设置，重新本地测试push/远端ff-only pull。

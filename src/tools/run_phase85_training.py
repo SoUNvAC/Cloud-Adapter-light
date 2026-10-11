@@ -33,6 +33,7 @@ def main():
     from mmseg.registry import MODELS,DATASETS
     from mmengine.runner import set_random_seed
     set_random_seed(SEED,deterministic=True)
+    torch.use_deterministic_algorithms(True,warn_only=True)
     cfg=Config.fromfile(str(REPO/'src/configs/protocol/phase80_lora_rgb.py'))
     old=Config.fromfile(str(REPO/'src/configs/protocol/phase65a_explore_rgb.py'))
     for key in ['train_dataloader','val_dataloader','test_dataloader','param_scheduler','optim_wrapper','randomness','train_cfg']:
@@ -53,6 +54,7 @@ def main():
     # Reset RNG so LoRA initialization is independent of Source construction.
     from mmengine.runner import set_random_seed
     set_random_seed(SEED,deterministic=True)
+    torch.use_deterministic_algorithms(True,warn_only=True)
     model=MODELS.build(cfg.model);model.init_weights();state=model.state_dict()
     extra=state_keys(source_state,state)
     assert len(extra)==12*4*2

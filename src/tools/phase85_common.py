@@ -3,12 +3,12 @@ from phase80_common import *
 import os
 P80=ROOT
 PHASE81=DATA/'phase81_20261011'
-PARENT=DATA/'phase85_20261011_run02'
-CONTROL85=Path('/home/scv/shared/phase85_control_20261011_run02')
+PARENT=DATA/'phase85_20261011_run03'
+CONTROL85=Path('/home/scv/shared/phase85_control_20261011_run03')
 SEED=int(os.environ.get('PHASE85_SEED','66'))
 assert SEED in (66,67)
 ROOT=PARENT/('seed'+str(SEED))
-WORK=REPO/'src/work_dirs/phase85_20261011_run02'/('seed'+str(SEED))
+WORK=REPO/'src/work_dirs/phase85_20261011_run03'/('seed'+str(SEED))
 PROTOCOL=REPO/'src/research_plans/PHASE85_LORA_SEED_REPLICATION_20261011.md'
 
 def interval(values):
