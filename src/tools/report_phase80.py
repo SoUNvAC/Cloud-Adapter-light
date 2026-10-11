@@ -25,6 +25,16 @@ def main():
         original_end_of_run_reserved_bytes=train['peak_cuda_reserved_bytes'],
         note='MMEngine resets peak counters at logging intervals; original end-of-run counters are not global training peaks. Use maximum of all 80 logged interval peaks, integer MiB. No retraining.'))
     table=[]
+    definition_rows=[];definition_counts={}
+    for n in names:
+        counts=[]
+        for row in pol[n]['rows']:
+            cm=np.asarray(row['confusion']);union=cm.sum(0)+cm.sum(1)-np.diag(cm)
+            defined=np.flatnonzero(union>0).tolist();counts.append(len(defined))
+            definition_rows.append(dict(policy=n,product=row['product'],group_id=row['group_id'],defined_IoU_classes=defined))
+        definition_counts[n]={str(k):counts.count(k) for k in [1,2,3]}
+    write(root/'miou_definition_audit.json',dict(rows=definition_rows,counts=definition_counts,
+        rule='Unchanged existing measures(): each group mIoU is nanmean over class IoUs with positive union; absent truth AND prediction class has null IoU, not zero. Pooled mIoU computed after pooling all confusion counts.'))
     for n in names:
         r=pol[n];table.append(dict(policy=n,macro_ap=r['macro_ap']['mean'],pooled_ap=r['ranking']['ap'],
             macro_recall=r['macro_recall']['mean'],pooled_recall=r['recall'],
@@ -71,6 +81,10 @@ def main():
         m,ms,l,ls=vals
         lines.append('| '+rr['product'].split('_')[5]+' | '+' | '.join(cell(v) for v in vals+[l-m,ls-l,ms-m,ls-ms])+' |')
     lines+=['','## 2 结论探讨','',
+        f"本轮L+S相对M+S逐组平均AP增加{report['comparisons']['L+S minus M+S']['ap_pp']['mean']:.4f}百分点（描述95%区间{report['comparisons']['L+S minus M+S']['ap_pp']['ci95']}），7组差值全部为正，按±1百分点边界5改善/2稳定/0下降；平均召回增加{report['comparisons']['L+S minus M+S']['recall_pp']['mean']:.4f}百分点，全部32组平均FPR下降{-report['comparisons']['L+S minus M+S']['fpr_pp']['mean']:.4f}百分点。本批排序和工作点支持保留固定LoRA分枝作为下一轮必要对照候选，不启动新增训练，也不宣称已独立胜出。", '',
+        f"但L+S的平均FPR点估计{pol['L+S']['macro_fpr']['mean']*100:.4f}%虽≤1%，单侧95%上界{pol['L+S']['macro_fpr']['upper95_one_sided']*100:.4f}%仍>1%；预算稳定满足未获支持，且{pol['L+S']['fpr_above_one_percent_groups']}/32组实际FPR>1%。L+S对M+S最大逐组召回下降{report['comparisons']['L+S minus M+S']['worst_recall_pp']:.4f}百分点，平均改善不保证每景无损伤。", '',
+        f"光谱在两种方案内均提高组平均AP：LoRA增量{report['comparisons']['L+S minus L']['ap_pp']['mean']:.4f}百分点，MsRE增量{report['comparisons']['M+S minus M']['ap_pp']['mean']:.4f}百分点。这支持光谱补充可能不专属于MsRE的探索解释；两增量之差{report['spectral_increment_difference']['mean']:.4f}百分点，不能说增益已证明等效。光谱加入LoRA后池化AP变化{100*(pol['L+S']['ranking']['ap']-pol['L']['ranking']['ap']):.4f}百分点，加入MsRE后变化{100*(pol['M+S']['ranking']['ap']-pol['M']['ranking']['ap']):.4f}百分点；场景内排序改善并不等于跨场景统一分数标尺改善。", '',
+        f"L+S对M+S宏mIoU增加{report['comparisons']['L+S minus M+S']['miou_pp']['mean']:.4f}百分点，但池化mIoU变化{pol['L+S']['miou_percent']-pol['M+S']['miou_percent']:.4f}百分点，存在整体面积汇总代价。沿用旧定义：每组各类IoU的union=0时记NA并从该组nanmean排除；预测是否引入本景不存在的类会改变mIoU参与类数，宏差不能直接解释为同样三个有效类的均匀提升。M+S的一/二/三有效类组数为{definition_counts['M+S']}，L+S为{definition_counts['L+S']}；完整256条类支持审计见miou_definition_audit.json，不改变指标补救结果。", '',
         '本轮提供适配方案及其光谱增量的固定探索对照。不能据本轮development区间宣布独立确认、不能改写旧主检验/Phase72/74及Phase78/79的停止结论。没有新增阈值、checkpoint、rank、学习率或方向搜索。', '',
         f"LoRA可训练参数{capacity['lora_trainable_parameters']:,}，原MsRE可训练参数{capacity['msre_trainable_parameters']:,}，容量不匹配；MsRE含target_head_delta而此LoRA无。二者Surface/Cloud胜者不同，因此整体mIoU差异也不全来自Shadow排序。两套完整方案的差异不能归因为单一结构或纯光谱机制。", '',
         '随机种子固定，但继承原流程的CUDA确定性warn-only设置；日志记录了部分CUDA算子缺少确定性实现的警告，不承诺再次训练逐位重现。', '',
