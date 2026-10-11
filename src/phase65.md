@@ -868,3 +868,9 @@
 - LM池化类IoU Surface/Cloud/Shadow%=91.4554/93.0537/54.3015，相对LL91.4554 vs85.9856等；LM−LL Surface→Cloud少1116735、Cloud→Surface多242703，净少874032互误像元；Shadow漏影总数不变，向Surface多35566、向Cloud少35566。固定11/10/01/00三类参考计数及全部逐组支持/类IoU/原混淆完整保存，不据此调阈值或挑景。
 - L评分器宏FPR点0.7187%，单侧95%上界1.3353%>1%，5/32组>1%；有影/无影组3.1215%/0.0459%。M点0.8386%，上界1.4958%。本轮81011相对Phase80的80011区间微变仅bootstrap随机重抽，逐组数据精确相同。云影优势仍7已探索dev组；交叉需两网络推理/存储，非免费提升；所有旧确认池已使用，不能再称未见池，不追加搜索或实验。
 - shared小报告64486 bytes传回outputs/phase81/phase81_20261011，archive SHA7b2a6f806ee38211cbcd09f90611b84a74084454f1e569aa2e082a59cf2f5da1；12产物SHA及9执行Git blob/全部128confusion、CSV、宏/池化、96配对差相关组bootstrap、二值组合计数本地独立复核通过。仅shared小报告/运行日志，未同步work_dirs/像元缓存，不改前序结果。补充本地报告只解释已有32组损伤/缺类，不读像元、不加分析搜索。SSH/代码push/pull正常，用户修改保留，2026-10-20北京预算不变。
+
+### 2026-10-11 Phase82 start: fixed conditional nonshadow distillation
+- 用户授权执行PHASE82_NONSHADOW_DISTILLATION_20261011.md。一个seed65/4000步训练、一个D+S拟合；学生从同Source严格初始化，rank4/alpha4/dropout0及qkv/proj/fc1/fc2/96 LoRA张量，与Phase80同数据/裁块/增强/监督/优化/调度。原155产品/153fit组、153fit代表、32development（7有影）边界；不读确认/65b/65c/旧sealed/ALCD、不下新数据。MsRE2000步固定SHA教师仅同增强fit批次eval/no_grad，二类log_softmax KL(qT||qD)仅Surface/Cloud参考像元，lambda1/T1，空mask0，原监督全保留。教师隐藏于训练对象但不注册为学生子模块/优化参数/checkpoint；推理只学生。
+- 先精确复现Phase81 MM/LL/LM全部96逐组confusion/决策指标及汇总，失败不训练。零LoRA Source复现、手算KL/空mask/同分布/Shadow与ignore梯度、teacher冻结、梯度有限在远端训练前强制检查；基础/教师全部张量前后核对，每步记录监督/KD/96梯度/显存，每500步原development池化mIoU选择（平手最早），全8节点保留。选定后153fit及32dev各一次学生前向，只拟合D+S原抽样/组等权BCE/正则0.001/约束及全fit exact-ties阈值。
+- 固定五门同时满足才保留：D+S−LL池化mIoU>=1pp，宏AP/召回/mIoU各>=−1pp，宏FPR点<=1%；组bootstrap10000/82011及全部逐组损伤完整报告；失败关闭lambda1/T1不搜索或换checkpoint。宏旧union>0定义、独立确认缺口及全部历史失败不变。训练教师/双head成本与学生单网络部署分开。
+- 本地3项门槛边界/手算KL参考/组bootstrap测试和新脚本语法检查通过；本地无torch，真实张量检查置于远端preflight，尚未训练、不预报结果。SSH版本a7fe282，新shared/work目录未使用；按本地验证push远端ff-only pull后启动一次GPU作业。原outputs/日志整理修改保留，不同步work_dirs、不清理/恢复旧大文件，2026-10-20北京逐步预算停止不变。
