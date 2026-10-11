@@ -860,3 +860,11 @@
 ### 2026-10-11 Phase81 start: frozen crossed readout diagnosis
 - 用户授权执行PHASE81_CROSSED_READOUT_20261011.md；仅32个development代表，零训练/浅层拟合/阈值搜索/新增网络推理，不读取fit像元或确认/65b/65c/旧sealed/ALCD。固定LoRA3500步与MsRE2000步既有score及二类nonshadow缓存，完整继承原M+S/L+S标准化/系数/float32 logit/>=阈值，先精确复现64原逐组confusion/AP/决策指标及宏/池化汇总再一次交叉MM/LL/LM/ML；复现或不变量失败即停止，不补推理。
 - 本地新增执行/交付/独立验证脚本与前序SHA绑定，3项合成测试覆盖阈值等号/负logit与二类读出、缺类mIoU分母、固定相关组bootstrap10000/81011，全部通过。原union>0指标沿用，交付全128逐组/96配对差/三类混淆/决策11/10/01/00表。原数据/模型不变，不同步work_dirs，shared只传小报告。SSH正常，远端HEAD ad76aa7，新shared/control路径未使用；尚未执行交叉计算，不预报结论，预算2026-10-20北京不变。
+
+### 2026-10-11 Phase81 completed: crossed readout removes pooled gap on development
+- 冻结执行8d5a5ab，远端EXIT_CODE=0，原MM/LL全部64条逐组confusion/AP/召回/精确率/FPR/mIoU/类IoU及宏AP/FPR/mIoU、池化AP/mIoU精确复现后才交叉。32development（7有影/25无影），不读fit像元或任何确认/ALCD，零训练/拟合/阈值搜索/新推理。全部128confusion独立boolean计数、原两评分器逐组及池化AP独立exact-ties复算；LL/LM及MM/ML逐像元Shadow掩膜相同，AP/召回/FPR/精确率/Shadow IoU一致。
+- MM/LL/LM/ML宏AP%=73.5422/76.3332/76.3332/73.5422，池化AP%=66.9700/70.1817/70.1817/66.9700；宏mIoU%=78.6877/85.1230/84.2289/78.5208，池化mIoU%=78.1946/76.3384/79.6035/74.9126。固定32相关组bootstrap10000/seed81011：LM−LL宏mIoU−0.8941pp[-4.8202,2.2161]，池化+3.2651；ML−MM宏−0.1669[-2.3557,1.8061]，池化−3.2820；LM−MM宏+5.5413[1.0950,11.1579]，池化+1.4089。按协议记录此次交叉消除池化差距，不声称全面逐景改善/独立泛化/内部因果。
+- LM−LL 2改善/8下降/22相同：T32NKF三类支持均存在，mIoU−12.0171pp，Cloud→Surface从56997到205548，真实读出取舍；最差T20WNV−50.0122pp源于全Cloud1044484像元中254误判Surface，旧union>0指标参与类别从1到2，Cloud IoU仍99.9757%，不能解释为一半像元错。LM−MM 11改善/2下降/19相同，下降T38TNN−1.4597/T02LKH−0.2120pp。所有组有效像元均1044484（总33423488），宏/池化差并非景面积不同，而涉及各景类别组成、union及缺类平均的非线性，不回改旧定义。
+- LM池化类IoU Surface/Cloud/Shadow%=91.4554/93.0537/54.3015，相对LL91.4554 vs85.9856等；LM−LL Surface→Cloud少1116735、Cloud→Surface多242703，净少874032互误像元；Shadow漏影总数不变，向Surface多35566、向Cloud少35566。固定11/10/01/00三类参考计数及全部逐组支持/类IoU/原混淆完整保存，不据此调阈值或挑景。
+- L评分器宏FPR点0.7187%，单侧95%上界1.3353%>1%，5/32组>1%；有影/无影组3.1215%/0.0459%。M点0.8386%，上界1.4958%。本轮81011相对Phase80的80011区间微变仅bootstrap随机重抽，逐组数据精确相同。云影优势仍7已探索dev组；交叉需两网络推理/存储，非免费提升；所有旧确认池已使用，不能再称未见池，不追加搜索或实验。
+- shared小报告64486 bytes传回outputs/phase81/phase81_20261011，archive SHA7b2a6f806ee38211cbcd09f90611b84a74084454f1e569aa2e082a59cf2f5da1；12产物SHA及9执行Git blob/全部128confusion、CSV、宏/池化、96配对差相关组bootstrap、二值组合计数本地独立复核通过。仅shared小报告/运行日志，未同步work_dirs/像元缓存，不改前序结果。补充本地报告只解释已有32组损伤/缺类，不读像元、不加分析搜索。SSH/代码push/pull正常，用户修改保留，2026-10-20北京预算不变。
