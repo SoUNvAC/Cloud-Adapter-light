@@ -928,3 +928,7 @@
 
 ### 2026-10-11 Phase85 Source-preflight deterministic-control repair
 - _run02历史缓存复现完成；新seed66在Source零残差参考前向的CuBLAS调用时因提前set_random_seed(deterministic=True)打开严格torch deterministic、但warn_only尚未设定而异常停止EXIT1。尚未初始化LoRA/执行梯度预检/任何训练更新/提取或浅层拟合；是实现中的开关顺序问题，不是训练数值失败或科研结果。修复为两处设置随机种子后立即torch.use_deterministic_algorithms(True,warn_only=True)，Runner后也沿用原Phase80 warn-only；不设置系统/凭据或新增CuBLAS环境策略。原失败根/日志及空权重目录保留，确认退出后改_run03，不改两个seed/训练预算或其他设置，重新本地测试push/远端ff-only pull。
+
+
+### 2026-10-11 Phase85 completed evaluation; CPU verifier normalization repair
+- _run03两个新seed均已完成各4000步、各一次L+S拟合及32组LL/LM评价；seed66选3000、seed67选4000，固定报告retain_branch=false，尚待全部校验不先宣称完成。最终CPU复算在标准化均值检查停止：最大绝对差1.5321e-13，原fit_model先归一化权重、standardize内部再归一化；复算仅归一化一次。我漏了一次数学定义内的归一化。新独立完成复算器只补第二次归一化，保留rtol1e-13/atol1e-14、不放宽检查，不重新训练/拟合/推理或更新阈值。原verify_phase85.py及训练执行Git blobs保持不改，原run03 EXIT1及日志保留，新verification control记录本次纯CPU检查与最终退出码；未完成剩余检查前不交付成功。
