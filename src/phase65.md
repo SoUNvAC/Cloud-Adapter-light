@@ -836,3 +836,11 @@
 
 ### 2026-10-11 Phase79 conditional direction freeze
 用户授权PHASE79_CONDITIONAL_DIRECTION_20261011.md新问题：控制中心B11暗度后检验方向补充。Phase78失败原样保留，不追认通过；仅同3fit六原得分、共同mask及原参考，不重新计算方向/下载影像/前向/拟合/读取确认池。原Phase78全部产物及三份native_scores SHA先核验；锁协议/代码/依赖helper/runner/tests/输入SHA。仅用dark[common]固定20等分位、NumPy linear、unique合并重复边界、searchsorted内部边界side=right（末箱含max；全同值一箱）；三景边界及支持先全部保存，不读标签选边界。先复现18项AP及未分层ROC AUC，任何漂移停止。箱内ties=.5，缺类null保留；六得分同箱同权重，n_Shadow*n_negative加权仅同箱对；主负类Surface+Cloud，两个子任务仅辅助，原边界不变。八项本地合成检查通过，含独立枚举正负对验证加权与缺类支持、不跨箱。继续仅四项主宏差sun减reverse/两个orthogonal/dark全>0且各>=2/3景正；任一景无定义则支持不足不补景；all完整报告，不替代门。新shared及outputs目录防覆盖，原大数组继续shared，不传work_dirs/不改用户日志，预算止2026-10-20北京。
+
+
+### 2026-10-11 Phase79 executed: close fixed conditional direction hypothesis
+- 执行1f83c9c，两端8项分位/ties/缺类/独立同箱正负对枚举检查通过，EXIT_CODE=0。全部Phase78产物/3份大数组SHA复核、三景暗度边界先全部无标签冻结、18项原AP及18项原未分层ROC AUC重现后计算新条件AUC；0影像下载，无方向重算/推理/拟合/确认/旧sealed/work_dirs访问或同步。无额外依赖安装；NumPy既有环境。
+- 三景实际各20箱；主任务条件AUC按sun/orthogonal90/reverse/orthogonal270/all/dark：T37LDL 0.3127699221/0.5123976712/0.4899409427/0.4618933915/0.3661674291/0.6308439982；T20PMQ 0.5184515089/0.5513971297/0.5383099478/0.4406714130/0.5040707417/0.5558394971；T46RBU 0.8230859018/0.7198411509/0.8348923994/0.7605996734/0.8226060476/0.5545651613。
+- 主宏差sun减reverse -6.9612百分点（0/3正）、orthogonal90 -4.3110（1/3）、orthogonal270 -0.2952（2/3）、dark -2.8980（1/3）；all -1.2846（2/3）。支持可定义但screen_passed=false，四项必要宏差均负，按协议关闭本组固定方向增量假说，不改箱/角度/距离/公式/分类器挽救，不能宣称太阳方向特异性。Phase78失败未追认，Phase77 unresolved不变。
+- 主任务支持11/20、14/20、18/20箱；Shadow均100%参与，非Shadow覆盖44.6028%、65.9682%、89.0175%，同箱对分母928381975/2065844303/2139466413仅计算权重，不是独立样本。所有纯类箱null保留，1080逐箱得分记录完整，无挑选亮度段。辅助Surface sun-reverse +2.5958、sun-dark +12.6543百分点；Cloud对应-14.5206/-18.9489，不能替代主负类或主失败。各子任务支持不同，尤其T37LDL Surface正类覆盖47.51%；不据此归因、不宣称部署/融合有效。箱内dark AUC仍>0.5，分位未消除全部暗度差异。仅3已探索fit，不做像元/对显著性及独立泛化宣称。
+- shared新phase79_20261011报告27392 bytes传回指定outputs/phase79/phase79_20261011；12远端产物SHA、7部署Git blob、前序输入/3mask SHA、本地由固定B11原整数DN重现三景边界、180逐箱任务支持、54加权汇总、15宏差与停止规则均复核通过。逐箱AUC在shared计算，本地复核支持与汇总，不虚称原方向数组本地复算。交付README数据结果/结论探讨、全部逐景/逐箱/边界/支持/差表、锁/日志/LOCAL_VERIFIED；原native_scores继续shared，不重复传输。SSH正常；代码和实际结果记录push/远端ff-only pull，用户无关修改保留，预算止2026-10-20北京。
