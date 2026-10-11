@@ -1,0 +1,160 @@
+{
+  "radiometry_checks": [
+    {
+      "product": "S2A_MSIL1C_20160417T111159_N0201_R137_T29RPQ_20160417T203056",
+      "quantification": 10000.0,
+      "offsets": {
+        "B02": 0.0,
+        "B03": 0.0,
+        "B04": 0.0,
+        "B08": 0.0,
+        "B11": 0.0,
+        "B12": 0.0
+      },
+      "special_values": [
+        0,
+        65535
+      ],
+      "xml_sha256": "e8c2c8a2d4e4e909b8032fd0ef5f7d6cff5caa75f4d11619434aabe6c9c094a3"
+    },
+    {
+      "product": "S2A_MSIL1C_20160817T101032_N0204_R022_T33UUU_20160817T230018",
+      "quantification": 10000.0,
+      "offsets": {
+        "B02": 0.0,
+        "B03": 0.0,
+        "B04": 0.0,
+        "B08": 0.0,
+        "B11": 0.0,
+        "B12": 0.0
+      },
+      "special_values": [
+        0,
+        65535
+      ],
+      "xml_sha256": "6bf57cd7599d98c45bbec1f23f7965b1d1007845796129140ba84f87616d939d"
+    },
+    {
+      "product": "S2A_MSIL1C_20161108T102232_N0204_R065_T32TNR_20161109T224916",
+      "quantification": 10000.0,
+      "offsets": {
+        "B02": 0.0,
+        "B03": 0.0,
+        "B04": 0.0,
+        "B08": 0.0,
+        "B11": 0.0,
+        "B12": 0.0
+      },
+      "special_values": [
+        0,
+        65535
+      ],
+      "xml_sha256": "fa136b74136307574fa2a6054163900744796b323e90e5c10e4675f2c419ce35"
+    },
+    {
+      "product": "S2A_MSIL1C_20170313T074931_N0204_R135_T35JPM_20170313T081339",
+      "quantification": 10000.0,
+      "offsets": {
+        "B02": 0.0,
+        "B03": 0.0,
+        "B04": 0.0,
+        "B08": 0.0,
+        "B11": 0.0,
+        "B12": 0.0
+      },
+      "special_values": [
+        0,
+        65535
+      ],
+      "xml_sha256": "a891317541e768e843ace9422385c6736e87a71e550bf8118bb3061868951c05"
+    },
+    {
+      "product": "S2A_MSIL1C_20170501T183311_N0205_R127_T11SPC_20170501T183311",
+      "quantification": 10000.0,
+      "offsets": {
+        "B02": 0.0,
+        "B03": 0.0,
+        "B04": 0.0,
+        "B08": 0.0,
+        "B11": 0.0,
+        "B12": 0.0
+      },
+      "special_values": [
+        0,
+        65535
+      ],
+      "xml_sha256": "8629042285ed83804460f0a0de7c8e7936503588f512c591f5cbc389298e7266"
+    },
+    {
+      "product": "S2A_MSIL1C_20170516T105031_N0205_R051_T31UDP_20170516T105322",
+      "quantification": 10000.0,
+      "offsets": {
+        "B02": 0.0,
+        "B03": 0.0,
+        "B04": 0.0,
+        "B08": 0.0,
+        "B11": 0.0,
+        "B12": 0.0
+      },
+      "special_values": [
+        0,
+        65535
+      ],
+      "xml_sha256": "03cc922a51674cc4f03b4f78535f8fe0a2df5ae5658330af332307091a107d8d"
+    },
+    {
+      "product": "S2A_MSIL1C_20170917T103021_N0205_R108_T31TFJ_20170917T103018",
+      "quantification": 10000.0,
+      "offsets": {
+        "B02": 0.0,
+        "B03": 0.0,
+        "B04": 0.0,
+        "B08": 0.0,
+        "B11": 0.0,
+        "B12": 0.0
+      },
+      "special_values": [
+        0,
+        65535
+      ],
+      "xml_sha256": "05fbf9e8c05271bb1a485ab5a6331b0646bec3b0cad0a7aa0c66a9298d85e3f8"
+    },
+    {
+      "product": "S2A_MSIL1C_20180422T102031_N0206_R065_T32UPU_20180422T141352",
+      "quantification": 10000.0,
+      "offsets": {
+        "B02": 0.0,
+        "B03": 0.0,
+        "B04": 0.0,
+        "B08": 0.0,
+        "B11": 0.0,
+        "B12": 0.0
+      },
+      "special_values": [
+        0,
+        65535
+      ],
+      "xml_sha256": "042762f0364987c9a38bba5aeb60ffbf1ebd142e22d9526cd07771c483786791"
+    },
+    {
+      "product": "S2A_MSIL1C_20180505T141051_N0206_R110_T21LWK_20180505T160911",
+      "quantification": 10000.0,
+      "offsets": {
+        "B02": 0.0,
+        "B03": 0.0,
+        "B04": 0.0,
+        "B08": 0.0,
+        "B11": 0.0,
+        "B12": 0.0
+      },
+      "special_values": [
+        0,
+        65535
+      ],
+      "xml_sha256": "e6e247763425b71b17edffda5f0c7449932dfcb60f9fc8159fbb8d08c46977d2"
+    }
+  ],
+  "synthetic_contract_tests_passed": 5,
+  "original_final_human_sha256": "59e018e486357b60b3b494abbefebdb95bf22bbd709428a8d1526f696ec47faf",
+  "no_local_model_forward": true
+}
