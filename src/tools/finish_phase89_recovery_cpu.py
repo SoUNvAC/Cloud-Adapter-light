@@ -11,6 +11,12 @@ class CPUOnlyDependency(ast.NodeTransformer):
         if node.arg=='sklearn_AP_matches':node.arg='independent_score_bin_AP_matches'
         if node.arg=='pooled_sklearn_AP':node.arg='pooled_independent_score_bin_AP'
         return self.generic_visit(node)
+    def visit_Call(self,node):
+        if isinstance(node.func,ast.Attribute) and node.func.attr=='assert_allclose' and any(k.arg=='atol' and isinstance(k.value,ast.Constant) and k.value.value==3e-16 for k in node.keywords):
+            node.func=ast.Name(id='check_calibrated_mean',ctx=ast.Load())
+            for k in node.keywords:
+                if k.arg=='atol':k.value=ast.Constant(value=2e-15)
+        return self.generic_visit(node)
 
 def transformed(source,filename,namespace):
     tree=CPUOnlyDependency().visit(ast.parse(source));ast.fix_missing_locations(tree)
@@ -25,15 +31,22 @@ def main():
         assert index['forward_count']==count and index['unique_block_count']==324
         assert index['before_state_sha256']==index['after_state_sha256']
     p.read(d/'phase89_report.json');p.read(root/'calibrated/index.json')
-    p.write(d/'CPU_AP_DEPENDENCY_ADDENDUM.json',dict(created_utc=p.now(),tests=self_test(),
+    p.write(d/'CPU_AP_DEPENDENCY_ADDENDUM_V2.json',dict(created_utc=p.now(),tests=self_test(),
         reason='Existing conda has no sklearn; preserve all inference outputs and frozen production metrics.',
         algorithm='Non-interpolated AP: positive mass in each tied score bin times cumulative precision at that threshold.',
         production_AP_unchanged=True,no_forward_no_fit_no_tuning=True,
+        float64_mean_check_atol=2e-15,reason_for_mean_check_bound='Independent nine-term sum order differs from reshape mean; prior 3e-16 check observed 4.44e-16. New bound covers nine float64 additions of probabilities in [0,1], without changing saved arrays or decisions.',
         helper_sha256=p.digest(__file__),oracle_sha256=p.digest(p.REPO/'src/tools/phase89_cpu_ap.py')))
-    # Reuse all frozen CPU grid/calibration/confusion checks verbatim. Only the
-    # absent dependency import and provenance field names change in the AST.
-    ns=dict(p.__dict__);transformed(inspect.getsource(p.verify),str(p.REPO/'src/tools/run_phase89.py')+':CPU_only_dependency',ns)
+    # Frozen production arrays/metrics stay intact; CPU-only import/provenance
+    # and the bounded floating summation comparison are explicit above.
+    max_difference=[0.];checks=[0]
+    def check_calibrated_mean(actual,expected,**kwargs):
+        max_difference[0]=max(max_difference[0],float(p.np.max(p.np.abs(actual-expected))));checks[0]+=1
+        p.np.testing.assert_allclose(actual,expected,**kwargs)
+    ns=dict(p.__dict__);ns['check_calibrated_mean']=check_calibrated_mean
+    transformed(inspect.getsource(p.verify),str(p.REPO/'src/tools/run_phase89.py')+':CPU_only_dependency',ns)
     ns['verify']()
+    p.write(d/'CPU_FLOAT64_REDUCTION_CHECK.json',dict(checks=checks[0],maximum_absolute_difference=max_difference[0],atol=2e-15,production_arrays_unchanged=True))
     finalfile=p.REPO/'src/tools/finalize_phase89.py';final={'__name__':'phase89_cpu_finalizer','__file__':str(finalfile)}
     transformed(finalfile.read_text(encoding='utf-8'),str(finalfile)+':CPU_only_dependency',final)
     original_write=p.write;original_summary=final['summarize']
@@ -50,6 +63,7 @@ def main():
         f=path/'README.md';text=f.read_text(encoding='utf-8').replace('sklearn AP','独立分数分组AP')
         text+='\n\n恢复说明：复用54块，授权补算112块损坏输出并继续482块无输出任务，本次新增594次前向。历史总前向次数因日志损坏无法确定。复用块通过恢复时结构与输入身份检查，但没有故障前输出SHA封存。准备数据硬链接复用，故障原目录保留；无训练、拟合、调阈值。\n'
         text+='\nCPU复核说明：指定conda缺少sklearn，未安装或修改环境。使用独立按分数分组的非插值AP公式，已通过3个手算例及60个暴力阈值例；逐组和池化AP与冻结生产实现比较。没有声称实际运行sklearn。全部概率、阈值、mask和生产指标计算保持原样。\n'
+        text+=f'\n独立九项求和与原均值的float64运算顺序不同，复核容差按九项舍入界限设为2e-15，{checks[0]}项聚合检查最大绝对差{max_difference[0]:.8g}。仅修正数值复核界限，保存概率和决策未改动；旧3e-16检查失败记录保留。\n'
         f.write_text(text,encoding='utf-8')
     p.write=honest_write;final['summarize']=honest_summary;final['main']()
 
