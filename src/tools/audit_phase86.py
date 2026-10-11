@@ -68,13 +68,22 @@ def components(ids,edges):
     for x in sorted(ids):out[find(x)].append(x)
     return sorted(out.values())
 
+def project_geometry(g,src,dst):
+    from rasterio.warp import transform_geom
+    from shapely.geometry import shape,mapping
+    return shape(transform_geom(src,dst,mapping(g),precision=-1))
+
+def buffered_intersects(g1,g2,crs):
+    # Both1000m buffers including boundary touch, without circle approximation.
+    return project_geometry(g1,'EPSG:4326',crs).distance(project_geometry(g2,'EPSG:4326',crs))<=2000.0
+
 def main():
     # Existing project-local pyshp; do not install packages or change conda.
     sys.path.insert(0,str(REPO/'src/work_dirs/phase65a/geospatial_python'))
-    import shapefile,shapely,pyproj
+    import shapefile,shapely,rasterio
+    from rasterio.crs import CRS
     from shapely import wkt
     from shapely.geometry import shape,box,mapping
-    from shapely.ops import transform
     from shapely.strtree import STRtree
     ROOT.mkdir(exist_ok=False)
     b=read(BIND,'frozen local bindings')
@@ -115,9 +124,9 @@ def main():
             return MultiPolygon([dense(x,step) for x in g.geoms])
         raise ValueError('Nonpolygon footprint')
     def to_wgs(g,crs):
-        c=pyproj.CRS(crs)
-        if not c.is_projected or abs(c.axis_info[0].unit_conversion_factor-1)>1e-12:raise ValueError('Native projected metres required')
-        g=transform(pyproj.Transformer.from_crs(c,4326,always_xy=True).transform,dense(g))
+        c=CRS.from_user_input(crs)
+        if not c.is_projected or abs(c.linear_units_factor[1]-1)>1e-12:raise ValueError('Native projected metres required')
+        g=project_geometry(dense(g),c,'EPSG:4326')
         if not g.is_valid or g.is_empty or g.bounds[2]-g.bounds[0]>180:raise ValueError('Invalid/antimeridian footprint; pending required')
         return g
     def add(product,tile,role,g,source,conservative=False):
@@ -181,7 +190,7 @@ def main():
             r=hlookup[key];bb=r['buffered_wgs84_bounds']
             # Existing report is an already100m-buffered geographic envelope.
             # Reusing its entire envelope and then another1000m is conservative.
-            g=box(*bb) if bb[0]<=bb[2] and bb[2]-bb[0]<180 else None
+            g=dense(box(*bb),step=.002) if bb[0]<=bb[2] and bb[2]-bb[0]<180 else None
             if g is None:gaps.append('Historical antimeridian envelope unresolved '+str(key))
             add(':'.join(key),'','historical_used',g,str(PROV/'historical_overlap_v2.json'),True)
         else:gaps.append('Used historical ID lacks existing footprint '+str(key));add(':'.join(key),'','historical_used',None,';'.join(manifest_sources))
@@ -249,11 +258,9 @@ def main():
         import numbers
         return [validhist[int(v) if isinstance(v,numbers.Integral) else indices[id(v)]] for v in found]
     def intersects(g1,g2,crs):
-        project=pyproj.Transformer.from_crs(4326,crs,always_xy=True).transform
-        a=transform(project,g1);b2=transform(project,g2)
         # Buffer both footprints1000m, include touching boundaries. Resolution64
         # approximates circles; use exact distance<=2000 instead, no arc polygon.
-        return a.distance(b2)<=2000.0
+        return buffered_intersects(g1,g2,crs)
     for p in products:
         product=p['canonical_product'];hitreasons=set()
         for h in history:
@@ -319,7 +326,7 @@ def main():
       'Source实际训练/开发映射、Catalogue原fit/development及已用确认池、历史L8/SPARCS元数据来源与SHA见history_sources.json。全513 Catalogue发布产品保守排除包含未使用产品，故可能过度排除。历史使用不详/足迹缺项见unresolved.md，不用不同tile替代无空间交叠。', '',
       '置信图不是正确概率；版本差异不是错误率；原生60m不变成高分辨率真值。Phase85分枝继续关闭；本审计不授权推理或新训练。', '', '开发暴露扫描见exposure_scan.json；products/groups/overlap_edges.csv保留每个产品、组成员/代表、理由和证据路径。']
     (ROOT/'README.md').write_text('\n'.join(lines)+'\n',encoding='utf-8')
-    write('runtime.json',dict(python=sys.version,shapely=shapely.__version__,pyproj=pyproj.__version__,code_sha256=sha(Path(__file__)),no_network_calls=True,no_raster_open=True))
+    write('runtime.json',dict(python=sys.version,shapely=shapely.__version__,rasterio=rasterio.__version__,GDAL=rasterio.__gdal_version__,PROJ=rasterio.__proj_version__,code_sha256=sha(Path(__file__)),no_network_calls=True,no_raster_open=True))
     write('artifact_hashes.json',{p.name:sha(p) for p in ROOT.iterdir() if p.is_file()})
     print(json.dumps(dict(status='audit_delivered_not_confirmation_ready',counts=counts,missing=gaps),ensure_ascii=False),flush=True)
 
