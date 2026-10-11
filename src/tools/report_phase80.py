@@ -12,7 +12,7 @@ def stat(s,scale=1):
 def main():
     p=argparse.ArgumentParser();p.add_argument('--root',type=Path,default=ROOT);a=p.parse_args();root=a.root
     report=read(root/'phase80_report.json');pre=read(root/'preflight.json');train=read(root/'training_completed.json')
-    lock=read(root/'calibration_lock.json');pol=report['policies'];names=['M','M+S','L','L+S','Source','MsRE','LoRA_argmax','L3']
+    lock=read(root/'calibration_lock.json');capacity=read(root/'capacity_audit.json');pol=report['policies'];names=['M','M+S','L','L+S','Source','MsRE','LoRA_argmax','L3']
     assert read(root/'COMPLETED.json')['report_sha256']==digest(root/'phase80_report.json')
     table=[]
     for n in names:
@@ -62,7 +62,8 @@ def main():
         lines.append('| '+rr['product'].split('_')[5]+' | '+' | '.join(cell(v) for v in vals+[l-m,ls-l,ms-m,ls-ms])+' |')
     lines+=['','## 2 结论探讨','',
         '本轮提供适配方案及其光谱增量的固定探索对照。不能据本轮development区间宣布独立确认、不能改写旧主检验/Phase72/74及Phase78/79的停止结论。没有新增阈值、checkpoint、rank、学习率或方向搜索。', '',
-        'LoRA与MsRE容量不同，MsRE含target_head_delta而此LoRA无；二者Surface/Cloud胜者不同，因此整体mIoU差异也不全来自Shadow排序。两套完整方案的差异不能归因为单一结构或纯光谱机制。', '',
+        f"LoRA可训练参数{capacity['lora_trainable_parameters']:,}，原MsRE可训练参数{capacity['msre_trainable_parameters']:,}，容量不匹配；MsRE含target_head_delta而此LoRA无。二者Surface/Cloud胜者不同，因此整体mIoU差异也不全来自Shadow排序。两套完整方案的差异不能归因为单一结构或纯光谱机制。", '',
+        '随机种子固定，但继承原流程的CUDA确定性warn-only设置；日志记录了部分CUDA算子缺少确定性实现的警告，不承诺再次训练逐位重现。', '',
         '是否保留LoRA分枝必须同时看L+S−M+S排序、冻结阈值召回与FPR代价。若只改变工作点或未改善，按协议关闭本轮固定LoRA方案；若两者均有光谱收益，只支持光谱补充可能不依赖MsRE的探索解释。这里没有新增独立确认晋级检验，也不授权另一种网络。', '',
         '全部32组×8策略原始AP/混淆派生指标见development_groups.csv与phase80_report.json；无参考Shadow的25组AP保持NA并继续参与FPR。报告保留各类IoU、两种漏影流向、零召回名单、支持分母；扫描FPR预算的召回只在ranking.matched_fpr作诊断，不替代冻结阈值运行结果。', '',
         'training_curve.csv/.jsonl记录8次development mIoU；训练日志来自shared控制目录，不自动传work_dirs日志或权重。calibration_lock.json/fit_input_audit.json保存两个模型、标准化、阈值、153组抽样索引SHA与输入锁；training_lock.json锁代码、来源、配置。Local verification记录实际复核范围，不把哈希核验说成对全部缓存的本地像元复算。','']

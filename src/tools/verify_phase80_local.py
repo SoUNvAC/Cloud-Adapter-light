@@ -2,7 +2,16 @@
 import argparse,csv,json,subprocess,hashlib
 from pathlib import Path
 import numpy as np
-from phase80_common import read,digest,interval
+from phase80_common import read,digest
+
+def interval(vals):
+    x=np.asarray(vals,np.float64)
+    out=dict(mean=float(np.sum(x)/len(x)) if len(x) else None,ci95=None,upper95_one_sided=None)
+    if len(x)>1:
+        samples=np.random.default_rng(80011).choice(x,size=(10000,len(x)),replace=True)
+        means=np.sum(samples,axis=1)/len(x)
+        out.update(ci95=np.percentile(means,[2.5,97.5]).tolist(),upper95_one_sided=float(np.percentile(means,95)))
+    return out
 
 def near(a,b):
     assert (a is None and b is None) or (a is not None and b is not None and np.allclose(a,b,rtol=0,atol=1e-10)),(a,b)
@@ -16,6 +25,10 @@ def main():
         blob=subprocess.check_output(['git','show',a.execution_commit+':'+rel])
         assert hashlib.sha256(blob).hexdigest()==h,rel
     pre=read(root/'preflight.json');train=read(root/'training_completed.json');r=read(root/'phase80_report.json')
+    calibration=read(root/'calibration_lock.json')
+    assert digest(root/'baseline_reproduction.json')==calibration['baseline_reproduction_sha256']
+    assert (root/'EXIT_CODE').read_text().strip()=='0'
+    assert (root/'VERIFICATION_EXIT_CODE').read_text().strip()=='0'
     assert pre['base_tensors_identical'] and train['base_tensors_still_identical']
     assert all(v<=1e-6 for v in pre['zero_residual_max_absolute_logit_error'].values())
     assert len(pre['trainable_names'])==96 and all(g['finite'] and g['connected'] for g in pre['gradients'].values())
