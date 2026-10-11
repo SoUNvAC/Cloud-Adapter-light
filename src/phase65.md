@@ -832,3 +832,7 @@
 
 ### 2026-10-11 Phase78 delivery verified
 原生3份大native_scores.npz完整留shared成功目录；大传输较慢，核对进程命令后仅停止本次自行启动的Python接收器及SSH子进程，partial原样保留。轻量报告包9603301 bytes成功传回规定outputs/phase78/phase78_20261011，含全部CSV、mask、3景固定总览及锁/日志，不涉及work_dirs。在shared用已部署独立排序/并列分组AP实现复算18项，全部与sklearn差<1e-12；三份大数组原SHA及共同支持/S_all关系复核通过，新增REMOTE_ARRAY_VERIFIED SHA=2e7d7c4e34374c3a1fef75af722912d952384e564dc2ffcfd84a1eca9911a445双端一致。本地20份远端产物逐SHA、3份shared大数组SHA记录、代码/helper/绑定Git blob、4个Phase76输入SHA、3个原mask成员SHA及共同mask/类计数、全部宏差/停止规则复核通过；没有把remote AP复算称本地数组复算。LOCAL_VERIFIED/DELIVERY_VERIFIED记录边界，3总览读图确认标题/色标无遮挡，README按数据结果与结论分开。最终screen_passed=false，停止固定方案；未新增下一阶段研究授权。代码/真实结果记录push后远端ff-only pull，用户无关修改保留。
+
+
+### 2026-10-11 Phase79 conditional direction freeze
+用户授权PHASE79_CONDITIONAL_DIRECTION_20261011.md新问题：控制中心B11暗度后检验方向补充。Phase78失败原样保留，不追认通过；仅同3fit六原得分、共同mask及原参考，不重新计算方向/下载影像/前向/拟合/读取确认池。原Phase78全部产物及三份native_scores SHA先核验；锁协议/代码/依赖helper/runner/tests/输入SHA。仅用dark[common]固定20等分位、NumPy linear、unique合并重复边界、searchsorted内部边界side=right（末箱含max；全同值一箱）；三景边界及支持先全部保存，不读标签选边界。先复现18项AP及未分层ROC AUC，任何漂移停止。箱内ties=.5，缺类null保留；六得分同箱同权重，n_Shadow*n_negative加权仅同箱对；主负类Surface+Cloud，两个子任务仅辅助，原边界不变。八项本地合成检查通过，含独立枚举正负对验证加权与缺类支持、不跨箱。继续仅四项主宏差sun减reverse/两个orthogonal/dark全>0且各>=2/3景正；任一景无定义则支持不足不补景；all完整报告，不替代门。新shared及outputs目录防覆盖，原大数组继续shared，不传work_dirs/不改用户日志，预算止2026-10-20北京。
