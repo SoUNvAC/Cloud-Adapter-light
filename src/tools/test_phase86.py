@@ -34,4 +34,14 @@ class AuditTests(unittest.TestCase):
         z=project_geometry(a,'EPSG:32632','EPSG:32633')
         self.assertTrue(buffered_intersects(w(a),project_geometry(z,'EPSG:32633','EPSG:4326'),'EPSG:32632'))
 
+    @unittest.skipUnless(importlib.util.find_spec('shapely'),'existing remote geospatial runtime required')
+    def test_wrapped_antimeridian_not_unknown_or_global_rectangle(self):
+        from audit_phase86 import geographic_envelope
+        from shapely.geometry import Point
+        g=geographic_envelope([173.8,-79.4,-172.7,-76.8])
+        self.assertTrue(g.contains(Point(179,-78)))
+        self.assertTrue(g.contains(Point(-179,-78)))
+        self.assertFalse(g.contains(Point(0,-78)))
+        self.assertFalse(g.contains(Point(179,0)))
+
 if __name__=='__main__':unittest.main()

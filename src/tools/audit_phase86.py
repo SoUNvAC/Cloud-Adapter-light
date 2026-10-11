@@ -12,7 +12,7 @@ REPO=Path('/home/scv/Cloud-Adapter-light')
 SHARED=Path('/home/scv/shared')
 DATA=SHARED/'data/sentinel2_cloud_mask_catalogue_4172871'
 ALCD=SHARED/'data/sentinel2_alcd_1460961'
-ROOT=SHARED/'phase86_20261011_run03'
+ROOT=SHARED/'phase86_20261011_run04'
 PROV=REPO/'src/work_dirs/phase65a/source_provenance'
 BIND=REPO/'src/research_plans/PHASE86_INPUT_BINDINGS_20261011.json'
 BANDS=['B02','B03','B04','B08','B11','B12']
@@ -76,6 +76,15 @@ def project_geometry(g,src,dst):
 def buffered_intersects(g1,g2,crs):
     # Both1000m buffers including boundary touch, without circle approximation.
     return project_geometry(g1,'EPSG:4326',crs).distance(project_geometry(g2,'EPSG:4326',crs))<=2000.0
+
+def geographic_envelope(bounds):
+    from shapely.geometry import box,MultiPolygon
+    left,bottom,right,top=bounds
+    if not all(math.isfinite(x) for x in bounds) or not (-180<=left<=180 and -180<=right<=180 and -90<=bottom<top<=90):
+        raise ValueError('Invalid geographic envelope')
+    if left>right:return MultiPolygon([box(left,bottom,180,top),box(-180,bottom,right,top)])
+    if right-left>=180:raise ValueError('Unresolved overwide envelope')
+    return box(*bounds)
 
 def main():
     # Existing project-local pyshp; do not install packages or change conda.
@@ -191,8 +200,8 @@ def main():
             r=hlookup[key];bb=r['buffered_wgs84_bounds']
             # Existing report is an already100m-buffered geographic envelope.
             # Reusing its entire envelope and then another1000m is conservative.
-            g=dense(box(*bb),step=.002) if bb[0]<=bb[2] and bb[2]-bb[0]<180 else None
-            if g is None:gaps.append('Historical antimeridian envelope unresolved '+str(key))
+            try:g=dense(geographic_envelope(bb),step=.002)
+            except ValueError:g=None;gaps.append('Historical geographic envelope unresolved '+str(key))
             add(':'.join(key),'','historical_used',g,str(PROV/'historical_overlap_v2.json'),True)
         else:gaps.append('Used historical ID lacks existing footprint '+str(key));add(':'.join(key),'','historical_used',None,';'.join(manifest_sources))
     # Missing/unrecorded pretraining and manual reads cannot be certified here.
@@ -314,7 +323,7 @@ def main():
     counts=dict(products=len(products),directories=sum(len(p['directories']) for p in products),tiles=len({p['tile'] for p in products}),
       spatial_excluded=sum(p['spatial_status']=='excluded_overlap' for p in products),spatial_pending=sum(p['spatial_status']=='pending_metadata' for p in products),spatial_candidate_products=len(candidates),candidate_related_groups=len(groups),confirmation_ready_groups=0)
     rules=dict(buffer_each_footprint_m=1000,boundary_contact='intersects, including touch; exact planar distance<=2000',metric_crs='ALCD native UTM of left/candidate product; WGS84 STRtree is only broadphase; native edges densified<=250m before reprojection',
-      historical_bounds='reuse entire existing100m-buffered WGS84 envelope, then1000m in candidate UTM; conservative',correlation='same tile OR same UTC day and relative orbit OR both1000m-buffered footprints intersect; transitive components',representative='lexicographically smallest canonical product ID',
+      historical_bounds='reuse entire existing100m-buffered WGS84 envelope, then1000m in candidate UTM; wrapped longitude split at+/-180; densify geographic edges<=.002degree; conservative',correlation='same tile OR same UTC day and relative orbit OR both1000m-buffered footprints intersect; transitive components',representative='lexicographically smallest canonical product ID',
       full_release_exclusion='all513 Catalogue products conservatively included; unused membership not claimed as used',no_shadow_selection=True)
     write('candidate_lock.json',dict(created_utc=datetime.now(timezone.utc).isoformat(),git_commit=__import__('subprocess').check_output(['git','rev-parse','HEAD'],cwd=REPO,text=True).strip(),counts=counts,rules=rules,groups=groups,
       original_labels=dict(invalid=[0,1],Cloud=[2,3],Shadow=[4],Surface=[5,6,7],native_resolution_m=60,confidence_is_accuracy=False,revised_is_truth=False),
