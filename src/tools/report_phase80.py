@@ -1,5 +1,5 @@
 """Small shared Phase80 report delivery; never copies checkpoints/work_dirs."""
-import argparse,csv,hashlib,json
+import argparse,csv,hashlib,json,re
 from pathlib import Path
 import numpy as np
 from phase80_common import interval,digest,read,write,ROOT
@@ -14,6 +14,16 @@ def main():
     report=read(root/'phase80_report.json');pre=read(root/'preflight.json');train=read(root/'training_completed.json')
     lock=read(root/'calibration_lock.json');capacity=read(root/'capacity_audit.json');pol=report['policies'];names=['M','M+S','L','L+S','Source','MsRE','LoRA_argmax','L3']
     assert read(root/'COMPLETED.json')['report_sha256']==digest(root/'phase80_report.json')
+    log_path=root/'console.log'
+    if not log_path.exists():log_path=Path('/home/scv/shared/phase80_control_20261011/console.log')
+    memory_rows=[dict(iteration=int(step),allocated_MiB_reported=int(mem)) for step,mem in
+        re.findall(r'Iter\(train\)\s+\[\s*(\d+)/4000\].*?memory:\s*(\d+)',log_path.read_text())]
+    assert [r['iteration'] for r in memory_rows]==list(range(50,4001,50))
+    logged_peak=max(r['allocated_MiB_reported'] for r in memory_rows)
+    write(root/'memory_audit.json',dict(training_logger_peak_allocated_MiB=logged_peak,training_logger_samples=memory_rows,
+        console_sha256=digest(log_path),original_end_of_run_allocated_bytes=train['peak_cuda_allocated_bytes'],
+        original_end_of_run_reserved_bytes=train['peak_cuda_reserved_bytes'],
+        note='MMEngine resets peak counters at logging intervals; original end-of-run counters are not global training peaks. Use maximum of all 80 logged interval peaks, integer MiB. No retraining.'))
     table=[]
     for n in names:
         r=pol[n];table.append(dict(policy=n,macro_ap=r['macro_ap']['mean'],pooled_ap=r['ranking']['ap'],
@@ -33,7 +43,7 @@ def main():
     lines=['# Phase80：适配方法 × 光谱补充交叉探索','',
         '## 1 数据结果','',
         f"固定LoRA完成4000步；seed65，rank4/alpha4/dropout0，FP32。155训练产品属于153相关组；153fit代表用于两个浅层模型与全负类阈值，32development代表评价，其中7组有有效Shadow、25组无Shadow。最佳checkpoint仅按development mIoU选择：第{train['best_iteration']}步，平手最早。未读取任何确认池或ALCD。",'',
-        f"LoRA可训练参数{pre['trainable_parameters']:,}，总参数{pre['total_parameters']:,}；训练耗时{train['seconds']/60:.2f}分钟，峰值分配显存{train['peak_cuda_allocated_bytes']/1024**3:.3f}GiB（保留显存峰值{train['peak_cuda_reserved_bytes']/1024**3:.3f}GiB）。有效标签预算为155训练产品全图有效像元计数{pre['valid_label_pixels_by_training_product']:,}，不是独立样本数，也不是4000次裁块中实际暴露像元数。",'',
+        f"LoRA可训练参数{pre['trainable_parameters']:,}，总参数{pre['total_parameters']:,}；训练耗时{train['seconds']/60:.2f}分钟，训练日志峰值分配显存{logged_peak}MiB（{logged_peak/1024:.3f}GiB，50步区间、MiB整数记录）。MMEngine按日志间隔重置CUDA峰值计数，training_completed.json最初保存的结束时allocated/reserved计数不代表全程峰值；原文件保留，memory_audit.json给出全部80区间复核，未为测量重训。有效标签预算为155训练产品全图有效像元计数{pre['valid_label_pixels_by_training_product']:,}，不是独立样本数，也不是4000次裁块中实际暴露像元数。",'',
         f"严格Source加载和全部基础张量一致性通过；LoRA关闭/开启零残差与Source logits最大绝对差分别为{pre['zero_residual_max_absolute_logit_error']['False']}/{pre['zero_residual_max_absolute_logit_error']['True']}，要求≤1e-6。仅96个LoRA A/B张量可训练，梯度有限；训练后全部Source参数/缓冲仍逐张量相同。8个迭代checkpoint及最佳文件SHA见training_completed.json，权重保留远端新work_dir，未自动同步。M/M+S共64条逐组原AP与混淆矩阵先精确复现后开训，最终再复现。",'',
         'M=原MsRE单分数校准；M+S=原MsRE分数+B08/B11/B12；L=LoRA单分数校准；L+S=LoRA分数+B08/B11/B12。网络Shadow输入为原流程的softmax分数再logit变换，不称校准正确概率。两个新增拟合均使用固定旧fit抽样索引/组等权BCE、0.001正则、L-BFGS-B、非负网络系数；光谱系数自由。标准化及exact-ties全局阈值仅fit冻结，各满足fit组平均FPR≤1%。', '',
         'AP、召回、精确率、FPR以下均以百分数列示，mIoU本身为百分数；AP/召回宏平均的支持是7组，FPR/mIoU是全部32组。精确率仅有预测Shadow的可定义组参与，分母见报告。池化指标按全有效像元汇总，不将像元当独立样本。','',

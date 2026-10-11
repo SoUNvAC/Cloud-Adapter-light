@@ -1,5 +1,5 @@
 """Independent delivery statistics and Git blob checks; no reserved pixels."""
-import argparse,csv,json,subprocess,hashlib
+import argparse,csv,json,subprocess,hashlib,re
 from pathlib import Path
 import numpy as np
 from phase80_common import read,digest
@@ -29,6 +29,11 @@ def main():
     assert digest(root/'baseline_reproduction.json')==calibration['baseline_reproduction_sha256']
     assert (root/'EXIT_CODE').read_text().strip()=='0'
     assert (root/'VERIFICATION_EXIT_CODE').read_text().strip()=='0'
+    memory=read(root/'memory_audit.json')
+    assert digest(root/'console.log')==memory['console_sha256']
+    logged=[(int(a),int(b)) for a,b in re.findall(r'Iter\(train\)\s+\[\s*(\d+)/4000\].*?memory:\s*(\d+)',(root/'console.log').read_text())]
+    assert [v[0] for v in logged]==list(range(50,4001,50))
+    assert max(v[1] for v in logged)==memory['training_logger_peak_allocated_MiB']
     assert pre['base_tensors_identical'] and train['base_tensors_still_identical']
     assert all(v<=1e-6 for v in pre['zero_residual_max_absolute_logit_error'].values())
     assert len(pre['trainable_names'])==96 and all(g['finite'] and g['connected'] for g in pre['gradients'].values())
