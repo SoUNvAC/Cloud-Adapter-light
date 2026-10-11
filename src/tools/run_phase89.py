@@ -13,7 +13,7 @@ from prepare_phase65a_explore import SOURCE_SHA,SPLIT_SHA,digest
 from run_phase65d_recovery import ADAPTED_SHA,records,prepare_verify,load,features
 
 REPO=Path('/home/scv/Cloud-Adapter-light');SHARED=Path('/home/scv/shared')
-ROOT=SHARED/'phase89_20261011';ALCD=SHARED/'data/sentinel2_alcd_1460961';IM=ALCD/'imagery'
+ROOT=SHARED/'phase89_20261011_run02';ALCD=SHARED/'data/sentinel2_alcd_1460961';IM=ALCD/'imagery'
 CAT=SHARED/'data/sentinel2_cloud_mask_catalogue_4172871'
 REC=CAT/'phase65d_recovery_20261008';OLD=CAT/'phase65d_20261008_recovery01';PREP=CAT/'phase65a_explore_20261008'
 BIND=REPO/'src/research_plans/PHASE89_INPUT_BINDINGS_20261011.json'
@@ -118,7 +118,7 @@ def freeze():
     print('Phase89 FROZEN:9 groups/6 revised matches',flush=True)
 
 def radiometry(row,status):
-    xml=[o for o in row['scene']['objects'] if o['name'].endswith('.xml') and '/GRANULE/' not in o['name']]
+    xml=[o for o in row['scene']['objects'] if o['name'].endswith('.xml') and '/GRANULE/' not in o['name'] and not o['name'].endswith('/INSPIRE.xml')]
     assert len(xml)==1
     tree=ET.parse(IM/status['files'][xml[0]['name']]['path'].replace('\\','/'))
     vals=[float(e.text) for e in tree.iter() if e.tag.split('}')[-1]=='QUANTIFICATION_VALUE'];assert len(vals)==1 and vals[0]>0
