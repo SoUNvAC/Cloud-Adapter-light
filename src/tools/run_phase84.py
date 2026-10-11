@@ -8,8 +8,8 @@ from run_phase65d_recovery import records,load
 from phase65d_recovery_math import objective,predict_logit
 from run_phase81 import group_row,checks
 from phase65d_metrics import measures
-ROOT=DATA/'phase84_20261011'
-CONTROL=Path('/home/scv/shared/phase84_control_20261011')
+ROOT=DATA/'phase84_20261011_run02'
+CONTROL=Path('/home/scv/shared/phase84_control_20261011_run02')
 PROTOCOL='src/research_plans/PHASE84_FROZEN_SPATIAL_READOUT_20261011.md'
 NAMES=('F_real','F_shuffle')
 
@@ -68,13 +68,17 @@ class Extractor:
         import torch
         from mmengine.dataset import pseudo_collate
         from torch.nn import functional as fn
-        captures={};calls=[];head=self.model.decode_head;original=head.predict_by_feat;interpolate=fn.interpolate
+        captures={};calls=[];head=self.model.decode_head;original=head.predict;interpolate=fn.interpolate
         def pixel_hook(module,args,out):
             assert 'mask_features' not in captures,'More than one pixel decoder forward'
             assert isinstance(out,(tuple,list));captures['mask_features']=out[0]
-        def predict_trace(cls,masks,metas):
-            captures['last_mask']=masks[-1];captures['metas']=copy.deepcopy(metas)
-            result=original(cls,masks,metas);captures['head_output']=result
+        def head_hook(module,args,out):
+            # MMSeg Mask2FormerHead.predict invokes self(...) then interpolates;
+            # it does not call the inherited MMDetection predict_by_feat method.
+            captures['last_mask']=out[1][-1]
+        def predict_trace(x,metas,test_cfg):
+            captures['metas']=copy.deepcopy(metas)
+            result=original(x,metas,test_cfg);captures['head_output']=result
             return result
         signature=inspect.signature(interpolate)
         def resize_trace(tensor,*args,**kwargs):
@@ -84,12 +88,12 @@ class Extractor:
                 bound=signature.bind(tensor,*args,**kwargs);bound.apply_defaults();params=dict(bound.arguments);params.pop('input')
                 calls.append(dict(input_shape=list(tensor.shape),output_shape=list(result.shape),parameters=params))
             return result
-        hook=head.pixel_decoder.register_forward_hook(pixel_hook);head.predict_by_feat=predict_trace;fn.interpolate=resize_trace
+        hook=head.pixel_decoder.register_forward_hook(pixel_hook);hh=head.register_forward_hook(head_hook);head.predict=predict_trace;fn.interpolate=resize_trace
         assert not any(m.training for m in self.model.modules())
         try:
             with torch.no_grad():out=self.model.test_step(pseudo_collate([sample]))[0]
         finally:
-            fn.interpolate=interpolate;head.predict_by_feat=original;hook.remove()
+            fn.interpolate=interpolate;head.predict=original;hook.remove();hh.remove()
         assert len(calls)==1,('Unexpected mask-to-head interpolation chain',calls)
         assert calls[0]['parameters']['mode']=='bilinear' and calls[0]['parameters']['align_corners'] is False
         mask=captures['mask_features'];assert mask.ndim==4 and mask.shape[0]==1
@@ -122,7 +126,8 @@ class Extractor:
             parameters=sum(p.numel() for p in self.model.parameters()),cuda_peak_allocated_bytes=torch.cuda.max_memory_allocated(),
             cuda_peak_reserved_bytes=torch.cuda.max_memory_reserved(),process_peak_RSS_bytes=resource.getrusage(resource.RUSAGE_SELF).ru_maxrss*1024,
             memory_definition='CUDA whole run peak since reset after model load; Linux process peak RSS includes CPU fitting',
-            same_forward_feature_and_probability=True,no_shortcut_interpolation=True,eval=True,all_parameters_frozen=True))
+            same_forward_feature_and_probability=True,no_shortcut_interpolation=True,eval=True,all_parameters_frozen=True,
+            first_attempt_failed_forwards=1,total_forwards_including_failed_attempt=186,extra_first_scene_forward_user_authorized=True))
 
 def extract_fit(engine):
     import torch
@@ -256,7 +261,7 @@ def evaluate(engine):
     write(ROOT/'invariant_checks.json',dict(status='passed',groups=32,strategies=2,all_Shadow_scores_masks_AP_recall_FPR_precision_IoU_and_total_misses_exact=True,geometry_chain_preserved=True,
         state_unchanged=True,base_sample_features_labels_hash_exact=True,base_standardization_exact=True,numerical_check_points=32*512,tolerance=1e-6))
     lines=['# Phase84：冻结空间特征的非云影读出','','## 1 数据结果','',
-        f"153 fit代表沿用Phase83的626688个参考非云影抽样点；32 development代表。原LoRA3500冻结，零网络训练、185次特征提取、两个浅层拟合。实际mask_features形状/通道：{engine.expected['shape']}，全部通道使用。",'',
+        f"153 fit代表沿用Phase83的626688个参考非云影抽样点；32 development代表。原LoRA3500冻结，零网络训练、185次有效特征提取、两个浅层拟合；另首次第一景接口检查失败消耗1次前向，用户明确授权仅该景补做一次，总计186次。实际mask_features形状/通道：{engine.expected['shape']}，全部通道使用。",'',
         '|策略|宏mIoU %|池化mIoU %|Surface IoU %|Cloud IoU %|Shadow IoU %|','|---|---:|---:|---:|---:|---:|']
     for r in table:lines.append('|'+r['policy']+'|'+'|'.join(f'{r[k]:.4f}' for k in ['macro_mIoU_percent','pooled_mIoU_percent','Surface_IoU_percent','Cloud_IoU_percent','Shadow_IoU_percent'])+'|')
     for n,c in comparisons.items():lines+=['',f"{n}: 宏mIoU {c['macro_mIoU_pp']['mean']:+.4f}个百分点，95%描述区间 {c['macro_mIoU_pp']['ci95']}；池化 {c['pooled_mIoU_pp']:+.4f}；最差逐组 {c['worst_group_delta_pp']:+.4f} {c['worst_products']}。"]
@@ -266,15 +271,22 @@ def evaluate(engine):
         'F从同次前向pixel_decoder output[0]取得；捕获真实mask-to-head插值参数，再调用原postprocess_result保持裁边/翻转/第二次插值。原三类概率逐值不变；未将低分辨率线性读出替代两次插值。fit仅保存原抽样点F；dev逐景处理并仅存读出logits、置换及512固定检查点，未保存185景完整高维特征。', '',
         '输入/抽样/置换/参数与标准化锁、提取耗时、全程CUDA峰值和Linux CPU RSS峰值见JSON；权重仍远端work_dirs，不同步或打包。']
     (ROOT/'README.md').write_text('\n'.join(lines),encoding='utf-8')
-    write(ROOT/'COMPLETED.json',dict(status='completed',report_sha256=digest(ROOT/'phase84_report.json'),new_forwards=185,shallow_fits=2,network_training=0,no_confirmations=True,no_work_dirs_sync=True))
+    write(ROOT/'COMPLETED.json',dict(status='completed',report_sha256=digest(ROOT/'phase84_report.json'),successful_forwards=185,total_forwards_including_first_failure=186,shallow_fits=2,network_training=0,no_confirmations=True,no_work_dirs_sync=True))
 
 def main():
     deadline();base_check();assert not ROOT.exists();ROOT.mkdir()
+    failed=Path('/home/scv/shared/phase84_control_20261011');assert (failed/'EXIT_CODE').read_text().strip()=='1'
+    error=(failed/'error.log').read_text();assert "Unexpected mask-to-head interpolation chain" in error
+    write(ROOT/'first_attempt_failure.json',dict(status='implementation_failure_before_any_fitting',failed_forwards=1,
+        cause='MMSeg head.predict directly resizes final masks; inherited predict_by_feat was not called',
+        preserved_control=str(failed),preserved_data=str(DATA/'phase84_20261011'),first_attempt_git_commit=(failed/'GIT_COMMIT').read_text().strip(),
+        prior_pid=(failed/'PID').read_text().strip(),error_log_sha256=digest(failed/'error.log'),console_sha256=digest(failed/'console.log'),
+        extra_first_scene_forward_authorized=True,authorization_sha256=digest(REPO/'src/research_plans/PHASE84_REPAIR_AUTHORIZATION_20261011.md')))
     bindings=read(REPO/'src/research_plans/PHASE84_INPUT_BINDINGS_20261011.json')
     for name,parent in [('phase80',P80),('phase83',p83.ROOT)]:
         for rel,h in bindings[name].items():assert digest(parent/rel)==h,rel
     baseline()
-    files=[PROTOCOL,'src/research_plans/PHASE84_INPUT_BINDINGS_20261011.json','src/tools/run_phase84.py','src/tools/verify_phase84.py','src/tools/test_phase84.py','src/tools/run_phase84.sh',
+    files=[PROTOCOL,'src/research_plans/PHASE84_REPAIR_AUTHORIZATION_20261011.md','src/research_plans/PHASE84_INPUT_BINDINGS_20261011.json','src/tools/run_phase84.py','src/tools/verify_phase84.py','src/tools/test_phase84.py','src/tools/run_phase84.sh',
         'src/tools/run_phase83.py','src/tools/run_phase82_analysis.py','src/tools/run_phase81.py','src/tools/phase65d_metrics.py','src/tools/phase65d_recovery_math.py','src/tools/run_phase65d_recovery.py','src/tools/run_phase80_training.py']
     write(ROOT/'input_configuration_lock.json',dict(git_commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=REPO,text=True).strip(),code_files={n:digest(REPO/n) for n in files},previous=bindings,
         seed=84011,fit_representatives=153,development_groups=32,no_confirmation=True,no_network_training=True))

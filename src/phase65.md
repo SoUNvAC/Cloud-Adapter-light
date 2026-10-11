@@ -900,3 +900,8 @@
 - 按PHASE84_FROZEN_SPATIAL_READOUT_20261011.md授权固定原Phase80 LoRA3500/L+S云影门，Phase83基础四列/标准化/626688抽样点及标签/组权原样复用，仅拟合F_real与组内联合向量F_shuffle。固定pixel_decoder output[0]全部通道，运行时记录实际形状/通道而不预猜；185代表最多各一次特征前向，零分割训练，不使用Source/MsRE/Phase82新拟合，不取新数据、不读取确认/65b/65c/sealed/ALCD。
 - 特征从同次三类前向hook提取，捕获真实mask-to-head插值参数，再调用原model.postprocess_result原裁边/翻转/第二插值链；先要求同链重放semantic输出及三类概率与Phase83逐值相同。fit仅保存原抽样点F，dev逐景读取完整对齐F、分块算线性读出，不用低分辨率投影合并插值。seed84011每cohort新PCG64按manifest顺序组内置换，仅F向量联合打乱，原四列/标签位置不动，全部置换索引及SHA保存；dev512固定检查点与全部像元打乱投影独立核验，容差1e-6。模型参数先锁再dev，LBFGSB/正则/阈值照Phase83，失败不改参数重试。
 - 本地三项测试（五门边界、联合向量置换/基础列不动/分块线性读出、84011组bootstrap）及语法检查通过，输入SHA绑定已锁。远端844f20a，可用RAM约29GiB，未发现相关活跃GPU作业及Phase84旧目录。按本地验证push远端ff-only pull后唯一运行；仅shared小报告可传回，不同步work_dirs/清理旧产物，原Phase83未晋级结论不改，2026-10-20北京截止不变。尚未提取/拟合，不预报通道数与结果。
+
+### 2026-10-11 Phase84 first-attempt failure and explicit repair authorization
+- 首次冻结e59cc17远端测试通过，LL/MM/LM 96缓存及R4 32缓存结果复现；第一fit代表一次网络前向后，因误挂继承MMDetection predict_by_feat而非MMSeg实际Head.predict，插值捕获为空，assert停止EXIT_CODE=1。没有保存F、没有任何拟合/新读出评价，不是科研阴性结果。原shared phase84_20261011及control全部保留不覆盖。
+- 只读核对实际运行时Head.predict与postprocess_result源码：predict内self(x,..)返回最终mask后直接F.interpolate到pad_shape，后处理裁padding/翻转/resize ori_shape。我之前挂错接口；修复为Head.forward hook捕获末mask，包裹实际predict取得head输出，再沿两次原插值链恢复F，不更换层或搜索映射。
+- 用户明确回复“允许，仅第一景补做一次”，预算唯一例外为首次失败1＋185有效=最多186次；授权单独落档PHASE84_REPAIR_AUTHORIZATION_20261011.md。新shared/control目录均加_run02，原目录/PID/错误SHA绑定新报告；后续失败不自行增加前向，优化器设置仍冻结、失败不调参。代码本地三数值测试及语法再次通过，按push/ff-only pull修复执行；尚无新结果，原边界/不自动同步work_dirs/2026-10-20截止不变。

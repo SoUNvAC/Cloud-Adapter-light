@@ -69,7 +69,7 @@ def main():
         weighted_standardization_and_objectives_exact=True,joint_permutations_exact=True,all_pixel_shuffle_projections=True,independent_boolean_confusions=64,independent_AP_groups=32,
         independent_AP_pool=True,numerical_check_max_abs_error=max_error,no_new_inference_or_fitting=True))
     names=['README.md','summary.csv','development_groups.csv','paired_differences.csv','confusion_matrices.json','feature_lock.json','extraction_audit.json',
-        'F_real_fit.json','F_shuffle_fit.json','readout_lock.json','development_audit.json','input_configuration_lock.json','invariant_checks.json','phase84_report.json','COMPLETED.json','INDEPENDENT_VERIFIED.json']
+        'F_real_fit.json','F_shuffle_fit.json','readout_lock.json','development_audit.json','input_configuration_lock.json','invariant_checks.json','phase84_report.json','COMPLETED.json','INDEPENDENT_VERIFIED.json','first_attempt_failure.json']
     write(ROOT/'artifact_hashes.json',{n:digest(ROOT/n) for n in names})
     print('Phase84 independent CPU verification passed',flush=True)
 if __name__=='__main__':main()
