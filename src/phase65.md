@@ -932,3 +932,6 @@
 
 ### 2026-10-11 Phase85 completed evaluation; CPU verifier normalization repair
 - _run03两个新seed均已完成各4000步、各一次L+S拟合及32组LL/LM评价；seed66选3000、seed67选4000，固定报告retain_branch=false，尚待全部校验不先宣称完成。最终CPU复算在标准化均值检查停止：最大绝对差1.5321e-13，原fit_model先归一化权重、standardize内部再归一化；复算仅归一化一次。我漏了一次数学定义内的归一化。新独立完成复算器只补第二次归一化，保留rtol1e-13/atol1e-14、不放宽检查，不重新训练/拟合/推理或更新阈值。原verify_phase85.py及训练执行Git blobs保持不改，原run03 EXIT1及日志保留，新verification control记录本次纯CPU检查与最终退出码；未完成剩余检查前不交付成功。
+
+
+2026-10-11 Phase85 完成审计修复：两 seed 训练、拟合及七行评价已完成并冻结。首个独立 CPU 修复审计 PID 593668 已退出、EXIT=1；补齐内部权重归一化仍有均值 1.53e-13 差异，定位为原拟合高级列索引生成 F-order 数组的逐列 pairwise reduction 与审计 C-order axis reduction 不同。仅完成验证器改为独立逐列求和，保持原 1e-13/1e-14 容差，不重训、不拟合、不调阈值；保留失败控制日志，另起 run02 CPU 审计。SSH 可用，模型结果不变，仍不访问确认池、不传 work_dirs。

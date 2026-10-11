@@ -38,7 +38,9 @@ def main():
         x=np.concatenate(xx).astype(float);y=np.concatenate(yy).astype(float);w=np.concatenate(ww);w/=w.sum()
         assert hashlib.sha256(x.tobytes()).hexdigest()==fa['sample_x_sha256'];assert hashlib.sha256(y.tobytes()).hexdigest()==fa['sample_y_sha256']
         wn=w/w.sum()  # Original standardize renormalizes already normalized fit weights.
-        mu=(x*wn[:,None]).sum(0);sc=np.sqrt(((x-mu)**2*wn[:,None]).sum(0));sc[sc==0]=1
+        mu=np.array([np.sum(x[:,i]*wn) for i in range(x.shape[1])])
+        sc=np.sqrt(np.array([np.sum((x[:,i]-mu[i])**2*wn) for i in range(x.shape[1])]))
+        sc[sc==0]=1
         np.testing.assert_allclose(mu,model['mean'],rtol=1e-13,atol=1e-14);np.testing.assert_allclose(sc,model['scale'],rtol=1e-13,atol=1e-14)
         val,grad=objective(np.array(model['theta']),(x-mu)/sc,y,w);assert np.isfinite(grad).all() and abs(val-model['objective'])<1e-12
         rate=np.mean([(a>=model['threshold']).mean() for a in negative]);assert rate<=.01+1e-10 and rate==model['fit_macro_fpr']
@@ -75,7 +77,7 @@ def main():
     rules=gate(report['policies']);rules['all_crossed_shadow_invariants']=True;assert rules==report['gate'] and all(rules.values())==report['retain_branch']
     write(PARENT/'INDEPENDENT_VERIFIED.json',dict(status='passed',audits=audits,paired_group_seed_average_verified=True,gate_verified=True,
         verification_code_sha256=digest(Path(__file__)),verification_code_path='src/tools/verify_phase85_completion.py',
-        normalization_repair='standardize internally renormalizes fit-normalized group weights; original tolerance unchanged; no training or fitting rerun'))
+        normalization_repair='Original fit uses F-order column selection and pairwise column reductions plus internal weight renormalization; independently reduce each column at unchanged tolerance; no training or fitting rerun'))
     paths=[p for p in PARENT.rglob('*') if p.is_file() and p.suffix not in ('.npy',)]
     write(PARENT/'artifact_hashes.json',{str(p.relative_to(PARENT)):digest(p) for p in paths})
     print('Phase85 independent CPU verification passed',flush=True)
