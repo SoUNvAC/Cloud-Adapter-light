@@ -920,3 +920,7 @@
 - 用户授权完成PHASE85_LORA_SEED_REPLICATION_20261011.md；关闭Phase84固定读出，原Catalogue153fit组155产品训练/153代表浅层拟合/32development选择评价，seed66及67各一次4000步从严格Source初始化、各一次L+S拟合，seed65仅历史参考。原LoRA rank4/alpha4/dropout0/FP32/AdamW/调度/注入冻结范围不改；随机种子在初始化及Runner/采样器/worker前设置，记录首8实际增强batch流、seed/worker及deterministic warn-only。每500步仅按池化mIoU选最早最大，保留全部8checkpoint。
 - 复用Phase80原8192/组确定抽样索引、组权、标准化/BCE/L2.001/优化约束/exact-ties fit全组FPR≤1%校准，每seed只一次L+S、阈值先锁再dev；先独立复现MM/LL65/LM65缓存96组结果。新LL66/LM66/LL67/LM67及历史3行完整报告，交叉云影逐值一致；AP差先两seed组内平均再7组bootstrap10000/85011，不算14独立组、不纳seed65于晋级平均、不挑最好seed。
 - 固定7项门全部同时满足才保留分枝，任何失败不补seed/重选checkpoint/改超参数。代码本地配对seed平均bootstrap/门边界/exact-ties三个数值测试及语法检查通过；远端36157ed无相关GPU作业/无Phase85目录，约605GiB可用，按push/ff-only pull后唯一串行运行。尚未训练或报告指标。只传shared小报告，权重留work_dirs，无确认/65b/65c/sealed/ALCD/新数据访问；用户修改保留，2026-10-20北京截止不变。
+
+
+### 2026-10-11 Phase85 startup-only path repair
+- 首次f957f0f已完成原MM/LL65/LM65全96缓存复现；seed66在磁盘预检调用尚不存在的WORK.parent时FileNotFoundError，EXIT1。尚未mkdir seed目录、未做预检前向、未初始化/训练/拟合任何新seed，非数值或科研失败。修复磁盘检查指向已存在src/work_dirs，仍需≥10GiB；新shared/control/work根均_run02，首次日志和空运行根保留，不覆盖。其余seed/4000步/两拟合/抽样/门/边界不改；确认旧PID退出后按本地测试push远端ff-only pull重启唯一串行作业，没有消耗追加训练预算。

@@ -24,7 +24,7 @@ def main():
     if active:raise RuntimeError('Other training process: '+str(active))
     free,total=torch.cuda.mem_get_info()
     if free<20*1024**3:raise RuntimeError('Insufficient free CUDA memory')
-    if __import__('shutil').disk_usage(WORK.parent).free<10*1024**3:raise RuntimeError('Insufficient checkpoint disk')
+    if __import__('shutil').disk_usage(REPO/'src/work_dirs').free<10*1024**3:raise RuntimeError('Insufficient checkpoint disk')
     WORK.mkdir(parents=True);ROOT.mkdir();setup()
     from mmengine.config import Config
     from mmengine.dataset import pseudo_collate
