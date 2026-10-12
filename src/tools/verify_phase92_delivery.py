@@ -9,6 +9,8 @@ import numpy as np
 def verify(root):
     read=lambda n:json.loads((root/n).read_text(encoding='utf-8-sig'))
     for n,h in read('DELIVERY_SHA256.json').items():assert hashlib.sha256((root/n).read_bytes()).hexdigest()==h,n
+    if (root/'LOCAL_SUPPLEMENT_SHA256.json').exists():
+        for n,h in read('LOCAL_SUPPLEMENT_SHA256.json').items():assert hashlib.sha256((root/n).read_bytes()).hexdigest()==h,n
     lock=read('two_model_lock.json');fi=read('fit_input_lock.json');report=read('phase92_report.json')
     assert hashlib.sha256((root/'fit_input_lock.json').read_bytes()).hexdigest()==lock['fit_input_lock_sha256']
     assert lock['new_logistic_fits']==2 and lock['new_network_forwards']==0

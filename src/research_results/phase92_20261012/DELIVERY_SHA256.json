@@ -1,0 +1,16 @@
+{
+  "CPU_VERIFIED.json": "2380170bf37a32be4ad91e8f2492193cbbb55bb517147cfcd9779100e123aa0a",
+  "README.md": "b86b9e8e37107e3d956afc8924907703bd0b2306b6c9c2230399010fb307db5a",
+  "baseline_reproduction.json": "f614c048c771f9f384457ab3fb41294a111bfdc5974cf8abedb6de40651f3ef2",
+  "fit_input_lock.json": "8d30b8ad5ed5cddc9138a7dbb35af657622a9b825f22dc74f4d7d65646a5c7fb",
+  "four_strategy_totals.csv": "4f58966304376e6a048f829cd47b03d305fe54d8ebc64e35a62406e3448f740c",
+  "input_code_score_lock.json": "40f159ab77edddf78a2fae66e5ad7632882934b98807eaa005771b3c749a7fde",
+  "model_R6_lock.json": "24792a717ea05650ad85e3a8b8a9570135b9af1907f1c6a0dce2b2968a21d750",
+  "model_S3_lock.json": "76dd36a8bb2d87bae35a7e0eeb928f69466b1ea30218fd3aba084bf9d65c90d0",
+  "oracle_1percent.csv": "6244411fb13f3501591864a0a4269ab421d22237825c86eb7a7ae7f1f3dad379",
+  "oracle_threshold_receipts.json": "8adac81919e2d51d5ffb35d90c4b0b383f34a2a290bb3e2c3c522a534d115e4f",
+  "paired_changes.csv": "5aecc0c0c78badd19258804a367bd90d2a0d8c812d6f21ed3e4ac70c729c7425",
+  "per_group.csv": "938bc57e8f5d8b69da4043b0179a292f7a004584ecf21268b923dece37b56b92",
+  "phase92_report.json": "0200f275b0f9e4f57d6ee21e1a57bf755d356c4a27d4cc13650d68a85739d53a",
+  "two_model_lock.json": "5047d25e02670963973bdb498cb01eac75e7f17c9e12b9822df70d5d4577a166"
+}

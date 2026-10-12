@@ -1,0 +1,9 @@
+{
+  "native_reports_preserved": true,
+  "no_threshold_or_numeric_changes": true,
+  "development": "20m float32 logit, converted to float64 by scan without altering values or ties",
+  "original_main": "60m float64 sigmoid20 probability mean9",
+  "original_common": "60m float64 sigmoid20 probability mean9",
+  "revised_common": "60m float64 sigmoid20 probability mean9",
+  "reason": "Inherited Phase91 scan receipt generic score_precision text; explicit domain clarification"
+}
