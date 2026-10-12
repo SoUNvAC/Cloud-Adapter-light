@@ -59,7 +59,7 @@ def main():
     with (OLD/'G7_100.pkl').open('rb') as f:A=pickle.load(f)
     S=p.old.read(OLD/'SourceS_100.json'); oldth=p.old.read(OLD/'four_threshold_lock.json')['models']
     params=A.get_params(deep=False)
-    assert params==r.PARAMS and params['monotonic_cst'] is None and params['early_stopping'] is False
+    assert all(params[k]==v for k,v in r.PARAMS.items()) and params['monotonic_cst'] is None and params['early_stopping'] is False
     assert A.n_features_in_==7 and A.n_iter_==200 and np.array_equal(A.classes_,[0,1])
     audit=p.old.read(fit67.ROOT/'fit_input_audit.json')
     assert p.old.digest(fit67.ROOT/'fit_input_audit.json')==p.old.read(r.prior.OLD/'fit_input_lock.json')['original_fit_input_audit_sha256']

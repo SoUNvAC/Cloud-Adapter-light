@@ -1075,3 +1075,5 @@ Source原分箱全dev非影像元：<.1 N269223两模型FP0；.1-.5 N31538675 G7
 
 ### 2026-10-12 Phase97 启动：Source单调约束树
 用户授权按PHASE97_SOURCE_MONOTONIC_TREE_20261012.md执行。原100 fit／53 calibration／32 development原20m边界；唯一新增一次200轮HGB拟合，仅Source第7列monotonic_cst=1，一个53组exact-ties宏FPR≤1%阈值；不读取ALCD／sealed像元，不前向、不下载、不改seed。已本地语法、11固定及100随机阈值测试、63 AP测试通过；远端SSH可达、Phase97路径不存在，df内部607GiB可用（非宿主物理余量）。原训练失败门及缓存54块缺故障前SHA局限保留；四项工程筛选任一失败则关闭方案，不补拟合。先push/pull再执行，work_dirs自动同步仍取消。
+
+Phase97拟合前预检修复：初次控制目录phase97_control_20261012退出1，原因get_params完整默认字典与显式PARAMS错误全字典比较；实际显式参数一致。PID31365已退出、ROOT不存在、FIT_ATTEMPT不存在，新增拟合0次。改为逐项核对显式参数，B仍复制A全部实际默认及显式参数，仅单调约束变化。保留原失败日志，run02控制目录重启预检，不增拟合授权。
