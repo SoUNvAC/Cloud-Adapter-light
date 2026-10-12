@@ -1,0 +1,811 @@
+{
+  "self_tests": {
+    "exhaustive_observed_threshold_cases": 11,
+    "no_negative_support": true,
+    "atomic_ties": true,
+    "all_nonshadow_feasible": true,
+    "unequal_group_denominators": true,
+    "single_class_and_empty_group": true,
+    "free_positive_threshold": true,
+    "random_exhaustive_cases": 100
+  },
+  "exact_frozen_group_reproduction": 63,
+  "independent_AP_and_confusion": true,
+  "scan_points": [
+    {
+      "version": "original_main",
+      "policy": "Source_spectral",
+      "kind": "A",
+      "budget": 0.01,
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "original_main",
+      "policy": "Source_spectral",
+      "kind": "A",
+      "budget": 0.005,
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "original_main",
+      "policy": "Source_spectral",
+      "kind": "A",
+      "budget": 0.02,
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "original_main",
+      "policy": "Source_spectral",
+      "kind": "A",
+      "budget": 0.05,
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "original_main",
+      "policy": "Source_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20160417T111159_N0201_R137_T29RPQ_20160417T203056",
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "original_main",
+      "policy": "Source_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20160817T101032_N0204_R022_T33UUU_20160817T230018",
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "original_main",
+      "policy": "Source_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20161108T102232_N0204_R065_T32TNR_20161109T224916",
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "original_main",
+      "policy": "Source_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20170313T074931_N0204_R135_T35JPM_20170313T081339",
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "original_main",
+      "policy": "Source_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20170501T183311_N0205_R127_T11SPC_20170501T183311",
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "original_main",
+      "policy": "Source_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20170516T105031_N0205_R051_T31UDP_20170516T105322",
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "original_main",
+      "policy": "Source_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20170917T103021_N0205_R108_T31TFJ_20170917T103018",
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "original_main",
+      "policy": "Source_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20180422T102031_N0206_R065_T32UPU_20180422T141352",
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "original_main",
+      "policy": "Source_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20180505T141051_N0206_R110_T21LWK_20180505T160911",
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "original_main",
+      "policy": "MsRE_spectral",
+      "kind": "A",
+      "budget": 0.01,
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "original_main",
+      "policy": "MsRE_spectral",
+      "kind": "A",
+      "budget": 0.005,
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "original_main",
+      "policy": "MsRE_spectral",
+      "kind": "A",
+      "budget": 0.02,
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "original_main",
+      "policy": "MsRE_spectral",
+      "kind": "A",
+      "budget": 0.05,
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "original_main",
+      "policy": "MsRE_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20160417T111159_N0201_R137_T29RPQ_20160417T203056",
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "original_main",
+      "policy": "MsRE_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20160817T101032_N0204_R022_T33UUU_20160817T230018",
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "original_main",
+      "policy": "MsRE_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20161108T102232_N0204_R065_T32TNR_20161109T224916",
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "original_main",
+      "policy": "MsRE_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20170313T074931_N0204_R135_T35JPM_20170313T081339",
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "original_main",
+      "policy": "MsRE_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20170501T183311_N0205_R127_T11SPC_20170501T183311",
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "original_main",
+      "policy": "MsRE_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20170516T105031_N0205_R051_T31UDP_20170516T105322",
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "original_main",
+      "policy": "MsRE_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20170917T103021_N0205_R108_T31TFJ_20170917T103018",
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "original_main",
+      "policy": "MsRE_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20180422T102031_N0206_R065_T32UPU_20180422T141352",
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "original_main",
+      "policy": "MsRE_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20180505T141051_N0206_R110_T21LWK_20180505T160911",
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "original_main",
+      "policy": "L3",
+      "kind": "A",
+      "budget": 0.01,
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "original_main",
+      "policy": "L3",
+      "kind": "A",
+      "budget": 0.005,
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "original_main",
+      "policy": "L3",
+      "kind": "A",
+      "budget": 0.02,
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "original_main",
+      "policy": "L3",
+      "kind": "A",
+      "budget": 0.05,
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "original_main",
+      "policy": "L3",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20160417T111159_N0201_R137_T29RPQ_20160417T203056",
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "original_main",
+      "policy": "L3",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20160817T101032_N0204_R022_T33UUU_20160817T230018",
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "original_main",
+      "policy": "L3",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20161108T102232_N0204_R065_T32TNR_20161109T224916",
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "original_main",
+      "policy": "L3",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20170313T074931_N0204_R135_T35JPM_20170313T081339",
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "original_main",
+      "policy": "L3",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20170501T183311_N0205_R127_T11SPC_20170501T183311",
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "original_main",
+      "policy": "L3",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20170516T105031_N0205_R051_T31UDP_20170516T105322",
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "original_main",
+      "policy": "L3",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20170917T103021_N0205_R108_T31TFJ_20170917T103018",
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "original_main",
+      "policy": "L3",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20180422T102031_N0206_R065_T32UPU_20180422T141352",
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "original_main",
+      "policy": "L3",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20180505T141051_N0206_R110_T21LWK_20180505T160911",
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "original_common",
+      "policy": "Source_spectral",
+      "kind": "A",
+      "budget": 0.01,
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "original_common",
+      "policy": "Source_spectral",
+      "kind": "A",
+      "budget": 0.005,
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "original_common",
+      "policy": "Source_spectral",
+      "kind": "A",
+      "budget": 0.02,
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "original_common",
+      "policy": "Source_spectral",
+      "kind": "A",
+      "budget": 0.05,
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "original_common",
+      "policy": "Source_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20170313T074931_N0204_R135_T35JPM_20170313T081339",
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "original_common",
+      "policy": "Source_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20170501T183311_N0205_R127_T11SPC_20170501T183311",
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "original_common",
+      "policy": "Source_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20170516T105031_N0205_R051_T31UDP_20170516T105322",
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "original_common",
+      "policy": "Source_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20170917T103021_N0205_R108_T31TFJ_20170917T103018",
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "original_common",
+      "policy": "Source_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20180422T102031_N0206_R065_T32UPU_20180422T141352",
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "original_common",
+      "policy": "Source_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20180505T141051_N0206_R110_T21LWK_20180505T160911",
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "original_common",
+      "policy": "MsRE_spectral",
+      "kind": "A",
+      "budget": 0.01,
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "original_common",
+      "policy": "MsRE_spectral",
+      "kind": "A",
+      "budget": 0.005,
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "original_common",
+      "policy": "MsRE_spectral",
+      "kind": "A",
+      "budget": 0.02,
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "original_common",
+      "policy": "MsRE_spectral",
+      "kind": "A",
+      "budget": 0.05,
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "original_common",
+      "policy": "MsRE_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20170313T074931_N0204_R135_T35JPM_20170313T081339",
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "original_common",
+      "policy": "MsRE_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20170501T183311_N0205_R127_T11SPC_20170501T183311",
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "original_common",
+      "policy": "MsRE_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20170516T105031_N0205_R051_T31UDP_20170516T105322",
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "original_common",
+      "policy": "MsRE_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20170917T103021_N0205_R108_T31TFJ_20170917T103018",
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "original_common",
+      "policy": "MsRE_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20180422T102031_N0206_R065_T32UPU_20180422T141352",
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "original_common",
+      "policy": "MsRE_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20180505T141051_N0206_R110_T21LWK_20180505T160911",
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "original_common",
+      "policy": "L3",
+      "kind": "A",
+      "budget": 0.01,
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "original_common",
+      "policy": "L3",
+      "kind": "A",
+      "budget": 0.005,
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "original_common",
+      "policy": "L3",
+      "kind": "A",
+      "budget": 0.02,
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "original_common",
+      "policy": "L3",
+      "kind": "A",
+      "budget": 0.05,
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "original_common",
+      "policy": "L3",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20170313T074931_N0204_R135_T35JPM_20170313T081339",
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "original_common",
+      "policy": "L3",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20170501T183311_N0205_R127_T11SPC_20170501T183311",
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "original_common",
+      "policy": "L3",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20170516T105031_N0205_R051_T31UDP_20170516T105322",
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "original_common",
+      "policy": "L3",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20170917T103021_N0205_R108_T31TFJ_20170917T103018",
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "original_common",
+      "policy": "L3",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20180422T102031_N0206_R065_T32UPU_20180422T141352",
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "original_common",
+      "policy": "L3",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20180505T141051_N0206_R110_T21LWK_20180505T160911",
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "revised_common",
+      "policy": "Source_spectral",
+      "kind": "A",
+      "budget": 0.01,
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "revised_common",
+      "policy": "Source_spectral",
+      "kind": "A",
+      "budget": 0.005,
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "revised_common",
+      "policy": "Source_spectral",
+      "kind": "A",
+      "budget": 0.02,
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "revised_common",
+      "policy": "Source_spectral",
+      "kind": "A",
+      "budget": 0.05,
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "revised_common",
+      "policy": "Source_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20170313T074931_N0204_R135_T35JPM_20170313T081339",
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "revised_common",
+      "policy": "Source_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20170501T183311_N0205_R127_T11SPC_20170501T183311",
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "revised_common",
+      "policy": "Source_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20170516T105031_N0205_R051_T31UDP_20170516T105322",
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "revised_common",
+      "policy": "Source_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20170917T103021_N0205_R108_T31TFJ_20170917T103018",
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "revised_common",
+      "policy": "Source_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20180422T102031_N0206_R065_T32UPU_20180422T141352",
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "revised_common",
+      "policy": "Source_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20180505T141051_N0206_R110_T21LWK_20180505T160911",
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "revised_common",
+      "policy": "MsRE_spectral",
+      "kind": "A",
+      "budget": 0.01,
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "revised_common",
+      "policy": "MsRE_spectral",
+      "kind": "A",
+      "budget": 0.005,
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "revised_common",
+      "policy": "MsRE_spectral",
+      "kind": "A",
+      "budget": 0.02,
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "revised_common",
+      "policy": "MsRE_spectral",
+      "kind": "A",
+      "budget": 0.05,
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "revised_common",
+      "policy": "MsRE_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20170313T074931_N0204_R135_T35JPM_20170313T081339",
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "revised_common",
+      "policy": "MsRE_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20170501T183311_N0205_R127_T11SPC_20170501T183311",
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "revised_common",
+      "policy": "MsRE_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20170516T105031_N0205_R051_T31UDP_20170516T105322",
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "revised_common",
+      "policy": "MsRE_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20170917T103021_N0205_R108_T31TFJ_20170917T103018",
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "revised_common",
+      "policy": "MsRE_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20180422T102031_N0206_R065_T32UPU_20180422T141352",
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "revised_common",
+      "policy": "MsRE_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20180505T141051_N0206_R110_T21LWK_20180505T160911",
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "revised_common",
+      "policy": "L3",
+      "kind": "A",
+      "budget": 0.01,
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "revised_common",
+      "policy": "L3",
+      "kind": "A",
+      "budget": 0.005,
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "revised_common",
+      "policy": "L3",
+      "kind": "A",
+      "budget": 0.02,
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "revised_common",
+      "policy": "L3",
+      "kind": "A",
+      "budget": 0.05,
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "revised_common",
+      "policy": "L3",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20170313T074931_N0204_R135_T35JPM_20170313T081339",
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "revised_common",
+      "policy": "L3",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20170501T183311_N0205_R127_T11SPC_20170501T183311",
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "revised_common",
+      "policy": "L3",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20170516T105031_N0205_R051_T31UDP_20170516T105322",
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "revised_common",
+      "policy": "L3",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20170917T103021_N0205_R108_T31TFJ_20170917T103018",
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "revised_common",
+      "policy": "L3",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20180422T102031_N0206_R065_T32UPU_20180422T141352",
+      "feasible": true,
+      "next_tie_violates": true
+    },
+    {
+      "version": "revised_common",
+      "policy": "L3",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20180505T141051_N0206_R110_T21LWK_20180505T160911",
+      "feasible": true,
+      "next_tie_violates": true
+    }
+  ],
+  "checked_points": 99,
+  "integer_denominators_verified": true,
+  "feasible_and_next_tie_checked": true
+}

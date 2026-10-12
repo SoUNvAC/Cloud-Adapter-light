@@ -11,6 +11,9 @@ def verify(root):
     read=lambda name:json.loads((root/name).read_text(encoding='utf-8-sig'))
     manifest=read('DELIVERY_SHA256.json')
     for name,sha in manifest.items():assert hashlib.sha256((root/name).read_bytes()).hexdigest()==sha,name
+    if (root/'LOCAL_SUPPLEMENT_SHA256.json').exists():
+        for name,sha in read('LOCAL_SUPPLEMENT_SHA256.json').items():
+            assert hashlib.sha256((root/name).read_bytes()).hexdigest()==sha,name
     report=read('phase91_report.json');lock=read('precision_tie_input_lock.json')
     assert report['oracle_only'] and report['no_new_deployment_threshold'] and report['no_formal_confirmation']
     scans=read('scan_thresholds_denominators.json')['rows'];assert len(scans)==99

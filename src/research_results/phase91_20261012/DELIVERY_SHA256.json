@@ -1,0 +1,16 @@
+{
+  "A_four_budgets.csv": "40cd4ef56bcc3a37d275734810c9d0bb4ce327c9636e87d47affb870e834f936",
+  "A_per_group.csv": "b339b08cac160d65eaf20712f2bc672e5c000b366a4cfe2c664a5b67b7ce21a5",
+  "B_onepercent_per_group.csv": "246d03605c163c304dfb8ed51cf2177edc6e151c364c9dd4e6c9e2e9a6cc9995",
+  "B_onepercent_table.csv": "b26ccc389542a170bddc328d517c3095436c1e85f9dd8808728fcecbf1e42ba1",
+  "CPU_VERIFIED.json": "341b7123e48bf1ea16b547cf432910c4992d2ca21364bf61cf77d78e8955f6c3",
+  "README.md": "2f8c9ecc12777a51b9c5a4e106492e68a34bbb80520f2b49f5371cc1be2cde49",
+  "common_support_tables.csv": "394d45f12157370a3b5ebc94228b884d6c7dfc2023885415eb718b2881cf371e",
+  "frozen_per_group.csv": "088350b66c27a5b59d4522e141a026c0414f82f3a9ddc14ec555a84dfa99f007",
+  "frozen_reproduction.json": "7e884127a1543262b0a1c0edd02e34d470a40a40f8371b511c70982b0d0f7d1c",
+  "frozen_workpoints.csv": "dc5254b31b3e8010dc597e96f6a1e950f803f58102a49499d4f75e065cab16a3",
+  "paired_recall_changes.csv": "835ddb415dd276c1ef771c5c9be4a33b03647b2b2b6129a506d5732f5adc6539",
+  "phase91_report.json": "45f26c9718ee84af0eb16cdb16889b7e1b7398a33c0182103b59c1bc773acd35",
+  "precision_tie_input_lock.json": "3a706bbacb9da35167ca2b91f60087e4a1ced06aa48ae8a659e35cec68e28f63",
+  "scan_thresholds_denominators.json": "fd20029a1ed0939734c7ebf8a615e6fea460466c152531528916241cbce51801"
+}

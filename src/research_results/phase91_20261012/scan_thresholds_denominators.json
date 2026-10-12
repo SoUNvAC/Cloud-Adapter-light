@@ -1,0 +1,3092 @@
+{
+  "rows": [
+    {
+      "version": "original_main",
+      "policy": "Source_spectral",
+      "kind": "A",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.01,
+        "threshold": 0.17101792269329616,
+        "macro_fpr": 0.009999972623713667,
+        "denominators": [
+          3298946,
+          2000545,
+          3227078,
+          3232122,
+          2418028,
+          3264033,
+          2712733,
+          3313816,
+          2028279
+        ],
+        "false_positives": [
+          6486,
+          21621,
+          125729,
+          11856,
+          3489,
+          15417,
+          68320,
+          3789,
+          4265
+        ],
+        "next_lower_observed_threshold": 0.17101788096270454,
+        "next_batch_macro_fpr": 0.010000013582816943,
+        "next_batch_false_positives": [
+          6486,
+          21621,
+          125729,
+          11856,
+          3489,
+          15417,
+          68321,
+          3789,
+          4265
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "original_main",
+      "policy": "Source_spectral",
+      "kind": "A",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.005,
+        "threshold": 0.2743465469267163,
+        "macro_fpr": 0.004999947475203392,
+        "denominators": [
+          3298946,
+          2000545,
+          3227078,
+          3232122,
+          2418028,
+          3264033,
+          2712733,
+          3313816,
+          2028279
+        ],
+        "false_positives": [
+          1418,
+          9266,
+          82163,
+          2258,
+          192,
+          4044,
+          31456,
+          1281,
+          970
+        ],
+        "next_lower_observed_threshold": 0.2743459270659899,
+        "next_batch_macro_fpr": 0.005000003015624182,
+        "next_batch_false_positives": [
+          1418,
+          9267,
+          82163,
+          2258,
+          192,
+          4044,
+          31456,
+          1281,
+          970
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "original_main",
+      "policy": "Source_spectral",
+      "kind": "A",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.02,
+        "threshold": 0.09720638375531274,
+        "macro_fpr": 0.019999981159680345,
+        "denominators": [
+          3298946,
+          2000545,
+          3227078,
+          3232122,
+          2418028,
+          3264033,
+          2712733,
+          3313816,
+          2028279
+        ],
+        "false_positives": [
+          16299,
+          44013,
+          183383,
+          30973,
+          8013,
+          41822,
+          171663,
+          7318,
+          10210
+        ],
+        "next_lower_observed_threshold": 0.09720629332171847,
+        "next_batch_macro_fpr": 0.020000036700101136,
+        "next_batch_false_positives": [
+          16299,
+          44014,
+          183383,
+          30973,
+          8013,
+          41822,
+          171663,
+          7318,
+          10210
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "original_main",
+      "policy": "Source_spectral",
+      "kind": "A",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.05,
+        "threshold": 0.04939776153470751,
+        "macro_fpr": 0.04999998016174289,
+        "denominators": [
+          3298946,
+          2000545,
+          3227078,
+          3232122,
+          2418028,
+          3264033,
+          2712733,
+          3313816,
+          2028279
+        ],
+        "false_positives": [
+          39410,
+          113633,
+          450927,
+          66047,
+          14140,
+          93872,
+          373036,
+          62187,
+          61253
+        ],
+        "next_lower_observed_threshold": 0.049397721087965696,
+        "next_batch_macro_fpr": 0.05000001459261537,
+        "next_batch_false_positives": [
+          39410,
+          113633,
+          450928,
+          66047,
+          14140,
+          93872,
+          373036,
+          62187,
+          61253
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "original_main",
+      "policy": "Source_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20160417T111159_N0201_R137_T29RPQ_20160417T203056",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.01,
+        "threshold": 0.05622144880509061,
+        "macro_fpr": 0.009999860561524802,
+        "denominators": [
+          3298946
+        ],
+        "false_positives": [
+          32989
+        ],
+        "next_lower_observed_threshold": 0.05622100552332085,
+        "next_batch_macro_fpr": 0.010000163688644797,
+        "next_batch_false_positives": [
+          32990
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "original_main",
+      "policy": "Source_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20160817T101032_N0204_R022_T33UUU_20160817T230018",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.01,
+        "threshold": 0.18033730503546963,
+        "macro_fpr": 0.009999775061295797,
+        "denominators": [
+          2000545
+        ],
+        "false_positives": [
+          20005
+        ],
+        "next_lower_observed_threshold": 0.1803339385454257,
+        "next_batch_macro_fpr": 0.010000274925082915,
+        "next_batch_false_positives": [
+          20006
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "original_main",
+      "policy": "Source_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20161108T102232_N0204_R065_T32TNR_20161109T224916",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.01,
+        "threshold": 0.436250352764104,
+        "macro_fpr": 0.009999758295275168,
+        "denominators": [
+          3227078
+        ],
+        "false_positives": [
+          32270
+        ],
+        "next_lower_observed_threshold": 0.4362471860428428,
+        "next_batch_macro_fpr": 0.010000068173127517,
+        "next_batch_false_positives": [
+          32271
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "original_main",
+      "policy": "Source_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20170313T074931_N0204_R135_T35JPM_20170313T081339",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.01,
+        "threshold": 0.09389600184349794,
+        "macro_fpr": 0.00999993193326242,
+        "denominators": [
+          3232122
+        ],
+        "false_positives": [
+          32321
+        ],
+        "next_lower_observed_threshold": 0.09389210482079308,
+        "next_batch_macro_fpr": 0.010000241327524147,
+        "next_batch_false_positives": [
+          32322
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "original_main",
+      "policy": "Source_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20170501T183311_N0205_R127_T11SPC_20170501T183311",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.01,
+        "threshold": 0.024295054959501947,
+        "macro_fpr": 0.009999884203160591,
+        "denominators": [
+          2418028
+        ],
+        "false_positives": [
+          24180
+        ],
+        "next_lower_observed_threshold": 0.02429371935383396,
+        "next_batch_macro_fpr": 0.010000297763301335,
+        "next_batch_false_positives": [
+          24181
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "original_main",
+      "policy": "Source_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20170516T105031_N0205_R051_T31UDP_20170516T105322",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.01,
+        "threshold": 0.1152356998170015,
+        "macro_fpr": 0.009999898898080993,
+        "denominators": [
+          3264033
+        ],
+        "false_positives": [
+          32640
+        ],
+        "next_lower_observed_threshold": 0.1152345918081297,
+        "next_batch_macro_fpr": 0.010000205267532527,
+        "next_batch_false_positives": [
+          32641
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "original_main",
+      "policy": "Source_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20170917T103021_N0205_R108_T31TFJ_20170917T103018",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.01,
+        "threshold": 0.30809484523181413,
+        "macro_fpr": 0.009999878351463267,
+        "denominators": [
+          2712733
+        ],
+        "false_positives": [
+          27127
+        ],
+        "next_lower_observed_threshold": 0.3080919707408425,
+        "next_batch_macro_fpr": 0.010000246983392762,
+        "next_batch_false_positives": [
+          27128
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "original_main",
+      "policy": "Source_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20180422T102031_N0206_R065_T32UPU_20180422T141352",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.01,
+        "threshold": 0.07427882468155783,
+        "macro_fpr": 0.009999951717295107,
+        "denominators": [
+          3313816
+        ],
+        "false_positives": [
+          33138
+        ],
+        "next_lower_observed_threshold": 0.07427880784766373,
+        "next_batch_macro_fpr": 0.010000253484200692,
+        "next_batch_false_positives": [
+          33139
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "original_main",
+      "policy": "Source_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20180505T141051_N0206_R110_T21LWK_20180505T160911",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.01,
+        "threshold": 0.07708316250597547,
+        "macro_fpr": 0.009999610507232979,
+        "denominators": [
+          2028279
+        ],
+        "false_positives": [
+          20282
+        ],
+        "next_lower_observed_threshold": 0.07708314080737602,
+        "next_batch_macro_fpr": 0.010000103536051992,
+        "next_batch_false_positives": [
+          20283
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "original_main",
+      "policy": "MsRE_spectral",
+      "kind": "A",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.01,
+        "threshold": 0.20058529606759803,
+        "macro_fpr": 0.009999973027271618,
+        "denominators": [
+          3298946,
+          2000545,
+          3227078,
+          3232122,
+          2418028,
+          3264033,
+          2712733,
+          3313816,
+          2028279
+        ],
+        "false_positives": [
+          13110,
+          56221,
+          75381,
+          16575,
+          13729,
+          11452,
+          28361,
+          7312,
+          15391
+        ],
+        "next_lower_observed_threshold": 0.2005850231948259,
+        "next_batch_macro_fpr": 0.010000028567692408,
+        "next_batch_false_positives": [
+          13110,
+          56222,
+          75381,
+          16575,
+          13729,
+          11452,
+          28361,
+          7312,
+          15391
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "original_main",
+      "policy": "MsRE_spectral",
+      "kind": "A",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.005,
+        "threshold": 0.6086090854811791,
+        "macro_fpr": 0.004999967952175002,
+        "denominators": [
+          3298946,
+          2000545,
+          3227078,
+          3232122,
+          2418028,
+          3264033,
+          2712733,
+          3313816,
+          2028279
+        ],
+        "false_positives": [
+          4755,
+          30348,
+          41342,
+          6913,
+          7491,
+          3281,
+          12690,
+          3978,
+          7012
+        ],
+        "next_lower_observed_threshold": 0.6086081350993792,
+        "next_batch_macro_fpr": 0.005000002383047485,
+        "next_batch_false_positives": [
+          4755,
+          30348,
+          41343,
+          6913,
+          7491,
+          3281,
+          12690,
+          3978,
+          7012
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "original_main",
+      "policy": "MsRE_spectral",
+      "kind": "A",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.02,
+        "threshold": 0.05512585090450828,
+        "macro_fpr": 0.019999953118759184,
+        "denominators": [
+          3298946,
+          2000545,
+          3227078,
+          3232122,
+          2418028,
+          3264033,
+          2712733,
+          3313816,
+          2028279
+        ],
+        "false_positives": [
+          26446,
+          104671,
+          158455,
+          33863,
+          20196,
+          30565,
+          62018,
+          13218,
+          31471
+        ],
+        "next_lower_observed_threshold": 0.0551255960065034,
+        "next_batch_macro_fpr": 0.020000007899739075,
+        "next_batch_false_positives": [
+          26446,
+          104671,
+          158455,
+          33863,
+          20196,
+          30565,
+          62018,
+          13218,
+          31472
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "original_main",
+      "policy": "MsRE_spectral",
+      "kind": "A",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.05,
+        "threshold": 0.03663637563738172,
+        "macro_fpr": 0.049999965588348065,
+        "denominators": [
+          3298946,
+          2000545,
+          3227078,
+          3232122,
+          2418028,
+          3264033,
+          2712733,
+          3313816,
+          2028279
+        ],
+        "false_positives": [
+          36541,
+          157838,
+          371899,
+          50690,
+          23001,
+          49152,
+          408429,
+          60362,
+          72517
+        ],
+        "next_lower_observed_threshold": 0.03663633892221187,
+        "next_batch_macro_fpr": 0.05000000001922055,
+        "next_batch_false_positives": [
+          36541,
+          157838,
+          371900,
+          50690,
+          23001,
+          49152,
+          408429,
+          60362,
+          72517
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "original_main",
+      "policy": "MsRE_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20160417T111159_N0201_R137_T29RPQ_20160417T203056",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.01,
+        "threshold": 0.04126894999897241,
+        "macro_fpr": 0.009999860561524802,
+        "denominators": [
+          3298946
+        ],
+        "false_positives": [
+          32989
+        ],
+        "next_lower_observed_threshold": 0.041267802887254096,
+        "next_batch_macro_fpr": 0.010000163688644797,
+        "next_batch_false_positives": [
+          32990
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "original_main",
+      "policy": "MsRE_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20160817T101032_N0204_R022_T33UUU_20160817T230018",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.01,
+        "threshold": 0.8168030184724899,
+        "macro_fpr": 0.009999775061295797,
+        "denominators": [
+          2000545
+        ],
+        "false_positives": [
+          20005
+        ],
+        "next_lower_observed_threshold": 0.8167990794518869,
+        "next_batch_macro_fpr": 0.010000274925082915,
+        "next_batch_false_positives": [
+          20006
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "original_main",
+      "policy": "MsRE_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20161108T102232_N0204_R065_T32TNR_20161109T224916",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.01,
+        "threshold": 0.7511565491993473,
+        "macro_fpr": 0.009999758295275168,
+        "denominators": [
+          3227078
+        ],
+        "false_positives": [
+          32270
+        ],
+        "next_lower_observed_threshold": 0.7511513474311636,
+        "next_batch_macro_fpr": 0.010000068173127517,
+        "next_batch_false_positives": [
+          32271
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "original_main",
+      "policy": "MsRE_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20170313T074931_N0204_R135_T35JPM_20170313T081339",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.01,
+        "threshold": 0.05923423987706838,
+        "macro_fpr": 0.00999993193326242,
+        "denominators": [
+          3232122
+        ],
+        "false_positives": [
+          32321
+        ],
+        "next_lower_observed_threshold": 0.05923322088570257,
+        "next_batch_macro_fpr": 0.010000241327524147,
+        "next_batch_false_positives": [
+          32322
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "original_main",
+      "policy": "MsRE_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20170501T183311_N0205_R127_T11SPC_20170501T183311",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.01,
+        "threshold": 0.03173048428480246,
+        "macro_fpr": 0.009999884203160591,
+        "denominators": [
+          2418028
+        ],
+        "false_positives": [
+          24180
+        ],
+        "next_lower_observed_threshold": 0.03172890708273019,
+        "next_batch_macro_fpr": 0.010000297763301335,
+        "next_batch_false_positives": [
+          24181
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "original_main",
+      "policy": "MsRE_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20170516T105031_N0205_R051_T31UDP_20170516T105322",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.01,
+        "threshold": 0.05099932782682944,
+        "macro_fpr": 0.009999898898080993,
+        "denominators": [
+          3264033
+        ],
+        "false_positives": [
+          32640
+        ],
+        "next_lower_observed_threshold": 0.050998979564674904,
+        "next_batch_macro_fpr": 0.010000205267532527,
+        "next_batch_false_positives": [
+          32641
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "original_main",
+      "policy": "MsRE_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20170917T103021_N0205_R108_T31TFJ_20170917T103018",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.01,
+        "threshold": 0.21715529395030575,
+        "macro_fpr": 0.009999878351463267,
+        "denominators": [
+          2712733
+        ],
+        "false_positives": [
+          27127
+        ],
+        "next_lower_observed_threshold": 0.2171419735791458,
+        "next_batch_macro_fpr": 0.010000246983392762,
+        "next_batch_false_positives": [
+          27128
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "original_main",
+      "policy": "MsRE_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20180422T102031_N0206_R065_T32UPU_20180422T141352",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.01,
+        "threshold": 0.047359340951069556,
+        "macro_fpr": 0.009999951717295107,
+        "denominators": [
+          3313816
+        ],
+        "false_positives": [
+          33138
+        ],
+        "next_lower_observed_threshold": 0.0473593276734491,
+        "next_batch_macro_fpr": 0.010000253484200692,
+        "next_batch_false_positives": [
+          33139
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "original_main",
+      "policy": "MsRE_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20180505T141051_N0206_R110_T21LWK_20180505T160911",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.01,
+        "threshold": 0.1125534716447351,
+        "macro_fpr": 0.009999610507232979,
+        "denominators": [
+          2028279
+        ],
+        "false_positives": [
+          20282
+        ],
+        "next_lower_observed_threshold": 0.11254506059660668,
+        "next_batch_macro_fpr": 0.010000103536051992,
+        "next_batch_false_positives": [
+          20283
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "original_main",
+      "policy": "L3",
+      "kind": "A",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.01,
+        "threshold": 0.20793030661800302,
+        "macro_fpr": 0.009999996726425285,
+        "denominators": [
+          3298946,
+          2000545,
+          3227078,
+          3232122,
+          2418028,
+          3264033,
+          2712733,
+          3313816,
+          2028279
+        ],
+        "false_positives": [
+          12862,
+          54829,
+          77764,
+          16633,
+          13579,
+          11659,
+          29241,
+          7252,
+          14797
+        ],
+        "next_lower_observed_threshold": 0.2079285023794233,
+        "next_batch_macro_fpr": 0.010000030767475456,
+        "next_batch_false_positives": [
+          12862,
+          54829,
+          77764,
+          16633,
+          13579,
+          11660,
+          29241,
+          7252,
+          14797
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "original_main",
+      "policy": "L3",
+      "kind": "A",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.005,
+        "threshold": 0.6046245763403205,
+        "macro_fpr": 0.004999994791447111,
+        "denominators": [
+          3298946,
+          2000545,
+          3227078,
+          3232122,
+          2418028,
+          3264033,
+          2712733,
+          3313816,
+          2028279
+        ],
+        "false_positives": [
+          4662,
+          29456,
+          42753,
+          6931,
+          7456,
+          3395,
+          13106,
+          3910,
+          6765
+        ],
+        "next_lower_observed_threshold": 0.6046245716719962,
+        "next_batch_macro_fpr": 0.005000050331867903,
+        "next_batch_false_positives": [
+          4662,
+          29457,
+          42753,
+          6931,
+          7456,
+          3395,
+          13106,
+          3910,
+          6765
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "original_main",
+      "policy": "L3",
+      "kind": "A",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.02,
+        "threshold": 0.06187321618901457,
+        "macro_fpr": 0.01999999794664646,
+        "denominators": [
+          3298946,
+          2000545,
+          3227078,
+          3232122,
+          2418028,
+          3264033,
+          2712733,
+          3313816,
+          2028279
+        ],
+        "false_positives": [
+          25308,
+          97527,
+          159541,
+          33558,
+          19613,
+          30174,
+          77830,
+          12597,
+          28213
+        ],
+        "next_lower_observed_threshold": 0.06187314681606596,
+        "next_batch_macro_fpr": 0.020000032377518944,
+        "next_batch_false_positives": [
+          25308,
+          97527,
+          159542,
+          33558,
+          19613,
+          30174,
+          77830,
+          12597,
+          28213
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "original_main",
+      "policy": "L3",
+      "kind": "A",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.05,
+        "threshold": 0.03606289992120208,
+        "macro_fpr": 0.0499999760556896,
+        "denominators": [
+          3298946,
+          2000545,
+          3227078,
+          3232122,
+          2418028,
+          3264033,
+          2712733,
+          3313816,
+          2028279
+        ],
+        "false_positives": [
+          38267,
+          159842,
+          391370,
+          55006,
+          23232,
+          53285,
+          379377,
+          61497,
+          72743
+        ],
+        "next_lower_observed_threshold": 0.03606286174802388,
+        "next_batch_macro_fpr": 0.05000001048656208,
+        "next_batch_false_positives": [
+          38267,
+          159842,
+          391371,
+          55006,
+          23232,
+          53285,
+          379377,
+          61497,
+          72743
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "original_main",
+      "policy": "L3",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20160417T111159_N0201_R137_T29RPQ_20160417T203056",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.01,
+        "threshold": 0.042487188555551496,
+        "macro_fpr": 0.009999860561524802,
+        "denominators": [
+          3298946
+        ],
+        "false_positives": [
+          32989
+        ],
+        "next_lower_observed_threshold": 0.04248686243970703,
+        "next_batch_macro_fpr": 0.010000163688644797,
+        "next_batch_false_positives": [
+          32990
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "original_main",
+      "policy": "L3",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20160817T101032_N0204_R022_T33UUU_20160817T230018",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.01,
+        "threshold": 0.7958513056438217,
+        "macro_fpr": 0.009999775061295797,
+        "denominators": [
+          2000545
+        ],
+        "false_positives": [
+          20005
+        ],
+        "next_lower_observed_threshold": 0.7958462115003662,
+        "next_batch_macro_fpr": 0.010000274925082915,
+        "next_batch_false_positives": [
+          20006
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "original_main",
+      "policy": "L3",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20161108T102232_N0204_R065_T32TNR_20161109T224916",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.01,
+        "threshold": 0.760278164304204,
+        "macro_fpr": 0.009999758295275168,
+        "denominators": [
+          3227078
+        ],
+        "false_positives": [
+          32270
+        ],
+        "next_lower_observed_threshold": 0.7602640966303825,
+        "next_batch_macro_fpr": 0.010000068173127517,
+        "next_batch_false_positives": [
+          32271
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "original_main",
+      "policy": "L3",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20170313T074931_N0204_R135_T35JPM_20170313T081339",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.01,
+        "threshold": 0.06539921866100147,
+        "macro_fpr": 0.00999993193326242,
+        "denominators": [
+          3232122
+        ],
+        "false_positives": [
+          32321
+        ],
+        "next_lower_observed_threshold": 0.06539903034656797,
+        "next_batch_macro_fpr": 0.010000241327524147,
+        "next_batch_false_positives": [
+          32322
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "original_main",
+      "policy": "L3",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20170501T183311_N0205_R127_T11SPC_20170501T183311",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.01,
+        "threshold": 0.032172820679317524,
+        "macro_fpr": 0.009999884203160591,
+        "denominators": [
+          2418028
+        ],
+        "false_positives": [
+          24180
+        ],
+        "next_lower_observed_threshold": 0.03217253828314173,
+        "next_batch_macro_fpr": 0.010000297763301335,
+        "next_batch_false_positives": [
+          24181
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "original_main",
+      "policy": "L3",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20170516T105031_N0205_R051_T31UDP_20170516T105322",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.01,
+        "threshold": 0.05635829354370023,
+        "macro_fpr": 0.009999898898080993,
+        "denominators": [
+          3264033
+        ],
+        "false_positives": [
+          32640
+        ],
+        "next_lower_observed_threshold": 0.0563580132476988,
+        "next_batch_macro_fpr": 0.010000205267532527,
+        "next_batch_false_positives": [
+          32641
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "original_main",
+      "policy": "L3",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20170917T103021_N0205_R108_T31TFJ_20170917T103018",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.01,
+        "threshold": 0.23624559395830028,
+        "macro_fpr": 0.009999878351463267,
+        "denominators": [
+          2712733
+        ],
+        "false_positives": [
+          27127
+        ],
+        "next_lower_observed_threshold": 0.23623682744596713,
+        "next_batch_macro_fpr": 0.010000246983392762,
+        "next_batch_false_positives": [
+          27128
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "original_main",
+      "policy": "L3",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20180422T102031_N0206_R065_T32UPU_20180422T141352",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.01,
+        "threshold": 0.0469563519030073,
+        "macro_fpr": 0.009999951717295107,
+        "denominators": [
+          3313816
+        ],
+        "false_positives": [
+          33138
+        ],
+        "next_lower_observed_threshold": 0.046956343559585716,
+        "next_batch_macro_fpr": 0.010000253484200692,
+        "next_batch_false_positives": [
+          33139
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "original_main",
+      "policy": "L3",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20180505T141051_N0206_R110_T21LWK_20180505T160911",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.01,
+        "threshold": 0.10912066308151785,
+        "macro_fpr": 0.009999610507232979,
+        "denominators": [
+          2028279
+        ],
+        "false_positives": [
+          20282
+        ],
+        "next_lower_observed_threshold": 0.10911635870726549,
+        "next_batch_macro_fpr": 0.010000103536051992,
+        "next_batch_false_positives": [
+          20283
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "original_common",
+      "policy": "Source_spectral",
+      "kind": "A",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.01,
+        "threshold": 0.12834536616747522,
+        "macro_fpr": 0.009999968726143576,
+        "denominators": [
+          3202125,
+          2393665,
+          3241373,
+          2667242,
+          3294864,
+          2028279
+        ],
+        "false_positives": [
+          20278,
+          5343,
+          26844,
+          101764,
+          5152,
+          6970
+        ],
+        "next_lower_observed_threshold": 0.12834534867678404,
+        "next_batch_macro_fpr": 0.010000019309920833,
+        "next_batch_false_positives": [
+          20278,
+          5343,
+          26844,
+          101764,
+          5153,
+          6970
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "original_common",
+      "policy": "Source_spectral",
+      "kind": "A",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.005,
+        "threshold": 0.18903473601899762,
+        "macro_fpr": 0.004999959308246095,
+        "denominators": [
+          3202125,
+          2393665,
+          3241373,
+          2667242,
+          3294864,
+          2028279
+        ],
+        "false_positives": [
+          8849,
+          2606,
+          12075,
+          52729,
+          3131,
+          3454
+        ],
+        "next_lower_observed_threshold": 0.1890346344259111,
+        "next_batch_macro_fpr": 0.005000011357015792,
+        "next_batch_false_positives": [
+          8850,
+          2606,
+          12075,
+          52729,
+          3131,
+          3454
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "original_common",
+      "policy": "Source_spectral",
+      "kind": "A",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.02,
+        "threshold": 0.07751787391765094,
+        "macro_fpr": 0.01999996510667779,
+        "denominators": [
+          3202125,
+          2393665,
+          3241373,
+          2667242,
+          3294864,
+          2028279
+        ],
+        "false_positives": [
+          38654,
+          8179,
+          54526,
+          202290,
+          9153,
+          18395
+        ],
+        "next_lower_observed_threshold": 0.07751785089362341,
+        "next_batch_macro_fpr": 0.020000047278147626,
+        "next_batch_false_positives": [
+          38654,
+          8179,
+          54526,
+          202290,
+          9153,
+          18396
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "original_common",
+      "policy": "Source_spectral",
+      "kind": "A",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.05,
+        "threshold": 0.04054624984451848,
+        "macro_fpr": 0.049999980783300806,
+        "denominators": [
+          3202125,
+          2393665,
+          3241373,
+          2667242,
+          3294864,
+          2028279
+        ],
+        "false_positives": [
+          79221,
+          12585,
+          113988,
+          421970,
+          125025,
+          78465
+        ],
+        "next_lower_observed_threshold": 0.0405462452245104,
+        "next_batch_macro_fpr": 0.05000003136707806,
+        "next_batch_false_positives": [
+          79221,
+          12585,
+          113988,
+          421970,
+          125026,
+          78465
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "original_common",
+      "policy": "Source_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20170313T074931_N0204_R135_T35JPM_20170313T081339",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.01,
+        "threshold": 0.09191436548170256,
+        "macro_fpr": 0.009999921926845455,
+        "denominators": [
+          3202125
+        ],
+        "false_positives": [
+          32021
+        ],
+        "next_lower_observed_threshold": 0.09191415710990314,
+        "next_batch_macro_fpr": 0.010000234219463637,
+        "next_batch_false_positives": [
+          32022
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "original_common",
+      "policy": "Source_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20170501T183311_N0205_R127_T11SPC_20170501T183311",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.01,
+        "threshold": 0.02092044960353384,
+        "macro_fpr": 0.009999728449887516,
+        "denominators": [
+          2393665
+        ],
+        "false_positives": [
+          23936
+        ],
+        "next_lower_observed_threshold": 0.02092039188760206,
+        "next_batch_macro_fpr": 0.010000146219291338,
+        "next_batch_false_positives": [
+          23937
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "original_common",
+      "policy": "Source_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20170516T105031_N0205_R051_T31UDP_20170516T105322",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.01,
+        "threshold": 0.11470200841937893,
+        "macro_fpr": 0.009999774786795595,
+        "denominators": [
+          3241373
+        ],
+        "false_positives": [
+          32413
+        ],
+        "next_lower_observed_threshold": 0.11470007129555669,
+        "next_batch_macro_fpr": 0.010000083298034505,
+        "next_batch_false_positives": [
+          32414
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "original_common",
+      "policy": "Source_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20170917T103021_N0205_R108_T31TFJ_20170917T103018",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.01,
+        "threshold": 0.2960283406576538,
+        "macro_fpr": 0.009999842533973295,
+        "denominators": [
+          2667242
+        ],
+        "false_positives": [
+          26672
+        ],
+        "next_lower_observed_threshold": 0.2960212532927619,
+        "next_batch_macro_fpr": 0.010000217453084497,
+        "next_batch_false_positives": [
+          26673
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "original_common",
+      "policy": "Source_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20180422T102031_N0206_R065_T32UPU_20180422T141352",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.01,
+        "threshold": 0.07410010004980264,
+        "macro_fpr": 0.009999805758295335,
+        "denominators": [
+          3294864
+        ],
+        "false_positives": [
+          32948
+        ],
+        "next_lower_observed_threshold": 0.07410008450735571,
+        "next_batch_macro_fpr": 0.010000109260958874,
+        "next_batch_false_positives": [
+          32949
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "original_common",
+      "policy": "Source_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20180505T141051_N0206_R110_T21LWK_20180505T160911",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.01,
+        "threshold": 0.07708316250597547,
+        "macro_fpr": 0.009999610507232979,
+        "denominators": [
+          2028279
+        ],
+        "false_positives": [
+          20282
+        ],
+        "next_lower_observed_threshold": 0.07708314080737602,
+        "next_batch_macro_fpr": 0.010000103536051992,
+        "next_batch_false_positives": [
+          20283
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "original_common",
+      "policy": "MsRE_spectral",
+      "kind": "A",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.01,
+        "threshold": 0.060301623493385206,
+        "macro_fpr": 0.009999976202323029,
+        "denominators": [
+          3202125,
+          2393665,
+          3241373,
+          2667242,
+          3294864,
+          2028279
+        ],
+        "false_positives": [
+          30404,
+          14530,
+          28139,
+          47821,
+          11438,
+          29112
+        ],
+        "next_lower_observed_threshold": 0.06030159302190278,
+        "next_batch_macro_fpr": 0.010000038688841561,
+        "next_batch_false_positives": [
+          30404,
+          14530,
+          28139,
+          47822,
+          11438,
+          29112
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "original_common",
+      "policy": "MsRE_spectral",
+      "kind": "A",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.005,
+        "threshold": 0.21700645783363082,
+        "macro_fpr": 0.004999971178535494,
+        "denominators": [
+          3202125,
+          2393665,
+          3241373,
+          2667242,
+          3294864,
+          2028279
+        ],
+        "false_positives": [
+          15038,
+          10188,
+          10637,
+          22645,
+          6468,
+          14832
+        ],
+        "next_lower_observed_threshold": 0.21700642142301407,
+        "next_batch_macro_fpr": 0.005000022597075313,
+        "next_batch_false_positives": [
+          15038,
+          10188,
+          10638,
+          22645,
+          6468,
+          14832
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "original_common",
+      "policy": "MsRE_spectral",
+      "kind": "A",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.02,
+        "threshold": 0.049103669201106884,
+        "macro_fpr": 0.0199999475659315,
+        "denominators": [
+          3202125,
+          2393665,
+          3241373,
+          2667242,
+          3294864,
+          2028279
+        ],
+        "false_positives": [
+          34923,
+          15422,
+          33348,
+          187211,
+          13569,
+          36621
+        ],
+        "next_lower_observed_threshold": 0.049103660294840715,
+        "next_batch_macro_fpr": 0.020000010052450033,
+        "next_batch_false_positives": [
+          34923,
+          15422,
+          33348,
+          187212,
+          13569,
+          36621
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "original_common",
+      "policy": "MsRE_spectral",
+      "kind": "A",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.05,
+        "threshold": 0.027708175705386515,
+        "macro_fpr": 0.04999995987501977,
+        "denominators": [
+          3202125,
+          2393665,
+          3241373,
+          2667242,
+          3294864,
+          2028279
+        ],
+        "false_positives": [
+          65954,
+          18870,
+          67958,
+          430585,
+          132903,
+          98945
+        ],
+        "next_lower_observed_threshold": 0.02770816089774489,
+        "next_batch_macro_fpr": 0.05000001045879703,
+        "next_batch_false_positives": [
+          65954,
+          18870,
+          67958,
+          430585,
+          132904,
+          98945
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "original_common",
+      "policy": "MsRE_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20170313T074931_N0204_R135_T35JPM_20170313T081339",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.01,
+        "threshold": 0.055605102617616926,
+        "macro_fpr": 0.009999921926845455,
+        "denominators": [
+          3202125
+        ],
+        "false_positives": [
+          32021
+        ],
+        "next_lower_observed_threshold": 0.05560446846552066,
+        "next_batch_macro_fpr": 0.010000234219463637,
+        "next_batch_false_positives": [
+          32022
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "original_common",
+      "policy": "MsRE_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20170501T183311_N0205_R127_T11SPC_20170501T183311",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.01,
+        "threshold": 0.019662074145966348,
+        "macro_fpr": 0.009999728449887516,
+        "denominators": [
+          2393665
+        ],
+        "false_positives": [
+          23936
+        ],
+        "next_lower_observed_threshold": 0.019662042905437258,
+        "next_batch_macro_fpr": 0.010000146219291338,
+        "next_batch_false_positives": [
+          23937
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "original_common",
+      "policy": "MsRE_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20170516T105031_N0205_R051_T31UDP_20170516T105322",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.01,
+        "threshold": 0.05082389328570037,
+        "macro_fpr": 0.009999774786795595,
+        "denominators": [
+          3241373
+        ],
+        "false_positives": [
+          32413
+        ],
+        "next_lower_observed_threshold": 0.05082073612798748,
+        "next_batch_macro_fpr": 0.010000083298034505,
+        "next_batch_false_positives": [
+          32414
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "original_common",
+      "policy": "MsRE_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20170917T103021_N0205_R108_T31TFJ_20170917T103018",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.01,
+        "threshold": 0.1620821633877704,
+        "macro_fpr": 0.009999842533973295,
+        "denominators": [
+          2667242
+        ],
+        "false_positives": [
+          26672
+        ],
+        "next_lower_observed_threshold": 0.16206654585285957,
+        "next_batch_macro_fpr": 0.010000217453084497,
+        "next_batch_false_positives": [
+          26673
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "original_common",
+      "policy": "MsRE_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20180422T102031_N0206_R065_T32UPU_20180422T141352",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.01,
+        "threshold": 0.04727096486591543,
+        "macro_fpr": 0.009999805758295335,
+        "denominators": [
+          3294864
+        ],
+        "false_positives": [
+          32948
+        ],
+        "next_lower_observed_threshold": 0.04727088402685818,
+        "next_batch_macro_fpr": 0.010000109260958874,
+        "next_batch_false_positives": [
+          32949
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "original_common",
+      "policy": "MsRE_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20180505T141051_N0206_R110_T21LWK_20180505T160911",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.01,
+        "threshold": 0.1125534716447351,
+        "macro_fpr": 0.009999610507232979,
+        "denominators": [
+          2028279
+        ],
+        "false_positives": [
+          20282
+        ],
+        "next_lower_observed_threshold": 0.11254506059660668,
+        "next_batch_macro_fpr": 0.010000103536051992,
+        "next_batch_false_positives": [
+          20283
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "original_common",
+      "policy": "L3",
+      "kind": "A",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.01,
+        "threshold": 0.07069821962236156,
+        "macro_fpr": 0.009999957917781936,
+        "denominators": [
+          3202125,
+          2393665,
+          3241373,
+          2667242,
+          3294864,
+          2028279
+        ],
+        "false_positives": [
+          29277,
+          13960,
+          26769,
+          55480,
+          10661,
+          25820
+        ],
+        "next_lower_observed_threshold": 0.07069681425814427,
+        "next_batch_macro_fpr": 0.010000020404300468,
+        "next_batch_false_positives": [
+          29277,
+          13960,
+          26769,
+          55481,
+          10661,
+          25820
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "original_common",
+      "policy": "L3",
+      "kind": "A",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.005,
+        "threshold": 0.22507485945467545,
+        "macro_fpr": 0.004999993039321102,
+        "denominators": [
+          3202125,
+          2393665,
+          3241373,
+          2667242,
+          3294864,
+          2028279
+        ],
+        "false_positives": [
+          15060,
+          10106,
+          10790,
+          23397,
+          6431,
+          14243
+        ],
+        "next_lower_observed_threshold": 0.22507343293048093,
+        "next_batch_macro_fpr": 0.005000045088090799,
+        "next_batch_false_positives": [
+          15061,
+          10106,
+          10790,
+          23397,
+          6431,
+          14243
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "original_common",
+      "policy": "L3",
+      "kind": "A",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.02,
+        "threshold": 0.048439227812703094,
+        "macro_fpr": 0.019999992156249737,
+        "denominators": [
+          3202125,
+          2393665,
+          3241373,
+          2667242,
+          3294864,
+          2028279
+        ],
+        "false_positives": [
+          38008,
+          15525,
+          37015,
+          180634,
+          14222,
+          36885
+        ],
+        "next_lower_observed_threshold": 0.04843920535505138,
+        "next_batch_macro_fpr": 0.02000005464276827,
+        "next_batch_false_positives": [
+          38008,
+          15525,
+          37015,
+          180635,
+          14222,
+          36885
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "original_common",
+      "policy": "L3",
+      "kind": "A",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.05,
+        "threshold": 0.027613508685223134,
+        "macro_fpr": 0.04999994150765613,
+        "denominators": [
+          3202125,
+          2393665,
+          3241373,
+          2667242,
+          3294864,
+          2028279
+        ],
+        "false_positives": [
+          71884,
+          18942,
+          74739,
+          428004,
+          125148,
+          97621
+        ],
+        "next_lower_observed_threshold": 0.027613482820130472,
+        "next_batch_macro_fpr": 0.05000000399417467,
+        "next_batch_false_positives": [
+          71884,
+          18942,
+          74739,
+          428005,
+          125148,
+          97621
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "original_common",
+      "policy": "L3",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20170313T074931_N0204_R135_T35JPM_20170313T081339",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.01,
+        "threshold": 0.06168224839367079,
+        "macro_fpr": 0.009999921926845455,
+        "denominators": [
+          3202125
+        ],
+        "false_positives": [
+          32021
+        ],
+        "next_lower_observed_threshold": 0.06168148309945601,
+        "next_batch_macro_fpr": 0.010000234219463637,
+        "next_batch_false_positives": [
+          32022
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "original_common",
+      "policy": "L3",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20170501T183311_N0205_R127_T11SPC_20170501T183311",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.01,
+        "threshold": 0.019459359147440496,
+        "macro_fpr": 0.009999728449887516,
+        "denominators": [
+          2393665
+        ],
+        "false_positives": [
+          23936
+        ],
+        "next_lower_observed_threshold": 0.019459091837772533,
+        "next_batch_macro_fpr": 0.010000146219291338,
+        "next_batch_false_positives": [
+          23937
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "original_common",
+      "policy": "L3",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20170516T105031_N0205_R051_T31UDP_20170516T105322",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.01,
+        "threshold": 0.0561703495506676,
+        "macro_fpr": 0.009999774786795595,
+        "denominators": [
+          3241373
+        ],
+        "false_positives": [
+          32413
+        ],
+        "next_lower_observed_threshold": 0.056169604825817995,
+        "next_batch_macro_fpr": 0.010000083298034505,
+        "next_batch_false_positives": [
+          32414
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "original_common",
+      "policy": "L3",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20170917T103021_N0205_R108_T31TFJ_20170917T103018",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.01,
+        "threshold": 0.17882701667211487,
+        "macro_fpr": 0.009999842533973295,
+        "denominators": [
+          2667242
+        ],
+        "false_positives": [
+          26672
+        ],
+        "next_lower_observed_threshold": 0.1788200857185741,
+        "next_batch_macro_fpr": 0.010000217453084497,
+        "next_batch_false_positives": [
+          26673
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "original_common",
+      "policy": "L3",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20180422T102031_N0206_R065_T32UPU_20180422T141352",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.01,
+        "threshold": 0.04687763298245603,
+        "macro_fpr": 0.009999805758295335,
+        "denominators": [
+          3294864
+        ],
+        "false_positives": [
+          32948
+        ],
+        "next_lower_observed_threshold": 0.046877559532270144,
+        "next_batch_macro_fpr": 0.010000109260958874,
+        "next_batch_false_positives": [
+          32949
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "original_common",
+      "policy": "L3",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20180505T141051_N0206_R110_T21LWK_20180505T160911",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.01,
+        "threshold": 0.10912066308151785,
+        "macro_fpr": 0.009999610507232979,
+        "denominators": [
+          2028279
+        ],
+        "false_positives": [
+          20282
+        ],
+        "next_lower_observed_threshold": 0.10911635870726549,
+        "next_batch_macro_fpr": 0.010000103536051992,
+        "next_batch_false_positives": [
+          20283
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "revised_common",
+      "policy": "Source_spectral",
+      "kind": "A",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.01,
+        "threshold": 0.1264210724987473,
+        "macro_fpr": 0.009999976029925774,
+        "denominators": [
+          3184907,
+          2375843,
+          3238387,
+          2660195,
+          3291705,
+          2028279
+        ],
+        "false_positives": [
+          22572,
+          140,
+          27597,
+          104588,
+          4948,
+          7125
+        ],
+        "next_lower_observed_threshold": 0.126420800944773,
+        "next_batch_macro_fpr": 0.01000002836007754,
+        "next_batch_false_positives": [
+          22573,
+          140,
+          27597,
+          104588,
+          4948,
+          7125
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "revised_common",
+      "policy": "Source_spectral",
+      "kind": "A",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.005,
+        "threshold": 0.18896727025004653,
+        "macro_fpr": 0.0049999884481630235,
+        "denominators": [
+          3184907,
+          2375843,
+          3238387,
+          2660195,
+          3291705,
+          2028279
+        ],
+        "false_positives": [
+          11213,
+          82,
+          12257,
+          53341,
+          2977,
+          3456
+        ],
+        "next_lower_observed_threshold": 0.18896691062694737,
+        "next_batch_macro_fpr": 0.005000039914114026,
+        "next_batch_false_positives": [
+          11213,
+          82,
+          12258,
+          53341,
+          2977,
+          3456
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "revised_common",
+      "policy": "Source_spectral",
+      "kind": "A",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.02,
+        "threshold": 0.07698796925193777,
+        "macro_fpr": 0.01999998475231799,
+        "denominators": [
+          3184907,
+          2375843,
+          3238387,
+          2660195,
+          3291705,
+          2028279
+        ],
+        "false_positives": [
+          39517,
+          466,
+          55119,
+          203967,
+          11473,
+          20722
+        ],
+        "next_lower_observed_threshold": 0.07698792756683476,
+        "next_batch_macro_fpr": 0.020000036218268992,
+        "next_batch_false_positives": [
+          39517,
+          466,
+          55120,
+          203967,
+          11473,
+          20722
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "revised_common",
+      "policy": "Source_spectral",
+      "kind": "A",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.05,
+        "threshold": 0.04013461302795489,
+        "macro_fpr": 0.04999997799066993,
+        "denominators": [
+          3184907,
+          2375843,
+          3238387,
+          2660195,
+          3291705,
+          2028279
+        ],
+        "false_positives": [
+          79378,
+          2528,
+          115047,
+          421335,
+          134499,
+          79593
+        ],
+        "next_lower_observed_threshold": 0.04013461214676772,
+        "next_batch_macro_fpr": 0.050000040642718624,
+        "next_batch_false_positives": [
+          79378,
+          2528,
+          115047,
+          421336,
+          134499,
+          79593
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "revised_common",
+      "policy": "Source_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20170313T074931_N0204_R135_T35JPM_20170313T081339",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.01,
+        "threshold": 0.09499727571616202,
+        "macro_fpr": 0.009999978021336259,
+        "denominators": [
+          3184907
+        ],
+        "false_positives": [
+          31849
+        ],
+        "next_lower_observed_threshold": 0.09499416354681746,
+        "next_batch_macro_fpr": 0.010000292002246848,
+        "next_batch_false_positives": [
+          31850
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "revised_common",
+      "policy": "Source_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20170501T183311_N0205_R127_T11SPC_20170501T183311",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.01,
+        "threshold": 0.016805037571711052,
+        "macro_fpr": 0.009999819011609774,
+        "denominators": [
+          2375843
+        ],
+        "false_positives": [
+          23758
+        ],
+        "next_lower_observed_threshold": 0.016804673998923252,
+        "next_batch_macro_fpr": 0.010000239914842857,
+        "next_batch_false_positives": [
+          23759
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "revised_common",
+      "policy": "Source_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20170516T105031_N0205_R051_T31UDP_20170516T105322",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.01,
+        "threshold": 0.11484106528949457,
+        "macro_fpr": 0.00999973134773577,
+        "denominators": [
+          3238387
+        ],
+        "false_positives": [
+          32383
+        ],
+        "next_lower_observed_threshold": 0.11484025146438835,
+        "next_batch_macro_fpr": 0.010000040143441781,
+        "next_batch_false_positives": [
+          32384
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "revised_common",
+      "policy": "Source_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20170917T103021_N0205_R108_T31TFJ_20170917T103018",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.01,
+        "threshold": 0.30108914829443356,
+        "macro_fpr": 0.009999642883322463,
+        "denominators": [
+          2660195
+        ],
+        "false_positives": [
+          26601
+        ],
+        "next_lower_observed_threshold": 0.30108522141310856,
+        "next_batch_macro_fpr": 0.010000018795614607,
+        "next_batch_false_positives": [
+          26602
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "revised_common",
+      "policy": "Source_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20180422T102031_N0206_R065_T32UPU_20180422T141352",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.01,
+        "threshold": 0.07394614904188897,
+        "macro_fpr": 0.009999984810303475,
+        "denominators": [
+          3291705
+        ],
+        "false_positives": [
+          32917
+        ],
+        "next_lower_observed_threshold": 0.07394594403191558,
+        "next_batch_macro_fpr": 0.010000288604233977,
+        "next_batch_false_positives": [
+          32918
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "revised_common",
+      "policy": "Source_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20180505T141051_N0206_R110_T21LWK_20180505T160911",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.01,
+        "threshold": 0.07708316250597547,
+        "macro_fpr": 0.009999610507232979,
+        "denominators": [
+          2028279
+        ],
+        "false_positives": [
+          20282
+        ],
+        "next_lower_observed_threshold": 0.07708314080737602,
+        "next_batch_macro_fpr": 0.010000103536051992,
+        "next_batch_false_positives": [
+          20283
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "revised_common",
+      "policy": "MsRE_spectral",
+      "kind": "A",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.01,
+        "threshold": 0.056520772969673255,
+        "macro_fpr": 0.009999965199859408,
+        "denominators": [
+          3184907,
+          2375843,
+          3238387,
+          2660195,
+          3291705,
+          2028279
+        ],
+        "false_positives": [
+          31649,
+          3911,
+          30691,
+          54067,
+          11331,
+          30774
+        ],
+        "next_lower_observed_threshold": 0.0565207178620109,
+        "next_batch_macro_fpr": 0.010000017530011174,
+        "next_batch_false_positives": [
+          31650,
+          3911,
+          30691,
+          54067,
+          11331,
+          30774
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "revised_common",
+      "policy": "MsRE_spectral",
+      "kind": "A",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.005,
+        "threshold": 0.18929678277378217,
+        "macro_fpr": 0.004999968529097935,
+        "denominators": [
+          3184907,
+          2375843,
+          3238387,
+          2660195,
+          3291705,
+          2028279
+        ],
+        "false_positives": [
+          16684,
+          2041,
+          12336,
+          27459,
+          6498,
+          15814
+        ],
+        "next_lower_observed_threshold": 0.18929654838794793,
+        "next_batch_macro_fpr": 0.005000031181146627,
+        "next_batch_false_positives": [
+          16684,
+          2041,
+          12336,
+          27460,
+          6498,
+          15814
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "revised_common",
+      "policy": "MsRE_spectral",
+      "kind": "A",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.02,
+        "threshold": 0.04906990331240782,
+        "macro_fpr": 0.019999945471763373,
+        "denominators": [
+          3184907,
+          2375843,
+          3238387,
+          2660195,
+          3291705,
+          2028279
+        ],
+        "false_positives": [
+          34779,
+          4302,
+          34503,
+          198429,
+          12982,
+          36669
+        ],
+        "next_lower_observed_threshold": 0.04906988681693334,
+        "next_batch_macro_fpr": 0.020000008123812068,
+        "next_batch_false_positives": [
+          34779,
+          4302,
+          34503,
+          198430,
+          12982,
+          36669
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "revised_common",
+      "policy": "MsRE_spectral",
+      "kind": "A",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.05,
+        "threshold": 0.027493735767144444,
+        "macro_fpr": 0.049999962244896834,
+        "denominators": [
+          3184907,
+          2375843,
+          3238387,
+          2660195,
+          3291705,
+          2028279
+        ],
+        "false_positives": [
+          66166,
+          6527,
+          70205,
+          432849,
+          140907,
+          99951
+        ],
+        "next_lower_observed_threshold": 0.02749373458916471,
+        "next_batch_macro_fpr": 0.050000012877218586,
+        "next_batch_false_positives": [
+          66166,
+          6527,
+          70205,
+          432849,
+          140908,
+          99951
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "revised_common",
+      "policy": "MsRE_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20170313T074931_N0204_R135_T35JPM_20170313T081339",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.01,
+        "threshold": 0.055941884987158276,
+        "macro_fpr": 0.009999978021336259,
+        "denominators": [
+          3184907
+        ],
+        "false_positives": [
+          31849
+        ],
+        "next_lower_observed_threshold": 0.05594155461016507,
+        "next_batch_macro_fpr": 0.010000292002246848,
+        "next_batch_false_positives": [
+          31850
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "revised_common",
+      "policy": "MsRE_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20170501T183311_N0205_R127_T11SPC_20170501T183311",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.01,
+        "threshold": 0.013948920810104265,
+        "macro_fpr": 0.009999819011609774,
+        "denominators": [
+          2375843
+        ],
+        "false_positives": [
+          23758
+        ],
+        "next_lower_observed_threshold": 0.013948605901390156,
+        "next_batch_macro_fpr": 0.010000239914842857,
+        "next_batch_false_positives": [
+          23759
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "revised_common",
+      "policy": "MsRE_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20170516T105031_N0205_R051_T31UDP_20170516T105322",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.01,
+        "threshold": 0.0529598408873594,
+        "macro_fpr": 0.00999973134773577,
+        "denominators": [
+          3238387
+        ],
+        "false_positives": [
+          32383
+        ],
+        "next_lower_observed_threshold": 0.05295870255533465,
+        "next_batch_macro_fpr": 0.010000040143441781,
+        "next_batch_false_positives": [
+          32384
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "revised_common",
+      "policy": "MsRE_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20170917T103021_N0205_R108_T31TFJ_20170917T103018",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.01,
+        "threshold": 0.2015136957124605,
+        "macro_fpr": 0.009999642883322463,
+        "denominators": [
+          2660195
+        ],
+        "false_positives": [
+          26601
+        ],
+        "next_lower_observed_threshold": 0.20150629919675517,
+        "next_batch_macro_fpr": 0.010000018795614607,
+        "next_batch_false_positives": [
+          26602
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "revised_common",
+      "policy": "MsRE_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20180422T102031_N0206_R065_T32UPU_20180422T141352",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.01,
+        "threshold": 0.04720805383776851,
+        "macro_fpr": 0.009999984810303475,
+        "denominators": [
+          3291705
+        ],
+        "false_positives": [
+          32917
+        ],
+        "next_lower_observed_threshold": 0.04720797595900393,
+        "next_batch_macro_fpr": 0.010000288604233977,
+        "next_batch_false_positives": [
+          32918
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "revised_common",
+      "policy": "MsRE_spectral",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20180505T141051_N0206_R110_T21LWK_20180505T160911",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.01,
+        "threshold": 0.1125534716447351,
+        "macro_fpr": 0.009999610507232979,
+        "denominators": [
+          2028279
+        ],
+        "false_positives": [
+          20282
+        ],
+        "next_lower_observed_threshold": 0.11254506059660668,
+        "next_batch_macro_fpr": 0.010000103536051992,
+        "next_batch_false_positives": [
+          20283
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "revised_common",
+      "policy": "L3",
+      "kind": "A",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.01,
+        "threshold": 0.06713239686148544,
+        "macro_fpr": 0.009999950424932796,
+        "denominators": [
+          3184907,
+          2375843,
+          3238387,
+          2660195,
+          3291705,
+          2028279
+        ],
+        "false_positives": [
+          30360,
+          3516,
+          28854,
+          63093,
+          10488,
+          26720
+        ],
+        "next_lower_observed_threshold": 0.06713219859053389,
+        "next_batch_macro_fpr": 0.010000001890883797,
+        "next_batch_false_positives": [
+          30360,
+          3516,
+          28855,
+          63093,
+          10488,
+          26720
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "revised_common",
+      "policy": "L3",
+      "kind": "A",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.005,
+        "threshold": 0.19813624130392782,
+        "macro_fpr": 0.004999931817224713,
+        "denominators": [
+          3184907,
+          2375843,
+          3238387,
+          2660195,
+          3291705,
+          2028279
+        ],
+        "false_positives": [
+          16734,
+          1970,
+          12556,
+          28204,
+          6455,
+          15163
+        ],
+        "next_lower_observed_threshold": 0.19813572900018167,
+        "next_batch_macro_fpr": 0.005000013988694549,
+        "next_batch_false_positives": [
+          16734,
+          1970,
+          12556,
+          28204,
+          6455,
+          15164
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "revised_common",
+      "policy": "L3",
+      "kind": "A",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.02,
+        "threshold": 0.04827602248871524,
+        "macro_fpr": 0.019999966895720547,
+        "denominators": [
+          3184907,
+          2375843,
+          3238387,
+          2660195,
+          3291705,
+          2028279
+        ],
+        "false_positives": [
+          37908,
+          4317,
+          38295,
+          191202,
+          13688,
+          37364
+        ],
+        "next_lower_observed_threshold": 0.048276016988622966,
+        "next_batch_macro_fpr": 0.020000029547769235,
+        "next_batch_false_positives": [
+          37908,
+          4317,
+          38295,
+          191203,
+          13688,
+          37364
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "revised_common",
+      "policy": "L3",
+      "kind": "A",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.05,
+        "threshold": 0.027388512020969678,
+        "macro_fpr": 0.04999995374208776,
+        "denominators": [
+          3184907,
+          2375843,
+          3238387,
+          2660195,
+          3291705,
+          2028279
+        ],
+        "false_positives": [
+          72585,
+          6529,
+          77079,
+          430026,
+          132944,
+          98615
+        ],
+        "next_lower_observed_threshold": 0.027388500082808655,
+        "next_batch_macro_fpr": 0.0500000043744095,
+        "next_batch_false_positives": [
+          72585,
+          6529,
+          77079,
+          430026,
+          132945,
+          98615
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "revised_common",
+      "policy": "L3",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20170313T074931_N0204_R135_T35JPM_20170313T081339",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.01,
+        "threshold": 0.06243013818877352,
+        "macro_fpr": 0.009999978021336259,
+        "denominators": [
+          3184907
+        ],
+        "false_positives": [
+          31849
+        ],
+        "next_lower_observed_threshold": 0.0624295345634364,
+        "next_batch_macro_fpr": 0.010000292002246848,
+        "next_batch_false_positives": [
+          31850
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "revised_common",
+      "policy": "L3",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20170501T183311_N0205_R127_T11SPC_20170501T183311",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.01,
+        "threshold": 0.0137805962112992,
+        "macro_fpr": 0.009999819011609774,
+        "denominators": [
+          2375843
+        ],
+        "false_positives": [
+          23758
+        ],
+        "next_lower_observed_threshold": 0.013780276462144785,
+        "next_batch_macro_fpr": 0.010000239914842857,
+        "next_batch_false_positives": [
+          23759
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "revised_common",
+      "policy": "L3",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20170516T105031_N0205_R051_T31UDP_20170516T105322",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.01,
+        "threshold": 0.05845822082136639,
+        "macro_fpr": 0.00999973134773577,
+        "denominators": [
+          3238387
+        ],
+        "false_positives": [
+          32383
+        ],
+        "next_lower_observed_threshold": 0.05845788342681887,
+        "next_batch_macro_fpr": 0.010000040143441781,
+        "next_batch_false_positives": [
+          32384
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "revised_common",
+      "policy": "L3",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20170917T103021_N0205_R108_T31TFJ_20170917T103018",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.01,
+        "threshold": 0.22162638193916984,
+        "macro_fpr": 0.009999642883322463,
+        "denominators": [
+          2660195
+        ],
+        "false_positives": [
+          26601
+        ],
+        "next_lower_observed_threshold": 0.22161467048706474,
+        "next_batch_macro_fpr": 0.010000018795614607,
+        "next_batch_false_positives": [
+          26602
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "revised_common",
+      "policy": "L3",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20180422T102031_N0206_R065_T32UPU_20180422T141352",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.01,
+        "threshold": 0.04682271222983893,
+        "macro_fpr": 0.009999984810303475,
+        "denominators": [
+          3291705
+        ],
+        "false_positives": [
+          32917
+        ],
+        "next_lower_observed_threshold": 0.04682264178483872,
+        "next_batch_macro_fpr": 0.010000288604233977,
+        "next_batch_false_positives": [
+          32918
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    },
+    {
+      "version": "revised_common",
+      "policy": "L3",
+      "kind": "B",
+      "product": "S2A_MSIL1C_20180505T141051_N0206_R110_T21LWK_20180505T160911",
+      "point": {
+        "status": "oracle_only",
+        "budget": 0.01,
+        "threshold": 0.10912066308151785,
+        "macro_fpr": 0.009999610507232979,
+        "denominators": [
+          2028279
+        ],
+        "false_positives": [
+          20282
+        ],
+        "next_lower_observed_threshold": 0.10911635870726549,
+        "next_batch_macro_fpr": 0.010000103536051992,
+        "next_batch_false_positives": [
+          20283
+        ],
+        "next_entire_tie_batch_violates": true,
+        "score_precision": "float64 original60m probability; >=; atomic exact ties"
+      }
+    }
+  ],
+  "oracle_only": true
+}
