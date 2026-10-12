@@ -1,0 +1,17 @@
+{
+  "verified": true,
+  "sealed_files": 33,
+  "metric_rows": 1020,
+  "tail_summaries": 216,
+  "input_strata_rows": 672,
+  "source_bin_rows": 96,
+  "score_probe_rows": 170,
+  "target_full_independent_pixels_per_model": 1044484,
+  "new_fits": 0,
+  "new_thresholds": 0,
+  "created_utc": "2026-10-12T14:43:27.142801+00:00",
+  "native_manifest_sha256": "791d1abde6a591170bc596ccbeaeec28aa0c017b2d0744dbdf22957f60db1a66",
+  "protocol_and_code_git_blob_sha_exact": true,
+  "preview_png_CRC_and_dimensions_checked": true,
+  "RGB_and_primary_G7_FP_preview_visually_inspected": true
+}

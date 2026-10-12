@@ -1,0 +1,22 @@
+<!doctype html><meta charset="utf-8"><title>Phase96 T31TGF fixed previews</title>
+<style>body{font:16px sans-serif;background:#eee;margin:24px}.grid{display:grid;grid-template-columns:repeat(2,minmax(300px,1fr));gap:18px}figure{margin:0;background:white;padding:12px}img{width:100%;image-rendering:pixelated}a{color:#124}</style>
+<h1>T31TGF: same-position native previews</h1><p>All full-scene20m panels share the1022x1022 grid.60m masks use top-left1020 crop,340x340 blocks; same geographic extent except removed right/bottom2pixels. Click any image for native resolution. These are reference disagreements, not human-confirmed label errors.</p>
+<p>Probability colors:0=blue,1=yellow. FP masks:red=false positive under frozen threshold, dark=other. RGB display saturation does not change any diagnostic input. T20_full is primary; other masks are sensitivity only.</p><div class="grid">
+<figure><figcaption>RGB20m: B04/B03/B02, display TOA 0..0.4, gamma 1/2.2 only; scoring unchanged</figcaption><a href="rgb20.png"><img src="rgb20.png"></a></figure>
+<figure><figcaption>Source shadow softmax proxy 0..1; NOT calibrated correctness probability</figcaption><a href="source20.png"><img src="source20.png"></a></figure>
+<figure><figcaption>G7 Shadow probability 0..1</figcaption><a href="g7_20.png"><img src="g7_20.png"></a></figure>
+<figure><figcaption>SourceS sigmoid probability 0..1</figcaption><a href="sourceS20.png"><img src="sourceS20.png"></a></figure>
+<figure><figcaption>Reference: Surface green; Cloud white; Shadow purple; invalid black</figcaption><a href="reference20.png"><img src="reference20.png"></a></figure>
+<figure><figcaption>false_positive20_G7_100_T20_full (red=reference nonshadow predicted Shadow)</figcaption><a href="false_positive20_G7_100_T20_full.png"><img src="false_positive20_G7_100_T20_full.png"></a></figure>
+<figure><figcaption>false_positive20_G7_100_T20_same (red=reference nonshadow predicted Shadow)</figcaption><a href="false_positive20_G7_100_T20_same.png"><img src="false_positive20_G7_100_T20_same.png"></a></figure>
+<figure><figcaption>false_positive20_G7_100_T60_same (red=reference nonshadow predicted Shadow)</figcaption><a href="false_positive20_G7_100_T60_same.png"><img src="false_positive20_G7_100_T60_same.png"></a></figure>
+<figure><figcaption>false_positive20_SourceS_100_T20_full (red=reference nonshadow predicted Shadow)</figcaption><a href="false_positive20_SourceS_100_T20_full.png"><img src="false_positive20_SourceS_100_T20_full.png"></a></figure>
+<figure><figcaption>false_positive20_SourceS_100_T20_same (red=reference nonshadow predicted Shadow)</figcaption><a href="false_positive20_SourceS_100_T20_same.png"><img src="false_positive20_SourceS_100_T20_same.png"></a></figure>
+<figure><figcaption>false_positive20_SourceS_100_T60_same (red=reference nonshadow predicted Shadow)</figcaption><a href="false_positive20_SourceS_100_T60_same.png"><img src="false_positive20_SourceS_100_T60_same.png"></a></figure>
+<figure><figcaption>false_positive60_G7_100_T20_full (red=reference nonshadow predicted Shadow)</figcaption><a href="false_positive60_G7_100_T20_full.png"><img src="false_positive60_G7_100_T20_full.png"></a></figure>
+<figure><figcaption>false_positive60_G7_100_T20_same (red=reference nonshadow predicted Shadow)</figcaption><a href="false_positive60_G7_100_T20_same.png"><img src="false_positive60_G7_100_T20_same.png"></a></figure>
+<figure><figcaption>false_positive60_G7_100_T60_same (red=reference nonshadow predicted Shadow)</figcaption><a href="false_positive60_G7_100_T60_same.png"><img src="false_positive60_G7_100_T60_same.png"></a></figure>
+<figure><figcaption>false_positive60_SourceS_100_T20_full (red=reference nonshadow predicted Shadow)</figcaption><a href="false_positive60_SourceS_100_T20_full.png"><img src="false_positive60_SourceS_100_T20_full.png"></a></figure>
+<figure><figcaption>false_positive60_SourceS_100_T20_same (red=reference nonshadow predicted Shadow)</figcaption><a href="false_positive60_SourceS_100_T20_same.png"><img src="false_positive60_SourceS_100_T20_same.png"></a></figure>
+<figure><figcaption>false_positive60_SourceS_100_T60_same (red=reference nonshadow predicted Shadow)</figcaption><a href="false_positive60_SourceS_100_T60_same.png"><img src="false_positive60_SourceS_100_T60_same.png"></a></figure>
+</div>

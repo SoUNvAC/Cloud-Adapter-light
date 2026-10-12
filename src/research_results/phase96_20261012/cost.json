@@ -1,0 +1,10 @@
+{
+  "seconds": 391.0320134819922,
+  "process_peak_rss_bytes": 708915200,
+  "peak_scope": "single process cumulative full target independent scoring/reference verification/diagnosis",
+  "cpu_threads_max": 4,
+  "new_fits": 0,
+  "new_thresholds": 0,
+  "new_network_forwards": 0,
+  "new_downloads": 0
+}

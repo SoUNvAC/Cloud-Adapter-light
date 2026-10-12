@@ -1,0 +1,15 @@
+{
+  "source_score_definition": "softmax of three Mask2Former aggregated mask-class scores; not calibrated probability",
+  "score_bins": "original cached Source score, not native aggregate or inverse of rounded logit",
+  "AP": "Target no reference Shadow: AP/recall NA; other-group AP not computed in this tail-only protocol",
+  "preview": "RGB and G7 primary FP visually inspected; display-only stretch; no manual semantic confirmation",
+  "cost_peak_scope": "single process cumulative full target independent scoring/reference verification/diagnosis",
+  "thresholds": "No new threshold; all3 previous thresholds retained; T20_full main.20m uses original native logit/score for T20 thresholds and probability for T60 threshold;60m uses float64 probability",
+  "limits": [
+    "No joint OOD or causal attribution",
+    "No deletion-based pass",
+    "Calibration was used for threshold choice",
+    "No new ALCD pixel reads; inherited54-block precrash SHA limitation unchanged",
+    "Human B not completed; original failed gates unchanged"
+  ]
+}
