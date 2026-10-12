@@ -1,0 +1,34 @@
+{
+  "models": {
+    "A_G7_100": {
+      "max_violation": 0.6752191632986069,
+      "violating_pairs": 16759,
+      "violating_points": 6400,
+      "point_count": 6400,
+      "levels": [
+        -2.6153646302223206,
+        -1.941402369737625,
+        -1.313443660736084,
+        -0.22078120782971408,
+        0.49212244361639046
+      ],
+      "scores_sha256": "e65b88767fec95062ec5664774ea81f75c8e67b41d5f532f3965669d893e5642"
+    },
+    "B_SourceMonotonic": {
+      "max_violation": 0.0,
+      "violating_pairs": 0,
+      "violating_points": 0,
+      "point_count": 6400,
+      "levels": [
+        -2.6153646302223206,
+        -1.941402369737625,
+        -1.313443660736084,
+        -0.22078120782971408,
+        0.49212244361639046
+      ],
+      "scores_sha256": "793df03efa531ef04666b80fc7d85c608f97e7f64495ba83e4ae2b9b27cec4bf"
+    }
+  },
+  "scope": "100 groups x first64 original fixed samples x five fixed train quantiles",
+  "tolerance": 1e-07
+}

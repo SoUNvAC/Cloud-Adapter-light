@@ -1,0 +1,46 @@
+{
+  "created_utc": "2026-10-12T14:53:10.792243+00:00",
+  "file": "B_SourceMonotonic.pkl",
+  "sha256": "16b6f8fbf94a171457de1023cb030273abbb6bd5faf3736939c5393f10722392",
+  "params": {
+    "categorical_features": null,
+    "class_weight": null,
+    "early_stopping": false,
+    "interaction_cst": null,
+    "l2_regularization": 1.0,
+    "learning_rate": 0.05,
+    "loss": "log_loss",
+    "max_bins": 255,
+    "max_depth": 4,
+    "max_features": 1.0,
+    "max_iter": 200,
+    "max_leaf_nodes": 15,
+    "min_samples_leaf": 20,
+    "monotonic_cst": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "n_iter_no_change": 10,
+    "random_state": 93012,
+    "scoring": "loss",
+    "tol": 1e-07,
+    "validation_fraction": 0.1,
+    "verbose": 0,
+    "warm_start": false
+  },
+  "n_iter": 200,
+  "classes": [
+    0.0,
+    1.0
+  ],
+  "training_reload_exact": true,
+  "fit_input_lock_sha256": "1cad37e7b471b9169973092c906c5cdd2ebe545f9d5068c6ba48802ed3656489",
+  "new_fits": 1,
+  "fit_seconds": 4.164225844986504,
+  "process_peak_rss_bytes": 330002432
+}
