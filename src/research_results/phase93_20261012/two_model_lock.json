@@ -1,0 +1,1959 @@
+{
+  "status": "two_models_and_probability_thresholds_frozen",
+  "models": {
+    "G6": {
+      "model_file": "G6.pkl",
+      "model_sha256": "385b26b0b90b10281e24b0a3f73479ac2d9811c65ac345af75c1f35c0ebc9cd0",
+      "params": {
+        "categorical_features": null,
+        "class_weight": null,
+        "early_stopping": false,
+        "interaction_cst": null,
+        "l2_regularization": 1.0,
+        "learning_rate": 0.05,
+        "loss": "log_loss",
+        "max_bins": 255,
+        "max_depth": 4,
+        "max_features": 1.0,
+        "max_iter": 200,
+        "max_leaf_nodes": 15,
+        "min_samples_leaf": 20,
+        "monotonic_cst": null,
+        "n_iter_no_change": 10,
+        "random_state": 93012,
+        "scoring": "loss",
+        "tol": 1e-07,
+        "validation_fraction": 0.1,
+        "verbose": 0,
+        "warm_start": false
+      },
+      "rounds": 200,
+      "classes": [
+        0.0,
+        1.0
+      ],
+      "threshold": 0.16370351612567902,
+      "threshold_domain": "probability; direct >=; NO sigmoid",
+      "fit_macro_fpr": 0.009999997828196498,
+      "sample_features_sha256": "0e751d0bcf3cc8f8c4f0bfdc90b566a2fb615879daed711dff02e60905238007",
+      "full_fit_negative_counts": [
+        {
+          "product": "S2A_MSIL1C_20181016T101021_N0206_R022_T31RGM_20181016T122415",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "9e2b539ba82a475f9f548c326f71ed3f46bce6ffef998d9e22dbc55b058fb78e",
+          "false_positive": 0
+        },
+        {
+          "product": "S2B_MSIL1C_20180605T140729_N0206_R053_T24WWU_20180605T160557",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "de42fe27e2ce1f4ddb0dcde804036690407fdd4a56360ddbd69be746ceea12e3",
+          "false_positive": 230
+        },
+        {
+          "product": "S2B_MSIL1C_20180504T082559_N0206_R021_T33JYG_20180504T112951",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "4982cbf3006c802660538afceeddb146c73adcdfae3dd8f20b1070174f0ab22f",
+          "false_positive": 4773
+        },
+        {
+          "product": "S2B_MSIL1C_20180621T010649_N0206_R131_T55TEH_20180621T043619",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "90cf4d1720d64592f4ca5167a71142951a123e330a17692fcc99fc8f8b7569f2",
+          "false_positive": 0
+        },
+        {
+          "product": "S2B_MSIL1C_20181024T102059_N0206_R065_T31QEF_20181024T160131",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "691afad9c978117b4c1ff1c2350fdf6a27d69e3898c9b217c752d227adb8aca8",
+          "false_positive": 0
+        },
+        {
+          "product": "S2B_MSIL1C_20180313T050719_N0206_R133_T38CPE_20180313T085711",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "1f612f0968ac7da261328b3fbca13b32002465be73cad746486ea78bd663374d",
+          "false_positive": 0
+        },
+        {
+          "product": "S2B_MSIL1C_20180422T042659_N0206_R133_T48VUK_20180422T074056",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "59a6cba36ce37ef87b7dde3c728aaa8ec0139c74c9ae6288cda334b782e6377c",
+          "false_positive": 0
+        },
+        {
+          "product": "S2A_MSIL1C_20180221T065911_N0206_R063_T40RBV_20180221T103641",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "4795ee3c277e54a2092ef30a085d08d845226bb2c30850436d6526b0041ec4cc",
+          "false_positive": 0
+        },
+        {
+          "product": "S2B_MSIL1C_20180509T155859_N0206_R097_T20VLP_20180509T200612",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "5adeec003ec9223c457afb324eb285c3448750d54ce164a871597d2cf73ef6c4",
+          "false_positive": 0
+        },
+        {
+          "product": "S2B_MSIL1C_20180423T171859_N0206_R012_T14SMJ_20180423T204026",
+          "negative_count": 1006196,
+          "negative_probability_sha256": "b56d2062f91c36e0e7e4c8a6af6707f21378410cc28770140f2e44ee198c1fd1",
+          "false_positive": 323
+        },
+        {
+          "product": "S2A_MSIL1C_20180713T105621_N0206_R094_T29NKG_20180713T144447",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "88bb4e950468affa5619b664c9fd9a0f0b602fc2b7ba520885c60f0b801b9552",
+          "false_positive": 175
+        },
+        {
+          "product": "S2A_MSIL1C_20180507T174911_N0206_R141_T15WXQ_20180507T213154",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "6110849c264c9ebac4ccf9a00e5a4bd41539fc879ae9d3a0a70214fa29e8c370",
+          "false_positive": 42
+        },
+        {
+          "product": "S2B_MSIL1C_20180910T172149_N0206_R012_T17WMT_20180910T221954",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "807c4b85c4061ed7a730298129d187575ed3e47bb0dc1bfc06f7086178e951e4",
+          "false_positive": 59
+        },
+        {
+          "product": "S2B_MSIL1C_20181025T001109_N0206_R073_T55GCR_20181025T013455",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "264f43cfcb340e99a698038e966e33870964100f7ba5273f6a9fd06ede8f43df",
+          "false_positive": 56
+        },
+        {
+          "product": "S2B_MSIL1C_20180210T232709_N0206_R130_T01VEK_20180211T005618",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "7b1006f30844afc4b07d249c0d67cc1a6c01fb20604d2fbca110a32cf6c30441",
+          "false_positive": 0
+        },
+        {
+          "product": "S2B_MSIL1C_20180428T044659_N0206_R076_T45SYC_20180428T080201",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "74d812e8bffdecc3237c5b8a2ad5f2a92dced61d62820484aa43b55e370dcf66",
+          "false_positive": 0
+        },
+        {
+          "product": "S2B_MSIL1C_20181125T200529_N0207_R099_T58CET_20181125T210826",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "d810ee36ef0e1e72f28fce63c58bb40b5c19448170f503427553d812052cc32d",
+          "false_positive": 0
+        },
+        {
+          "product": "S2A_MSIL1C_20180818T061631_N0206_R034_T43VFG_20180818T074215",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "eb2c920114d929254f6e7dc840698769fd0edb74231456778e2ff906a1eb1c2a",
+          "false_positive": 0
+        },
+        {
+          "product": "S2B_MSIL1C_20180322T031539_N0206_R118_T48NWP_20180322T080731",
+          "negative_count": 866094,
+          "negative_probability_sha256": "1d14f02c1fa1d805f9005d0210783cac5cee5ba0620de9eafdad3028bbb472ce",
+          "false_positive": 23558
+        },
+        {
+          "product": "S2A_MSIL1C_20180621T083651_N0206_R064_T34KBG_20180621T123155",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "9f6341c0f8ce86eae06f05a85821ebde7c93e5392ae53a19ad85e1a3010a39e0",
+          "false_positive": 6377
+        },
+        {
+          "product": "S2B_MSIL1C_20180318T202139_N0206_R071_T10WDB_20180318T221036",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "62cd3cf1b55ec0f2a4919b6dcdaa8a2541420e4f14bbada2116ccc6bb9bb847b",
+          "false_positive": 0
+        },
+        {
+          "product": "S2B_MSIL1C_20180517T220529_N0206_R072_T04WES_20180517T234440",
+          "negative_count": 951117,
+          "negative_probability_sha256": "640e26cb0c71334d29090881742edc599b8c4bbb99fc62eb71509d37b38077b0",
+          "false_positive": 78747
+        },
+        {
+          "product": "S2A_MSIL1C_20181207T073301_N0207_R049_T40VDH_20181207T093052",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "31c8bb3a490d1e45c7ae7345532cdc90edaeb8cd54e0ab82296b73a37615a4bb",
+          "false_positive": 0
+        },
+        {
+          "product": "S2B_MSIL1C_20180201T024929_N0206_R132_T51STA_20180201T062115",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "76242a85a83a48f7e14eec4a869276b1c16e2bc883d2a766e7010c320eeaab00",
+          "false_positive": 419
+        },
+        {
+          "product": "S2B_MSIL1C_20180625T230019_N0206_R058_T58KHC_20180626T001009",
+          "negative_count": 919928,
+          "negative_probability_sha256": "d942ad6b87217d83a5626023f0be7a08ff1496c7071bf99fb701cfe77ed09454",
+          "false_positive": 18428
+        },
+        {
+          "product": "S2A_MSIL1C_20181107T022901_N0207_R046_T50PNU_20181107T060616",
+          "negative_count": 1017953,
+          "negative_probability_sha256": "c06f80eb731c4f526b6dda74b77414da7871a4b0c234f922858e60207bb793bf",
+          "false_positive": 13495
+        },
+        {
+          "product": "S2B_MSIL1C_20180327T022549_N0206_R046_T50QQH_20180327T060147",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "934ab05810671291beea966eca9bbd21e186b7b39063f22ce30445f4527b8f38",
+          "false_positive": 119
+        },
+        {
+          "product": "S2B_MSIL1C_20180218T130239_N0206_R095_T23KNP_20180218T192559",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "73b31cff677d5dba3a25c870a0a9f395d03f4368a9c66960034d9cc24e1d81a3",
+          "false_positive": 0
+        },
+        {
+          "product": "S2A_MSIL1C_20181114T040011_N0207_R004_T48UXA_20181114T084110",
+          "negative_count": 1044483,
+          "negative_probability_sha256": "6253bfe5590790f444d8431c5795b9f4e27f158038bcd93b8af1d02317f3e3b7",
+          "false_positive": 9723
+        },
+        {
+          "product": "S2A_MSIL1C_20181102T015621_N0206_R117_T51LYE_20181102T061209",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "4954a6f08e947fd1c893bb734e0db4a7952163692a78dd125510095ed7c9b5ec",
+          "false_positive": 5426
+        },
+        {
+          "product": "S2B_MSIL1C_20181004T210519_N0206_R071_T56CNU_20181004T234310",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "7fc1b122f1d3047b7a2f9865c779743f535efce20c95eb5e8f65577705f7dccd",
+          "false_positive": 0
+        },
+        {
+          "product": "S2A_MSIL1C_20180723T124301_N0206_R095_T28WDU_20180723T144245",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "5f4d8d9342467742af8b335a9163b402e8fc2aa4793875c4d47561cf95078073",
+          "false_positive": 0
+        },
+        {
+          "product": "S2B_MSIL1C_20180816T162829_N0206_R083_T18VUM_20180816T213305",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "0f9fe888be449984ad346c4b2a490ae622624d882a4b317997500a22079bad46",
+          "false_positive": 0
+        },
+        {
+          "product": "S2B_MSIL1C_20181218T061249_N0207_R134_T41RQK_20181218T080326",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "f6e1a64c514b3b42178bc2458413097ad658b30ad36bce52b49d8c06d35ae551",
+          "false_positive": 8738
+        },
+        {
+          "product": "S2B_MSIL1C_20180805T083559_N0206_R064_T36SUH_20180805T123757",
+          "negative_count": 1033059,
+          "negative_probability_sha256": "24da2fbfadaaf1b5fd2a23ae5b1575e29d422af77f560a30750972f6b080b8f5",
+          "false_positive": 2365
+        },
+        {
+          "product": "S2B_MSIL1C_20180916T143739_N0206_R096_T19KFT_20180916T192127",
+          "negative_count": 1044026,
+          "negative_probability_sha256": "a3c7b73f7237009e2990cab84b1e630a18a10bf692047830ab5d40e132e4b4e1",
+          "false_positive": 397
+        },
+        {
+          "product": "S2B_MSIL1C_20180125T232159_N0206_R044_T58PHU_20180126T003547",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "d6cd7456c553fbb4ca11941d3fc1d0ab33f2fb713f7b50c26b4f34fd14705287",
+          "false_positive": 13638
+        },
+        {
+          "product": "S2B_MSIL1C_20180624T075609_N0206_R035_T37QBE_20180624T101209",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "84f89b96ae6ddcdfae770b67e285c754ccd17afdcebdef1b85e47e75e95e414a",
+          "false_positive": 386
+        },
+        {
+          "product": "S2A_MSIL1C_20180113T234301_N0206_R087_T57JUL_20180114T004417",
+          "negative_count": 1034238,
+          "negative_probability_sha256": "169c07e1461c4cd3f042ff0e4fb58c51af3dd0c35ad9fd60fd7cdae0cec1332f",
+          "false_positive": 7565
+        },
+        {
+          "product": "S2B_MSIL1C_20181211T080319_N0207_R035_T35LQD_20181211T101336",
+          "negative_count": 945544,
+          "negative_probability_sha256": "6c7fe4b3d9f878e4f69e54c1191f5dc82d2168c47954713ab2cf6b1d19004925",
+          "false_positive": 11351
+        },
+        {
+          "product": "S2B_MSIL1C_20180409T155859_N0206_R097_T20VMR_20180409T201750",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "58c69f399f7eb3c8239f336617c5c3c6c94d22648fe2522eeda1d734e46578ca",
+          "false_positive": 0
+        },
+        {
+          "product": "S2B_MSIL1C_20180304T021559_N0206_R003_T51PTK_20180304T055041",
+          "negative_count": 895093,
+          "negative_probability_sha256": "a3972ffce4513b6052f0cf425a459730eb41363a7921235eb5ecd891abd2a3c3",
+          "false_positive": 14490
+        },
+        {
+          "product": "S2B_MSIL1C_20181007T103019_N0206_R108_T31RCK_20181007T160704",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "01bfb5d8551af28d44c06cba4dcba3409dd4554ab929276e62583d38f5ae86e0",
+          "false_positive": 1
+        },
+        {
+          "product": "S2A_MSIL1C_20180430T043701_N0206_R033_T46RBU_20180430T082134",
+          "negative_count": 945939,
+          "negative_probability_sha256": "ee377deeee98da7ee00f72f63479c3bea906aa103293ae6065d87f7b88804e18",
+          "false_positive": 275
+        },
+        {
+          "product": "S2A_MSIL1C_20180624T170851_N0206_R112_T16UCG_20180624T223010",
+          "negative_count": 927779,
+          "negative_probability_sha256": "6648015025fd3b1fa02a7aff597b52d918e83766b47a77b0cf07c62be08ee3b4",
+          "false_positive": 18752
+        },
+        {
+          "product": "S2B_MSIL1C_20180120T004659_N0206_R102_T54KUV_20180120T020340",
+          "negative_count": 893245,
+          "negative_probability_sha256": "9d5f1e4d34c2bb3ea0925eb59282220da557185b84f2a7b48ca9f276c89e1911",
+          "false_positive": 16518
+        },
+        {
+          "product": "S2A_MSIL1C_20180420T011651_N0206_R031_T57WWT_20180420T030851",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "8e55751d5e10e809411066a36e8b01efb75dc40b5ee11ca39d366abb1e8a9cf2",
+          "false_positive": 1404
+        },
+        {
+          "product": "S2B_MSIL1C_20180417T021339_N0206_R060_T50LRQ_20180417T052932",
+          "negative_count": 986290,
+          "negative_probability_sha256": "efbf00b1f3092a0e49ad3d15fc0fba45acc841310dd3d00a0b16dabf291f05f0",
+          "false_positive": 2985
+        },
+        {
+          "product": "S2B_MSIL1C_20180524T164839_N0206_R026_T22XEM_20180524T202412",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "135ddc7c1ce18fd17fd052da572c24d21a23ef51bd10af94c3f20286527eeb01",
+          "false_positive": 18
+        },
+        {
+          "product": "S2A_MSIL1C_20180305T092031_N0206_R093_T34RCV_20180305T104344",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "81db6fbb5ba402eb9a0005aef90c46c89370915bb9c83b784119347c12126e80",
+          "false_positive": 0
+        },
+        {
+          "product": "S2A_MSIL1C_20180327T163911_N0206_R126_T17VNF_20180327T215534",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "dd7fb1c7545a2a32e5502951e280850f02849a15deb9b247773380206bfd2f4e",
+          "false_positive": 0
+        },
+        {
+          "product": "S2B_MSIL1C_20180405T175909_N0206_R041_T13UFV_20180405T200432",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "e0829dbd0a8453c7f98cd27c120a032ab7a46d7c3d54b63d5d08531b7cd0ca25",
+          "false_positive": 0
+        },
+        {
+          "product": "S2B_MSIL1C_20180505T025549_N0206_R032_T56XMJ_20180505T044859",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "869ddb205eebc7e6c624724f5c097072b08f238e6eb3192a60b9b7039e58ca18",
+          "false_positive": 0
+        },
+        {
+          "product": "S2A_MSIL1C_20180506T002101_N0206_R116_T55KFA_20180506T014715",
+          "negative_count": 1034290,
+          "negative_probability_sha256": "51669a9cf9a4f92f710797ddd0ea81efa24dbdd8902912782382c8968b6967bd",
+          "false_positive": 30560
+        },
+        {
+          "product": "S2B_MSIL1C_20180327T090559_N0206_R050_T34QCM_20180327T130501",
+          "negative_count": 1019766,
+          "negative_probability_sha256": "bd22d0086cced84adaa3a9af306d9e11e1447d85b13052f5c1e7b4bffd6aecc5",
+          "false_positive": 75
+        },
+        {
+          "product": "S2A_MSIL1C_20181117T141441_N0207_R053_T24VVM_20181117T160857",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "e6d06f50a34062b4a01a14990a3000b9f11fdd4ef051debb81e00e647c8b5ace",
+          "false_positive": 2
+        },
+        {
+          "product": "S2B_MSIL1C_20181025T150719_N0206_R082_T18LYM_20181025T195659",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "0b708684256554e0d2cdef919500f2c92f1ddf6072e9e00070b08a509e88dc5e",
+          "false_positive": 0
+        },
+        {
+          "product": "S2A_MSIL1C_20180309T071721_N0206_R006_T37LFE_20180309T110254",
+          "negative_count": 971517,
+          "negative_probability_sha256": "bdb4f61a507e1155430b94306e1c7a6653963172f40c5adc451ce879fc030251",
+          "false_positive": 1849
+        },
+        {
+          "product": "S2B_MSIL1C_20181025T081009_N0206_R078_T37TGL_20181025T102247",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "c5676ca18731fb300c6084d68b923628792eb4da2b6e1857a9066601cb029077",
+          "false_positive": 0
+        },
+        {
+          "product": "S2A_MSIL1C_20180919T101701_N0206_R065_T39XWH_20180919T122556",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "67fb321f47f1f1d81ea2a505f59fa16aa7dbf8353c58e2e146eb9a339ef1837e",
+          "false_positive": 0
+        },
+        {
+          "product": "S2B_MSIL1C_20180125T080209_N0206_R035_T36NXN_20180125T100104",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "05872a5c2d4e03811c3e1d85349c2e0fd5ff10a5d24f8474349b900f93c37c23",
+          "false_positive": 151
+        },
+        {
+          "product": "S2A_MSIL1C_20180802T230911_N0206_R101_T59LKG_20180803T002614",
+          "negative_count": 952212,
+          "negative_probability_sha256": "029d4121bf8f6197dc51175d1f0701bd632430da3eb231d90322345a0fc4b743",
+          "false_positive": 82854
+        },
+        {
+          "product": "S2B_MSIL1C_20181022T184459_N0206_R041_T04CEB_20181022T212451",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "7ad90ccb1054b5cef4b4a970c519f19e006ce19c94d9100f5a1436713a22673a",
+          "false_positive": 0
+        },
+        {
+          "product": "S2B_MSIL1C_20180615T205019_N0206_R057_T08WPC_20180615T223116",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "e05b9db41b9646191c65606bdd04666f79ea4e79c9ac82c5627aebba8c7fe4dd",
+          "false_positive": 0
+        },
+        {
+          "product": "S2A_MSIL1C_20180910T150721_N0206_R082_T19PFN_20180910T201336",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "98ba5c21c9aab7c98dc6d7ed0b26e48247f59d136578360e299a3986a7f82a8e",
+          "false_positive": 10
+        },
+        {
+          "product": "S2A_MSIL1C_20180807T064621_N0206_R020_T46XDK_20180807T075541",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "4388f1adbf58ef42f10f1195f9b99c4b62826e566ef6c357919d18353788a49e",
+          "false_positive": 0
+        },
+        {
+          "product": "S2A_MSIL1C_20181222T100421_N0207_R122_T32RNR_20181222T103540",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "d562eaf2788fe6bb893d5d2a66e618784e2451fc79caa025c8ac998cfb0c1e96",
+          "false_positive": 7214
+        },
+        {
+          "product": "S2B_MSIL1C_20180704T013709_N0206_R031_T51HXD_20180704T040609",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "4a3df87fbc1012a806f10eff83bd3e03db54c39aad5312f1d28228544b9446de",
+          "false_positive": 23981
+        },
+        {
+          "product": "S2A_MSIL1C_20180209T112221_N0206_R037_T29RKM_20180209T164004",
+          "negative_count": 900792,
+          "negative_probability_sha256": "c57f807e0843b5deb97e658d5b14695a6c1ffcb02bce2bf18570a9b8b1323dea",
+          "false_positive": 5147
+        },
+        {
+          "product": "S2A_MSIL1C_20180524T073731_N0206_R092_T36MZT_20180524T113104",
+          "negative_count": 974928,
+          "negative_probability_sha256": "cae932ca22c40f294efa28fb7ff9e7b401d0e66681e07d8a5415cda43ce10ec6",
+          "false_positive": 5178
+        },
+        {
+          "product": "S2A_MSIL1C_20180808T011651_N0206_R031_T55UEV_20180808T030949",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "1866925f1ad1584709f6d7e38bdfd79574bc88931785197f090fac7f69717582",
+          "false_positive": 4
+        },
+        {
+          "product": "S2A_MSIL1C_20181030T095121_N0206_R079_T33TWK_20181030T130454",
+          "negative_count": 966615,
+          "negative_probability_sha256": "1dad26d64c905879b4ba4d4530f223dd493edf80d95eb730cdac63ba9d4e5653",
+          "false_positive": 149998
+        },
+        {
+          "product": "S2B_MSIL1C_20180417T033539_N0206_R061_T48SYE_20180417T075420",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "c3e6a058b87afdbb4738ebce7463cf8581fde84515208d5775e3f90564094994",
+          "false_positive": 2899
+        },
+        {
+          "product": "S2B_MSIL1C_20180628T023549_N0206_R089_T53WMM_20180628T040045",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "55ced49c027858d6b68e5aaa2e26493bcd01a70617c6a7f273197439491caf09",
+          "false_positive": 0
+        },
+        {
+          "product": "S2A_MSIL1C_20180407T110621_N0206_R137_T31UCV_20180407T132633",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "0c55cd3a85e805e754710030213cccda74cc9095af6e301f19d7a4142f162381",
+          "false_positive": 0
+        },
+        {
+          "product": "S2A_MSIL1C_20181016T151651_N0206_R025_T20UPD_20181016T171323",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "9f65cac532271159a81b22693fb3e87bf8cfc9b6ba8c2a89768f93e3a219f0d9",
+          "false_positive": 0
+        },
+        {
+          "product": "S2A_MSIL1C_20180911T091551_N0206_R093_T40XEM_20180911T112934",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "d68e1518f18b27ec04d41e980a848356b54548642632d8477acf4890064a0376",
+          "false_positive": 266
+        },
+        {
+          "product": "S2B_MSIL1C_20180518T030539_N0206_R075_T54XWH_20180518T055019",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "7c998cbfd91fe3a00215e62cee0fdd07ab72d0381ca22ef59d6c70f64b35a2cf",
+          "false_positive": 45
+        },
+        {
+          "product": "S2B_MSIL1C_20180401T181919_N0206_R127_T11SQU_20180401T215241",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "7e60ee2e0c427f98d68793a52fdb51eacbac037004f9a5176479c4f974d19d7e",
+          "false_positive": 6
+        },
+        {
+          "product": "S2B_MSIL1C_20180208T224659_N0206_R101_T02WPS_20180209T001736",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "cd954021e9c44abf282e15278cfa3130c2340b149ca5087800e2f1ab833c4a7c",
+          "false_positive": 0
+        },
+        {
+          "product": "S2A_MSIL1C_20180520T161901_N0206_R040_T17TMG_20180520T194355",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "fdc9548b87007e5929642248044db9170c3c9654e29af2229cb01dbe89334065",
+          "false_positive": 0
+        },
+        {
+          "product": "S2A_MSIL1C_20180130T232841_N0206_R044_T58KBF_20180131T004509",
+          "negative_count": 990446,
+          "negative_probability_sha256": "5c0889315ea4a7ef39f02af852c6584f6a8a99144e6616d881bbf13aedfe2d87",
+          "false_positive": 15112
+        },
+        {
+          "product": "S2A_MSIL1C_20180317T031541_N0206_R118_T49RBL_20180317T065422",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "8347a6d97c704c6d2462166a94de90be3e1a8c353298f45bc86f2f4af3a6f6a1",
+          "false_positive": 0
+        },
+        {
+          "product": "S2B_MSIL1C_20180926T110029_N0206_R094_T33WWV_20180926T152251",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "36da9e7edcd225561ef4cf072abd3f1623055b4cd34a3b6cb5392f8690214285",
+          "false_positive": 0
+        },
+        {
+          "product": "S2B_MSIL1C_20181023T072949_N0206_R049_T37NFG_20181023T094608",
+          "negative_count": 922071,
+          "negative_probability_sha256": "29eb6ebdafcf6fba82dcc768b26078f62220b2b1299912ea51c2c19aea70e94e",
+          "false_positive": 3445
+        },
+        {
+          "product": "S2B_MSIL1C_20180325T064629_N0206_R020_T39PWK_20180325T120625",
+          "negative_count": 1027116,
+          "negative_probability_sha256": "3d8cdb1b4b4e3c0957540a39ced73b4e25614914815243f4e534ff5236968c41",
+          "false_positive": 2830
+        },
+        {
+          "product": "S2B_MSIL1C_20180529T073609_N0206_R092_T40VDM_20180529T095143",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "a7ea8e0b3d484ad8760da3f66f92ea137fe7b1cd79914d4cb53d0b9fb6df077a",
+          "false_positive": 0
+        },
+        {
+          "product": "S2B_MSIL1C_20180720T181919_N0206_R127_T12TWS_20180720T220347",
+          "negative_count": 1022121,
+          "negative_probability_sha256": "5e2e3f66bcfca6a23fbe6e43e7d3bf69380867d4d4d87b166baaafe3f706d941",
+          "false_positive": 72600
+        },
+        {
+          "product": "S2A_MSIL1C_20181017T112111_N0206_R037_T28PFC_20181017T131930",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "14cc55a4ec25b0f8d38d1b045faeec166d8acb17ad475d7188f6836d8981701f",
+          "false_positive": 33070
+        },
+        {
+          "product": "S2B_MSIL1C_20181203T153619_N0207_R068_T18QWH_20181203T202253",
+          "negative_count": 851539,
+          "negative_probability_sha256": "13afbb125163def8633cc55e55fa20daf2a9efb4aa37eb7bb60ebac66ad01bdf",
+          "false_positive": 76690
+        },
+        {
+          "product": "S2B_MSIL1C_20180826T062619_N0206_R077_T40QHL_20180826T092057",
+          "negative_count": 964892,
+          "negative_probability_sha256": "8381ff5c57ab3eebd75fab72b9e1c37c89711664d28f8c62f4a0bbd5839617bd",
+          "false_positive": 215
+        },
+        {
+          "product": "S2B_MSIL1C_20180918T151659_N0206_R125_T19PCL_20180918T200511",
+          "negative_count": 975918,
+          "negative_probability_sha256": "33b7eb4678a7ff5ccc60a96d7948c40ca2b23ba89d87f91991c572a909b9283d",
+          "false_positive": 25617
+        },
+        {
+          "product": "S2A_MSIL1C_20180904T160901_N0206_R140_T27XWJ_20180904T192941",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "60701b31a6959f25ed96b7ffa591aeacd620b58b72f8c0b68b8786c115645d87",
+          "false_positive": 0
+        },
+        {
+          "product": "S2A_MSIL1C_20180422T033541_N0206_R061_T49UFV_20180422T062036",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "a49113141ad9f486c77c7365b8205300da74ffac619c66a603057dd582d7eadb",
+          "false_positive": 3976
+        },
+        {
+          "product": "S2A_MSIL1C_20180718T135111_N0206_R024_T22MEB_20180718T185303",
+          "negative_count": 868188,
+          "negative_probability_sha256": "fc029aa4d3b96f533c7ce769c75eb36883f7789a6c7c29c809985d0bc46e37af",
+          "false_positive": 24434
+        },
+        {
+          "product": "S2A_MSIL1C_20180529T082601_N0206_R021_T34LFL_20180529T104228",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "aefc7e46fa5a6c2d0964c5594f16ca9fc2dfe89ff28ae03e7fb41cdf3e308c3a",
+          "false_positive": 38827
+        },
+        {
+          "product": "S2B_MSIL1C_20180203T000809_N0206_R016_T58VFL_20180203T015224",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "7a3c5d16aec371c91528cb2013fc4560f69686bc6386d38811cc1bf4e9f1f99b",
+          "false_positive": 1
+        },
+        {
+          "product": "S2A_MSIL1C_20180308T074751_N0206_R135_T37PDR_20180308T110330",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "e29b7234e3f5bbb30e649b9790455c5ced0c9d2745d7aa79c6fc3bdb31b986f7",
+          "false_positive": 13973
+        },
+        {
+          "product": "S2B_MSIL1C_20181220T033139_N0207_R018_T48SYC_20181220T060651",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "b3316d388257ed2af549febbc25234d828ae5dd51d15bbcb0e54cc41fedc9f35",
+          "false_positive": 1252
+        },
+        {
+          "product": "S2B_MSIL1C_20180807T023549_N0206_R089_T53VMK_20180807T042942",
+          "negative_count": 1033991,
+          "negative_probability_sha256": "dd1dbce632b61a20a5cfbd047fddfcbf11461d0b4e29754bd79fe1fafdd08350",
+          "false_positive": 23934
+        },
+        {
+          "product": "S2B_MSIL1C_20180201T012709_N0206_R131_T53LKK_20180201T025415",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "70cd65aaa6531e5f1177c6f21ddc0bd91913060ebc06493a8a7160d7f2c9d17c",
+          "false_positive": 0
+        },
+        {
+          "product": "S2B_MSIL1C_20180423T085559_N0206_R007_T33KTB_20180423T111031",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "bd3115f8671be9e964a0379f23ba0437a01db64fb7fee98f04938af01124a229",
+          "false_positive": 1019
+        },
+        {
+          "product": "S2B_MSIL1C_20180906T031609_N0206_R089_T45DWG_20180906T065459",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "7869bbec21728a04f8b336b3d6c1372262a4f8778736c869a0b323150222a9c2",
+          "false_positive": 190
+        },
+        {
+          "product": "S2A_MSIL1C_20180523T080711_N0206_R078_T41WMU_20180523T115652",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "aa6316145eda0b56308970d3b7ee5828b56c4f69612b87b5816ea257e05abfe6",
+          "false_positive": 0
+        },
+        {
+          "product": "S2B_MSIL1C_20180622T085559_N0206_R007_T45XVL_20180622T101430",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "904480c0c597881af6356327169a6d2548faa7eecb5a5ad1fc540f107840b3c7",
+          "false_positive": 0
+        },
+        {
+          "product": "S2B_MSIL1C_20180110T071239_N0206_R106_T40UGB_20180110T092450",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "0fc601f7f2a26e036c89e68d8d2cdc4466c161e07197c2ea3fd7f83f3939f5c1",
+          "false_positive": 0
+        },
+        {
+          "product": "S2B_MSIL1C_20180822T182909_N0206_R027_T14WNV_20180822T225726",
+          "negative_count": 993016,
+          "negative_probability_sha256": "f328818c6a83540ffd960ecb559fa9f0f1ea1f6fa7d6effe22bdfedcb1afe7cc",
+          "false_positive": 38940
+        },
+        {
+          "product": "S2B_MSIL1C_20181230T033139_N0207_R018_T48QVH_20181230T084739",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "8d12cb8b41401e52226622eb806c9ae9263b135ef2a3ddf6920e2697a8e2b36b",
+          "false_positive": 0
+        },
+        {
+          "product": "S2B_MSIL1C_20180306T162329_N0206_R040_T17SKC_20180306T201627",
+          "negative_count": 1044482,
+          "negative_probability_sha256": "5dd5d94551a60882e45ba2d5d81318cc755b0f104b6fc84a7ad652979c7a130b",
+          "false_positive": 3737
+        },
+        {
+          "product": "S2B_MSIL1C_20180315T032529_N0206_R018_T49SCC_20180315T070512",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "5beab0998c8d3f5c04faf28b22bb7d86fecea389e0282e48f369301c0857fd0b",
+          "false_positive": 812
+        },
+        {
+          "product": "S2A_MSIL1C_20180412T065621_N0206_R063_T44WMC_20180412T090348",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "af6a6d8e459c3a4b6ee284603fda0afad71c2ca30732576b221c6189fec82640",
+          "false_positive": 0
+        },
+        {
+          "product": "S2B_MSIL1C_20180305T123139_N0206_R023_T20CNC_20180305T134224",
+          "negative_count": 1044479,
+          "negative_probability_sha256": "c4329e10c4f09be44d5587cae1f0843bbbf0894c6493d6b5be780653725bf8a3",
+          "false_positive": 2624
+        },
+        {
+          "product": "S2A_MSIL1C_20180817T215051_N0206_R029_T14XMQ_20180818T001725",
+          "negative_count": 1044415,
+          "negative_probability_sha256": "4f30a5116545693b6f4c2b3b96cd2064dd128d662a79bc4900d15664201bec46",
+          "false_positive": 0
+        },
+        {
+          "product": "S2B_MSIL1C_20180630T002059_N0206_R116_T55HCC_20180630T014728",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "1a3bdecbbfb9c92ec05e0594f988ee70fc69d5e44aac0e3040e99d6df6c0c211",
+          "false_positive": 10022
+        },
+        {
+          "product": "S2A_MSIL1C_20180327T151701_N0206_R125_T19NBJ_20180327T203443",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "2be7fb2d16ed197809cd93d352e172729437b2376d79256df694a41663908906",
+          "false_positive": 0
+        },
+        {
+          "product": "S2A_MSIL1C_20180913T081601_N0206_R121_T35LKE_20180913T103649",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "929bce17d2d764b545e886098e3de8b0545e39b73a1f6d6018ba3bc6ba97c750",
+          "false_positive": 53
+        },
+        {
+          "product": "S2A_MSIL1C_20181030T044921_N0206_R076_T45RXQ_20181030T065311",
+          "negative_count": 944513,
+          "negative_probability_sha256": "42953ecbd01326fd32c2add743894fdd58f30ecdc073687dc13b9aeb7c0db634",
+          "false_positive": 35047
+        },
+        {
+          "product": "S2A_MSIL1C_20180603T155901_N0206_R097_T17SNA_20180603T194236",
+          "negative_count": 1017048,
+          "negative_probability_sha256": "41c9617e6d303ef80283abfaf176c01287d5170f2de7e98bd6b695831c5da5df",
+          "false_positive": 4297
+        },
+        {
+          "product": "S2A_MSIL1C_20180225T013651_N0206_R117_T55VCC_20180225T050918",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "ed146563103ed0adcf38a618f5a2c5f9faf0e48a3e7ca9e5a404fc9892030d8c",
+          "false_positive": 0
+        },
+        {
+          "product": "S2A_MSIL1C_20180824T150721_N0206_R125_T21UUP_20180824T185559",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "7195986a0c62ddfa5fd5686aed64211eaaa4373082fdccf453d4e61775bcc696",
+          "false_positive": 8242
+        },
+        {
+          "product": "S2A_MSIL1C_20180613T141951_N0206_R096_T23VNK_20180613T162358",
+          "negative_count": 942793,
+          "negative_probability_sha256": "ec50d0db20228863af642d2feded3f9a9273a49861cdf7db1748430fd8e115d6",
+          "false_positive": 5490
+        },
+        {
+          "product": "S2A_MSIL1C_20181214T090351_N0207_R007_T34QGM_20181214T102932",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "b401c4afd69a4a4bd5853512ec59418f83bd65b7261b71589bf01686fda4617b",
+          "false_positive": 0
+        },
+        {
+          "product": "S2A_MSIL1C_20180407T211031_N0206_R143_T11XMF_20180407T230149",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "44551c1d9b96cecea12f9f02f7c37f6660538391d5d1d1e14a0441082677eafa",
+          "false_positive": 0
+        },
+        {
+          "product": "S2A_MSIL1C_20181112T070221_N0207_R120_T38KRD_20181112T102254",
+          "negative_count": 1009947,
+          "negative_probability_sha256": "a690b4450fcd3ab0edf94c3b0c58415ac4b65cd4b8b88a9bcd1f0ac8b6be0350",
+          "false_positive": 7020
+        },
+        {
+          "product": "S2A_MSIL1C_20180805T093031_N0206_R136_T33RWN_20180805T115126",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "6c8995f591eae9aa907c90d4e974287bb35c2e6d0ad6e68f8fd1e3c2c8a809bd",
+          "false_positive": 633
+        },
+        {
+          "product": "S2B_MSIL1C_20180107T102359_N0206_R065_T32UPD_20180107T121759",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "37209176fabcb60607ff56344016798fac02a784f2b343d16624853bfe50f826",
+          "false_positive": 0
+        },
+        {
+          "product": "S2A_MSIL1C_20180404T023551_N0206_R089_T49NFB_20180404T061047",
+          "negative_count": 1026268,
+          "negative_probability_sha256": "3163811b59770ccb45541d618d407a9fccc69b173cf3a730826b7d9d72189bf8",
+          "false_positive": 10877
+        },
+        {
+          "product": "S2B_MSIL1C_20181220T002659_N0207_R016_T54JYP_20181220T014154",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "b935dc13be359eb734ef3e1a407059e104a68ebb03f8c74a23c651cd67b7493d",
+          "false_positive": 2381
+        },
+        {
+          "product": "S2A_MSIL1C_20180626T144731_N0206_R139_T20PMQ_20180626T163032",
+          "negative_count": 937469,
+          "negative_probability_sha256": "3800c32d5a0eba45b1754b955d436680ba8b39ed318e693aef8a92089fc0ab6a",
+          "false_positive": 20506
+        },
+        {
+          "product": "S2A_MSIL1C_20181231T004701_N0207_R102_T54HTH_20181231T021140",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "2a1d921f8b1a5f3daf2f2532791a959a041948971d1dbb373c65affcfdbbdf5b",
+          "false_positive": 14017
+        },
+        {
+          "product": "S2B_MSIL1C_20180808T022319_N0206_R103_T50MRV_20180808T054332",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "9f22dd9689aa95f77de40b85a4fb64d8880337b9ec94a5497e4bc5946536f9c7",
+          "false_positive": 522
+        },
+        {
+          "product": "S2A_MSIL1C_20180721T165851_N0206_R069_T15TWF_20180721T221510",
+          "negative_count": 1008319,
+          "negative_probability_sha256": "b5e33e87262be66c1b0c361e54753ae8fadbfe9018fbd0a501294f5ea69041f6",
+          "false_positive": 4508
+        },
+        {
+          "product": "S2B_MSIL1C_20180408T062629_N0206_R077_T42VXJ_20180408T082353",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "74ae60c4c37784b626f24c6a4160f7265bd1e98e6d7c85c39e308d23a030cbd8",
+          "false_positive": 0
+        },
+        {
+          "product": "S2A_MSIL1C_20180326T084601_N0206_R107_T33MZR_20180326T141333",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "deda26779c1749080332c113ed9824ba3d423294fe18acd5747f352264cc7a45",
+          "false_positive": 23390
+        },
+        {
+          "product": "S2A_MSIL1C_20180108T104421_N0206_R008_T31TEF_20180108T124506",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "7d46f583cbff94f6f65222092a311a7c0f9e4c0990a19ac71d28e26a0310e45a",
+          "false_positive": 15
+        },
+        {
+          "product": "S2B_MSIL1C_20180827T174039_N0206_R098_T12RYN_20180827T214315",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "0e654fd80d01efb2f8934120eec7a0752afff0234ae6c198b468f8cdfe24e42a",
+          "false_positive": 0
+        },
+        {
+          "product": "S2A_MSIL1C_20181101T071031_N0206_R106_T39QUU_20181104T003526",
+          "negative_count": 882791,
+          "negative_probability_sha256": "12d91e9faf5f2b528ee914258ab2ccb4bed2295a2e54980fcb9999cfd8f26755",
+          "false_positive": 9099
+        },
+        {
+          "product": "S2A_MSIL1C_20180213T092101_N0206_R093_T35VPC_20180213T114024",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "e076aad53760fa304161dc0899fe4f9291629a53a1260ca7ad79e34ab8dbee6c",
+          "false_positive": 0
+        },
+        {
+          "product": "S2B_MSIL1C_20180930T125859_N0206_R009_T21DVG_20180930T173801",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "4176f1f5ccd6d68c80f450f40be79813474cac1e8323652be45864f1d515cd98",
+          "false_positive": 1204
+        },
+        {
+          "product": "S2B_MSIL1C_20180205T073059_N0206_R049_T37LDL_20180205T111142",
+          "negative_count": 843358,
+          "negative_probability_sha256": "c5faf9ca36aea9798a9fd04e958c3c5b666551dd262549e609090728866b16e9",
+          "false_positive": 10659
+        },
+        {
+          "product": "S2A_MSIL1C_20180729T025551_N0206_R032_T49PER_20180729T055945",
+          "negative_count": 1029757,
+          "negative_probability_sha256": "6e4b84a2e7ee4854973844aac6dcd3a899ed94abcc59183dc310437ef3b0b230",
+          "false_positive": 6233
+        },
+        {
+          "product": "S2A_MSIL1C_20180321T094031_N0206_R036_T32QQL_20180321T115059",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "63383af13a591bf4d089d8f1a02516ea8141477c7ad8d4a949b7437407e53eaa",
+          "false_positive": 0
+        },
+        {
+          "product": "S2A_MSIL1C_20180208T020441_N0206_R017_T50HPK_20180208T051613",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "dcec4e4fec6c33fc6c44c76bf7ac7ace0db1354471d7ee0bec4564ce7fb3f796",
+          "false_positive": 0
+        },
+        {
+          "product": "S2B_MSIL1C_20180810T160819_N0206_R140_T16QDD_20180810T211922",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "9c196f0aef29710290b2b3ad73908e73410a529ee13ccdf56b06371e77daa056",
+          "false_positive": 0
+        },
+        {
+          "product": "S2A_MSIL1C_20180516T100031_N0206_R122_T32QKD_20180516T121050",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "9dffd339e3d1d21960511ef43b479fe808f77eeda8cf4d04e0c15bcf910b9285",
+          "false_positive": 0
+        },
+        {
+          "product": "S2A_MSIL1C_20180923T081641_N0206_R121_T38VPM_20180923T103658",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "26975205ba8292f9c7f7dd0f25b336e9e0556f701714a17ea785bcdefe801e1c",
+          "false_positive": 325683
+        },
+        {
+          "product": "S2B_MSIL1C_20180922T075619_N0206_R035_T35KMQ_20180922T114414",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "4e31ba7add4a44ab372fc83acc9f6132d31a5998a273f41b75369896ed3ddadd",
+          "false_positive": 0
+        },
+        {
+          "product": "S2B_MSIL1C_20180617T095029_N0206_R079_T33SUT_20180617T120017",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "6a73317f650fcbbe1b89fa59905eb4a3f4e0a24d704fd7ca18f815d01ba04ee8",
+          "false_positive": 1
+        },
+        {
+          "product": "S2A_MSIL1C_20180518T021651_N0206_R003_T52TDM_20180518T055214",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "63e16b6f28596fee17ef1a7792cc3dcdd03a1651d1dd71f3db585e3dc67bba99",
+          "false_positive": 0
+        },
+        {
+          "product": "S2A_MSIL1C_20180830T033531_N0206_R061_T50VNN_20180830T063203",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "7822b21ff8808eace6743dd103007f5f16ade247ec98d6d2c2c6578517be5d75",
+          "false_positive": 53104
+        },
+        {
+          "product": "S2A_MSIL1C_20180521T054641_N0206_R048_T42QXL_20180521T085815",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "775c70fe38745d3dcf7e82ac5de9af900b92111ed794e637c3717a69bd29745b",
+          "false_positive": 2105
+        },
+        {
+          "product": "S2B_MSIL1C_20181212T080919_N0207_R049_T22CEP_20181212T094237",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "d1478292476fb71e6499fc8db3d0219f02040002283cf7dbb94287efd64fa65d",
+          "false_positive": 0
+        },
+        {
+          "product": "S2A_MSIL1C_20180925T142031_N0206_R010_T19HGA_20180925T180630",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "45e8a26ae660acbb3bf2556e87a2c42861f71b9050231dff9bc4e543c22c3a62",
+          "false_positive": 1342
+        }
+      ],
+      "fit_input_lock_sha256": "d047e88d574c36bad3553dfd55445fa844b898ee0a2914718c63ab69bd460563",
+      "frozen_before_evaluation": true,
+      "cost": {
+        "fit_seconds": 5.690692278993083,
+        "process_peak_rss_bytes": 7329894400,
+        "peak_scope": "cumulative process high-water, including preflight; not isolated estimator memory",
+        "full_fit_threshold_seconds": 451.9368826819991
+      },
+      "calibration_independent": false
+    },
+    "G7": {
+      "model_file": "G7.pkl",
+      "model_sha256": "e0e701b1fa68fdb96eb93eab1c88687f6eef3574b7f455db0e8f42c441ea9513",
+      "params": {
+        "categorical_features": null,
+        "class_weight": null,
+        "early_stopping": false,
+        "interaction_cst": null,
+        "l2_regularization": 1.0,
+        "learning_rate": 0.05,
+        "loss": "log_loss",
+        "max_bins": 255,
+        "max_depth": 4,
+        "max_features": 1.0,
+        "max_iter": 200,
+        "max_leaf_nodes": 15,
+        "min_samples_leaf": 20,
+        "monotonic_cst": null,
+        "n_iter_no_change": 10,
+        "random_state": 93012,
+        "scoring": "loss",
+        "tol": 1e-07,
+        "validation_fraction": 0.1,
+        "verbose": 0,
+        "warm_start": false
+      },
+      "rounds": 200,
+      "classes": [
+        0.0,
+        1.0
+      ],
+      "threshold": 0.20666278898715973,
+      "threshold_domain": "probability; direct >=; NO sigmoid",
+      "fit_macro_fpr": 0.009999926616535083,
+      "sample_features_sha256": "3e1bb5e0ac417b702f724a96f3ed85d83553708a4fac6e87aac7c36d523f0aed",
+      "full_fit_negative_counts": [
+        {
+          "product": "S2A_MSIL1C_20181016T101021_N0206_R022_T31RGM_20181016T122415",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "25c2d4256309eb19610dfba5b7cef78f51734c884b5c8204c0d29bb2385adb8f",
+          "false_positive": 0
+        },
+        {
+          "product": "S2B_MSIL1C_20180605T140729_N0206_R053_T24WWU_20180605T160557",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "8ee319f39874ec38601c1e2a36eabce725525934c443f0210438a699792549f8",
+          "false_positive": 13
+        },
+        {
+          "product": "S2B_MSIL1C_20180504T082559_N0206_R021_T33JYG_20180504T112951",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "ba0b63f66e35aae50a8dc501dee77273a9083de75605b6ebfacf9a7e8364a690",
+          "false_positive": 32
+        },
+        {
+          "product": "S2B_MSIL1C_20180621T010649_N0206_R131_T55TEH_20180621T043619",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "35c802ab24e29fa507b30e9ae985f26fa47a131eec6467317abbee17c104187b",
+          "false_positive": 0
+        },
+        {
+          "product": "S2B_MSIL1C_20181024T102059_N0206_R065_T31QEF_20181024T160131",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "ce4725eac8bafc004d0064ea44c38e3336fb7a479eed49ea8df2af6eb7431637",
+          "false_positive": 836
+        },
+        {
+          "product": "S2B_MSIL1C_20180313T050719_N0206_R133_T38CPE_20180313T085711",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "c5198dd8daf95fe3d5970f3ad109b813a57ad65ba38547320a4fdbf5b1de4702",
+          "false_positive": 0
+        },
+        {
+          "product": "S2B_MSIL1C_20180422T042659_N0206_R133_T48VUK_20180422T074056",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "a9f5870eb77b231af5974aae46613143caa06a32da581665b216b01719a20458",
+          "false_positive": 0
+        },
+        {
+          "product": "S2A_MSIL1C_20180221T065911_N0206_R063_T40RBV_20180221T103641",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "8bfe04255c81da0668edf6fc8b71e888ce2f7987d99b88ea62103d31b24b50f1",
+          "false_positive": 2360
+        },
+        {
+          "product": "S2B_MSIL1C_20180509T155859_N0206_R097_T20VLP_20180509T200612",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "8581110f12465b7e1135273b73e5eceac81c812e8e2f141f0e7c70164714f73c",
+          "false_positive": 0
+        },
+        {
+          "product": "S2B_MSIL1C_20180423T171859_N0206_R012_T14SMJ_20180423T204026",
+          "negative_count": 1006196,
+          "negative_probability_sha256": "4853fe0a4d0f4ffa5b2c69dc10d068fa42d2bfb11060042f1c9860fcb899c157",
+          "false_positive": 4625
+        },
+        {
+          "product": "S2A_MSIL1C_20180713T105621_N0206_R094_T29NKG_20180713T144447",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "85a5b51594bcf45081dce7582ea4d7dad2ec96af688dd48db0212d18299ca476",
+          "false_positive": 2256
+        },
+        {
+          "product": "S2A_MSIL1C_20180507T174911_N0206_R141_T15WXQ_20180507T213154",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "0f0215f2f7aeb9b99856fcac0650a446f71243f11e947e4f8285fe3d284c9cc0",
+          "false_positive": 665
+        },
+        {
+          "product": "S2B_MSIL1C_20180910T172149_N0206_R012_T17WMT_20180910T221954",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "5f7ebb89a0e3b166df21ebe699a6bdb1aa540cc834e27d8733f9ed735c8e82e5",
+          "false_positive": 0
+        },
+        {
+          "product": "S2B_MSIL1C_20181025T001109_N0206_R073_T55GCR_20181025T013455",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "aaca23cf4f0d7f23c6928a7ed1503a4cc9c5de627c0b32ea1ed180a061431bb7",
+          "false_positive": 35
+        },
+        {
+          "product": "S2B_MSIL1C_20180210T232709_N0206_R130_T01VEK_20180211T005618",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "116d6e8d83ad6001947a25345d703b4e96b1a3438bb563b4a52a99d4790876f9",
+          "false_positive": 347
+        },
+        {
+          "product": "S2B_MSIL1C_20180428T044659_N0206_R076_T45SYC_20180428T080201",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "04e798557944abd22456d86ef672dd96089088f9534001b614d439e28fa0b814",
+          "false_positive": 0
+        },
+        {
+          "product": "S2B_MSIL1C_20181125T200529_N0207_R099_T58CET_20181125T210826",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "3d4480c6d8c3484451becaf8704979fbf2fa0ba7eaef3eeed12594a11d6b8de6",
+          "false_positive": 0
+        },
+        {
+          "product": "S2A_MSIL1C_20180818T061631_N0206_R034_T43VFG_20180818T074215",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "b0e78226abe138f0d5b4d335637024797153025477f1b4e2a05c15ec8a742a64",
+          "false_positive": 0
+        },
+        {
+          "product": "S2B_MSIL1C_20180322T031539_N0206_R118_T48NWP_20180322T080731",
+          "negative_count": 866094,
+          "negative_probability_sha256": "4db1ce0d5cf86869f7a85d2468bae8df9e0285aa512e3bfb92300c7726b9c1c2",
+          "false_positive": 8722
+        },
+        {
+          "product": "S2A_MSIL1C_20180621T083651_N0206_R064_T34KBG_20180621T123155",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "42587c5b31a220e403b6406253581653a8d1db94f278f15c82f1c20e6f1a17ce",
+          "false_positive": 2
+        },
+        {
+          "product": "S2B_MSIL1C_20180318T202139_N0206_R071_T10WDB_20180318T221036",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "7ebc10077a1b9bb74326400d07f9e3f4ec0061c40b846c79bf899d306e81129f",
+          "false_positive": 0
+        },
+        {
+          "product": "S2B_MSIL1C_20180517T220529_N0206_R072_T04WES_20180517T234440",
+          "negative_count": 951117,
+          "negative_probability_sha256": "9fff29f8283e9f2f63f8dc31f81b36ebe8f9eb38370a4d586743484615ceb3d0",
+          "false_positive": 56547
+        },
+        {
+          "product": "S2A_MSIL1C_20181207T073301_N0207_R049_T40VDH_20181207T093052",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "6f5cfd25c3d6840a41d095296ea11a0065c26bfd5835186f942f7c80d91b43c4",
+          "false_positive": 0
+        },
+        {
+          "product": "S2B_MSIL1C_20180201T024929_N0206_R132_T51STA_20180201T062115",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "75a46ae542664c561d6662ad7cddc0ad0fcae8c3498de8556489c52073be6aa7",
+          "false_positive": 0
+        },
+        {
+          "product": "S2B_MSIL1C_20180625T230019_N0206_R058_T58KHC_20180626T001009",
+          "negative_count": 919928,
+          "negative_probability_sha256": "74a63ceb49905f44a6f371f5e7cb2314484df823a7bd75aaf069dac504403456",
+          "false_positive": 77904
+        },
+        {
+          "product": "S2A_MSIL1C_20181107T022901_N0207_R046_T50PNU_20181107T060616",
+          "negative_count": 1017953,
+          "negative_probability_sha256": "8118c3eb5c39f626f09a56ecf76d43383d6c61f160c9b0eb06b45fcb9aaf65fd",
+          "false_positive": 3751
+        },
+        {
+          "product": "S2B_MSIL1C_20180327T022549_N0206_R046_T50QQH_20180327T060147",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "33532599c8a27cd6ea2e9ad83a383efbbb888793aa9f766f2fd5045f7b65dbee",
+          "false_positive": 0
+        },
+        {
+          "product": "S2B_MSIL1C_20180218T130239_N0206_R095_T23KNP_20180218T192559",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "14c2ae7f9bb806b8bcfceae50e695d3f2f718e533a59ea4932009f9e09d7649b",
+          "false_positive": 0
+        },
+        {
+          "product": "S2A_MSIL1C_20181114T040011_N0207_R004_T48UXA_20181114T084110",
+          "negative_count": 1044483,
+          "negative_probability_sha256": "169a1a909dea91ebdc63ce6e1cd79cb73f2feda6eefd23aad582a28c7de4b5d3",
+          "false_positive": 2393
+        },
+        {
+          "product": "S2A_MSIL1C_20181102T015621_N0206_R117_T51LYE_20181102T061209",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "50edb64180c90c022f0ddf4fe30fab478666b3b6f89cb1ded8ce3ee87b725f5a",
+          "false_positive": 4807
+        },
+        {
+          "product": "S2B_MSIL1C_20181004T210519_N0206_R071_T56CNU_20181004T234310",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "8fb9b0d6c5477fe17a67611f3c6373dc99c4b37023cbeabb1019d2880d130924",
+          "false_positive": 0
+        },
+        {
+          "product": "S2A_MSIL1C_20180723T124301_N0206_R095_T28WDU_20180723T144245",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "b630f632146cf29c6fd6a7faa6f5069d2b734167802adc9a9d132feb1f45bc5e",
+          "false_positive": 0
+        },
+        {
+          "product": "S2B_MSIL1C_20180816T162829_N0206_R083_T18VUM_20180816T213305",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "e7f3ccf2bbc7bfb4a7d777dfe1d2dd10023fb8834bbb15153479eb83f9ff534b",
+          "false_positive": 0
+        },
+        {
+          "product": "S2B_MSIL1C_20181218T061249_N0207_R134_T41RQK_20181218T080326",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "a08a295bb44848e0f1e99d9fc6937c309834c9a8bd762f49e477706a44022507",
+          "false_positive": 17
+        },
+        {
+          "product": "S2B_MSIL1C_20180805T083559_N0206_R064_T36SUH_20180805T123757",
+          "negative_count": 1033059,
+          "negative_probability_sha256": "f8f88565fa959cf21e8086abffb1b8214f290fbf04e7774f58e646a1767d7295",
+          "false_positive": 3928
+        },
+        {
+          "product": "S2B_MSIL1C_20180916T143739_N0206_R096_T19KFT_20180916T192127",
+          "negative_count": 1044026,
+          "negative_probability_sha256": "e008198691303ef55d1304a9d4d4d13f3a353d140179ecab57ef39f553da1f6e",
+          "false_positive": 686
+        },
+        {
+          "product": "S2B_MSIL1C_20180125T232159_N0206_R044_T58PHU_20180126T003547",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "320355563f58e6a4c5b6972adb1be715532a82b363bac22d34d6fe682084e22f",
+          "false_positive": 4170
+        },
+        {
+          "product": "S2B_MSIL1C_20180624T075609_N0206_R035_T37QBE_20180624T101209",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "ee67557fd63c739ff9a197498ac053c1bd00bc87f2a9fe5dee927d148a33043d",
+          "false_positive": 0
+        },
+        {
+          "product": "S2A_MSIL1C_20180113T234301_N0206_R087_T57JUL_20180114T004417",
+          "negative_count": 1034238,
+          "negative_probability_sha256": "7936428657315e69cd5269d7560638ba00073bcf5d3141dcee492274695f7927",
+          "false_positive": 22797
+        },
+        {
+          "product": "S2B_MSIL1C_20181211T080319_N0207_R035_T35LQD_20181211T101336",
+          "negative_count": 945544,
+          "negative_probability_sha256": "23efac23770731e49b0b0608cdf36c8cfde61f9178858f4a16af3e7ef1d847c3",
+          "false_positive": 27692
+        },
+        {
+          "product": "S2B_MSIL1C_20180409T155859_N0206_R097_T20VMR_20180409T201750",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "ee424e6e9692301b6a9c9ad8176dc4ece51ad63c60c74149ce9fafa0f5fcc0e6",
+          "false_positive": 0
+        },
+        {
+          "product": "S2B_MSIL1C_20180304T021559_N0206_R003_T51PTK_20180304T055041",
+          "negative_count": 895093,
+          "negative_probability_sha256": "09620dfdf3d8a4a5f96ef1a0c4a214c61a7afc1cd8a6d8bf3998ee47fbced0b4",
+          "false_positive": 73664
+        },
+        {
+          "product": "S2B_MSIL1C_20181007T103019_N0206_R108_T31RCK_20181007T160704",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "bae21398ba1f6774924efc9d46eb4940fd0b531a560d51596a9bdb6671b1d9f0",
+          "false_positive": 0
+        },
+        {
+          "product": "S2A_MSIL1C_20180430T043701_N0206_R033_T46RBU_20180430T082134",
+          "negative_count": 945939,
+          "negative_probability_sha256": "e4dea1d79a87e61555052694adb56ae047dcb5e7eda8abb9099bf8300ea6301a",
+          "false_positive": 25481
+        },
+        {
+          "product": "S2A_MSIL1C_20180624T170851_N0206_R112_T16UCG_20180624T223010",
+          "negative_count": 927779,
+          "negative_probability_sha256": "bc78758410abc14be631148ef0419af6786f90d603469726cea7865c7decb57a",
+          "false_positive": 40853
+        },
+        {
+          "product": "S2B_MSIL1C_20180120T004659_N0206_R102_T54KUV_20180120T020340",
+          "negative_count": 893245,
+          "negative_probability_sha256": "76bf9f04988577b7dc21ee9227265a1f80920f35f58b1da07d2f8072919630de",
+          "false_positive": 84125
+        },
+        {
+          "product": "S2A_MSIL1C_20180420T011651_N0206_R031_T57WWT_20180420T030851",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "7c749fd49998c2bbd40758283482c70ef02a5832466388d4a4fe5152548ca6d6",
+          "false_positive": 49300
+        },
+        {
+          "product": "S2B_MSIL1C_20180417T021339_N0206_R060_T50LRQ_20180417T052932",
+          "negative_count": 986290,
+          "negative_probability_sha256": "06f9984b33189519b5e32023e99454a895b0bb9c40f594a55532c97ea9b8eb8f",
+          "false_positive": 29881
+        },
+        {
+          "product": "S2B_MSIL1C_20180524T164839_N0206_R026_T22XEM_20180524T202412",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "5f8c5fc8bfe5027133358459ce4626761de44858f56f15b341a74894ef4b8fb8",
+          "false_positive": 715
+        },
+        {
+          "product": "S2A_MSIL1C_20180305T092031_N0206_R093_T34RCV_20180305T104344",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "7a9e82c647c229ad5d9ec058a4d541fbd4998f21ef5c22ea257af116183cf710",
+          "false_positive": 0
+        },
+        {
+          "product": "S2A_MSIL1C_20180327T163911_N0206_R126_T17VNF_20180327T215534",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "08da10c4bcd7d6c3c998fe1d98c7335d2738bd95e6b22e1968eac2df92c64eec",
+          "false_positive": 0
+        },
+        {
+          "product": "S2B_MSIL1C_20180405T175909_N0206_R041_T13UFV_20180405T200432",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "5d75e38a0f723d9d41a4c6b0f17c4729e8accef00074ef47e487463e23136fcc",
+          "false_positive": 99
+        },
+        {
+          "product": "S2B_MSIL1C_20180505T025549_N0206_R032_T56XMJ_20180505T044859",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "ea31d9849237f9984e26bfa2b7458c84a918192be49f876a35a7f5f542cb6726",
+          "false_positive": 0
+        },
+        {
+          "product": "S2A_MSIL1C_20180506T002101_N0206_R116_T55KFA_20180506T014715",
+          "negative_count": 1034290,
+          "negative_probability_sha256": "a8dd320441e90a9adb6536ab5833dd628497a42ef4fdd5bf8b45d049c031e070",
+          "false_positive": 6624
+        },
+        {
+          "product": "S2B_MSIL1C_20180327T090559_N0206_R050_T34QCM_20180327T130501",
+          "negative_count": 1019766,
+          "negative_probability_sha256": "55827807fd800cc39d0c8cd320545377d1791178909790185cb59b4d1c667994",
+          "false_positive": 5408
+        },
+        {
+          "product": "S2A_MSIL1C_20181117T141441_N0207_R053_T24VVM_20181117T160857",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "607a30fcd1645d8b9795e7e56e69a49040d00bb49058c9639ef9993ca9c2cb5f",
+          "false_positive": 5
+        },
+        {
+          "product": "S2B_MSIL1C_20181025T150719_N0206_R082_T18LYM_20181025T195659",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "3757b8538bc9d8a43c0a726fc821d5aac5e947470015b55b1978d299577b517a",
+          "false_positive": 0
+        },
+        {
+          "product": "S2A_MSIL1C_20180309T071721_N0206_R006_T37LFE_20180309T110254",
+          "negative_count": 971517,
+          "negative_probability_sha256": "533643d87a693e62b7fea8ff9b735b4e7a191672517637f83ef04804dac7037f",
+          "false_positive": 7193
+        },
+        {
+          "product": "S2B_MSIL1C_20181025T081009_N0206_R078_T37TGL_20181025T102247",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "09aac63bc86bdcbd8c9a02eb76317531ee679ec75650f56ca663e0802639f929",
+          "false_positive": 0
+        },
+        {
+          "product": "S2A_MSIL1C_20180919T101701_N0206_R065_T39XWH_20180919T122556",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "6d0277945d950ec30746a1fac21aaa98cd80995728963eaa632fe542ab4bb2a0",
+          "false_positive": 0
+        },
+        {
+          "product": "S2B_MSIL1C_20180125T080209_N0206_R035_T36NXN_20180125T100104",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "04d1ad9b62124ac0b0b60a782bafc85dce19f192b428e4d3c215f7d35414ec99",
+          "false_positive": 0
+        },
+        {
+          "product": "S2A_MSIL1C_20180802T230911_N0206_R101_T59LKG_20180803T002614",
+          "negative_count": 952212,
+          "negative_probability_sha256": "d1b8bc9e37978aed68721666e227447f68ffbdbfe196b72d69949851cb093f47",
+          "false_positive": 77583
+        },
+        {
+          "product": "S2B_MSIL1C_20181022T184459_N0206_R041_T04CEB_20181022T212451",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "ee87e0a83344cb44a9d30d376df896a6b0dfc3980a4734c9c06cc95ebb4cfb8e",
+          "false_positive": 0
+        },
+        {
+          "product": "S2B_MSIL1C_20180615T205019_N0206_R057_T08WPC_20180615T223116",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "f0cf8fb3c46de4b10230505effcec7ccdb78fc60677dec6c17562b0a26072700",
+          "false_positive": 4079
+        },
+        {
+          "product": "S2A_MSIL1C_20180910T150721_N0206_R082_T19PFN_20180910T201336",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "7f92e08af0970d6ec772f418778cc53679d6f355ba70a101cb1cf0ba945dc5e9",
+          "false_positive": 0
+        },
+        {
+          "product": "S2A_MSIL1C_20180807T064621_N0206_R020_T46XDK_20180807T075541",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "1d9a41125e05d7e5af58ec9de35f3821c233bde9171df81bbf27c70624960b02",
+          "false_positive": 0
+        },
+        {
+          "product": "S2A_MSIL1C_20181222T100421_N0207_R122_T32RNR_20181222T103540",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "ac33f24a30d54b0628fe38f7a87aaf64f5ff030507ec05cc67460560423f9c9d",
+          "false_positive": 0
+        },
+        {
+          "product": "S2B_MSIL1C_20180704T013709_N0206_R031_T51HXD_20180704T040609",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "cfafcd615314e0e5553cc17ae0c2c64633075f2e9212062f92fdbdec6185236c",
+          "false_positive": 0
+        },
+        {
+          "product": "S2A_MSIL1C_20180209T112221_N0206_R037_T29RKM_20180209T164004",
+          "negative_count": 900792,
+          "negative_probability_sha256": "afe47306750d4763670d713ce2a5d23aeb2d3502c50d0103d1f1fa7d95b2edc2",
+          "false_positive": 74130
+        },
+        {
+          "product": "S2A_MSIL1C_20180524T073731_N0206_R092_T36MZT_20180524T113104",
+          "negative_count": 974928,
+          "negative_probability_sha256": "b0ee08a188ba16900710bf184ea878ec30c00f9aea9a1581ba018d5bf153e54e",
+          "false_positive": 11160
+        },
+        {
+          "product": "S2A_MSIL1C_20180808T011651_N0206_R031_T55UEV_20180808T030949",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "884ca37886ccb26a1a86f1a3e15326e173dccf97773df7742d6d9ea91b7fc861",
+          "false_positive": 0
+        },
+        {
+          "product": "S2A_MSIL1C_20181030T095121_N0206_R079_T33TWK_20181030T130454",
+          "negative_count": 966615,
+          "negative_probability_sha256": "52c6a20eb67591a2e1875e2eabde9030c3304dcbc31479b01526775d884ac432",
+          "false_positive": 142369
+        },
+        {
+          "product": "S2B_MSIL1C_20180417T033539_N0206_R061_T48SYE_20180417T075420",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "fff914c55d4e43dc334496e73ab5ca255b1c881b7c77e6f37166ac06ee85249a",
+          "false_positive": 0
+        },
+        {
+          "product": "S2B_MSIL1C_20180628T023549_N0206_R089_T53WMM_20180628T040045",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "86fc832c075755e8b46a5bb86638b8084eb8db301c170fd7685b5d03e41a09a1",
+          "false_positive": 0
+        },
+        {
+          "product": "S2A_MSIL1C_20180407T110621_N0206_R137_T31UCV_20180407T132633",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "5e48f3c2d5ed11146e77b8b507192e21ffa5ccf5f8ea5cda38e9ca177058be3d",
+          "false_positive": 0
+        },
+        {
+          "product": "S2A_MSIL1C_20181016T151651_N0206_R025_T20UPD_20181016T171323",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "a68dca2553cc651c66249fa0aa054b82a25748ce926a0d67142452b590ea431c",
+          "false_positive": 0
+        },
+        {
+          "product": "S2A_MSIL1C_20180911T091551_N0206_R093_T40XEM_20180911T112934",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "4759c7f9e342867631adafd5710fa676a29922bb534a18e939f831c5e36b452d",
+          "false_positive": 6
+        },
+        {
+          "product": "S2B_MSIL1C_20180518T030539_N0206_R075_T54XWH_20180518T055019",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "689800a7101c033810ea284fe15f616e33c534bbff7a1febe568c6ec73e7b371",
+          "false_positive": 0
+        },
+        {
+          "product": "S2B_MSIL1C_20180401T181919_N0206_R127_T11SQU_20180401T215241",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "72c8c3a754c1675cfb87235f605d04ef7db65b28338058dcd6c0a368cd0a5dff",
+          "false_positive": 393
+        },
+        {
+          "product": "S2B_MSIL1C_20180208T224659_N0206_R101_T02WPS_20180209T001736",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "4f7f8c06780c398ccb957f93365ae95b56a5021b6652d869d0b900798960b114",
+          "false_positive": 0
+        },
+        {
+          "product": "S2A_MSIL1C_20180520T161901_N0206_R040_T17TMG_20180520T194355",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "bb18718e8b1d22cd12d92d2e2bb5d3005e7c44a8e878d59950b90ed64fab4599",
+          "false_positive": 0
+        },
+        {
+          "product": "S2A_MSIL1C_20180130T232841_N0206_R044_T58KBF_20180131T004509",
+          "negative_count": 990446,
+          "negative_probability_sha256": "cd1dbe100b9c2aa6d6b7a4ed27a27221a1b3781a7d44dd46b7680da327f3bd86",
+          "false_positive": 21616
+        },
+        {
+          "product": "S2A_MSIL1C_20180317T031541_N0206_R118_T49RBL_20180317T065422",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "5e12f25016898c660a2b7395cafbdd7afdd0a5f5e617cb033b248a638db16e52",
+          "false_positive": 0
+        },
+        {
+          "product": "S2B_MSIL1C_20180926T110029_N0206_R094_T33WWV_20180926T152251",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "e86be697825cf26f1d164b5b7bc5f1b1e97123624525504a7f56a44fb9ab942e",
+          "false_positive": 95
+        },
+        {
+          "product": "S2B_MSIL1C_20181023T072949_N0206_R049_T37NFG_20181023T094608",
+          "negative_count": 922071,
+          "negative_probability_sha256": "9b9735f563fbc4f5b507aa1e8fc13f76a76e25e1e07a3ebc55ae9032ad6df76f",
+          "false_positive": 18628
+        },
+        {
+          "product": "S2B_MSIL1C_20180325T064629_N0206_R020_T39PWK_20180325T120625",
+          "negative_count": 1027116,
+          "negative_probability_sha256": "81fd27ffd140115589d6c0ead10a53e7e5e1d53b9a6c80b59f2d974a7b8615ee",
+          "false_positive": 5221
+        },
+        {
+          "product": "S2B_MSIL1C_20180529T073609_N0206_R092_T40VDM_20180529T095143",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "cb27b12d188722413100f852ea13334c2ddd70fa330a746ccac4db97dce40c7a",
+          "false_positive": 778
+        },
+        {
+          "product": "S2B_MSIL1C_20180720T181919_N0206_R127_T12TWS_20180720T220347",
+          "negative_count": 1022121,
+          "negative_probability_sha256": "acdb80aa6f00e53dbda88892cf14a530ac97530a8a6661213e007f4ee14d810c",
+          "false_positive": 17095
+        },
+        {
+          "product": "S2A_MSIL1C_20181017T112111_N0206_R037_T28PFC_20181017T131930",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "d252ecfd73b09ce6b3d8053fb60e6c597e49ce95f9a1d39cbfb9bf6ea06bf1da",
+          "false_positive": 0
+        },
+        {
+          "product": "S2B_MSIL1C_20181203T153619_N0207_R068_T18QWH_20181203T202253",
+          "negative_count": 851539,
+          "negative_probability_sha256": "495250d064072488cf298f3194221a05710c84329da2f4dbdddeddac58d358d0",
+          "false_positive": 74114
+        },
+        {
+          "product": "S2B_MSIL1C_20180826T062619_N0206_R077_T40QHL_20180826T092057",
+          "negative_count": 964892,
+          "negative_probability_sha256": "717a55991466b9cd15fc04ba5964b1e7c3ca011eea4ad68806b8c878ddfb0cc6",
+          "false_positive": 1119
+        },
+        {
+          "product": "S2B_MSIL1C_20180918T151659_N0206_R125_T19PCL_20180918T200511",
+          "negative_count": 975918,
+          "negative_probability_sha256": "705be5864188b57b0633f0d242a08ec69028fe15023f009ec433bd63f85bd96d",
+          "false_positive": 70774
+        },
+        {
+          "product": "S2A_MSIL1C_20180904T160901_N0206_R140_T27XWJ_20180904T192941",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "7d79b6922d98e086cd4fc4f85a5232f850f2b8cc1be38b77f565526f92ef1279",
+          "false_positive": 0
+        },
+        {
+          "product": "S2A_MSIL1C_20180422T033541_N0206_R061_T49UFV_20180422T062036",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "d92cb0bdbc2c03ef0fbfe10f04a3bb37ff3c17c79057a569f906835ec922622f",
+          "false_positive": 0
+        },
+        {
+          "product": "S2A_MSIL1C_20180718T135111_N0206_R024_T22MEB_20180718T185303",
+          "negative_count": 868188,
+          "negative_probability_sha256": "d932758701b0b55a6def5be4ded84a0c1f9d1cd1f7a9670adcb8abb500cbede9",
+          "false_positive": 53717
+        },
+        {
+          "product": "S2A_MSIL1C_20180529T082601_N0206_R021_T34LFL_20180529T104228",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "ba6ce6f566b5414c19642acd9d454ae2a381ef2ddb649d8885252ccf8d5b6422",
+          "false_positive": 179
+        },
+        {
+          "product": "S2B_MSIL1C_20180203T000809_N0206_R016_T58VFL_20180203T015224",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "372117135ea42912260f4b3976db06f8ebe70418954e0145e2237dd23b36b4b8",
+          "false_positive": 0
+        },
+        {
+          "product": "S2A_MSIL1C_20180308T074751_N0206_R135_T37PDR_20180308T110330",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "5f037664b2b17ed8557941f055c7bc4134b4752cf858398438d595c1c1d69d93",
+          "false_positive": 15
+        },
+        {
+          "product": "S2B_MSIL1C_20181220T033139_N0207_R018_T48SYC_20181220T060651",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "44c50e3b74425c5d73d5f8f292e26cbcb9af210506bae757d8a0e90dd407ed9f",
+          "false_positive": 1776
+        },
+        {
+          "product": "S2B_MSIL1C_20180807T023549_N0206_R089_T53VMK_20180807T042942",
+          "negative_count": 1033991,
+          "negative_probability_sha256": "241d5d110bacc8a444982716d652a5aa1006490ccf70a84082d1cb95fc92e38b",
+          "false_positive": 4159
+        },
+        {
+          "product": "S2B_MSIL1C_20180201T012709_N0206_R131_T53LKK_20180201T025415",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "97d04586d491d24b149f0282706da51c456a0b9ca10a11fb3372b567fb6cc035",
+          "false_positive": 0
+        },
+        {
+          "product": "S2B_MSIL1C_20180423T085559_N0206_R007_T33KTB_20180423T111031",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "30297700eff85570f9239d65463304f77c27919b9f4dd0cba33cac7f0e09dce6",
+          "false_positive": 1
+        },
+        {
+          "product": "S2B_MSIL1C_20180906T031609_N0206_R089_T45DWG_20180906T065459",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "59cbed36d886da230de30b3c4dc2a9226456f9440f114c54b027ebcbfb47866d",
+          "false_positive": 0
+        },
+        {
+          "product": "S2A_MSIL1C_20180523T080711_N0206_R078_T41WMU_20180523T115652",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "06690313ed09808d3c0265f41ff3b467e6ada5c2e19e9195d7a1ef8080aef071",
+          "false_positive": 0
+        },
+        {
+          "product": "S2B_MSIL1C_20180622T085559_N0206_R007_T45XVL_20180622T101430",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "62f3c7ad391f4e75a93051a4b08f94de7423aee41953f2bdc0b981b4385bd74b",
+          "false_positive": 9
+        },
+        {
+          "product": "S2B_MSIL1C_20180110T071239_N0206_R106_T40UGB_20180110T092450",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "5d8428a8d6cba0c9322f50506a113a93a4b2cc641b85b48af835960bcc818d8d",
+          "false_positive": 0
+        },
+        {
+          "product": "S2B_MSIL1C_20180822T182909_N0206_R027_T14WNV_20180822T225726",
+          "negative_count": 993016,
+          "negative_probability_sha256": "2cca3250c403c69400fbf103039778b0e7eb3bfef269b1003ccb843bceb8ed23",
+          "false_positive": 123508
+        },
+        {
+          "product": "S2B_MSIL1C_20181230T033139_N0207_R018_T48QVH_20181230T084739",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "a11e72fda5e2458a73c96037aed8cc0e6e4d3dc48c65688f852d889c33ec3f46",
+          "false_positive": 0
+        },
+        {
+          "product": "S2B_MSIL1C_20180306T162329_N0206_R040_T17SKC_20180306T201627",
+          "negative_count": 1044482,
+          "negative_probability_sha256": "ae1aac3673625a996893deefbbdbdfc06466cf58c90262f8490c4792bc27c24a",
+          "false_positive": 27
+        },
+        {
+          "product": "S2B_MSIL1C_20180315T032529_N0206_R018_T49SCC_20180315T070512",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "482d1843112a993a9d9ffb58f66af268aed04bc83a05b19d4555575b5f10b5ba",
+          "false_positive": 0
+        },
+        {
+          "product": "S2A_MSIL1C_20180412T065621_N0206_R063_T44WMC_20180412T090348",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "b476cc5114f2603df04f8548e9c82d68bdadb331bf8922fa5a714551bdc5bb26",
+          "false_positive": 0
+        },
+        {
+          "product": "S2B_MSIL1C_20180305T123139_N0206_R023_T20CNC_20180305T134224",
+          "negative_count": 1044479,
+          "negative_probability_sha256": "ac16baea162e235c27db60ac683024ba54b055a1ffa2b7b48dda71ca911ab947",
+          "false_positive": 0
+        },
+        {
+          "product": "S2A_MSIL1C_20180817T215051_N0206_R029_T14XMQ_20180818T001725",
+          "negative_count": 1044415,
+          "negative_probability_sha256": "203bb152f55fe4a7d63cceadb147e084f1a90bc69842c70855ba9bc97dc8fa24",
+          "false_positive": 0
+        },
+        {
+          "product": "S2B_MSIL1C_20180630T002059_N0206_R116_T55HCC_20180630T014728",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "41cb570557105f793cb5f29f407638b61ec8049dc54c68cfe206b12b8f3d361c",
+          "false_positive": 5
+        },
+        {
+          "product": "S2A_MSIL1C_20180327T151701_N0206_R125_T19NBJ_20180327T203443",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "8494afb562e2c13209a0ad64cd52402afaa2728b902ba4605cdd6f4ed6b1bf62",
+          "false_positive": 0
+        },
+        {
+          "product": "S2A_MSIL1C_20180913T081601_N0206_R121_T35LKE_20180913T103649",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "8e93762e6a91075bfbb243ef56a78becb389d89b5d1cba0d94031f75620bc73b",
+          "false_positive": 0
+        },
+        {
+          "product": "S2A_MSIL1C_20181030T044921_N0206_R076_T45RXQ_20181030T065311",
+          "negative_count": 944513,
+          "negative_probability_sha256": "24b0dcff5b5ea99ea2bb1fd188a361744b4b24e1c2c5b297aa1a1b159360e03b",
+          "false_positive": 33997
+        },
+        {
+          "product": "S2A_MSIL1C_20180603T155901_N0206_R097_T17SNA_20180603T194236",
+          "negative_count": 1017048,
+          "negative_probability_sha256": "84cf18ed9c91965275cd7f34ed1a92955a5b176469ceea7c79331468eb92e08d",
+          "false_positive": 3811
+        },
+        {
+          "product": "S2A_MSIL1C_20180225T013651_N0206_R117_T55VCC_20180225T050918",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "71b6af7eeec9bbdd11e1f07ad3b315bf6b24b623dba7404347f15afa35da2922",
+          "false_positive": 0
+        },
+        {
+          "product": "S2A_MSIL1C_20180824T150721_N0206_R125_T21UUP_20180824T185559",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "436aa979a4169a858fec7cbcd3386695d233b41c15481d1544b49c47bfc597be",
+          "false_positive": 1
+        },
+        {
+          "product": "S2A_MSIL1C_20180613T141951_N0206_R096_T23VNK_20180613T162358",
+          "negative_count": 942793,
+          "negative_probability_sha256": "2b866542dc4c5c7377954918c463f0987e6d6b0707a626705561af8043c475f7",
+          "false_positive": 5684
+        },
+        {
+          "product": "S2A_MSIL1C_20181214T090351_N0207_R007_T34QGM_20181214T102932",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "8df0c230afb074449782ab40f918a55bc685bd72e27099a450d324b1e20523bd",
+          "false_positive": 0
+        },
+        {
+          "product": "S2A_MSIL1C_20180407T211031_N0206_R143_T11XMF_20180407T230149",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "7f569a9a00324e78a10ad40de89685bc4db679d8322be6405b44a722c9e542a6",
+          "false_positive": 0
+        },
+        {
+          "product": "S2A_MSIL1C_20181112T070221_N0207_R120_T38KRD_20181112T102254",
+          "negative_count": 1009947,
+          "negative_probability_sha256": "93e2bd77686d3eb55dcd112747549af1c50e31e7094dc7ef9c3ac01356774054",
+          "false_positive": 22441
+        },
+        {
+          "product": "S2A_MSIL1C_20180805T093031_N0206_R136_T33RWN_20180805T115126",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "5acec2f2a2a35cf5c3a19a565655e5fe7ba156f4711624212fe22d56307bcef0",
+          "false_positive": 0
+        },
+        {
+          "product": "S2B_MSIL1C_20180107T102359_N0206_R065_T32UPD_20180107T121759",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "2293dcbee5691ad88dafab4d0595dce90646b41b9d5d4f87c8be998c22b9dfe9",
+          "false_positive": 11
+        },
+        {
+          "product": "S2A_MSIL1C_20180404T023551_N0206_R089_T49NFB_20180404T061047",
+          "negative_count": 1026268,
+          "negative_probability_sha256": "02f94720949f3b158bd15c605b091f756eda3fe935c6b57225fbbf2197bd0a60",
+          "false_positive": 27441
+        },
+        {
+          "product": "S2B_MSIL1C_20181220T002659_N0207_R016_T54JYP_20181220T014154",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "b31451b297a5dfaff9eb07d8b52dd414e381dc35a209dcd714e7618a3e9fe954",
+          "false_positive": 0
+        },
+        {
+          "product": "S2A_MSIL1C_20180626T144731_N0206_R139_T20PMQ_20180626T163032",
+          "negative_count": 937469,
+          "negative_probability_sha256": "9816e958c095a75830ed6d97634170c55db0e791997bb0837d2fd616532ff547",
+          "false_positive": 31861
+        },
+        {
+          "product": "S2A_MSIL1C_20181231T004701_N0207_R102_T54HTH_20181231T021140",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "be2c0941ee88931abd77c71347b86fb3af6f5ab073a41404f3a5f9131b888f0f",
+          "false_positive": 140
+        },
+        {
+          "product": "S2B_MSIL1C_20180808T022319_N0206_R103_T50MRV_20180808T054332",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "cde5c8b9c22a51d7f13ceb6c707c7a804982f6cc2e20da1f492fbc0cea164eea",
+          "false_positive": 6693
+        },
+        {
+          "product": "S2A_MSIL1C_20180721T165851_N0206_R069_T15TWF_20180721T221510",
+          "negative_count": 1008319,
+          "negative_probability_sha256": "b148b03cc91b46ad8aad8efdbc488396886c9e305e319a113881faec29f1ce53",
+          "false_positive": 5648
+        },
+        {
+          "product": "S2B_MSIL1C_20180408T062629_N0206_R077_T42VXJ_20180408T082353",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "a54e8dbf2a3a45de43da8bc5abb4703182a4abd5473cfd4df06fb3ea033f8434",
+          "false_positive": 0
+        },
+        {
+          "product": "S2A_MSIL1C_20180326T084601_N0206_R107_T33MZR_20180326T141333",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "a47b3e4eec4594efb335bad1356b4fe782ce7145bf3621022ab010b484376d45",
+          "false_positive": 0
+        },
+        {
+          "product": "S2A_MSIL1C_20180108T104421_N0206_R008_T31TEF_20180108T124506",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "d60d0b38b7ad90e35d01040ba6debe8bff198e2caf7c098a34c8a1125f7448cb",
+          "false_positive": 329
+        },
+        {
+          "product": "S2B_MSIL1C_20180827T174039_N0206_R098_T12RYN_20180827T214315",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "c0afc9cd2826145b673a95e3c49b203a19a5d88d8bbc313697fead115ecf2125",
+          "false_positive": 0
+        },
+        {
+          "product": "S2A_MSIL1C_20181101T071031_N0206_R106_T39QUU_20181104T003526",
+          "negative_count": 882791,
+          "negative_probability_sha256": "df0c188a7a38140f8a75ecb4a625b598cd47c2406278f644779d3fa6c03ae89b",
+          "false_positive": 11174
+        },
+        {
+          "product": "S2A_MSIL1C_20180213T092101_N0206_R093_T35VPC_20180213T114024",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "3bd5c5c43a7c2575461a15a0369577b91e6ea5535cd091dc9f50c47fadc46cd4",
+          "false_positive": 0
+        },
+        {
+          "product": "S2B_MSIL1C_20180930T125859_N0206_R009_T21DVG_20180930T173801",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "185d30d8a8ca92b36ac2b37e80b87e219d41ee0c45041e8b6b9f54ff8f5a7719",
+          "false_positive": 0
+        },
+        {
+          "product": "S2B_MSIL1C_20180205T073059_N0206_R049_T37LDL_20180205T111142",
+          "negative_count": 843358,
+          "negative_probability_sha256": "812a03716434ec427322682c8bc9f72df920d188beb7194736bb6a2d2333fd2e",
+          "false_positive": 33422
+        },
+        {
+          "product": "S2A_MSIL1C_20180729T025551_N0206_R032_T49PER_20180729T055945",
+          "negative_count": 1029757,
+          "negative_probability_sha256": "5e34f45cc95329ee12ffcad6c96f852e37a15732ff768e85e6c3d8993f3ac803",
+          "false_positive": 307
+        },
+        {
+          "product": "S2A_MSIL1C_20180321T094031_N0206_R036_T32QQL_20180321T115059",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "bc9c15a5f4077389fc79618f3d003d79a6642722cbc74b3ea0815cd07738e9e7",
+          "false_positive": 0
+        },
+        {
+          "product": "S2A_MSIL1C_20180208T020441_N0206_R017_T50HPK_20180208T051613",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "56972dcf20dac5d1abbba1f9c492c9ced14f3f46072494cebd8383edd8b0f923",
+          "false_positive": 144
+        },
+        {
+          "product": "S2B_MSIL1C_20180810T160819_N0206_R140_T16QDD_20180810T211922",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "32b63acd099eacc65cc8f8c327a3abe3b58dff82c1802b8fe6792c5ddb4e3fe3",
+          "false_positive": 0
+        },
+        {
+          "product": "S2A_MSIL1C_20180516T100031_N0206_R122_T32QKD_20180516T121050",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "d85987291acedbe5d26a23c64c77e0c99b1affbc787fc3c66a8253dff2027f15",
+          "false_positive": 0
+        },
+        {
+          "product": "S2A_MSIL1C_20180923T081641_N0206_R121_T38VPM_20180923T103658",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "55b545008053e25d683fa95e7ee6cbcb3de22a1af203bb4c6c047b9b210eb048",
+          "false_positive": 64
+        },
+        {
+          "product": "S2B_MSIL1C_20180922T075619_N0206_R035_T35KMQ_20180922T114414",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "ebb0d442df3681fba13aa9b25aebefa53641eab755077d5fbf3ff80da841ad30",
+          "false_positive": 0
+        },
+        {
+          "product": "S2B_MSIL1C_20180617T095029_N0206_R079_T33SUT_20180617T120017",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "2ab219b28871f5365e7ac9e5c25546bf170b1a26d956db79bef38ed9088d53c1",
+          "false_positive": 0
+        },
+        {
+          "product": "S2A_MSIL1C_20180518T021651_N0206_R003_T52TDM_20180518T055214",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "75e03ecb158495b701bddaf24ebb2b75dbd63b13051ee07d41701fe1856e6314",
+          "false_positive": 0
+        },
+        {
+          "product": "S2A_MSIL1C_20180830T033531_N0206_R061_T50VNN_20180830T063203",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "408376e2654e24dd6c81d2c7cd94ce0d39d4be04cec6c9060190eea846496a9f",
+          "false_positive": 450
+        },
+        {
+          "product": "S2A_MSIL1C_20180521T054641_N0206_R048_T42QXL_20180521T085815",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "ce410f0416f366ddc1a09ea3140327e62084f77d6b30388ac9e8f5459f81ed6d",
+          "false_positive": 0
+        },
+        {
+          "product": "S2B_MSIL1C_20181212T080919_N0207_R049_T22CEP_20181212T094237",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "7436d4a786039979ab7bb99b0332ff079c9553cf1fa4415c05be7822610a2ca7",
+          "false_positive": 0
+        },
+        {
+          "product": "S2A_MSIL1C_20180925T142031_N0206_R010_T19HGA_20180925T180630",
+          "negative_count": 1044484,
+          "negative_probability_sha256": "881e3a1c98578ef1d4149ab89194a4ccbd2f73e300b0e0f0f7293d5d835dfd85",
+          "false_positive": 11412
+        }
+      ],
+      "fit_input_lock_sha256": "d047e88d574c36bad3553dfd55445fa844b898ee0a2914718c63ab69bd460563",
+      "frozen_before_evaluation": true,
+      "cost": {
+        "fit_seconds": 5.798563623000518,
+        "process_peak_rss_bytes": 7374536704,
+        "peak_scope": "cumulative process high-water, including preflight; not isolated estimator memory",
+        "full_fit_threshold_seconds": 453.45462123501056
+      },
+      "calibration_independent": false
+    }
+  },
+  "model_lock_sha256": {
+    "G6": "592d233c3d3ebee350d02aef3b1ad7d1a9d16cd87781b6c2f0167baa3e88f67e",
+    "G7": "ffa93c8f087a120543e47e46d0e8e68e9ea21caddaca52292828096ab33d2025"
+  },
+  "fit_input_lock_sha256": "d047e88d574c36bad3553dfd55445fa844b898ee0a2914718c63ab69bd460563",
+  "new_tree_fits": 2,
+  "new_segmentation_training": 0,
+  "new_network_forwards": 0,
+  "fit_costs": {
+    "G6": {
+      "fit_seconds": 5.690692278993083,
+      "process_peak_rss_bytes": 7329894400,
+      "peak_scope": "cumulative process high-water, including preflight; not isolated estimator memory",
+      "full_fit_threshold_seconds": 451.9368826819991
+    },
+    "G7": {
+      "fit_seconds": 5.798563623000518,
+      "process_peak_rss_bytes": 7374536704,
+      "peak_scope": "cumulative process high-water, including preflight; not isolated estimator memory",
+      "full_fit_threshold_seconds": 453.45462123501056
+    }
+  },
+  "fit_verification_seconds": 998.5433407980017,
+  "created_utc": "2026-10-12T08:46:06.285403+00:00"
+}

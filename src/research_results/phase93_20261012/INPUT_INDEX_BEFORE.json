@@ -1,0 +1,13 @@
+{
+  "stage": "before",
+  "all_original_indices_unchanged": true,
+  "index_sha256": {
+    "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/phase65d_20261008_recovery01/development_val/index_source.json": "4ca51a5ff835a02353799231d0d949d8345f225cbef3744830750e8d65daa8d8",
+    "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/phase65d_20261008_recovery01/development_val/index_msre.json": "7990c53938282cb80bff75622435f9c6972f580e412fd321ce5564dab7e46b3c",
+    "/home/scv/shared/phase89_recovered_20261011/scores_Source/index.json": "730261f8dbb0abbd6c7e7ed2b79df29aeb0c398ef00f0142c6dd3e7bfba8a8c2",
+    "/home/scv/shared/phase89_recovered_20261011/scores_MsRE/index.json": "3d81484bdfbb1a6572da9e94b6755b97c63e0b5fa8bf03fac2ecb52b615b3781",
+    "/home/scv/shared/phase89_recovered_20261011/prepared/index.json": "7d23330b704e5a3defda943721afcef2cb4d71075a6e3f928893076adbfc2992"
+  },
+  "phase89_runtime_index_sha256": "8e5bb5aacf0297174514a2188eceadcd0178abd190968499784e73db1a080510",
+  "no_pixel_or_model_access": true
+}

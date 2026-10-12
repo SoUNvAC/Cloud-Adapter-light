@@ -1,0 +1,23 @@
+{
+  "phase92_manifest_sha256": "abb2bea0612be87bc66ba78eef3ddad15b9099a7d5172f1d5df306fcf4a8f195",
+  "prior_acceptance": {
+    "sealed_files": 14,
+    "independent_metric_rows": 456,
+    "baseline_reproductions": 106,
+    "verified": true
+  },
+  "all_four_policy_statistics_exact": true,
+  "domains": [
+    "development",
+    "original_main",
+    "original_common",
+    "revised_common"
+  ],
+  "frozen_rows": 212,
+  "oracle_rows": 212,
+  "pooled_summaries": 32,
+  "original_bootstrap_seed": 92012,
+  "reproduction_seconds": 885.5200064699893,
+  "newly_fit_models": 0,
+  "completed_before_new_fits": true
+}

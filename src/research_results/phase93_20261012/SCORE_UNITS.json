@@ -1,0 +1,11 @@
+{
+  "native_reports_preserved": true,
+  "no_numeric_changes": true,
+  "development_legacy": "S3/R6/Source_spectral/L3: float32 logit; direct >= original logit threshold",
+  "development_G6_G7": "class1 probability float32; direct >= frozen probability threshold; never apply sigmoid again",
+  "ALCD_legacy": "float32 logit20m -> sigmoid float64 -> mean9 probability60m float64; original sigmoid(logit threshold)",
+  "ALCD_G6_G7": "predict probability20m -> float32 -> float64 mean9 probability60m; direct >= same frozen probability threshold",
+  "AP": "All scores quantized to float32 for original noninterpolated average precision with atomic ties",
+  "oracle": "scan uses actual score values cast float64 without changing ties; evaluation-reference-derived, never deploy",
+  "legacy_receipt_note": "Copied old points retain inherited generic score_precision wording; top-level score_units provides the explicit correction"
+}

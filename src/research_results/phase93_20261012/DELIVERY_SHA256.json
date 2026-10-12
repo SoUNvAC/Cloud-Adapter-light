@@ -1,0 +1,20 @@
+{
+  "CPU_VERIFIED.json": "3d554dda50645b3348194b3c715e39f774e43b9ab0a77286fc8b8ee858804f9e",
+  "G6.pkl": "385b26b0b90b10281e24b0a3f73479ac2d9811c65ac345af75c1f35c0ebc9cd0",
+  "G7.pkl": "e0e701b1fa68fdb96eb93eab1c88687f6eef3574b7f455db0e8f42c441ea9513",
+  "README.md": "921110af819f37880270c18d5ff2637b648ca732f594bfb3b9cb53a05e822473",
+  "baseline_reproduction.json": "766c7a648c2ddbc310315677039f3bb346de27012ae62cbb88fdb189feeacc89",
+  "dependency_lock.json": "8944af4b73200d981e945e609ba360ee1c7a39350c80a23553ddede57a5267e9",
+  "fit_input_lock.json": "d047e88d574c36bad3553dfd55445fa844b898ee0a2914718c63ab69bd460563",
+  "input_score_lock.json": "a4fa571566936061abd37758759c24e365d2e32c505956b969d9451388c05eba",
+  "model_G6_lock.json": "592d233c3d3ebee350d02aef3b1ad7d1a9d16cd87781b6c2f0167baa3e88f67e",
+  "model_G7_lock.json": "ffa93c8f087a120543e47e46d0e8e68e9ea21caddaca52292828096ab33d2025",
+  "oracle_1percent.csv": "20cfd5f17c1578fecbdc26876cd2d6249ae45a9ae89b7926a4b017975c3e1287",
+  "oracle_threshold_receipts.json": "179d3d63c27e38866ede96253359fc373d2307dd47252a82129c759ff8ce4ba8",
+  "paired_changes.csv": "bcb1efc3dbdcfdd7c2da2af58986d54eec52704af1555dfe19763a900cd0314d",
+  "per_group.csv": "6d16367952fbc2401786c9d2085c727a382daec09fd5b61b5e74eaa9bc76c71d",
+  "phase93_report.json": "8ae175a4acdc115120a98f0d6b3d4a66ac45afca871df58dbd14ee897874539d",
+  "serialization_checks.json": "28304cbb0fa7c24449b90e080358732b49e261958c9924bebb2ffee712b5554e",
+  "six_strategy_totals.csv": "912920df6a52787a3b661dffac1d02e2e76c8971e5cb3e67d83db57f40781e12",
+  "two_model_lock.json": "004b083071df0cc1c450447bc9f8ef832d7e8a1d5e56199db9fcd540b08d88a1"
+}

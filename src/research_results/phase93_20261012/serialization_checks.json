@@ -1,0 +1,21 @@
+{
+  "rows": [
+    {
+      "policy": "G6",
+      "all_training_samples_exact": true,
+      "samples": 1253376,
+      "probability_sha256": "73b1ea0f328d0cf3f38973e06d984f8d2e34c3c55720ebd5bec0bfa909b4dc69",
+      "independent_tree_walk_probes": 257,
+      "independent_tree_walk_max_error": 0.0
+    },
+    {
+      "policy": "G7",
+      "all_training_samples_exact": true,
+      "samples": 1253376,
+      "probability_sha256": "28d45f053f9047886798125001406bc880d5dd37f9ac5a6c269fd63ce7f23d31",
+      "independent_tree_walk_probes": 257,
+      "independent_tree_walk_max_error": 0.0
+    }
+  ],
+  "no_additional_estimator_fit": true
+}

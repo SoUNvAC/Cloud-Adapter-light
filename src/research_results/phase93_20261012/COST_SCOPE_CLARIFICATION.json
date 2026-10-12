@@ -1,0 +1,8 @@
+{
+  "native_reports_preserved": true,
+  "no_numeric_changes": true,
+  "process_model": "preflight, fit, evaluate are three separate Python processes",
+  "fit_peak_rss": "Linux ru_maxrss*1024; cumulative fit-process high-water including fit input verification, fitting and threshold scoring; G7 can include prior G6 high-water",
+  "evaluation_peak_rss": "separate evaluation-process cumulative high-water",
+  "correction": "Native model cost.peak_scope including preflight is a prose error; the preceding preflight process is excluded"
+}
