@@ -1,0 +1,17 @@
+{
+  "native_manifest_sha256": "4ca6d22c435faf25a9b35acfb4cda897c5480a1483a86b1ce19418f78a03c75c",
+  "planned_fit_attempts": 2,
+  "actual_fit_attempts": 3,
+  "final_models": 2,
+  "exception": "User explicitly authorized one SourceS-only repeat after coefficients were lost at an overstrict floating-point validation; G7 unchanged",
+  "fit_input_lock_new_fits_field": "Prospective planned count sealed before fitting, not retrospective executed count; two_model_lock and phase94_report record actual 3",
+  "original_G7_sha256": "2e11a30996b04768b03d6668346d8a34ffda4100c93bbeded7d684e59091c6e6",
+  "first_failed_process_cost_unavailable": true,
+  "recorded_fit_seconds_scope": "Recovery process: input re-verification, one SourceS repeat and full 153-group calibration; excludes failed first process",
+  "recorded_evaluation_seconds_scope": "Evaluation stage after four-threshold lock, in the SAME recovery Python process",
+  "evaluation_peak_rss_scope": "Cumulative process high-water including prior recovery/fit/calibration, NOT isolated evaluation memory",
+  "metric_support": "Each macro uses defined groups only; paired changes use intersection of defined groups. Precision and ShadowIoU paired means can differ from subtraction of two macro means.",
+  "independent_probe_scope": "257 deterministic probes per group/block; not duplicate full-pixel tree inference",
+  "protocol_git_blob_sha_verified": true,
+  "native_outputs_unmodified": true
+}

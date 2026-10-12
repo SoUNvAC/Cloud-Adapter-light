@@ -1,0 +1,75 @@
+{
+  "created_utc": "2026-10-12T12:55:59.399925+00:00",
+  "fit_input_lock_sha256": "3eb423b5027011dc032b0ae577aaa81b6d210597fee86e644d39058ccf7b6c48",
+  "models": {
+    "G7_100": {
+      "file": "G7_100.pkl",
+      "sha256": "2e11a30996b04768b03d6668346d8a34ffda4100c93bbeded7d684e59091c6e6",
+      "params": {
+        "loss": "log_loss",
+        "learning_rate": 0.05,
+        "max_iter": 200,
+        "max_leaf_nodes": 15,
+        "max_depth": 4,
+        "min_samples_leaf": 20,
+        "l2_regularization": 1.0,
+        "max_bins": 255,
+        "max_features": 1.0,
+        "categorical_features": null,
+        "monotonic_cst": null,
+        "interaction_cst": null,
+        "class_weight": null,
+        "early_stopping": false,
+        "warm_start": false,
+        "random_state": 93012
+      }
+    },
+    "SourceS_100": {
+      "file": "SourceS_100.json",
+      "sha256": "6e3670f3b806a9c160b233106f54317c96ca74517f01a4ae8dc1952519f31d1e",
+      "params": {
+        "mean": [
+          -1.2956259251734084,
+          0.42150901438906374,
+          0.25758101683260526,
+          0.2052852917233829
+        ],
+        "scale": [
+          0.4810557475043909,
+          0.24664418627038884,
+          0.16258596300611988,
+          0.1306787595858997
+        ],
+        "theta": [
+          0.7331271246644713,
+          -1.190082795864683,
+          -0.000990681991879944,
+          -1.2298612397338378,
+          -5.980533740964894
+        ],
+        "iterations": 19,
+        "optimizer_success": true,
+        "objective": 0.05990869341390934,
+        "penalty": 0.001,
+        "positive_features": 1
+      }
+    }
+  },
+  "new_fits": 3,
+  "final_models": 2,
+  "calibration_labels_not_used_in_fit": true,
+  "cost": {
+    "G7_100": {
+      "reused": true,
+      "fit_seconds": null,
+      "reason": "first process exited before cost receipt; not fabricated"
+    },
+    "SourceS_100": {
+      "fit_seconds": 3.3381494130007923,
+      "process_peak_rss_bytes": 497422336,
+      "all_training_reload_exact": true,
+      "additional_authorized_fit": true
+    }
+  },
+  "repair_authorization_lock_sha256": "c7e507c74420a8b9b2bb1d74070113f27cc8a6c8c12b38a0fd48877f789a82d3"
+}

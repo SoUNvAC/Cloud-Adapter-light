@@ -1,0 +1,13 @@
+{
+  "verified": true,
+  "sealed_files": 18,
+  "independent_metric_rows": 228,
+  "probe_blocks": 712,
+  "new_fits": 3,
+  "final_models": 2,
+  "preserved_G7_exact_original_SHA": true,
+  "calibration_and_fit_identity_order_verified": true,
+  "actual_fit_attempts": 3,
+  "original_failure_preserved": true,
+  "formal_confirmation": false
+}

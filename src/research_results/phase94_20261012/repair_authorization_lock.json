@@ -1,0 +1,23 @@
+{
+  "created_utc": "2026-10-12T12:55:12.843562+00:00",
+  "additional_SourceS_fit_authorized": true,
+  "authorization": "user_explicit_20261012_SourceS_only_once",
+  "G7_reused_without_refit": true,
+  "G7_preserved_sha256": "2e11a30996b04768b03d6668346d8a34ffda4100c93bbeded7d684e59091c6e6",
+  "failed_attempt": "SourceS optimization finished but strict roundoff assertion stopped before coefficients were saved; no calibration/external evaluation",
+  "original_fit_attempts": 2,
+  "additional_fit_attempts": 1,
+  "final_models": 2,
+  "code_delta": {
+    "run_phase94.py": {
+      "before": "e9c858501fb04beb18e93f72176bca68c7c18b9da8c164375639ac7141480e7b",
+      "after": "64a6fc95ebb9d1d3d6f7e75b910583ee8aa03b3ae3405a56c5a2245bd3abbb63"
+    },
+    "verify_phase94_delivery.py": {
+      "before": "5c595f78f3d44c81e5732765c6c9307e4950fc97c66e607626cc3601e15c4ac9",
+      "after": "b6f40bac486f754c38b0d4ff8753c5eb48974eb8ca6b7f8b3347da8418ab9a8d"
+    }
+  },
+  "resume_code_sha256": "85ffcc6e2eb4e5206a4a6b368492755a90312d5f90282df07656bd2c53fc5929",
+  "protocol_unchanged": true
+}

@@ -1,0 +1,2146 @@
+{
+  "rows": [
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20181203T153619_N0207_R068_T18QWH_20181203T202253",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20181203T153619_N0207_R068_T18QWH_20181203T202253",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20181023T072949_N0206_R049_T37NFG_20181023T094608",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20181023T072949_N0206_R049_T37NFG_20181023T094608",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180805T093031_N0206_R136_T33RWN_20180805T115126",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180805T093031_N0206_R136_T33RWN_20180805T115126",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180321T094031_N0206_R036_T32QQL_20180321T115059",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180321T094031_N0206_R036_T32QQL_20180321T115059",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180430T043701_N0206_R033_T46RBU_20180430T082134",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180430T043701_N0206_R033_T46RBU_20180430T082134",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180518T021651_N0206_R003_T52TDM_20180518T055214",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180518T021651_N0206_R003_T52TDM_20180518T055214",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180210T232709_N0206_R130_T01VEK_20180211T005618",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180210T232709_N0206_R130_T01VEK_20180211T005618",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180306T162329_N0206_R040_T17SKC_20180306T201627",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180306T162329_N0206_R040_T17SKC_20180306T201627",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180626T144731_N0206_R139_T20PMQ_20180626T163032",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180626T144731_N0206_R139_T20PMQ_20180626T163032",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180720T181919_N0206_R127_T12TWS_20180720T220347",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180720T181919_N0206_R127_T12TWS_20180720T220347",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20181025T150719_N0206_R082_T18LYM_20181025T195659",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20181025T150719_N0206_R082_T18LYM_20181025T195659",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180930T125859_N0206_R009_T21DVG_20180930T173801",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180930T125859_N0206_R009_T21DVG_20180930T173801",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180412T065621_N0206_R063_T44WMC_20180412T090348",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180412T065621_N0206_R063_T44WMC_20180412T090348",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180304T021559_N0206_R003_T51PTK_20180304T055041",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180304T021559_N0206_R003_T51PTK_20180304T055041",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180213T092101_N0206_R093_T35VPC_20180213T114024",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180213T092101_N0206_R093_T35VPC_20180213T114024",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180420T011651_N0206_R031_T57WWT_20180420T030851",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180420T011651_N0206_R031_T57WWT_20180420T030851",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20181211T080319_N0207_R035_T35LQD_20181211T101336",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20181211T080319_N0207_R035_T35LQD_20181211T101336",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180327T090559_N0206_R050_T34QCM_20180327T130501",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180327T090559_N0206_R050_T34QCM_20180327T130501",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20181230T033139_N0207_R018_T48QVH_20181230T084739",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20181230T033139_N0207_R018_T48QVH_20181230T084739",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180221T065911_N0206_R063_T40RBV_20180221T103641",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180221T065911_N0206_R063_T40RBV_20180221T103641",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180617T095029_N0206_R079_T33SUT_20180617T120017",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180617T095029_N0206_R079_T33SUT_20180617T120017",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180529T082601_N0206_R021_T34LFL_20180529T104228",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180529T082601_N0206_R021_T34LFL_20180529T104228",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180113T234301_N0206_R087_T57JUL_20180114T004417",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180113T234301_N0206_R087_T57JUL_20180114T004417",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180110T071239_N0206_R106_T40UGB_20180110T092450",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180110T071239_N0206_R106_T40UGB_20180110T092450",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180407T211031_N0206_R143_T11XMF_20180407T230149",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180407T211031_N0206_R143_T11XMF_20180407T230149",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180317T031541_N0206_R118_T49RBL_20180317T065422",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180317T031541_N0206_R118_T49RBL_20180317T065422",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180822T182909_N0206_R027_T14WNV_20180822T225726",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180822T182909_N0206_R027_T14WNV_20180822T225726",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180713T105621_N0206_R094_T29NKG_20180713T144447",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180713T105621_N0206_R094_T29NKG_20180713T144447",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180529T073609_N0206_R092_T40VDM_20180529T095143",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180529T073609_N0206_R092_T40VDM_20180529T095143",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180404T023551_N0206_R089_T49NFB_20180404T061047",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180404T023551_N0206_R089_T49NFB_20180404T061047",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20181024T102059_N0206_R065_T31QEF_20181024T160131",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20181024T102059_N0206_R065_T31QEF_20181024T160131",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180322T031539_N0206_R118_T48NWP_20180322T080731",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180322T031539_N0206_R118_T48NWP_20180322T080731",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180428T044659_N0206_R076_T45SYC_20180428T080201",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180428T044659_N0206_R076_T45SYC_20180428T080201",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180906T031609_N0206_R089_T45DWG_20180906T065459",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180906T031609_N0206_R089_T45DWG_20180906T065459",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180107T102359_N0206_R065_T32UPD_20180107T121759",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180107T102359_N0206_R065_T32UPD_20180107T121759",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180523T080711_N0206_R078_T41WMU_20180523T115652",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180523T080711_N0206_R078_T41WMU_20180523T115652",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180918T151659_N0206_R125_T19PCL_20180918T200511",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180918T151659_N0206_R125_T19PCL_20180918T200511",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180308T074751_N0206_R135_T37PDR_20180308T110330",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180308T074751_N0206_R135_T37PDR_20180308T110330",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180318T202139_N0206_R071_T10WDB_20180318T221036",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180318T202139_N0206_R071_T10WDB_20180318T221036",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180409T155859_N0206_R097_T20VMR_20180409T201750",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180409T155859_N0206_R097_T20VMR_20180409T201750",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180326T084601_N0206_R107_T33MZR_20180326T141333",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180326T084601_N0206_R107_T33MZR_20180326T141333",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180313T050719_N0206_R133_T38CPE_20180313T085711",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180313T050719_N0206_R133_T38CPE_20180313T085711",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20181025T001109_N0206_R073_T55GCR_20181025T013455",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20181025T001109_N0206_R073_T55GCR_20181025T013455",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20181101T071031_N0206_R106_T39QUU_20181104T003526",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20181101T071031_N0206_R106_T39QUU_20181104T003526",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180205T073059_N0206_R049_T37LDL_20180205T111142",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180205T073059_N0206_R049_T37LDL_20180205T111142",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20181222T100421_N0207_R122_T32RNR_20181222T103540",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20181222T100421_N0207_R122_T32RNR_20181222T103540",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180916T143739_N0206_R096_T19KFT_20180916T192127",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180916T143739_N0206_R096_T19KFT_20180916T192127",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20181117T141441_N0207_R053_T24VVM_20181117T160857",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20181117T141441_N0207_R053_T24VVM_20181117T160857",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180524T164839_N0206_R026_T22XEM_20180524T202412",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180524T164839_N0206_R026_T22XEM_20180524T202412",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20181017T112111_N0206_R037_T28PFC_20181017T131930",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20181017T112111_N0206_R037_T28PFC_20181017T131930",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180603T155901_N0206_R097_T17SNA_20180603T194236",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180603T155901_N0206_R097_T17SNA_20180603T194236",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180203T000809_N0206_R016_T58VFL_20180203T015224",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180203T000809_N0206_R016_T58VFL_20180203T015224",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180807T023549_N0206_R089_T53VMK_20180807T042942",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180807T023549_N0206_R089_T53VMK_20180807T042942",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180208T020441_N0206_R017_T50HPK_20180208T051613",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180208T020441_N0206_R017_T50HPK_20180208T051613",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180802T230911_N0206_R101_T59LKG_20180803T002614",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180802T230911_N0206_R101_T59LKG_20180803T002614",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180628T023549_N0206_R089_T53WMM_20180628T040045",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180628T023549_N0206_R089_T53WMM_20180628T040045",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180423T085559_N0206_R007_T33KTB_20180423T111031",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180423T085559_N0206_R007_T33KTB_20180423T111031",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180807T064621_N0206_R020_T46XDK_20180807T075541",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180807T064621_N0206_R020_T46XDK_20180807T075541",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180327T151701_N0206_R125_T19NBJ_20180327T203443",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180327T151701_N0206_R125_T19NBJ_20180327T203443",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180507T174911_N0206_R141_T15WXQ_20180507T213154",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180507T174911_N0206_R141_T15WXQ_20180507T213154",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180130T232841_N0206_R044_T58KBF_20180131T004509",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180130T232841_N0206_R044_T58KBF_20180131T004509",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180218T130239_N0206_R095_T23KNP_20180218T192559",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180218T130239_N0206_R095_T23KNP_20180218T192559",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180830T033531_N0206_R061_T50VNN_20180830T063203",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180830T033531_N0206_R061_T50VNN_20180830T063203",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20181022T184459_N0206_R041_T04CEB_20181022T212451",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20181022T184459_N0206_R041_T04CEB_20181022T212451",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180923T081641_N0206_R121_T38VPM_20180923T103658",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180923T081641_N0206_R121_T38VPM_20180923T103658",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20181212T080919_N0207_R049_T22CEP_20181212T094237",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20181212T080919_N0207_R049_T22CEP_20181212T094237",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20181107T022901_N0207_R046_T50PNU_20181107T060616",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20181107T022901_N0207_R046_T50PNU_20181107T060616",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180729T025551_N0206_R032_T49PER_20180729T055945",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180729T025551_N0206_R032_T49PER_20180729T055945",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180504T082559_N0206_R021_T33JYG_20180504T112951",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180504T082559_N0206_R021_T33JYG_20180504T112951",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20181220T002659_N0207_R016_T54JYP_20181220T014154",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20181220T002659_N0207_R016_T54JYP_20181220T014154",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180520T161901_N0206_R040_T17TMG_20180520T194355",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180520T161901_N0206_R040_T17TMG_20180520T194355",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180925T142031_N0206_R010_T19HGA_20180925T180630",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180925T142031_N0206_R010_T19HGA_20180925T180630",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180808T011651_N0206_R031_T55UEV_20180808T030949",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180808T011651_N0206_R031_T55UEV_20180808T030949",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20181207T073301_N0207_R049_T40VDH_20181207T093052",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20181207T073301_N0207_R049_T40VDH_20181207T093052",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20181231T004701_N0207_R102_T54HTH_20181231T021140",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20181231T004701_N0207_R102_T54HTH_20181231T021140",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180423T171859_N0206_R012_T14SMJ_20180423T204026",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180423T171859_N0206_R012_T14SMJ_20180423T204026",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180524T073731_N0206_R092_T36MZT_20180524T113104",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180524T073731_N0206_R092_T36MZT_20180524T113104",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180911T091551_N0206_R093_T40XEM_20180911T112934",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180911T091551_N0206_R093_T40XEM_20180911T112934",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180225T013651_N0206_R117_T55VCC_20180225T050918",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180225T013651_N0206_R117_T55VCC_20180225T050918",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180407T110621_N0206_R137_T31UCV_20180407T132633",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180407T110621_N0206_R137_T31UCV_20180407T132633",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180621T010649_N0206_R131_T55TEH_20180621T043619",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180621T010649_N0206_R131_T55TEH_20180621T043619",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180417T033539_N0206_R061_T48SYE_20180417T075420",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180417T033539_N0206_R061_T48SYE_20180417T075420",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180624T170851_N0206_R112_T16UCG_20180624T223010",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180624T170851_N0206_R112_T16UCG_20180624T223010",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180305T092031_N0206_R093_T34RCV_20180305T104344",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180305T092031_N0206_R093_T34RCV_20180305T104344",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20181016T151651_N0206_R025_T20UPD_20181016T171323",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20181016T151651_N0206_R025_T20UPD_20181016T171323",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180408T062629_N0206_R077_T42VXJ_20180408T082353",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180408T062629_N0206_R077_T42VXJ_20180408T082353",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20181125T200529_N0207_R099_T58CET_20181125T210826",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20181125T200529_N0207_R099_T58CET_20181125T210826",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180704T013709_N0206_R031_T51HXD_20180704T040609",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180704T013709_N0206_R031_T51HXD_20180704T040609",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180201T024929_N0206_R132_T51STA_20180201T062115",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180201T024929_N0206_R132_T51STA_20180201T062115",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180509T155859_N0206_R097_T20VLP_20180509T200612",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180509T155859_N0206_R097_T20VLP_20180509T200612",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180506T002101_N0206_R116_T55KFA_20180506T014715",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180506T002101_N0206_R116_T55KFA_20180506T014715",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180910T172149_N0206_R012_T17WMT_20180910T221954",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180910T172149_N0206_R012_T17WMT_20180910T221954",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180405T175909_N0206_R041_T13UFV_20180405T200432",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180405T175909_N0206_R041_T13UFV_20180405T200432",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180516T100031_N0206_R122_T32QKD_20180516T121050",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180516T100031_N0206_R122_T32QKD_20180516T121050",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180622T085559_N0206_R007_T45XVL_20180622T101430",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180622T085559_N0206_R007_T45XVL_20180622T101430",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180926T110029_N0206_R094_T33WWV_20180926T152251",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180926T110029_N0206_R094_T33WWV_20180926T152251",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20181016T101021_N0206_R022_T31RGM_20181016T122415",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20181016T101021_N0206_R022_T31RGM_20181016T122415",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180721T165851_N0206_R069_T15TWF_20180721T221510",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2A_MSIL1C_20180721T165851_N0206_R069_T15TWF_20180721T221510",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180305T123139_N0206_R023_T20CNC_20180305T134224",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180305T123139_N0206_R023_T20CNC_20180305T134224",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180805T083559_N0206_R064_T36SUH_20180805T123757",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_in",
+      "product": "S2B_MSIL1C_20180805T083559_N0206_R064_T36SUH_20180805T123757",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2B_MSIL1C_20180422T042659_N0206_R133_T48VUK_20180422T074056",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2B_MSIL1C_20180422T042659_N0206_R133_T48VUK_20180422T074056",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2A_MSIL1C_20181102T015621_N0206_R117_T51LYE_20181102T061209",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2A_MSIL1C_20181102T015621_N0206_R117_T51LYE_20181102T061209",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2A_MSIL1C_20180621T083651_N0206_R064_T34KBG_20180621T123155",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2A_MSIL1C_20180621T083651_N0206_R064_T34KBG_20180621T123155",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2A_MSIL1C_20181030T044921_N0206_R076_T45RXQ_20181030T065311",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2A_MSIL1C_20181030T044921_N0206_R076_T45RXQ_20181030T065311",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2B_MSIL1C_20180816T162829_N0206_R083_T18VUM_20180816T213305",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2B_MSIL1C_20180816T162829_N0206_R083_T18VUM_20180816T213305",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2A_MSIL1C_20180521T054641_N0206_R048_T42QXL_20180521T085815",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2A_MSIL1C_20180521T054641_N0206_R048_T42QXL_20180521T085815",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2B_MSIL1C_20180120T004659_N0206_R102_T54KUV_20180120T020340",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2B_MSIL1C_20180120T004659_N0206_R102_T54KUV_20180120T020340",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2B_MSIL1C_20180922T075619_N0206_R035_T35KMQ_20180922T114414",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2B_MSIL1C_20180922T075619_N0206_R035_T35KMQ_20180922T114414",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2B_MSIL1C_20180615T205019_N0206_R057_T08WPC_20180615T223116",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2B_MSIL1C_20180615T205019_N0206_R057_T08WPC_20180615T223116",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2A_MSIL1C_20180824T150721_N0206_R125_T21UUP_20180824T185559",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2A_MSIL1C_20180824T150721_N0206_R125_T21UUP_20180824T185559",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2B_MSIL1C_20180625T230019_N0206_R058_T58KHC_20180626T001009",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2B_MSIL1C_20180625T230019_N0206_R058_T58KHC_20180626T001009",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2A_MSIL1C_20181112T070221_N0207_R120_T38KRD_20181112T102254",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2A_MSIL1C_20181112T070221_N0207_R120_T38KRD_20181112T102254",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2A_MSIL1C_20180910T150721_N0206_R082_T19PFN_20180910T201336",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2A_MSIL1C_20180910T150721_N0206_R082_T19PFN_20180910T201336",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2B_MSIL1C_20180208T224659_N0206_R101_T02WPS_20180209T001736",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2B_MSIL1C_20180208T224659_N0206_R101_T02WPS_20180209T001736",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2A_MSIL1C_20180919T101701_N0206_R065_T39XWH_20180919T122556",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2A_MSIL1C_20180919T101701_N0206_R065_T39XWH_20180919T122556",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2B_MSIL1C_20180417T021339_N0206_R060_T50LRQ_20180417T052932",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2B_MSIL1C_20180417T021339_N0206_R060_T50LRQ_20180417T052932",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2B_MSIL1C_20180327T022549_N0206_R046_T50QQH_20180327T060147",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2B_MSIL1C_20180327T022549_N0206_R046_T50QQH_20180327T060147",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2B_MSIL1C_20181004T210519_N0206_R071_T56CNU_20181004T234310",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2B_MSIL1C_20181004T210519_N0206_R071_T56CNU_20181004T234310",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2B_MSIL1C_20180125T232159_N0206_R044_T58PHU_20180126T003547",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2B_MSIL1C_20180125T232159_N0206_R044_T58PHU_20180126T003547",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2B_MSIL1C_20180826T062619_N0206_R077_T40QHL_20180826T092057",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2B_MSIL1C_20180826T062619_N0206_R077_T40QHL_20180826T092057",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2B_MSIL1C_20180810T160819_N0206_R140_T16QDD_20180810T211922",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2B_MSIL1C_20180810T160819_N0206_R140_T16QDD_20180810T211922",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2A_MSIL1C_20180327T163911_N0206_R126_T17VNF_20180327T215534",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2A_MSIL1C_20180327T163911_N0206_R126_T17VNF_20180327T215534",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2B_MSIL1C_20180505T025549_N0206_R032_T56XMJ_20180505T044859",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2B_MSIL1C_20180505T025549_N0206_R032_T56XMJ_20180505T044859",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2A_MSIL1C_20180613T141951_N0206_R096_T23VNK_20180613T162358",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2A_MSIL1C_20180613T141951_N0206_R096_T23VNK_20180613T162358",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2B_MSIL1C_20180125T080209_N0206_R035_T36NXN_20180125T100104",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2B_MSIL1C_20180125T080209_N0206_R035_T36NXN_20180125T100104",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2A_MSIL1C_20181030T095121_N0206_R079_T33TWK_20181030T130454",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2A_MSIL1C_20181030T095121_N0206_R079_T33TWK_20181030T130454",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2B_MSIL1C_20180808T022319_N0206_R103_T50MRV_20180808T054332",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2B_MSIL1C_20180808T022319_N0206_R103_T50MRV_20180808T054332",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2B_MSIL1C_20180624T075609_N0206_R035_T37QBE_20180624T101209",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2B_MSIL1C_20180624T075609_N0206_R035_T37QBE_20180624T101209",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2A_MSIL1C_20180209T112221_N0206_R037_T29RKM_20180209T164004",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2A_MSIL1C_20180209T112221_N0206_R037_T29RKM_20180209T164004",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2A_MSIL1C_20180904T160901_N0206_R140_T27XWJ_20180904T192941",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2A_MSIL1C_20180904T160901_N0206_R140_T27XWJ_20180904T192941",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2B_MSIL1C_20180401T181919_N0206_R127_T11SQU_20180401T215241",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2B_MSIL1C_20180401T181919_N0206_R127_T11SQU_20180401T215241",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2B_MSIL1C_20181007T103019_N0206_R108_T31RCK_20181007T160704",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2B_MSIL1C_20181007T103019_N0206_R108_T31RCK_20181007T160704",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2B_MSIL1C_20181025T081009_N0206_R078_T37TGL_20181025T102247",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2B_MSIL1C_20181025T081009_N0206_R078_T37TGL_20181025T102247",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2A_MSIL1C_20181214T090351_N0207_R007_T34QGM_20181214T102932",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2A_MSIL1C_20181214T090351_N0207_R007_T34QGM_20181214T102932",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2A_MSIL1C_20180309T071721_N0206_R006_T37LFE_20180309T110254",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2A_MSIL1C_20180309T071721_N0206_R006_T37LFE_20180309T110254",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2A_MSIL1C_20180422T033541_N0206_R061_T49UFV_20180422T062036",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2A_MSIL1C_20180422T033541_N0206_R061_T49UFV_20180422T062036",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2B_MSIL1C_20180517T220529_N0206_R072_T04WES_20180517T234440",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2B_MSIL1C_20180517T220529_N0206_R072_T04WES_20180517T234440",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2A_MSIL1C_20180718T135111_N0206_R024_T22MEB_20180718T185303",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2A_MSIL1C_20180718T135111_N0206_R024_T22MEB_20180718T185303",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2A_MSIL1C_20180817T215051_N0206_R029_T14XMQ_20180818T001725",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2A_MSIL1C_20180817T215051_N0206_R029_T14XMQ_20180818T001725",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2A_MSIL1C_20181114T040011_N0207_R004_T48UXA_20181114T084110",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2A_MSIL1C_20181114T040011_N0207_R004_T48UXA_20181114T084110",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2B_MSIL1C_20181220T033139_N0207_R018_T48SYC_20181220T060651",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2B_MSIL1C_20181220T033139_N0207_R018_T48SYC_20181220T060651",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2B_MSIL1C_20180201T012709_N0206_R131_T53LKK_20180201T025415",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2B_MSIL1C_20180201T012709_N0206_R131_T53LKK_20180201T025415",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2B_MSIL1C_20180605T140729_N0206_R053_T24WWU_20180605T160557",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2B_MSIL1C_20180605T140729_N0206_R053_T24WWU_20180605T160557",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2A_MSIL1C_20180108T104421_N0206_R008_T31TEF_20180108T124506",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2A_MSIL1C_20180108T104421_N0206_R008_T31TEF_20180108T124506",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2B_MSIL1C_20180315T032529_N0206_R018_T49SCC_20180315T070512",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2B_MSIL1C_20180315T032529_N0206_R018_T49SCC_20180315T070512",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2A_MSIL1C_20180818T061631_N0206_R034_T43VFG_20180818T074215",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2A_MSIL1C_20180818T061631_N0206_R034_T43VFG_20180818T074215",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2B_MSIL1C_20180827T174039_N0206_R098_T12RYN_20180827T214315",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2B_MSIL1C_20180827T174039_N0206_R098_T12RYN_20180827T214315",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2B_MSIL1C_20180630T002059_N0206_R116_T55HCC_20180630T014728",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2B_MSIL1C_20180630T002059_N0206_R116_T55HCC_20180630T014728",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2B_MSIL1C_20181218T061249_N0207_R134_T41RQK_20181218T080326",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2B_MSIL1C_20181218T061249_N0207_R134_T41RQK_20181218T080326",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2B_MSIL1C_20180518T030539_N0206_R075_T54XWH_20180518T055019",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2B_MSIL1C_20180518T030539_N0206_R075_T54XWH_20180518T055019",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2B_MSIL1C_20180325T064629_N0206_R020_T39PWK_20180325T120625",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2B_MSIL1C_20180325T064629_N0206_R020_T39PWK_20180325T120625",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2A_MSIL1C_20180723T124301_N0206_R095_T28WDU_20180723T144245",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2A_MSIL1C_20180723T124301_N0206_R095_T28WDU_20180723T144245",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2A_MSIL1C_20180913T081601_N0206_R121_T35LKE_20180913T103649",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "fit_cal",
+      "product": "S2A_MSIL1C_20180913T081601_N0206_R121_T35LKE_20180913T103649",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    }
+  ]
+}
