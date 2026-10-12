@@ -10,6 +10,7 @@ def verify(root):
     read=lambda n:json.loads((root/n).read_text(encoding='utf-8-sig'))
     for n,h in read('DELIVERY_SHA256.json').items():assert hashlib.sha256((root/n).read_bytes()).hexdigest()==h,n
     lock=read('two_model_lock.json');fi=read('fit_input_lock.json');report=read('phase92_report.json')
+    assert hashlib.sha256((root/'fit_input_lock.json').read_bytes()).hexdigest()==lock['fit_input_lock_sha256']
     assert lock['new_logistic_fits']==2 and lock['new_network_forwards']==0
     assert fi['fit_groups']==len(fi['rows'])==153 and fi['positive_features']==0 and not fi['class_balancing']
     assert len({r['group_id'] for r in fi['rows']})==153
@@ -17,6 +18,8 @@ def verify(root):
     assert sum(r['sample_positive'] for r in fi['rows'])==fi['sample_positive']
     for n in ['S3','R6']:
         ml=read('model_'+n+'_lock.json');m=ml['model'];assert m==lock['models'][n]
+        assert hashlib.sha256((root/('model_'+n+'_lock.json')).read_bytes()).hexdigest()==lock['model_lock_sha256'][n]
+        assert ml['fit_input_lock_sha256']==lock['fit_input_lock_sha256']
         assert m['optimizer_success'] and m['positive_features']==0 and m['penalty']==.001
         assert len(m['mean'])==len(m['scale'])==len(m['bands'])==len(m['theta'])-1
         assert all(s>0 for s in m['scale']) and ml['frozen_before_evaluation']
@@ -24,6 +27,9 @@ def verify(root):
         rate=sum(x['false_positive']/x['negative_count'] for x in rr)/153
         assert rate<=.01 and abs(rate-m['fit_macro_fpr'])<1e-15
     count=0
+    common=lambda v:[r['group_id'] for r in report['domains'][v]['policies']['S3']['rows']]
+    assert common('original_common')==common('revised_common')
+    assert set(common('original_common'))<=set(common('original_main'))
     def close(a,b):
         if b is None:assert a is None
         else:assert a is not None and abs(a-b)<1e-12,(a,b)
@@ -70,6 +76,10 @@ def verify(root):
                     close(r['delta_'+metric+'_pp'],100*(x[metric]-y[metric]) if x[metric] is not None and y[metric] is not None else None)
                 if r['delta_ap_pp'] is not None:eligible.append(r['delta_ap_pp'])
             interval(q['delta_ap_pp'],eligible)
+            supported=[r for r in q['pairs'] if r['delta_ap_pp'] is not None]
+            recalls=[r for r in q['pairs'] if r['delta_recall_pp'] is not None]
+            assert q['worst_ap']==(min(supported,key=lambda r:r['delta_ap_pp']) if supported else None)
+            assert q['worst_recall']==(min(recalls,key=lambda r:r['delta_recall_pp']) if recalls else None)
             assert q['improved']==sum(d>1 for d in eligible) and q['stable']==sum(abs(d)<=1 for d in eligible) and q['declined']==sum(d< -1 for d in eligible)
             assert q['primary']==(comparison=='Source_spectral_minus_S3')
     for r in read('oracle_threshold_receipts.json')['rows']:
@@ -78,7 +88,8 @@ def verify(root):
         if point['next_batch_false_positives'] is not None:
             rates=[fp/n for fp,n in zip(point['next_batch_false_positives'],point['denominators']) if n]
             assert sum(rates)/len(rates)>.01
-    assert len(read('baseline_reproduction.json')['rows'])==106
+    reproductions=read('baseline_reproduction.json')['rows'];assert len(reproductions)==106
+    assert all(r['AP_confusion_exact'] for r in reproductions)
     assert len(read('CPU_VERIFIED.json')['block_checks'])==972
     assert report['new_segmentation_training']==report['new_network_forwards']==report['new_downloads']==0
     return dict(sealed_files=len(read('DELIVERY_SHA256.json')),independent_metric_rows=count,baseline_reproductions=106,verified=True)
