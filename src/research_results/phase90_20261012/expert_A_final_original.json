@@ -1,0 +1,581 @@
+{
+  "stage": "A",
+  "reviewer_type": "human",
+  "reviewer_id": "cme",
+  "experience": "主要负责人",
+  "sampling_lock_sha256": "c750ecdd91331a1594913cb7d94935d01e0a2d5b83f9608ded604b923e7828e2",
+  "exported_utc": "2026-10-11T12:00:36.524Z",
+  "complete": false,
+  "rows": [
+    {
+      "review_id": "E001",
+      "judgment": "Surface",
+      "reason": "",
+      "small_sufficient": "yes",
+      "large_sufficient": "",
+      "needs_clear_date": "",
+      "needs_DEM": "",
+      "review_date": ""
+    },
+    {
+      "review_id": "E002",
+      "judgment": "无法判定",
+      "reason": "图有问题。根本没有任何足够评判的信息",
+      "small_sufficient": "",
+      "large_sufficient": "",
+      "needs_clear_date": "",
+      "needs_DEM": "",
+      "review_date": ""
+    },
+    {
+      "review_id": "E003",
+      "judgment": "无法判定",
+      "reason": "这图根遥感没关系吧，还有一个类似人脸的伪影",
+      "small_sufficient": "",
+      "large_sufficient": "",
+      "needs_clear_date": "",
+      "needs_DEM": "",
+      "review_date": ""
+    },
+    {
+      "review_id": "E004",
+      "judgment": "Cloud",
+      "reason": "",
+      "small_sufficient": "yes",
+      "large_sufficient": "yes",
+      "needs_clear_date": "",
+      "needs_DEM": "",
+      "review_date": ""
+    },
+    {
+      "review_id": "E005",
+      "judgment": "Surface",
+      "reason": "农田水面反射太阳光，导致亮度很高",
+      "small_sufficient": "yes",
+      "large_sufficient": "yes",
+      "needs_clear_date": "",
+      "needs_DEM": "",
+      "review_date": ""
+    },
+    {
+      "review_id": "E006",
+      "judgment": "无法判定",
+      "reason": "烂图，无有效信息",
+      "small_sufficient": "",
+      "large_sufficient": "",
+      "needs_clear_date": "",
+      "needs_DEM": "",
+      "review_date": ""
+    },
+    {
+      "review_id": "E007",
+      "judgment": "Shadow",
+      "reason": "",
+      "small_sufficient": "yes",
+      "large_sufficient": "yes",
+      "needs_clear_date": "",
+      "needs_DEM": "",
+      "review_date": ""
+    },
+    {
+      "review_id": "E008",
+      "judgment": "Shadow",
+      "reason": "",
+      "small_sufficient": "yes",
+      "large_sufficient": "yes",
+      "needs_clear_date": "",
+      "needs_DEM": "",
+      "review_date": ""
+    },
+    {
+      "review_id": "E009",
+      "judgment": "Surface",
+      "reason": "农田",
+      "small_sufficient": "yes",
+      "large_sufficient": "yes",
+      "needs_clear_date": "",
+      "needs_DEM": "",
+      "review_date": ""
+    },
+    {
+      "review_id": "E010",
+      "judgment": "Surface",
+      "reason": "像地表强反射阳光",
+      "small_sufficient": "no",
+      "large_sufficient": "no",
+      "needs_clear_date": "",
+      "needs_DEM": "",
+      "review_date": ""
+    },
+    {
+      "review_id": "E011",
+      "judgment": "Surface",
+      "reason": "农田高反射",
+      "small_sufficient": "yes",
+      "large_sufficient": "yes",
+      "needs_clear_date": "",
+      "needs_DEM": "",
+      "review_date": ""
+    },
+    {
+      "review_id": "E012",
+      "judgment": "Cloud",
+      "reason": "",
+      "small_sufficient": "",
+      "large_sufficient": "",
+      "needs_clear_date": "",
+      "needs_DEM": "",
+      "review_date": ""
+    },
+    {
+      "review_id": "E013",
+      "judgment": "无法判定",
+      "reason": "图像质量太差，无法分辨",
+      "small_sufficient": "",
+      "large_sufficient": "",
+      "needs_clear_date": "",
+      "needs_DEM": "",
+      "review_date": ""
+    },
+    {
+      "review_id": "E014",
+      "judgment": "Cloud",
+      "reason": "薄云",
+      "small_sufficient": "yes",
+      "large_sufficient": "yes",
+      "needs_clear_date": "",
+      "needs_DEM": "",
+      "review_date": ""
+    },
+    {
+      "review_id": "E015",
+      "judgment": "Cloud",
+      "reason": "",
+      "small_sufficient": "",
+      "large_sufficient": "",
+      "needs_clear_date": "",
+      "needs_DEM": "",
+      "review_date": ""
+    },
+    {
+      "review_id": "E016",
+      "judgment": "Cloud",
+      "reason": "薄云",
+      "small_sufficient": "",
+      "large_sufficient": "",
+      "needs_clear_date": "",
+      "needs_DEM": "",
+      "review_date": ""
+    },
+    {
+      "review_id": "E017",
+      "judgment": "Cloud",
+      "reason": "",
+      "small_sufficient": "",
+      "large_sufficient": "",
+      "needs_clear_date": "",
+      "needs_DEM": "",
+      "review_date": ""
+    },
+    {
+      "review_id": "E018",
+      "judgment": "混合",
+      "reason": "右上角薄云thin cloud，其余阴影shadow",
+      "small_sufficient": "",
+      "large_sufficient": "",
+      "needs_clear_date": "",
+      "needs_DEM": "",
+      "review_date": ""
+    },
+    {
+      "review_id": "E019",
+      "judgment": "Surface",
+      "reason": "地表反射",
+      "small_sufficient": "",
+      "large_sufficient": "",
+      "needs_clear_date": "",
+      "needs_DEM": "",
+      "review_date": ""
+    },
+    {
+      "review_id": "E020",
+      "judgment": "Cloud",
+      "reason": "薄云",
+      "small_sufficient": "",
+      "large_sufficient": "",
+      "needs_clear_date": "",
+      "needs_DEM": "",
+      "review_date": ""
+    },
+    {
+      "review_id": "E021",
+      "judgment": "Shadow",
+      "reason": "",
+      "small_sufficient": "",
+      "large_sufficient": "",
+      "needs_clear_date": "",
+      "needs_DEM": "",
+      "review_date": ""
+    },
+    {
+      "review_id": "E022",
+      "judgment": "Surface",
+      "reason": "看不太清楚，更可能是河流",
+      "small_sufficient": "",
+      "large_sufficient": "",
+      "needs_clear_date": "",
+      "needs_DEM": "",
+      "review_date": ""
+    },
+    {
+      "review_id": "E023",
+      "judgment": "Surface",
+      "reason": "农田吸收了光线",
+      "small_sufficient": "",
+      "large_sufficient": "",
+      "needs_clear_date": "",
+      "needs_DEM": "",
+      "review_date": ""
+    },
+    {
+      "review_id": "E024",
+      "judgment": "Shadow",
+      "reason": "",
+      "small_sufficient": "",
+      "large_sufficient": "",
+      "needs_clear_date": "",
+      "needs_DEM": "",
+      "review_date": ""
+    },
+    {
+      "review_id": "E025",
+      "judgment": "Shadow",
+      "reason": "",
+      "small_sufficient": "",
+      "large_sufficient": "",
+      "needs_clear_date": "",
+      "needs_DEM": "",
+      "review_date": ""
+    },
+    {
+      "review_id": "E026",
+      "judgment": "Surface",
+      "reason": "",
+      "small_sufficient": "",
+      "large_sufficient": "",
+      "needs_clear_date": "",
+      "needs_DEM": "",
+      "review_date": ""
+    },
+    {
+      "review_id": "E027",
+      "judgment": "Surface",
+      "reason": "",
+      "small_sufficient": "",
+      "large_sufficient": "",
+      "needs_clear_date": "",
+      "needs_DEM": "",
+      "review_date": ""
+    },
+    {
+      "review_id": "E028",
+      "judgment": "Shadow",
+      "reason": "主要是shadow，但又有几个像素的薄云，非常薄的薄云",
+      "small_sufficient": "",
+      "large_sufficient": "",
+      "needs_clear_date": "",
+      "needs_DEM": "",
+      "review_date": ""
+    },
+    {
+      "review_id": "E029",
+      "judgment": "Surface",
+      "reason": "",
+      "small_sufficient": "",
+      "large_sufficient": "",
+      "needs_clear_date": "",
+      "needs_DEM": "",
+      "review_date": ""
+    },
+    {
+      "review_id": "E030",
+      "judgment": "Surface",
+      "reason": "",
+      "small_sufficient": "",
+      "large_sufficient": "",
+      "needs_clear_date": "",
+      "needs_DEM": "",
+      "review_date": ""
+    },
+    {
+      "review_id": "E031",
+      "judgment": "Cloud",
+      "reason": "",
+      "small_sufficient": "",
+      "large_sufficient": "",
+      "needs_clear_date": "",
+      "needs_DEM": "",
+      "review_date": ""
+    },
+    {
+      "review_id": "E032",
+      "judgment": "Shadow",
+      "reason": "",
+      "small_sufficient": "",
+      "large_sufficient": "",
+      "needs_clear_date": "",
+      "needs_DEM": "",
+      "review_date": ""
+    },
+    {
+      "review_id": "E033",
+      "judgment": "混合",
+      "reason": "shadow和surface的混合",
+      "small_sufficient": "",
+      "large_sufficient": "",
+      "needs_clear_date": "",
+      "needs_DEM": "",
+      "review_date": ""
+    },
+    {
+      "review_id": "E034",
+      "judgment": "Shadow",
+      "reason": "",
+      "small_sufficient": "",
+      "large_sufficient": "",
+      "needs_clear_date": "",
+      "needs_DEM": "",
+      "review_date": ""
+    },
+    {
+      "review_id": "E035",
+      "judgment": "Shadow",
+      "reason": "",
+      "small_sufficient": "",
+      "large_sufficient": "",
+      "needs_clear_date": "",
+      "needs_DEM": "",
+      "review_date": ""
+    },
+    {
+      "review_id": "E036",
+      "judgment": "混合",
+      "reason": "shadow和surface的混合",
+      "small_sufficient": "",
+      "large_sufficient": "",
+      "needs_clear_date": "",
+      "needs_DEM": "",
+      "review_date": ""
+    },
+    {
+      "review_id": "E037",
+      "judgment": "混合",
+      "reason": "shadow和surface的混合",
+      "small_sufficient": "",
+      "large_sufficient": "",
+      "needs_clear_date": "",
+      "needs_DEM": "",
+      "review_date": ""
+    },
+    {
+      "review_id": "E038",
+      "judgment": "Surface",
+      "reason": "",
+      "small_sufficient": "",
+      "large_sufficient": "",
+      "needs_clear_date": "",
+      "needs_DEM": "",
+      "review_date": ""
+    },
+    {
+      "review_id": "E039",
+      "judgment": "混合",
+      "reason": "Surface + cloud",
+      "small_sufficient": "",
+      "large_sufficient": "",
+      "needs_clear_date": "",
+      "needs_DEM": "",
+      "review_date": ""
+    },
+    {
+      "review_id": "E040",
+      "judgment": "Cloud",
+      "reason": "薄云",
+      "small_sufficient": "",
+      "large_sufficient": "",
+      "needs_clear_date": "",
+      "needs_DEM": "",
+      "review_date": ""
+    },
+    {
+      "review_id": "E041",
+      "judgment": "Surface",
+      "reason": "",
+      "small_sufficient": "",
+      "large_sufficient": "",
+      "needs_clear_date": "",
+      "needs_DEM": "",
+      "review_date": ""
+    },
+    {
+      "review_id": "E042",
+      "judgment": "Shadow",
+      "reason": "",
+      "small_sufficient": "",
+      "large_sufficient": "",
+      "needs_clear_date": "",
+      "needs_DEM": "",
+      "review_date": ""
+    },
+    {
+      "review_id": "E043",
+      "judgment": "Cloud",
+      "reason": "",
+      "small_sufficient": "",
+      "large_sufficient": "",
+      "needs_clear_date": "",
+      "needs_DEM": "",
+      "review_date": ""
+    },
+    {
+      "review_id": "E044",
+      "judgment": "Surface",
+      "reason": "",
+      "small_sufficient": "",
+      "large_sufficient": "",
+      "needs_clear_date": "",
+      "needs_DEM": "",
+      "review_date": ""
+    },
+    {
+      "review_id": "E045",
+      "judgment": "无法判定",
+      "reason": "这个图是坏的！ 疑似传感器坏了",
+      "small_sufficient": "",
+      "large_sufficient": "",
+      "needs_clear_date": "",
+      "needs_DEM": "",
+      "review_date": ""
+    },
+    {
+      "review_id": "E046",
+      "judgment": "Surface",
+      "reason": "",
+      "small_sufficient": "",
+      "large_sufficient": "",
+      "needs_clear_date": "",
+      "needs_DEM": "",
+      "review_date": ""
+    },
+    {
+      "review_id": "E047",
+      "judgment": "Shadow",
+      "reason": "",
+      "small_sufficient": "",
+      "large_sufficient": "",
+      "needs_clear_date": "",
+      "needs_DEM": "",
+      "review_date": ""
+    },
+    {
+      "review_id": "E048",
+      "judgment": "Surface",
+      "reason": "",
+      "small_sufficient": "",
+      "large_sufficient": "",
+      "needs_clear_date": "",
+      "needs_DEM": "",
+      "review_date": ""
+    },
+    {
+      "review_id": "E049",
+      "judgment": "Surface",
+      "reason": "",
+      "small_sufficient": "",
+      "large_sufficient": "",
+      "needs_clear_date": "",
+      "needs_DEM": "",
+      "review_date": ""
+    },
+    {
+      "review_id": "E050",
+      "judgment": "Cloud",
+      "reason": "",
+      "small_sufficient": "",
+      "large_sufficient": "",
+      "needs_clear_date": "",
+      "needs_DEM": "",
+      "review_date": ""
+    },
+    {
+      "review_id": "E051",
+      "judgment": "Surface",
+      "reason": "",
+      "small_sufficient": "",
+      "large_sufficient": "",
+      "needs_clear_date": "",
+      "needs_DEM": "",
+      "review_date": ""
+    },
+    {
+      "review_id": "E052",
+      "judgment": "Surface",
+      "reason": "",
+      "small_sufficient": "",
+      "large_sufficient": "",
+      "needs_clear_date": "",
+      "needs_DEM": "",
+      "review_date": ""
+    },
+    {
+      "review_id": "E053",
+      "judgment": "Shadow",
+      "reason": "",
+      "small_sufficient": "",
+      "large_sufficient": "",
+      "needs_clear_date": "",
+      "needs_DEM": "",
+      "review_date": ""
+    },
+    {
+      "review_id": "E054",
+      "judgment": "Cloud",
+      "reason": "薄云？  又像是传感器不干净导致的炫光",
+      "small_sufficient": "",
+      "large_sufficient": "",
+      "needs_clear_date": "",
+      "needs_DEM": "",
+      "review_date": ""
+    },
+    {
+      "review_id": "E055",
+      "judgment": "Surface",
+      "reason": "",
+      "small_sufficient": "",
+      "large_sufficient": "",
+      "needs_clear_date": "",
+      "needs_DEM": "",
+      "review_date": ""
+    },
+    {
+      "review_id": "E056",
+      "judgment": "Surface",
+      "reason": "河流",
+      "small_sufficient": "",
+      "large_sufficient": "",
+      "needs_clear_date": "",
+      "needs_DEM": "",
+      "review_date": ""
+    },
+    {
+      "review_id": "E057",
+      "judgment": "Cloud",
+      "reason": "",
+      "small_sufficient": "",
+      "large_sufficient": "",
+      "needs_clear_date": "",
+      "needs_DEM": "",
+      "review_date": ""
+    }
+  ]
+}

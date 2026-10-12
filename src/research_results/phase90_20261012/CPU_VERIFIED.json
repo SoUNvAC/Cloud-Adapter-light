@@ -1,0 +1,6866 @@
+{
+  "created_utc": "2026-10-12T03:40:03.020110+00:00",
+  "self_tests": {
+    "hand_calculated_tie_cases": 3,
+    "brute_force_threshold_cases": 60,
+    "sklearn_not_installed_not_claimed": true
+  },
+  "per_group_confusion_and_independent_score_bin_AP_checks": 147,
+  "pooled_AP_checks": 21,
+  "calibrated_block_checks": [
+    {
+      "product": "S2A_MSIL1C_20160417T111159_N0201_R137_T29RPQ_20160417T203056",
+      "block_checks": [
+        {
+          "policy": "L2_RGB",
+          "y60": 0,
+          "x60": 0,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 0,
+          "x60": 0,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 0,
+          "x60": 0,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 0,
+          "x60": 340,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 0,
+          "x60": 340,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 0,
+          "x60": 340,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 0,
+          "x60": 680,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 0,
+          "x60": 680,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 0,
+          "x60": 680,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 0,
+          "x60": 1020,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 0,
+          "x60": 1020,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 0,
+          "x60": 1020,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 0,
+          "x60": 1360,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 0,
+          "x60": 1360,
+          "max_absolute_mean_error": 5.551115123125783e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 0,
+          "x60": 1360,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 0,
+          "x60": 1700,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 0,
+          "x60": 1700,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 0,
+          "x60": 1700,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 340,
+          "x60": 0,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 340,
+          "x60": 0,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 340,
+          "x60": 0,
+          "max_absolute_mean_error": 3.3306690738754696e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 340,
+          "x60": 340,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 340,
+          "x60": 340,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 340,
+          "x60": 340,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 340,
+          "x60": 680,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 340,
+          "x60": 680,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 340,
+          "x60": 680,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 340,
+          "x60": 1020,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 340,
+          "x60": 1020,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 340,
+          "x60": 1020,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 340,
+          "x60": 1360,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 340,
+          "x60": 1360,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 340,
+          "x60": 1360,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 340,
+          "x60": 1700,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 340,
+          "x60": 1700,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 340,
+          "x60": 1700,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 680,
+          "x60": 0,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 680,
+          "x60": 0,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 680,
+          "x60": 0,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 680,
+          "x60": 340,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 680,
+          "x60": 340,
+          "max_absolute_mean_error": 2.0816681711721685e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 680,
+          "x60": 340,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 680,
+          "x60": 680,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 680,
+          "x60": 680,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 680,
+          "x60": 680,
+          "max_absolute_mean_error": 3.469446951953614e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 680,
+          "x60": 1020,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 680,
+          "x60": 1020,
+          "max_absolute_mean_error": 3.469446951953614e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 680,
+          "x60": 1020,
+          "max_absolute_mean_error": 3.469446951953614e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 680,
+          "x60": 1360,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 680,
+          "x60": 1360,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 680,
+          "x60": 1360,
+          "max_absolute_mean_error": 3.469446951953614e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 680,
+          "x60": 1700,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 680,
+          "x60": 1700,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 680,
+          "x60": 1700,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1020,
+          "x60": 0,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1020,
+          "x60": 0,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1020,
+          "x60": 0,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1020,
+          "x60": 340,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1020,
+          "x60": 340,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1020,
+          "x60": 340,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1020,
+          "x60": 680,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1020,
+          "x60": 680,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1020,
+          "x60": 680,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1020,
+          "x60": 1020,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1020,
+          "x60": 1020,
+          "max_absolute_mean_error": 2.0816681711721685e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1020,
+          "x60": 1020,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1020,
+          "x60": 1360,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1020,
+          "x60": 1360,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1020,
+          "x60": 1360,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1020,
+          "x60": 1700,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1020,
+          "x60": 1700,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1020,
+          "x60": 1700,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1360,
+          "x60": 0,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1360,
+          "x60": 0,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1360,
+          "x60": 0,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1360,
+          "x60": 340,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1360,
+          "x60": 340,
+          "max_absolute_mean_error": 3.469446951953614e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1360,
+          "x60": 340,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1360,
+          "x60": 680,
+          "max_absolute_mean_error": 5.204170427930421e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1360,
+          "x60": 680,
+          "max_absolute_mean_error": 3.469446951953614e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1360,
+          "x60": 680,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1360,
+          "x60": 1020,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1360,
+          "x60": 1020,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1360,
+          "x60": 1020,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1360,
+          "x60": 1360,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1360,
+          "x60": 1360,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1360,
+          "x60": 1360,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1360,
+          "x60": 1700,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1360,
+          "x60": 1700,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1360,
+          "x60": 1700,
+          "max_absolute_mean_error": 5.204170427930421e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1700,
+          "x60": 0,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1700,
+          "x60": 0,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1700,
+          "x60": 0,
+          "max_absolute_mean_error": 3.469446951953614e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1700,
+          "x60": 340,
+          "max_absolute_mean_error": 5.204170427930421e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1700,
+          "x60": 340,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1700,
+          "x60": 340,
+          "max_absolute_mean_error": 3.469446951953614e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1700,
+          "x60": 680,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1700,
+          "x60": 680,
+          "max_absolute_mean_error": 3.469446951953614e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1700,
+          "x60": 680,
+          "max_absolute_mean_error": 3.469446951953614e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1700,
+          "x60": 1020,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1700,
+          "x60": 1020,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1700,
+          "x60": 1020,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1700,
+          "x60": 1360,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1700,
+          "x60": 1360,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1700,
+          "x60": 1360,
+          "max_absolute_mean_error": 3.469446951953614e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1700,
+          "x60": 1700,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1700,
+          "x60": 1700,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1700,
+          "x60": 1700,
+          "max_absolute_mean_error": 3.469446951953614e-18,
+          "decisions_equal": true
+        }
+      ]
+    },
+    {
+      "product": "S2A_MSIL1C_20160817T101032_N0204_R022_T33UUU_20160817T230018",
+      "block_checks": [
+        {
+          "policy": "L2_RGB",
+          "y60": 0,
+          "x60": 0,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 0,
+          "x60": 0,
+          "max_absolute_mean_error": 4.163336342344337e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 0,
+          "x60": 0,
+          "max_absolute_mean_error": 2.0816681711721685e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 0,
+          "x60": 340,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 0,
+          "x60": 340,
+          "max_absolute_mean_error": 4.163336342344337e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 0,
+          "x60": 340,
+          "max_absolute_mean_error": 2.0816681711721685e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 0,
+          "x60": 680,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 0,
+          "x60": 680,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 0,
+          "x60": 680,
+          "max_absolute_mean_error": 3.3306690738754696e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 0,
+          "x60": 1020,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 0,
+          "x60": 1020,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 0,
+          "x60": 1020,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 0,
+          "x60": 1360,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 0,
+          "x60": 1360,
+          "max_absolute_mean_error": 1.6653345369377348e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 0,
+          "x60": 1360,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 0,
+          "x60": 1700,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 0,
+          "x60": 1700,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 0,
+          "x60": 1700,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 340,
+          "x60": 0,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 340,
+          "x60": 0,
+          "max_absolute_mean_error": 4.163336342344337e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 340,
+          "x60": 0,
+          "max_absolute_mean_error": 2.0816681711721685e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 340,
+          "x60": 340,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 340,
+          "x60": 340,
+          "max_absolute_mean_error": 4.163336342344337e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 340,
+          "x60": 340,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 340,
+          "x60": 680,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 340,
+          "x60": 680,
+          "max_absolute_mean_error": 1.6653345369377348e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 340,
+          "x60": 680,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 340,
+          "x60": 1020,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 340,
+          "x60": 1020,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 340,
+          "x60": 1020,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 340,
+          "x60": 1360,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 340,
+          "x60": 1360,
+          "max_absolute_mean_error": 1.6653345369377348e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 340,
+          "x60": 1360,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 340,
+          "x60": 1700,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 340,
+          "x60": 1700,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 340,
+          "x60": 1700,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 680,
+          "x60": 0,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 680,
+          "x60": 0,
+          "max_absolute_mean_error": 4.163336342344337e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 680,
+          "x60": 0,
+          "max_absolute_mean_error": 2.0816681711721685e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 680,
+          "x60": 340,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 680,
+          "x60": 340,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 680,
+          "x60": 340,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 680,
+          "x60": 680,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 680,
+          "x60": 680,
+          "max_absolute_mean_error": 1.6653345369377348e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 680,
+          "x60": 680,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 680,
+          "x60": 1020,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 680,
+          "x60": 1020,
+          "max_absolute_mean_error": 1.6653345369377348e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 680,
+          "x60": 1020,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 680,
+          "x60": 1360,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 680,
+          "x60": 1360,
+          "max_absolute_mean_error": 1.6653345369377348e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 680,
+          "x60": 1360,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 680,
+          "x60": 1700,
+          "max_absolute_mean_error": 5.551115123125783e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 680,
+          "x60": 1700,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 680,
+          "x60": 1700,
+          "max_absolute_mean_error": 5.551115123125783e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1020,
+          "x60": 0,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1020,
+          "x60": 0,
+          "max_absolute_mean_error": 4.163336342344337e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1020,
+          "x60": 0,
+          "max_absolute_mean_error": 2.0816681711721685e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1020,
+          "x60": 340,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1020,
+          "x60": 340,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1020,
+          "x60": 340,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1020,
+          "x60": 680,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1020,
+          "x60": 680,
+          "max_absolute_mean_error": 1.6653345369377348e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1020,
+          "x60": 680,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1020,
+          "x60": 1020,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1020,
+          "x60": 1020,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1020,
+          "x60": 1020,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1020,
+          "x60": 1360,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1020,
+          "x60": 1360,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1020,
+          "x60": 1360,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1020,
+          "x60": 1700,
+          "max_absolute_mean_error": 5.551115123125783e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1020,
+          "x60": 1700,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1020,
+          "x60": 1700,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1360,
+          "x60": 0,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1360,
+          "x60": 0,
+          "max_absolute_mean_error": 4.163336342344337e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1360,
+          "x60": 0,
+          "max_absolute_mean_error": 2.0816681711721685e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1360,
+          "x60": 340,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1360,
+          "x60": 340,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1360,
+          "x60": 340,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1360,
+          "x60": 680,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1360,
+          "x60": 680,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1360,
+          "x60": 680,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1360,
+          "x60": 1020,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1360,
+          "x60": 1020,
+          "max_absolute_mean_error": 1.6653345369377348e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1360,
+          "x60": 1020,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1360,
+          "x60": 1360,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1360,
+          "x60": 1360,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1360,
+          "x60": 1360,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1360,
+          "x60": 1700,
+          "max_absolute_mean_error": 5.551115123125783e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1360,
+          "x60": 1700,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1360,
+          "x60": 1700,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1700,
+          "x60": 0,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1700,
+          "x60": 0,
+          "max_absolute_mean_error": 4.163336342344337e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1700,
+          "x60": 0,
+          "max_absolute_mean_error": 2.0816681711721685e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1700,
+          "x60": 340,
+          "max_absolute_mean_error": 5.551115123125783e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1700,
+          "x60": 340,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1700,
+          "x60": 340,
+          "max_absolute_mean_error": 5.551115123125783e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1700,
+          "x60": 680,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1700,
+          "x60": 680,
+          "max_absolute_mean_error": 5.551115123125783e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1700,
+          "x60": 680,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1700,
+          "x60": 1020,
+          "max_absolute_mean_error": 5.551115123125783e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1700,
+          "x60": 1020,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1700,
+          "x60": 1020,
+          "max_absolute_mean_error": 5.551115123125783e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1700,
+          "x60": 1360,
+          "max_absolute_mean_error": 5.551115123125783e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1700,
+          "x60": 1360,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1700,
+          "x60": 1360,
+          "max_absolute_mean_error": 8.326672684688674e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1700,
+          "x60": 1700,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1700,
+          "x60": 1700,
+          "max_absolute_mean_error": 5.551115123125783e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1700,
+          "x60": 1700,
+          "max_absolute_mean_error": 2.0816681711721685e-17,
+          "decisions_equal": true
+        }
+      ]
+    },
+    {
+      "product": "S2A_MSIL1C_20161108T102232_N0204_R065_T32TNR_20161109T224916",
+      "block_checks": [
+        {
+          "policy": "L2_RGB",
+          "y60": 0,
+          "x60": 0,
+          "max_absolute_mean_error": 3.3306690738754696e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 0,
+          "x60": 0,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 0,
+          "x60": 0,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 0,
+          "x60": 340,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 0,
+          "x60": 340,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 0,
+          "x60": 340,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 0,
+          "x60": 680,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 0,
+          "x60": 680,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 0,
+          "x60": 680,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 0,
+          "x60": 1020,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 0,
+          "x60": 1020,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 0,
+          "x60": 1020,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 0,
+          "x60": 1360,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 0,
+          "x60": 1360,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 0,
+          "x60": 1360,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 0,
+          "x60": 1700,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 0,
+          "x60": 1700,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 0,
+          "x60": 1700,
+          "max_absolute_mean_error": 5.551115123125783e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 340,
+          "x60": 0,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 340,
+          "x60": 0,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 340,
+          "x60": 0,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 340,
+          "x60": 340,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 340,
+          "x60": 340,
+          "max_absolute_mean_error": 1.6653345369377348e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 340,
+          "x60": 340,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 340,
+          "x60": 680,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 340,
+          "x60": 680,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 340,
+          "x60": 680,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 340,
+          "x60": 1020,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 340,
+          "x60": 1020,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 340,
+          "x60": 1020,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 340,
+          "x60": 1360,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 340,
+          "x60": 1360,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 340,
+          "x60": 1360,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 340,
+          "x60": 1700,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 340,
+          "x60": 1700,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 340,
+          "x60": 1700,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 680,
+          "x60": 0,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 680,
+          "x60": 0,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 680,
+          "x60": 0,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 680,
+          "x60": 340,
+          "max_absolute_mean_error": 1.0408340855860843e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 680,
+          "x60": 340,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 680,
+          "x60": 340,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 680,
+          "x60": 680,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 680,
+          "x60": 680,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 680,
+          "x60": 680,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 680,
+          "x60": 1020,
+          "max_absolute_mean_error": 3.3306690738754696e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 680,
+          "x60": 1020,
+          "max_absolute_mean_error": 1.6653345369377348e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 680,
+          "x60": 1020,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 680,
+          "x60": 1360,
+          "max_absolute_mean_error": 5.551115123125783e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 680,
+          "x60": 1360,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 680,
+          "x60": 1360,
+          "max_absolute_mean_error": 4.163336342344337e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 680,
+          "x60": 1700,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 680,
+          "x60": 1700,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 680,
+          "x60": 1700,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1020,
+          "x60": 0,
+          "max_absolute_mean_error": 1.0408340855860843e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1020,
+          "x60": 0,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1020,
+          "x60": 0,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1020,
+          "x60": 340,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1020,
+          "x60": 340,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1020,
+          "x60": 340,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1020,
+          "x60": 680,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1020,
+          "x60": 680,
+          "max_absolute_mean_error": 1.6653345369377348e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1020,
+          "x60": 680,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1020,
+          "x60": 1020,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1020,
+          "x60": 1020,
+          "max_absolute_mean_error": 1.6653345369377348e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1020,
+          "x60": 1020,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1020,
+          "x60": 1360,
+          "max_absolute_mean_error": 3.3306690738754696e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1020,
+          "x60": 1360,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1020,
+          "x60": 1360,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1020,
+          "x60": 1700,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1020,
+          "x60": 1700,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1020,
+          "x60": 1700,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1360,
+          "x60": 0,
+          "max_absolute_mean_error": 1.0408340855860843e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1360,
+          "x60": 0,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1360,
+          "x60": 0,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1360,
+          "x60": 340,
+          "max_absolute_mean_error": 1.0408340855860843e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1360,
+          "x60": 340,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1360,
+          "x60": 340,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1360,
+          "x60": 680,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1360,
+          "x60": 680,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1360,
+          "x60": 680,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1360,
+          "x60": 1020,
+          "max_absolute_mean_error": 3.3306690738754696e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1360,
+          "x60": 1020,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1360,
+          "x60": 1020,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1360,
+          "x60": 1360,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1360,
+          "x60": 1360,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1360,
+          "x60": 1360,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1360,
+          "x60": 1700,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1360,
+          "x60": 1700,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1360,
+          "x60": 1700,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1700,
+          "x60": 0,
+          "max_absolute_mean_error": 1.0408340855860843e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1700,
+          "x60": 0,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1700,
+          "x60": 0,
+          "max_absolute_mean_error": 2.0816681711721685e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1700,
+          "x60": 340,
+          "max_absolute_mean_error": 1.0408340855860843e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1700,
+          "x60": 340,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1700,
+          "x60": 340,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1700,
+          "x60": 680,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1700,
+          "x60": 680,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1700,
+          "x60": 680,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1700,
+          "x60": 1020,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1700,
+          "x60": 1020,
+          "max_absolute_mean_error": 1.0408340855860843e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1700,
+          "x60": 1020,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1700,
+          "x60": 1360,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1700,
+          "x60": 1360,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1700,
+          "x60": 1360,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1700,
+          "x60": 1700,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1700,
+          "x60": 1700,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1700,
+          "x60": 1700,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        }
+      ]
+    },
+    {
+      "product": "S2A_MSIL1C_20170313T074931_N0204_R135_T35JPM_20170313T081339",
+      "block_checks": [
+        {
+          "policy": "L2_RGB",
+          "y60": 0,
+          "x60": 0,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 0,
+          "x60": 0,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 0,
+          "x60": 0,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 0,
+          "x60": 340,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 0,
+          "x60": 340,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 0,
+          "x60": 340,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 0,
+          "x60": 680,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 0,
+          "x60": 680,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 0,
+          "x60": 680,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 0,
+          "x60": 1020,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 0,
+          "x60": 1020,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 0,
+          "x60": 1020,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 0,
+          "x60": 1360,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 0,
+          "x60": 1360,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 0,
+          "x60": 1360,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 0,
+          "x60": 1700,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 0,
+          "x60": 1700,
+          "max_absolute_mean_error": 5.551115123125783e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 0,
+          "x60": 1700,
+          "max_absolute_mean_error": 1.0408340855860843e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 340,
+          "x60": 0,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 340,
+          "x60": 0,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 340,
+          "x60": 0,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 340,
+          "x60": 340,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 340,
+          "x60": 340,
+          "max_absolute_mean_error": 1.6653345369377348e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 340,
+          "x60": 340,
+          "max_absolute_mean_error": 3.3306690738754696e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 340,
+          "x60": 680,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 340,
+          "x60": 680,
+          "max_absolute_mean_error": 1.6653345369377348e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 340,
+          "x60": 680,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 340,
+          "x60": 1020,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 340,
+          "x60": 1020,
+          "max_absolute_mean_error": 1.6653345369377348e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 340,
+          "x60": 1020,
+          "max_absolute_mean_error": 3.3306690738754696e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 340,
+          "x60": 1360,
+          "max_absolute_mean_error": 3.3306690738754696e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 340,
+          "x60": 1360,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 340,
+          "x60": 1360,
+          "max_absolute_mean_error": 3.3306690738754696e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 340,
+          "x60": 1700,
+          "max_absolute_mean_error": 2.0816681711721685e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 340,
+          "x60": 1700,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 340,
+          "x60": 1700,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 680,
+          "x60": 0,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 680,
+          "x60": 0,
+          "max_absolute_mean_error": 1.6653345369377348e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 680,
+          "x60": 0,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 680,
+          "x60": 340,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 680,
+          "x60": 340,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 680,
+          "x60": 340,
+          "max_absolute_mean_error": 3.3306690738754696e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 680,
+          "x60": 680,
+          "max_absolute_mean_error": 3.3306690738754696e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 680,
+          "x60": 680,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 680,
+          "x60": 680,
+          "max_absolute_mean_error": 3.3306690738754696e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 680,
+          "x60": 1020,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 680,
+          "x60": 1020,
+          "max_absolute_mean_error": 1.6653345369377348e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 680,
+          "x60": 1020,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 680,
+          "x60": 1360,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 680,
+          "x60": 1360,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 680,
+          "x60": 1360,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 680,
+          "x60": 1700,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 680,
+          "x60": 1700,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 680,
+          "x60": 1700,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1020,
+          "x60": 0,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1020,
+          "x60": 0,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1020,
+          "x60": 0,
+          "max_absolute_mean_error": 3.3306690738754696e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1020,
+          "x60": 340,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1020,
+          "x60": 340,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1020,
+          "x60": 340,
+          "max_absolute_mean_error": 5.551115123125783e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1020,
+          "x60": 680,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1020,
+          "x60": 680,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1020,
+          "x60": 680,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1020,
+          "x60": 1020,
+          "max_absolute_mean_error": 3.3306690738754696e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1020,
+          "x60": 1020,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1020,
+          "x60": 1020,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1020,
+          "x60": 1360,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1020,
+          "x60": 1360,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1020,
+          "x60": 1360,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1020,
+          "x60": 1700,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1020,
+          "x60": 1700,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1020,
+          "x60": 1700,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1360,
+          "x60": 0,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1360,
+          "x60": 0,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1360,
+          "x60": 0,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1360,
+          "x60": 340,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1360,
+          "x60": 340,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1360,
+          "x60": 340,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1360,
+          "x60": 680,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1360,
+          "x60": 680,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1360,
+          "x60": 680,
+          "max_absolute_mean_error": 3.3306690738754696e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1360,
+          "x60": 1020,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1360,
+          "x60": 1020,
+          "max_absolute_mean_error": 5.551115123125783e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1360,
+          "x60": 1020,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1360,
+          "x60": 1360,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1360,
+          "x60": 1360,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1360,
+          "x60": 1360,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1360,
+          "x60": 1700,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1360,
+          "x60": 1700,
+          "max_absolute_mean_error": 5.551115123125783e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1360,
+          "x60": 1700,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1700,
+          "x60": 0,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1700,
+          "x60": 0,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1700,
+          "x60": 0,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1700,
+          "x60": 340,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1700,
+          "x60": 340,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1700,
+          "x60": 340,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1700,
+          "x60": 680,
+          "max_absolute_mean_error": 1.0408340855860843e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1700,
+          "x60": 680,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1700,
+          "x60": 680,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1700,
+          "x60": 1020,
+          "max_absolute_mean_error": 4.163336342344337e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1700,
+          "x60": 1020,
+          "max_absolute_mean_error": 5.551115123125783e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1700,
+          "x60": 1020,
+          "max_absolute_mean_error": 5.551115123125783e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1700,
+          "x60": 1360,
+          "max_absolute_mean_error": 5.551115123125783e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1700,
+          "x60": 1360,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1700,
+          "x60": 1360,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1700,
+          "x60": 1700,
+          "max_absolute_mean_error": 3.469446951953614e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1700,
+          "x60": 1700,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1700,
+          "x60": 1700,
+          "max_absolute_mean_error": 3.469446951953614e-18,
+          "decisions_equal": true
+        }
+      ]
+    },
+    {
+      "product": "S2A_MSIL1C_20170501T183311_N0205_R127_T11SPC_20170501T183311",
+      "block_checks": [
+        {
+          "policy": "L2_RGB",
+          "y60": 0,
+          "x60": 0,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 0,
+          "x60": 0,
+          "max_absolute_mean_error": 4.163336342344337e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 0,
+          "x60": 0,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 0,
+          "x60": 340,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 0,
+          "x60": 340,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 0,
+          "x60": 340,
+          "max_absolute_mean_error": 3.469446951953614e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 0,
+          "x60": 680,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 0,
+          "x60": 680,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 0,
+          "x60": 680,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 0,
+          "x60": 1020,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 0,
+          "x60": 1020,
+          "max_absolute_mean_error": 1.0408340855860843e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 0,
+          "x60": 1020,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 0,
+          "x60": 1360,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 0,
+          "x60": 1360,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 0,
+          "x60": 1360,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 0,
+          "x60": 1700,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 0,
+          "x60": 1700,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 0,
+          "x60": 1700,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 340,
+          "x60": 0,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 340,
+          "x60": 0,
+          "max_absolute_mean_error": 4.163336342344337e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 340,
+          "x60": 0,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 340,
+          "x60": 340,
+          "max_absolute_mean_error": 1.0408340855860843e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 340,
+          "x60": 340,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 340,
+          "x60": 340,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 340,
+          "x60": 680,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 340,
+          "x60": 680,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 340,
+          "x60": 680,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 340,
+          "x60": 1020,
+          "max_absolute_mean_error": 3.3306690738754696e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 340,
+          "x60": 1020,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 340,
+          "x60": 1020,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 340,
+          "x60": 1360,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 340,
+          "x60": 1360,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 340,
+          "x60": 1360,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 340,
+          "x60": 1700,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 340,
+          "x60": 1700,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 340,
+          "x60": 1700,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 680,
+          "x60": 0,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 680,
+          "x60": 0,
+          "max_absolute_mean_error": 4.163336342344337e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 680,
+          "x60": 0,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 680,
+          "x60": 340,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 680,
+          "x60": 340,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 680,
+          "x60": 340,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 680,
+          "x60": 680,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 680,
+          "x60": 680,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 680,
+          "x60": 680,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 680,
+          "x60": 1020,
+          "max_absolute_mean_error": 3.3306690738754696e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 680,
+          "x60": 1020,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 680,
+          "x60": 1020,
+          "max_absolute_mean_error": 3.3306690738754696e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 680,
+          "x60": 1360,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 680,
+          "x60": 1360,
+          "max_absolute_mean_error": 1.6653345369377348e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 680,
+          "x60": 1360,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 680,
+          "x60": 1700,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 680,
+          "x60": 1700,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 680,
+          "x60": 1700,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1020,
+          "x60": 0,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1020,
+          "x60": 0,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1020,
+          "x60": 0,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1020,
+          "x60": 340,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1020,
+          "x60": 340,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1020,
+          "x60": 340,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1020,
+          "x60": 680,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1020,
+          "x60": 680,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1020,
+          "x60": 680,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1020,
+          "x60": 1020,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1020,
+          "x60": 1020,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1020,
+          "x60": 1020,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1020,
+          "x60": 1360,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1020,
+          "x60": 1360,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1020,
+          "x60": 1360,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1020,
+          "x60": 1700,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1020,
+          "x60": 1700,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1020,
+          "x60": 1700,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1360,
+          "x60": 0,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1360,
+          "x60": 0,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1360,
+          "x60": 0,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1360,
+          "x60": 340,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1360,
+          "x60": 340,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1360,
+          "x60": 340,
+          "max_absolute_mean_error": 3.469446951953614e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1360,
+          "x60": 680,
+          "max_absolute_mean_error": 3.3306690738754696e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1360,
+          "x60": 680,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1360,
+          "x60": 680,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1360,
+          "x60": 1020,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1360,
+          "x60": 1020,
+          "max_absolute_mean_error": 5.551115123125783e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1360,
+          "x60": 1020,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1360,
+          "x60": 1360,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1360,
+          "x60": 1360,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1360,
+          "x60": 1360,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1360,
+          "x60": 1700,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1360,
+          "x60": 1700,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1360,
+          "x60": 1700,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1700,
+          "x60": 0,
+          "max_absolute_mean_error": 5.204170427930421e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1700,
+          "x60": 0,
+          "max_absolute_mean_error": 1.734723475976807e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1700,
+          "x60": 0,
+          "max_absolute_mean_error": 1.734723475976807e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1700,
+          "x60": 340,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1700,
+          "x60": 340,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1700,
+          "x60": 340,
+          "max_absolute_mean_error": 5.204170427930421e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1700,
+          "x60": 680,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1700,
+          "x60": 680,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1700,
+          "x60": 680,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1700,
+          "x60": 1020,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1700,
+          "x60": 1020,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1700,
+          "x60": 1020,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1700,
+          "x60": 1360,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1700,
+          "x60": 1360,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1700,
+          "x60": 1360,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1700,
+          "x60": 1700,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1700,
+          "x60": 1700,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1700,
+          "x60": 1700,
+          "max_absolute_mean_error": 3.469446951953614e-18,
+          "decisions_equal": true
+        }
+      ]
+    },
+    {
+      "product": "S2A_MSIL1C_20170516T105031_N0205_R051_T31UDP_20170516T105322",
+      "block_checks": [
+        {
+          "policy": "L2_RGB",
+          "y60": 0,
+          "x60": 0,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 0,
+          "x60": 0,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 0,
+          "x60": 0,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 0,
+          "x60": 340,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 0,
+          "x60": 340,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 0,
+          "x60": 340,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 0,
+          "x60": 680,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 0,
+          "x60": 680,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 0,
+          "x60": 680,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 0,
+          "x60": 1020,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 0,
+          "x60": 1020,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 0,
+          "x60": 1020,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 0,
+          "x60": 1360,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 0,
+          "x60": 1360,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 0,
+          "x60": 1360,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 0,
+          "x60": 1700,
+          "max_absolute_mean_error": 1.0408340855860843e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 0,
+          "x60": 1700,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 0,
+          "x60": 1700,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 340,
+          "x60": 0,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 340,
+          "x60": 0,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 340,
+          "x60": 0,
+          "max_absolute_mean_error": 1.0408340855860843e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 340,
+          "x60": 340,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 340,
+          "x60": 340,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 340,
+          "x60": 340,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 340,
+          "x60": 680,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 340,
+          "x60": 680,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 340,
+          "x60": 680,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 340,
+          "x60": 1020,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 340,
+          "x60": 1020,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 340,
+          "x60": 1020,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 340,
+          "x60": 1360,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 340,
+          "x60": 1360,
+          "max_absolute_mean_error": 5.551115123125783e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 340,
+          "x60": 1360,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 340,
+          "x60": 1700,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 340,
+          "x60": 1700,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 340,
+          "x60": 1700,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 680,
+          "x60": 0,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 680,
+          "x60": 0,
+          "max_absolute_mean_error": 5.551115123125783e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 680,
+          "x60": 0,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 680,
+          "x60": 340,
+          "max_absolute_mean_error": 5.551115123125783e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 680,
+          "x60": 340,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 680,
+          "x60": 340,
+          "max_absolute_mean_error": 5.551115123125783e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 680,
+          "x60": 680,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 680,
+          "x60": 680,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 680,
+          "x60": 680,
+          "max_absolute_mean_error": 3.3306690738754696e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 680,
+          "x60": 1020,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 680,
+          "x60": 1020,
+          "max_absolute_mean_error": 5.551115123125783e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 680,
+          "x60": 1020,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 680,
+          "x60": 1360,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 680,
+          "x60": 1360,
+          "max_absolute_mean_error": 5.551115123125783e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 680,
+          "x60": 1360,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 680,
+          "x60": 1700,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 680,
+          "x60": 1700,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 680,
+          "x60": 1700,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1020,
+          "x60": 0,
+          "max_absolute_mean_error": 5.551115123125783e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1020,
+          "x60": 0,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1020,
+          "x60": 0,
+          "max_absolute_mean_error": 4.163336342344337e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1020,
+          "x60": 340,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1020,
+          "x60": 340,
+          "max_absolute_mean_error": 5.551115123125783e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1020,
+          "x60": 340,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1020,
+          "x60": 680,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1020,
+          "x60": 680,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1020,
+          "x60": 680,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1020,
+          "x60": 1020,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1020,
+          "x60": 1020,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1020,
+          "x60": 1020,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1020,
+          "x60": 1360,
+          "max_absolute_mean_error": 3.3306690738754696e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1020,
+          "x60": 1360,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1020,
+          "x60": 1360,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1020,
+          "x60": 1700,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1020,
+          "x60": 1700,
+          "max_absolute_mean_error": 1.0408340855860843e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1020,
+          "x60": 1700,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1360,
+          "x60": 0,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1360,
+          "x60": 0,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1360,
+          "x60": 0,
+          "max_absolute_mean_error": 3.469446951953614e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1360,
+          "x60": 340,
+          "max_absolute_mean_error": 5.551115123125783e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1360,
+          "x60": 340,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1360,
+          "x60": 340,
+          "max_absolute_mean_error": 5.551115123125783e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1360,
+          "x60": 680,
+          "max_absolute_mean_error": 3.3306690738754696e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1360,
+          "x60": 680,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1360,
+          "x60": 680,
+          "max_absolute_mean_error": 3.3306690738754696e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1360,
+          "x60": 1020,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1360,
+          "x60": 1020,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1360,
+          "x60": 1020,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1360,
+          "x60": 1360,
+          "max_absolute_mean_error": 3.3306690738754696e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1360,
+          "x60": 1360,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1360,
+          "x60": 1360,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1360,
+          "x60": 1700,
+          "max_absolute_mean_error": 1.0408340855860843e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1360,
+          "x60": 1700,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1360,
+          "x60": 1700,
+          "max_absolute_mean_error": 2.0816681711721685e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1700,
+          "x60": 0,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1700,
+          "x60": 0,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1700,
+          "x60": 0,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1700,
+          "x60": 340,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1700,
+          "x60": 340,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1700,
+          "x60": 340,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1700,
+          "x60": 680,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1700,
+          "x60": 680,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1700,
+          "x60": 680,
+          "max_absolute_mean_error": 2.0816681711721685e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1700,
+          "x60": 1020,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1700,
+          "x60": 1020,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1700,
+          "x60": 1020,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1700,
+          "x60": 1360,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1700,
+          "x60": 1360,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1700,
+          "x60": 1360,
+          "max_absolute_mean_error": 5.204170427930421e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1700,
+          "x60": 1700,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1700,
+          "x60": 1700,
+          "max_absolute_mean_error": 3.469446951953614e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1700,
+          "x60": 1700,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        }
+      ]
+    },
+    {
+      "product": "S2A_MSIL1C_20170917T103021_N0205_R108_T31TFJ_20170917T103018",
+      "block_checks": [
+        {
+          "policy": "L2_RGB",
+          "y60": 0,
+          "x60": 0,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 0,
+          "x60": 0,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 0,
+          "x60": 0,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 0,
+          "x60": 340,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 0,
+          "x60": 340,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 0,
+          "x60": 340,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 0,
+          "x60": 680,
+          "max_absolute_mean_error": 3.3306690738754696e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 0,
+          "x60": 680,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 0,
+          "x60": 680,
+          "max_absolute_mean_error": 3.3306690738754696e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 0,
+          "x60": 1020,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 0,
+          "x60": 1020,
+          "max_absolute_mean_error": 1.6653345369377348e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 0,
+          "x60": 1020,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 0,
+          "x60": 1360,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 0,
+          "x60": 1360,
+          "max_absolute_mean_error": 1.6653345369377348e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 0,
+          "x60": 1360,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 0,
+          "x60": 1700,
+          "max_absolute_mean_error": 5.551115123125783e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 0,
+          "x60": 1700,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 0,
+          "x60": 1700,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 340,
+          "x60": 0,
+          "max_absolute_mean_error": 5.551115123125783e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 340,
+          "x60": 0,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 340,
+          "x60": 0,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 340,
+          "x60": 340,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 340,
+          "x60": 340,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 340,
+          "x60": 340,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 340,
+          "x60": 680,
+          "max_absolute_mean_error": 3.3306690738754696e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 340,
+          "x60": 680,
+          "max_absolute_mean_error": 1.6653345369377348e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 340,
+          "x60": 680,
+          "max_absolute_mean_error": 3.3306690738754696e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 340,
+          "x60": 1020,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 340,
+          "x60": 1020,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 340,
+          "x60": 1020,
+          "max_absolute_mean_error": 3.3306690738754696e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 340,
+          "x60": 1360,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 340,
+          "x60": 1360,
+          "max_absolute_mean_error": 1.6653345369377348e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 340,
+          "x60": 1360,
+          "max_absolute_mean_error": 3.3306690738754696e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 340,
+          "x60": 1700,
+          "max_absolute_mean_error": 5.551115123125783e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 340,
+          "x60": 1700,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 340,
+          "x60": 1700,
+          "max_absolute_mean_error": 5.551115123125783e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 680,
+          "x60": 0,
+          "max_absolute_mean_error": 5.204170427930421e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 680,
+          "x60": 0,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 680,
+          "x60": 0,
+          "max_absolute_mean_error": 1.734723475976807e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 680,
+          "x60": 340,
+          "max_absolute_mean_error": 5.551115123125783e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 680,
+          "x60": 340,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 680,
+          "x60": 340,
+          "max_absolute_mean_error": 5.551115123125783e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 680,
+          "x60": 680,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 680,
+          "x60": 680,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 680,
+          "x60": 680,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 680,
+          "x60": 1020,
+          "max_absolute_mean_error": 3.3306690738754696e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 680,
+          "x60": 1020,
+          "max_absolute_mean_error": 1.6653345369377348e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 680,
+          "x60": 1020,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 680,
+          "x60": 1360,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 680,
+          "x60": 1360,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 680,
+          "x60": 1360,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 680,
+          "x60": 1700,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 680,
+          "x60": 1700,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 680,
+          "x60": 1700,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1020,
+          "x60": 0,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1020,
+          "x60": 0,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1020,
+          "x60": 0,
+          "max_absolute_mean_error": 5.551115123125783e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1020,
+          "x60": 340,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1020,
+          "x60": 340,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1020,
+          "x60": 340,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1020,
+          "x60": 680,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1020,
+          "x60": 680,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1020,
+          "x60": 680,
+          "max_absolute_mean_error": 3.3306690738754696e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1020,
+          "x60": 1020,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1020,
+          "x60": 1020,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1020,
+          "x60": 1020,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1020,
+          "x60": 1360,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1020,
+          "x60": 1360,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1020,
+          "x60": 1360,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1020,
+          "x60": 1700,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1020,
+          "x60": 1700,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1020,
+          "x60": 1700,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1360,
+          "x60": 0,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1360,
+          "x60": 0,
+          "max_absolute_mean_error": 3.3306690738754696e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1360,
+          "x60": 0,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1360,
+          "x60": 340,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1360,
+          "x60": 340,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1360,
+          "x60": 340,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1360,
+          "x60": 680,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1360,
+          "x60": 680,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1360,
+          "x60": 680,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1360,
+          "x60": 1020,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1360,
+          "x60": 1020,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1360,
+          "x60": 1020,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1360,
+          "x60": 1360,
+          "max_absolute_mean_error": 3.3306690738754696e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1360,
+          "x60": 1360,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1360,
+          "x60": 1360,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1360,
+          "x60": 1700,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1360,
+          "x60": 1700,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1360,
+          "x60": 1700,
+          "max_absolute_mean_error": 4.163336342344337e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1700,
+          "x60": 0,
+          "max_absolute_mean_error": 1.0408340855860843e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1700,
+          "x60": 0,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1700,
+          "x60": 0,
+          "max_absolute_mean_error": 2.0816681711721685e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1700,
+          "x60": 340,
+          "max_absolute_mean_error": 1.0408340855860843e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1700,
+          "x60": 340,
+          "max_absolute_mean_error": 4.163336342344337e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1700,
+          "x60": 340,
+          "max_absolute_mean_error": 2.0816681711721685e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1700,
+          "x60": 680,
+          "max_absolute_mean_error": 5.204170427930421e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1700,
+          "x60": 680,
+          "max_absolute_mean_error": 3.469446951953614e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1700,
+          "x60": 680,
+          "max_absolute_mean_error": 2.0816681711721685e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1700,
+          "x60": 1020,
+          "max_absolute_mean_error": 1.0408340855860843e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1700,
+          "x60": 1020,
+          "max_absolute_mean_error": 4.163336342344337e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1700,
+          "x60": 1020,
+          "max_absolute_mean_error": 2.0816681711721685e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1700,
+          "x60": 1360,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1700,
+          "x60": 1360,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1700,
+          "x60": 1360,
+          "max_absolute_mean_error": 2.0816681711721685e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1700,
+          "x60": 1700,
+          "max_absolute_mean_error": 1.0408340855860843e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1700,
+          "x60": 1700,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1700,
+          "x60": 1700,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        }
+      ]
+    },
+    {
+      "product": "S2A_MSIL1C_20180422T102031_N0206_R065_T32UPU_20180422T141352",
+      "block_checks": [
+        {
+          "policy": "L2_RGB",
+          "y60": 0,
+          "x60": 0,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 0,
+          "x60": 0,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 0,
+          "x60": 0,
+          "max_absolute_mean_error": 3.3306690738754696e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 0,
+          "x60": 340,
+          "max_absolute_mean_error": 1.0408340855860843e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 0,
+          "x60": 340,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 0,
+          "x60": 340,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 0,
+          "x60": 680,
+          "max_absolute_mean_error": 1.0408340855860843e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 0,
+          "x60": 680,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 0,
+          "x60": 680,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 0,
+          "x60": 1020,
+          "max_absolute_mean_error": 1.0408340855860843e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 0,
+          "x60": 1020,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 0,
+          "x60": 1020,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 0,
+          "x60": 1360,
+          "max_absolute_mean_error": 1.0408340855860843e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 0,
+          "x60": 1360,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 0,
+          "x60": 1360,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 0,
+          "x60": 1700,
+          "max_absolute_mean_error": 1.0408340855860843e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 0,
+          "x60": 1700,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 0,
+          "x60": 1700,
+          "max_absolute_mean_error": 1.0408340855860843e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 340,
+          "x60": 0,
+          "max_absolute_mean_error": 1.0408340855860843e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 340,
+          "x60": 0,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 340,
+          "x60": 0,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 340,
+          "x60": 340,
+          "max_absolute_mean_error": 1.0408340855860843e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 340,
+          "x60": 340,
+          "max_absolute_mean_error": 2.0816681711721685e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 340,
+          "x60": 340,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 340,
+          "x60": 680,
+          "max_absolute_mean_error": 1.0408340855860843e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 340,
+          "x60": 680,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 340,
+          "x60": 680,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 340,
+          "x60": 1020,
+          "max_absolute_mean_error": 1.0408340855860843e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 340,
+          "x60": 1020,
+          "max_absolute_mean_error": 2.0816681711721685e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 340,
+          "x60": 1020,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 340,
+          "x60": 1360,
+          "max_absolute_mean_error": 1.0408340855860843e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 340,
+          "x60": 1360,
+          "max_absolute_mean_error": 2.0816681711721685e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 340,
+          "x60": 1360,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 340,
+          "x60": 1700,
+          "max_absolute_mean_error": 1.0408340855860843e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 340,
+          "x60": 1700,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 340,
+          "x60": 1700,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 680,
+          "x60": 0,
+          "max_absolute_mean_error": 1.0408340855860843e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 680,
+          "x60": 0,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 680,
+          "x60": 0,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 680,
+          "x60": 340,
+          "max_absolute_mean_error": 1.0408340855860843e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 680,
+          "x60": 340,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 680,
+          "x60": 340,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 680,
+          "x60": 680,
+          "max_absolute_mean_error": 1.0408340855860843e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 680,
+          "x60": 680,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 680,
+          "x60": 680,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 680,
+          "x60": 1020,
+          "max_absolute_mean_error": 1.0408340855860843e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 680,
+          "x60": 1020,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 680,
+          "x60": 1020,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 680,
+          "x60": 1360,
+          "max_absolute_mean_error": 1.0408340855860843e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 680,
+          "x60": 1360,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 680,
+          "x60": 1360,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 680,
+          "x60": 1700,
+          "max_absolute_mean_error": 1.0408340855860843e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 680,
+          "x60": 1700,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 680,
+          "x60": 1700,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1020,
+          "x60": 0,
+          "max_absolute_mean_error": 1.0408340855860843e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1020,
+          "x60": 0,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1020,
+          "x60": 0,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1020,
+          "x60": 340,
+          "max_absolute_mean_error": 1.0408340855860843e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1020,
+          "x60": 340,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1020,
+          "x60": 340,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1020,
+          "x60": 680,
+          "max_absolute_mean_error": 1.0408340855860843e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1020,
+          "x60": 680,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1020,
+          "x60": 680,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1020,
+          "x60": 1020,
+          "max_absolute_mean_error": 1.0408340855860843e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1020,
+          "x60": 1020,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1020,
+          "x60": 1020,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1020,
+          "x60": 1360,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1020,
+          "x60": 1360,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1020,
+          "x60": 1360,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1020,
+          "x60": 1700,
+          "max_absolute_mean_error": 1.0408340855860843e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1020,
+          "x60": 1700,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1020,
+          "x60": 1700,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1360,
+          "x60": 0,
+          "max_absolute_mean_error": 1.0408340855860843e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1360,
+          "x60": 0,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1360,
+          "x60": 0,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1360,
+          "x60": 340,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1360,
+          "x60": 340,
+          "max_absolute_mean_error": 1.6653345369377348e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1360,
+          "x60": 340,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1360,
+          "x60": 680,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1360,
+          "x60": 680,
+          "max_absolute_mean_error": 1.6653345369377348e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1360,
+          "x60": 680,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1360,
+          "x60": 1020,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1360,
+          "x60": 1020,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1360,
+          "x60": 1020,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1360,
+          "x60": 1360,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1360,
+          "x60": 1360,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1360,
+          "x60": 1360,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1360,
+          "x60": 1700,
+          "max_absolute_mean_error": 5.551115123125783e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1360,
+          "x60": 1700,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1360,
+          "x60": 1700,
+          "max_absolute_mean_error": 5.551115123125783e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1700,
+          "x60": 0,
+          "max_absolute_mean_error": 1.0408340855860843e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1700,
+          "x60": 0,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1700,
+          "x60": 0,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1700,
+          "x60": 340,
+          "max_absolute_mean_error": 5.551115123125783e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1700,
+          "x60": 340,
+          "max_absolute_mean_error": 1.6653345369377348e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1700,
+          "x60": 340,
+          "max_absolute_mean_error": 5.551115123125783e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1700,
+          "x60": 680,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1700,
+          "x60": 680,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1700,
+          "x60": 680,
+          "max_absolute_mean_error": 5.551115123125783e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1700,
+          "x60": 1020,
+          "max_absolute_mean_error": 1.0408340855860843e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1700,
+          "x60": 1020,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1700,
+          "x60": 1020,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1700,
+          "x60": 1360,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1700,
+          "x60": 1360,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1700,
+          "x60": 1360,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1700,
+          "x60": 1700,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1700,
+          "x60": 1700,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1700,
+          "x60": 1700,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        }
+      ]
+    },
+    {
+      "product": "S2A_MSIL1C_20180505T141051_N0206_R110_T21LWK_20180505T160911",
+      "block_checks": [
+        {
+          "policy": "L2_RGB",
+          "y60": 0,
+          "x60": 0,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 0,
+          "x60": 0,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 0,
+          "x60": 0,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 0,
+          "x60": 340,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 0,
+          "x60": 340,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 0,
+          "x60": 340,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 0,
+          "x60": 680,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 0,
+          "x60": 680,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 0,
+          "x60": 680,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 0,
+          "x60": 1020,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 0,
+          "x60": 1020,
+          "max_absolute_mean_error": 4.163336342344337e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 0,
+          "x60": 1020,
+          "max_absolute_mean_error": 2.0816681711721685e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 0,
+          "x60": 1360,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 0,
+          "x60": 1360,
+          "max_absolute_mean_error": 4.163336342344337e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 0,
+          "x60": 1360,
+          "max_absolute_mean_error": 2.0816681711721685e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 0,
+          "x60": 1700,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 0,
+          "x60": 1700,
+          "max_absolute_mean_error": 4.163336342344337e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 0,
+          "x60": 1700,
+          "max_absolute_mean_error": 2.0816681711721685e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 340,
+          "x60": 0,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 340,
+          "x60": 0,
+          "max_absolute_mean_error": 1.6653345369377348e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 340,
+          "x60": 0,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 340,
+          "x60": 340,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 340,
+          "x60": 340,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 340,
+          "x60": 340,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 340,
+          "x60": 680,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 340,
+          "x60": 680,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 340,
+          "x60": 680,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 340,
+          "x60": 1020,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 340,
+          "x60": 1020,
+          "max_absolute_mean_error": 4.163336342344337e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 340,
+          "x60": 1020,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 340,
+          "x60": 1360,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 340,
+          "x60": 1360,
+          "max_absolute_mean_error": 4.163336342344337e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 340,
+          "x60": 1360,
+          "max_absolute_mean_error": 2.0816681711721685e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 340,
+          "x60": 1700,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 340,
+          "x60": 1700,
+          "max_absolute_mean_error": 4.163336342344337e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 340,
+          "x60": 1700,
+          "max_absolute_mean_error": 2.0816681711721685e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 680,
+          "x60": 0,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 680,
+          "x60": 0,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 680,
+          "x60": 0,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 680,
+          "x60": 340,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 680,
+          "x60": 340,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 680,
+          "x60": 340,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 680,
+          "x60": 680,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 680,
+          "x60": 680,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 680,
+          "x60": 680,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 680,
+          "x60": 1020,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 680,
+          "x60": 1020,
+          "max_absolute_mean_error": 5.551115123125783e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 680,
+          "x60": 1020,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 680,
+          "x60": 1360,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 680,
+          "x60": 1360,
+          "max_absolute_mean_error": 4.163336342344337e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 680,
+          "x60": 1360,
+          "max_absolute_mean_error": 2.0816681711721685e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 680,
+          "x60": 1700,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 680,
+          "x60": 1700,
+          "max_absolute_mean_error": 4.163336342344337e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 680,
+          "x60": 1700,
+          "max_absolute_mean_error": 2.0816681711721685e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1020,
+          "x60": 0,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1020,
+          "x60": 0,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1020,
+          "x60": 0,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1020,
+          "x60": 340,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1020,
+          "x60": 340,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1020,
+          "x60": 340,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1020,
+          "x60": 680,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1020,
+          "x60": 680,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1020,
+          "x60": 680,
+          "max_absolute_mean_error": 3.3306690738754696e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1020,
+          "x60": 1020,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1020,
+          "x60": 1020,
+          "max_absolute_mean_error": 5.551115123125783e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1020,
+          "x60": 1020,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1020,
+          "x60": 1360,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1020,
+          "x60": 1360,
+          "max_absolute_mean_error": 4.163336342344337e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1020,
+          "x60": 1360,
+          "max_absolute_mean_error": 2.0816681711721685e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1020,
+          "x60": 1700,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1020,
+          "x60": 1700,
+          "max_absolute_mean_error": 4.163336342344337e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1020,
+          "x60": 1700,
+          "max_absolute_mean_error": 2.0816681711721685e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1360,
+          "x60": 0,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1360,
+          "x60": 0,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1360,
+          "x60": 0,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1360,
+          "x60": 340,
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1360,
+          "x60": 340,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1360,
+          "x60": 340,
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1360,
+          "x60": 680,
+          "max_absolute_mean_error": 5.551115123125783e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1360,
+          "x60": 680,
+          "max_absolute_mean_error": 5.551115123125783e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1360,
+          "x60": 680,
+          "max_absolute_mean_error": 5.551115123125783e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1360,
+          "x60": 1020,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1360,
+          "x60": 1020,
+          "max_absolute_mean_error": 4.163336342344337e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1360,
+          "x60": 1020,
+          "max_absolute_mean_error": 2.0816681711721685e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1360,
+          "x60": 1360,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1360,
+          "x60": 1360,
+          "max_absolute_mean_error": 4.163336342344337e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1360,
+          "x60": 1360,
+          "max_absolute_mean_error": 2.0816681711721685e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1360,
+          "x60": 1700,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1360,
+          "x60": 1700,
+          "max_absolute_mean_error": 4.163336342344337e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1360,
+          "x60": 1700,
+          "max_absolute_mean_error": 2.0816681711721685e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1700,
+          "x60": 0,
+          "max_absolute_mean_error": 5.551115123125783e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1700,
+          "x60": 0,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1700,
+          "x60": 0,
+          "max_absolute_mean_error": 1.1102230246251565e-16,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1700,
+          "x60": 340,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1700,
+          "x60": 340,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1700,
+          "x60": 340,
+          "max_absolute_mean_error": 6.938893903907228e-18,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1700,
+          "x60": 680,
+          "max_absolute_mean_error": 1.0408340855860843e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1700,
+          "x60": 680,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1700,
+          "x60": 680,
+          "max_absolute_mean_error": 2.0816681711721685e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1700,
+          "x60": 1020,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1700,
+          "x60": 1020,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1700,
+          "x60": 1020,
+          "max_absolute_mean_error": 2.0816681711721685e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1700,
+          "x60": 1360,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1700,
+          "x60": 1360,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1700,
+          "x60": 1360,
+          "max_absolute_mean_error": 2.0816681711721685e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "L2_RGB",
+          "y60": 1700,
+          "x60": 1700,
+          "max_absolute_mean_error": 1.3877787807814457e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "Source_spectral",
+          "y60": 1700,
+          "x60": 1700,
+          "max_absolute_mean_error": 2.7755575615628914e-17,
+          "decisions_equal": true
+        },
+        {
+          "policy": "MsRE_spectral",
+          "y60": 1700,
+          "x60": 1700,
+          "max_absolute_mean_error": 2.0816681711721685e-17,
+          "decisions_equal": true
+        }
+      ]
+    }
+  ],
+  "aggregation_atol": 2e-15,
+  "original_four_policy_scores_confusion_AP_exact": true,
+  "all_new_decisions_independently_equal": true,
+  "sklearn_not_available_not_claimed": true,
+  "new_forward": 0
+}

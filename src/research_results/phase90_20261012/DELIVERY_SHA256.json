@@ -1,0 +1,18 @@
+{
+  "CPU_VERIFIED.json": "ad61969a6029d72cb0bd5a4eae5b6db38e2938de0717b878bcf3a7881c2e81f2",
+  "README.md": "e91dc93db37fdf2b5b09ad463c6f9f1fb00a03d8a70e4b03a9b2f823e9e7bda9",
+  "common_support_tables.csv": "0228a88385ce7741c17bebe5457b4b2b049212aa98067a0a0a680d78037d9de6",
+  "expert_A_final_original.json": "59e018e486357b60b3b494abbefebdb95bf22bbd709428a8d1526f696ec47faf",
+  "human57_automatic_comparison.csv": "0ff623ae484e56ab4aa52a3387207ba4357c2359ab2ce99660b14e8f351c66ad",
+  "paired_L3_minus_L2_RGB.csv": "4b833ccf82d1f70c76cde478ef0767963cde9e99d5b7627f8cf25c31c0d81d98",
+  "paired_L3_minus_MsRE_spectral.csv": "9c7b5caea8e9736d5657a4395c2cc4798438a0f7c9dfbec9ed4c7fd12646bbd0",
+  "paired_L3_minus_Source_spectral.csv": "d71897377ef9da1685c80c5a76885df39f42566303dad98639be23d3d4d46518",
+  "parameter_input_lock.json": "1d89f7e3ca2421c4ac87df119efb5bf733beb00bc47cc6afa858114ebeefe72b",
+  "per_group.csv": "e672d0836fa7f9a0f95b14eddb0674fe2ad7b59f89d470848f3186924655177c",
+  "phase67_control_lock.json": "c2a83964073918015460e0ad89a9857b60b6a764e0f8562652472b224915f5ad",
+  "phase67_reproduction.json": "09fa8265f93da8bc064f71c3c36dba3bd1cdc49ecb56514d33f6b6d07a59c4af",
+  "phase89_reproduction.json": "59425ec1a2b6cd64659a536393a41faf1601e80d9cd6dd921aea1cbca424cc7f",
+  "phase90_report.json": "ede4e93421284af76c67167c3a0e856aecb542176dc3a0dcb50df7a0175fc002",
+  "reference_support.csv": "20ce974a30102fe9608d6840913a2430fc7e47aaefa978666b6ad219024c90e9",
+  "seven_policy_tables.csv": "085682cc12f3211fda8cdb1ae8dd38b20634ad332f79d73ca681c4f5c9994763"
+}

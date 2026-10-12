@@ -1,0 +1,680 @@
+{
+  "rows": [
+    {
+      "product": "S2A_MSIL1C_20180310T165111_N0206_R026_T17VNJ_20180310T220933",
+      "policy": "L2_RGB",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "46ac0dab108a0a6b73770d8238196d23f1376effb4002f25a3d9eaa4374bd3b1"
+    },
+    {
+      "product": "S2A_MSIL1C_20180310T165111_N0206_R026_T17VNJ_20180310T220933",
+      "policy": "Source_spectral",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "ae8fcec999310f85e69629db7df2d06acc3f536d778f2804790f95b9303a7c16"
+    },
+    {
+      "product": "S2A_MSIL1C_20180310T165111_N0206_R026_T17VNJ_20180310T220933",
+      "policy": "MsRE_spectral",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "cc5de39656ecb17e886138cf91dfe3f621a765fa6da6fde3b9f495c538c8ec52"
+    },
+    {
+      "product": "S2B_MSIL1C_20180822T014649_N0206_R017_T56WNB_20180822T032508",
+      "policy": "L2_RGB",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "cf33bd0e0feb345c587982685f2219ab5599d72c8e205a8b02dee6e40c995901"
+    },
+    {
+      "product": "S2B_MSIL1C_20180822T014649_N0206_R017_T56WNB_20180822T032508",
+      "policy": "Source_spectral",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "474f0b2cb1c2e473b75d25b597260431d3ee395a1111c79825c3655b5a20abb7"
+    },
+    {
+      "product": "S2B_MSIL1C_20180822T014649_N0206_R017_T56WNB_20180822T032508",
+      "policy": "MsRE_spectral",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "45ae9d008b0bcf64932bc8066e22f1ada2c042ee5f57c55c829fc28d5182c0ac"
+    },
+    {
+      "product": "S2A_MSIL1C_20180321T075621_N0206_R035_T34HGK_20180321T101406",
+      "policy": "L2_RGB",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "619a8302fcc94ec4a6ab26a6c74f92b03a259f3f5ed5c71371a6d4026e53bda5"
+    },
+    {
+      "product": "S2A_MSIL1C_20180321T075621_N0206_R035_T34HGK_20180321T101406",
+      "policy": "Source_spectral",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "1e33a2d523d3beb9fd06b2d7cea9ce688f9b128d9145e73ab15585d0a3536bd2"
+    },
+    {
+      "product": "S2A_MSIL1C_20180321T075621_N0206_R035_T34HGK_20180321T101406",
+      "policy": "MsRE_spectral",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "7ec99b1372d82a06c13a96125c7287fcce6491dad909fac6a633478cc8aede35"
+    },
+    {
+      "product": "S2B_MSIL1C_20180612T171859_N0206_R012_T15UVU_20180612T204912",
+      "policy": "L2_RGB",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "d0d17e4f5b767527f91093b4f721acdd2dd97aff887ed67c20288c31aa98243c"
+    },
+    {
+      "product": "S2B_MSIL1C_20180612T171859_N0206_R012_T15UVU_20180612T204912",
+      "policy": "Source_spectral",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "b304645382b2f17354d12f74e481e87a463b60a9d203feff19a0c38f22495f94"
+    },
+    {
+      "product": "S2B_MSIL1C_20180612T171859_N0206_R012_T15UVU_20180612T204912",
+      "policy": "MsRE_spectral",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "129700776bed5a475e4571e4c402b5f8ca8567691e16fcf9b1ab90d202898563"
+    },
+    {
+      "product": "S2B_MSIL1C_20180824T111239_N0206_R051_T28LGP_20180824T164334",
+      "policy": "L2_RGB",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "ca6c3bed38e8875d8adbe10166e2f68ce155083c7174f4631876c3e1ce0d54f2"
+    },
+    {
+      "product": "S2B_MSIL1C_20180824T111239_N0206_R051_T28LGP_20180824T164334",
+      "policy": "Source_spectral",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "df7eb5f669746fba24537244a6cb52c400802e577d2c638eb2b55d819cbdc1a8"
+    },
+    {
+      "product": "S2B_MSIL1C_20180824T111239_N0206_R051_T28LGP_20180824T164334",
+      "policy": "MsRE_spectral",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "723d0935e6b843e34e02a0b111198d89ffd6cb7342cc835dbcc3210ed8d8b486"
+    },
+    {
+      "product": "S2A_MSIL1C_20180410T214911_N0206_R043_T02LKH_20180410T231102",
+      "policy": "L2_RGB",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "46ce84bb28d67961e9f2949aceadd983acac2293d5a9ab70277e2c613f2e40c5"
+    },
+    {
+      "product": "S2A_MSIL1C_20180410T214911_N0206_R043_T02LKH_20180410T231102",
+      "policy": "Source_spectral",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "ae97371444c33be986ffef5264450b6e7c35bb34bb5f6584df3255a82a29b41e"
+    },
+    {
+      "product": "S2A_MSIL1C_20180410T214911_N0206_R043_T02LKH_20180410T231102",
+      "policy": "MsRE_spectral",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "acc9ab2e20e6dc86ca05485292ab66e0f277c4045ae4d37291c3b79cbfe90476"
+    },
+    {
+      "product": "S2B_MSIL1C_20180701T074609_N0206_R135_T38TNN_20180701T100320",
+      "policy": "L2_RGB",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "9ab7e1ec8bfc5011fe163bd4c4c98e61bc2224051bc1e611b38e9b39b0c13cc7"
+    },
+    {
+      "product": "S2B_MSIL1C_20180701T074609_N0206_R135_T38TNN_20180701T100320",
+      "policy": "Source_spectral",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "7623e5504b7563d7c4ce96c775db07fa93d65fb6cbd5f1d136f8ce4ef5d05705"
+    },
+    {
+      "product": "S2B_MSIL1C_20180701T074609_N0206_R135_T38TNN_20180701T100320",
+      "policy": "MsRE_spectral",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "8756267197b366e3671c4826eddb9a228ce5fd8b2e1aad222b8e7095e6a7b1b0"
+    },
+    {
+      "product": "S2B_MSIL1C_20181218T043159_N0207_R133_T46RDT_20181218T072156",
+      "policy": "L2_RGB",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "79aa3d5f25ec6eda36e5af8c476e869e3b6e86303753829c308c9c2c8f6be429"
+    },
+    {
+      "product": "S2B_MSIL1C_20181218T043159_N0207_R133_T46RDT_20181218T072156",
+      "policy": "Source_spectral",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "a23470ac7ef02f3f055997f97bcd0ab783a3b48f8c5d027ccf9aec7609e48904"
+    },
+    {
+      "product": "S2B_MSIL1C_20181218T043159_N0207_R133_T46RDT_20181218T072156",
+      "policy": "MsRE_spectral",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "1945757f05f36c96b14d10d477ddb9a555b565ed07c752fca28d60c0d45f7cd9"
+    },
+    {
+      "product": "S2A_MSIL1C_20180710T090601_N0206_R050_T34QBG_20180710T112311",
+      "policy": "L2_RGB",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "34240d187153c3fbaff863fd00206729761f5e57aeb13a2c901370f9f5599f10"
+    },
+    {
+      "product": "S2A_MSIL1C_20180710T090601_N0206_R050_T34QBG_20180710T112311",
+      "policy": "Source_spectral",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "97870c624252019bbd5e13a1c5320883720fbcf96b1e624409e5007a489c3076"
+    },
+    {
+      "product": "S2A_MSIL1C_20180710T090601_N0206_R050_T34QBG_20180710T112311",
+      "policy": "MsRE_spectral",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "9283ea0a0bd10a039f17765834a8debc86bf35194573be0f26b06812359e8e9f"
+    },
+    {
+      "product": "S2B_MSIL1C_20180131T082149_N0206_R121_T34JDL_20180131T120726",
+      "policy": "L2_RGB",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "8b0e1b5ace4cb37e8cf58506f63dbfbd9c3854269dcb427a5e0cedd9c18bc087"
+    },
+    {
+      "product": "S2B_MSIL1C_20180131T082149_N0206_R121_T34JDL_20180131T120726",
+      "policy": "Source_spectral",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "30e888a7584e84a62dcc45ac3978cefb4764ef15f0ec051d508b7144af45edc9"
+    },
+    {
+      "product": "S2B_MSIL1C_20180131T082149_N0206_R121_T34JDL_20180131T120726",
+      "policy": "MsRE_spectral",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "4ada071e82d0adf2489fb7d0fcade62ab2db1da15a247263293791072c848829"
+    },
+    {
+      "product": "S2B_MSIL1C_20180214T025819_N0206_R032_T51TUM_20180214T072411",
+      "policy": "L2_RGB",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "59da5607f4225858340a09dca766468f038707a7a2abd7c6cb1e4a39582f7a7f"
+    },
+    {
+      "product": "S2B_MSIL1C_20180214T025819_N0206_R032_T51TUM_20180214T072411",
+      "policy": "Source_spectral",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "ac2f320ff14d2f3518eaf539071f411b3740021710fa03f95c57b9df278abd1e"
+    },
+    {
+      "product": "S2B_MSIL1C_20180214T025819_N0206_R032_T51TUM_20180214T072411",
+      "policy": "MsRE_spectral",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "c129124eb07038c5a7af9f8ed7dd366cff921094bc718c8ab013309bd4a5419e"
+    },
+    {
+      "product": "S2A_MSIL1C_20181118T084231_N0207_R064_T35RPM_20181118T101007",
+      "policy": "L2_RGB",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "c86711048f9456ab73eeb60a895556c595564540be55717f629d5581eed6898e"
+    },
+    {
+      "product": "S2A_MSIL1C_20181118T084231_N0207_R064_T35RPM_20181118T101007",
+      "policy": "Source_spectral",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "92d380895a837c620d70fea14745226a50ddf4c865ded3fffb840c72efe2aa93"
+    },
+    {
+      "product": "S2A_MSIL1C_20181118T084231_N0207_R064_T35RPM_20181118T101007",
+      "policy": "MsRE_spectral",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "ad33bb7db2656eed60d0a1e1adc421330e618819aaf6ddb5e013c077658a9fe2"
+    },
+    {
+      "product": "S2A_MSIL1C_20180703T023551_N0206_R089_T50PLR_20180703T053714",
+      "policy": "L2_RGB",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "5e713473a33ae8784d083a9986546dfa6a773976afe40e6205151925b718044b"
+    },
+    {
+      "product": "S2A_MSIL1C_20180703T023551_N0206_R089_T50PLR_20180703T053714",
+      "policy": "Source_spectral",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "44a4fbbc531694d61bf6e8339c5adf35a7c451d21cd28ccea8ff0a8f73d71689"
+    },
+    {
+      "product": "S2A_MSIL1C_20180703T023551_N0206_R089_T50PLR_20180703T053714",
+      "policy": "MsRE_spectral",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "e53e341e1de215220a63b87d618a954377c8a7b7c94c4df256e3d5607c8639db"
+    },
+    {
+      "product": "S2A_MSIL1C_20180805T024551_N0206_R132_T52UDG_20180805T054920",
+      "policy": "L2_RGB",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "d440b3b7b1ab4e241734d2b750f0777c87694e897c8c7ff2fb92462e1ce671ab"
+    },
+    {
+      "product": "S2A_MSIL1C_20180805T024551_N0206_R132_T52UDG_20180805T054920",
+      "policy": "Source_spectral",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "bb0b8a8bba5b5f323e19da71034b51745ae287abb1db2924c150cf9ecdbf0455"
+    },
+    {
+      "product": "S2A_MSIL1C_20180805T024551_N0206_R132_T52UDG_20180805T054920",
+      "policy": "MsRE_spectral",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "07a209c6c8ac6a524e6c5671a6261055187c610c68fc206cecb0edf3c0d4c413"
+    },
+    {
+      "product": "S2A_MSIL1C_20180211T234711_N0206_R073_T60WWT_20180212T011403",
+      "policy": "L2_RGB",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "354006fb8dbe888b6604d1fb4900dc3979ae0ed35e3af9237d809968a0a048e7"
+    },
+    {
+      "product": "S2A_MSIL1C_20180211T234711_N0206_R073_T60WWT_20180212T011403",
+      "policy": "Source_spectral",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "c7149ffeaf4085e91e2ef9d8be1d2b6ca1a1795ca0bd3acc3a66a393722a1a83"
+    },
+    {
+      "product": "S2A_MSIL1C_20180211T234711_N0206_R073_T60WWT_20180212T011403",
+      "policy": "MsRE_spectral",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "525dd02c7151bd21e121fb6f9b706f21d685b32446b3056086a9ca147272b17a"
+    },
+    {
+      "product": "S2A_MSIL1C_20180804T045701_N0206_R119_T45RTH_20180804T075337",
+      "policy": "L2_RGB",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "8264cc90edb070686da5d9bb01141458e0ac81d739fc8bcf018150daeb04d171"
+    },
+    {
+      "product": "S2A_MSIL1C_20180804T045701_N0206_R119_T45RTH_20180804T075337",
+      "policy": "Source_spectral",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "4eda8631d3aa176ecae18315ed092846987e76c44c8254a07aed8164547ef038"
+    },
+    {
+      "product": "S2A_MSIL1C_20180804T045701_N0206_R119_T45RTH_20180804T075337",
+      "policy": "MsRE_spectral",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "b7d68359807f9b66bd7166f333a8008decaa7f4a9dfd8a9c13a9e6839fbdab2d"
+    },
+    {
+      "product": "S2B_MSIL1C_20181004T102019_N0206_R065_T32TML_20181004T141056",
+      "policy": "L2_RGB",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "21cdd3587414e1cf5f32ce7c7726d8501386503235de54e6185c370b665472aa"
+    },
+    {
+      "product": "S2B_MSIL1C_20181004T102019_N0206_R065_T32TML_20181004T141056",
+      "policy": "Source_spectral",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "86e7a2a2621bb7476c6d9abfccf6e23f52ceb6fdbcf05a75dc794e31572396d8"
+    },
+    {
+      "product": "S2B_MSIL1C_20181004T102019_N0206_R065_T32TML_20181004T141056",
+      "policy": "MsRE_spectral",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "a0abd71d95c5437a47f23e097c80bd315857e8c19fd5916e2cd9e87446e21b35"
+    },
+    {
+      "product": "S2A_MSIL1C_20180602T081011_N0206_R078_T36PWC_20180602T115947",
+      "policy": "L2_RGB",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "83605ebb6bbb292d801ba66b5b293c1b5e61b7f041e9fb96d2d33ce6334220a0"
+    },
+    {
+      "product": "S2A_MSIL1C_20180602T081011_N0206_R078_T36PWC_20180602T115947",
+      "policy": "Source_spectral",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "b356d54929652ae50f348c04cf091996ad654cb112de461d8743502008ee6b6f"
+    },
+    {
+      "product": "S2A_MSIL1C_20180602T081011_N0206_R078_T36PWC_20180602T115947",
+      "policy": "MsRE_spectral",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "09e8cf7e95e901ced83516f375746803fdf9b14516a30198e6c3a0b0946c1791"
+    },
+    {
+      "product": "S2B_MSIL1C_20180508T150719_N0206_R082_T18MYV_20180508T202621",
+      "policy": "L2_RGB",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "263fb08b7529413625791a6182997534df6f6893ff31a85f8e8eefb20389b728"
+    },
+    {
+      "product": "S2B_MSIL1C_20180508T150719_N0206_R082_T18MYV_20180508T202621",
+      "policy": "Source_spectral",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "2e64844ab4067a3e6cc8295fff4cf5ba573902441ffd7a465860a59b1fd6ea9c"
+    },
+    {
+      "product": "S2B_MSIL1C_20180508T150719_N0206_R082_T18MYV_20180508T202621",
+      "policy": "MsRE_spectral",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "4bd6c7173b7b897f54c597f24a0ac667c2bb571412ca5453fa49e719acce51c2"
+    },
+    {
+      "product": "S2B_MSIL1C_20180420T103019_N0206_R108_T31TGF_20180420T114307",
+      "policy": "L2_RGB",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "12ae053c0e9a92deff1956c0bfdaef48274ca009287bb4445feb561afc3c2942"
+    },
+    {
+      "product": "S2B_MSIL1C_20180420T103019_N0206_R108_T31TGF_20180420T114307",
+      "policy": "Source_spectral",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "bfaaf91577a823f943486acbce642aa73c9a317cff3733b2d80a707bbf4341df"
+    },
+    {
+      "product": "S2B_MSIL1C_20180420T103019_N0206_R108_T31TGF_20180420T114307",
+      "policy": "MsRE_spectral",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "c094935b484f204a1dfaae4e14d1d0d3309fbfe16ac383a861df157af22e28e9"
+    },
+    {
+      "product": "S2A_MSIL1C_20180430T111621_N0206_R037_T40XDR_20180430T132750",
+      "policy": "L2_RGB",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "79e329621578b802a619a7585779945d42051113381e9fa838d1294d043a00b8"
+    },
+    {
+      "product": "S2A_MSIL1C_20180430T111621_N0206_R037_T40XDR_20180430T132750",
+      "policy": "Source_spectral",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "70ba580ba156711d3f9fdff0c39fd2e39e105afb646611bb13400eb123b06071"
+    },
+    {
+      "product": "S2A_MSIL1C_20180430T111621_N0206_R037_T40XDR_20180430T132750",
+      "policy": "MsRE_spectral",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "c12c1485c938b3fcf20647355ee7fb9503d7c831a49c9288de90d234ce0e4fc4"
+    },
+    {
+      "product": "S2A_MSIL1C_20180909T151911_N0206_R068_T25XEG_20180909T205122",
+      "policy": "L2_RGB",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "bfb453a6b888ea9955e9a6b729da022586f42b7e253fbb83453a11667be3f16c"
+    },
+    {
+      "product": "S2A_MSIL1C_20180909T151911_N0206_R068_T25XEG_20180909T205122",
+      "policy": "Source_spectral",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "5988d9b4ab012fe9b4642f0232253e87f580c33a36513d7929ea67818b8645eb"
+    },
+    {
+      "product": "S2A_MSIL1C_20180909T151911_N0206_R068_T25XEG_20180909T205122",
+      "policy": "MsRE_spectral",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "0ba3f0bd1ff9ba6bb48ea079b834769c2e13a77a7e11120c3b4aa838fe246d5b"
+    },
+    {
+      "product": "S2A_MSIL1C_20180707T021601_N0206_R003_T51SXR_20180707T041118",
+      "policy": "L2_RGB",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "3b50687918af159f2baf23dd30eb8815d97b354ca479b24d7621483ea0ee679f"
+    },
+    {
+      "product": "S2A_MSIL1C_20180707T021601_N0206_R003_T51SXR_20180707T041118",
+      "policy": "Source_spectral",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "b8b8ead1ac935c8b9dd7e5776b3a2607a9edf3d6bd1e3d914ee5b82b8f5d7351"
+    },
+    {
+      "product": "S2A_MSIL1C_20180707T021601_N0206_R003_T51SXR_20180707T041118",
+      "policy": "MsRE_spectral",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "f6a0bb49c65231ca6ce8ba047622d30cd568c7f14d301bd9869f4af78a9552d8"
+    },
+    {
+      "product": "S2A_MSIL1C_20180522T183921_N0206_R070_T12VVH_20180522T233949",
+      "policy": "L2_RGB",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "e358cc81cf3502d999235e8797cdbeaf1eb5dc27943f4fc4beb0100bd2992b43"
+    },
+    {
+      "product": "S2A_MSIL1C_20180522T183921_N0206_R070_T12VVH_20180522T233949",
+      "policy": "Source_spectral",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "63781f58ea98d4b8ccaf856265c64d6712143ef339c4346fdcb6366f1fea8c06"
+    },
+    {
+      "product": "S2A_MSIL1C_20180522T183921_N0206_R070_T12VVH_20180522T233949",
+      "policy": "MsRE_spectral",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "f6bfc7e21f4a0e8ad0f4b42c65673a00979373412f0974763c06ea1fe2be9232"
+    },
+    {
+      "product": "S2A_MSIL1C_20180317T045651_N0206_R119_T50XMG_20180317T075452",
+      "policy": "L2_RGB",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "0fd10de9936eb67224d287e0bda074da0d247ee8c9d90d6271d0625c4f5947e7"
+    },
+    {
+      "product": "S2A_MSIL1C_20180317T045651_N0206_R119_T50XMG_20180317T075452",
+      "policy": "Source_spectral",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "f3ecfcccd2d141b8726b053f671326ad80257b84173adf7b4a71c9fcd2a9167b"
+    },
+    {
+      "product": "S2A_MSIL1C_20180317T045651_N0206_R119_T50XMG_20180317T075452",
+      "policy": "MsRE_spectral",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "f984bc2de016e9681ddc3621f7922b331aa84afebd14ad6a1b8993eda79bc362"
+    },
+    {
+      "product": "S2B_MSIL1C_20181001T165109_N0206_R026_T16UDV_20181001T221311",
+      "policy": "L2_RGB",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "7cd9d92368a7c23f78577834697a23bab4a958d43e81e3515c2eef0e51ef43f0"
+    },
+    {
+      "product": "S2B_MSIL1C_20181001T165109_N0206_R026_T16UDV_20181001T221311",
+      "policy": "Source_spectral",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "aca25004553e91e5b6ad282f68f737594f61f842bc5a07b29f073945daf7a3c2"
+    },
+    {
+      "product": "S2B_MSIL1C_20181001T165109_N0206_R026_T16UDV_20181001T221311",
+      "policy": "MsRE_spectral",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "9f97d10acbfefba6f90d45e2d2ef6bac4f3973c98b4258f012e2bbf3e6da8ba7"
+    },
+    {
+      "product": "S2A_MSIL1C_20180608T152641_N0206_R025_T18MUA_20180608T202221",
+      "policy": "L2_RGB",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "27c8ea0fdcf7fca3e734887812dbf3c4e8d11ebb265902a013e20aadeb605c24"
+    },
+    {
+      "product": "S2A_MSIL1C_20180608T152641_N0206_R025_T18MUA_20180608T202221",
+      "policy": "Source_spectral",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "85a5561b087c27bcc881ab4c884621a2f482d0c6776819a02210dfd5b542f23b"
+    },
+    {
+      "product": "S2A_MSIL1C_20180608T152641_N0206_R025_T18MUA_20180608T202221",
+      "policy": "MsRE_spectral",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "0f5c3dd970fd1189a5a10f05d2d5041186d430ae172727e6777fcf9e6ce16776"
+    },
+    {
+      "product": "S2A_MSIL1C_20181114T054101_N0207_R005_T44UNA_20181114T093234",
+      "policy": "L2_RGB",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "45cd3226b898e4881451e0ef91a1148faf5afd48c4cd6d63634230265637d553"
+    },
+    {
+      "product": "S2A_MSIL1C_20181114T054101_N0207_R005_T44UNA_20181114T093234",
+      "policy": "Source_spectral",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "2fefe6301d5174d18d8c4a9585e2630c4e3b534e1d5509802596d3386c72c9f0"
+    },
+    {
+      "product": "S2A_MSIL1C_20181114T054101_N0207_R005_T44UNA_20181114T093234",
+      "policy": "MsRE_spectral",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "1c2078bb12d1545366211ac855667d62d921d841734b3b1c1cee55716d56450e"
+    },
+    {
+      "product": "S2A_MSIL1C_20181118T152621_N0207_R068_T20VPK_20181118T172424",
+      "policy": "L2_RGB",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "52ce31efc4790cedf811c32dcef5088a1e60fc683fbdfc8c4cbe2776986263c1"
+    },
+    {
+      "product": "S2A_MSIL1C_20181118T152621_N0207_R068_T20VPK_20181118T172424",
+      "policy": "Source_spectral",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "757643defb99e48d8684130cc2f77fbc370b17ec9bb990df5212921415bd600f"
+    },
+    {
+      "product": "S2A_MSIL1C_20181118T152621_N0207_R068_T20VPK_20181118T172424",
+      "policy": "MsRE_spectral",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "5100d8d984b7aa7678e4b32695477d47f3a9519d00866c60936a3d2b31b14ca7"
+    },
+    {
+      "product": "S2A_MSIL1C_20180922T185101_N0206_R113_T10SEE_20180922T225409",
+      "policy": "L2_RGB",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "7327e57b3f4dd798699ee32825e0dea79449bcc1b8205b97e9357c6fd3d7711e"
+    },
+    {
+      "product": "S2A_MSIL1C_20180922T185101_N0206_R113_T10SEE_20180922T225409",
+      "policy": "Source_spectral",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "d7652fe6c45057234e2caae7beacf4e98a925fbc7a89ac09965f4bd03ede4436"
+    },
+    {
+      "product": "S2A_MSIL1C_20180922T185101_N0206_R113_T10SEE_20180922T225409",
+      "policy": "MsRE_spectral",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "4d5b1ebb04844190d115491f031a222f20e580596ea55b011d23f68600f311a9"
+    },
+    {
+      "product": "S2B_MSIL1C_20181111T094229_N0207_R036_T32NKF_20181111T131623",
+      "policy": "L2_RGB",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "993c5697ebb9e3877e4e54e671506c73120ea93075284c483ffd5575fa544b1e"
+    },
+    {
+      "product": "S2B_MSIL1C_20181111T094229_N0207_R036_T32NKF_20181111T131623",
+      "policy": "Source_spectral",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "ea6f5b34e250d3832543dc4659ebbbab9e5922ca7655c9ecad4d58a0654f78b3"
+    },
+    {
+      "product": "S2B_MSIL1C_20181111T094229_N0207_R036_T32NKF_20181111T131623",
+      "policy": "MsRE_spectral",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "74885c5d6043e6d589dba677ac3d82c85215c1ab1bb3f00d6b1e3b44a1e6062e"
+    },
+    {
+      "product": "S2A_MSIL1C_20181021T160311_N0206_R097_T20WNV_20181021T192258",
+      "policy": "L2_RGB",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "4065b714a68d5f9f0facaeeb801d2fb9c917b647c88dd9b8439e1dbe815438e5"
+    },
+    {
+      "product": "S2A_MSIL1C_20181021T160311_N0206_R097_T20WNV_20181021T192258",
+      "policy": "Source_spectral",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "81ef79ba9517f964e10470dafafa8efa164acf2f0be897350dbb55a51c51eed9"
+    },
+    {
+      "product": "S2A_MSIL1C_20181021T160311_N0206_R097_T20WNV_20181021T192258",
+      "policy": "MsRE_spectral",
+      "confusion_exact": true,
+      "AP_exact": true,
+      "recomputed_logit_sha256": "5f5853783bccde6777a80cdfb23993e3a88751502b2b8ddc7b445a5e4567203d"
+    }
+  ],
+  "note": "Phase67 did not seal per-pixel control score arrays; exact historical confusion/AP reproduced; current recomputed logit hashes recorded without claiming an old byte seal.",
+  "independent_score_bin_AP": true,
+  "no_fit": true,
+  "no_forward": true
+}
