@@ -1,0 +1,11 @@
+{
+  "total_seconds": 1454.3484270879999,
+  "evaluation_seconds": 1273.0805689400004,
+  "process_peak_rss_bytes": 4611452928,
+  "peak_scope": "single process cumulative input verification, calibration and evaluation",
+  "cpu_threads_max": 4,
+  "new_fits": 0,
+  "new_network_forwards": 0,
+  "new_downloads": 0,
+  "new_thresholds": 4
+}

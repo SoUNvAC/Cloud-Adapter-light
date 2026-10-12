@@ -1,0 +1,14 @@
+{
+  "CPU_VERIFIED.json": "b1b0bcfa14826392fae9cc0487bbfc3d73e5b69e4c15240782e162032c60d154",
+  "README.md": "bef3f3bd185d92f55aaa28c657fcbb229e428e013bea426eaf2497a2deaa6443",
+  "calibration_support_lock.json": "132b97744be7d5aac11ac60ed3a46d6a93a54856bafd92be19d4735c77eff229",
+  "cost.json": "ea95a17fa00200607f9ca4bf3ca44a255b5fbd030bcc0d53f92c3325ea78e117",
+  "four_new_threshold_lock.json": "b89fd281aa29a5dc01f985c665b817ce5fa1684a301814c269539eb2c7ce3652",
+  "input_lock.json": "c202db90541648dfe9b452e3d7c2077dd462a0b25759eb5199abd1531f2644a4",
+  "input_score_lock.json": "97584d35d0eb9b0e1ddd90715317165fd448d533d4e86d55d8ea320c949a29f3",
+  "paired_changes.csv": "dd9d4ff0b499a39d9ec2bdca42483d65f4417158f5f835568857d1f0779c46fa",
+  "per_group.csv": "0e6e9c4f086e29de34c1415b2d6295b581c92f9d4c7be8572067993446b9cc4a",
+  "phase95_report.json": "3cb8b6d06be81f0c26bc2edde06fae9ffc09ec821f6146fc219ff139e20f4405",
+  "six_strategy_totals.csv": "e56917f8e07eee36b9396521c7b971b7b23059596ad9ec1cefa6864e72485292",
+  "support_retention.csv": "124d7d02005b748eee5ecbae78a1af47e56d309e58410a03711e57293714076e"
+}

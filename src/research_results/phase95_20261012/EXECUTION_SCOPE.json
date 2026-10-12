@@ -1,0 +1,24 @@
+{
+  "new_fits": 0,
+  "new_network_forwards": 0,
+  "new_downloads": 0,
+  "new_thresholds": 4,
+  "model_files_reused_from": "phase94_20261012",
+  "model_sha256": {
+    "G7_100": "2e11a30996b04768b03d6668346d8a34ffda4100c93bbeded7d684e59091c6e6",
+    "SourceS_100": "6e3670f3b806a9c160b233106f54317c96ca74517f01a4ae8dc1952519f31d1e"
+  },
+  "AP_convention": "Phase94 unchanged float32 score-bin average precision; not trapezoidal PR area. Float64 decisions remain separate.",
+  "old_result_reproduction": "106 old Phase94 T_cal per-group scores/truth hashes and metric dictionaries exact; old bootstrap seed94012 versus current95012, so upper bounds need not match.",
+  "scope": "development results are new synthetic homogeneous60m support; no subtraction against old20m development results",
+  "precision_denominators": "Only defined precision/ShadowIoU groups enter macro means; paired changes use intersection. SourceS development T20_full precision11 groups, T20_same/T60_same12 groups; macro-mean subtraction is not paired effect.",
+  "warning": "NaN placeholders outside valid support generated logaddexp RuntimeWarning. All retained scores and mean9 outputs were finite and independently verified; EXIT_CODE0.",
+  "runtime": "Single-process cumulative RSS includes input verification/calibration/evaluation; zero large score arrays persisted.",
+  "limitations": [
+    "Human B not performed",
+    "54 reused Phase89 probability blocks lack pre-crash SHA",
+    "ALCD already exposed; not independent confirmation",
+    "Homogeneous blocks preferentially remove shadow boundaries/mixed pixels",
+    "No deployment winner or original gate rewrite"
+  ]
+}
