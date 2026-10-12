@@ -18,7 +18,10 @@ def verify(root):
     assert abs(fi['tree_weights_sum']-fi['sample_count'])<1e-6 and abs(fi['logistic_weight_sum']-1)<1e-12
     assert fi['no_calibration_group_standardization'] and fi['split_lock_sha256']==digest('split_input_lock.json')
     assert tl['two_model_lock_sha256']==digest('two_model_lock.json') and ml['fit_input_lock_sha256']==digest('fit_input_lock.json')
-    assert ml['new_fits']==report['new_fits']==2 and ml['models']['G7_100']['params']==PARAMS
+    assert ml['new_fits']==report['new_fits']==(3 if report['repair_authorization'] else 2)
+    assert report['final_models']==2 and ml['models']['G7_100']['params']==PARAMS
+    if report['repair_authorization']:
+        assert report['repair_authorization']['additional_SourceS_fit_authorized'] and report['repair_authorization']['G7_reused_without_refit']
     assert ml['models']['SourceS_100']['params']['positive_features']==1 and ml['models']['SourceS_100']['params']['theta'][0]>=0
     for n,m in ml['models'].items():assert digest(m['file'])==m['sha256']
     assert read('input_score_lock.json')['indices_after']==sl['indices_before']
@@ -85,6 +88,6 @@ def verify(root):
     assert all(r['max_error']<=(6e-8 if r['model']=='G7_100' else 1e-4) for r in checks)
     assert all(r.get('mean9_error',0)<=2e-15 for r in checks)
     assert report['new_network_forwards']==report['new_segmentation_training']==report['new_downloads']==0
-    return dict(verified=True,sealed_files=len(manifest),independent_metric_rows=count,probe_blocks=len(checks),new_fits=2)
+    return dict(verified=True,sealed_files=len(manifest),independent_metric_rows=count,probe_blocks=len(checks),new_fits=report['new_fits'],final_models=2)
 if __name__=='__main__':
     a=argparse.ArgumentParser();a.add_argument('--root',type=Path,required=True);print(json.dumps(verify(a.parse_args().root),indent=2))

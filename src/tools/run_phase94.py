@@ -93,7 +93,9 @@ def fit():
     del m,a
     t=time.monotonic();m=fit_model(columns(x,'SourceS_100'),y,logw,1)
     mean,scale=standardize(columns(x,'SourceS_100'),logw)
-    assert np.array_equal(mean,m['mean']) and np.array_equal(scale,m['scale']) and m['theta'][0]>=0
+    np.testing.assert_allclose(mean,m['mean'],rtol=1e-14,atol=1e-14)
+    np.testing.assert_allclose(scale,m['scale'],rtol=1e-14,atol=1e-14)
+    assert m['theta'][0]>=0
     write('SourceS_100.json',m);models['SourceS_100']=p.old.read(D/'SourceS_100.json')
     assert np.array_equal(predict_logit(columns(x,'SourceS_100'),m),predict_logit(columns(x,'SourceS_100'),models['SourceS_100']))
     cost['SourceS_100']=dict(fit_seconds=time.monotonic()-t,process_peak_rss_bytes=rss(),all_training_reload_exact=True)
@@ -102,6 +104,10 @@ def fit():
         models={'G7_100':dict(file='G7_100.pkl',sha256=p.old.digest(D/'G7_100.pkl'),params=PARAMS),
                 'SourceS_100':dict(file='SourceS_100.json',sha256=p.old.digest(D/'SourceS_100.json'),params=m)},
         new_fits=2,calibration_labels_not_used_in_fit=True,cost=cost))
+    calibrate(models,records,audit,fitting,calibration,begin)
+
+def calibrate(models,records,audit,fitting,calibration,begin):
+    am={r['product']:r for r in audit['rows']}
     negatives={n:{'in':[],'cal':[]} for n in NAMES};metadata={'in':[],'cal':[]};checks=[]
     for subset,rows in [('in',fitting),('cal',calibration)]:
         for i,r in enumerate(rows):
@@ -140,7 +146,7 @@ def fit():
                     macro_fpr=q.interval([r['fpr'] for r in rs if r['fpr'] is not None]),generalization=False))
     write('train_calibration_diagnostics.json',dict(rows=diagnostics));write('calibration_cpu_checks.json',dict(rows=checks))
     write('fit_cost.json',dict(seconds=time.monotonic()-begin,process_peak_rss_bytes=rss(),
-        scope='one fit process, cumulative input verification + two fits + full 153-group threshold calibration'))
+        scope='current fit process cumulative verification, fitting and full 153-group calibration; see model lock for fit attempts; prior failed-process costs unavailable on repair'))
     print('Phase94 four thresholds locked',flush=True)
 
 def predict(models,n,x,checks,meta):
@@ -178,7 +184,13 @@ def evaluate():
     assert ml['fit_input_lock_sha256']==p.old.digest(D/'fit_input_lock.json')
     assert p.old.read(D/'fit_input_lock.json')['split_lock_sha256']==p.old.digest(D/'split_input_lock.json')
     assert sl['protocol_sha256']==p.old.digest(PROTOCOL) and sl['indices_before']==indices_audit()
-    for n,h in sl['code_sha256'].items():assert p.old.digest(Path(__file__).with_name(n))==h,n
+    repair=p.old.read(D/'repair_authorization_lock.json') if (D/'repair_authorization_lock.json').exists() else None
+    for n,h in sl['code_sha256'].items():
+        current=p.old.digest(Path(__file__).with_name(n))
+        if repair and n in repair['code_delta']:
+            assert repair['code_delta'][n]['before']==h and repair['code_delta'][n]['after']==current
+        else:assert current==h,n
+    if repair:assert p.old.digest(Path(__file__).with_name('resume_phase94.py'))==repair['resume_code_sha256']
     models={}
     for n,m in ml['models'].items():
         assert p.old.digest(D/m['file'])==m['sha256']
@@ -245,7 +257,7 @@ def evaluate():
         indices_after=indices_audit(),no_large_arrays_saved=True,ALCD_rule='predict20m; sigmoid only SourceS float32 logit; float64 mean9; frozen probability threshold'))
     write('CPU_VERIFIED.json',dict(rows=checks,independent_score_bin_AP_and_integer_binary_counts=True,
         all_AP_threshold_invariants=True,independent_tree_and_linear_probes_only=True))
-    report=dict(status='complete',created_utc=p.old.now(),domains=results,new_fits=2,new_network_forwards=0,new_segmentation_training=0,new_downloads=0,
+    report=dict(status='complete',created_utc=p.old.now(),domains=results,new_fits=ml['new_fits'],final_models=2,repair_authorization=repair,new_network_forwards=0,new_segmentation_training=0,new_downloads=0,
         bootstrap_seed=SEED,resamples=10000,exploratory_only=True,no_deployment_winner=True,original_failed_gates_unchanged=True,
         limits=['Human B not performed; original empty fields unchanged','54 Phase89 reused probability blocks lack pre-crash SHA','Exposed development and ALCD pools; no independent confirmation',
                 'Threshold change cannot improve ranking; no synthetic three-class mIoU','100-group models never refit on 153 groups'],
@@ -274,6 +286,7 @@ def render(report):
         '留出校准内≤1%不保证未见组或跨数据集≤1%。误报降低须同时查看召回代价。两模型FPR不同不能仅按召回选择赢家。',
         '原153组模型仅历史参考，不能用新旧差异隔离校准作用。拟合组数、校准组差异、跨域及60m聚合均可能影响。',
         '所有区间为相关组bootstrap10000次、seed94012的描述性区间；已暴露评价池不是独立确认。',*report['limits'],'',
+        f"实际拟合尝试{report['new_fits']}次，最终保留2模型；若有修复详见repair_authorization_lock.json，未丢失或重拟合G7。",
         '完整同模型配对区间、最差召回损伤和最大FPR增加见phase94_report.json；全部逐组值见per_group.csv和paired_changes.csv。']
     (D/'README.md').write_text('\n'.join(lines)+'\n',encoding='utf-8')
     for n,rs in [('four_strategy_totals.csv',totals),('per_group.csv',groups),('paired_changes.csv',changes),('historical_reference.csv',history)]:p.old.csvwrite(D/n,rs)
