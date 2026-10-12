@@ -9,9 +9,11 @@ class FrozenContracts(unittest.TestCase):
     def test_RGB_TOA_and_exact_order(self):
         spec=np.full((3,3,6),[.02,.03,.04,.08,.11,.12])
         x=inputs(np.full((3,3),.5),np.full((3,3),.8),spec,'L2_RGB')
+        self.assertTrue(x.flags.f_contiguous)
         np.testing.assert_allclose(x[0],[0,np.log(4),.04,.03,.02],rtol=1e-7)
         for name,first in [('Source_spectral',np.log(4)),('MsRE_spectral',0)]:
             xx=inputs(np.full((3,3),.5),np.full((3,3),.8),spec,name)
+            self.assertTrue(xx.flags.f_contiguous)
             np.testing.assert_allclose(xx[0],[first,.08,.11,.12],rtol=1e-7)
 
     def test_clip_and_nonlinear_before_area(self):

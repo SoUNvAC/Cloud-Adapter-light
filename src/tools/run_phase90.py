@@ -14,7 +14,7 @@ from phase89_math import area, sigmoid, calibrate, decisions
 from phase89_cpu_ap import average_precision_score, self_test
 from phase65d_metrics import confusion, corrected, curve
 
-ROOT = old.SHARED / 'phase90_20261012'
+ROOT = old.SHARED / 'phase90_20261012_run02'
 DELIVERY = ROOT / 'delivery'
 P67 = old.CAT / 'phase67_20261010'
 PROTOCOL = old.REPO / 'src/research_plans/PHASE90_EXTERNAL_INPUT_ABLATIONS_20261012.md'
@@ -68,7 +68,10 @@ def inputs(ms, ss, spectra, name):
         columns = [logit_score(ms).ravel(), *[spectra[..., i].ravel() for i in [3, 4, 5]]]
     else:
         raise ValueError(name)
-    return np.column_stack(columns).astype(np.float32)
+    # Phase67 selected(x,name) uses advanced column indexing (Fortran layout).
+    # Preserve that layout too: BLAS accumulation order can otherwise straddle
+    # a float32 logit rounding boundary despite numerically identical inputs.
+    return np.asfortranarray(np.column_stack(columns).astype(np.float32))
 
 
 def control_decision(score, probabilities, model):
@@ -135,6 +138,7 @@ def preflight():
                    RGB_control_order=['B04','B03','B02'],RGB_scale='physical TOA; no 255 multiplier',
                    clip=[1e-6,1-1e-6],network_logit='float64 clip/log then cast combined features float32',
                    shallow_logit='frozen standardization float64; output cast float32',
+                   control_input_memory_layout='Fortran, exactly as Phase67 advanced column selection',
                    aggregation='sigmoid at20m float64 then 3x3 arithmetic mean at60m',
                    decisions='score>=sigmoid(original threshold); nonshadow original frozen network60m argmax',
                    AP='existing tied-score float32 non-interpolated AP',bootstrap_seed=SEED,resamples=10000),
@@ -142,6 +146,7 @@ def preflight():
                frozen_before_external_control_calculation=True,
                new_training=0,new_fits=0,new_forwards=0,new_downloads=0,
                formal_confirmation=False,reused_precrash_probability_SHA_limitation=True,
+               prior_attempt='phase90_20261012 retained; CPU check caught C versus Phase67 Fortran input layout; no completed report, fit, threshold or network forward changed; atol remains2e-15',
                code_sha256={p.name:old.digest(p) for p in [Path(__file__),Path(__file__).with_name('phase89_cpu_ap.py')]})
     old.write(DELIVERY/'parameter_input_lock.json', pin)
     return prepared, controls['models'], old.read(old.ROOT/'delivery/phase89_report.json'), report67
@@ -368,6 +373,7 @@ def render(result):
         '冻结1%误报预算不变；不选择本轮赢家部署，不在ALCD重校准，也不回填Phase89主要比较。',
         '公开参考版本不是经过全面裁决的真值；人工B未执行，原人工A及空字段原样保留。本池已经暴露，评价是事后探索而非独立确认。',
         'Phase89复用54块在故障前没有输出SHA封存；恢复时身份/结构检查和现有SHA不消除该历史限制。',
+        '首次CPU计算在T31TFJ的Source_spectral一格复核停止：输入值相同，但C/Fortran内存布局造成BLAS求和次序差异，60m概率差7.8735e-10。第二次严格沿用Phase67列选择的Fortran布局；定位块的logit与原列选择逐值相同，均值差回到1.67e-16，保持2e-15复核容差。失败日志保留，无网络前向或重新拟合。',
         '全部计算只读取既有20m概率/六波段TOA与允许的Catalogue development，不读取旧sealed像元、不改变原失败主检验。',
         '大缓存不复制、不新增保存、不同步work_dirs。']
     with (DELIVERY/'README.md').open('x',encoding='utf-8') as f0:f0.write('\n'.join(lines)+'\n')
