@@ -1,0 +1,2222 @@
+{
+  "score_probes": [
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180422T042659_N0206_R133_T48VUK_20180422T074056",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180422T042659_N0206_R133_T48VUK_20180422T074056",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20181102T015621_N0206_R117_T51LYE_20181102T061209",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20181102T015621_N0206_R117_T51LYE_20181102T061209",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20180621T083651_N0206_R064_T34KBG_20180621T123155",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20180621T083651_N0206_R064_T34KBG_20180621T123155",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20181030T044921_N0206_R076_T45RXQ_20181030T065311",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20181030T044921_N0206_R076_T45RXQ_20181030T065311",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180816T162829_N0206_R083_T18VUM_20180816T213305",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180816T162829_N0206_R083_T18VUM_20180816T213305",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20180521T054641_N0206_R048_T42QXL_20180521T085815",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20180521T054641_N0206_R048_T42QXL_20180521T085815",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180120T004659_N0206_R102_T54KUV_20180120T020340",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180120T004659_N0206_R102_T54KUV_20180120T020340",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180922T075619_N0206_R035_T35KMQ_20180922T114414",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180922T075619_N0206_R035_T35KMQ_20180922T114414",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180615T205019_N0206_R057_T08WPC_20180615T223116",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180615T205019_N0206_R057_T08WPC_20180615T223116",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20180824T150721_N0206_R125_T21UUP_20180824T185559",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20180824T150721_N0206_R125_T21UUP_20180824T185559",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180625T230019_N0206_R058_T58KHC_20180626T001009",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180625T230019_N0206_R058_T58KHC_20180626T001009",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20181112T070221_N0207_R120_T38KRD_20181112T102254",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20181112T070221_N0207_R120_T38KRD_20181112T102254",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20180910T150721_N0206_R082_T19PFN_20180910T201336",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20180910T150721_N0206_R082_T19PFN_20180910T201336",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180208T224659_N0206_R101_T02WPS_20180209T001736",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180208T224659_N0206_R101_T02WPS_20180209T001736",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20180919T101701_N0206_R065_T39XWH_20180919T122556",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20180919T101701_N0206_R065_T39XWH_20180919T122556",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180417T021339_N0206_R060_T50LRQ_20180417T052932",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180417T021339_N0206_R060_T50LRQ_20180417T052932",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180327T022549_N0206_R046_T50QQH_20180327T060147",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180327T022549_N0206_R046_T50QQH_20180327T060147",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20181004T210519_N0206_R071_T56CNU_20181004T234310",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20181004T210519_N0206_R071_T56CNU_20181004T234310",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180125T232159_N0206_R044_T58PHU_20180126T003547",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180125T232159_N0206_R044_T58PHU_20180126T003547",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180826T062619_N0206_R077_T40QHL_20180826T092057",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180826T062619_N0206_R077_T40QHL_20180826T092057",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180810T160819_N0206_R140_T16QDD_20180810T211922",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180810T160819_N0206_R140_T16QDD_20180810T211922",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20180327T163911_N0206_R126_T17VNF_20180327T215534",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20180327T163911_N0206_R126_T17VNF_20180327T215534",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180505T025549_N0206_R032_T56XMJ_20180505T044859",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180505T025549_N0206_R032_T56XMJ_20180505T044859",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20180613T141951_N0206_R096_T23VNK_20180613T162358",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20180613T141951_N0206_R096_T23VNK_20180613T162358",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180125T080209_N0206_R035_T36NXN_20180125T100104",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180125T080209_N0206_R035_T36NXN_20180125T100104",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20181030T095121_N0206_R079_T33TWK_20181030T130454",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20181030T095121_N0206_R079_T33TWK_20181030T130454",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180808T022319_N0206_R103_T50MRV_20180808T054332",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180808T022319_N0206_R103_T50MRV_20180808T054332",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180624T075609_N0206_R035_T37QBE_20180624T101209",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180624T075609_N0206_R035_T37QBE_20180624T101209",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20180209T112221_N0206_R037_T29RKM_20180209T164004",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20180209T112221_N0206_R037_T29RKM_20180209T164004",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20180904T160901_N0206_R140_T27XWJ_20180904T192941",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20180904T160901_N0206_R140_T27XWJ_20180904T192941",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180401T181919_N0206_R127_T11SQU_20180401T215241",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180401T181919_N0206_R127_T11SQU_20180401T215241",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20181007T103019_N0206_R108_T31RCK_20181007T160704",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20181007T103019_N0206_R108_T31RCK_20181007T160704",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20181025T081009_N0206_R078_T37TGL_20181025T102247",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20181025T081009_N0206_R078_T37TGL_20181025T102247",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20181214T090351_N0207_R007_T34QGM_20181214T102932",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20181214T090351_N0207_R007_T34QGM_20181214T102932",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20180309T071721_N0206_R006_T37LFE_20180309T110254",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20180309T071721_N0206_R006_T37LFE_20180309T110254",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20180422T033541_N0206_R061_T49UFV_20180422T062036",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20180422T033541_N0206_R061_T49UFV_20180422T062036",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180517T220529_N0206_R072_T04WES_20180517T234440",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180517T220529_N0206_R072_T04WES_20180517T234440",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20180718T135111_N0206_R024_T22MEB_20180718T185303",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20180718T135111_N0206_R024_T22MEB_20180718T185303",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20180817T215051_N0206_R029_T14XMQ_20180818T001725",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20180817T215051_N0206_R029_T14XMQ_20180818T001725",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20181114T040011_N0207_R004_T48UXA_20181114T084110",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20181114T040011_N0207_R004_T48UXA_20181114T084110",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20181220T033139_N0207_R018_T48SYC_20181220T060651",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20181220T033139_N0207_R018_T48SYC_20181220T060651",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180201T012709_N0206_R131_T53LKK_20180201T025415",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180201T012709_N0206_R131_T53LKK_20180201T025415",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180605T140729_N0206_R053_T24WWU_20180605T160557",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180605T140729_N0206_R053_T24WWU_20180605T160557",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20180108T104421_N0206_R008_T31TEF_20180108T124506",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20180108T104421_N0206_R008_T31TEF_20180108T124506",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180315T032529_N0206_R018_T49SCC_20180315T070512",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180315T032529_N0206_R018_T49SCC_20180315T070512",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20180818T061631_N0206_R034_T43VFG_20180818T074215",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20180818T061631_N0206_R034_T43VFG_20180818T074215",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180827T174039_N0206_R098_T12RYN_20180827T214315",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180827T174039_N0206_R098_T12RYN_20180827T214315",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180630T002059_N0206_R116_T55HCC_20180630T014728",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180630T002059_N0206_R116_T55HCC_20180630T014728",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20181218T061249_N0207_R134_T41RQK_20181218T080326",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20181218T061249_N0207_R134_T41RQK_20181218T080326",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180518T030539_N0206_R075_T54XWH_20180518T055019",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180518T030539_N0206_R075_T54XWH_20180518T055019",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180325T064629_N0206_R020_T39PWK_20180325T120625",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180325T064629_N0206_R020_T39PWK_20180325T120625",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20180723T124301_N0206_R095_T28WDU_20180723T144245",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20180723T124301_N0206_R095_T28WDU_20180723T144245",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20180913T081601_N0206_R121_T35LKE_20180913T103649",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20180913T081601_N0206_R121_T35LKE_20180913T103649",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180310T165111_N0206_R026_T17VNJ_20180310T220933",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180310T165111_N0206_R026_T17VNJ_20180310T220933",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "development",
+      "product": "S2B_MSIL1C_20180822T014649_N0206_R017_T56WNB_20180822T032508",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "development",
+      "product": "S2B_MSIL1C_20180822T014649_N0206_R017_T56WNB_20180822T032508",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180321T075621_N0206_R035_T34HGK_20180321T101406",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180321T075621_N0206_R035_T34HGK_20180321T101406",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "development",
+      "product": "S2B_MSIL1C_20180612T171859_N0206_R012_T15UVU_20180612T204912",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "development",
+      "product": "S2B_MSIL1C_20180612T171859_N0206_R012_T15UVU_20180612T204912",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "development",
+      "product": "S2B_MSIL1C_20180824T111239_N0206_R051_T28LGP_20180824T164334",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "development",
+      "product": "S2B_MSIL1C_20180824T111239_N0206_R051_T28LGP_20180824T164334",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180410T214911_N0206_R043_T02LKH_20180410T231102",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180410T214911_N0206_R043_T02LKH_20180410T231102",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "development",
+      "product": "S2B_MSIL1C_20180701T074609_N0206_R135_T38TNN_20180701T100320",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "development",
+      "product": "S2B_MSIL1C_20180701T074609_N0206_R135_T38TNN_20180701T100320",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "development",
+      "product": "S2B_MSIL1C_20181218T043159_N0207_R133_T46RDT_20181218T072156",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "development",
+      "product": "S2B_MSIL1C_20181218T043159_N0207_R133_T46RDT_20181218T072156",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180710T090601_N0206_R050_T34QBG_20180710T112311",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180710T090601_N0206_R050_T34QBG_20180710T112311",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "development",
+      "product": "S2B_MSIL1C_20180131T082149_N0206_R121_T34JDL_20180131T120726",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "development",
+      "product": "S2B_MSIL1C_20180131T082149_N0206_R121_T34JDL_20180131T120726",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "development",
+      "product": "S2B_MSIL1C_20180214T025819_N0206_R032_T51TUM_20180214T072411",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "development",
+      "product": "S2B_MSIL1C_20180214T025819_N0206_R032_T51TUM_20180214T072411",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20181118T084231_N0207_R064_T35RPM_20181118T101007",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20181118T084231_N0207_R064_T35RPM_20181118T101007",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180703T023551_N0206_R089_T50PLR_20180703T053714",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180703T023551_N0206_R089_T50PLR_20180703T053714",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180805T024551_N0206_R132_T52UDG_20180805T054920",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180805T024551_N0206_R132_T52UDG_20180805T054920",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180211T234711_N0206_R073_T60WWT_20180212T011403",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180211T234711_N0206_R073_T60WWT_20180212T011403",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180804T045701_N0206_R119_T45RTH_20180804T075337",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180804T045701_N0206_R119_T45RTH_20180804T075337",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "development",
+      "product": "S2B_MSIL1C_20181004T102019_N0206_R065_T32TML_20181004T141056",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "development",
+      "product": "S2B_MSIL1C_20181004T102019_N0206_R065_T32TML_20181004T141056",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180602T081011_N0206_R078_T36PWC_20180602T115947",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180602T081011_N0206_R078_T36PWC_20180602T115947",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "development",
+      "product": "S2B_MSIL1C_20180508T150719_N0206_R082_T18MYV_20180508T202621",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "development",
+      "product": "S2B_MSIL1C_20180508T150719_N0206_R082_T18MYV_20180508T202621",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "development",
+      "product": "S2B_MSIL1C_20180420T103019_N0206_R108_T31TGF_20180420T114307",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "development",
+      "product": "S2B_MSIL1C_20180420T103019_N0206_R108_T31TGF_20180420T114307",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180430T111621_N0206_R037_T40XDR_20180430T132750",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180430T111621_N0206_R037_T40XDR_20180430T132750",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180909T151911_N0206_R068_T25XEG_20180909T205122",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180909T151911_N0206_R068_T25XEG_20180909T205122",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180707T021601_N0206_R003_T51SXR_20180707T041118",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180707T021601_N0206_R003_T51SXR_20180707T041118",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180522T183921_N0206_R070_T12VVH_20180522T233949",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180522T183921_N0206_R070_T12VVH_20180522T233949",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180317T045651_N0206_R119_T50XMG_20180317T075452",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180317T045651_N0206_R119_T50XMG_20180317T075452",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "development",
+      "product": "S2B_MSIL1C_20181001T165109_N0206_R026_T16UDV_20181001T221311",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "development",
+      "product": "S2B_MSIL1C_20181001T165109_N0206_R026_T16UDV_20181001T221311",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180608T152641_N0206_R025_T18MUA_20180608T202221",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180608T152641_N0206_R025_T18MUA_20180608T202221",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20181114T054101_N0207_R005_T44UNA_20181114T093234",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20181114T054101_N0207_R005_T44UNA_20181114T093234",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20181118T152621_N0207_R068_T20VPK_20181118T172424",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20181118T152621_N0207_R068_T20VPK_20181118T172424",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180922T185101_N0206_R113_T10SEE_20180922T225409",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180922T185101_N0206_R113_T10SEE_20180922T225409",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "development",
+      "product": "S2B_MSIL1C_20181111T094229_N0207_R036_T32NKF_20181111T131623",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "development",
+      "product": "S2B_MSIL1C_20181111T094229_N0207_R036_T32NKF_20181111T131623",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20181021T160311_N0206_R097_T20WNV_20181021T192258",
+      "model": "G7_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20181021T160311_N0206_R097_T20WNV_20181021T192258",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    }
+  ],
+  "fusion_checks": [
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180422T042659_N0206_R133_T48VUK_20180422T074056",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 4.163336342344337e-17,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20181102T015621_N0206_R117_T51LYE_20181102T061209",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 2.7755575615628914e-17,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20180621T083651_N0206_R064_T34KBG_20180621T123155",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 2.7755575615628914e-17,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20181030T044921_N0206_R076_T45RXQ_20181030T065311",
+      "count": 1044482,
+      "sigmoid_independent_max_error": 1.1102230246251565e-16,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180816T162829_N0206_R083_T18VUM_20180816T213305",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 1.0408340855860843e-17,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20180521T054641_N0206_R048_T42QXL_20180521T085815",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 1.3877787807814457e-17,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180120T004659_N0206_R102_T54KUV_20180120T020340",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 1.1102230246251565e-16,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180922T075619_N0206_R035_T35KMQ_20180922T114414",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 6.938893903907228e-18,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180615T205019_N0206_R057_T08WPC_20180615T223116",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 1.1102230246251565e-16,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20180824T150721_N0206_R125_T21UUP_20180824T185559",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 4.163336342344337e-17,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180625T230019_N0206_R058_T58KHC_20180626T001009",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 1.1102230246251565e-16,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20181112T070221_N0207_R120_T38KRD_20181112T102254",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 1.1102230246251565e-16,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20180910T150721_N0206_R082_T19PFN_20180910T201336",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 2.0816681711721685e-17,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180208T224659_N0206_R101_T02WPS_20180209T001736",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 1.0408340855860843e-17,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20180919T101701_N0206_R065_T39XWH_20180919T122556",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 1.1102230246251565e-16,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180417T021339_N0206_R060_T50LRQ_20180417T052932",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 1.1102230246251565e-16,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180327T022549_N0206_R046_T50QQH_20180327T060147",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 4.163336342344337e-17,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20181004T210519_N0206_R071_T56CNU_20181004T234310",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 1.3877787807814457e-17,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180125T232159_N0206_R044_T58PHU_20180126T003547",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 1.1102230246251565e-16,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180826T062619_N0206_R077_T40QHL_20180826T092057",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 1.1102230246251565e-16,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180810T160819_N0206_R140_T16QDD_20180810T211922",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 1.1102230246251565e-16,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20180327T163911_N0206_R126_T17VNF_20180327T215534",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 8.673617379884035e-18,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180505T025549_N0206_R032_T56XMJ_20180505T044859",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 1.734723475976807e-18,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20180613T141951_N0206_R096_T23VNK_20180613T162358",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 2.7755575615628914e-17,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180125T080209_N0206_R035_T36NXN_20180125T100104",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 1.3877787807814457e-17,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20181030T095121_N0206_R079_T33TWK_20181030T130454",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 1.1102230246251565e-16,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180808T022319_N0206_R103_T50MRV_20180808T054332",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 1.1102230246251565e-16,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180624T075609_N0206_R035_T37QBE_20180624T101209",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 2.0816681711721685e-17,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20180209T112221_N0206_R037_T29RKM_20180209T164004",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 1.1102230246251565e-16,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20180904T160901_N0206_R140_T27XWJ_20180904T192941",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 2.7755575615628914e-17,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180401T181919_N0206_R127_T11SQU_20180401T215241",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 1.1102230246251565e-16,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20181007T103019_N0206_R108_T31RCK_20181007T160704",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 6.938893903907228e-18,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20181025T081009_N0206_R078_T37TGL_20181025T102247",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 5.551115123125783e-17,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20181214T090351_N0207_R007_T34QGM_20181214T102932",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 1.3552527156068805e-19,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20180309T071721_N0206_R006_T37LFE_20180309T110254",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 1.1102230246251565e-16,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20180422T033541_N0206_R061_T49UFV_20180422T062036",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 2.0816681711721685e-17,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180517T220529_N0206_R072_T04WES_20180517T234440",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 1.1102230246251565e-16,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20180718T135111_N0206_R024_T22MEB_20180718T185303",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 1.1102230246251565e-16,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20180817T215051_N0206_R029_T14XMQ_20180818T001725",
+      "count": 1044415,
+      "sigmoid_independent_max_error": 4.163336342344337e-17,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20181114T040011_N0207_R004_T48UXA_20181114T084110",
+      "count": 1044483,
+      "sigmoid_independent_max_error": 2.7755575615628914e-17,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20181220T033139_N0207_R018_T48SYC_20181220T060651",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 1.1102230246251565e-16,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180201T012709_N0206_R131_T53LKK_20180201T025415",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 5.551115123125783e-17,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180605T140729_N0206_R053_T24WWU_20180605T160557",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 2.0816681711721685e-17,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20180108T104421_N0206_R008_T31TEF_20180108T124506",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 1.1102230246251565e-16,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180315T032529_N0206_R018_T49SCC_20180315T070512",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 2.7755575615628914e-17,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20180818T061631_N0206_R034_T43VFG_20180818T074215",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 5.551115123125783e-17,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180827T174039_N0206_R098_T12RYN_20180827T214315",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 1.3877787807814457e-17,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180630T002059_N0206_R116_T55HCC_20180630T014728",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 2.7755575615628914e-17,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20181218T061249_N0207_R134_T41RQK_20181218T080326",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 4.163336342344337e-17,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180518T030539_N0206_R075_T54XWH_20180518T055019",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 2.7755575615628914e-17,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180325T064629_N0206_R020_T39PWK_20180325T120625",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 1.1102230246251565e-16,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20180723T124301_N0206_R095_T28WDU_20180723T144245",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 1.0408340855860843e-17,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20180913T081601_N0206_R121_T35LKE_20180913T103649",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 2.0816681711721685e-17,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180310T165111_N0206_R026_T17VNJ_20180310T220933",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 6.938893903907228e-18,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "development",
+      "product": "S2B_MSIL1C_20180822T014649_N0206_R017_T56WNB_20180822T032508",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 5.551115123125783e-17,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180321T075621_N0206_R035_T34HGK_20180321T101406",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 4.163336342344337e-17,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "development",
+      "product": "S2B_MSIL1C_20180612T171859_N0206_R012_T15UVU_20180612T204912",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 1.1102230246251565e-16,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "development",
+      "product": "S2B_MSIL1C_20180824T111239_N0206_R051_T28LGP_20180824T164334",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 1.1102230246251565e-16,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180410T214911_N0206_R043_T02LKH_20180410T231102",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 1.1102230246251565e-16,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "development",
+      "product": "S2B_MSIL1C_20180701T074609_N0206_R135_T38TNN_20180701T100320",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 1.1102230246251565e-16,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "development",
+      "product": "S2B_MSIL1C_20181218T043159_N0207_R133_T46RDT_20181218T072156",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 2.7755575615628914e-17,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180710T090601_N0206_R050_T34QBG_20180710T112311",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 6.938893903907228e-18,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "development",
+      "product": "S2B_MSIL1C_20180131T082149_N0206_R121_T34JDL_20180131T120726",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 1.1102230246251565e-16,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "development",
+      "product": "S2B_MSIL1C_20180214T025819_N0206_R032_T51TUM_20180214T072411",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 4.163336342344337e-17,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20181118T084231_N0207_R064_T35RPM_20181118T101007",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 8.326672684688674e-17,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180703T023551_N0206_R089_T50PLR_20180703T053714",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 2.6020852139652106e-18,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180805T024551_N0206_R132_T52UDG_20180805T054920",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 1.1102230246251565e-16,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180211T234711_N0206_R073_T60WWT_20180212T011403",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 2.7755575615628914e-17,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180804T045701_N0206_R119_T45RTH_20180804T075337",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 1.0408340855860843e-17,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "development",
+      "product": "S2B_MSIL1C_20181004T102019_N0206_R065_T32TML_20181004T141056",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 1.1102230246251565e-16,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180602T081011_N0206_R078_T36PWC_20180602T115947",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 3.469446951953614e-18,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "development",
+      "product": "S2B_MSIL1C_20180508T150719_N0206_R082_T18MYV_20180508T202621",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 1.1102230246251565e-16,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "development",
+      "product": "S2B_MSIL1C_20180420T103019_N0206_R108_T31TGF_20180420T114307",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 4.163336342344337e-17,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180430T111621_N0206_R037_T40XDR_20180430T132750",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 1.1102230246251565e-16,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180909T151911_N0206_R068_T25XEG_20180909T205122",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 1.3877787807814457e-17,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180707T021601_N0206_R003_T51SXR_20180707T041118",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 1.1102230246251565e-16,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180522T183921_N0206_R070_T12VVH_20180522T233949",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 4.163336342344337e-17,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180317T045651_N0206_R119_T50XMG_20180317T075452",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 1.3877787807814457e-17,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "development",
+      "product": "S2B_MSIL1C_20181001T165109_N0206_R026_T16UDV_20181001T221311",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 4.163336342344337e-17,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180608T152641_N0206_R025_T18MUA_20180608T202221",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 5.551115123125783e-17,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20181114T054101_N0207_R005_T44UNA_20181114T093234",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 4.163336342344337e-17,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20181118T152621_N0207_R068_T20VPK_20181118T172424",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 4.163336342344337e-17,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180922T185101_N0206_R113_T10SEE_20180922T225409",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 4.163336342344337e-17,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "development",
+      "product": "S2B_MSIL1C_20181111T094229_N0207_R036_T32NKF_20181111T131623",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 1.1102230246251565e-16,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20181021T160311_N0206_R097_T20WNV_20181021T192258",
+      "count": 1044484,
+      "sigmoid_independent_max_error": 1.1102230246251565e-16,
+      "G7_dtype": "float32",
+      "SourceS_logit_dtype": "float32",
+      "fusion_dtype": "float64",
+      "MIN_bounded": true,
+      "AVG_between": true,
+      "independent_formula_exact": true
+    }
+  ],
+  "independent_AP_score_bins_and_sklearn": true,
+  "independent_integer_counts": true,
+  "original_baseline_scores_and_metrics_exact": true,
+  "calibration_baseline_negatives_exact": true,
+  "float64_AP_and_comparisons_preserved": true,
+  "threshold_direct_integer_counts": true
+}

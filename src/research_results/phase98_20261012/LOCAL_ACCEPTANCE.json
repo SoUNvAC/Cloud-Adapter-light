@@ -1,0 +1,28 @@
+{
+  "verified": {
+    "verified": true,
+    "files": 10,
+    "new_fits": 0,
+    "new_thresholds": 2,
+    "development_rows": 128,
+    "paired_rows": 96,
+    "calibration_groups": 53,
+    "fusion_dtype": "float64",
+    "score_probes": 170,
+    "fusion_checks": 85,
+    "retained_branches": [],
+    "decision": "close_both_fixed_fusion_branches"
+  },
+  "execution_commit": "bc49167",
+  "remote_EXIT_CODE": 0,
+  "native_manifest_sha256": "63ff2a918cffa8cd2ec5b9c5879371b3fcd6e6114e21a671ccfc18d957ea0756",
+  "code_git_blob_hashes_exact": true,
+  "protocol_git_blob_hash_exact": true,
+  "float64_random_AP_bruteforce_cases": 60,
+  "shared_delivery_only": true,
+  "work_dirs_synchronized": false,
+  "new_fits": 0,
+  "new_thresholds": 2,
+  "new_network_forwards": 0,
+  "new_downloads": 0
+}
