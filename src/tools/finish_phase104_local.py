@@ -13,8 +13,23 @@ def main():
     with (DATA/'point_validity_no_labels.csv').open(encoding='utf-8-sig',newline='') as f:validity=list(csv.DictReader(f))
     assert len(validity)==9500
     acceptance=read(OUT/'input_acceptance.json');cpu=read(OUT/'CPU_48_verification.json')
+    downloads=read(OUT/'download_status.json');budget=read(OUT/'transfer_budget.json')
+    manifest=read(RESULT/'object_manifest.json');grid=read(OUT/'grid_acceptance.json')
+    runtime=read(OUT/'runtime_chain_acceptance.json')
+    assert downloads['status']=='all_files_verified' and len(downloads['files'])==96
+    assert budget['actual_received_bytes']<=budget['reserved_bytes']<=CAP
+    for obj in manifest['objects']:
+        received=downloads['files'][obj['path']]
+        assert all(received[k]==v for k,v in obj.items()) and received['verified'] and len(received['sha256'])==64
+    assert grid['all_grids_match_original_XML'] and len(grid['rows'])==96 and runtime['status']=='passed'
+    for r in grid['rows']:
+        assert r['sha256']==downloads['files'][r['product_id']+'/'+r['band']+'.jp2']['sha256']
     assert sha(DATA/'point_validity_no_labels.csv')==acceptance['point_validity_sha256']
     assert cpu['status']=='passed' and len(cpu['rows'])==48
+    assert cpu['point_inputs_sha256']==acceptance['point_inputs_sha256']
+    assert [r['point_id'] for r in cpu['rows']]==read(RESULT/'task_lock.json')['CPU_point_ids']
+    assert sha(OUT/'window_index.json')==acceptance['window_index_sha256']
+    assert sha(OUT/'grid_acceptance.json')==acceptance['grid_acceptance_sha256']
     reference=read(REFERENCE);byid={}
     for r in reference:
         assert len(r['point_ids'])==1
@@ -64,6 +79,11 @@ def main():
         point_inputs_remote_sha256=acceptance['point_inputs_sha256'],
         new_fits=0,network_forwards=0,performance_evaluations=0)
     write(RESULT/'support_acceptance.json',summary,True)
+    write(RESULT/'transfer_and_disk_cost.json',dict(expected_payload_bytes=EXPECTED_BYTES,
+          observed_received_bytes=budget['actual_received_bytes'],charged_upper_bound_bytes=budget['reserved_bytes'],
+          cumulative_cap_bytes=CAP,one_remote_imagery_copy=True,no_dense_float_cache=True,
+          disk_before=read(OUT/'disk_before.json'),disk_after_download=read(OUT/'disk_after_download.json'),
+          host_free_is_user_report_and_remaining_is_estimate=True),True)
     table_md='\n'.join(f"|{r['tiles']}|{r['positive_before']}→{r['positive_after']}|{r['surface_negative_before']+r['cloud_negative_before']}→{r['negative_after']}|{r['input_invalid']}|{'是' if r['minimum_support_met'] else '否'}|" for r in sorted(table,key=lambda r:r['tiles']))
     text=f'''# Phase104 输入验收\n\n## 1 数据结果\n\n16原产品、96六波段对象：8,344,418,736bytes；固定generation、长度、镜像MD5及实际SHA256逐件通过。全部96栅格与原XML格网一致；9500点逐点检查，输入无效{summary['input_invalid']}点，其中参考有效点损失{summary['reference_valid_input_lost']}点。48固定哈希抽样点独立CPU原DN、TOA、坐标及窗口复算通过。\n\n|相关组tile|正类验收前→后|负类验收前→后|输入无效点|≥5正/20负|\n|---|---:|---:|---:|---|\n{table_md}\n\n最低支持门：{eligible}/10组满足，要求至少8组。19GBQ/48NUG保留，未填零AP。原9500点共有9484个20m单元、14个多点单元；同单元后续共享分数，仍是采样点参考，不扩展成20m真值。没有载入模型、拟合、网络前向或AP/FPR/mIoU评价。\n\n## 2 结论与边界\n\n{'输入验收及预定支持门通过；可另立Phase105协议。' if eligible>=8 else '输入损失后预定支持门不足，暂停后续主要评价资格。'} 本轮不自动启封性能评价。后续唯一主要比较为原Phase93 G7_153−G6_153逐组平均采样点AP；10000次配对相关组bootstrap、seed105013，95%描述区间下界>0且宽度≤20pp。\n\n该比较只回答Source分数的条件增量；不能替代光谱增量方向，不能恢复旧失败分支。选择性采样、保守参考语义及未知基础预训练独立性限制保留；不推断全场景FPR、尾部安全性或密集mIoU。不用这10组做校准。\n\n影像远端唯一保存；本地只接收共享数据目录的无标签索引和小型验收报告。逐点参考与交集仍仅在本地受控data目录，不进Git。上下文按1020窗口冻结为可重复惰性读取索引，避免宿主物理盘重复保存整景浮点缓存；尚未进行512网络推理。\n'''
     (RESULT/'EVALUATION_READINESS.md').write_text(text,encoding='utf-8',newline='\n')
