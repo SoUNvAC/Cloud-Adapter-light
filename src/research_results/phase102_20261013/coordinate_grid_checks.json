@@ -1,0 +1,292 @@
+[
+  {
+    "product_id": "S2A_MSIL1C_20171205T143751_N0206_R096_T19KEU_20171205T180316",
+    "points": 600,
+    "crs": "EPSG:32719",
+    "all_position_records_inside_parent_grid": true,
+    "max_coordinate_to_index_corner_residual_m": 7.43025855408194,
+    "tolerance_m": 15,
+    "passed": true,
+    "scope": "coordinate/index metadata only; no imagery-label pixel registration or semantic quality claim"
+  },
+  {
+    "product_id": "S2A_MSIL1C_20170929T211511_N0205_R143_T06VWN_20170929T211510",
+    "points": 900,
+    "crs": "EPSG:32606",
+    "all_position_records_inside_parent_grid": true,
+    "max_coordinate_to_index_corner_residual_m": 7.499450863526225,
+    "tolerance_m": 15,
+    "passed": true,
+    "scope": "coordinate/index metadata only; no imagery-label pixel registration or semantic quality claim"
+  },
+  {
+    "product_id": "S2A_MSIL1C_20180126T182631_N0206_R127_T11SPC_20180126T201415",
+    "points": 550,
+    "crs": "EPSG:32611",
+    "all_position_records_inside_parent_grid": true,
+    "max_coordinate_to_index_corner_residual_m": 7.432083548100104,
+    "tolerance_m": 15,
+    "passed": true,
+    "scope": "coordinate/index metadata only; no imagery-label pixel registration or semantic quality claim"
+  },
+  {
+    "product_id": "S2A_MSIL1C_20180303T140051_N0206_R067_T19FDV_20180303T202004",
+    "points": 550,
+    "crs": "EPSG:32719",
+    "all_position_records_inside_parent_grid": true,
+    "max_coordinate_to_index_corner_residual_m": 7.382764260849609,
+    "tolerance_m": 15,
+    "passed": true,
+    "scope": "coordinate/index metadata only; no imagery-label pixel registration or semantic quality claim"
+  },
+  {
+    "product_id": "S2A_MSIL1C_20171107T150421_N0206_R125_T22WES_20171107T165127",
+    "points": 550,
+    "crs": "EPSG:32622",
+    "all_position_records_inside_parent_grid": true,
+    "max_coordinate_to_index_corner_residual_m": 7.420075018492446,
+    "tolerance_m": 15,
+    "passed": true,
+    "scope": "coordinate/index metadata only; no imagery-label pixel registration or semantic quality claim"
+  },
+  {
+    "product_id": "S2A_MSIL1C_20170629T103021_N0205_R108_T31TFJ_20170629T103020",
+    "points": 550,
+    "crs": "EPSG:32631",
+    "all_position_records_inside_parent_grid": true,
+    "max_coordinate_to_index_corner_residual_m": 7.2291471636605795,
+    "tolerance_m": 15,
+    "passed": true,
+    "scope": "coordinate/index metadata only; no imagery-label pixel registration or semantic quality claim"
+  },
+  {
+    "product_id": "S2A_MSIL1C_20170908T100031_N0205_R122_T32SPJ_20170908T100655",
+    "points": 550,
+    "crs": "EPSG:32632",
+    "all_position_records_inside_parent_grid": true,
+    "max_coordinate_to_index_corner_residual_m": 7.245820605147446,
+    "tolerance_m": 15,
+    "passed": true,
+    "scope": "coordinate/index metadata only; no imagery-label pixel registration or semantic quality claim"
+  },
+  {
+    "product_id": "S2B_MSIL1C_20170731T102019_N0205_R065_T33VVE_20170731T102348",
+    "points": 550,
+    "crs": "EPSG:32633",
+    "all_position_records_inside_parent_grid": true,
+    "max_coordinate_to_index_corner_residual_m": 7.231210232447079,
+    "tolerance_m": 15,
+    "passed": true,
+    "scope": "coordinate/index metadata only; no imagery-label pixel registration or semantic quality claim"
+  },
+  {
+    "product_id": "S2A_MSIL1C_20180223T092031_N0206_R093_T36VUM_20180223T113049",
+    "points": 550,
+    "crs": "EPSG:32636",
+    "all_position_records_inside_parent_grid": true,
+    "max_coordinate_to_index_corner_residual_m": 7.251201659118215,
+    "tolerance_m": 15,
+    "passed": true,
+    "scope": "coordinate/index metadata only; no imagery-label pixel registration or semantic quality claim"
+  },
+  {
+    "product_id": "S2B_MSIL1C_20171210T060229_N0206_R091_T42RUN_20171210T071154",
+    "points": 550,
+    "crs": "EPSG:32642",
+    "all_position_records_inside_parent_grid": true,
+    "max_coordinate_to_index_corner_residual_m": 7.401450928862891,
+    "tolerance_m": 15,
+    "passed": true,
+    "scope": "coordinate/index metadata only; no imagery-label pixel registration or semantic quality claim"
+  },
+  {
+    "product_id": "S2A_MSIL1C_20180106T032121_N0206_R118_T48NUG_20180106T083912",
+    "points": 550,
+    "crs": "EPSG:32648",
+    "all_position_records_inside_parent_grid": true,
+    "max_coordinate_to_index_corner_residual_m": 7.37991502552096,
+    "tolerance_m": 15,
+    "passed": true,
+    "scope": "coordinate/index metadata only; no imagery-label pixel registration or semantic quality claim"
+  },
+  {
+    "product_id": "S2A_MSIL1C_20180222T012651_N0206_R074_T54TWN_20180222T031349",
+    "points": 550,
+    "crs": "EPSG:32654",
+    "all_position_records_inside_parent_grid": true,
+    "max_coordinate_to_index_corner_residual_m": 7.63112772356569,
+    "tolerance_m": 15,
+    "passed": true,
+    "scope": "coordinate/index metadata only; no imagery-label pixel registration or semantic quality claim"
+  },
+  {
+    "product_id": "S2B_MSIL1C_20170725T183309_N0205_R127_T11SPC_20170725T183309",
+    "points": 550,
+    "crs": "EPSG:32611",
+    "all_position_records_inside_parent_grid": true,
+    "max_coordinate_to_index_corner_residual_m": 7.432314700082034,
+    "tolerance_m": 15,
+    "passed": true,
+    "scope": "coordinate/index metadata only; no imagery-label pixel registration or semantic quality claim"
+  },
+  {
+    "product_id": "S2A_MSIL1C_20170209T154541_N0204_R111_T17PPK_20170209T154543",
+    "points": 650,
+    "crs": "EPSG:32617",
+    "all_position_records_inside_parent_grid": true,
+    "max_coordinate_to_index_corner_residual_m": 7.399638363766426,
+    "tolerance_m": 15,
+    "passed": true,
+    "scope": "coordinate/index metadata only; no imagery-label pixel registration or semantic quality claim"
+  },
+  {
+    "product_id": "S2A_MSIL1C_20170725T142751_N0205_R053_T19GBQ_20170725T143854",
+    "points": 550,
+    "crs": "EPSG:32719",
+    "all_position_records_inside_parent_grid": true,
+    "max_coordinate_to_index_corner_residual_m": 7.412956427687366,
+    "tolerance_m": 15,
+    "passed": true,
+    "scope": "coordinate/index metadata only; no imagery-label pixel registration or semantic quality claim"
+  },
+  {
+    "product_id": "S2B_MSIL1C_20170712T113319_N0205_R080_T28PCV_20170712T114542",
+    "points": 551,
+    "crs": "EPSG:32628",
+    "all_position_records_inside_parent_grid": true,
+    "max_coordinate_to_index_corner_residual_m": 7.177181414334334,
+    "tolerance_m": 15,
+    "passed": true,
+    "scope": "coordinate/index metadata only; no imagery-label pixel registration or semantic quality claim"
+  },
+  {
+    "product_id": "S2A_MSIL1C_20170726T102021_N0205_R065_T33VVE_20170726T102259",
+    "points": 550,
+    "crs": "EPSG:32633",
+    "all_position_records_inside_parent_grid": true,
+    "max_coordinate_to_index_corner_residual_m": 7.235015874779107,
+    "tolerance_m": 15,
+    "passed": true,
+    "scope": "coordinate/index metadata only; no imagery-label pixel registration or semantic quality claim"
+  },
+  {
+    "product_id": "S2A_MSIL1C_20170113T072241_N0204_R006_T40UEE_20170113T072238",
+    "points": 550,
+    "crs": "EPSG:32640",
+    "all_position_records_inside_parent_grid": true,
+    "max_coordinate_to_index_corner_residual_m": 7.298947860407919,
+    "tolerance_m": 15,
+    "passed": true,
+    "scope": "coordinate/index metadata only; no imagery-label pixel registration or semantic quality claim"
+  },
+  {
+    "product_id": "S2A_MSIL1C_20180217T053911_N0206_R005_T44SKJ_20180217T082149",
+    "points": 700,
+    "crs": "EPSG:32644",
+    "all_position_records_inside_parent_grid": true,
+    "max_coordinate_to_index_corner_residual_m": 7.444281098391718,
+    "tolerance_m": 15,
+    "passed": true,
+    "scope": "coordinate/index metadata only; no imagery-label pixel registration or semantic quality claim"
+  },
+  {
+    "product_id": "S2A_MSIL1C_20170917T052641_N0205_R105_T48XWG_20170917T052642",
+    "points": 550,
+    "crs": "EPSG:32648",
+    "all_position_records_inside_parent_grid": true,
+    "max_coordinate_to_index_corner_residual_m": 7.452285032075944,
+    "tolerance_m": 15,
+    "passed": true,
+    "scope": "coordinate/index metadata only; no imagery-label pixel registration or semantic quality claim"
+  },
+  {
+    "product_id": "S2A_MSIL1C_20170916T143741_N0205_R096_T19KEU_20170916T143942",
+    "points": 700,
+    "crs": "EPSG:32719",
+    "all_position_records_inside_parent_grid": true,
+    "max_coordinate_to_index_corner_residual_m": 7.402326070306927,
+    "tolerance_m": 15,
+    "passed": true,
+    "scope": "coordinate/index metadata only; no imagery-label pixel registration or semantic quality claim"
+  },
+  {
+    "product_id": "S2A_MSIL1C_20170620T181921_N0205_R127_T11SPC_20170620T182846",
+    "points": 550,
+    "crs": "EPSG:32611",
+    "all_position_records_inside_parent_grid": true,
+    "max_coordinate_to_index_corner_residual_m": 7.424265578391705,
+    "tolerance_m": 15,
+    "passed": true,
+    "scope": "coordinate/index metadata only; no imagery-label pixel registration or semantic quality claim"
+  },
+  {
+    "product_id": "S2A_MSIL1C_20180302T142851_N0206_R053_T19GBQ_20180302T192732",
+    "points": 750,
+    "crs": "EPSG:32719",
+    "all_position_records_inside_parent_grid": true,
+    "max_coordinate_to_index_corner_residual_m": 7.434415536787898,
+    "tolerance_m": 15,
+    "passed": true,
+    "scope": "coordinate/index metadata only; no imagery-label pixel registration or semantic quality claim"
+  },
+  {
+    "product_id": "S2B_MSIL1C_20180302T150259_N0206_R125_T22WES_20180302T183800",
+    "points": 600,
+    "crs": "EPSG:32622",
+    "all_position_records_inside_parent_grid": true,
+    "max_coordinate_to_index_corner_residual_m": 7.412519071506603,
+    "tolerance_m": 15,
+    "passed": true,
+    "scope": "coordinate/index metadata only; no imagery-label pixel registration or semantic quality claim"
+  },
+  {
+    "product_id": "S2B_MSIL1C_20170728T101029_N0205_R022_T32TPS_20170728T101024",
+    "points": 550,
+    "crs": "EPSG:32632",
+    "all_position_records_inside_parent_grid": true,
+    "max_coordinate_to_index_corner_residual_m": 7.246477580804188,
+    "tolerance_m": 15,
+    "passed": true,
+    "scope": "coordinate/index metadata only; no imagery-label pixel registration or semantic quality claim"
+  },
+  {
+    "product_id": "S2B_MSIL1C_20170916T101019_N0205_R022_T32SPJ_20170916T101354",
+    "points": 600,
+    "crs": "EPSG:32632",
+    "all_position_records_inside_parent_grid": true,
+    "max_coordinate_to_index_corner_residual_m": 7.249199801375181,
+    "tolerance_m": 15,
+    "passed": true,
+    "scope": "coordinate/index metadata only; no imagery-label pixel registration or semantic quality claim"
+  },
+  {
+    "product_id": "S2A_MSIL1C_20170712T071621_N0205_R006_T40UEE_20170712T071617",
+    "points": 550,
+    "crs": "EPSG:32640",
+    "all_position_records_inside_parent_grid": true,
+    "max_coordinate_to_index_corner_residual_m": 7.2935768386905275,
+    "tolerance_m": 15,
+    "passed": true,
+    "scope": "coordinate/index metadata only; no imagery-label pixel registration or semantic quality claim"
+  },
+  {
+    "product_id": "S2A_MSIL1C_20170706T051651_N0205_R062_T48XWG_20170706T051649",
+    "points": 800,
+    "crs": "EPSG:32648",
+    "all_position_records_inside_parent_grid": true,
+    "max_coordinate_to_index_corner_residual_m": 7.442860737855731,
+    "tolerance_m": 15,
+    "passed": true,
+    "scope": "coordinate/index metadata only; no imagery-label pixel registration or semantic quality claim"
+  },
+  {
+    "product_id": "S2A_MSIL1C_20180102T140051_N0206_R067_T21LXK_20180102T154324",
+    "points": 600,
+    "crs": "EPSG:32721",
+    "all_position_records_inside_parent_grid": true,
+    "max_coordinate_to_index_corner_residual_m": 7.247690137272929,
+    "tolerance_m": 15,
+    "passed": true,
+    "scope": "coordinate/index metadata only; no imagery-label pixel registration or semantic quality claim"
+  }
+]

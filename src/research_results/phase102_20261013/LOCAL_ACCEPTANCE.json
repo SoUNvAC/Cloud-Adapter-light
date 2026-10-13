@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "CPU_receipt_sha256": "688e971ffedd650d40fb46c2dc10a0688291226d0aefb99a448a9c8c108b9547",
+  "all_input_SHA256_match_remote_CPU_audit": true,
+  "point_position_columns_allowlist_only": true,
+  "Kappa_patch_position_columns_no_classes": true,
+  "small_metadata_payload_only_no_raw_label_ZIP": true,
+  "row_counts_checked": 1108,
+  "PixBox_products": 29,
+  "PixBox_metadata_pass_products": 16,
+  "PixBox_remaining_related_groups": 10,
+  "Kappa_pending_acquisition_keys": 899,
+  "Kappa_provisional_incomplete_components": 794,
+  "no_shadow_group_count_inferred": true,
+  "no_new_evaluation": true
+}

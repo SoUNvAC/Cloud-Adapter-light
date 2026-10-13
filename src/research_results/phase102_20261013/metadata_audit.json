@@ -1,0 +1,86 @@
+{
+  "status": "completed_metadata_only",
+  "counts": {
+    "KappaSet7100327": {
+      "indexed_acquisition_or_product_records": 1079,
+      "unique_products_verified": null,
+      "status_counts": {
+        "pending_metadata": 899,
+        "excluded_overlap": 180
+      },
+      "remaining_known_connectivity_components": 794,
+      "remaining_complete_geometry_components": 0,
+      "date_range": [
+        "20200102",
+        "20211229"
+      ],
+      "tiles": 941,
+      "independent_groups_certified": false,
+      "shadow_group_support": "not read; not inferred from class names"
+    },
+    "PixBox5036991": {
+      "indexed_acquisition_or_product_records": 29,
+      "unique_products_verified": 29,
+      "status_counts": {
+        "excluded_overlap": 13,
+        "candidate_metadata_pass": 16
+      },
+      "remaining_known_connectivity_components": 10,
+      "remaining_complete_geometry_components": 10,
+      "date_range": [
+        "20170113",
+        "20180303"
+      ],
+      "tiles": 20,
+      "independent_groups_certified": false,
+      "shadow_group_support": "not read; not inferred from class names"
+    }
+  },
+  "Kappa_official_product_count": 1038,
+  "Kappa_archive_acquisition_keys": 1079,
+  "Kappa_identity_discrepancy_unresolved": true,
+  "rules": {
+    "buffer_each_m": 1000,
+    "contact": "planar distance<=2000m, including boundary touch",
+    "projection": "candidate UTM; native edges densified<=250m; historical WGS84 envelopes densified<=.002degree",
+    "grouping": "same tile OR same UTC day and known orbit OR buffered intersection; transitive components",
+    "unknown_geometry": "pending, never assumed disjoint; Kappa component counts are incomplete-connectivity upper bounds"
+  },
+  "source_base_pretraining_independence": "unknown",
+  "registered_history_records": 9717,
+  "history_roles": {
+    "Source_train": 8490,
+    "Source_val": 535,
+    "Catalogue_65b_confirmation": 66,
+    "Catalogue_65a_confirmation": 65,
+    "Catalogue_65c_final": 66,
+    "Catalogue_fit": 155,
+    "Catalogue_unused_release_conservative": 129,
+    "Catalogue_development_val": 32,
+    "historical_used": 142,
+    "ALCD_full_release_including_used9": 37
+  },
+  "new_training_fits_predictions_performance_evaluations": 0,
+  "raster_pixels_read": false,
+  "raw_PixBox_CSV_bytes_tokenized_for_allowlisted_field_projection": true,
+  "PixBox_label_file_obtained": true,
+  "PixBox_label_values_semantically_parsed_counted_or_displayed": false,
+  "imagery_or_mask_payload_downloaded": false,
+  "new_role_split": false,
+  "PixBox_full_scene_FPR_estimable": false,
+  "PixBox_inclusion_probabilities_known": false,
+  "runtime": {
+    "shapely": "2.1.2",
+    "rasterio": "1.3.11"
+  },
+  "input_SHA256": {
+    "source_records.json": "11d8998d3172b9b534d108adf314a8e8009f6ecb469d3c8296bf0a1e4a99630b",
+    "source_access_sha256.json": "f896332e2af4ef6dc7df41c5e907254ff54cb7d5b021817f1339641d04d9b1bf",
+    "access_ledger.json": "d73d5ed974aedc90d8816fd3473f71465f16fcede6306ad3794ad09c4168b121",
+    "pixbox_positions_only.csv": "86027b822d8748bc31cb68054b4437e564181f1d26045e94142658f477b2ab38",
+    "history_positions_only.json": "88379af9c1f6d6493b22cb188579647751c053f206a55d1f23fb93b1167b42c7",
+    "kappa_patch_positions.csv": "ab4a8ca5ba7418cf307fcedd80ef0384c017a4eecd04b0d2fa5c6f086f9d7cc3",
+    "candidate_products_metadata.json": "27247292f1fd94c6c4fc9e1b0fde179c9328b2518d2a3c24e2f8e8fc819ce0cc",
+    "exposure_scan.json": "5490ba58b9cdafd92189bd77ca9deeb1f6236340610da2f5f442f84fc8defac8"
+  }
+}

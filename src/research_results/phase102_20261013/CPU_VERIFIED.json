@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "identity_records": 1108,
+  "Kappa_keys_not_certified_product_count": 1079,
+  "PixBox_products": 29,
+  "coordinate_records_allowlist_only": 17351,
+  "history_identity_tile_exclusion_verified": true,
+  "BFS_components_match": true,
+  "fixed_1000m_each_buffer_contact_test_passed": true,
+  "all_input_hashes_match": true,
+  "independent_full_history_distance_checked_products": 21,
+  "independent_additional_geometry_exclusions": 5,
+  "existing_history_footprint_geometry_lineage": "Phase86 positions-only metadata; no historical raster reopened",
+  "coordinate_grid_checks": 29,
+  "coordinate_pass_count": 29,
+  "conservative_metadata_transfer_budget_bytes": 16109518,
+  "training_fits_prediction_performance_evaluation": 0,
+  "raster_or_class_values_interpreted": false
+}

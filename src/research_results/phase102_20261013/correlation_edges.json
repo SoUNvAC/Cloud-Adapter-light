@@ -1,0 +1,1002 @@
+[
+  {
+    "left": "Kappa:T32UQA:20200824T101559",
+    "right": "Kappa:T32UQA:20200428T101031",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T35TPN:20210629T090559",
+    "right": "Kappa:T35TPN:20210828T090549",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T34TEP:20210406T093029",
+    "right": "Kappa:T34TEP:20210128T092241",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T36TWT:20210131T084109",
+    "right": "Kappa:T36TWT:20200521T083611",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T36TWT:20210131T084109",
+    "right": "Kappa:T36TWT:20210923T083701",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T36TWT:20210131T084109",
+    "right": "Kappa:T36TWT:20210822T084559",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T33VWF:20200426T101549",
+    "right": "Kappa:T33VWF:20200416T101549",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T33VWF:20200426T101549",
+    "right": "Kappa:T33VWF:20200717T101031",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T35UMQ:20200503T092031",
+    "right": "Kappa:T35UMQ:20200627T092029",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T35UMQ:20200503T092031",
+    "right": "Kappa:T35UMQ:20200505T090549",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T31TFM:20210731T104031",
+    "right": "Kappa:T31TFM:20200522T103629",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T35ULA:20200603T094029",
+    "right": "Kappa:T35ULA:20200605T093041",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T35ULA:20200603T094029",
+    "right": "Kappa:T35ULA:20200504T094029",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T54WVV:20200215T022759",
+    "right": "Kappa:T54WVV:20210818T022549",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T31TDN:20200902T104629",
+    "right": "Kappa:T31TDN:20200525T104619",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T35TKG:20210503T092029",
+    "right": "Kappa:T35TKG:20211119T092159",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T33VWK:20200615T101559",
+    "right": "Kappa:T33VWK:20200713T103031",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T33TYH:20200419T094031",
+    "right": "Kappa:T33TYH:20200330T094031",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T33TYH:20200419T094031",
+    "right": "Kappa:T33TYH:20210810T095029",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T31TFK:20200125T103321",
+    "right": "Kappa:T31TFK:20210323T104021",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T36TWT:20200521T083611",
+    "right": "Kappa:T36TWT:20210923T083701",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T36TWT:20200521T083611",
+    "right": "Kappa:T36TWT:20210822T084559",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T34TDL:20211003T093039",
+    "right": "Kappa:T34TDL:20211018T093041",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T32TNL:20210103T101411",
+    "right": "Kappa:T32TNL:20200314T101019",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T36TYT:20210730T083559",
+    "right": "Kappa:T36TYT:20211008T083749",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T35VMD:20201001T094039",
+    "right": "Kappa:T35VMD:20200715T093041",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T33UWT:20200415T100031",
+    "right": "Kappa:T33UWT:20200627T101031",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T33TWF:20211029T095029",
+    "right": "Kappa:T33TWF:20200328T095029",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T33TWF:20211029T095029",
+    "right": "Kappa:T33TWF:20201029T095131",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T29TPG:20200916T112121",
+    "right": "Kappa:T29TPG:20200113T113431",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T33TXN:20200726T095029",
+    "right": "Kappa:T33TXN:20200614T100031",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T33TXN:20200726T095029",
+    "right": "Kappa:T33TXN:20201022T100051",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T32TLQ:20210325T102639",
+    "right": "Kappa:T32TLQ:20201018T102041",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T22JBT:20200116T134211",
+    "right": "Kappa:T22JBT:20200729T134219",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T33TXF:20210726T095031",
+    "right": "Kappa:T33TXF:20200330T094031",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T31TCM:20210619T104619",
+    "right": "Kappa:T31TCM:20201012T104909",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T41SMV:20200220T063909",
+    "right": "Kappa:T41SMV:20210527T062631",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T31UFS:20200924T104031",
+    "right": "Kappa:T31UFS:20200619T105031",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T31UFS:20200924T104031",
+    "right": "Kappa:T31UFS:20200517T104031",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T33TXK:20210422T095029",
+    "right": "Kappa:T33TXK:20200929T095041",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T33SXD:20200330T094031",
+    "right": "Kappa:T33SXD:20210102T095319",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T33TUM:20200324T100649",
+    "right": "Kappa:T33TUM:20200828T100029",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T33TYH:20200330T094031",
+    "right": "Kappa:T33TYH:20210810T095029",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T31TFL:20200313T103719",
+    "right": "Kappa:T31TFL:20200522T103629",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T32TNN:20200322T102021",
+    "right": "Kappa:T32TNN:20200930T100729",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T33TWF:20200328T095029",
+    "right": "Kappa:T33TWF:20201029T095131",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T32TNP:20200322T102021",
+    "right": "Kappa:T32TNP:20200928T102031",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T43REL:20200315T052641",
+    "right": "Kappa:T43REL:20200419T052639",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T33TWE:20200328T095029",
+    "right": "Kappa:T33TWE:20201125T094331",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T33MTM:20200316T090659",
+    "right": "Kappa:T33MTM:20200116T091229",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T31TGJ:20200310T102739",
+    "right": "Kappa:T31TGJ:20200608T102559",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T17SQD:20211229T160649",
+    "right": "Kappa:T17SQD:20210806T155911",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T31SCR:20210618T103021",
+    "right": "Kappa:T31SCR:20210203T103139",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T44QLJ:20210617T050659",
+    "right": "Kappa:T44QLJ:20201124T051131",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T34UDB:20200626T095029",
+    "right": "Kappa:T34UDB:20200623T094039",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T35UMQ:20200627T092029",
+    "right": "Kappa:T35UMQ:20200505T090549",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T35ULA:20200605T093041",
+    "right": "Kappa:T35ULA:20200504T094029",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T33TXN:20200614T100031",
+    "right": "Kappa:T33TXN:20201022T100051",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T35UMV:20200605T093041",
+    "right": "Kappa:T35UMV:20200625T093041",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T35UMV:20200605T093041",
+    "right": "Kappa:T35UMV:20200413T092031",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T35UMV:20200605T093041",
+    "right": "Kappa:T35UMV:20200705T093041",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T35UMV:20200605T093041",
+    "right": "Kappa:T35UMV:20200702T092031",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T31TDJ:20200606T104031",
+    "right": "Kappa:T31TDJ:20200530T105031",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T33VVE:20200613T103031",
+    "right": "S2B_MSIL1C_20170731T102019_N0205_R065_T33VVE_20170731T102348",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T33VVE:20200613T103031",
+    "right": "S2A_MSIL1C_20170726T102021_N0205_R065_T33VVE_20170726T102259",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T31UFS:20200619T105031",
+    "right": "Kappa:T31UFS:20200517T104031",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T33UYV:20200624T100031",
+    "right": "Kappa:T33UYV:20200724T100031",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T33UYV:20200624T100031",
+    "right": "Kappa:T33UYV:20200701T095031",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T32TNS:20200620T102031",
+    "right": "Kappa:T32TNS:20201011T103031",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T32TLP:20200610T102031",
+    "right": "Kappa:T32TLP:20200514T103031",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T32TLP:20200610T102031",
+    "right": "Kappa:T32TLP:20200921T103031",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T34TBM:20210605T093039",
+    "right": "Kappa:T34TBM:20201011T094039",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T34UFE:20200603T094029",
+    "right": "Kappa:T34UFE:20200409T094031",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T34UFE:20200603T094029",
+    "right": "Kappa:T34UFE:20200723T094039",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T34UFE:20200603T094029",
+    "right": "Kappa:T34UFE:20200817T094041",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T29TMF:20200606T113319",
+    "right": "Kappa:T29TMF:20201006T112121",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T36TWS:20210623T084559",
+    "right": "Kappa:T36TWS:20211122T084251",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T35UMR:20200627T092029",
+    "right": "Kappa:T35UMR:20200415T090549",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T31TCL:20200619T105031",
+    "right": "Kappa:T31TCL:20201116T105331",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T35TMJ:20210604T090601",
+    "right": "Kappa:T35TMJ:20210206T090039",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T35UMV:20200625T093041",
+    "right": "Kappa:T35UMV:20200413T092031",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T35UMV:20200625T093041",
+    "right": "Kappa:T35UMV:20200705T093041",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T35UMV:20200625T093041",
+    "right": "Kappa:T35UMV:20200702T092031",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T35TLN:20210612T092029",
+    "right": "Kappa:T35TLN:20211102T093049",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T33VVC:20200615T101559",
+    "right": "Kappa:T33VVC:20200511T102031",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T36TUM:20210615T083601",
+    "right": "Kappa:T36TUM:20211008T083749",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T17TPH:20210605T160829",
+    "right": "Kappa:T17TPH:20211028T161401",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T35TMN:20211017T090859",
+    "right": "Kappa:T35TMN:20210110T091249",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T44QLG:20211030T050941",
+    "right": "Kappa:T44QLG:20210508T050649",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T45VVD:20211019T053841",
+    "right": "Kappa:T45VVD:20211029T053941",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T45UUB:20211029T053941",
+    "right": "Kappa:T45UUB:20200706T053651",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T34TGK:20211005T092031",
+    "right": "Kappa:T34TGK:20210811T092029",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T31TFN:20201019T103959",
+    "right": "Kappa:T31TFN:20200512T103619",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T31TGH:20200529T102559",
+    "right": "Kappa:T31TGH:20200110T103319",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T31UER:20200525T104619",
+    "right": "Kappa:T31UER:20200729T105031",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T44QKK:20200511T051701",
+    "right": "Kappa:T44QKK:20211117T052109",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T35UMU:20200503T092031",
+    "right": "Kappa:T35UMU:20200413T092031",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T35UMU:20200503T092031",
+    "right": "Kappa:T35UMU:20200702T092031",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T35UMU:20200503T092031",
+    "right": "Kappa:T35UMU:20200705T093041",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T35UMU:20200503T092031",
+    "right": "Kappa:T35UMU:20200821T092031",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T32TLP:20200514T103031",
+    "right": "Kappa:T32TLP:20200921T103031",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T35UMU:20200413T092031",
+    "right": "Kappa:T35UMU:20200702T092031",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T35UMU:20200413T092031",
+    "right": "Kappa:T35UMU:20200705T093041",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T35UMU:20200413T092031",
+    "right": "Kappa:T35UMU:20200821T092031",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T32UMC:20200414T103021",
+    "right": "Kappa:T32UMC:20200726T104031",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T35UPB:20200410T090551",
+    "right": "Kappa:T35UPB:20200803T090559",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T34UFE:20200409T094031",
+    "right": "Kappa:T34UFE:20200723T094039",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T34UFE:20200409T094031",
+    "right": "Kappa:T34UFE:20200817T094041",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T35UMV:20200413T092031",
+    "right": "Kappa:T35UMV:20200705T093041",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T35UMV:20200413T092031",
+    "right": "Kappa:T35UMV:20200702T092031",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T43RFH:20210414T052639",
+    "right": "Kappa:T43RFH:20200224T052811",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T33VWF:20200416T101549",
+    "right": "Kappa:T33VWF:20200717T101031",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T34UEE:20200414T094029",
+    "right": "Kappa:T34UEE:20200817T094041",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T11VPL:20200403T191921",
+    "right": "Kappa:T11VPL:20200217T190441",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T33UYV:20200724T100031",
+    "right": "Kappa:T33UYV:20200701T095031",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T34UFE:20200723T094039",
+    "right": "Kappa:T34UFE:20200817T094041",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T35UMU:20200702T092031",
+    "right": "Kappa:T35UMU:20200705T093041",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T35UMU:20200702T092031",
+    "right": "Kappa:T35UMU:20200821T092031",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T35UNB:20200727T092029",
+    "right": "Kappa:T35UNB:20200720T093039",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T35UNB:20200727T092029",
+    "right": "Kappa:T35UNB:20200826T092029",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T35UMV:20200705T093041",
+    "right": "Kappa:T35UMV:20200702T092031",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T19TBG:20210706T153809",
+    "right": "Kappa:T19TBG:20210815T153809",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T35UMU:20200705T093041",
+    "right": "Kappa:T35UMU:20200821T092031",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T35UNB:20200720T093039",
+    "right": "Kappa:T35UNB:20200826T092029",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T35TNG:20210704T090601",
+    "right": "Kappa:T35TNG:20210912T090601",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T35TNG:20210704T090601",
+    "right": "Kappa:T35TNG:20210122T090301",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T35TQM:20210701T085601",
+    "right": "Kappa:T35TQM:20210114T085229",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T33TVM:20200922T100031",
+    "right": "Kappa:T33TVM:20210120T100331",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T29TMH:20200922T114351",
+    "right": "Kappa:T29TMH:20200128T113309",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T34TDN:20210903T093029",
+    "right": "Kappa:T34TDN:20210129T094139",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T35TNG:20210912T090601",
+    "right": "Kappa:T35TNG:20210122T090301",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T36TWT:20210923T083701",
+    "right": "Kappa:T36TWT:20210822T084559",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T31TDH:20200929T103739",
+    "right": "Kappa:T31TDH:20200126T105229",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T33VWH:20200822T103031",
+    "right": "Kappa:T33VWH:20200824T101559",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T35TNF:20210117T090219",
+    "right": "Kappa:T35TNF:20211108T090201",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "Kappa:T44RKS:20200211T051941",
+    "right": "Kappa:T44RKS:20201122T052119",
+    "reasons": [
+      "same_tile_any_date"
+    ]
+  },
+  {
+    "left": "S2A_MSIL1C_20171107T150421_N0206_R125_T22WES_20171107T165127",
+    "right": "S2B_MSIL1C_20180302T150259_N0206_R125_T22WES_20180302T183800",
+    "reasons": [
+      "same_tile_any_date",
+      "both_1000m_buffers_intersect"
+    ]
+  },
+  {
+    "left": "S2A_MSIL1C_20170908T100031_N0205_R122_T32SPJ_20170908T100655",
+    "right": "S2B_MSIL1C_20170916T101019_N0205_R022_T32SPJ_20170916T101354",
+    "reasons": [
+      "same_tile_any_date",
+      "both_1000m_buffers_intersect"
+    ]
+  },
+  {
+    "left": "S2B_MSIL1C_20170731T102019_N0205_R065_T33VVE_20170731T102348",
+    "right": "S2A_MSIL1C_20170726T102021_N0205_R065_T33VVE_20170726T102259",
+    "reasons": [
+      "same_tile_any_date",
+      "both_1000m_buffers_intersect"
+    ]
+  },
+  {
+    "left": "S2A_MSIL1C_20170725T142751_N0205_R053_T19GBQ_20170725T143854",
+    "right": "S2A_MSIL1C_20180302T142851_N0206_R053_T19GBQ_20180302T192732",
+    "reasons": [
+      "same_tile_any_date",
+      "both_1000m_buffers_intersect"
+    ]
+  },
+  {
+    "left": "S2A_MSIL1C_20170113T072241_N0204_R006_T40UEE_20170113T072238",
+    "right": "S2A_MSIL1C_20170712T071621_N0205_R006_T40UEE_20170712T071617",
+    "reasons": [
+      "same_tile_any_date",
+      "both_1000m_buffers_intersect"
+    ]
+  },
+  {
+    "left": "S2A_MSIL1C_20170917T052641_N0205_R105_T48XWG_20170917T052642",
+    "right": "S2A_MSIL1C_20170706T051651_N0205_R062_T48XWG_20170706T051649",
+    "reasons": [
+      "same_tile_any_date",
+      "both_1000m_buffers_intersect"
+    ]
+  }
+]

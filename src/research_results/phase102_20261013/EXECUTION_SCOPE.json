@@ -1,0 +1,21 @@
+{
+  "phase": 102,
+  "execution_commit": "994a5e2e03917e77b5544a31b96511234eca2980",
+  "metadata_CPU_complete": true,
+  "code_protocol_git_blob_SHA256": {
+    "src/tools/audit_phase102_metadata.py": "d21706d54225d7ef0bf404f22313a1899177ff46fef82407db2004e235e6eea0",
+    "src/tools/verify_phase102_metadata.py": "9d653afe90bd014915edcbd940bdfd08ee93b4a070ba659ba61de43aacbb139e",
+    "src/research_plans/PHASE102_NEW_POOL_METADATA_AUDIT_20261013.md": "6fec0e175e6725d279f98c3ea26c3b0db27b96a494ed364a929d81728cb32172"
+  },
+  "source_history_original_SHA_verified_against_phase86_artifact_hashes": true,
+  "metadata_files_only": true,
+  "zero_training_fits_prediction_performance_evaluation": true,
+  "no_role_allocation": true,
+  "no_final_model_selection": true,
+  "no_sealed_pixels_predictions_metrics": true,
+  "work_dirs_sync": false,
+  "raw_PixBox_label_bundle_local_only": true,
+  "label_categories_not_interpreted_displayed_counted_or_selected": true,
+  "Kappa_metadata_gaps_preserved": true,
+  "deadline_beijing": "2026-10-20"
+}
