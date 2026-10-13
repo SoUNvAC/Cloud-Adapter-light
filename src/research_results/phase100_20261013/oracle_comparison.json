@@ -1,0 +1,44 @@
+{
+  "after_six_frozen_evaluations": true,
+  "rows": [
+    {
+      "model": "G7_100",
+      "calibration_T_tail": 0.870471477508545,
+      "oracle_development_threshold": 0.8883556127548219,
+      "T_tail_macro_recall": 0.32804107899834944,
+      "oracle_macro_recall": 0.30295098058180786,
+      "T_tail_macro_fpr": 0.010846199076225405,
+      "oracle_macro_fpr": 0.0015543668833374216,
+      "T_tail_max_group_fpr": 0.29016050030445656,
+      "oracle_max_group_fpr": 0.02003148952293694,
+      "labels_used_to_select_oracle": true,
+      "not_achievable_calibration_gain": true
+    },
+    {
+      "model": "SourceS_100",
+      "calibration_T_tail": 0.5307986992836738,
+      "oracle_development_threshold": 0.45137841317510696,
+      "T_tail_macro_recall": 0.11567341776460126,
+      "oracle_macro_recall": 0.17188178850191813,
+      "T_tail_macro_fpr": 0.0041357824905344075,
+      "oracle_macro_fpr": 0.006361005182499608,
+      "T_tail_max_group_fpr": 0.07273064977539148,
+      "oracle_max_group_fpr": 0.09999961703578035,
+      "labels_used_to_select_oracle": true,
+      "not_achievable_calibration_gain": true
+    },
+    {
+      "model": "MIN",
+      "calibration_T_tail": 0.2803397353855324,
+      "oracle_development_threshold": 0.32468982285219583,
+      "T_tail_macro_recall": 0.3180228082470155,
+      "oracle_macro_recall": 0.2738453195293627,
+      "T_tail_macro_fpr": 0.0055371797819437,
+      "oracle_macro_fpr": 0.004489752743981527,
+      "T_tail_max_group_fpr": 0.1221521823216057,
+      "oracle_max_group_fpr": 0.09999961703578035,
+      "labels_used_to_select_oracle": true,
+      "not_achievable_calibration_gain": true
+    }
+  ]
+}

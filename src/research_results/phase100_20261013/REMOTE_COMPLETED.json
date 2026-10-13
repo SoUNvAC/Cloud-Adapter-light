@@ -1,0 +1,14 @@
+{
+  "acceptance": {
+    "verified": true,
+    "payload_files": 12,
+    "thresholds": 3,
+    "development_policies": 6,
+    "development_rows": 192,
+    "paired_rows": 160,
+    "calibration_rows": 159,
+    "retained_candidates": [],
+    "decision": "end_global_threshold_repair_route"
+  },
+  "manifest_sha256": "7c493747be16aecb7965e0b5bf586cca169a258c6fd3525b255f92a3a52d2baa"
+}
