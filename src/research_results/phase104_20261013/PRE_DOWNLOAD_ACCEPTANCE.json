@@ -1,0 +1,23 @@
+{
+  "created_utc": "2026-10-13T05:39:09.146648+00:00",
+  "task_lock_sha256": "364721c188529d0f5fa05bcdcb0f7a6f95fdec891a7da2e99db7522e3b3a1200",
+  "actual_remote_model_sha256": {
+    "G6": "385b26b0b90b10281e24b0a3f73479ac2d9811c65ac345af75c1f35c0ebc9cd0",
+    "G7": "e0e701b1fa68fdb96eb93eab1c88687f6eef3574b7f455db0e8f42c441ea9513"
+  },
+  "model_files_hashed_without_pickle_load": true,
+  "code_update_before_any_image": "Downloader reserves full bounded HTTP response before opening, so prefetched/uncertain retry bytes also remain charged",
+  "code_sha256": {
+    "src/tools/audit_phase104_inputs.py": "4e75880aed0025927256af01d56a969d407ab30a3de9822e2d2acc20938e5bdb",
+    "src/tools/download_phase104.py": "af7ee4828515f36d2e2123f8fa4970eeeaf6c80d61572cfa17bf1712284a7b4b",
+    "src/tools/phase104_common.py": "77b1ec5978ab45794278d937b0347808c38aa73082e7dbca2a7d5479db6cfa4b",
+    "src/tools/prepare_phase104.py": "c4a111ceb07f86cd8c3ede7feeb3bfd1faaf2c3cfabbd65a13f7bec52115a187",
+    "src/tools/test_phase104.py": "02230e1e38550e080a0acf2d500e45923ec61cc8d29fad8b59a6ea448e9eb15b",
+    "src/tools/verify_phase104_cpu.py": "97592f56e016f99177f05e20dbd9de6d5472339b901ccd6f8b83c4b033c20846"
+  },
+  "host_free_user_report_bytes": 12400000000,
+  "remote_filesystem_free_bytes": 650705379328,
+  "expected_host_residual_bytes": 4055581264,
+  "download_single_copy_remote": true,
+  "no_image_access_yet": true
+}

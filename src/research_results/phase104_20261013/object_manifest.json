@@ -1,0 +1,1368 @@
+{
+  "products": [
+    {
+      "product_id": "S2A_MSIL1C_20170113T072241_N0204_R006_T40UEE_20170113T072238",
+      "product_link": "1407300752",
+      "group_id": "83648a01da773580ef92aade342ca7d137afc328617a58cbe425f0b73689e510",
+      "crs": "EPSG:32640",
+      "grid10": {
+        "ULX": 499980.0,
+        "ULY": 6000000.0,
+        "XDIM": 10.0,
+        "YDIM": -10.0,
+        "NROWS": 10980,
+        "NCOLS": 10980
+      },
+      "grid20": {
+        "ULX": 499980.0,
+        "ULY": 6000000.0,
+        "XDIM": 20.0,
+        "YDIM": -20.0,
+        "NROWS": 5490,
+        "NCOLS": 5490
+      },
+      "original_XML_prefix_sha256": "bfe3f618b02d42638c9c0a05c7a136a2b6a6b85b0b143b71a43863ae33b99658",
+      "quantification": 10000,
+      "offset": 0,
+      "special_values": {
+        "NODATA": 0,
+        "SATURATED": 65535
+      },
+      "product_xml_sha256": "48189bbe9e9f7c68dd936b1e9563cee7da58fea862c890aa25884f74498bbfec",
+      "gcs_listing_sha256": "4e17dce54c290e77f54e413dc1ab178d372b427eb3aa673441da0fa14c7556db"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20170706T051651_N0205_R062_T48XWG_20170706T051649",
+      "product_link": "2019111565",
+      "group_id": "cff44b9f6e50c2d2b4bdfb7ce491b1bedcacde5befc4d36e3f7ad563ae4ee263",
+      "crs": "EPSG:32648",
+      "grid10": {
+        "ULX": 499980.0,
+        "ULY": 8200020.0,
+        "XDIM": 10.0,
+        "YDIM": -10.0,
+        "NROWS": 10980,
+        "NCOLS": 10980
+      },
+      "grid20": {
+        "ULX": 499980.0,
+        "ULY": 8200020.0,
+        "XDIM": 20.0,
+        "YDIM": -20.0,
+        "NROWS": 5490,
+        "NCOLS": 5490
+      },
+      "original_XML_prefix_sha256": "0ec5c8c5a0a7e01ba740a8d92c0c927fec561c6a8f917f71a4ebc9bacc33c8cd",
+      "quantification": 10000,
+      "offset": 0,
+      "special_values": {
+        "NODATA": 0,
+        "SATURATED": 65535
+      },
+      "product_xml_sha256": "4c79beb2998199fdc74ec8bacaea882ea055d30fff47b536f8ac255ea2f76f2a",
+      "gcs_listing_sha256": "fc9b6a76776321c8c3b42f88b355642b02f749b3f73ef686433ba3331bd5b11a"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20170712T071621_N0205_R006_T40UEE_20170712T071617",
+      "product_link": "1899752240",
+      "group_id": "83648a01da773580ef92aade342ca7d137afc328617a58cbe425f0b73689e510",
+      "crs": "EPSG:32640",
+      "grid10": {
+        "ULX": 499980.0,
+        "ULY": 6000000.0,
+        "XDIM": 10.0,
+        "YDIM": -10.0,
+        "NROWS": 10980,
+        "NCOLS": 10980
+      },
+      "grid20": {
+        "ULX": 499980.0,
+        "ULY": 6000000.0,
+        "XDIM": 20.0,
+        "YDIM": -20.0,
+        "NROWS": 5490,
+        "NCOLS": 5490
+      },
+      "original_XML_prefix_sha256": "a93e00025d5d2d89849ae422443af37e4328956f513640444a3612cadec13438",
+      "quantification": 10000,
+      "offset": 0,
+      "special_values": {
+        "NODATA": 0,
+        "SATURATED": 65535
+      },
+      "product_xml_sha256": "23f604ea137aebaacf841bf0947b60209b39c0f10a8145621d3884d56bc5654f",
+      "gcs_listing_sha256": "06cc241c49e5760ff16f5a0f2548bf63372482f9c2140986c04881436f483b96"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20170725T142751_N0205_R053_T19GBQ_20170725T143854",
+      "product_link": "1248336059",
+      "group_id": "f26a773db22d5077389e8d526ebee5f2a8ce4974253a36eebb3209a527322150",
+      "crs": "EPSG:32719",
+      "grid10": {
+        "ULX": 199980.0,
+        "ULY": 5500000.0,
+        "XDIM": 10.0,
+        "YDIM": -10.0,
+        "NROWS": 10980,
+        "NCOLS": 10980
+      },
+      "grid20": {
+        "ULX": 199980.0,
+        "ULY": 5500000.0,
+        "XDIM": 20.0,
+        "YDIM": -20.0,
+        "NROWS": 5490,
+        "NCOLS": 5490
+      },
+      "original_XML_prefix_sha256": "43b8996b4568b51bd6267bb801f8d9ca5fc2442eaa7c3e204213b2c982678540",
+      "quantification": 10000,
+      "offset": 0,
+      "special_values": {
+        "NODATA": 0,
+        "SATURATED": 65535
+      },
+      "product_xml_sha256": "7d67d82bfc22a8498918bf3ff7b7f6e9789439f6940e8794f3890cc88c3b741e",
+      "gcs_listing_sha256": "a347b6cbefd254b2dd4699466e03a25fb6558a3e1e04b59f444617dd040e54f8"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20170726T102021_N0205_R065_T33VVE_20170726T102259",
+      "product_link": "1386821964",
+      "group_id": "04edcb802a945878b1247f3febb93af7473a9926a87e1d7b3506c2859dedb896",
+      "crs": "EPSG:32633",
+      "grid10": {
+        "ULX": 399960.0,
+        "ULY": 6500040.0,
+        "XDIM": 10.0,
+        "YDIM": -10.0,
+        "NROWS": 10980,
+        "NCOLS": 10980
+      },
+      "grid20": {
+        "ULX": 399960.0,
+        "ULY": 6500040.0,
+        "XDIM": 20.0,
+        "YDIM": -20.0,
+        "NROWS": 5490,
+        "NCOLS": 5490
+      },
+      "original_XML_prefix_sha256": "35569928595635d01da8ffb1eec93ef300a1f8103adb84b4c28a90db7857d82d",
+      "quantification": 10000,
+      "offset": 0,
+      "special_values": {
+        "NODATA": 0,
+        "SATURATED": 65535
+      },
+      "product_xml_sha256": "304d804f9b5bfaafeafe15144eaa26b762a8070fbd819900c984989de8286df5",
+      "gcs_listing_sha256": "929a4298edbff4e84b124ef9fffd5239166d726720c1f93d26ccb57cbc98836f"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20170908T100031_N0205_R122_T32SPJ_20170908T100655",
+      "product_link": "701404038",
+      "group_id": "6085b26a3e9d46fe957beb7d4550d3c98c68353a414f59430523ebbbc82e0e71",
+      "crs": "EPSG:32632",
+      "grid10": {
+        "ULX": 600000.0,
+        "ULY": 4400040.0,
+        "XDIM": 10.0,
+        "YDIM": -10.0,
+        "NROWS": 10980,
+        "NCOLS": 10980
+      },
+      "grid20": {
+        "ULX": 600000.0,
+        "ULY": 4400040.0,
+        "XDIM": 20.0,
+        "YDIM": -20.0,
+        "NROWS": 5490,
+        "NCOLS": 5490
+      },
+      "original_XML_prefix_sha256": "e6a9d2fefcf60a55fcff5e039174717b44a637dc2e8a17fe5ed962b1c5df8315",
+      "quantification": 10000,
+      "offset": 0,
+      "special_values": {
+        "NODATA": 0,
+        "SATURATED": 65535
+      },
+      "product_xml_sha256": "da6a4c3e4b903566309598b7f57dca0941efd53911bab40ca588ba5be63c7ee9",
+      "gcs_listing_sha256": "30494c3baa34dc80eec786c994a89fa21b42a484307e2f6e1e115dabb034c5f1"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20170917T052641_N0205_R105_T48XWG_20170917T052642",
+      "product_link": "1559102360",
+      "group_id": "cff44b9f6e50c2d2b4bdfb7ce491b1bedcacde5befc4d36e3f7ad563ae4ee263",
+      "crs": "EPSG:32648",
+      "grid10": {
+        "ULX": 499980.0,
+        "ULY": 8200020.0,
+        "XDIM": 10.0,
+        "YDIM": -10.0,
+        "NROWS": 10980,
+        "NCOLS": 10980
+      },
+      "grid20": {
+        "ULX": 499980.0,
+        "ULY": 8200020.0,
+        "XDIM": 20.0,
+        "YDIM": -20.0,
+        "NROWS": 5490,
+        "NCOLS": 5490
+      },
+      "original_XML_prefix_sha256": "a93fb23321440f5148d9327c8b46a516b2cf70ab6fbc7bfbfab24c2146e554e7",
+      "quantification": 10000,
+      "offset": 0,
+      "special_values": {
+        "NODATA": 0,
+        "SATURATED": 65535
+      },
+      "product_xml_sha256": "dc2f431e4d051a74cc86b9e25e4e122ff622254a38de4122c7687aad02e38c53",
+      "gcs_listing_sha256": "b9f6c1af37b26112b54fe796aa09dacfab891d9c5bb0646129f8a969a0da695e"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20171107T150421_N0206_R125_T22WES_20171107T165127",
+      "product_link": "522655885",
+      "group_id": "2c03bd1fba39cca8c1502d66af6da0bfbe17d6d4222a4c44b10cc16851be48c2",
+      "crs": "EPSG:32622",
+      "grid10": {
+        "ULX": 499980.0,
+        "ULY": 7200000.0,
+        "XDIM": 10.0,
+        "YDIM": -10.0,
+        "NROWS": 10980,
+        "NCOLS": 10980
+      },
+      "grid20": {
+        "ULX": 499980.0,
+        "ULY": 7200000.0,
+        "XDIM": 20.0,
+        "YDIM": -20.0,
+        "NROWS": 5490,
+        "NCOLS": 5490
+      },
+      "original_XML_prefix_sha256": "3b1d5060f77190d4499dab9ec846cb3c4a53dbccea7d78904cc5797b6f385f5e",
+      "quantification": 10000,
+      "offset": 0,
+      "special_values": {
+        "NODATA": 0,
+        "SATURATED": 65535
+      },
+      "product_xml_sha256": "bf1a9ce822e1998a8c1912333f1910be80c3454f0f8530e2a77ef26ca9afe6d7",
+      "gcs_listing_sha256": "b278a1b5cccf7516471280ed43973b26788157938bb20f381912c070e8c4f329"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20180106T032121_N0206_R118_T48NUG_20180106T083912",
+      "product_link": "960993216",
+      "group_id": "c4c5212f3648436c2b2a5b8c46962e4bc03be605ff0d9e8ee74aa6f12e2659a1",
+      "crs": "EPSG:32648",
+      "grid10": {
+        "ULX": 300000.0,
+        "ULY": 200040.0,
+        "XDIM": 10.0,
+        "YDIM": -10.0,
+        "NROWS": 10980,
+        "NCOLS": 10980
+      },
+      "grid20": {
+        "ULX": 300000.0,
+        "ULY": 200040.0,
+        "XDIM": 20.0,
+        "YDIM": -20.0,
+        "NROWS": 5490,
+        "NCOLS": 5490
+      },
+      "original_XML_prefix_sha256": "bd49d9f7b80ba41d7d2fdc8d3244aed0ac95e915732f4ae1fa4271c380c7b975",
+      "quantification": 10000,
+      "offset": 0,
+      "special_values": {
+        "NODATA": 0,
+        "SATURATED": 65535
+      },
+      "product_xml_sha256": "0ad9123a5e4d096a71c82f0ea3c0232cbb4d967f6632e92d17a8ac51213339ca",
+      "gcs_listing_sha256": "69a80f963162ed6ca23daacb442aae1b734487448ac8f0a3b18ff6fd7d49502c"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20180217T053911_N0206_R005_T44SKJ_20180217T082149",
+      "product_link": "1470797653",
+      "group_id": "d312ffb54a77972b608f434a44f0a2bd51df4589ca27764a673fad60a14f58e0",
+      "crs": "EPSG:32644",
+      "grid10": {
+        "ULX": 199980.0,
+        "ULY": 4400040.0,
+        "XDIM": 10.0,
+        "YDIM": -10.0,
+        "NROWS": 10980,
+        "NCOLS": 10980
+      },
+      "grid20": {
+        "ULX": 199980.0,
+        "ULY": 4400040.0,
+        "XDIM": 20.0,
+        "YDIM": -20.0,
+        "NROWS": 5490,
+        "NCOLS": 5490
+      },
+      "original_XML_prefix_sha256": "8b3d12cf0822657d6f8289e0aa26898c60195ff6e48ec03ead7e91ef194ad521",
+      "quantification": 10000,
+      "offset": 0,
+      "special_values": {
+        "NODATA": 0,
+        "SATURATED": 65535
+      },
+      "product_xml_sha256": "57dd184c4c7128dba818cd06c1bb9b379ce1cf2b316d0a8821b942c5f6821e56",
+      "gcs_listing_sha256": "06a79483831e261b245cc202eef2ea574f41e929cc1f730c8c4257549c00e9a2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20180222T012651_N0206_R074_T54TWN_20180222T031349",
+      "product_link": "1041598282",
+      "group_id": "d7f945e363690b9300fc4b029a8a82841f3b130d6b64da59c407fbac84db62f7",
+      "crs": "EPSG:32654",
+      "grid10": {
+        "ULX": 499980.0,
+        "ULY": 4800000.0,
+        "XDIM": 10.0,
+        "YDIM": -10.0,
+        "NROWS": 10980,
+        "NCOLS": 10980
+      },
+      "grid20": {
+        "ULX": 499980.0,
+        "ULY": 4800000.0,
+        "XDIM": 20.0,
+        "YDIM": -20.0,
+        "NROWS": 5490,
+        "NCOLS": 5490
+      },
+      "original_XML_prefix_sha256": "9222bed53ebaaacd71aec91cdc6c84f92ca41a62b2bc5bed3ba5686f2a0eb1d1",
+      "quantification": 10000,
+      "offset": 0,
+      "special_values": {
+        "NODATA": 0,
+        "SATURATED": 65535
+      },
+      "product_xml_sha256": "28b289903769098bef009517fddfbd27e10ab8e19ae34c69505bcb0b2e0bc371",
+      "gcs_listing_sha256": "0b84484852ded3f1663a1c1590bb3438e43c35a36ccc18daeb410f1899151994"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20180302T142851_N0206_R053_T19GBQ_20180302T192732",
+      "product_link": "1727140056",
+      "group_id": "f26a773db22d5077389e8d526ebee5f2a8ce4974253a36eebb3209a527322150",
+      "crs": "EPSG:32719",
+      "grid10": {
+        "ULX": 199980.0,
+        "ULY": 5500000.0,
+        "XDIM": 10.0,
+        "YDIM": -10.0,
+        "NROWS": 10980,
+        "NCOLS": 10980
+      },
+      "grid20": {
+        "ULX": 199980.0,
+        "ULY": 5500000.0,
+        "XDIM": 20.0,
+        "YDIM": -20.0,
+        "NROWS": 5490,
+        "NCOLS": 5490
+      },
+      "original_XML_prefix_sha256": "d0a86efbf2b5feb03230517c36be03441724d09ab8e5ce629b879944b099a124",
+      "quantification": 10000,
+      "offset": 0,
+      "special_values": {
+        "NODATA": 0,
+        "SATURATED": 65535
+      },
+      "product_xml_sha256": "4082c2fd491e665647e4b3c65c236784812423f89d2683c1b64e3c8bc5ece232",
+      "gcs_listing_sha256": "350a4bdc436b3a2d6401e6b70bc7b96e65a4b4b40bb97d32c11a4c1783bc0a52"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20180303T140051_N0206_R067_T19FDV_20180303T202004",
+      "product_link": "433871481",
+      "group_id": "6c7173585d6f3e04ab9c04f7d3e9150020db35fb51dd47e2a2b5eb2c0d5c3457",
+      "crs": "EPSG:32719",
+      "grid10": {
+        "ULX": 399960.0,
+        "ULY": 4000000.0,
+        "XDIM": 10.0,
+        "YDIM": -10.0,
+        "NROWS": 10980,
+        "NCOLS": 10980
+      },
+      "grid20": {
+        "ULX": 399960.0,
+        "ULY": 4000000.0,
+        "XDIM": 20.0,
+        "YDIM": -20.0,
+        "NROWS": 5490,
+        "NCOLS": 5490
+      },
+      "original_XML_prefix_sha256": "f2a4407504ddc757508536b64fadfd0886fca26196bdc15210fa428ef31678e1",
+      "quantification": 10000,
+      "offset": 0,
+      "special_values": {
+        "NODATA": 0,
+        "SATURATED": 65535
+      },
+      "product_xml_sha256": "f91a9f6c64ac7741e094721d394593fec36bfbe54f38e842e83d678ae22a1bb1",
+      "gcs_listing_sha256": "54fdbcf2c8ffe98627b9d080f9fdd3b8d4df264c7bca4d6857b2f5d2a5ad38d9"
+    },
+    {
+      "product_id": "S2B_MSIL1C_20170731T102019_N0205_R065_T33VVE_20170731T102348",
+      "product_link": "784585929",
+      "group_id": "04edcb802a945878b1247f3febb93af7473a9926a87e1d7b3506c2859dedb896",
+      "crs": "EPSG:32633",
+      "grid10": {
+        "ULX": 399960.0,
+        "ULY": 6500040.0,
+        "XDIM": 10.0,
+        "YDIM": -10.0,
+        "NROWS": 10980,
+        "NCOLS": 10980
+      },
+      "grid20": {
+        "ULX": 399960.0,
+        "ULY": 6500040.0,
+        "XDIM": 20.0,
+        "YDIM": -20.0,
+        "NROWS": 5490,
+        "NCOLS": 5490
+      },
+      "original_XML_prefix_sha256": "5e75d6293aa59894337b375c5055c8755295277fd73582529d7e82592ddd59c8",
+      "quantification": 10000,
+      "offset": 0,
+      "special_values": {
+        "NODATA": 0,
+        "SATURATED": 65535
+      },
+      "product_xml_sha256": "84813d92e0878aae51a5eb197ff9a4d9fbf14ec08be563683bb31595e3ba8769",
+      "gcs_listing_sha256": "e2f1c5f39b6dc74d84b83389d5461a5cd41bccbfda19a9d7a1619975974e7368"
+    },
+    {
+      "product_id": "S2B_MSIL1C_20170916T101019_N0205_R022_T32SPJ_20170916T101354",
+      "product_link": "1892503998",
+      "group_id": "6085b26a3e9d46fe957beb7d4550d3c98c68353a414f59430523ebbbc82e0e71",
+      "crs": "EPSG:32632",
+      "grid10": {
+        "ULX": 600000.0,
+        "ULY": 4400040.0,
+        "XDIM": 10.0,
+        "YDIM": -10.0,
+        "NROWS": 10980,
+        "NCOLS": 10980
+      },
+      "grid20": {
+        "ULX": 600000.0,
+        "ULY": 4400040.0,
+        "XDIM": 20.0,
+        "YDIM": -20.0,
+        "NROWS": 5490,
+        "NCOLS": 5490
+      },
+      "original_XML_prefix_sha256": "9115915f4fd68aef0d4a2c3d70998699b85b92798d9ebd7e195091fc52f4984f",
+      "quantification": 10000,
+      "offset": 0,
+      "special_values": {
+        "NODATA": 0,
+        "SATURATED": 65535
+      },
+      "product_xml_sha256": "f64bbe938aa13030f73179eb6402ff8c792e872bc5760d389aa4b58f5bd776ff",
+      "gcs_listing_sha256": "0c90f1c91ed848b4f6d57a8911be3e1149d9389be0256e109053e98f4a86230e"
+    },
+    {
+      "product_id": "S2B_MSIL1C_20180302T150259_N0206_R125_T22WES_20180302T183800",
+      "product_link": "1821333386",
+      "group_id": "2c03bd1fba39cca8c1502d66af6da0bfbe17d6d4222a4c44b10cc16851be48c2",
+      "crs": "EPSG:32622",
+      "grid10": {
+        "ULX": 499980.0,
+        "ULY": 7200000.0,
+        "XDIM": 10.0,
+        "YDIM": -10.0,
+        "NROWS": 10980,
+        "NCOLS": 10980
+      },
+      "grid20": {
+        "ULX": 499980.0,
+        "ULY": 7200000.0,
+        "XDIM": 20.0,
+        "YDIM": -20.0,
+        "NROWS": 5490,
+        "NCOLS": 5490
+      },
+      "original_XML_prefix_sha256": "8343b828f03bc9035ead89539d786b92614223841e2f5088a28efd75297e354f",
+      "quantification": 10000,
+      "offset": 0,
+      "special_values": {
+        "NODATA": 0,
+        "SATURATED": 65535
+      },
+      "product_xml_sha256": "92bad566545e24c2ed0cdb6deac54e54342e82c21429e2d5d75001368173c1f0",
+      "gcs_listing_sha256": "518fd31d7b1650328e9ff8c8bba7614a78288a9e3ad9a3f3f3319548a5b90cfb"
+    }
+  ],
+  "objects": [
+    {
+      "product_id": "S2A_MSIL1C_20170113T072241_N0204_R006_T40UEE_20170113T072238",
+      "band": "B02",
+      "name": "tiles/40/U/EE/S2A_MSIL1C_20170113T072241_N0204_R006_T40UEE_20170113T072238.SAFE/GRANULE/L1C_T40UEE_A008154_20170113T072238/IMG_DATA/T40UEE_20170113T072241_B02.jp2",
+      "generation": "1484526860264534",
+      "bytes": 135088137,
+      "md5_base64": "toAwWYomWUqts49Z5rMyOA==",
+      "path": "S2A_MSIL1C_20170113T072241_N0204_R006_T40UEE_20170113T072238/B02.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20170113T072241_N0204_R006_T40UEE_20170113T072238",
+      "band": "B03",
+      "name": "tiles/40/U/EE/S2A_MSIL1C_20170113T072241_N0204_R006_T40UEE_20170113T072238.SAFE/GRANULE/L1C_T40UEE_A008154_20170113T072238/IMG_DATA/T40UEE_20170113T072241_B03.jp2",
+      "generation": "1484526917698118",
+      "bytes": 134961172,
+      "md5_base64": "s/cINvH7cPCaycd+Lh1QYA==",
+      "path": "S2A_MSIL1C_20170113T072241_N0204_R006_T40UEE_20170113T072238/B03.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20170113T072241_N0204_R006_T40UEE_20170113T072238",
+      "band": "B04",
+      "name": "tiles/40/U/EE/S2A_MSIL1C_20170113T072241_N0204_R006_T40UEE_20170113T072238.SAFE/GRANULE/L1C_T40UEE_A008154_20170113T072238/IMG_DATA/T40UEE_20170113T072241_B04.jp2",
+      "generation": "1484527083475568",
+      "bytes": 135586030,
+      "md5_base64": "pBuSs6TklVg5mOChWB9zng==",
+      "path": "S2A_MSIL1C_20170113T072241_N0204_R006_T40UEE_20170113T072238/B04.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20170113T072241_N0204_R006_T40UEE_20170113T072238",
+      "band": "B08",
+      "name": "tiles/40/U/EE/S2A_MSIL1C_20170113T072241_N0204_R006_T40UEE_20170113T072238.SAFE/GRANULE/L1C_T40UEE_A008154_20170113T072238/IMG_DATA/T40UEE_20170113T072241_B08.jp2",
+      "generation": "1484527220525439",
+      "bytes": 135614253,
+      "md5_base64": "Nl5JgxAmuRqsWzhT6bLD5Q==",
+      "path": "S2A_MSIL1C_20170113T072241_N0204_R006_T40UEE_20170113T072238/B08.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20170113T072241_N0204_R006_T40UEE_20170113T072238",
+      "band": "B11",
+      "name": "tiles/40/U/EE/S2A_MSIL1C_20170113T072241_N0204_R006_T40UEE_20170113T072238.SAFE/GRANULE/L1C_T40UEE_A008154_20170113T072238/IMG_DATA/T40UEE_20170113T072241_B11.jp2",
+      "generation": "1484527238532545",
+      "bytes": 32379908,
+      "md5_base64": "ofXotn2rs8joqqtFDCkgaA==",
+      "path": "S2A_MSIL1C_20170113T072241_N0204_R006_T40UEE_20170113T072238/B11.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20170113T072241_N0204_R006_T40UEE_20170113T072238",
+      "band": "B12",
+      "name": "tiles/40/U/EE/S2A_MSIL1C_20170113T072241_N0204_R006_T40UEE_20170113T072238.SAFE/GRANULE/L1C_T40UEE_A008154_20170113T072238/IMG_DATA/T40UEE_20170113T072241_B12.jp2",
+      "generation": "1484527246876625",
+      "bytes": 32318350,
+      "md5_base64": "8W50+ZyixUQOM4wIh0gLmQ==",
+      "path": "S2A_MSIL1C_20170113T072241_N0204_R006_T40UEE_20170113T072238/B12.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20170706T051651_N0205_R062_T48XWG_20170706T051649",
+      "band": "B02",
+      "name": "tiles/48/X/WG/S2A_MSIL1C_20170706T051651_N0205_R062_T48XWG_20170706T051649.SAFE/GRANULE/L1C_T48XWG_A010641_20170706T051649/IMG_DATA/T48XWG_20170706T051651_B02.jp2",
+      "generation": "1499443911094880",
+      "bytes": 105642591,
+      "md5_base64": "lnPSRKsSDUzPsdhFjcxAqg==",
+      "path": "S2A_MSIL1C_20170706T051651_N0205_R062_T48XWG_20170706T051649/B02.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20170706T051651_N0205_R062_T48XWG_20170706T051649",
+      "band": "B03",
+      "name": "tiles/48/X/WG/S2A_MSIL1C_20170706T051651_N0205_R062_T48XWG_20170706T051649.SAFE/GRANULE/L1C_T48XWG_A010641_20170706T051649/IMG_DATA/T48XWG_20170706T051651_B03.jp2",
+      "generation": "1499443931694570",
+      "bytes": 105185082,
+      "md5_base64": "gZy3u4qbFkcLzxt3keBvww==",
+      "path": "S2A_MSIL1C_20170706T051651_N0205_R062_T48XWG_20170706T051649/B03.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20170706T051651_N0205_R062_T48XWG_20170706T051649",
+      "band": "B04",
+      "name": "tiles/48/X/WG/S2A_MSIL1C_20170706T051651_N0205_R062_T48XWG_20170706T051649.SAFE/GRANULE/L1C_T48XWG_A010641_20170706T051649/IMG_DATA/T48XWG_20170706T051651_B04.jp2",
+      "generation": "1499443946096067",
+      "bytes": 109152021,
+      "md5_base64": "M6+QX49u7FVcNEQeVMDWmA==",
+      "path": "S2A_MSIL1C_20170706T051651_N0205_R062_T48XWG_20170706T051649/B04.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20170706T051651_N0205_R062_T48XWG_20170706T051649",
+      "band": "B08",
+      "name": "tiles/48/X/WG/S2A_MSIL1C_20170706T051651_N0205_R062_T48XWG_20170706T051649.SAFE/GRANULE/L1C_T48XWG_A010641_20170706T051649/IMG_DATA/T48XWG_20170706T051651_B08.jp2",
+      "generation": "1499443976871564",
+      "bytes": 114038989,
+      "md5_base64": "Pco9uxVIIXDTMGrKNBTnhQ==",
+      "path": "S2A_MSIL1C_20170706T051651_N0205_R062_T48XWG_20170706T051649/B08.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20170706T051651_N0205_R062_T48XWG_20170706T051649",
+      "band": "B11",
+      "name": "tiles/48/X/WG/S2A_MSIL1C_20170706T051651_N0205_R062_T48XWG_20170706T051649.SAFE/GRANULE/L1C_T48XWG_A010641_20170706T051649/IMG_DATA/T48XWG_20170706T051651_B11.jp2",
+      "generation": "1499443984724317",
+      "bytes": 30155360,
+      "md5_base64": "mmLm2x2j2jpCzHVOtANebQ==",
+      "path": "S2A_MSIL1C_20170706T051651_N0205_R062_T48XWG_20170706T051649/B11.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20170706T051651_N0205_R062_T48XWG_20170706T051649",
+      "band": "B12",
+      "name": "tiles/48/X/WG/S2A_MSIL1C_20170706T051651_N0205_R062_T48XWG_20170706T051649.SAFE/GRANULE/L1C_T48XWG_A010641_20170706T051649/IMG_DATA/T48XWG_20170706T051651_B12.jp2",
+      "generation": "1499443989043478",
+      "bytes": 29362015,
+      "md5_base64": "1pbrbel9ifiif/381i1suA==",
+      "path": "S2A_MSIL1C_20170706T051651_N0205_R062_T48XWG_20170706T051649/B12.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20170712T071621_N0205_R006_T40UEE_20170712T071617",
+      "band": "B02",
+      "name": "tiles/40/U/EE/S2A_MSIL1C_20170712T071621_N0205_R006_T40UEE_20170712T071617.SAFE/GRANULE/L1C_T40UEE_A010728_20170712T071617/IMG_DATA/T40UEE_20170712T071621_B02.jp2",
+      "generation": "1501294261986987",
+      "bytes": 109268910,
+      "md5_base64": "YQgOnModccdck0bP7RtyvA==",
+      "path": "S2A_MSIL1C_20170712T071621_N0205_R006_T40UEE_20170712T071617/B02.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20170712T071621_N0205_R006_T40UEE_20170712T071617",
+      "band": "B03",
+      "name": "tiles/40/U/EE/S2A_MSIL1C_20170712T071621_N0205_R006_T40UEE_20170712T071617.SAFE/GRANULE/L1C_T40UEE_A010728_20170712T071617/IMG_DATA/T40UEE_20170712T071621_B03.jp2",
+      "generation": "1501294290952793",
+      "bytes": 112646292,
+      "md5_base64": "PkieYAWhCwsdjPk6YzkxVg==",
+      "path": "S2A_MSIL1C_20170712T071621_N0205_R006_T40UEE_20170712T071617/B03.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20170712T071621_N0205_R006_T40UEE_20170712T071617",
+      "band": "B04",
+      "name": "tiles/40/U/EE/S2A_MSIL1C_20170712T071621_N0205_R006_T40UEE_20170712T071617.SAFE/GRANULE/L1C_T40UEE_A010728_20170712T071617/IMG_DATA/T40UEE_20170712T071621_B04.jp2",
+      "generation": "1501294309447081",
+      "bytes": 110157346,
+      "md5_base64": "apszOLJxKCSfUPoz3hq+/Q==",
+      "path": "S2A_MSIL1C_20170712T071621_N0205_R006_T40UEE_20170712T071617/B04.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20170712T071621_N0205_R006_T40UEE_20170712T071617",
+      "band": "B08",
+      "name": "tiles/40/U/EE/S2A_MSIL1C_20170712T071621_N0205_R006_T40UEE_20170712T071617.SAFE/GRANULE/L1C_T40UEE_A010728_20170712T071617/IMG_DATA/T40UEE_20170712T071621_B08.jp2",
+      "generation": "1501294514143817",
+      "bytes": 132873469,
+      "md5_base64": "ksRJal6RB4EqU6CMk0MnhQ==",
+      "path": "S2A_MSIL1C_20170712T071621_N0205_R006_T40UEE_20170712T071617/B08.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20170712T071621_N0205_R006_T40UEE_20170712T071617",
+      "band": "B11",
+      "name": "tiles/40/U/EE/S2A_MSIL1C_20170712T071621_N0205_R006_T40UEE_20170712T071617.SAFE/GRANULE/L1C_T40UEE_A010728_20170712T071617/IMG_DATA/T40UEE_20170712T071621_B11.jp2",
+      "generation": "1501294524182710",
+      "bytes": 33659381,
+      "md5_base64": "SCLuafcyKgaS/IL8blRbnA==",
+      "path": "S2A_MSIL1C_20170712T071621_N0205_R006_T40UEE_20170712T071617/B11.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20170712T071621_N0205_R006_T40UEE_20170712T071617",
+      "band": "B12",
+      "name": "tiles/40/U/EE/S2A_MSIL1C_20170712T071621_N0205_R006_T40UEE_20170712T071617.SAFE/GRANULE/L1C_T40UEE_A010728_20170712T071617/IMG_DATA/T40UEE_20170712T071621_B12.jp2",
+      "generation": "1501294535391930",
+      "bytes": 32259481,
+      "md5_base64": "joT7p7IbTsPBQ37eSLfHpA==",
+      "path": "S2A_MSIL1C_20170712T071621_N0205_R006_T40UEE_20170712T071617/B12.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20170725T142751_N0205_R053_T19GBQ_20170725T143854",
+      "band": "B02",
+      "name": "tiles/19/G/BQ/S2A_MSIL1C_20170725T142751_N0205_R053_T19GBQ_20170725T143854.SAFE/GRANULE/L1C_T19GBQ_A010918_20170725T143854/IMG_DATA/T19GBQ_20170725T142751_B02.jp2",
+      "generation": "1501207994220565",
+      "bytes": 125020849,
+      "md5_base64": "CDCnIavIzYQ+o0hEd7KtHQ==",
+      "path": "S2A_MSIL1C_20170725T142751_N0205_R053_T19GBQ_20170725T143854/B02.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20170725T142751_N0205_R053_T19GBQ_20170725T143854",
+      "band": "B03",
+      "name": "tiles/19/G/BQ/S2A_MSIL1C_20170725T142751_N0205_R053_T19GBQ_20170725T143854.SAFE/GRANULE/L1C_T19GBQ_A010918_20170725T143854/IMG_DATA/T19GBQ_20170725T142751_B03.jp2",
+      "generation": "1501208013861830",
+      "bytes": 125192606,
+      "md5_base64": "T/IpOXl7bGuJ8O0NZJTv2Q==",
+      "path": "S2A_MSIL1C_20170725T142751_N0205_R053_T19GBQ_20170725T143854/B03.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20170725T142751_N0205_R053_T19GBQ_20170725T143854",
+      "band": "B04",
+      "name": "tiles/19/G/BQ/S2A_MSIL1C_20170725T142751_N0205_R053_T19GBQ_20170725T143854.SAFE/GRANULE/L1C_T19GBQ_A010918_20170725T143854/IMG_DATA/T19GBQ_20170725T142751_B04.jp2",
+      "generation": "1501208030392538",
+      "bytes": 124374864,
+      "md5_base64": "zYhgYdE+mm4dvn3rA7H9qg==",
+      "path": "S2A_MSIL1C_20170725T142751_N0205_R053_T19GBQ_20170725T143854/B04.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20170725T142751_N0205_R053_T19GBQ_20170725T143854",
+      "band": "B08",
+      "name": "tiles/19/G/BQ/S2A_MSIL1C_20170725T142751_N0205_R053_T19GBQ_20170725T143854.SAFE/GRANULE/L1C_T19GBQ_A010918_20170725T143854/IMG_DATA/T19GBQ_20170725T142751_B08.jp2",
+      "generation": "1501208063027038",
+      "bytes": 135141475,
+      "md5_base64": "BKQeJXrkYuV8xw73pnhbHw==",
+      "path": "S2A_MSIL1C_20170725T142751_N0205_R053_T19GBQ_20170725T143854/B08.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20170725T142751_N0205_R053_T19GBQ_20170725T143854",
+      "band": "B11",
+      "name": "tiles/19/G/BQ/S2A_MSIL1C_20170725T142751_N0205_R053_T19GBQ_20170725T143854.SAFE/GRANULE/L1C_T19GBQ_A010918_20170725T143854/IMG_DATA/T19GBQ_20170725T142751_B11.jp2",
+      "generation": "1501208070072265",
+      "bytes": 31440169,
+      "md5_base64": "BkG2udjlAmILiogc8mvOkg==",
+      "path": "S2A_MSIL1C_20170725T142751_N0205_R053_T19GBQ_20170725T143854/B11.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20170725T142751_N0205_R053_T19GBQ_20170725T143854",
+      "band": "B12",
+      "name": "tiles/19/G/BQ/S2A_MSIL1C_20170725T142751_N0205_R053_T19GBQ_20170725T143854.SAFE/GRANULE/L1C_T19GBQ_A010918_20170725T143854/IMG_DATA/T19GBQ_20170725T142751_B12.jp2",
+      "generation": "1501208075026476",
+      "bytes": 29909367,
+      "md5_base64": "o9jFIFnrkOaM+k0qvOHYSQ==",
+      "path": "S2A_MSIL1C_20170725T142751_N0205_R053_T19GBQ_20170725T143854/B12.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20170726T102021_N0205_R065_T33VVE_20170726T102259",
+      "band": "B02",
+      "name": "tiles/33/V/VE/S2A_MSIL1C_20170726T102021_N0205_R065_T33VVE_20170726T102259.SAFE/GRANULE/L1C_T33VVE_A010930_20170726T102259/IMG_DATA/T33VVE_20170726T102021_B02.jp2",
+      "generation": "1501207465773850",
+      "bytes": 106858197,
+      "md5_base64": "fBRUyzCqvQ3MJvhwgNAMlA==",
+      "path": "S2A_MSIL1C_20170726T102021_N0205_R065_T33VVE_20170726T102259/B02.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20170726T102021_N0205_R065_T33VVE_20170726T102259",
+      "band": "B03",
+      "name": "tiles/33/V/VE/S2A_MSIL1C_20170726T102021_N0205_R065_T33VVE_20170726T102259.SAFE/GRANULE/L1C_T33VVE_A010930_20170726T102259/IMG_DATA/T33VVE_20170726T102021_B03.jp2",
+      "generation": "1501207477109455",
+      "bytes": 105214666,
+      "md5_base64": "Ye0kk6q6pCKvy8CAKtOSug==",
+      "path": "S2A_MSIL1C_20170726T102021_N0205_R065_T33VVE_20170726T102259/B03.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20170726T102021_N0205_R065_T33VVE_20170726T102259",
+      "band": "B04",
+      "name": "tiles/33/V/VE/S2A_MSIL1C_20170726T102021_N0205_R065_T33VVE_20170726T102259.SAFE/GRANULE/L1C_T33VVE_A010930_20170726T102259/IMG_DATA/T33VVE_20170726T102021_B04.jp2",
+      "generation": "1501207491008544",
+      "bytes": 106869715,
+      "md5_base64": "QX/CBImKgBNQfdIcM0DFTQ==",
+      "path": "S2A_MSIL1C_20170726T102021_N0205_R065_T33VVE_20170726T102259/B04.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20170726T102021_N0205_R065_T33VVE_20170726T102259",
+      "band": "B08",
+      "name": "tiles/33/V/VE/S2A_MSIL1C_20170726T102021_N0205_R065_T33VVE_20170726T102259.SAFE/GRANULE/L1C_T33VVE_A010930_20170726T102259/IMG_DATA/T33VVE_20170726T102021_B08.jp2",
+      "generation": "1501207518319352",
+      "bytes": 112541867,
+      "md5_base64": "fhet1kodY3Na1pBI+C4ASw==",
+      "path": "S2A_MSIL1C_20170726T102021_N0205_R065_T33VVE_20170726T102259/B08.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20170726T102021_N0205_R065_T33VVE_20170726T102259",
+      "band": "B11",
+      "name": "tiles/33/V/VE/S2A_MSIL1C_20170726T102021_N0205_R065_T33VVE_20170726T102259.SAFE/GRANULE/L1C_T33VVE_A010930_20170726T102259/IMG_DATA/T33VVE_20170726T102021_B11.jp2",
+      "generation": "1501207528841794",
+      "bytes": 28981487,
+      "md5_base64": "kFGQ7gQn2hsV+ETh+zKT8Q==",
+      "path": "S2A_MSIL1C_20170726T102021_N0205_R065_T33VVE_20170726T102259/B11.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20170726T102021_N0205_R065_T33VVE_20170726T102259",
+      "band": "B12",
+      "name": "tiles/33/V/VE/S2A_MSIL1C_20170726T102021_N0205_R065_T33VVE_20170726T102259.SAFE/GRANULE/L1C_T33VVE_A010930_20170726T102259/IMG_DATA/T33VVE_20170726T102021_B12.jp2",
+      "generation": "1501207532512578",
+      "bytes": 28635272,
+      "md5_base64": "eykqSs0oqv+bGDrlFGqCAw==",
+      "path": "S2A_MSIL1C_20170726T102021_N0205_R065_T33VVE_20170726T102259/B12.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20170908T100031_N0205_R122_T32SPJ_20170908T100655",
+      "band": "B02",
+      "name": "tiles/32/S/PJ/S2A_MSIL1C_20170908T100031_N0205_R122_T32SPJ_20170908T100655.SAFE/GRANULE/L1C_T32SPJ_A011559_20170908T100655/IMG_DATA/T32SPJ_20170908T100031_B02.jp2",
+      "generation": "1505771750326204",
+      "bytes": 90142476,
+      "md5_base64": "+Gzze13FCgGvPz+TQoNmHQ==",
+      "path": "S2A_MSIL1C_20170908T100031_N0205_R122_T32SPJ_20170908T100655/B02.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20170908T100031_N0205_R122_T32SPJ_20170908T100655",
+      "band": "B03",
+      "name": "tiles/32/S/PJ/S2A_MSIL1C_20170908T100031_N0205_R122_T32SPJ_20170908T100655.SAFE/GRANULE/L1C_T32SPJ_A011559_20170908T100655/IMG_DATA/T32SPJ_20170908T100031_B03.jp2",
+      "generation": "1505771758909441",
+      "bytes": 88088397,
+      "md5_base64": "y3ox7z6+m1lS6RGw8Lqpxg==",
+      "path": "S2A_MSIL1C_20170908T100031_N0205_R122_T32SPJ_20170908T100655/B03.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20170908T100031_N0205_R122_T32SPJ_20170908T100655",
+      "band": "B04",
+      "name": "tiles/32/S/PJ/S2A_MSIL1C_20170908T100031_N0205_R122_T32SPJ_20170908T100655.SAFE/GRANULE/L1C_T32SPJ_A011559_20170908T100655/IMG_DATA/T32SPJ_20170908T100031_B04.jp2",
+      "generation": "1505771766825423",
+      "bytes": 89050308,
+      "md5_base64": "MUUoqLgjvkDzHe4+DfmVQw==",
+      "path": "S2A_MSIL1C_20170908T100031_N0205_R122_T32SPJ_20170908T100655/B04.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20170908T100031_N0205_R122_T32SPJ_20170908T100655",
+      "band": "B08",
+      "name": "tiles/32/S/PJ/S2A_MSIL1C_20170908T100031_N0205_R122_T32SPJ_20170908T100655.SAFE/GRANULE/L1C_T32SPJ_A011559_20170908T100655/IMG_DATA/T32SPJ_20170908T100031_B08.jp2",
+      "generation": "1505771786819810",
+      "bytes": 90309096,
+      "md5_base64": "C8NuRw/h/PsJ67/lgQlfcA==",
+      "path": "S2A_MSIL1C_20170908T100031_N0205_R122_T32SPJ_20170908T100655/B08.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20170908T100031_N0205_R122_T32SPJ_20170908T100655",
+      "band": "B11",
+      "name": "tiles/32/S/PJ/S2A_MSIL1C_20170908T100031_N0205_R122_T32SPJ_20170908T100655.SAFE/GRANULE/L1C_T32SPJ_A011559_20170908T100655/IMG_DATA/T32SPJ_20170908T100031_B11.jp2",
+      "generation": "1505771793316959",
+      "bytes": 24574711,
+      "md5_base64": "oj7oHP8n/IKHTdcNWaowKQ==",
+      "path": "S2A_MSIL1C_20170908T100031_N0205_R122_T32SPJ_20170908T100655/B11.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20170908T100031_N0205_R122_T32SPJ_20170908T100655",
+      "band": "B12",
+      "name": "tiles/32/S/PJ/S2A_MSIL1C_20170908T100031_N0205_R122_T32SPJ_20170908T100655.SAFE/GRANULE/L1C_T32SPJ_A011559_20170908T100655/IMG_DATA/T32SPJ_20170908T100031_B12.jp2",
+      "generation": "1505771797631749",
+      "bytes": 24436637,
+      "md5_base64": "EorCAi5aGjM9KpgShv398A==",
+      "path": "S2A_MSIL1C_20170908T100031_N0205_R122_T32SPJ_20170908T100655/B12.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20170917T052641_N0205_R105_T48XWG_20170917T052642",
+      "band": "B02",
+      "name": "tiles/48/X/WG/S2A_MSIL1C_20170917T052641_N0205_R105_T48XWG_20170917T052642.SAFE/GRANULE/L1C_T48XWG_A011685_20170917T052642/IMG_DATA/T48XWG_20170917T052641_B02.jp2",
+      "generation": "1505769832879700",
+      "bytes": 112099296,
+      "md5_base64": "uIVf9Fk/LcN/Zai/7TVpyQ==",
+      "path": "S2A_MSIL1C_20170917T052641_N0205_R105_T48XWG_20170917T052642/B02.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20170917T052641_N0205_R105_T48XWG_20170917T052642",
+      "band": "B03",
+      "name": "tiles/48/X/WG/S2A_MSIL1C_20170917T052641_N0205_R105_T48XWG_20170917T052642.SAFE/GRANULE/L1C_T48XWG_A011685_20170917T052642/IMG_DATA/T48XWG_20170917T052641_B03.jp2",
+      "generation": "1505769845457436",
+      "bytes": 110321290,
+      "md5_base64": "EryUg55adqPb7FYCgk7y4A==",
+      "path": "S2A_MSIL1C_20170917T052641_N0205_R105_T48XWG_20170917T052642/B03.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20170917T052641_N0205_R105_T48XWG_20170917T052642",
+      "band": "B04",
+      "name": "tiles/48/X/WG/S2A_MSIL1C_20170917T052641_N0205_R105_T48XWG_20170917T052642.SAFE/GRANULE/L1C_T48XWG_A011685_20170917T052642/IMG_DATA/T48XWG_20170917T052641_B04.jp2",
+      "generation": "1505769857661210",
+      "bytes": 113148065,
+      "md5_base64": "Z1gpaDZX+1l1Hb35GZM9gg==",
+      "path": "S2A_MSIL1C_20170917T052641_N0205_R105_T48XWG_20170917T052642/B04.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20170917T052641_N0205_R105_T48XWG_20170917T052642",
+      "band": "B08",
+      "name": "tiles/48/X/WG/S2A_MSIL1C_20170917T052641_N0205_R105_T48XWG_20170917T052642.SAFE/GRANULE/L1C_T48XWG_A011685_20170917T052642/IMG_DATA/T48XWG_20170917T052641_B08.jp2",
+      "generation": "1505769889016749",
+      "bytes": 116592945,
+      "md5_base64": "+3QkOvmEvu4b9YVOCxCWkg==",
+      "path": "S2A_MSIL1C_20170917T052641_N0205_R105_T48XWG_20170917T052642/B08.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20170917T052641_N0205_R105_T48XWG_20170917T052642",
+      "band": "B11",
+      "name": "tiles/48/X/WG/S2A_MSIL1C_20170917T052641_N0205_R105_T48XWG_20170917T052642.SAFE/GRANULE/L1C_T48XWG_A011685_20170917T052642/IMG_DATA/T48XWG_20170917T052641_B11.jp2",
+      "generation": "1505769896832577",
+      "bytes": 31702141,
+      "md5_base64": "XRalfROvQSA+h0M+7MYkNg==",
+      "path": "S2A_MSIL1C_20170917T052641_N0205_R105_T48XWG_20170917T052642/B11.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20170917T052641_N0205_R105_T48XWG_20170917T052642",
+      "band": "B12",
+      "name": "tiles/48/X/WG/S2A_MSIL1C_20170917T052641_N0205_R105_T48XWG_20170917T052642.SAFE/GRANULE/L1C_T48XWG_A011685_20170917T052642/IMG_DATA/T48XWG_20170917T052641_B12.jp2",
+      "generation": "1505769903389226",
+      "bytes": 30957739,
+      "md5_base64": "6vBa2eBUmS/jnmt8gQMDpQ==",
+      "path": "S2A_MSIL1C_20170917T052641_N0205_R105_T48XWG_20170917T052642/B12.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20171107T150421_N0206_R125_T22WES_20171107T165127",
+      "band": "B02",
+      "name": "tiles/22/W/ES/S2A_MSIL1C_20171107T150421_N0206_R125_T22WES_20171107T165127.SAFE/GRANULE/L1C_T22WES_A012420_20171107T150422/IMG_DATA/T22WES_20171107T150421_B02.jp2",
+      "generation": "1512153759532759",
+      "bytes": 131194740,
+      "md5_base64": "ku2EIgxmudCOmOTQmSXZzQ==",
+      "path": "S2A_MSIL1C_20171107T150421_N0206_R125_T22WES_20171107T165127/B02.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20171107T150421_N0206_R125_T22WES_20171107T165127",
+      "band": "B03",
+      "name": "tiles/22/W/ES/S2A_MSIL1C_20171107T150421_N0206_R125_T22WES_20171107T165127.SAFE/GRANULE/L1C_T22WES_A012420_20171107T150422/IMG_DATA/T22WES_20171107T150421_B03.jp2",
+      "generation": "1512153775565768",
+      "bytes": 128316019,
+      "md5_base64": "T6tu3uVd2wdqPEQ8TTo/ig==",
+      "path": "S2A_MSIL1C_20171107T150421_N0206_R125_T22WES_20171107T165127/B03.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20171107T150421_N0206_R125_T22WES_20171107T165127",
+      "band": "B04",
+      "name": "tiles/22/W/ES/S2A_MSIL1C_20171107T150421_N0206_R125_T22WES_20171107T165127.SAFE/GRANULE/L1C_T22WES_A012420_20171107T150422/IMG_DATA/T22WES_20171107T150421_B04.jp2",
+      "generation": "1512153789549452",
+      "bytes": 131789575,
+      "md5_base64": "L0X64rbZaB4y39kfJ620rw==",
+      "path": "S2A_MSIL1C_20171107T150421_N0206_R125_T22WES_20171107T165127/B04.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20171107T150421_N0206_R125_T22WES_20171107T165127",
+      "band": "B08",
+      "name": "tiles/22/W/ES/S2A_MSIL1C_20171107T150421_N0206_R125_T22WES_20171107T165127.SAFE/GRANULE/L1C_T22WES_A012420_20171107T150422/IMG_DATA/T22WES_20171107T150421_B08.jp2",
+      "generation": "1512153818664526",
+      "bytes": 134077573,
+      "md5_base64": "PY/28gSi31mfMpuFy1cnPA==",
+      "path": "S2A_MSIL1C_20171107T150421_N0206_R125_T22WES_20171107T165127/B08.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20171107T150421_N0206_R125_T22WES_20171107T165127",
+      "band": "B11",
+      "name": "tiles/22/W/ES/S2A_MSIL1C_20171107T150421_N0206_R125_T22WES_20171107T165127.SAFE/GRANULE/L1C_T22WES_A012420_20171107T150422/IMG_DATA/T22WES_20171107T150421_B11.jp2",
+      "generation": "1512153825166426",
+      "bytes": 29978482,
+      "md5_base64": "9IXfCHIOts9+edj8RzS7yQ==",
+      "path": "S2A_MSIL1C_20171107T150421_N0206_R125_T22WES_20171107T165127/B11.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20171107T150421_N0206_R125_T22WES_20171107T165127",
+      "band": "B12",
+      "name": "tiles/22/W/ES/S2A_MSIL1C_20171107T150421_N0206_R125_T22WES_20171107T165127.SAFE/GRANULE/L1C_T22WES_A012420_20171107T150422/IMG_DATA/T22WES_20171107T150421_B12.jp2",
+      "generation": "1512153829034500",
+      "bytes": 30126361,
+      "md5_base64": "VpXTHrm6XdKwhbJDEEuAwA==",
+      "path": "S2A_MSIL1C_20171107T150421_N0206_R125_T22WES_20171107T165127/B12.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20180106T032121_N0206_R118_T48NUG_20180106T083912",
+      "band": "B02",
+      "name": "tiles/48/N/UG/S2A_MSIL1C_20180106T032121_N0206_R118_T48NUG_20180106T083912.SAFE/GRANULE/L1C_T48NUG_A013271_20180106T033051/IMG_DATA/T48NUG_20180106T032121_B02.jp2",
+      "generation": "1516128850843557",
+      "bytes": 99026180,
+      "md5_base64": "o9tTZuXeFdpHQobQvbOaoQ==",
+      "path": "S2A_MSIL1C_20180106T032121_N0206_R118_T48NUG_20180106T083912/B02.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20180106T032121_N0206_R118_T48NUG_20180106T083912",
+      "band": "B03",
+      "name": "tiles/48/N/UG/S2A_MSIL1C_20180106T032121_N0206_R118_T48NUG_20180106T083912.SAFE/GRANULE/L1C_T48NUG_A013271_20180106T033051/IMG_DATA/T48NUG_20180106T032121_B03.jp2",
+      "generation": "1516128861009440",
+      "bytes": 97866630,
+      "md5_base64": "+8yKkjW+XwncXmSV/GJR6Q==",
+      "path": "S2A_MSIL1C_20180106T032121_N0206_R118_T48NUG_20180106T083912/B03.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20180106T032121_N0206_R118_T48NUG_20180106T083912",
+      "band": "B04",
+      "name": "tiles/48/N/UG/S2A_MSIL1C_20180106T032121_N0206_R118_T48NUG_20180106T083912.SAFE/GRANULE/L1C_T48NUG_A013271_20180106T033051/IMG_DATA/T48NUG_20180106T032121_B04.jp2",
+      "generation": "1516128870556896",
+      "bytes": 98938549,
+      "md5_base64": "dZdcwARZrrYuqlwdB3Fn4Q==",
+      "path": "S2A_MSIL1C_20180106T032121_N0206_R118_T48NUG_20180106T083912/B04.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20180106T032121_N0206_R118_T48NUG_20180106T083912",
+      "band": "B08",
+      "name": "tiles/48/N/UG/S2A_MSIL1C_20180106T032121_N0206_R118_T48NUG_20180106T083912.SAFE/GRANULE/L1C_T48NUG_A013271_20180106T033051/IMG_DATA/T48NUG_20180106T032121_B08.jp2",
+      "generation": "1516128899854686",
+      "bytes": 105627420,
+      "md5_base64": "9TzhYOAb+N7ZEG2S+9D19w==",
+      "path": "S2A_MSIL1C_20180106T032121_N0206_R118_T48NUG_20180106T083912/B08.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20180106T032121_N0206_R118_T48NUG_20180106T083912",
+      "band": "B11",
+      "name": "tiles/48/N/UG/S2A_MSIL1C_20180106T032121_N0206_R118_T48NUG_20180106T083912.SAFE/GRANULE/L1C_T48NUG_A013271_20180106T033051/IMG_DATA/T48NUG_20180106T032121_B11.jp2",
+      "generation": "1516128908478923",
+      "bytes": 26761814,
+      "md5_base64": "S18CvsdGxRkccbmDI52dLA==",
+      "path": "S2A_MSIL1C_20180106T032121_N0206_R118_T48NUG_20180106T083912/B11.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20180106T032121_N0206_R118_T48NUG_20180106T083912",
+      "band": "B12",
+      "name": "tiles/48/N/UG/S2A_MSIL1C_20180106T032121_N0206_R118_T48NUG_20180106T083912.SAFE/GRANULE/L1C_T48NUG_A013271_20180106T033051/IMG_DATA/T48NUG_20180106T032121_B12.jp2",
+      "generation": "1516128912970688",
+      "bytes": 25990005,
+      "md5_base64": "KX1R/4ub1IcOwncCkNjvbQ==",
+      "path": "S2A_MSIL1C_20180106T032121_N0206_R118_T48NUG_20180106T083912/B12.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20180217T053911_N0206_R005_T44SKJ_20180217T082149",
+      "band": "B02",
+      "name": "tiles/44/S/KJ/S2A_MSIL1C_20180217T053911_N0206_R005_T44SKJ_20180217T082149.SAFE/GRANULE/L1C_T44SKJ_A013873_20180217T053905/IMG_DATA/T44SKJ_20180217T053911_B02.jp2",
+      "generation": "1519670952938329",
+      "bytes": 106345551,
+      "md5_base64": "4EXCKP4e2a3vEh920ZCDEQ==",
+      "path": "S2A_MSIL1C_20180217T053911_N0206_R005_T44SKJ_20180217T082149/B02.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20180217T053911_N0206_R005_T44SKJ_20180217T082149",
+      "band": "B03",
+      "name": "tiles/44/S/KJ/S2A_MSIL1C_20180217T053911_N0206_R005_T44SKJ_20180217T082149.SAFE/GRANULE/L1C_T44SKJ_A013873_20180217T053905/IMG_DATA/T44SKJ_20180217T053911_B03.jp2",
+      "generation": "1519670964923018",
+      "bytes": 107312710,
+      "md5_base64": "0FguMF2+mXqskD7iSpcVHw==",
+      "path": "S2A_MSIL1C_20180217T053911_N0206_R005_T44SKJ_20180217T082149/B03.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20180217T053911_N0206_R005_T44SKJ_20180217T082149",
+      "band": "B04",
+      "name": "tiles/44/S/KJ/S2A_MSIL1C_20180217T053911_N0206_R005_T44SKJ_20180217T082149.SAFE/GRANULE/L1C_T44SKJ_A013873_20180217T053905/IMG_DATA/T44SKJ_20180217T053911_B04.jp2",
+      "generation": "1519670975384200",
+      "bytes": 111100842,
+      "md5_base64": "+1wwJsFZtah08RyBkRPZlQ==",
+      "path": "S2A_MSIL1C_20180217T053911_N0206_R005_T44SKJ_20180217T082149/B04.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20180217T053911_N0206_R005_T44SKJ_20180217T082149",
+      "band": "B08",
+      "name": "tiles/44/S/KJ/S2A_MSIL1C_20180217T053911_N0206_R005_T44SKJ_20180217T082149.SAFE/GRANULE/L1C_T44SKJ_A013873_20180217T053905/IMG_DATA/T44SKJ_20180217T053911_B08.jp2",
+      "generation": "1519671002804461",
+      "bytes": 114132888,
+      "md5_base64": "zwuuEWJGrU1aWnTJJVaDXQ==",
+      "path": "S2A_MSIL1C_20180217T053911_N0206_R005_T44SKJ_20180217T082149/B08.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20180217T053911_N0206_R005_T44SKJ_20180217T082149",
+      "band": "B11",
+      "name": "tiles/44/S/KJ/S2A_MSIL1C_20180217T053911_N0206_R005_T44SKJ_20180217T082149.SAFE/GRANULE/L1C_T44SKJ_A013873_20180217T053905/IMG_DATA/T44SKJ_20180217T053911_B11.jp2",
+      "generation": "1519671010327342",
+      "bytes": 29025431,
+      "md5_base64": "kSVECeEjbNH34N0TzJxuzw==",
+      "path": "S2A_MSIL1C_20180217T053911_N0206_R005_T44SKJ_20180217T082149/B11.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20180217T053911_N0206_R005_T44SKJ_20180217T082149",
+      "band": "B12",
+      "name": "tiles/44/S/KJ/S2A_MSIL1C_20180217T053911_N0206_R005_T44SKJ_20180217T082149.SAFE/GRANULE/L1C_T44SKJ_A013873_20180217T053905/IMG_DATA/T44SKJ_20180217T053911_B12.jp2",
+      "generation": "1519671013961274",
+      "bytes": 29400255,
+      "md5_base64": "vDDtUBijAo8SjklWWoZeJA==",
+      "path": "S2A_MSIL1C_20180217T053911_N0206_R005_T44SKJ_20180217T082149/B12.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20180222T012651_N0206_R074_T54TWN_20180222T031349",
+      "band": "B02",
+      "name": "tiles/54/T/WN/S2A_MSIL1C_20180222T012651_N0206_R074_T54TWN_20180222T031349.SAFE/GRANULE/L1C_T54TWN_A013942_20180222T012651/IMG_DATA/T54TWN_20180222T012651_B02.jp2",
+      "generation": "1520438723309538",
+      "bytes": 129767545,
+      "md5_base64": "U3RhNr3t+yvBvoldksMGxw==",
+      "path": "S2A_MSIL1C_20180222T012651_N0206_R074_T54TWN_20180222T031349/B02.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20180222T012651_N0206_R074_T54TWN_20180222T031349",
+      "band": "B03",
+      "name": "tiles/54/T/WN/S2A_MSIL1C_20180222T012651_N0206_R074_T54TWN_20180222T031349.SAFE/GRANULE/L1C_T54TWN_A013942_20180222T012651/IMG_DATA/T54TWN_20180222T012651_B03.jp2",
+      "generation": "1520438735657811",
+      "bytes": 129075023,
+      "md5_base64": "ZDyH5LVgVswNc/3qshzuXg==",
+      "path": "S2A_MSIL1C_20180222T012651_N0206_R074_T54TWN_20180222T031349/B03.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20180222T012651_N0206_R074_T54TWN_20180222T031349",
+      "band": "B04",
+      "name": "tiles/54/T/WN/S2A_MSIL1C_20180222T012651_N0206_R074_T54TWN_20180222T031349.SAFE/GRANULE/L1C_T54TWN_A013942_20180222T012651/IMG_DATA/T54TWN_20180222T012651_B04.jp2",
+      "generation": "1520438747705000",
+      "bytes": 129059600,
+      "md5_base64": "NFkhU7H5CF819MVPJ7FvPA==",
+      "path": "S2A_MSIL1C_20180222T012651_N0206_R074_T54TWN_20180222T031349/B04.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20180222T012651_N0206_R074_T54TWN_20180222T031349",
+      "band": "B08",
+      "name": "tiles/54/T/WN/S2A_MSIL1C_20180222T012651_N0206_R074_T54TWN_20180222T031349.SAFE/GRANULE/L1C_T54TWN_A013942_20180222T012651/IMG_DATA/T54TWN_20180222T012651_B08.jp2",
+      "generation": "1520438771162020",
+      "bytes": 129476755,
+      "md5_base64": "SxhFxMYOf0ofEW+lnHVb4A==",
+      "path": "S2A_MSIL1C_20180222T012651_N0206_R074_T54TWN_20180222T031349/B08.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20180222T012651_N0206_R074_T54TWN_20180222T031349",
+      "band": "B11",
+      "name": "tiles/54/T/WN/S2A_MSIL1C_20180222T012651_N0206_R074_T54TWN_20180222T031349.SAFE/GRANULE/L1C_T54TWN_A013942_20180222T012651/IMG_DATA/T54TWN_20180222T012651_B11.jp2",
+      "generation": "1520438780030691",
+      "bytes": 31438166,
+      "md5_base64": "PEZIbTKw9MjOKcDa+lgqPw==",
+      "path": "S2A_MSIL1C_20180222T012651_N0206_R074_T54TWN_20180222T031349/B11.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20180222T012651_N0206_R074_T54TWN_20180222T031349",
+      "band": "B12",
+      "name": "tiles/54/T/WN/S2A_MSIL1C_20180222T012651_N0206_R074_T54TWN_20180222T031349.SAFE/GRANULE/L1C_T54TWN_A013942_20180222T012651/IMG_DATA/T54TWN_20180222T012651_B12.jp2",
+      "generation": "1520438784693349",
+      "bytes": 31588479,
+      "md5_base64": "Sx9CtYpRscf3IeCnQGIlmQ==",
+      "path": "S2A_MSIL1C_20180222T012651_N0206_R074_T54TWN_20180222T031349/B12.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20180302T142851_N0206_R053_T19GBQ_20180302T192732",
+      "band": "B02",
+      "name": "tiles/19/G/BQ/S2A_MSIL1C_20180302T142851_N0206_R053_T19GBQ_20180302T192732.SAFE/GRANULE/L1C_T19GBQ_A014064_20180302T144301/IMG_DATA/T19GBQ_20180302T142851_B02.jp2",
+      "generation": "1525538869118002",
+      "bytes": 108721326,
+      "md5_base64": "lfsMn3X/FII1Zvex6OfQhQ==",
+      "path": "S2A_MSIL1C_20180302T142851_N0206_R053_T19GBQ_20180302T192732/B02.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20180302T142851_N0206_R053_T19GBQ_20180302T192732",
+      "band": "B03",
+      "name": "tiles/19/G/BQ/S2A_MSIL1C_20180302T142851_N0206_R053_T19GBQ_20180302T192732.SAFE/GRANULE/L1C_T19GBQ_A014064_20180302T144301/IMG_DATA/T19GBQ_20180302T142851_B03.jp2",
+      "generation": "1525538879846430",
+      "bytes": 113594618,
+      "md5_base64": "LRFVWSaE4wpZwcfc32dCGA==",
+      "path": "S2A_MSIL1C_20180302T142851_N0206_R053_T19GBQ_20180302T192732/B03.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20180302T142851_N0206_R053_T19GBQ_20180302T192732",
+      "band": "B04",
+      "name": "tiles/19/G/BQ/S2A_MSIL1C_20180302T142851_N0206_R053_T19GBQ_20180302T192732.SAFE/GRANULE/L1C_T19GBQ_A014064_20180302T144301/IMG_DATA/T19GBQ_20180302T142851_B04.jp2",
+      "generation": "1525538890710797",
+      "bytes": 112737977,
+      "md5_base64": "1d7dLFrQoTt8fhP9dI4x5A==",
+      "path": "S2A_MSIL1C_20180302T142851_N0206_R053_T19GBQ_20180302T192732/B04.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20180302T142851_N0206_R053_T19GBQ_20180302T192732",
+      "band": "B08",
+      "name": "tiles/19/G/BQ/S2A_MSIL1C_20180302T142851_N0206_R053_T19GBQ_20180302T192732.SAFE/GRANULE/L1C_T19GBQ_A014064_20180302T144301/IMG_DATA/T19GBQ_20180302T142851_B08.jp2",
+      "generation": "1525538916239431",
+      "bytes": 135358225,
+      "md5_base64": "tIhd2yok6E+1D69gOvzTxw==",
+      "path": "S2A_MSIL1C_20180302T142851_N0206_R053_T19GBQ_20180302T192732/B08.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20180302T142851_N0206_R053_T19GBQ_20180302T192732",
+      "band": "B11",
+      "name": "tiles/19/G/BQ/S2A_MSIL1C_20180302T142851_N0206_R053_T19GBQ_20180302T192732.SAFE/GRANULE/L1C_T19GBQ_A014064_20180302T144301/IMG_DATA/T19GBQ_20180302T142851_B11.jp2",
+      "generation": "1525538924000746",
+      "bytes": 33518785,
+      "md5_base64": "f8YVED7FodX36pbQDNKavQ==",
+      "path": "S2A_MSIL1C_20180302T142851_N0206_R053_T19GBQ_20180302T192732/B11.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20180302T142851_N0206_R053_T19GBQ_20180302T192732",
+      "band": "B12",
+      "name": "tiles/19/G/BQ/S2A_MSIL1C_20180302T142851_N0206_R053_T19GBQ_20180302T192732.SAFE/GRANULE/L1C_T19GBQ_A014064_20180302T144301/IMG_DATA/T19GBQ_20180302T142851_B12.jp2",
+      "generation": "1525538928144614",
+      "bytes": 32134515,
+      "md5_base64": "hoBmo8IYmAyYUDif4LDE+A==",
+      "path": "S2A_MSIL1C_20180302T142851_N0206_R053_T19GBQ_20180302T192732/B12.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20180303T140051_N0206_R067_T19FDV_20180303T202004",
+      "band": "B02",
+      "name": "tiles/19/F/DV/S2A_MSIL1C_20180303T140051_N0206_R067_T19FDV_20180303T202004.SAFE/GRANULE/L1C_T19FDV_A014078_20180303T141721/IMG_DATA/T19FDV_20180303T140051_B02.jp2",
+      "generation": "1520451663375801",
+      "bytes": 111365802,
+      "md5_base64": "095CGomJ6WnxNXo6sn8bZg==",
+      "path": "S2A_MSIL1C_20180303T140051_N0206_R067_T19FDV_20180303T202004/B02.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20180303T140051_N0206_R067_T19FDV_20180303T202004",
+      "band": "B03",
+      "name": "tiles/19/F/DV/S2A_MSIL1C_20180303T140051_N0206_R067_T19FDV_20180303T202004.SAFE/GRANULE/L1C_T19FDV_A014078_20180303T141721/IMG_DATA/T19FDV_20180303T140051_B03.jp2",
+      "generation": "1520451681986237",
+      "bytes": 109991604,
+      "md5_base64": "zyCFAW5YmP/elKP/kDciVg==",
+      "path": "S2A_MSIL1C_20180303T140051_N0206_R067_T19FDV_20180303T202004/B03.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20180303T140051_N0206_R067_T19FDV_20180303T202004",
+      "band": "B04",
+      "name": "tiles/19/F/DV/S2A_MSIL1C_20180303T140051_N0206_R067_T19FDV_20180303T202004.SAFE/GRANULE/L1C_T19FDV_A014078_20180303T141721/IMG_DATA/T19FDV_20180303T140051_B04.jp2",
+      "generation": "1520451700805164",
+      "bytes": 111323321,
+      "md5_base64": "tBJhnckLb08PcqZmyInqmQ==",
+      "path": "S2A_MSIL1C_20180303T140051_N0206_R067_T19FDV_20180303T202004/B04.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20180303T140051_N0206_R067_T19FDV_20180303T202004",
+      "band": "B08",
+      "name": "tiles/19/F/DV/S2A_MSIL1C_20180303T140051_N0206_R067_T19FDV_20180303T202004.SAFE/GRANULE/L1C_T19FDV_A014078_20180303T141721/IMG_DATA/T19FDV_20180303T140051_B08.jp2",
+      "generation": "1520451744433733",
+      "bytes": 118795083,
+      "md5_base64": "2rOeDvJ38MUQ/3fCbp65fw==",
+      "path": "S2A_MSIL1C_20180303T140051_N0206_R067_T19FDV_20180303T202004/B08.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20180303T140051_N0206_R067_T19FDV_20180303T202004",
+      "band": "B11",
+      "name": "tiles/19/F/DV/S2A_MSIL1C_20180303T140051_N0206_R067_T19FDV_20180303T202004.SAFE/GRANULE/L1C_T19FDV_A014078_20180303T141721/IMG_DATA/T19FDV_20180303T140051_B11.jp2",
+      "generation": "1520451755872154",
+      "bytes": 30452222,
+      "md5_base64": "ge+1iYyZaunZtbp6PI8KXw==",
+      "path": "S2A_MSIL1C_20180303T140051_N0206_R067_T19FDV_20180303T202004/B11.jp2"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20180303T140051_N0206_R067_T19FDV_20180303T202004",
+      "band": "B12",
+      "name": "tiles/19/F/DV/S2A_MSIL1C_20180303T140051_N0206_R067_T19FDV_20180303T202004.SAFE/GRANULE/L1C_T19FDV_A014078_20180303T141721/IMG_DATA/T19FDV_20180303T140051_B12.jp2",
+      "generation": "1520451766430104",
+      "bytes": 30229953,
+      "md5_base64": "RiaBWKxoihxi0Gr3dZ+nhQ==",
+      "path": "S2A_MSIL1C_20180303T140051_N0206_R067_T19FDV_20180303T202004/B12.jp2"
+    },
+    {
+      "product_id": "S2B_MSIL1C_20170731T102019_N0205_R065_T33VVE_20170731T102348",
+      "band": "B02",
+      "name": "tiles/33/V/VE/S2B_MSIL1C_20170731T102019_N0205_R065_T33VVE_20170731T102348.SAFE/GRANULE/L1C_T33VVE_A002093_20170731T102348/IMG_DATA/T33VVE_20170731T102019_B02.jp2",
+      "generation": "1504206903554928",
+      "bytes": 113318341,
+      "md5_base64": "VZlUqcAafQr0eCpNjjNhqg==",
+      "path": "S2B_MSIL1C_20170731T102019_N0205_R065_T33VVE_20170731T102348/B02.jp2"
+    },
+    {
+      "product_id": "S2B_MSIL1C_20170731T102019_N0205_R065_T33VVE_20170731T102348",
+      "band": "B03",
+      "name": "tiles/33/V/VE/S2B_MSIL1C_20170731T102019_N0205_R065_T33VVE_20170731T102348.SAFE/GRANULE/L1C_T33VVE_A002093_20170731T102348/IMG_DATA/T33VVE_20170731T102019_B03.jp2",
+      "generation": "1504206913754295",
+      "bytes": 115059555,
+      "md5_base64": "NuoOCwDy8nsNos254nbwuA==",
+      "path": "S2B_MSIL1C_20170731T102019_N0205_R065_T33VVE_20170731T102348/B03.jp2"
+    },
+    {
+      "product_id": "S2B_MSIL1C_20170731T102019_N0205_R065_T33VVE_20170731T102348",
+      "band": "B04",
+      "name": "tiles/33/V/VE/S2B_MSIL1C_20170731T102019_N0205_R065_T33VVE_20170731T102348.SAFE/GRANULE/L1C_T33VVE_A002093_20170731T102348/IMG_DATA/T33VVE_20170731T102019_B04.jp2",
+      "generation": "1504206924517701",
+      "bytes": 115749573,
+      "md5_base64": "UNYi1dBmuc++KNLG0XX5QA==",
+      "path": "S2B_MSIL1C_20170731T102019_N0205_R065_T33VVE_20170731T102348/B04.jp2"
+    },
+    {
+      "product_id": "S2B_MSIL1C_20170731T102019_N0205_R065_T33VVE_20170731T102348",
+      "band": "B08",
+      "name": "tiles/33/V/VE/S2B_MSIL1C_20170731T102019_N0205_R065_T33VVE_20170731T102348.SAFE/GRANULE/L1C_T33VVE_A002093_20170731T102348/IMG_DATA/T33VVE_20170731T102019_B08.jp2",
+      "generation": "1504206951536969",
+      "bytes": 130644477,
+      "md5_base64": "8VuEZIOZ5m2ry1LWsuW6sQ==",
+      "path": "S2B_MSIL1C_20170731T102019_N0205_R065_T33VVE_20170731T102348/B08.jp2"
+    },
+    {
+      "product_id": "S2B_MSIL1C_20170731T102019_N0205_R065_T33VVE_20170731T102348",
+      "band": "B11",
+      "name": "tiles/33/V/VE/S2B_MSIL1C_20170731T102019_N0205_R065_T33VVE_20170731T102348.SAFE/GRANULE/L1C_T33VVE_A002093_20170731T102348/IMG_DATA/T33VVE_20170731T102019_B11.jp2",
+      "generation": "1504206958579445",
+      "bytes": 33907386,
+      "md5_base64": "TbGDkpQ9w6ehQPUyEvwZGA==",
+      "path": "S2B_MSIL1C_20170731T102019_N0205_R065_T33VVE_20170731T102348/B11.jp2"
+    },
+    {
+      "product_id": "S2B_MSIL1C_20170731T102019_N0205_R065_T33VVE_20170731T102348",
+      "band": "B12",
+      "name": "tiles/33/V/VE/S2B_MSIL1C_20170731T102019_N0205_R065_T33VVE_20170731T102348.SAFE/GRANULE/L1C_T33VVE_A002093_20170731T102348/IMG_DATA/T33VVE_20170731T102019_B12.jp2",
+      "generation": "1504206962897072",
+      "bytes": 33670329,
+      "md5_base64": "YMID8b1WCUYWhhJd+xVzzw==",
+      "path": "S2B_MSIL1C_20170731T102019_N0205_R065_T33VVE_20170731T102348/B12.jp2"
+    },
+    {
+      "product_id": "S2B_MSIL1C_20170916T101019_N0205_R022_T32SPJ_20170916T101354",
+      "band": "B02",
+      "name": "tiles/32/S/PJ/S2B_MSIL1C_20170916T101019_N0205_R022_T32SPJ_20170916T101354.SAFE/GRANULE/L1C_T32SPJ_A002765_20170916T101354/IMG_DATA/T32SPJ_20170916T101019_B02.jp2",
+      "generation": "1505752149090802",
+      "bytes": 92876249,
+      "md5_base64": "pK3rkapOAMSfKS/iFAbbRQ==",
+      "path": "S2B_MSIL1C_20170916T101019_N0205_R022_T32SPJ_20170916T101354/B02.jp2"
+    },
+    {
+      "product_id": "S2B_MSIL1C_20170916T101019_N0205_R022_T32SPJ_20170916T101354",
+      "band": "B03",
+      "name": "tiles/32/S/PJ/S2B_MSIL1C_20170916T101019_N0205_R022_T32SPJ_20170916T101354.SAFE/GRANULE/L1C_T32SPJ_A002765_20170916T101354/IMG_DATA/T32SPJ_20170916T101019_B03.jp2",
+      "generation": "1505752159858256",
+      "bytes": 91964243,
+      "md5_base64": "6ENdMQMCngXCmbkqkx0wag==",
+      "path": "S2B_MSIL1C_20170916T101019_N0205_R022_T32SPJ_20170916T101354/B03.jp2"
+    },
+    {
+      "product_id": "S2B_MSIL1C_20170916T101019_N0205_R022_T32SPJ_20170916T101354",
+      "band": "B04",
+      "name": "tiles/32/S/PJ/S2B_MSIL1C_20170916T101019_N0205_R022_T32SPJ_20170916T101354.SAFE/GRANULE/L1C_T32SPJ_A002765_20170916T101354/IMG_DATA/T32SPJ_20170916T101019_B04.jp2",
+      "generation": "1505752171521132",
+      "bytes": 93049684,
+      "md5_base64": "ahihXIvqdS2BzxX5eiUvXQ==",
+      "path": "S2B_MSIL1C_20170916T101019_N0205_R022_T32SPJ_20170916T101354/B04.jp2"
+    },
+    {
+      "product_id": "S2B_MSIL1C_20170916T101019_N0205_R022_T32SPJ_20170916T101354",
+      "band": "B08",
+      "name": "tiles/32/S/PJ/S2B_MSIL1C_20170916T101019_N0205_R022_T32SPJ_20170916T101354.SAFE/GRANULE/L1C_T32SPJ_A002765_20170916T101354/IMG_DATA/T32SPJ_20170916T101019_B08.jp2",
+      "generation": "1505752192741311",
+      "bytes": 93350029,
+      "md5_base64": "IW2x0IDuC4OMwbL93k630Q==",
+      "path": "S2B_MSIL1C_20170916T101019_N0205_R022_T32SPJ_20170916T101354/B08.jp2"
+    },
+    {
+      "product_id": "S2B_MSIL1C_20170916T101019_N0205_R022_T32SPJ_20170916T101354",
+      "band": "B11",
+      "name": "tiles/32/S/PJ/S2B_MSIL1C_20170916T101019_N0205_R022_T32SPJ_20170916T101354.SAFE/GRANULE/L1C_T32SPJ_A002765_20170916T101354/IMG_DATA/T32SPJ_20170916T101019_B11.jp2",
+      "generation": "1505752199535547",
+      "bytes": 25459352,
+      "md5_base64": "hlUrj99fyHstqm5vGYlMSg==",
+      "path": "S2B_MSIL1C_20170916T101019_N0205_R022_T32SPJ_20170916T101354/B11.jp2"
+    },
+    {
+      "product_id": "S2B_MSIL1C_20170916T101019_N0205_R022_T32SPJ_20170916T101354",
+      "band": "B12",
+      "name": "tiles/32/S/PJ/S2B_MSIL1C_20170916T101019_N0205_R022_T32SPJ_20170916T101354.SAFE/GRANULE/L1C_T32SPJ_A002765_20170916T101354/IMG_DATA/T32SPJ_20170916T101019_B12.jp2",
+      "generation": "1505752202976404",
+      "bytes": 25207782,
+      "md5_base64": "xHlBHEa4bdjtDMx57IR3JQ==",
+      "path": "S2B_MSIL1C_20170916T101019_N0205_R022_T32SPJ_20170916T101354/B12.jp2"
+    },
+    {
+      "product_id": "S2B_MSIL1C_20180302T150259_N0206_R125_T22WES_20180302T183800",
+      "band": "B02",
+      "name": "tiles/22/W/ES/S2B_MSIL1C_20180302T150259_N0206_R125_T22WES_20180302T183800.SAFE/GRANULE/L1C_T22WES_A005156_20180302T150257/IMG_DATA/T22WES_20180302T150259_B02.jp2",
+      "generation": "1525299852073740",
+      "bytes": 134936235,
+      "md5_base64": "8WU5DTytw1lmOJ1O4N8W3Q==",
+      "path": "S2B_MSIL1C_20180302T150259_N0206_R125_T22WES_20180302T183800/B02.jp2"
+    },
+    {
+      "product_id": "S2B_MSIL1C_20180302T150259_N0206_R125_T22WES_20180302T183800",
+      "band": "B03",
+      "name": "tiles/22/W/ES/S2B_MSIL1C_20180302T150259_N0206_R125_T22WES_20180302T183800.SAFE/GRANULE/L1C_T22WES_A005156_20180302T150257/IMG_DATA/T22WES_20180302T150259_B03.jp2",
+      "generation": "1525299865238668",
+      "bytes": 135530940,
+      "md5_base64": "7S8Dov98qDtgPx4UNRet4A==",
+      "path": "S2B_MSIL1C_20180302T150259_N0206_R125_T22WES_20180302T183800/B03.jp2"
+    },
+    {
+      "product_id": "S2B_MSIL1C_20180302T150259_N0206_R125_T22WES_20180302T183800",
+      "band": "B04",
+      "name": "tiles/22/W/ES/S2B_MSIL1C_20180302T150259_N0206_R125_T22WES_20180302T183800.SAFE/GRANULE/L1C_T22WES_A005156_20180302T150257/IMG_DATA/T22WES_20180302T150259_B04.jp2",
+      "generation": "1525299881048828",
+      "bytes": 135303855,
+      "md5_base64": "rW7luxp5VKtFqGxf7FBL3g==",
+      "path": "S2B_MSIL1C_20180302T150259_N0206_R125_T22WES_20180302T183800/B04.jp2"
+    },
+    {
+      "product_id": "S2B_MSIL1C_20180302T150259_N0206_R125_T22WES_20180302T183800",
+      "band": "B08",
+      "name": "tiles/22/W/ES/S2B_MSIL1C_20180302T150259_N0206_R125_T22WES_20180302T183800.SAFE/GRANULE/L1C_T22WES_A005156_20180302T150257/IMG_DATA/T22WES_20180302T150259_B08.jp2",
+      "generation": "1525299907830316",
+      "bytes": 135023364,
+      "md5_base64": "xVllYDnjRJ1xeT3QWJI/Xw==",
+      "path": "S2B_MSIL1C_20180302T150259_N0206_R125_T22WES_20180302T183800/B08.jp2"
+    },
+    {
+      "product_id": "S2B_MSIL1C_20180302T150259_N0206_R125_T22WES_20180302T183800",
+      "band": "B11",
+      "name": "tiles/22/W/ES/S2B_MSIL1C_20180302T150259_N0206_R125_T22WES_20180302T183800.SAFE/GRANULE/L1C_T22WES_A005156_20180302T150257/IMG_DATA/T22WES_20180302T150259_B11.jp2",
+      "generation": "1525299914588511",
+      "bytes": 30786580,
+      "md5_base64": "V6yWRFcr0U2OcG0e68KvNQ==",
+      "path": "S2B_MSIL1C_20180302T150259_N0206_R125_T22WES_20180302T183800/B11.jp2"
+    },
+    {
+      "product_id": "S2B_MSIL1C_20180302T150259_N0206_R125_T22WES_20180302T183800",
+      "band": "B12",
+      "name": "tiles/22/W/ES/S2B_MSIL1C_20180302T150259_N0206_R125_T22WES_20180302T183800.SAFE/GRANULE/L1C_T22WES_A005156_20180302T150257/IMG_DATA/T22WES_20180302T150259_B12.jp2",
+      "generation": "1525299918407275",
+      "bytes": 30988316,
+      "md5_base64": "RuEHc+LeyBy9XIvFYlqKsg==",
+      "path": "S2B_MSIL1C_20180302T150259_N0206_R125_T22WES_20180302T183800/B12.jp2"
+    }
+  ],
+  "count": 96,
+  "bytes": 8344418736
+}

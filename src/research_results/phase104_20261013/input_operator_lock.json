@@ -1,0 +1,36 @@
+{
+  "native10_to20": "aligned 2x2 arithmetic mean; all four contributors valid",
+  "native20": "unchanged B11/B12",
+  "DN_to_TOA": "exact Phase89: native DN float32 / XML quantification; float64 aligned2x2 TOA mean then float32; offset zero",
+  "invalid": "nonfinite OR XML NODATA=0 OR SATURATED=65535; all six bands common support",
+  "TOA_clip": false,
+  "RGB": "B04/B03/B02 TOA float32 *255; reverse to BGR; original bgr_to_rgb preprocessor",
+  "window": {
+    "size": 1020,
+    "stride": 1020,
+    "origin": "original upper left",
+    "padding": "right/bottom zero AND invalid",
+    "selection": "all 9500 fixed coordinates, regardless of reference label"
+  },
+  "resize": "mmcv.transforms.Resize(scale=(512,512)), default bilinear cv2; PackSegInputs",
+  "output": "original MMSeg postprocess_result restores1020 with model align_corners, crop true edge; no blend",
+  "runtime_chain": {
+    "mmcv": "2.1.0",
+    "mmseg": "1.2.2",
+    "Resize_class_source_sha256": "ce4708c3f06cda614741471cc21d84fe6d5d4212628da4c9e57ca392b793323e",
+    "postprocess_result_source_sha256": "cf8f6e27eab74d4b3ad1347f9e8d50da7c252ce177f803fa142c8969c460fdb7"
+  },
+  "original_chain_sha256": {
+    "src/tools/run_phase89.py": "3c62eee6240507f193e928869dddcd19c55afe51ad64ddf1d763b2fb3c60270a",
+    "src/tools/recover_phase89.py": "817c8eaf7671b8187b9278128d5438b6059bc8503fcd6f0113f3affc7ebae7e1",
+    "src/tools/phase89_math.py": "121091adb83239e6a4bef47d99405c524049957ee1a61fa3387f6138ef72b04e",
+    "src/configs/protocol/phase65a_explore_rgb.py": "6185e449d7af15f726890d69aad1d0bf334fb3d2c9020b7609b37b1bab94515d",
+    "src/configs/protocol/phase64_source_parent_rgb.py": "d2ff071bb34a7921d37b988a4c31c616f899c1bbd631100f56ae0900910a1d20",
+    "src/configs/protocol/phase22_clean_v8_l1c.py": "8c984c3ec7132ebdf8c125077a841146e958244bb780a58cf5a5d47577d26120",
+    "src/cloud_adapter/datasets/phase65_catalogue.py": "437837772f9c5ccfb3f2557bf0c2d4ffee435efd9f148da1d4a39b9873bf2294",
+    "src/configs/light/cloud_adapter_dinov2_s_mask2former_lite_q25_d2_p2_l1c.py": "bac947991566dda0935264f9c67dbaccd83520dc2ea74ffa18da9c85517855a1"
+  },
+  "point": "exact containing20m cell; no neighboring prediction average",
+  "windows_materialized": false,
+  "preparation": "fixed lazy window index + validated original raster sources; no duplicated dense float caches"
+}
