@@ -58,12 +58,14 @@ def fit():
         new_forwards=0,new_downloads=0,new_thresholds=0),True)
     print('Only R fit frozen; no evaluation observed',flush=True)
 
-def development():
+def development(reference_path=None):
     lock=read(RESULT/'pre_fit_lock.json');R=read(ROOT/'R_model.json');S=lock['original_S']
     assert sha(ROOT/'R_model.json')==read(ROOT/'model_lock.json')['R_model_sha256']
     from run_phase65d_recovery import records,PREP,OLD,load
     index=read(OLD/'development_val/index_source.json');source={r['product']:r for r in index['rows']}
-    reference=read(CAT/'phase67_20261010/phase67_report.json')
+    reference_path=Path(reference_path) if reference_path is not None else CAT/'phase67_20261010/phase67_report.json'
+    reference=read(reference_path)
+    assert reference['control_lock_sha256']==CONTROL_SHA
     Aold={r['product']:r['ranking']['ap'] for r in reference['baseline_reference']['source_original']['rows']}
     Sold={r['product']:r['ranking']['ap'] for r in reference['policies']['Source_spectral']['rows']}
     rows=[];pool={n:[] for n in ('A','R','S')};ys=[];checks=[]
@@ -105,7 +107,7 @@ def development():
                            pooled_AP_percent=value*100,AP_groups=7,total_groups=32))
     write(ROOT/'development_aggregate.json',dict(rows=rows,totals=totals,comparisons=comparisons(rows,'development'),
         CPU=dict(status='passed',groups=checks,original_A_S_pooled_AP_exact=True,original_A_S_group_AP_exact=True,
-                 reference_sha256=sha(CAT/'phase67_20261010/phase67_report.json')),no_point_labels_saved=True),True)
+                 reference_sha256=sha(reference_path)),no_point_labels_saved=True),True)
 
 def pixbox():
     lock=read(RESULT/'pre_fit_lock.json');base=SHARED/'data/pixbox_s2_cmix_5036991'

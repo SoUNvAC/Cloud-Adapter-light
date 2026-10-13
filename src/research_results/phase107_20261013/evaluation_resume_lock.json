@@ -1,0 +1,11 @@
+{
+  "utc": "2026-10-13T12:24:50.201614+00:00",
+  "reason": "Remote original Phase67 report path absent; sole R fit already saved; no evaluation had begun",
+  "original_run_code_sha256": "ba4fc16078e654a8eef8b85dfabd225b68d042f0d5eeaf219b8e3cbd39099c58",
+  "evaluation_resume_code_sha256": "f392f4e6b004000198603b026d8f2433b8d530b7b9bc8b99e3f0ca9f0d5f7509",
+  "reference_report_sha256": "49e50f4f1bea2ef71e5dc533846243dd0fbc543e32adb0b46cc6529185afab71",
+  "original_control_sha256": "c2a83964073918015460e0ad89a9857b60b6a764e0f8562652472b224915f5ad",
+  "additional_fits": 0,
+  "additional_forwards": 0,
+  "fix": "Optional verified report path only; unchanged fit/scoring/metric math; invoke development and pixbox stages only"
+}

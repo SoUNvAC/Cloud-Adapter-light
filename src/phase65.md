@@ -1164,3 +1164,6 @@ Source 529唯一窗口+2预定重复共531次前向，约1608.36秒，重复验�
 
 ### 2026-10-13 Phase107 同容量RGB对照拟合前锁
 用户授权执行107；全部153组原fit RGB/旧五列特征/掩膜缓存及32 development索引、原subscenes.zip存在，无需恢复或新前向。固定R=[Source logit,B04,B03,B02]，S原Phase67四输入模型保留；原抽样索引SHA/标签/1253376样本、权1/(153*n_i)、fit_model及Source系数非负/penalty.001保持，只允许R一次拟合，无新阈值。拟合前锁含原control/fit输入/代码SHA，独立AP并列/NA与固定主比较bootstrap合成测试通过；主要PixBox S-R，辅助development S-R和两池R-A，seed107013。原A/S完整复现后再看R AP；两池已暴露，本轮仅探索性，参考及失败限制不变；标签不上传，开发集使用既有授权缓存仅输出聚合，不保存新带标签点表远端。尚未拟合/评价。
+
+### 2026-10-13 Phase107 唯一拟合完成，旧报告路径缺失后的评价恢复
+远端PID80785已完成153组/1253376样本核验及唯一R拟合并保存R_model/model_lock，随后在development函数读取旧phase67_report原路径时FileNotFoundError，尚未读取dev像元或产生评价，原日志及exit1保留。本地原Phase67报告control_lock_sha与冻结S控制一致，将仅传回该小报告并绑定SHA；新增可选报告路径，不改变拟合/评分/统计数学，只恢复development/PixBox评价阶段，不重新拟合、不追加前向、不恢复大缓存。
