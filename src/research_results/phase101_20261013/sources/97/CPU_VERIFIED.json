@@ -1,0 +1,1169 @@
+{
+  "rows": [
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180422T042659_N0206_R133_T48VUK_20180422T074056",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.6596768890012754
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20181102T015621_N0206_R117_T51LYE_20181102T061209",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.9094254309893586
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20180621T083651_N0206_R064_T34KBG_20180621T123155",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.923666860006051
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20181030T044921_N0206_R076_T45RXQ_20181030T065311",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.8535902480070945
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180816T162829_N0206_R083_T18VUM_20180816T213305",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.515281510000932
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20180521T054641_N0206_R048_T42QXL_20180521T085815",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.719179598003393
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180120T004659_N0206_R102_T54KUV_20180120T020340",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.7941377790120896
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180922T075619_N0206_R035_T35KMQ_20180922T114414",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.777911753000808
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180615T205019_N0206_R057_T08WPC_20180615T223116",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.657910420006374
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20180824T150721_N0206_R125_T21UUP_20180824T185559",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.78859074000502
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180625T230019_N0206_R058_T58KHC_20180626T001009",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.9025855280051474
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20181112T070221_N0207_R120_T38KRD_20181112T102254",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.8065571490005823
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20180910T150721_N0206_R082_T19PFN_20180910T201336",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.7355577960115625
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180208T224659_N0206_R101_T02WPS_20180209T001736",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.691508650998003
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20180919T101701_N0206_R065_T39XWH_20180919T122556",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.8032940099947155
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180417T021339_N0206_R060_T50LRQ_20180417T052932",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 3.1265777249936946
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180327T022549_N0206_R046_T50QQH_20180327T060147",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.932891752992873
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20181004T210519_N0206_R071_T56CNU_20181004T234310",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.6574123239988694
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180125T232159_N0206_R044_T58PHU_20180126T003547",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.8399294480041135
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180826T062619_N0206_R077_T40QHL_20180826T092057",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.7465992149955127
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180810T160819_N0206_R140_T16QDD_20180810T211922",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 3.058717248000903
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20180327T163911_N0206_R126_T17VNF_20180327T215534",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.6859502419974888
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180505T025549_N0206_R032_T56XMJ_20180505T044859",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.4349576829990838
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20180613T141951_N0206_R096_T23VNK_20180613T162358",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.6991701429942623
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180125T080209_N0206_R035_T36NXN_20180125T100104",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.8238462139997864
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20181030T095121_N0206_R079_T33TWK_20181030T130454",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.839857037004549
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180808T022319_N0206_R103_T50MRV_20180808T054332",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.8037852560082683
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180624T075609_N0206_R035_T37QBE_20180624T101209",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.780647569001303
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20180209T112221_N0206_R037_T29RKM_20180209T164004",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.9308380339934956
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20180904T160901_N0206_R140_T27XWJ_20180904T192941",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.7871424150071107
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180401T181919_N0206_R127_T11SQU_20180401T215241",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.5910066020005615
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20181007T103019_N0206_R108_T31RCK_20181007T160704",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.7543984789954266
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20181025T081009_N0206_R078_T37TGL_20181025T102247",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.5941421289899154
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20181214T090351_N0207_R007_T34QGM_20181214T102932",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.8218435000017053
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20180309T071721_N0206_R006_T37LFE_20180309T110254",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.76293624099344
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20180422T033541_N0206_R061_T49UFV_20180422T062036",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.59494943000027
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180517T220529_N0206_R072_T04WES_20180517T234440",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.9016153199918335
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20180718T135111_N0206_R024_T22MEB_20180718T185303",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.8304194649972487
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20180817T215051_N0206_R029_T14XMQ_20180818T001725",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.716532582999207
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20181114T040011_N0207_R004_T48UXA_20181114T084110",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.7703313089878066
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20181220T033139_N0207_R018_T48SYC_20181220T060651",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.6970173379959306
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180201T012709_N0206_R131_T53LKK_20180201T025415",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.7250293450051686
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180605T140729_N0206_R053_T24WWU_20180605T160557",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.709280315990327
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20180108T104421_N0206_R008_T31TEF_20180108T124506",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.8750165079982253
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180315T032529_N0206_R018_T49SCC_20180315T070512",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.940854042011779
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20180818T061631_N0206_R034_T43VFG_20180818T074215",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.6530301989987493
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180827T174039_N0206_R098_T12RYN_20180827T214315",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.595427849009866
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180630T002059_N0206_R116_T55HCC_20180630T014728",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.6400028859934537
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20181218T061249_N0207_R134_T41RQK_20181218T080326",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.880977366003208
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180518T030539_N0206_R075_T54XWH_20180518T055019",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.4502718080038903
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "calibration",
+      "product": "S2B_MSIL1C_20180325T064629_N0206_R020_T39PWK_20180325T120625",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 3.031002539995825
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20180723T124301_N0206_R095_T28WDU_20180723T144245",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.53566897699784
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "calibration",
+      "product": "S2A_MSIL1C_20180913T081601_N0206_R121_T35LKE_20180913T103649",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.8440904790040804
+    },
+    {
+      "model": "A_G7_100",
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180310T165111_N0206_R026_T17VNJ_20180310T220933",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.8013180649868445
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180310T165111_N0206_R026_T17VNJ_20180310T220933",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.593549752011313
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180310T165111_N0206_R026_T17VNJ_20180310T220933",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "model": "A_G7_100",
+      "domain": "development",
+      "product": "S2B_MSIL1C_20180822T014649_N0206_R017_T56WNB_20180822T032508",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.6635688679962186
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "development",
+      "product": "S2B_MSIL1C_20180822T014649_N0206_R017_T56WNB_20180822T032508",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.5208773560007103
+    },
+    {
+      "domain": "development",
+      "product": "S2B_MSIL1C_20180822T014649_N0206_R017_T56WNB_20180822T032508",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "model": "A_G7_100",
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180321T075621_N0206_R035_T34HGK_20180321T101406",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.5447983400081284
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180321T075621_N0206_R035_T34HGK_20180321T101406",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.9066572510055266
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180321T075621_N0206_R035_T34HGK_20180321T101406",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "model": "A_G7_100",
+      "domain": "development",
+      "product": "S2B_MSIL1C_20180612T171859_N0206_R012_T15UVU_20180612T204912",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.63782105599239
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "development",
+      "product": "S2B_MSIL1C_20180612T171859_N0206_R012_T15UVU_20180612T204912",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.766490159003297
+    },
+    {
+      "domain": "development",
+      "product": "S2B_MSIL1C_20180612T171859_N0206_R012_T15UVU_20180612T204912",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "model": "A_G7_100",
+      "domain": "development",
+      "product": "S2B_MSIL1C_20180824T111239_N0206_R051_T28LGP_20180824T164334",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.6995480390032753
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "development",
+      "product": "S2B_MSIL1C_20180824T111239_N0206_R051_T28LGP_20180824T164334",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.8769593210017774
+    },
+    {
+      "domain": "development",
+      "product": "S2B_MSIL1C_20180824T111239_N0206_R051_T28LGP_20180824T164334",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "model": "A_G7_100",
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180410T214911_N0206_R043_T02LKH_20180410T231102",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.7942800849996274
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180410T214911_N0206_R043_T02LKH_20180410T231102",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.7410770709975623
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180410T214911_N0206_R043_T02LKH_20180410T231102",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "model": "A_G7_100",
+      "domain": "development",
+      "product": "S2B_MSIL1C_20180701T074609_N0206_R135_T38TNN_20180701T100320",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.593992309004534
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "development",
+      "product": "S2B_MSIL1C_20180701T074609_N0206_R135_T38TNN_20180701T100320",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.836646480995114
+    },
+    {
+      "domain": "development",
+      "product": "S2B_MSIL1C_20180701T074609_N0206_R135_T38TNN_20180701T100320",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "model": "A_G7_100",
+      "domain": "development",
+      "product": "S2B_MSIL1C_20181218T043159_N0207_R133_T46RDT_20181218T072156",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.6126204369938932
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "development",
+      "product": "S2B_MSIL1C_20181218T043159_N0207_R133_T46RDT_20181218T072156",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.7128532450005878
+    },
+    {
+      "domain": "development",
+      "product": "S2B_MSIL1C_20181218T043159_N0207_R133_T46RDT_20181218T072156",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "model": "A_G7_100",
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180710T090601_N0206_R050_T34QBG_20180710T112311",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.662132459998247
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180710T090601_N0206_R050_T34QBG_20180710T112311",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.630426511997939
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180710T090601_N0206_R050_T34QBG_20180710T112311",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "model": "A_G7_100",
+      "domain": "development",
+      "product": "S2B_MSIL1C_20180131T082149_N0206_R121_T34JDL_20180131T120726",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.8307765679928707
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "development",
+      "product": "S2B_MSIL1C_20180131T082149_N0206_R121_T34JDL_20180131T120726",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.8152554469997995
+    },
+    {
+      "domain": "development",
+      "product": "S2B_MSIL1C_20180131T082149_N0206_R121_T34JDL_20180131T120726",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "model": "A_G7_100",
+      "domain": "development",
+      "product": "S2B_MSIL1C_20180214T025819_N0206_R032_T51TUM_20180214T072411",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.9924019269965356
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "development",
+      "product": "S2B_MSIL1C_20180214T025819_N0206_R032_T51TUM_20180214T072411",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.6019002810062375
+    },
+    {
+      "domain": "development",
+      "product": "S2B_MSIL1C_20180214T025819_N0206_R032_T51TUM_20180214T072411",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "model": "A_G7_100",
+      "domain": "development",
+      "product": "S2A_MSIL1C_20181118T084231_N0207_R064_T35RPM_20181118T101007",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.8939820579980733
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "development",
+      "product": "S2A_MSIL1C_20181118T084231_N0207_R064_T35RPM_20181118T101007",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 3.3653383369965013
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20181118T084231_N0207_R064_T35RPM_20181118T101007",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "model": "A_G7_100",
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180703T023551_N0206_R089_T50PLR_20180703T053714",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.789713849997497
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180703T023551_N0206_R089_T50PLR_20180703T053714",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.753214063006453
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180703T023551_N0206_R089_T50PLR_20180703T053714",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "model": "A_G7_100",
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180805T024551_N0206_R132_T52UDG_20180805T054920",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.8514201279904228
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180805T024551_N0206_R132_T52UDG_20180805T054920",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.7314833929995075
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180805T024551_N0206_R132_T52UDG_20180805T054920",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "model": "A_G7_100",
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180211T234711_N0206_R073_T60WWT_20180212T011403",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.5113813990028575
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180211T234711_N0206_R073_T60WWT_20180212T011403",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.442445560998749
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180211T234711_N0206_R073_T60WWT_20180212T011403",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "model": "A_G7_100",
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180804T045701_N0206_R119_T45RTH_20180804T075337",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.6571051290084142
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180804T045701_N0206_R119_T45RTH_20180804T075337",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.52176135899208
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180804T045701_N0206_R119_T45RTH_20180804T075337",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "model": "A_G7_100",
+      "domain": "development",
+      "product": "S2B_MSIL1C_20181004T102019_N0206_R065_T32TML_20181004T141056",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.893654658997548
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "development",
+      "product": "S2B_MSIL1C_20181004T102019_N0206_R065_T32TML_20181004T141056",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.843586666000192
+    },
+    {
+      "domain": "development",
+      "product": "S2B_MSIL1C_20181004T102019_N0206_R065_T32TML_20181004T141056",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "model": "A_G7_100",
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180602T081011_N0206_R078_T36PWC_20180602T115947",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.808714892002172
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180602T081011_N0206_R078_T36PWC_20180602T115947",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.9565990440023597
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180602T081011_N0206_R078_T36PWC_20180602T115947",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "model": "A_G7_100",
+      "domain": "development",
+      "product": "S2B_MSIL1C_20180508T150719_N0206_R082_T18MYV_20180508T202621",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.6673834870016435
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "development",
+      "product": "S2B_MSIL1C_20180508T150719_N0206_R082_T18MYV_20180508T202621",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.5956139280024217
+    },
+    {
+      "domain": "development",
+      "product": "S2B_MSIL1C_20180508T150719_N0206_R082_T18MYV_20180508T202621",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "model": "A_G7_100",
+      "domain": "development",
+      "product": "S2B_MSIL1C_20180420T103019_N0206_R108_T31TGF_20180420T114307",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.7613898159906967
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "development",
+      "product": "S2B_MSIL1C_20180420T103019_N0206_R108_T31TGF_20180420T114307",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.8030702370015206
+    },
+    {
+      "domain": "development",
+      "product": "S2B_MSIL1C_20180420T103019_N0206_R108_T31TGF_20180420T114307",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "model": "A_G7_100",
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180430T111621_N0206_R037_T40XDR_20180430T132750",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.7547120609960984
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180430T111621_N0206_R037_T40XDR_20180430T132750",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.6343066600093152
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180430T111621_N0206_R037_T40XDR_20180430T132750",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "model": "A_G7_100",
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180909T151911_N0206_R068_T25XEG_20180909T205122",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.6925971180025954
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180909T151911_N0206_R068_T25XEG_20180909T205122",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.7407163940079045
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180909T151911_N0206_R068_T25XEG_20180909T205122",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "model": "A_G7_100",
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180707T021601_N0206_R003_T51SXR_20180707T041118",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.598391982013709
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180707T021601_N0206_R003_T51SXR_20180707T041118",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.608818663007696
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180707T021601_N0206_R003_T51SXR_20180707T041118",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "model": "A_G7_100",
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180522T183921_N0206_R070_T12VVH_20180522T233949",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.8172445810050704
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180522T183921_N0206_R070_T12VVH_20180522T233949",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 3.1339519460016163
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180522T183921_N0206_R070_T12VVH_20180522T233949",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "model": "A_G7_100",
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180317T045651_N0206_R119_T50XMG_20180317T075452",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.5985036690108245
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180317T045651_N0206_R119_T50XMG_20180317T075452",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.4831515840050997
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180317T045651_N0206_R119_T50XMG_20180317T075452",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "model": "A_G7_100",
+      "domain": "development",
+      "product": "S2B_MSIL1C_20181001T165109_N0206_R026_T16UDV_20181001T221311",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.7600247460068204
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "development",
+      "product": "S2B_MSIL1C_20181001T165109_N0206_R026_T16UDV_20181001T221311",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.5557795479980996
+    },
+    {
+      "domain": "development",
+      "product": "S2B_MSIL1C_20181001T165109_N0206_R026_T16UDV_20181001T221311",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "model": "A_G7_100",
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180608T152641_N0206_R025_T18MUA_20180608T202221",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.5795959230017615
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180608T152641_N0206_R025_T18MUA_20180608T202221",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.8412879640090978
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180608T152641_N0206_R025_T18MUA_20180608T202221",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "model": "A_G7_100",
+      "domain": "development",
+      "product": "S2A_MSIL1C_20181114T054101_N0207_R005_T44UNA_20181114T093234",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.58393494100892
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "development",
+      "product": "S2A_MSIL1C_20181114T054101_N0207_R005_T44UNA_20181114T093234",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.9315549029997783
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20181114T054101_N0207_R005_T44UNA_20181114T093234",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "model": "A_G7_100",
+      "domain": "development",
+      "product": "S2A_MSIL1C_20181118T152621_N0207_R068_T20VPK_20181118T172424",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 3.0072273760015378
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "development",
+      "product": "S2A_MSIL1C_20181118T152621_N0207_R068_T20VPK_20181118T172424",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.616739424003754
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20181118T152621_N0207_R068_T20VPK_20181118T172424",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "model": "A_G7_100",
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180922T185101_N0206_R113_T10SEE_20180922T225409",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.489502430995344
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180922T185101_N0206_R113_T10SEE_20180922T225409",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.732580242998665
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20180922T185101_N0206_R113_T10SEE_20180922T225409",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "model": "A_G7_100",
+      "domain": "development",
+      "product": "S2B_MSIL1C_20181111T094229_N0207_R036_T32NKF_20181111T131623",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.8832418500096537
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "development",
+      "product": "S2B_MSIL1C_20181111T094229_N0207_R036_T32NKF_20181111T131623",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.853163414998562
+    },
+    {
+      "domain": "development",
+      "product": "S2B_MSIL1C_20181111T094229_N0207_R036_T32NKF_20181111T131623",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    },
+    {
+      "model": "A_G7_100",
+      "domain": "development",
+      "product": "S2A_MSIL1C_20181021T160311_N0206_R097_T20WNV_20181021T192258",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.747342224000022
+    },
+    {
+      "model": "B_SourceMonotonic",
+      "domain": "development",
+      "product": "S2A_MSIL1C_20181021T160311_N0206_R097_T20WNV_20181021T192258",
+      "probe_count": 257,
+      "max_error": 0.0,
+      "seconds": 2.91457143399748
+    },
+    {
+      "domain": "development",
+      "product": "S2A_MSIL1C_20181021T160311_N0206_R097_T20WNV_20181021T192258",
+      "model": "SourceS_100",
+      "probe_count": 257,
+      "max_error": 0.0
+    }
+  ],
+  "independent_tree_walk_and_linear_probes": true,
+  "independent_AP_and_sklearn_per_group_and_pooled": true,
+  "integer_counts_direct_verified": true,
+  "original_baseline_scores_and_metrics_exact": true,
+  "calibration_exact_ties_direct_counts": true
+}

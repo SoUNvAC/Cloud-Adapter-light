@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "artifact_hashes": true,
+  "git_blob_code_hashes": true,
+  "confusions": 224,
+  "seed_mean_group_bootstrap": true,
+  "gate": true
+}

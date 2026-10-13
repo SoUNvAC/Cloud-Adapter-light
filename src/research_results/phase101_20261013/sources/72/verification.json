@@ -1,0 +1,30 @@
+{
+  "status": "passed",
+  "checks": {
+    "B": {
+      "all_64_unique": true,
+      "pooled_confusion_and_iou_match": true,
+      "macro_supports_match": true,
+      "fpr_upper_recomputed": true
+    },
+    "L3": {
+      "all_64_unique": true,
+      "pooled_confusion_and_iou_match": true,
+      "macro_supports_match": true,
+      "fpr_upper_recomputed": true
+    },
+    "RGB_local": {
+      "all_64_unique": true,
+      "pooled_confusion_and_iou_match": true,
+      "macro_supports_match": true,
+      "fpr_upper_recomputed": true
+    },
+    "B_minus_L3": {
+      "group_means_and_paired_intervals_recomputed": true
+    },
+    "B_minus_RGB_local": {
+      "group_means_and_paired_intervals_recomputed": true
+    }
+  },
+  "raw_group_csv_sha256": "ab29861333c4e1029232dcc36fa85e9d31f6b6ac98199c3f36e9584970c7ad75"
+}

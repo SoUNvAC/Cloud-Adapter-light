@@ -1,0 +1,17 @@
+{
+  "phase": "101",
+  "protocol": "src/research_plans/PHASE101_EVIDENCE_AND_GAP_AUDIT_20261013.md",
+  "protocol_sha256": "ce981dfc7e17c4c97ce2a26ca66a8e39963e47b1dd512fc983ebf47a7808acb6",
+  "training": 0,
+  "fits": 0,
+  "calibration": 0,
+  "forwards": 0,
+  "new_data_evaluation": 0,
+  "interval_recomputation": 0,
+  "literature_search": 0,
+  "work_dirs_sync": false,
+  "deadline_beijing": "2026-10-20",
+  "only_sources": "existing local final reports, tables, locks, receipts; 17 source stages",
+  "source_copies_bytes": 16691429,
+  "source_references_unchanged": true
+}

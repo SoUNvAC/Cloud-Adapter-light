@@ -1,0 +1,48 @@
+{
+  "verified": {
+    "verified": true,
+    "files": 15,
+    "fits": 1,
+    "thresholds": 1,
+    "development_rows": 96,
+    "calibration_groups": 53,
+    "monotonic_points": 6400,
+    "screening": {
+      "AP_loss_at_most_1pp": true,
+      "recall_loss_at_most_1pp": true,
+      "macro_FPR_at_most_1percent": false,
+      "maximum_group_FPR_at_most_10percent": false
+    },
+    "decision": "close_this_fixed_monotonic_scheme"
+  },
+  "execution_commit": "1f10c55",
+  "native_manifest_sha256": "8b374ea49e7c77c36d65b9d0a77c10bf440fadbab770637ef2066e157e60e5ef",
+  "git_blob_code_hashes_exact": {
+    "run_phase97.py": "091f862cb537be7bebfdb72c98d693e9bbc16ec3087f4239da00110a6f530507",
+    "run_phase97.sh": "6b430682496e9d0312301896439dc328acbf7fc3fe07da50cfb95453a38762af",
+    "verify_phase97_delivery.py": "da6e457af818edf204c996fed7ee1806358b4a482b6fd97b3c70f560d766263b",
+    "run_phase94.py": "64a6fc95ebb9d1d3d6f7e75b910583ee8aa03b3ae3405a56c5a2245bd3abbb63",
+    "run_phase96.py": "9f5029b867b5d9e03625733d2cd943a97af5ee162810ebbfe355df8e7a24d4cc",
+    "phase93_math.py": "55f98678340b349eacab4e4198bc962c8bebe7933c0a5e9995b85f142af1abe3",
+    "phase91_math.py": "667933da3cc0836ffdfdbe3cb9cf5e435c69ea1c2c647bc5b7407525f4a4e45f",
+    "run_phase92.py": "89957a77d02f160fe6d1674537defa30d8a5eebebc5f79022574f04b4a2d59d8",
+    "phase89_cpu_ap.py": "9bedbc46503916362564a0f34b1748d75d095edce436f70f533372895a42062e",
+    "phase65d_recovery_math.py": "ef0f76bc81cc348ce411c65f8459c5615d29df93477b62a52dc137e86af2c51e"
+  },
+  "protocol_git_blob_hash_exact": true,
+  "remote_EXIT_CODE": 0,
+  "shared_delivery_only": true,
+  "work_dirs_synchronized": false,
+  "prefit_stop": {
+    "commit": "768abf9",
+    "control": "/home/scv/shared/phase97_control_20261012",
+    "exit_code": 1,
+    "reason": "Full get_params defaults incorrectly compared to explicit subset; corrected before sole fit",
+    "fit_attempts": 0,
+    "process_exit_confirmed": true,
+    "logs_retained": true
+  },
+  "successful_control": "/home/scv/shared/phase97_control_20261012_run02",
+  "total_actual_fits": 1,
+  "additional_fit_retry": false
+}

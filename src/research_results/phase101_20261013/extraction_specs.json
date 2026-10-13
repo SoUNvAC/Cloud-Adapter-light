@@ -1,0 +1,790 @@
+[
+  {
+    "phase": "65D",
+    "comparison": "Source vs MsRE2000：宏AP与池化mIoU",
+    "pointers": [
+      "points/0/macro_ap",
+      "points/1/macro_ap",
+      "points/0/miou_percent",
+      "points/1/miou_percent",
+      "points/0/ranking/ap",
+      "points/1/ranking/ap"
+    ],
+    "model": "Source RGB；MsRE seed65/step2000按dev mIoU选择",
+    "fit": 153,
+    "calibration": "argmax；非新增校准",
+    "pool": "Catalogue development（已反复暴露）",
+    "groups": 32,
+    "shadow": 7,
+    "reference": "Catalogue原参考；原20m有效像元支持；非人工逐像元裁决",
+    "decision": "平均分割改善与逐组排序损伤并存",
+    "nature": "探索性描述；区间不是新独立确认",
+    "limitations": "选择集内描述；池化AP与宏AP方向不同；不能定位因果机制",
+    "units": "macro_ap/ranking/ap为0—1；miou_percent为百分数"
+  },
+  {
+    "phase": "66",
+    "comparison": "L3−L2（主要终点）",
+    "pointers": [
+      "comparisons/L3_minus_L2",
+      "policies/L3/fpr_constraint",
+      "primary_decision"
+    ],
+    "model": "冻结L3=Source+MsRE+B08/B11/B12；L2=Source+MsRE",
+    "fit": 153,
+    "calibration": "153 fit组参考非云影上冻结1%宏FPR阈值；非独立校准",
+    "pool": "Phase66原固定确认池",
+    "groups": 64,
+    "shadow": 15,
+    "reference": "Catalogue原参考；原20m有效像元支持；非人工逐像元裁决",
+    "decision": "positive_increment_independently_supported；原H1失败不变",
+    "nature": "原预设终点独立确认，限当时冻结候选/支持",
+    "limitations": "只有15个有云影组；不转移给100组模型或后续新候选",
+    "units": "差值_pp；概率均值为0—1，mIoU_percent为百分数"
+  },
+  {
+    "phase": "67",
+    "comparison": "L3−L2_RGB",
+    "pointers": [
+      "comparisons/L3_minus_L2_RGB"
+    ],
+    "model": "原153组冻结线性模型；L2_RGB",
+    "fit": 153,
+    "calibration": "153 fit组参考非云影上冻结1%宏FPR阈值；非独立校准",
+    "pool": "Catalogue development（已反复暴露）",
+    "groups": 32,
+    "shadow": 7,
+    "reference": "Catalogue原参考；原20m有效像元支持；非人工逐像元裁决",
+    "decision": "描述性对照；跨零不等效",
+    "nature": "探索性描述；区间不是新独立确认",
+    "limitations": "相同dev重复探索；Source_spectral三类决策还使用Source非云影类别赢家",
+    "units": "ap均值/区间、pairs delta_ap为0—1；不是pp"
+  },
+  {
+    "phase": "67",
+    "comparison": "L3−Source_spectral",
+    "pointers": [
+      "comparisons/L3_minus_Source_spectral"
+    ],
+    "model": "原153组冻结线性模型；Source_spectral",
+    "fit": 153,
+    "calibration": "153 fit组参考非云影上冻结1%宏FPR阈值；非独立校准",
+    "pool": "Catalogue development（已反复暴露）",
+    "groups": 32,
+    "shadow": 7,
+    "reference": "Catalogue原参考；原20m有效像元支持；非人工逐像元裁决",
+    "decision": "描述性对照；跨零不等效",
+    "nature": "探索性描述；区间不是新独立确认",
+    "limitations": "相同dev重复探索；Source_spectral三类决策还使用Source非云影类别赢家",
+    "units": "ap均值/区间、pairs delta_ap为0—1；不是pp"
+  },
+  {
+    "phase": "67",
+    "comparison": "L3−MsRE_spectral",
+    "pointers": [
+      "comparisons/L3_minus_MsRE_spectral"
+    ],
+    "model": "原153组冻结线性模型；MsRE_spectral",
+    "fit": 153,
+    "calibration": "153 fit组参考非云影上冻结1%宏FPR阈值；非独立校准",
+    "pool": "Catalogue development（已反复暴露）",
+    "groups": 32,
+    "shadow": 7,
+    "reference": "Catalogue原参考；原20m有效像元支持；非人工逐像元裁决",
+    "decision": "描述性对照；跨零不等效",
+    "nature": "探索性描述；区间不是新独立确认",
+    "limitations": "相同dev重复探索；Source_spectral三类决策还使用Source非云影类别赢家",
+    "units": "ap均值/区间、pairs delta_ap为0—1；不是pp"
+  },
+  {
+    "phase": "72",
+    "comparison": "局部光谱B−L3",
+    "pointers": [
+      "comparisons/L3",
+      "decision",
+      "policies/B/fpr_strata/all"
+    ],
+    "model": "冻结局部B、L3、同维RGB局部对照",
+    "fit": 153,
+    "calibration": "153 fit组参考非云影上冻结1%宏FPR阈值；非独立校准",
+    "pool": "原65c固定确认池（Phase72已启封）",
+    "groups": 64,
+    "shadow": 11,
+    "reference": "Catalogue原参考；原20m有效像元支持；非人工逐像元裁决",
+    "decision": "B−L3联合确认失败；光谱特异性前置门失败",
+    "nature": "独立确认失败；RGB对比仅描述",
+    "limitations": "不得用RGB辅助区间替代失败主要终点；最大AP损伤−38.5628pp",
+    "units": "差值_pp；概率均值为0—1，mIoU_percent为百分数"
+  },
+  {
+    "phase": "72",
+    "comparison": "局部光谱B−RGB_local",
+    "pointers": [
+      "comparisons/RGB_local",
+      "decision",
+      "policies/B/fpr_strata/all"
+    ],
+    "model": "冻结局部B、L3、同维RGB局部对照",
+    "fit": 153,
+    "calibration": "153 fit组参考非云影上冻结1%宏FPR阈值；非独立校准",
+    "pool": "原65c固定确认池（Phase72已启封）",
+    "groups": 64,
+    "shadow": 11,
+    "reference": "Catalogue原参考；原20m有效像元支持；非人工逐像元裁决",
+    "decision": "B−L3联合确认失败；光谱特异性前置门失败",
+    "nature": "独立确认失败；RGB对比仅描述",
+    "limitations": "不得用RGB辅助区间替代失败主要终点；最大AP损伤−38.5628pp",
+    "units": "差值_pp；概率均值为0—1，mIoU_percent为百分数"
+  },
+  {
+    "phase": "85",
+    "comparison": "LoRA新seed66/67对MM的组内平均增量",
+    "pointers": [
+      "new_seed_mean_AP_gain_pp",
+      "gate",
+      "retain_branch"
+    ],
+    "model": "LL/LM seed66/67；历史seed65不计晋级均值",
+    "fit": 153,
+    "calibration": "153 fit组参考非云影上冻结1%宏FPR阈值；非独立校准",
+    "pool": "Catalogue development（已反复暴露）",
+    "groups": 32,
+    "shadow": 7,
+    "reference": "Catalogue原参考；原20m有效像元支持；非人工逐像元裁决",
+    "decision": "retain_branch=false",
+    "nature": "探索性描述；区间不是新独立确认",
+    "limitations": "两个seed不把7组扩成14组；召回和池化mIoU条件失败；LM非单网络成本",
+    "units": "差值_pp；概率均值为0—1，mIoU_percent为百分数"
+  },
+  {
+    "phase": "89",
+    "comparison": "L3−L2",
+    "pointers": [
+      "versions/original_main/primary_L3_minus_L2"
+    ],
+    "model": "继承153组冻结L2/L3",
+    "fit": 153,
+    "calibration": "153 fit组参考非云影上冻结1%宏FPR阈值；非独立校准",
+    "pool": "ALCD/original_main",
+    "groups": 9,
+    "shadow": 9,
+    "reference": "ALCD原版9组；原生60m标签，20m概率3×3聚合",
+    "decision": "外部参考一致性；不是正式确认",
+    "nature": "探索性描述；区间不是新独立确认",
+    "limitations": "ALCD非认证真值；主审身份/经验未核实，B未执行；54块恢复缓存无故障前SHA；9/6组不能合并为15组",
+    "units": "差值_pp；概率均值为0—1，mIoU_percent为百分数"
+  },
+  {
+    "phase": "90",
+    "comparison": "L3−L2_RGB",
+    "pointers": [
+      "versions/original_main/comparisons/L3_minus_L2_RGB"
+    ],
+    "model": "继承Phase67原153组模型",
+    "fit": 153,
+    "calibration": "153 fit组参考非云影上冻结1%宏FPR阈值；非独立校准",
+    "pool": "ALCD/original_main",
+    "groups": 9,
+    "shadow": 9,
+    "reference": "ALCD原版9组；原生60m标签，20m概率3×3聚合",
+    "decision": "不选部署赢家；不声明MsRE普遍必要",
+    "nature": "探索性描述；区间不是新独立确认",
+    "limitations": "ALCD非认证真值；主审身份/经验未核实，B未执行；54块恢复缓存无故障前SHA；9/6组不能合并为15组",
+    "units": "差值_pp；概率均值为0—1，mIoU_percent为百分数"
+  },
+  {
+    "phase": "90",
+    "comparison": "L3−Source_spectral",
+    "pointers": [
+      "versions/original_main/comparisons/L3_minus_Source_spectral"
+    ],
+    "model": "继承Phase67原153组模型",
+    "fit": 153,
+    "calibration": "153 fit组参考非云影上冻结1%宏FPR阈值；非独立校准",
+    "pool": "ALCD/original_main",
+    "groups": 9,
+    "shadow": 9,
+    "reference": "ALCD原版9组；原生60m标签，20m概率3×3聚合",
+    "decision": "不选部署赢家；不声明MsRE普遍必要",
+    "nature": "探索性描述；区间不是新独立确认",
+    "limitations": "ALCD非认证真值；主审身份/经验未核实，B未执行；54块恢复缓存无故障前SHA；9/6组不能合并为15组",
+    "units": "差值_pp；概率均值为0—1，mIoU_percent为百分数"
+  },
+  {
+    "phase": "90",
+    "comparison": "L3−MsRE_spectral",
+    "pointers": [
+      "versions/original_main/comparisons/L3_minus_MsRE_spectral"
+    ],
+    "model": "继承Phase67原153组模型",
+    "fit": 153,
+    "calibration": "153 fit组参考非云影上冻结1%宏FPR阈值；非独立校准",
+    "pool": "ALCD/original_main",
+    "groups": 9,
+    "shadow": 9,
+    "reference": "ALCD原版9组；原生60m标签，20m概率3×3聚合",
+    "decision": "不选部署赢家；不声明MsRE普遍必要",
+    "nature": "探索性描述；区间不是新独立确认",
+    "limitations": "ALCD非认证真值；主审身份/经验未核实，B未执行；54块恢复缓存无故障前SHA；9/6组不能合并为15组",
+    "units": "差值_pp；概率均值为0—1，mIoU_percent为百分数"
+  },
+  {
+    "phase": "89",
+    "comparison": "L3−L2",
+    "pointers": [
+      "versions/original_common/primary_L3_minus_L2"
+    ],
+    "model": "继承153组冻结L2/L3",
+    "fit": 153,
+    "calibration": "153 fit组参考非云影上冻结1%宏FPR阈值；非独立校准",
+    "pool": "ALCD/original_common",
+    "groups": 6,
+    "shadow": 6,
+    "reference": "ALCD原版6组共同有效支持；原生60m标签",
+    "decision": "外部参考一致性；不是正式确认",
+    "nature": "探索性描述；区间不是新独立确认",
+    "limitations": "ALCD非认证真值；主审身份/经验未核实，B未执行；54块恢复缓存无故障前SHA；9/6组不能合并为15组",
+    "units": "差值_pp；概率均值为0—1，mIoU_percent为百分数"
+  },
+  {
+    "phase": "90",
+    "comparison": "L3−L2_RGB",
+    "pointers": [
+      "versions/original_common/comparisons/L3_minus_L2_RGB"
+    ],
+    "model": "继承Phase67原153组模型",
+    "fit": 153,
+    "calibration": "153 fit组参考非云影上冻结1%宏FPR阈值；非独立校准",
+    "pool": "ALCD/original_common",
+    "groups": 6,
+    "shadow": 6,
+    "reference": "ALCD原版6组共同有效支持；原生60m标签",
+    "decision": "不选部署赢家；不声明MsRE普遍必要",
+    "nature": "探索性描述；区间不是新独立确认",
+    "limitations": "ALCD非认证真值；主审身份/经验未核实，B未执行；54块恢复缓存无故障前SHA；9/6组不能合并为15组",
+    "units": "差值_pp；概率均值为0—1，mIoU_percent为百分数"
+  },
+  {
+    "phase": "90",
+    "comparison": "L3−Source_spectral",
+    "pointers": [
+      "versions/original_common/comparisons/L3_minus_Source_spectral"
+    ],
+    "model": "继承Phase67原153组模型",
+    "fit": 153,
+    "calibration": "153 fit组参考非云影上冻结1%宏FPR阈值；非独立校准",
+    "pool": "ALCD/original_common",
+    "groups": 6,
+    "shadow": 6,
+    "reference": "ALCD原版6组共同有效支持；原生60m标签",
+    "decision": "不选部署赢家；不声明MsRE普遍必要",
+    "nature": "探索性描述；区间不是新独立确认",
+    "limitations": "ALCD非认证真值；主审身份/经验未核实，B未执行；54块恢复缓存无故障前SHA；9/6组不能合并为15组",
+    "units": "差值_pp；概率均值为0—1，mIoU_percent为百分数"
+  },
+  {
+    "phase": "90",
+    "comparison": "L3−MsRE_spectral",
+    "pointers": [
+      "versions/original_common/comparisons/L3_minus_MsRE_spectral"
+    ],
+    "model": "继承Phase67原153组模型",
+    "fit": 153,
+    "calibration": "153 fit组参考非云影上冻结1%宏FPR阈值；非独立校准",
+    "pool": "ALCD/original_common",
+    "groups": 6,
+    "shadow": 6,
+    "reference": "ALCD原版6组共同有效支持；原生60m标签",
+    "decision": "不选部署赢家；不声明MsRE普遍必要",
+    "nature": "探索性描述；区间不是新独立确认",
+    "limitations": "ALCD非认证真值；主审身份/经验未核实，B未执行；54块恢复缓存无故障前SHA；9/6组不能合并为15组",
+    "units": "差值_pp；概率均值为0—1，mIoU_percent为百分数"
+  },
+  {
+    "phase": "89",
+    "comparison": "L3−L2",
+    "pointers": [
+      "versions/revised_common/primary_L3_minus_L2"
+    ],
+    "model": "继承153组冻结L2/L3",
+    "fit": 153,
+    "calibration": "153 fit组参考非云影上冻结1%宏FPR阈值；非独立校准",
+    "pool": "ALCD/revised_common",
+    "groups": 6,
+    "shadow": 6,
+    "reference": "ALCD修订版6组共同有效支持；原生60m标签",
+    "decision": "外部参考一致性；不是正式确认",
+    "nature": "探索性描述；区间不是新独立确认",
+    "limitations": "ALCD非认证真值；主审身份/经验未核实，B未执行；54块恢复缓存无故障前SHA；9/6组不能合并为15组",
+    "units": "差值_pp；概率均值为0—1，mIoU_percent为百分数"
+  },
+  {
+    "phase": "90",
+    "comparison": "L3−L2_RGB",
+    "pointers": [
+      "versions/revised_common/comparisons/L3_minus_L2_RGB"
+    ],
+    "model": "继承Phase67原153组模型",
+    "fit": 153,
+    "calibration": "153 fit组参考非云影上冻结1%宏FPR阈值；非独立校准",
+    "pool": "ALCD/revised_common",
+    "groups": 6,
+    "shadow": 6,
+    "reference": "ALCD修订版6组共同有效支持；原生60m标签",
+    "decision": "不选部署赢家；不声明MsRE普遍必要",
+    "nature": "探索性描述；区间不是新独立确认",
+    "limitations": "ALCD非认证真值；主审身份/经验未核实，B未执行；54块恢复缓存无故障前SHA；9/6组不能合并为15组",
+    "units": "差值_pp；概率均值为0—1，mIoU_percent为百分数"
+  },
+  {
+    "phase": "90",
+    "comparison": "L3−Source_spectral",
+    "pointers": [
+      "versions/revised_common/comparisons/L3_minus_Source_spectral"
+    ],
+    "model": "继承Phase67原153组模型",
+    "fit": 153,
+    "calibration": "153 fit组参考非云影上冻结1%宏FPR阈值；非独立校准",
+    "pool": "ALCD/revised_common",
+    "groups": 6,
+    "shadow": 6,
+    "reference": "ALCD修订版6组共同有效支持；原生60m标签",
+    "decision": "不选部署赢家；不声明MsRE普遍必要",
+    "nature": "探索性描述；区间不是新独立确认",
+    "limitations": "ALCD非认证真值；主审身份/经验未核实，B未执行；54块恢复缓存无故障前SHA；9/6组不能合并为15组",
+    "units": "差值_pp；概率均值为0—1，mIoU_percent为百分数"
+  },
+  {
+    "phase": "90",
+    "comparison": "L3−MsRE_spectral",
+    "pointers": [
+      "versions/revised_common/comparisons/L3_minus_MsRE_spectral"
+    ],
+    "model": "继承Phase67原153组模型",
+    "fit": 153,
+    "calibration": "153 fit组参考非云影上冻结1%宏FPR阈值；非独立校准",
+    "pool": "ALCD/revised_common",
+    "groups": 6,
+    "shadow": 6,
+    "reference": "ALCD修订版6组共同有效支持；原生60m标签",
+    "decision": "不选部署赢家；不声明MsRE普遍必要",
+    "nature": "探索性描述；区间不是新独立确认",
+    "limitations": "ALCD非认证真值；主审身份/经验未核实，B未执行；54块恢复缓存无故障前SHA；9/6组不能合并为15组",
+    "units": "差值_pp；概率均值为0—1，mIoU_percent为百分数"
+  },
+  {
+    "phase": "91",
+    "comparison": "L3−Source_spectral：1%平均FPR oracle召回",
+    "pointers": [
+      "versions/original_main/comparisons_A_1percent/L3_minus_Source_spectral",
+      "oracle_only",
+      "no_new_deployment_threshold"
+    ],
+    "model": "原153组L3/Source_spectral",
+    "fit": 153,
+    "calibration": "本评价池标签扫描阈值：oracle，非部署",
+    "pool": "ALCD/original_main",
+    "groups": 9,
+    "shadow": 9,
+    "reference": "ALCD原版原生60m参考",
+    "decision": "事后可达性诊断，不是校准收益",
+    "nature": "探索性描述；区间不是新独立确认",
+    "limitations": "ALCD非认证真值；主审身份/经验未核实，B未执行；54块恢复缓存无故障前SHA；9/6组不能合并为15组；无新增区间，A全池预算与B逐组预算不同",
+    "units": "差值_pp；概率均值为0—1，mIoU_percent为百分数"
+  },
+  {
+    "phase": "92",
+    "comparison": "Source_spectral_minus_S3",
+    "pointers": [
+      "domains/development/comparisons/Source_spectral_minus_S3"
+    ],
+    "model": "153组：Source_spectral/S3/R6固定线性",
+    "fit": 153,
+    "calibration": "153 fit组参考非云影上冻结1%宏FPR阈值；非独立校准",
+    "pool": "Catalogue development（已反复暴露）",
+    "groups": 32,
+    "shadow": 7,
+    "reference": "Catalogue原参考；原20m有效像元支持；非人工逐像元裁决",
+    "decision": "条件性互补证据；无部署晋级",
+    "nature": "探索性描述；区间不是新独立确认",
+    "limitations": "固定拟合器下的输入增量，不识别上下文/物理/预训练因果机制；dev重复探索",
+    "units": "差值_pp；概率均值为0—1，mIoU_percent为百分数"
+  },
+  {
+    "phase": "92",
+    "comparison": "Source_spectral_minus_R6",
+    "pointers": [
+      "domains/development/comparisons/Source_spectral_minus_R6"
+    ],
+    "model": "153组：Source_spectral/S3/R6固定线性",
+    "fit": 153,
+    "calibration": "153 fit组参考非云影上冻结1%宏FPR阈值；非独立校准",
+    "pool": "Catalogue development（已反复暴露）",
+    "groups": 32,
+    "shadow": 7,
+    "reference": "Catalogue原参考；原20m有效像元支持；非人工逐像元裁决",
+    "decision": "条件性互补证据；无部署晋级",
+    "nature": "探索性描述；区间不是新独立确认",
+    "limitations": "固定拟合器下的输入增量，不识别上下文/物理/预训练因果机制；dev重复探索",
+    "units": "差值_pp；概率均值为0—1，mIoU_percent为百分数"
+  },
+  {
+    "phase": "92",
+    "comparison": "Source_spectral_minus_S3",
+    "pointers": [
+      "domains/original_main/comparisons/Source_spectral_minus_S3"
+    ],
+    "model": "153组：Source_spectral/S3/R6固定线性",
+    "fit": 153,
+    "calibration": "153 fit组参考非云影上冻结1%宏FPR阈值；非独立校准",
+    "pool": "ALCD/original_main",
+    "groups": 9,
+    "shadow": 9,
+    "reference": "ALCD原版；原生60m参考，20m概率均值；9组主支持",
+    "decision": "条件性互补证据；无部署晋级",
+    "nature": "探索性描述；区间不是新独立确认",
+    "limitations": "固定拟合器下的输入增量，不识别上下文/物理/预训练因果机制；ALCD非认证真值；主审身份/经验未核实，B未执行；54块恢复缓存无故障前SHA；9/6组不能合并为15组",
+    "units": "差值_pp；概率均值为0—1，mIoU_percent为百分数"
+  },
+  {
+    "phase": "92",
+    "comparison": "Source_spectral_minus_R6",
+    "pointers": [
+      "domains/original_main/comparisons/Source_spectral_minus_R6"
+    ],
+    "model": "153组：Source_spectral/S3/R6固定线性",
+    "fit": 153,
+    "calibration": "153 fit组参考非云影上冻结1%宏FPR阈值；非独立校准",
+    "pool": "ALCD/original_main",
+    "groups": 9,
+    "shadow": 9,
+    "reference": "ALCD原版；原生60m参考，20m概率均值；9组主支持",
+    "decision": "条件性互补证据；无部署晋级",
+    "nature": "探索性描述；区间不是新独立确认",
+    "limitations": "固定拟合器下的输入增量，不识别上下文/物理/预训练因果机制；ALCD非认证真值；主审身份/经验未核实，B未执行；54块恢复缓存无故障前SHA；9/6组不能合并为15组",
+    "units": "差值_pp；概率均值为0—1，mIoU_percent为百分数"
+  },
+  {
+    "phase": "92",
+    "comparison": "Source_spectral_minus_S3",
+    "pointers": [
+      "domains/original_common/comparisons/Source_spectral_minus_S3"
+    ],
+    "model": "153组：Source_spectral/S3/R6固定线性",
+    "fit": 153,
+    "calibration": "153 fit组参考非云影上冻结1%宏FPR阈值；非独立校准",
+    "pool": "ALCD/original_common",
+    "groups": 6,
+    "shadow": 6,
+    "reference": "ALCD原版；原生60m参考，20m概率均值；6组共同支持",
+    "decision": "条件性互补证据；无部署晋级",
+    "nature": "探索性描述；区间不是新独立确认",
+    "limitations": "固定拟合器下的输入增量，不识别上下文/物理/预训练因果机制；ALCD非认证真值；主审身份/经验未核实，B未执行；54块恢复缓存无故障前SHA；9/6组不能合并为15组",
+    "units": "差值_pp；概率均值为0—1，mIoU_percent为百分数"
+  },
+  {
+    "phase": "92",
+    "comparison": "Source_spectral_minus_R6",
+    "pointers": [
+      "domains/original_common/comparisons/Source_spectral_minus_R6"
+    ],
+    "model": "153组：Source_spectral/S3/R6固定线性",
+    "fit": 153,
+    "calibration": "153 fit组参考非云影上冻结1%宏FPR阈值；非独立校准",
+    "pool": "ALCD/original_common",
+    "groups": 6,
+    "shadow": 6,
+    "reference": "ALCD原版；原生60m参考，20m概率均值；6组共同支持",
+    "decision": "条件性互补证据；无部署晋级",
+    "nature": "探索性描述；区间不是新独立确认",
+    "limitations": "固定拟合器下的输入增量，不识别上下文/物理/预训练因果机制；ALCD非认证真值；主审身份/经验未核实，B未执行；54块恢复缓存无故障前SHA；9/6组不能合并为15组",
+    "units": "差值_pp；概率均值为0—1，mIoU_percent为百分数"
+  },
+  {
+    "phase": "92",
+    "comparison": "Source_spectral_minus_S3",
+    "pointers": [
+      "domains/revised_common/comparisons/Source_spectral_minus_S3"
+    ],
+    "model": "153组：Source_spectral/S3/R6固定线性",
+    "fit": 153,
+    "calibration": "153 fit组参考非云影上冻结1%宏FPR阈值；非独立校准",
+    "pool": "ALCD/revised_common",
+    "groups": 6,
+    "shadow": 6,
+    "reference": "ALCD修订版；原生60m参考，20m概率均值；6组共同支持",
+    "decision": "条件性互补证据；无部署晋级",
+    "nature": "探索性描述；区间不是新独立确认",
+    "limitations": "固定拟合器下的输入增量，不识别上下文/物理/预训练因果机制；ALCD非认证真值；主审身份/经验未核实，B未执行；54块恢复缓存无故障前SHA；9/6组不能合并为15组",
+    "units": "差值_pp；概率均值为0—1，mIoU_percent为百分数"
+  },
+  {
+    "phase": "92",
+    "comparison": "Source_spectral_minus_R6",
+    "pointers": [
+      "domains/revised_common/comparisons/Source_spectral_minus_R6"
+    ],
+    "model": "153组：Source_spectral/S3/R6固定线性",
+    "fit": 153,
+    "calibration": "153 fit组参考非云影上冻结1%宏FPR阈值；非独立校准",
+    "pool": "ALCD/revised_common",
+    "groups": 6,
+    "shadow": 6,
+    "reference": "ALCD修订版；原生60m参考，20m概率均值；6组共同支持",
+    "decision": "条件性互补证据；无部署晋级",
+    "nature": "探索性描述；区间不是新独立确认",
+    "limitations": "固定拟合器下的输入增量，不识别上下文/物理/预训练因果机制；ALCD非认证真值；主审身份/经验未核实，B未执行；54块恢复缓存无故障前SHA；9/6组不能合并为15组",
+    "units": "差值_pp；概率均值为0—1，mIoU_percent为百分数"
+  },
+  {
+    "phase": "93",
+    "comparison": "G7_minus_G6",
+    "pointers": [
+      "domains/development/comparisons/G7_minus_G6"
+    ],
+    "model": "153组：G7=RGB/NIR/SWIR+Source；G6=同六光谱HGB200",
+    "fit": 153,
+    "calibration": "153 fit组参考非云影上冻结1%宏FPR阈值；非独立校准",
+    "pool": "Catalogue development（已反复暴露）",
+    "groups": 32,
+    "shadow": 7,
+    "reference": "Catalogue原参考；原20m有效像元支持；非人工逐像元裁决",
+    "decision": "条件性互补证据；无部署晋级",
+    "nature": "探索性描述；区间不是新独立确认",
+    "limitations": "固定拟合器下的输入增量，不识别上下文/物理/预训练因果机制；dev重复探索",
+    "units": "差值_pp；概率均值为0—1，mIoU_percent为百分数"
+  },
+  {
+    "phase": "93",
+    "comparison": "G7_minus_G6",
+    "pointers": [
+      "domains/original_main/comparisons/G7_minus_G6"
+    ],
+    "model": "153组：G7=RGB/NIR/SWIR+Source；G6=同六光谱HGB200",
+    "fit": 153,
+    "calibration": "153 fit组参考非云影上冻结1%宏FPR阈值；非独立校准",
+    "pool": "ALCD/original_main",
+    "groups": 9,
+    "shadow": 9,
+    "reference": "ALCD原版；原生60m参考，20m概率均值；9组主支持",
+    "decision": "条件性互补证据；无部署晋级",
+    "nature": "探索性描述；区间不是新独立确认",
+    "limitations": "固定拟合器下的输入增量，不识别上下文/物理/预训练因果机制；ALCD非认证真值；主审身份/经验未核实，B未执行；54块恢复缓存无故障前SHA；9/6组不能合并为15组",
+    "units": "差值_pp；概率均值为0—1，mIoU_percent为百分数"
+  },
+  {
+    "phase": "93",
+    "comparison": "G7_minus_G6",
+    "pointers": [
+      "domains/original_common/comparisons/G7_minus_G6"
+    ],
+    "model": "153组：G7=RGB/NIR/SWIR+Source；G6=同六光谱HGB200",
+    "fit": 153,
+    "calibration": "153 fit组参考非云影上冻结1%宏FPR阈值；非独立校准",
+    "pool": "ALCD/original_common",
+    "groups": 6,
+    "shadow": 6,
+    "reference": "ALCD原版；原生60m参考，20m概率均值；6组共同支持",
+    "decision": "条件性互补证据；无部署晋级",
+    "nature": "探索性描述；区间不是新独立确认",
+    "limitations": "固定拟合器下的输入增量，不识别上下文/物理/预训练因果机制；ALCD非认证真值；主审身份/经验未核实，B未执行；54块恢复缓存无故障前SHA；9/6组不能合并为15组",
+    "units": "差值_pp；概率均值为0—1，mIoU_percent为百分数"
+  },
+  {
+    "phase": "93",
+    "comparison": "G7_minus_G6",
+    "pointers": [
+      "domains/revised_common/comparisons/G7_minus_G6"
+    ],
+    "model": "153组：G7=RGB/NIR/SWIR+Source；G6=同六光谱HGB200",
+    "fit": 153,
+    "calibration": "153 fit组参考非云影上冻结1%宏FPR阈值；非独立校准",
+    "pool": "ALCD/revised_common",
+    "groups": 6,
+    "shadow": 6,
+    "reference": "ALCD修订版；原生60m参考，20m概率均值；6组共同支持",
+    "decision": "条件性互补证据；无部署晋级",
+    "nature": "探索性描述；区间不是新独立确认",
+    "limitations": "固定拟合器下的输入增量，不识别上下文/物理/预训练因果机制；ALCD非认证真值；主审身份/经验未核实，B未执行；54块恢复缓存无故障前SHA；9/6组不能合并为15组",
+    "units": "差值_pp；概率均值为0—1，mIoU_percent为百分数"
+  },
+  {
+    "phase": "94",
+    "comparison": "G7_100：独立校准阈值−拟合内阈值",
+    "pointers": [
+      "domains/development/comparisons/G7_100_T_cal_minus_G7_100_T_in",
+      "domains/development/policies/G7_100_T_cal"
+    ],
+    "model": "100 fit重新拟合，非原153组版本",
+    "fit": 100,
+    "calibration": "固定100 fit/53 calibration；仅53组选择冻结阈值",
+    "pool": "Catalogue development（已反复暴露）",
+    "groups": 32,
+    "shadow": 7,
+    "reference": "Catalogue原参考；原20m有效像元支持；非人工逐像元裁决",
+    "decision": "同一分数AP不变；冻结校准未保证dev预算",
+    "nature": "探索性描述；区间不是新独立确认",
+    "limitations": "不得将153→100的模型变化归因于校准；SourceS故障补拟合一次已授权、最终双模型",
+    "units": "差值_pp；概率均值为0—1，mIoU_percent为百分数"
+  },
+  {
+    "phase": "94",
+    "comparison": "SourceS_100：独立校准阈值−拟合内阈值",
+    "pointers": [
+      "domains/development/comparisons/SourceS_100_T_cal_minus_SourceS_100_T_in",
+      "domains/development/policies/SourceS_100_T_cal"
+    ],
+    "model": "100 fit重新拟合，非原153组版本",
+    "fit": 100,
+    "calibration": "固定100 fit/53 calibration；仅53组选择冻结阈值",
+    "pool": "Catalogue development（已反复暴露）",
+    "groups": 32,
+    "shadow": 7,
+    "reference": "Catalogue原参考；原20m有效像元支持；非人工逐像元裁决",
+    "decision": "同一分数AP不变；冻结校准未保证dev预算",
+    "nature": "探索性描述；区间不是新独立确认",
+    "limitations": "不得将153→100的模型变化归因于校准；SourceS故障补拟合一次已授权、最终双模型",
+    "units": "差值_pp；概率均值为0—1，mIoU_percent为百分数"
+  },
+  {
+    "phase": "95",
+    "comparison": "G7_100：同支持合成60m阈值−20m阈值",
+    "pointers": [
+      "domains/development_same60/comparisons/G7_100_T60_same_minus_T20_same",
+      "domains/development_same60/policies/G7_100_T60_same/max_group_fpr"
+    ],
+    "model": "100组G7，复用同一分数",
+    "fit": 100,
+    "calibration": "53 calibration；同质3×3支持冻结T20_same/T60_same",
+    "pool": "development_same60（已暴露）",
+    "groups": 32,
+    "shadow": 7,
+    "reference": "Catalogue合成60m同质格；不是ALCD原生60m",
+    "decision": "支持/聚合改变工作点，不构成机制裁决",
+    "nature": "探索性描述；区间不是新独立确认",
+    "limitations": "不能把同质格筛选后的结果推广到全部原20m像元或ALCD",
+    "units": "差值_pp；概率均值为0—1，mIoU_percent为百分数"
+  },
+  {
+    "phase": "96",
+    "comparison": "T31TGF：G7_100尾部追踪链验收",
+    "pointers": [
+      "no_manual_semantic_or_causal_claim",
+      "no_removal_based_pass",
+      "primary"
+    ],
+    "model": "G7_100；冻结T20_full",
+    "fit": 100,
+    "calibration": "固定100 fit/53 calibration；仅53组选择冻结阈值",
+    "pool": "单景事后诊断",
+    "groups": 1,
+    "shadow": 0,
+    "reference": "Catalogue原参考；原20m有效像元支持；非人工逐像元裁决",
+    "decision": "不删场景判通过；不宣称已识别语义/因果机制",
+    "nature": "探索性描述；区间不是新独立确认",
+    "limitations": "该景无参考云影，AP/召回不适用；量化尾部数字见原逐组表，不扩成新统计证据",
+    "units": "布尔验收状态；本行不摘录新指标"
+  },
+  {
+    "phase": "97",
+    "comparison": "Source单调G7−G7_100",
+    "pointers": [
+      "paired_B_minus_A/intervals_pp",
+      "screening",
+      "decision"
+    ],
+    "model": "固定100 fit单调HGB vs G7_100",
+    "fit": 100,
+    "calibration": "固定100 fit/53 calibration；仅53组选择冻结阈值",
+    "pool": "Catalogue development（已反复暴露）",
+    "groups": 32,
+    "shadow": 7,
+    "reference": "Catalogue原参考；原20m有效像元支持；非人工逐像元裁决",
+    "decision": "close_this_fixed_monotonic_scheme",
+    "nature": "探索性描述；区间不是新独立确认",
+    "limitations": "平均FPR和最大组FPR均失败；非失效机制证明",
+    "units": "差值_pp；概率均值为0—1，mIoU_percent为百分数"
+  },
+  {
+    "phase": "98",
+    "comparison": "MIN−SourceS_100",
+    "pointers": [
+      "comparisons/MIN_minus_SourceS_100",
+      "policies/MIN/max_group_fpr",
+      "decision"
+    ],
+    "model": "100 fit双冻结模型，MIN分数融合",
+    "fit": 100,
+    "calibration": "固定100 fit/53 calibration；仅53组选择冻结阈值",
+    "pool": "Catalogue development（已反复暴露）",
+    "groups": 32,
+    "shadow": 7,
+    "reference": "Catalogue原参考；原20m有效像元支持；非人工逐像元裁决",
+    "decision": "close_both_fixed_fusion_branches",
+    "nature": "探索性描述；区间不是新独立确认",
+    "limitations": "排序和召回改善不能替代最坏组10%FPR门；AVG也关闭",
+    "units": "差值_pp；概率均值为0—1，mIoU_percent为百分数"
+  },
+  {
+    "phase": "99",
+    "comparison": "MIN−SourceS：O_tail可达召回",
+    "pointers": [
+      "primary",
+      "policies/development/MIN/O_tail",
+      "oracle_non_deployable",
+      "Phase98_branches_remain_closed"
+    ],
+    "model": "100 fit冻结分数",
+    "fit": 100,
+    "calibration": "用dev标签扫描O_tail；oracle非部署",
+    "pool": "Catalogue development（已反复暴露）",
+    "groups": 32,
+    "shadow": 7,
+    "reference": "Catalogue原参考；原20m有效像元支持；非人工逐像元裁决",
+    "decision": "仅达到继续尾部校准研究的经验条件；未恢复Phase98分枝",
+    "nature": "探索性描述；区间不是新独立确认",
+    "limitations": "无bootstrap区间；报告修复仅验收行数，不重算分数或选择赢家",
+    "units": "差值_pp；概率均值为0—1，mIoU_percent为百分数"
+  },
+  {
+    "phase": "100",
+    "comparison": "MIN_T_tail−SourceS_T_tail",
+    "pointers": [
+      "comparisons/MIN_T_tail_minus_SourceS_T_tail",
+      "policies/MIN/T_tail",
+      "screening/MIN",
+      "decision"
+    ],
+    "model": "100 fit冻结G7/SourceS及MIN",
+    "fit": 100,
+    "calibration": "53 cal冻结平均≤1%且最大≤10%尾部阈值",
+    "pool": "Catalogue development（已反复暴露）",
+    "groups": 32,
+    "shadow": 7,
+    "reference": "Catalogue原参考；原20m有效像元支持；非人工逐像元裁决",
+    "decision": "close_fixed_tail_calibration_candidate；end_global_threshold_repair_route",
+    "nature": "探索性描述；区间不是新独立确认",
+    "limitations": "MIN最大FPR12.2152%>10%，U95平均1.2931%；dev非独立确认",
+    "units": "差值_pp；概率均值为0—1，mIoU_percent为百分数"
+  },
+  {
+    "phase": "100",
+    "comparison": "G7_T_tail−SourceS_T_tail",
+    "pointers": [
+      "comparisons/G7_T_tail_minus_SourceS_T_tail",
+      "policies/G7_100/T_tail",
+      "screening/G7_100"
+    ],
+    "model": "100 fit冻结G7/SourceS",
+    "fit": 100,
+    "calibration": "53 cal冻结T_tail",
+    "pool": "Catalogue development（已反复暴露）",
+    "groups": 32,
+    "shadow": 7,
+    "reference": "Catalogue原参考；原20m有效像元支持；非人工逐像元裁决",
+    "decision": "关闭：平均/尾部FPR均失败",
+    "nature": "探索性描述；区间不是新独立确认",
+    "limitations": "均值1.0846%>1%，最大29.0161%>10%；不能以召回区间替代约束",
+    "units": "差值_pp；概率均值为0—1，mIoU_percent为百分数"
+  }
+]

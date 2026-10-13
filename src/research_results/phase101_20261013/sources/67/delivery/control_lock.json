@@ -1,0 +1,141 @@
+{
+  "status": "three_controls_frozen_before_development",
+  "models": {
+    "L2_RGB": {
+      "mean": [
+        -1.3142327509122438,
+        -1.3017376375641958,
+        0.37020978141840316,
+        0.34708716714625387,
+        0.37871475105988917
+      ],
+      "scale": [
+        0.1737724481346097,
+        0.47215399307502803,
+        0.2770175066201953,
+        0.2571309471113327,
+        0.2795457785858625
+      ],
+      "theta": [
+        0.7158216076189208,
+        0.17598042383469997,
+        -0.8018204465570464,
+        -0.4117255780155253,
+        -0.13431390676600818,
+        -5.332723949160122
+      ],
+      "iterations": 25,
+      "optimizer_success": true,
+      "objective": 0.054141080292124014,
+      "penalty": 0.001,
+      "positive_features": 2,
+      "threshold": -2.3724517822265625,
+      "fit_macro_fpr": 0.009999995112952399,
+      "nonshadow": "msre",
+      "columns": [
+        0,
+        1,
+        5,
+        6,
+        7
+      ]
+    },
+    "Source_spectral": {
+      "mean": [
+        -1.3017376375641958,
+        0.39505300565154255,
+        0.24701699410550032,
+        0.19859101917179514
+      ],
+      "scale": [
+        0.47215399307502803,
+        0.25285773867447897,
+        0.15938402654881018,
+        0.12964792447247495
+      ],
+      "theta": [
+        0.7245657698267233,
+        -0.7644546961740207,
+        -0.030448672972106964,
+        -1.305605618836399,
+        -5.609376498409121
+      ],
+      "iterations": 17,
+      "optimizer_success": true,
+      "objective": 0.06688625399654928,
+      "penalty": 0.001,
+      "positive_features": 1,
+      "threshold": -1.0312467813491821,
+      "fit_macro_fpr": 0.009999993579556667,
+      "nonshadow": "source",
+      "columns": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "MsRE_spectral": {
+      "mean": [
+        -1.3142327509122438,
+        0.39505300565154255,
+        0.24701699410550032,
+        0.19859101917179514
+      ],
+      "scale": [
+        0.1737724481346097,
+        0.25285773867447897,
+        0.15938402654881018,
+        0.12964792447247495
+      ],
+      "theta": [
+        0.7753378835625196,
+        -0.49394163932734725,
+        -0.37528986589049085,
+        -0.8372613862192941,
+        -5.551937772938337
+      ],
+      "iterations": 20,
+      "optimizer_success": true,
+      "objective": 0.05106778337950881,
+      "penalty": 0.001,
+      "positive_features": 1,
+      "threshold": -2.306410789489746,
+      "fit_macro_fpr": 0.00999999610077965,
+      "nonshadow": "msre",
+      "columns": [
+        0,
+        2,
+        3,
+        4
+      ]
+    }
+  },
+  "recovery_lock_sha256": "bcb91cf56d3b796c22bbf60891fb8d045dd8e6af80f5c42a00818fa72501f31f",
+  "original_split_sha256": "a431745e7a17bbd4a7b9e12ef3bf76767d4eb827911bd5cb5e632683c2177f7b",
+  "protocol_sha256": "353bb86660c587b16410296c9e59b5ddd3c4ce67e14bca4af7c7d09ce3699c23",
+  "code_sha256": {
+    "run_phase67.py": "4aaf7856810499697beed13173f27f35b695df7fdc27d0d40831c1e0f54a28c1",
+    "phase67_controls.py": "3cb77eb229d28eff7cae5887a1ec77d2fe93c314e006f7a3b467d75ecc529459",
+    "phase65d_recovery_math.py": "ef0f76bc81cc348ce411c65f8459c5615d29df93477b62a52dc137e86af2c51e",
+    "phase65d_metrics.py": "631782b1987816a4d0a444f3d220359bbc9dd84df0c52376da3a199a31dc4c17",
+    "run_phase65d_recovery.py": "a8553f58629e528a4ff02a6fac91bd8ab08915b7d6e914f0f8db95b9c3547129",
+    "prepare_phase65a_explore.py": "67be1466d9b6821351ac8fac5d58780e05a6a61ec53e6cf30698f79b4b395521",
+    "phase66_statistics.py": "b5162439977e2357f21b15db50aafd1ce4c40be9a3ee1e40ad65648eaf13e04d"
+  },
+  "fit_input_audit_sha256": "cad8b3808287796c855f48854a5f1b42ac3e35f2771a38ceb7e27032239ae488",
+  "reference_report_sha256": "5e48cd76418d45a3bf6ee1c056f63792aa893e03aef43885cd37171c67030e8c",
+  "prepared_manifest_sha256": "afe39e4af254d7dad356cacdf594bf19d3d501a829e67d055811da4db0a9a3eb",
+  "fit_input_sha256": {
+    "fit_source/index.json": "51044a1ecc6d8a8c6e58802551ce78ad0ce205f2344235154b629fe2c1c4b534",
+    "fit_msre/index.json": "1b9fe63bc90383f92b62a09ee04f9f2164464b0fe606accf05eb7a5b0f3bf8e0",
+    "fit_feature_index.json": "0db1b08b1cd44be259de5970cfa9656c2134bd7e3058ab5864e4c0249dd19b34"
+  },
+  "source_checkpoint_sha256": "64dd9a20288c35ab3362b8b1c1dafc216d9c44d60868475177e139d6be859dc9",
+  "msre_checkpoint_sha256": "82f88d235948ef0a9202cebaa026e7f9fb1e1ad5c0aa361d9045c3e6991ee16d",
+  "scope": "fit and development only; no independent validation authorized",
+  "development_fitting": false,
+  "no_phase66_or_other_confirmation_access": true,
+  "phase65c_authorized": false,
+  "selection_rule": "development macro AP maximum among candidates with actual macro FPR<=1%; tie <=1e-12: fewer inputs then lexicographic name"
+}

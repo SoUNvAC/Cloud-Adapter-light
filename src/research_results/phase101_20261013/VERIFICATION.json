@@ -1,0 +1,291 @@
+{
+  "status": "passed",
+  "rows": 42,
+  "source_phases": 17,
+  "all_extracted_values_equal_final_reports": true,
+  "all_source_copy_SHA256_match": true,
+  "historical_manifest_entries_verified": 141,
+  "headline_numbers_verified": 6,
+  "source_checks": [
+    {
+      "phase": "65D",
+      "all_source_copies_hash_match": true,
+      "report_sha256": "305d2fd92c9cce0848cc1e05013ae7bdd7df56915c78fb2fc0e099d7a190c913",
+      "historical_receipts": [
+        "sources/65D/delivery_verification.json"
+      ],
+      "historical_receipts_containing_current_report_sha256": [
+        "sources/65D/delivery_verification.json"
+      ],
+      "cpu_acceptance_receipt_present": false,
+      "warning": "当前报告与历史回执绑定"
+    },
+    {
+      "phase": "66",
+      "all_source_copies_hash_match": true,
+      "report_sha256": "fde9191244700e37cbf02487e1a810b6dd90c71e269c5948d78a6edf624bd018",
+      "historical_receipts": [
+        "sources/66/delivery_verification.json"
+      ],
+      "historical_receipts_containing_current_report_sha256": [
+        "sources/66/delivery_verification.json"
+      ],
+      "cpu_acceptance_receipt_present": false,
+      "warning": "当前报告与历史回执绑定"
+    },
+    {
+      "phase": "67",
+      "all_source_copies_hash_match": true,
+      "report_sha256": "49e50f4f1bea2ef71e5dc533846243dd0fbc543e32adb0b46cc6529185afab71",
+      "historical_receipts": [
+        "sources/67/delivery_verification.json"
+      ],
+      "historical_receipts_containing_current_report_sha256": [
+        "sources/67/delivery_verification.json"
+      ],
+      "cpu_acceptance_receipt_present": false,
+      "warning": "当前报告与历史回执绑定"
+    },
+    {
+      "phase": "72",
+      "all_source_copies_hash_match": true,
+      "report_sha256": "0536646278acc4e2eaff43d7181371ff9a7b1a02367ebb03ecbe329ba0d00372",
+      "historical_receipts": [
+        "sources/72/delivery_verification.json",
+        "sources/72/remote_sha256.json",
+        "sources/72/verification.json"
+      ],
+      "historical_receipts_containing_current_report_sha256": [
+        "sources/72/delivery_verification.json",
+        "sources/72/remote_sha256.json"
+      ],
+      "cpu_acceptance_receipt_present": false,
+      "warning": "当前报告与历史回执绑定"
+    },
+    {
+      "phase": "85",
+      "all_source_copies_hash_match": true,
+      "report_sha256": "06395fd1ddb289df60706a83f4e6a7affebaf403e94a7a160f1f83c8a441de12",
+      "historical_receipts": [
+        "sources/85/DELIVERY_SHA256.json",
+        "sources/85/INDEPENDENT_VERIFIED.json",
+        "sources/85/LOCAL_VERIFIED.json"
+      ],
+      "historical_receipts_containing_current_report_sha256": [],
+      "cpu_acceptance_receipt_present": false,
+      "warning": "历史回执存在，但报告SHA直接绑定未核实；不将本轮摘录校验称新CPU验收"
+    },
+    {
+      "phase": "89",
+      "all_source_copies_hash_match": true,
+      "report_sha256": "8827f8546b52d83e9da567ddec0bff9290eec9bbf4b05c4fcd68a13b6d14c254",
+      "historical_receipts": [
+        "sources/89/CPU_VERIFIED.json",
+        "sources/89/DELIVERY_SHA256.json",
+        "sources/89/LOCAL_VERIFIED.json",
+        "sources/89/POOLED_CPU_VERIFIED.json"
+      ],
+      "historical_receipts_containing_current_report_sha256": [
+        "sources/89/DELIVERY_SHA256.json"
+      ],
+      "cpu_acceptance_receipt_present": true,
+      "warning": "当前报告与历史回执绑定"
+    },
+    {
+      "phase": "90",
+      "all_source_copies_hash_match": true,
+      "report_sha256": "ede4e93421284af76c67167c3a0e856aecb542176dc3a0dcb50df7a0175fc002",
+      "historical_receipts": [
+        "sources/90/CPU_VERIFIED.json",
+        "sources/90/DELIVERY_SHA256.json",
+        "sources/90/LOCAL_ACCEPTANCE.json"
+      ],
+      "historical_receipts_containing_current_report_sha256": [
+        "sources/90/DELIVERY_SHA256.json"
+      ],
+      "cpu_acceptance_receipt_present": true,
+      "warning": "当前报告与历史回执绑定"
+    },
+    {
+      "phase": "91",
+      "all_source_copies_hash_match": true,
+      "report_sha256": "45f26c9718ee84af0eb16cdb16889b7e1b7398a33c0182103b59c1bc773acd35",
+      "historical_receipts": [
+        "sources/91/CPU_VERIFIED.json",
+        "sources/91/DELIVERY_SHA256.json",
+        "sources/91/LOCAL_ACCEPTANCE.json",
+        "sources/91/LOCAL_SUPPLEMENT_SHA256.json"
+      ],
+      "historical_receipts_containing_current_report_sha256": [
+        "sources/91/DELIVERY_SHA256.json"
+      ],
+      "cpu_acceptance_receipt_present": true,
+      "warning": "当前报告与历史回执绑定"
+    },
+    {
+      "phase": "92",
+      "all_source_copies_hash_match": true,
+      "report_sha256": "0200f275b0f9e4f57d6ee21e1a57bf755d356c4a27d4cc13650d68a85739d53a",
+      "historical_receipts": [
+        "sources/92/CPU_VERIFIED.json",
+        "sources/92/DELIVERY_SHA256.json",
+        "sources/92/LOCAL_ACCEPTANCE.json",
+        "sources/92/LOCAL_SUPPLEMENT_SHA256.json"
+      ],
+      "historical_receipts_containing_current_report_sha256": [
+        "sources/92/DELIVERY_SHA256.json"
+      ],
+      "cpu_acceptance_receipt_present": true,
+      "warning": "当前报告与历史回执绑定"
+    },
+    {
+      "phase": "93",
+      "all_source_copies_hash_match": true,
+      "report_sha256": "8ae175a4acdc115120a98f0d6b3d4a66ac45afca871df58dbd14ee897874539d",
+      "historical_receipts": [
+        "sources/93/CPU_VERIFIED.json",
+        "sources/93/DELIVERY_SHA256.json",
+        "sources/93/LOCAL_ACCEPTANCE.json",
+        "sources/93/LOCAL_SUPPLEMENT_SHA256.json"
+      ],
+      "historical_receipts_containing_current_report_sha256": [
+        "sources/93/DELIVERY_SHA256.json"
+      ],
+      "cpu_acceptance_receipt_present": true,
+      "warning": "当前报告与历史回执绑定"
+    },
+    {
+      "phase": "94",
+      "all_source_copies_hash_match": true,
+      "report_sha256": "fcd803a75199fa5d38f6b19c81eeb39929d9517ff87be74fa8bf5b9183bfe98b",
+      "historical_receipts": [
+        "sources/94/CPU_VERIFIED.json",
+        "sources/94/DELIVERY_SHA256.json",
+        "sources/94/LOCAL_ACCEPTANCE.json",
+        "sources/94/LOCAL_SUPPLEMENT_SHA256.json"
+      ],
+      "historical_receipts_containing_current_report_sha256": [
+        "sources/94/DELIVERY_SHA256.json"
+      ],
+      "cpu_acceptance_receipt_present": true,
+      "warning": "当前报告与历史回执绑定"
+    },
+    {
+      "phase": "95",
+      "all_source_copies_hash_match": true,
+      "report_sha256": "3cb8b6d06be81f0c26bc2edde06fae9ffc09ec821f6146fc219ff139e20f4405",
+      "historical_receipts": [
+        "sources/95/CPU_VERIFIED.json",
+        "sources/95/DELIVERY_SHA256.json",
+        "sources/95/LOCAL_ACCEPTANCE.json",
+        "sources/95/LOCAL_SUPPLEMENT_SHA256.json"
+      ],
+      "historical_receipts_containing_current_report_sha256": [
+        "sources/95/DELIVERY_SHA256.json"
+      ],
+      "cpu_acceptance_receipt_present": true,
+      "warning": "当前报告与历史回执绑定"
+    },
+    {
+      "phase": "96",
+      "all_source_copies_hash_match": true,
+      "report_sha256": "abbaff9dd9b802fb7055d4000fb86828e4e45fb7f532db6d40d8b54343595af6",
+      "historical_receipts": [
+        "sources/96/CPU_VERIFIED.json",
+        "sources/96/DELIVERY_SHA256.json",
+        "sources/96/LOCAL_ACCEPTANCE.json",
+        "sources/96/LOCAL_SUPPLEMENT_SHA256.json",
+        "sources/96/T31TGF_chain_acceptance.json"
+      ],
+      "historical_receipts_containing_current_report_sha256": [
+        "sources/96/DELIVERY_SHA256.json"
+      ],
+      "cpu_acceptance_receipt_present": true,
+      "warning": "当前报告与历史回执绑定"
+    },
+    {
+      "phase": "97",
+      "all_source_copies_hash_match": true,
+      "report_sha256": "9cca4b69f4e5184e5f55a69c38b24dc0c24fca346eab73f0740db714a330e650",
+      "historical_receipts": [
+        "sources/97/CPU_VERIFIED.json",
+        "sources/97/DELIVERY_SHA256.json",
+        "sources/97/LOCAL_ACCEPTANCE.json",
+        "sources/97/LOCAL_SUPPLEMENT_SHA256.json"
+      ],
+      "historical_receipts_containing_current_report_sha256": [
+        "sources/97/DELIVERY_SHA256.json"
+      ],
+      "cpu_acceptance_receipt_present": true,
+      "warning": "当前报告与历史回执绑定"
+    },
+    {
+      "phase": "98",
+      "all_source_copies_hash_match": true,
+      "report_sha256": "ae0f7380c0841d7cdcc7703dc7f5b46085cfa6b3937584531137638e315182c8",
+      "historical_receipts": [
+        "sources/98/CPU_VERIFIED.json",
+        "sources/98/DELIVERY_SHA256.json",
+        "sources/98/LOCAL_ACCEPTANCE.json",
+        "sources/98/LOCAL_SUPPLEMENT_SHA256.json"
+      ],
+      "historical_receipts_containing_current_report_sha256": [
+        "sources/98/DELIVERY_SHA256.json"
+      ],
+      "cpu_acceptance_receipt_present": true,
+      "warning": "当前报告与历史回执绑定"
+    },
+    {
+      "phase": "99",
+      "all_source_copies_hash_match": true,
+      "report_sha256": "6fad1ee2169d0e9ba7289da5323daf359e401a0879a0b0948e465c067749556a",
+      "historical_receipts": [
+        "sources/99/CPU_VERIFIED.json",
+        "sources/99/DELIVERY_SHA256.json",
+        "sources/99/LOCAL_ACCEPTANCE.json",
+        "sources/99/LOCAL_SUPPLEMENT_SHA256.json",
+        "sources/99/REMOTE_RECOVERY_VERIFIED.json"
+      ],
+      "historical_receipts_containing_current_report_sha256": [
+        "sources/99/DELIVERY_SHA256.json"
+      ],
+      "cpu_acceptance_receipt_present": true,
+      "warning": "当前报告与历史回执绑定"
+    },
+    {
+      "phase": "100",
+      "all_source_copies_hash_match": true,
+      "report_sha256": "ea736cbad6d4ea4f9a19d395748acb83ba683187208895305c321f080569b7be",
+      "historical_receipts": [
+        "sources/100/CPU_VERIFIED.json",
+        "sources/100/DELIVERY_SHA256.json",
+        "sources/100/LOCAL_ACCEPTANCE.json",
+        "sources/100/LOCAL_SUPPLEMENT_SHA256.json"
+      ],
+      "historical_receipts_containing_current_report_sha256": [
+        "sources/100/DELIVERY_SHA256.json"
+      ],
+      "cpu_acceptance_receipt_present": true,
+      "warning": "当前报告与历史回执绑定"
+    }
+  ],
+  "training": 0,
+  "fits": 0,
+  "calibrations": 0,
+  "network_forwards": 0,
+  "new_data_evaluations": 0,
+  "interval_recomputations": 0,
+  "literature_searches": 0,
+  "verification_scope": "file SHA and literal JSON/CSV extraction; no pixel/model/metric rerun",
+  "unchanged_boundaries": [
+    "original H1 failure",
+    "closed local/LoRA/fusion/threshold branches",
+    "no work_dirs synchronization"
+  ],
+  "unverified": [
+    "expert_A identity/experience",
+    "human_B not performed",
+    "54 recovered precrash probability blocks lack precrash SHA",
+    "older phases without standalone CPU receipt: no invented receipt"
+  ]
+}

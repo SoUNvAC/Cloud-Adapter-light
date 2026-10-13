@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "audits": [
+    {
+      "seed": 66,
+      "fit_groups": 153,
+      "development_groups": 32,
+      "independent_confusions": 64,
+      "independent_AP": true,
+      "exact_ties_threshold_verified": true
+    },
+    {
+      "seed": 67,
+      "fit_groups": 153,
+      "development_groups": 32,
+      "independent_confusions": 64,
+      "independent_AP": true,
+      "exact_ties_threshold_verified": true
+    }
+  ],
+  "paired_group_seed_average_verified": true,
+  "gate_verified": true,
+  "verification_code_sha256": "dee02af5601aecced9b6282a71bdbd429046d4b7b22beebfdc6f7b3f671f0c9d",
+  "verification_code_path": "src/tools/verify_phase85_completion.py",
+  "normalization_repair": "Original fit uses F-order column selection and pairwise column reductions plus internal weight renormalization; independently reduce each column at unchanged tolerance; no training or fitting rerun"
+}

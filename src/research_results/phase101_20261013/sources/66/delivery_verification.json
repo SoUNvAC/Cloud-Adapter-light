@@ -1,0 +1,12 @@
+{
+  "status": "all_four_shared_files_sha256_match",
+  "files": {
+    "delivery/phase66_report.json": "fde9191244700e37cbf02487e1a810b6dd90c71e269c5948d78a6edf624bd018",
+    "delivery/groups.csv": "8f20156853471b78e5ad309e9ee9f618f74ff91138b1f894f2e9c3715a33c664",
+    "unseal_receipt.json": "81fe0b9a383f175be81a13f1eaf67ba36a5add64a5ae5252f356bab9294b1efd",
+    "prepared_manifest.json": "b6b2d34be32211e9c55ddb305b7b3399194d0b5786847334fa3334483930b629"
+  },
+  "exit_code": 0,
+  "work_dirs_transferred": false,
+  "original_split_sha256": "a431745e7a17bbd4a7b9e12ef3bf76767d4eb827911bd5cb5e632683c2177f7b"
+}

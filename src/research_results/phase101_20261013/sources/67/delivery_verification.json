@@ -1,0 +1,11 @@
+{
+  "status": "four_shared_files_sha256_match",
+  "files": {
+    "control_lock.json": "c2a83964073918015460e0ad89a9857b60b6a764e0f8562652472b224915f5ad",
+    "development_groups.csv": "b5f38540b13c4177b434f36d70225679c60ac4aab335fa49ce2261ec0a4c7e2e",
+    "fit_input_audit.json": "cad8b3808287796c855f48854a5f1b42ac3e35f2771a38ceb7e27032239ae488",
+    "phase67_report.json": "49e50f4f1bea2ef71e5dc533846243dd0fbc543e32adb0b46cc6529185afab71"
+  },
+  "exit_code": 0,
+  "work_dirs_transferred": false
+}

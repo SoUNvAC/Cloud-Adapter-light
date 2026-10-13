@@ -1,0 +1,13 @@
+{
+  "sealed_delivery_files_verified": 15,
+  "delivery_manifest_sha256": "a2320cb6e34cdaf6cc60cfd76e5c8adbe6d893c46dd39f682ddae5484ad8c812",
+  "CPU_statistic_rows": 84,
+  "CPU_pooled_checks": 12,
+  "groups": [
+    9,
+    6,
+    6
+  ],
+  "original_human_final_unchanged": true,
+  "no_work_dirs_transfer": true
+}

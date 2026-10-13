@@ -1,0 +1,14 @@
+{
+  "CPU_VERIFIED.json": "51a4f3454d773b21de05dfd201081cecb6378d59c2d37de060cb16b64409a87f",
+  "README.md": "92a321687e8d1dfc370fd3a4257c0b941e9be4672b60fa719deed6fb2d37c7ff",
+  "T31TGF_T02LKH.json": "423668139e19fd59985a474c70bb072e11bad24080fd409eca333887556c68dc",
+  "input_lock.json": "c01e0b9899185ea1abeeb37d818ac2e969ddada713408ae6cdd786a810826bda",
+  "input_score_lock.json": "6f2704aa4a552bf295617e0c25ce268307312db3e4bb2ec08be93b821117e6f0",
+  "oracle_comparison.csv": "9018babff36af6cb31fb715decebe99d394c1a03b4385c1e6b0fc8c44c772285",
+  "oracle_comparison.json": "9bc9ed60b5a19cdd4ecdd42571491c6e3757c9b39d3929e48914ad4749a80fdc",
+  "paired_changes.csv": "82cc2dcd3913db2d097d1c66d54c27f4313bf214c70c9da94f6702b99c5f89b2",
+  "per_group.csv": "c8cc27a15a45bb19a1dc3c68c8a78a0b8ba39bfe633f0c0344220cd059445da1",
+  "phase100_report.json": "ea736cbad6d4ea4f9a19d395748acb83ba683187208895305c321f080569b7be",
+  "six_strategy_totals.csv": "2031b39534362e0a1c897999235a4de14184d42fbaacde62adb52ce45d385400",
+  "three_T_tail_lock.json": "cd35b46952c1cf367bfa3d9698f81883ef73210616b79b3fbcc60826b036e6ef"
+}

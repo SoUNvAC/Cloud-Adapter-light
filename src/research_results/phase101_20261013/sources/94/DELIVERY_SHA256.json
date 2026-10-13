@@ -1,0 +1,20 @@
+{
+  "CPU_VERIFIED.json": "1701c9c9cbbf73a80f11e4d05a96c7db7ca248033085b33f9865f4f1babe3aa3",
+  "G7_100.pkl": "2e11a30996b04768b03d6668346d8a34ffda4100c93bbeded7d684e59091c6e6",
+  "README.md": "8b9f56568770a44641b5d3a957e1a2178b941eaf08eee9b48f226f938c0fdce8",
+  "SourceS_100.json": "6e3670f3b806a9c160b233106f54317c96ca74517f01a4ae8dc1952519f31d1e",
+  "calibration_cpu_checks.json": "cd4c30ad6a85e1045fccca5c8d3e7eb69009fcdfb68d422c5d0537951f3d36fb",
+  "fit_cost.json": "fb9295beee0adb0acdc4b17dd685f32fa240187f23d875770ae82b61bb5c1580",
+  "fit_input_lock.json": "3eb423b5027011dc032b0ae577aaa81b6d210597fee86e644d39058ccf7b6c48",
+  "four_strategy_totals.csv": "a51a58a4b5ba82f786d1387c750ace6bdc00037ca76f278d504925e3ca410f2b",
+  "four_threshold_lock.json": "3da56e69d0eddec6d26a9b2dbe3c97c9966159d869c05da6a64bd650c6927a80",
+  "historical_reference.csv": "a1e89825a64c3b6820aafb7a1896b7c81076190519c32475f0c56900364e44e4",
+  "input_score_lock.json": "00688d0bdc6cecda76b7300eaf03f55c29d18bd309c5addfa9dcb9e473a30775",
+  "paired_changes.csv": "f4ee47a5899e0c7f8f2657e6b85b62a0b564f42a2d3dfed615c4436b80632930",
+  "per_group.csv": "fd5084d010c1cd8f0fb0cb3f3116875c5825d66076cd5ec0a1b904684e690bd4",
+  "phase94_report.json": "fcd803a75199fa5d38f6b19c81eeb39929d9517ff87be74fa8bf5b9183bfe98b",
+  "repair_authorization_lock.json": "c7e507c74420a8b9b2bb1d74070113f27cc8a6c8c12b38a0fd48877f789a82d3",
+  "split_input_lock.json": "45be464bd516e67dd4b64c8fa163d397ed9b4a9cd7b8455fc5aa7550dc4ebb7f",
+  "train_calibration_diagnostics.json": "92a4ef754c1bf912cccd707f8d079946ff882ec99c3d6f262c74251fafbe2fe6",
+  "two_model_lock.json": "a43189cedc96a08da95494cf6be58e65965ec9854a9ce5ad04bf84cb0c2015de"
+}

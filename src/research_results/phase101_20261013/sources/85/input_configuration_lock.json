@@ -1,0 +1,53 @@
+{
+  "git_commit": "12d5710550548db976e61edc9a05351c54b5f95d",
+  "code_sha256": {
+    "src/research_plans/PHASE85_LORA_SEED_REPLICATION_20261011.md": "b57906f06a0c3c6b58d01df84933e86cb055bd259bd67a2ce2b9a228c431b593",
+    "src/research_plans/PHASE85_INPUT_BINDINGS_20261011.json": "b6bb059c4c27a7602ee2320558c1306b2c054dfff713ee0747ee4c6a66c5d1dc",
+    "src/tools/phase85_common.py": "62d7e6a37f15db4fdbebca7c5d123a298f7b18f4df152c72e893cadcd3c3788e",
+    "src/tools/run_phase85_training.py": "abcca0764cb44b328fcc1dd42e7b3d374ad17b5d99dbb3d47c8d4a425721fe69",
+    "src/tools/run_phase85_analysis.py": "9a6db5f42ab0b17b646e29781c1bd1c16251b2701adac1ef589e793b14f95e14",
+    "src/tools/verify_phase85.py": "2749e596dd0e558919fcaad8895375b2c1b9520f2e43b893666ba5a95e70f049",
+    "src/tools/run_phase85.sh": "2f813aabdd6fc9a760e942152064356e54466d7263d6c3e58f8022e1985aba58",
+    "src/tools/test_phase85.py": "cc79f419163b33eda59d1023ea8a4710c42ec6a75f2040be722a040e91ece192",
+    "src/tools/run_phase80_analysis.py": "8f7c09ce65ba4bbe2273d3324189970e8e93920e7d030fb6a505309c1158dc1d",
+    "src/tools/run_phase80_training.py": "68eed86055a549eec848276a7cd9742ea24f2b4edc286dbcd613504bf648cc09",
+    "src/tools/phase80_common.py": "0b265625166ce6cfdf5a3764df964991a7018cf31905610af317b7aa82068734",
+    "src/tools/run_phase82_analysis.py": "481b96561904335a37f087fa1b0a87d23c1585f4ba7abdd5b3241b3e98ca8fa6",
+    "src/tools/run_phase81.py": "026bf094f327495d974530b363e966d7b2f5742257734695f862e127a7d5b402",
+    "src/tools/run_phase65d_recovery.py": "a8553f58629e528a4ff02a6fac91bd8ab08915b7d6e914f0f8db95b9c3547129",
+    "src/tools/phase65d_metrics.py": "631782b1987816a4d0a444f3d220359bbc9dd84df0c52376da3a199a31dc4c17",
+    "src/tools/phase65d_recovery_math.py": "ef0f76bc81cc348ce411c65f8459c5615d29df93477b62a52dc137e86af2c51e",
+    "src/tools/verify_phase78_local.py": "9a7f4c67e45abec97edf53bb0b10b24e825357545be7ba7a08dd1f5db51d7079",
+    "src/configs/protocol/phase80_lora_rgb.py": "91388f67143eefbe2eae502cd153c1f68881889edbdd47cd7383b9b4ac110a50",
+    "src/configs/protocol/phase65a_explore_rgb.py": "6185e449d7af15f726890d69aad1d0bf334fb3d2c9020b7609b37b1bab94515d",
+    "src/configs/protocol/phase64_source_parent_rgb.py": "d2ff071bb34a7921d37b988a4c31c616f899c1bbd631100f56ae0900910a1d20",
+    "src/cloud_adapter/models/backbones/phase64_lora_dinov2.py": "aac71b28b9f626a4727d2080f9df81d6cd1b43b6efff4de63fd734632af73fb2",
+    "src/cloud_adapter/models/backbones/phase64_lora_layers.py": "c370f1a5bf09ac23f7064cfd135688c3000c537906e329ff7ac683666d88573f",
+    "src/cloud_adapter/models/segmentors/frozen_encoder_decoder.py": "263d9f6f02826160763a1d9cdfea0a54b7acc6eb0ebd52c44484d77bc6fb7710",
+    "src/cloud_adapter/datasets/phase65_catalogue.py": "437837772f9c5ccfb3f2557bf0c2d4ffee435efd9f148da1d4a39b9873bf2294"
+  },
+  "bindings": {
+    "phase80": {
+      "training_completed.json": "1e5a1650c79401e82eda788a72ab2c82c0ba519dd23a6af05cebcbf851a6ece0",
+      "training_lock.json": "be716de0aeea67dda466c804c78182ca84df746d967765afa456f6bd769d3da3",
+      "calibration_lock.json": "8c4ba67a8b1fe77cea6e5e972fdad452891789802ffa81e5754c0c7060db1925",
+      "fit_input_audit.json": "486edc37fba2b857b49658856248189b294a8957f55aabc44dba469e564caa2d",
+      "phase80_report.json": "62e5d6ae31300e0b53edb27b50f9524c7235f7a778ac29c32da55cc0de66f159"
+    },
+    "phase81": {
+      "phase81_report.json": "3f48aac6d9c704edba00943746b44019850c328310a7e59636f69e64984c44b0",
+      "input_configuration_lock.json": "8520c564ac369e19a302c8ab8a0dd2ca59dfa6bbe58e55ba0d2d45caa3f6346b"
+    }
+  },
+  "training_seeds": [
+    66,
+    67
+  ],
+  "new_training_runs": 2,
+  "new_shallow_fits": 2,
+  "no_confirmation": true,
+  "no_alcd": true,
+  "no_work_dirs_transfer": true,
+  "shallow_sampling_seed": "original 65081+product hash; same indices for both seeds",
+  "bootstrap_seed": 85011
+}

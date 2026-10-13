@@ -1,0 +1,12 @@
+{
+  "verified": true,
+  "sealed_files": 12,
+  "independent_metric_rows": 342,
+  "score_probes": 818,
+  "phase94_reproduced_rows": 106,
+  "new_fits": 0,
+  "new_thresholds": 4,
+  "created_utc": "2026-10-12T14:17:39.752038+00:00",
+  "native_manifest_sha256": "5fe95b0fe496914a2e1861942eaeb76e4ad38b8ebf0134d6e0ffaf51a2e2fd68",
+  "protocol_and_code_git_blob_sha_exact": true
+}

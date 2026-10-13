@@ -1,0 +1,49 @@
+{
+  "status": "passed",
+  "remote_shared_sha256_matches": {
+    "delivery/development_report.json": "305d2fd92c9cce0848cc1e05013ae7bdd7df56915c78fb2fc0e099d7a190c913",
+    "delivery/spectral_screen.json": "21ba4db46690637f0bde9c8d52eb9f34887354a3b24fd11a42b86704a312c705",
+    "delivery/t18_posthoc.json": "e05abbd3071ca2142cbdd7b730335289f0184170589cf744705716f8b45c5a4a",
+    "delivery/trajectory_scenes.csv": "b181a4c5c06486e254afe388c032537a1a2201f76c53a147369c5e46f5d71875",
+    "figures/development_trajectory.png": "c1f01152871296e6a3d5eed976fe2697e02833e98818993d14b64e8ccb63e41c",
+    "figures/development_trajectory.pdf": "f06eca9077bc4dae13c4a9cbbbe1b59334e3df3a5d920473170c4518e55ada2a",
+    "figures/development_trajectory.svg": "b3d567d35b2dd02ff2ad2fbd0ac53a6c53c0781f00164251eb605e84563bc5fe",
+    "figures/development_group_structure.png": "fa1a725008deb092b97a01b31b9fdd825d5fe0ee537d6d0cafc3b9f6d0830d91",
+    "figures/development_group_structure.pdf": "203b2699437f3d0b6ea66a8c799ac207084c80f13468745963ca7e98c6117c15",
+    "figures/development_group_structure.svg": "7f97aa08f586afaafc48a915399581caec3d598e6ce4d4625a892118900a4d8d",
+    "figures/development_spectral_screen_vector_v2.png": "25e55b18a1c199facb703319b36e0dc2e409917046eacb765c384617d79fc2a5",
+    "figures/development_spectral_screen_vector_v2.pdf": "40a2d99b230615bb2780f6eb38444d3799c8b18d0e69ba4bef8472ecd51e13da",
+    "figures/development_spectral_screen_vector_v2.svg": "daa931315ed03b3dbfd624f3420839956373320add9aa13efda20249424633a2"
+  },
+  "pdf_embedded_truetype_fonts": {
+    "development_trajectory.pdf": [
+      "/BMQQDV+DejaVuSans"
+    ],
+    "development_group_structure.pdf": [
+      "/BMQQDV+DejaVuSans"
+    ],
+    "development_spectral_screen_vector_v2.pdf": [
+      "/BMQQDV+DejaVuSans"
+    ]
+  },
+  "png_dpi": {
+    "development_trajectory.png": [
+      299.9994,
+      299.9994
+    ],
+    "development_group_structure.png": [
+      299.9994,
+      299.9994
+    ],
+    "development_spectral_screen_vector_v2.png": [
+      299.9994,
+      299.9994
+    ]
+  },
+  "strict_figure_check_no_fail": true,
+  "visual_review": "All three previews reviewed; grayscale trajectory and spectral heatmap reviewed; visible text bounds checked. Vector v2 final PNG is byte-identical to the prior vector final PNG; SVG cells and colorbar are vector paths.",
+  "statistical_units": "32 related groups; AP supported by 7 groups, not independent pixels/checkpoints",
+  "analysis_resume_exit_code": 0,
+  "selection_changed": false,
+  "work_dirs_synced": false
+}
