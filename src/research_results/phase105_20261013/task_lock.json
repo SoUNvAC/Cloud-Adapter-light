@@ -1,0 +1,62 @@
+{
+  "created_utc": "2026-10-13T09:24:56.082191+00:00",
+  "status": "locked_before_forward",
+  "protocol_sha256": "50d07e6c9f714d0e623d72f6199810fb221d679bb3d9090482292540bb500355",
+  "code_sha256": {
+    "src/tools/evaluate_phase105_local.py": "436b0830df9e713ddcc13b19d1de803aa1434216e5e12f4d1196015545379bdb",
+    "src/tools/phase105_common.py": "9be4e7cc5e9ce962c922329be506c47d7c74a9321542ead587bc19fc9fb2627e",
+    "src/tools/prepare_phase105.py": "7116fa6f1a18c2bcd1b27214f304e5ae55cafacda982343a8b6b146e9d814d1a",
+    "src/tools/receive_phase105_evaluation.ps1": "1d9b9e1abb4a1441c9a3c7a5b82673179d4a18275622995e868f2b401895d73c",
+    "src/tools/run_phase105.sh": "dc7ddd1f0b27b926297854c4ce871a78c3920a89c6290af559f775a6f9535ea3",
+    "src/tools/run_phase105_source.py": "ad90b0cfa84b8cdadc2c23206cf75dcfeee38026765b7eaefcdca5aff2eb4636",
+    "src/tools/run_phase105_trees.py": "b61de794ba11dd8c646d73e9ecd234b051e659c0281b315b970e4c18c7559587",
+    "src/tools/test_phase105.py": "5b7e9bbd26814cb61df67f0a1474592faa75e6f25c407bbe3f47823211b711ba"
+  },
+  "source_checkpoint_sha256": "64dd9a20288c35ab3362b8b1c1dafc216d9c44d60868475177e139d6be859dc9",
+  "original153_model_sha256": {
+    "G6": "385b26b0b90b10281e24b0a3f73479ac2d9811c65ac345af75c1f35c0ebc9cd0",
+    "G7": "e0e701b1fa68fdb96eb93eab1c88687f6eef3574b7f455db0e8f42c441ea9513"
+  },
+  "prior_sha256": {
+    "object_manifest.json": "0313ec61fef75acad7152e0deb639b094aa77b3a1b4041545e09939955b5500a",
+    "input_operator_lock.json": "3d0c21f1c424baf49c2f363a5ad2ae48e56ed8ad87b469e926144a9825f5200b",
+    "support_acceptance.json": "86dabbde1037f97a97648fa1bd88d8b30cbfe3dffa06cb83d610bb0eb2a9ec29",
+    "runtime_chain_acceptance.json": "ebf280e2858ae57902998f93fbd9923839792ebd32d296da2d775f9a511afa95",
+    "input_acceptance.json": "03c51c2c6fe0609ccf0241c77a4d5a4d27ca1fe2eb1e9f05daf0305d8b699e39",
+    "window_index.json": "0238604b0da093e73238286e1f1cc350787544d44916ffaa975ccead52627bf3"
+  },
+  "phase103_reference_sha256": "b1448f3fbd05c9e77af7ed0ea50dbde4be7480a35a4c532a2fec45789af25f96",
+  "phase103_mapping_sha256": "7cebeac7e8a364d15da6a82d9a1407179804ff819649491c72ee5f5dd80763da",
+  "windows": 529,
+  "repeats": [
+    "S2A_MSIL1C_20180106T032121_N0206_R118_T48NUG_20180106T083912|3060|0",
+    "S2A_MSIL1C_20170908T100031_N0205_R122_T32SPJ_20170908T100655|3060|4080"
+  ],
+  "max_forwards": 531,
+  "repeat_tolerance": 1e-05,
+  "feature_order": [
+    "B04",
+    "B03",
+    "B02",
+    "B08",
+    "B11",
+    "B12",
+    "Source logit (G7 only)"
+  ],
+  "Source_logit": "float64 clip1e-6..1-1e-6; log(x)-log1p(-x); castfloat32 then castfloat64, same Phase93 lineage",
+  "Source_probability": "original seg_logits at1020 after MMSeg postprocess; softmax over3 classes; channel2 Shadow",
+  "primary": "G7-G6 group-equal sampled-point AP; merge products within related group first",
+  "gate": {
+    "min_groups": 8,
+    "min_positive": 5,
+    "min_negative": 20,
+    "bootstrap": 10000,
+    "seed": 105013,
+    "CI_lower_gt": 0,
+    "CI_width_max_pp": 20
+  },
+  "labels_stay_local": true,
+  "no_new_fits": true,
+  "no_new_downloads": true,
+  "no_threshold_scan": true
+}
