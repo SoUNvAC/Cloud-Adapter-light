@@ -1,0 +1,23 @@
+{
+  "utc": "2026-10-13T11:34:09.986859+00:00",
+  "status": "frozen_before_B_scoring",
+  "protocol_sha256": "290f04054bf9ab62e8cac023e96e859e63910f74b0ee6f32d05144aa06d98339",
+  "code_sha256": "774e5eebf19b8ab234bf3d5f6e46d151fc8ea5f2d4d68d68b9b38808ae9d652f",
+  "model_lock_sha256": "faa15ffb2fb4d824afff100438ec591b3313a9411c390c7368e85f0c5fc1ff45",
+  "Source_cache_sha256": "11e460502c088c5a157208680676e8e40d98995eab693045f0c6bd5998879a5d",
+  "point_inputs_sha256": "9906a6fa349f118defce465fe06dffa04d0185e59fd4d8842f046b7bcc7f07ae",
+  "reference_sha256": "b1448f3fbd05c9e77af7ed0ea50dbde4be7480a35a4c532a2fec45789af25f96",
+  "inputs": "float32 [original Source logit,B08,B11,B12]; Fortran layout; original float32 logit output",
+  "A": "original cached Source probability, not reconstructed",
+  "B": "original153 Phase67 Source_spectral logit",
+  "bootstrap": {
+    "seed": 106013,
+    "resamples": 10000,
+    "unit": "paired related groups"
+  },
+  "post_hoc": true,
+  "forward_count": 0,
+  "fit_count": 0,
+  "download_bytes": 0,
+  "threshold_scans": 0
+}
