@@ -1,0 +1,854 @@
+{
+  "sources": [
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/access_ledger.json",
+      "bytes": 85846,
+      "sha256": "d73d5ed974aedc90d8816fd3473f71465f16fcede6306ad3794ad09c4168b121",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/cdse_kappa_probe.json",
+      "bytes": 520,
+      "sha256": "b4b0be9b0d4ccb4eb95650d9e66dcc140d1bee7bc9629e41d785edff6bb39cfa",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/cdse_pixbox_probe.json",
+      "bytes": 86,
+      "sha256": "c72caf46dd48e93540322c205c3f7b6528f1c15615b0656651f23127c5933520",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/cdse_pixbox_single_00.json",
+      "bytes": 608,
+      "sha256": "c13607d3cc4213b48baa51d3ae9d8cf7165b2d2ee867e63a48e67a8d8521794a",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/cdse_pixbox_single_01.json",
+      "bytes": 487,
+      "sha256": "79394464df255b4b7cdea16180b876cc845300bc1a99f7e2c7a0f8708bb3a7ee",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/cdse_pixbox_single_02.json",
+      "bytes": 632,
+      "sha256": "235f5e7b75760cf7f321bce7f83ea80d6fbb7aad6f5a20fcb3b7a492d11a7c2a",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/cdse_pixbox_single_03.json",
+      "bytes": 489,
+      "sha256": "85acaeaa7034524ef77db986de06c2457c9e80a01184bb7493b8c7bfd2ff7160",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/cdse_pixbox_single_04.json",
+      "bytes": 485,
+      "sha256": "7fba3f0fdcb7a374bc692208dee70421a99fcf79f32b32470cd2b0d3735a6afe",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/cdse_pixbox_single_05.json",
+      "bytes": 659,
+      "sha256": "44b1bd9d2e14f14e97b73edd28f0c33e2fb564dbeaf9f85f9580e6331ca896d5",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/cdse_pixbox_single_06.json",
+      "bytes": 732,
+      "sha256": "67a704f220001a41eef71c5fe38c74bef1ff7de7ac1754228649a82e0c446c8d",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/cdse_pixbox_single_07.json",
+      "bytes": 516,
+      "sha256": "da8f6ace22df50a846aaf5a857a3aca436d94b998566ac3c8c4732c0cb6b7c78",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/cdse_pixbox_single_08.json",
+      "bytes": 517,
+      "sha256": "a1667d49111158ff7878606a1071f5874df845134bda935e84f021c597654709",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/cdse_pixbox_single_09.json",
+      "bytes": 587,
+      "sha256": "8d08fee90c1074ffc36d6a81351ee0eb573100a32edd9dd40b88c7b390fac6f3",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/cdse_pixbox_single_10.json",
+      "bytes": 517,
+      "sha256": "d5739d35620c276699e715c89c94939a30dc4008337ce8f0be36edb0f613d36a",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/cdse_pixbox_single_11.json",
+      "bytes": 517,
+      "sha256": "a7bd8faf800acb140436b5d0950472a2cf4920e11c2f55ff6e81dbd59c12da3d",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/cdse_pixbox_single_12.json",
+      "bytes": 1193,
+      "sha256": "30d9df9e335f1c5810ad522cd640037f2ba7b71041c725e15468c9dce49c33e0",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/cdse_pixbox_single_13.json",
+      "bytes": 481,
+      "sha256": "5a39505276047d14a38f7152c181c72ee2574fee161ded311a3a5fc6a3fa0662",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/cdse_pixbox_single_14.json",
+      "bytes": 486,
+      "sha256": "b0c61ac0ae0643e590f7f001f1e5ab1fdf06140f98876852951eb0b56355e872",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/cdse_pixbox_single_15.json",
+      "bytes": 660,
+      "sha256": "48f0cca8f9521cd270eb89f379f02c737045bc78d823762544a26aca86b9364c",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/cdse_pixbox_single_16.json",
+      "bytes": 516,
+      "sha256": "e6db0cf1ec01d8f8e1bd82af7f3dc8540a2faa53ccceafdf6f680fe889b4d912",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/cdse_pixbox_single_17.json",
+      "bytes": 517,
+      "sha256": "9bc865ae44e2967f5be8a37a2c2c067d5bf0626d06d3049ecfd45a36ef763719",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/cdse_pixbox_single_18.json",
+      "bytes": 511,
+      "sha256": "48765c4367cecb6cda140ffd9f2164b7bbe37af4a856375d9c12d88395d680d1",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/cdse_pixbox_single_19.json",
+      "bytes": 513,
+      "sha256": "47565ebd329bbdf785ab2b05c924db59e34ffe379365589118364149a2bdbdbe",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/cdse_pixbox_single_20.json",
+      "bytes": 713,
+      "sha256": "86aae645099b833372de1c36c0ec3537cf46f29f2a1da559c1649119c0fdb0fb",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/cdse_pixbox_single_21.json",
+      "bytes": 669,
+      "sha256": "bd708404dbbdd4d614eb8e4682a6c02f119d8d6da48748a4a72950b1bbb25778",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/cdse_pixbox_single_22.json",
+      "bytes": 486,
+      "sha256": "033d709c596d6134f37a4c4e586b7f4dc260608c083965c7c9ed3348c83eddb9",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/cdse_pixbox_single_23.json",
+      "bytes": 485,
+      "sha256": "e3a73e2540a269c446a85c892612b0b371c4dcd363c2e1d0141ed3be9d1f26fc",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/cdse_pixbox_single_24.json",
+      "bytes": 517,
+      "sha256": "b399fdd3fa2acceaee19ddc57a5cbde5875cc5a5648e5bfb6ba624bd1fd01b05",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/cdse_pixbox_single_25.json",
+      "bytes": 840,
+      "sha256": "57818098cb49bfe32f6fed1790ad3f5ea07622d2d91115dee9c64712f0284568",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/cdse_pixbox_single_26.json",
+      "bytes": 517,
+      "sha256": "df06afd84bc1059c0b3a62dcd1b36ce5e67c9da66ffa91cdbabf9bbd29fcca85",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/cdse_pixbox_single_27.json",
+      "bytes": 513,
+      "sha256": "62b9fff348a10aec83189c4927da3ab188087feb630e71f5ea3ea751b75bff1e",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/cdse_pixbox_single_28.json",
+      "bytes": 488,
+      "sha256": "e824609f26d4995a377e408357213addd2adaa78697b0f9426c08ab42fdd283c",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/cmvsm_dias_product_tiler.py",
+      "bytes": 3651,
+      "sha256": "f4485f48302acd8f3243a086e4fbf29d29229d559d84c170980793877f9a0ffd",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/cmvsm_fmsc_subsplit.py",
+      "bytes": 1904,
+      "sha256": "2154b62fdb4c2de2823acd4ee45591be609813c5157d5b182249b99c80925b3f",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/cmvsm_tree.json",
+      "bytes": 22782,
+      "sha256": "7ebba69ca283508795a4ff3ad7d4738f4e1a2855f36fadf90416a95f2673c2c0",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/cmvsm_vsm_lib_raster_netcdf_interface.cpp",
+      "bytes": 8592,
+      "sha256": "b53c0ecf0462ceaad7b9ac1b8a7a8ced35efba4ecba36008e26754a78a7a9805",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/gcs_pixbox_00.json",
+      "bytes": 27812,
+      "sha256": "aa8ba1e9aabc11dfb9d457ee8cfe1c39e7543a2f86f2af9bcdf0c5bd817b2795",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/gcs_pixbox_01.json",
+      "bytes": 25177,
+      "sha256": "0b5781f01b032dacd64ec89dbcda4768b970a1f0eb0d6dcc8034d955391e9c9f",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/gcs_pixbox_02.json",
+      "bytes": 27819,
+      "sha256": "83f1920459f156604c29bb9436f6244f957da6133e3bf99d2c5e83e40b181a05",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/gcs_pixbox_03.json",
+      "bytes": 27816,
+      "sha256": "54fdbcf2c8ffe98627b9d080f9fdd3b8d4df264c7bca4d6857b2f5d2a5ad38d9",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/gcs_pixbox_04.json",
+      "bytes": 27813,
+      "sha256": "b278a1b5cccf7516471280ed43973b26788157938bb20f381912c070e8c4f329",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/gcs_pixbox_05.json",
+      "bytes": 25181,
+      "sha256": "93a3e5e617f312e1718e1ef9e45aaa84c652a9a4f97e78b398bcce762f2cb08c",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/gcs_pixbox_06.json",
+      "bytes": 25473,
+      "sha256": "30494c3baa34dc80eec786c994a89fa21b42a484307e2f6e1e115dabb034c5f1",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/gcs_pixbox_07.json",
+      "bytes": 25204,
+      "sha256": "e2f1c5f39b6dc74d84b83389d5461a5cd41bccbfda19a9d7a1619975974e7368",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/gcs_pixbox_08.json",
+      "bytes": 27815,
+      "sha256": "fdb967d9fe81ef49354040997381ca63a1129bf0b7f3f5f8bb9b4182e74c7c9c",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/gcs_pixbox_09.json",
+      "bytes": 27824,
+      "sha256": "487f527537cd456259e78b742f994abc66d1f76607a7d08b679b5704d9b0bd77",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/gcs_pixbox_10.json",
+      "bytes": 27814,
+      "sha256": "69a80f963162ed6ca23daacb442aae1b734487448ac8f0a3b18ff6fd7d49502c",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/gcs_pixbox_11.json",
+      "bytes": 27816,
+      "sha256": "0b84484852ded3f1663a1c1590bb3438e43c35a36ccc18daeb410f1899151994",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/gcs_pixbox_12.json",
+      "bytes": 25183,
+      "sha256": "b806966bd3d443535bab551d750601bbe0c1b0bfe4518dff6f4adb473f583c27",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/gcs_pixbox_13.json",
+      "bytes": 25178,
+      "sha256": "7fead6836f3ebb6d77cd2303b1772f672417555e28e9a79e5b72acd3e9a55615",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/gcs_pixbox_14.json",
+      "bytes": 25180,
+      "sha256": "a347b6cbefd254b2dd4699466e03a25fb6558a3e1e04b59f444617dd040e54f8",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/gcs_pixbox_15.json",
+      "bytes": 25172,
+      "sha256": "4ecaac02368eabc46093d5c27adbd2d182ad3cd196f0d1afae7ca0ec4ac8cd8d",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/gcs_pixbox_16.json",
+      "bytes": 25179,
+      "sha256": "929a4298edbff4e84b124ef9fffd5239166d726720c1f93d26ccb57cbc98836f",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/gcs_pixbox_17.json",
+      "bytes": 25191,
+      "sha256": "4e17dce54c290e77f54e413dc1ab178d372b427eb3aa673441da0fa14c7556db",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/gcs_pixbox_18.json",
+      "bytes": 27815,
+      "sha256": "06a79483831e261b245cc202eef2ea574f41e929cc1f730c8c4257549c00e9a2",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/gcs_pixbox_19.json",
+      "bytes": 25179,
+      "sha256": "b9f6c1af37b26112b54fe796aa09dacfab891d9c5bb0646129f8a969a0da695e",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/gcs_pixbox_20.json",
+      "bytes": 25181,
+      "sha256": "f5f03084b1aa01718a9d0e6d870e062b271f3a516f470fd01c534a4f2615ef0c",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/gcs_pixbox_21.json",
+      "bytes": 25182,
+      "sha256": "c2cf8d4c7f036be382ea406249e3880a6c832b7ef1e0553801dfe819cc35a27b",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/gcs_pixbox_22.json",
+      "bytes": 27816,
+      "sha256": "350a4bdc436b3a2d6401e6b70bc7b96e65a4b4b40bb97d32c11a4c1783bc0a52",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/gcs_pixbox_23.json",
+      "bytes": 27812,
+      "sha256": "518fd31d7b1650328e9ff8c8bba7614a78288a9e3ad9a3f3f3319548a5b90cfb",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/gcs_pixbox_24.json",
+      "bytes": 25189,
+      "sha256": "f8372daa3951a686ae0c8f6351210db267693caf3aa6b13119aaf45616327b71",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/gcs_pixbox_25.json",
+      "bytes": 25174,
+      "sha256": "0c90f1c91ed848b4f6d57a8911be3e1149d9389be0256e109053e98f4a86230e",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/gcs_pixbox_26.json",
+      "bytes": 25762,
+      "sha256": "06cc241c49e5760ff16f5a0f2548bf63372482f9c2140986c04881436f483b96",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/gcs_pixbox_27.json",
+      "bytes": 25179,
+      "sha256": "fc9b6a76776321c8c3b42f88b355642b02f749b3f73ef686433ba3331bd5b11a",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/gcs_pixbox_28.json",
+      "bytes": 27817,
+      "sha256": "29f9849093e797c7ef773429c90b53dd40a819989e0b6421e2be610b24d509f8",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/gcs_pixbox_probe.json",
+      "bytes": 27812,
+      "sha256": "aa8ba1e9aabc11dfb9d457ee8cfe1c39e7543a2f86f2af9bcdf0c5bd817b2795",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/kappa_old_readme.pdf",
+      "bytes": 347230,
+      "sha256": "6b24fc2fb41ac540a7a56288ecccb827b2a5ea3d9dae689103ae1cacb3ceef3a",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/kappa_old_readme.pdf.txt",
+      "bytes": 6755,
+      "sha256": "1ee6e4b34591652521b2304c7a2e363be2b2365dad821ca8b1b8e72878c708cb",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/kappaset_archive_index.json",
+      "bytes": 1249681,
+      "sha256": "0e52cda9408331d442cc22e2d18be10bff20bd37ca819b2e906377c780cc8fc2",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/kappaset_central_directory.bin",
+      "bytes": 1213411,
+      "sha256": "cf384512e4de881688dfd792ab34ebb5d6f1e346bbc8ddb729bf69ac85354ef4",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/kappaset_readme.pdf",
+      "bytes": 231988,
+      "sha256": "9a0572657ed2a70b8d2f2c28c2bf641ca0601deee3d738c6b342b41f3eb8a64f",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/kappaset_readme.pdf.txt",
+      "bytes": 4033,
+      "sha256": "6db8be5fa6883373dd684b7bfc3b47955617dfe62cbaef8bbfffa83b2e4ad10a",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/kappaset_zip_tail.bin",
+      "bytes": 262144,
+      "sha256": "b05c594924877a238d9732bc5a22fbe248751c10093246568ec3c150499335a4",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/PixBox-S2-CMIX.zip",
+      "bytes": 1537886,
+      "sha256": "d0de504201487aca30cc9e293db7ecbfe15ca52381a728dea0c06aa98bba9428",
+      "scope": "bundle obtained with labels; local only; not copied to git or remote"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/pixbox_00_product.xml",
+      "bytes": 44158,
+      "sha256": "f9e277e7fc0a4447e2f9600d93142077b113a0cdd20d43a5ea7f06bc04c883b4",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/pixbox_00_tile_prefix.xml",
+      "bytes": 16384,
+      "sha256": "dc4d805edaa6045ecdc666fe76803f59ddd1cf015f8352a413c9af32843e8565",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/pixbox_01_product.xml",
+      "bytes": 44048,
+      "sha256": "ac81f076918dffbba9183dfc4e9659f7c9a971a36cbc9adb6004b57b61e38b0d",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/pixbox_01_tile_prefix.xml",
+      "bytes": 16384,
+      "sha256": "dec1012818ea05078e5beace2eb4e58a8529e8592f80a458a867e93ff2dee8c7",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/pixbox_02_product.xml",
+      "bytes": 44436,
+      "sha256": "5349c89661ec693eb24716ffb6169caaf6d35e26af36a3eee69c7c1059cb981a",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/pixbox_02_tile_prefix.xml",
+      "bytes": 16384,
+      "sha256": "b70df6661ea6bd7dc22d39adbad8aebc4d2c920bd718fddfa92172c658d66052",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/pixbox_03_product.xml",
+      "bytes": 44265,
+      "sha256": "f91a9f6c64ac7741e094721d394593fec36bfbe54f38e842e83d678ae22a1bb1",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/pixbox_03_tile_prefix.xml",
+      "bytes": 16384,
+      "sha256": "f2a4407504ddc757508536b64fadfd0886fca26196bdc15210fa428ef31678e1",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/pixbox_04_product.xml",
+      "bytes": 44033,
+      "sha256": "bf1a9ce822e1998a8c1912333f1910be80c3454f0f8530e2a77ef26ca9afe6d7",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/pixbox_04_tile_prefix.xml",
+      "bytes": 16384,
+      "sha256": "3b1d5060f77190d4499dab9ec846cb3c4a53dbccea7d78904cc5797b6f385f5e",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/pixbox_05_product.xml",
+      "bytes": 44227,
+      "sha256": "9dec4b4604b9775ce68052092298c5cc6d4d2b84a952195da0dbb4824b780003",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/pixbox_05_tile_prefix.xml",
+      "bytes": 16384,
+      "sha256": "54ffe78c5c0d675988fc0ef29b668477f7f9aa7f8ed4a2ff93aee6f6fa68b05b",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/pixbox_06_product.xml",
+      "bytes": 44626,
+      "sha256": "da6a4c3e4b903566309598b7f57dca0941efd53911bab40ca588ba5be63c7ee9",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/pixbox_06_tile_prefix.xml",
+      "bytes": 16384,
+      "sha256": "e6a9d2fefcf60a55fcff5e039174717b44a637dc2e8a17fe5ed962b1c5df8315",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/pixbox_07_product.xml",
+      "bytes": 44501,
+      "sha256": "84813d92e0878aae51a5eb197ff9a4d9fbf14ec08be563683bb31595e3ba8769",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/pixbox_07_tile_prefix.xml",
+      "bytes": 16384,
+      "sha256": "5e75d6293aa59894337b375c5055c8755295277fd73582529d7e82592ddd59c8",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/pixbox_08_product.xml",
+      "bytes": 44303,
+      "sha256": "8f84236bdd557362a3e5f1ee449e65ceb2880ac4fbfc48397179d3a441d38d4c",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/pixbox_08_tile_prefix.xml",
+      "bytes": 16384,
+      "sha256": "4560ca8fc5ea2f2c92e5fcb206eecb087717f36812534c7afa5ae95215cc4e58",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/pixbox_09_product.xml",
+      "bytes": 44223,
+      "sha256": "c048894f6e206e0eaca9d3229dea799c7c46f83c0bf3b05a8fedfb6dc34117f9",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/pixbox_09_tile_prefix.xml",
+      "bytes": 16384,
+      "sha256": "f1c18a2bf34ad0c87e3758cb16cee7efb8d830890e4cb500f8a89f66cd54a5cf",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/pixbox_10_product.xml",
+      "bytes": 44073,
+      "sha256": "0ad9123a5e4d096a71c82f0ea3c0232cbb4d967f6632e92d17a8ac51213339ca",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/pixbox_10_tile_prefix.xml",
+      "bytes": 16384,
+      "sha256": "bd49d9f7b80ba41d7d2fdc8d3244aed0ac95e915732f4ae1fa4271c380c7b975",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/pixbox_11_product.xml",
+      "bytes": 44299,
+      "sha256": "28b289903769098bef009517fddfbd27e10ab8e19ae34c69505bcb0b2e0bc371",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/pixbox_11_tile_prefix.xml",
+      "bytes": 16384,
+      "sha256": "9222bed53ebaaacd71aec91cdc6c84f92ca41a62b2bc5bed3ba5686f2a0eb1d1",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/pixbox_12_product.xml",
+      "bytes": 44395,
+      "sha256": "c6ae1fc8c29a4d250287bb628d086b9f941292763b6cb2583b963fb470db3d5e",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/pixbox_12_tile_prefix.xml",
+      "bytes": 16384,
+      "sha256": "ebd1f2c13f751bfde7e9890097b98d148462a230e207eabf3302b2dee25a918a",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/pixbox_13_product.xml",
+      "bytes": 44358,
+      "sha256": "6a0e317a23dc9d68eb89897af11c5122f2e700fcef5e8776ed635893274f10a5",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/pixbox_13_tile_prefix.xml",
+      "bytes": 16384,
+      "sha256": "16312214e180b4d2f568a32a5120304c4528da451a21f9289e94575a53a99af9",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/pixbox_14_product.xml",
+      "bytes": 44102,
+      "sha256": "7d67d82bfc22a8498918bf3ff7b7f6e9789439f6940e8794f3890cc88c3b741e",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/pixbox_14_tile_prefix.xml",
+      "bytes": 16384,
+      "sha256": "43b8996b4568b51bd6267bb801f8d9ca5fc2442eaa7c3e204213b2c982678540",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/pixbox_15_product.xml",
+      "bytes": 44476,
+      "sha256": "865847490515d619d98baff753ac10a59056d1c7b69d93c870c0a91199bf0b93",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/pixbox_15_tile_prefix.xml",
+      "bytes": 16384,
+      "sha256": "e125698a14b7de2e6fc81c6207f20b113633882584d67678712a32f51688ac0d",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/pixbox_16_product.xml",
+      "bytes": 44095,
+      "sha256": "304d804f9b5bfaafeafe15144eaa26b762a8070fbd819900c984989de8286df5",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/pixbox_16_tile_prefix.xml",
+      "bytes": 16384,
+      "sha256": "35569928595635d01da8ffb1eec93ef300a1f8103adb84b4c28a90db7857d82d",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/pixbox_17_product.xml",
+      "bytes": 44353,
+      "sha256": "48189bbe9e9f7c68dd936b1e9563cee7da58fea862c890aa25884f74498bbfec",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/pixbox_17_tile_prefix.xml",
+      "bytes": 16384,
+      "sha256": "bfe3f618b02d42638c9c0a05c7a136a2b6a6b85b0b143b71a43863ae33b99658",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/pixbox_18_product.xml",
+      "bytes": 44291,
+      "sha256": "57dd184c4c7128dba818cd06c1bb9b379ce1cf2b316d0a8821b942c5f6821e56",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/pixbox_18_tile_prefix.xml",
+      "bytes": 16384,
+      "sha256": "8b3d12cf0822657d6f8289e0aa26898c60195ff6e48ec03ead7e91ef194ad521",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/pixbox_19_product.xml",
+      "bytes": 44086,
+      "sha256": "dc2f431e4d051a74cc86b9e25e4e122ff622254a38de4122c7687aad02e38c53",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/pixbox_19_tile_prefix.xml",
+      "bytes": 16384,
+      "sha256": "a93fb23321440f5148d9327c8b46a516b2cf70ab6fbc7bfbfab24c2146e554e7",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/pixbox_20_product.xml",
+      "bytes": 44286,
+      "sha256": "a04a63a4371d7ff0f716a3d724b21cab0153b95f2998fdbad9a379f8fadba240",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/pixbox_20_tile_prefix.xml",
+      "bytes": 16384,
+      "sha256": "e347ad53fd9a789d56997eb8e996434fa81f57a371842b8247e9e00760088dde",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/pixbox_21_product.xml",
+      "bytes": 44322,
+      "sha256": "573f9d859cd301c9dcaa63abdd9aac2a2889875db74380a67312ac35841cf63f",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/pixbox_21_tile_prefix.xml",
+      "bytes": 16384,
+      "sha256": "ccb444181dd1db92b93c22f62a4fee199cc22434e52f2467990e58ff6c210cf3",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/pixbox_22_product.xml",
+      "bytes": 44272,
+      "sha256": "4082c2fd491e665647e4b3c65c236784812423f89d2683c1b64e3c8bc5ece232",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/pixbox_22_tile_prefix.xml",
+      "bytes": 16384,
+      "sha256": "d0a86efbf2b5feb03230517c36be03441724d09ab8e5ce629b879944b099a124",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/pixbox_23_product.xml",
+      "bytes": 44104,
+      "sha256": "92bad566545e24c2ed0cdb6deac54e54342e82c21429e2d5d75001368173c1f0",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/pixbox_23_tile_prefix.xml",
+      "bytes": 16384,
+      "sha256": "8343b828f03bc9035ead89539d786b92614223841e2f5088a28efd75297e354f",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/pixbox_24_product.xml",
+      "bytes": 44200,
+      "sha256": "3222da95f6d009e2a1cc33676f539a23113de4f592ef8559a3b48a5862edd6b3",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/pixbox_24_tile_prefix.xml",
+      "bytes": 16384,
+      "sha256": "0d5696d57c23769206ff43a9f24a98ae200c6076643f74898c185df42d71e644",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/pixbox_25_product.xml",
+      "bytes": 44495,
+      "sha256": "f64bbe938aa13030f73179eb6402ff8c792e872bc5760d389aa4b58f5bd776ff",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/pixbox_25_tile_prefix.xml",
+      "bytes": 16384,
+      "sha256": "9115915f4fd68aef0d4a2c3d70998699b85b92798d9ebd7e195091fc52f4984f",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/pixbox_26_product.xml",
+      "bytes": 44669,
+      "sha256": "23f604ea137aebaacf841bf0947b60209b39c0f10a8145621d3884d56bc5654f",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/pixbox_26_tile_prefix.xml",
+      "bytes": 16384,
+      "sha256": "a93e00025d5d2d89849ae422443af37e4328956f513640444a3612cadec13438",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/pixbox_27_product.xml",
+      "bytes": 44086,
+      "sha256": "4c79beb2998199fdc74ec8bacaea882ea055d30fff47b536f8ac255ea2f76f2a",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/pixbox_27_tile_prefix.xml",
+      "bytes": 16384,
+      "sha256": "0ec5c8c5a0a7e01ba740a8d92c0c927fec561c6a8f917f71a4ebc9bacc33c8cd",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/pixbox_28_product.xml",
+      "bytes": 44083,
+      "sha256": "e24541d5ed29ce052b70b647813c9fb7ca177b0e0e89aa9c3dff0a6458b429cc",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/pixbox_28_tile_prefix.xml",
+      "bytes": 16384,
+      "sha256": "1d93028707f99e675c37787f8aac663922220ce582e8da4bd1c09c79100bad32",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/pixbox_description.txt",
+      "bytes": 8092,
+      "sha256": "f238a5962f55a402b915e0a90f37f07773857f6cd3ad0c2317b816ac3a43a142",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/pixbox_positions_only.csv",
+      "bytes": 981757,
+      "sha256": "86027b822d8748bc31cb68054b4437e564181f1d26045e94142658f477b2ab38",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/record_11121064.json",
+      "bytes": 8101,
+      "sha256": "073ea81a380ade5321ed726e3dcaace36b2e85a7a9277d55167f92a14f131a4e",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/record_5036991.json",
+      "bytes": 7634,
+      "sha256": "74fe6520b737f4e41ba9b8f5ee4cfe8ab9c9f2b8fae8d3d9183d888e3a25fab1",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/record_5095024.json",
+      "bytes": 8376,
+      "sha256": "e234d83e20a6eda930d82f02c64602217d498a480d2388951f4d2d6dde324f56",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    },
+    {
+      "local_path": "outputs/phase102/phase102_20261013/acquired/record_7100327.json",
+      "bytes": 8685,
+      "sha256": "db5f55182c5d0f9c0509dbee94afcbdab34cd3578999d434e28e3508bca58f2a",
+      "scope": "metadata/description/index/XML or projected coordinates only"
+    }
+  ],
+  "received_body_bytes_recorded": 6229407,
+  "aborted_batch_conservative_body_upper_bound": 8880111,
+  "browser_text_reserve_bytes": 1000000,
+  "limit_bytes": 20000000,
+  "note": "Aborted OR-batch requests are conservatively charged all111 planned request caps in addition to ledger; browser page payloads not independently metered.",
+  "label_access": {
+    "PixBox_archive_obtained": true,
+    "csv_member_present": true,
+    "CSV_header_read": true,
+    "projected_fields": [
+      "ID",
+      "PRODUCT_ID",
+      "PIXEL_X",
+      "PIXEL_Y",
+      "LATITUDE",
+      "LONGITUDE"
+    ],
+    "category_value_conversion_display_counts_or_selection": false,
+    "raw_csv_extracted_to_file": false,
+    "archive_transferred_to_remote": false,
+    "Kappa_NetCDF_or_masks_obtained": false
+  }
+}

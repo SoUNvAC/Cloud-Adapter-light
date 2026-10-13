@@ -1,0 +1,182 @@
+[
+  {
+    "requested_record": 7100327,
+    "resolved_record": 7100327,
+    "doi": "10.5281/zenodo.7100327",
+    "title": "KappaSet: Sentinel-2 KappaZeta Cloud and Cloud Shadow Masks",
+    "license": {
+      "id": "cc-by-4.0"
+    },
+    "version": "1",
+    "related_identifiers": null,
+    "files": [
+      {
+        "key": "kappaset.zip",
+        "bytes": 56186308652,
+        "published_checksum": "md5:3f435c61efbb511c13a353a322787e42"
+      },
+      {
+        "key": "README.pdf",
+        "bytes": 231988,
+        "published_checksum": "md5:98bf16a2d90cba386b197133a24f402f"
+      }
+    ],
+    "role": "candidate",
+    "record_sha256": "db5f55182c5d0f9c0509dbee94afcbdab34cd3578999d434e28e3508bca58f2a"
+  },
+  {
+    "requested_record": 5036991,
+    "resolved_record": 5036991,
+    "doi": "10.5281/zenodo.5036991",
+    "title": "PixBox Sentinel-2 pixel collection for CMIX",
+    "license": {
+      "id": "cc-by-4.0"
+    },
+    "version": "Version 1.0",
+    "related_identifiers": [
+      {
+        "identifier": "10.5281/zenodo.5040271",
+        "relation": "isSupplementedBy",
+        "resource_type": "dataset",
+        "scheme": "doi"
+      }
+    ],
+    "files": [
+      {
+        "key": "PixBox-S2-CMIX.zip",
+        "bytes": 1537886,
+        "published_checksum": "md5:c279032077e046518fa7e9618be9d81f"
+      },
+      {
+        "key": "Sentinel-2_L1C.zip",
+        "bytes": 22000157118,
+        "published_checksum": "md5:621c1185569e1976e12e7acc032273ce"
+      }
+    ],
+    "role": "candidate",
+    "record_sha256": "74fe6520b737f4e41ba9b8f5ee4cfe8ab9c9f2b8fae8d3d9183d888e3a25fab1"
+  },
+  {
+    "requested_record": 5095024,
+    "resolved_record": 5095024,
+    "doi": "10.5281/zenodo.5095024",
+    "title": "Sentinel-2 KappaZeta Cloud and Cloud Shadow Masks",
+    "license": {
+      "id": "cc-by-4.0"
+    },
+    "version": "1",
+    "related_identifiers": null,
+    "files": [
+      {
+        "key": "README.pdf",
+        "bytes": 347230,
+        "published_checksum": "md5:3be8f41218090903bd0d7d18833c0aaf"
+      },
+      {
+        "key": "sentinel2_cloudmask_kz.zip",
+        "bytes": 27073375803,
+        "published_checksum": "md5:424aa646bfd9b4e74b4aec1b3e7365cd"
+      }
+    ],
+    "role": "lineage_only_not_additional_pool",
+    "record_sha256": "e234d83e20a6eda930d82f02c64602217d498a480d2388951f4d2d6dde324f56"
+  },
+  {
+    "requested_record": 11121064,
+    "resolved_record": 11121065,
+    "doi": "10.5281/zenodo.11121065",
+    "title": "KappaSet_AI4QC dataset",
+    "license": {
+      "id": "cc-by-4.0"
+    },
+    "version": "V1",
+    "related_identifiers": [
+      {
+        "identifier": "10.5281/zenodo.7100326",
+        "relation": "isDerivedFrom",
+        "resource_type": "dataset",
+        "scheme": "doi"
+      },
+      {
+        "identifier": "10.3390/rs13204100",
+        "relation": "references",
+        "resource_type": "publication",
+        "scheme": "doi"
+      }
+    ],
+    "files": [
+      {
+        "key": "Sentinel_2_B01.zip",
+        "bytes": 3268378439,
+        "published_checksum": "md5:5f28cb373f2529c2e45c0241adc6a7f9"
+      },
+      {
+        "key": "Sentinel_2_B03.zip",
+        "bytes": 4332568032,
+        "published_checksum": "md5:380df014efed7f02d2bad152f8c0092b"
+      },
+      {
+        "key": "Sentinel_2_B04.zip",
+        "bytes": 4429492949,
+        "published_checksum": "md5:47db006854efd5c34385b29f2f32c5f0"
+      },
+      {
+        "key": "Sentinel_2_B05.zip",
+        "bytes": 4464451551,
+        "published_checksum": "md5:d406d0b64d7e496b277c20743a6c1e55"
+      },
+      {
+        "key": "Sentinel_2_B07.zip",
+        "bytes": 4742653703,
+        "published_checksum": "md5:f5638165ca7b2d25534d84fde59d0ba2"
+      },
+      {
+        "key": "Sentinel_2_B06.zip",
+        "bytes": 4658309118,
+        "published_checksum": "md5:c30250d207ba6e33ca370b0d76a0be99"
+      },
+      {
+        "key": "Sentinel_2_B08.zip",
+        "bytes": 4807639989,
+        "published_checksum": "md5:8b5a638ddcec097f0c9d9b2c27325ea1"
+      },
+      {
+        "key": "Sentinel_2_B10.zip",
+        "bytes": 1154869471,
+        "published_checksum": "md5:5dc44a2b61c17684366aceb8ed5eac3d"
+      },
+      {
+        "key": "masks.zip",
+        "bytes": 72937998,
+        "published_checksum": "md5:934b415cc5dfef57577d313a83e8b397"
+      },
+      {
+        "key": "Sentinel_2_B02.zip",
+        "bytes": 4255053470,
+        "published_checksum": "md5:7e4bbea026903e0f37b1413d5de81e19"
+      },
+      {
+        "key": "Sentinel_2_B8A.zip",
+        "bytes": 4794172748,
+        "published_checksum": "md5:cab818005f36bf68a06c4475b6e56ac9"
+      },
+      {
+        "key": "Sentinel_2_B09.zip",
+        "bytes": 3433618191,
+        "published_checksum": "md5:99870cf7a6b2a310da79795cc92be436"
+      },
+      {
+        "key": "Sentinel_2_B11.zip",
+        "bytes": 4516451917,
+        "published_checksum": "md5:6f54cce1e726cf939821116b0905eebe"
+      },
+      {
+        "key": "Sentinel_2_B12.zip",
+        "bytes": 4334248304,
+        "published_checksum": "md5:f7debcfb2a31ff853ba943c074ab329f"
+      }
+    ],
+    "role": "lineage_only_not_additional_pool",
+    "record_sha256": "073ea81a380ade5321ed726e3dcaace36b2e85a7a9277d55167f92a14f131a4e"
+  }
+]
