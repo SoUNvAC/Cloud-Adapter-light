@@ -55,7 +55,7 @@ def verify(root):
                     if kind=='O_tail':assert a['max_group_fpr']<=.1
             a=policies[domain+'/'+n+'/O_mean'];b=policies[domain+'/'+n+'/O_tail']
             assert b['threshold']>=a['threshold'] and b['macro_recall']<=a['macro_recall']
-    assert rowcount==1275
+    assert rowcount==3*3*(53+32)==765
     points=read('oracle_boundary_audit.json')['points'];assert len(points)==12
     for point in points:
         a=policies[point['domain']+'/'+point['model']+'/'+point['kind']]
@@ -86,7 +86,7 @@ def verify(root):
     assert len(cpu['score_probes'])==170
     for row in cpu['score_probes']:assert row['max_error']<=(1e-4 if row['model']=='SourceS_100' else 6e-8)
     scores=read('input_score_lock.json');assert len(scores['rows'])==85 and scores['indices_after']==lock['indices_before']
-    return dict(verified=True,files=len(manifest),oracle_points=12,frozen_points=6,per_group_rows=1275,
+    return dict(verified=True,files=len(manifest),oracle_points=12,frozen_points=6,per_group_rows=rowcount,
         decision=decision,primary_recall_gain_pp=primary['mean_delta_recall_pp'],no_fits_or_forwards=True)
 
 if __name__=='__main__':
