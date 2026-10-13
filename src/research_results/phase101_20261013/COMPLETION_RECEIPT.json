@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "execution_commit": "46ca8bc786762787756b535a7d35990300becf6a",
+  "local_and_remote_same_commit": true,
+  "ssh": "gzs, existing configuration",
+  "remote_repo": "/home/scv/Cloud-Adapter-light",
+  "git_pull": "ff-only succeeded",
+  "remote_literal_extraction_rows": 42,
+  "source_stages": 17,
+  "remote_generated_artifacts_git_diff_clean": true,
+  "remote_SHA256_verified_payload_files": 192,
+  "payload_manifest_sha256": "62d3011193f431cf1ccc76f4094834751e21997e6e3ddf7e2a14cbe61afe92b8",
+  "local_payload_manifest_matches_remote": true,
+  "source_manifest_existing_entries_verified": 141,
+  "new_training_fits_calibrations_forwards_evaluations_interval_recomputations": 0,
+  "literature_search": 0,
+  "work_dirs_sync": false,
+  "verification_scope": "既有报告逐字摘录及文件SHA，非重新模型/指标/区间验收",
+  "historical_unverified_boundaries_preserved": true,
+  "windows_linux_JSON_newline_compatibility_repair": "format only; fixed LF; no metrics changed",
+  "receipt_is_supplement_to_payload_manifest": true
+}
