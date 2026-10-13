@@ -1,0 +1,14 @@
+{
+  "CPU_VERIFIED.json": "b4adfa884b570de1c9d1e91ac2b7237ebf5649c1a4f596bc07d9fc8c11341b98",
+  "README.md": "f6776c7126b8a1546b95e817aebdd4c1dcb913236b84f124b4bd51bb25f72df1",
+  "calibration_frozen_reproduction.json": "89ab3db2ca27747efade9f7671d51cb18035ccac30a5973a5f3aebb32a4dd46a",
+  "comparisons.csv": "8bf325726cc9d56c258b854e6f7188d1bed3404cbba6cea7e3ce5edfa9511177",
+  "development_frozen_reproduction.json": "a425e7f43cdeb1626a5712d003b1e3392be96c2da764bf1bdc8104ae70ba7a2a",
+  "input_lock.json": "d8f071bf7129a92a72efdf048a8ac9902e06ba3827c096e4dacc5eb14980aa0b",
+  "input_score_lock.json": "3ea1bdbbcd2a2c0eca3e83ff454978aaaabd07dae3c07ee07453e0260ae9a415",
+  "operating_points.csv": "73d0005d6829a41836c0264fc2926a917c303e271907face3defdb510cf323e4",
+  "oracle_boundary_audit.json": "8f47155476e3197c740f74db08b1460edf85eb77345377e5ce217765441befb5",
+  "paired_changes.csv": "97d7496f9beeacb45ed2f3a93e9ba5e0d74a5589b1d24e628cd29dbbec92a357",
+  "per_group.csv": "0e55ed6cb1c976fc6df4180337e4d7e59559215609c4e553a48a5945960aaee5",
+  "phase99_report.json": "6fad1ee2169d0e9ba7289da5323daf359e401a0879a0b0948e465c067749556a"
+}

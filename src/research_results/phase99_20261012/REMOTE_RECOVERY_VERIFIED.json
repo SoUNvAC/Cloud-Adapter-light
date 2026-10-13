@@ -1,0 +1,20 @@
+{
+  "acceptance": {
+    "verified": true,
+    "files": 12,
+    "oracle_points": 12,
+    "frozen_points": 6,
+    "per_group_rows": 765,
+    "decision": "存在值得另立校准研究的经验工作点",
+    "primary_recall_gain_pp": 10.196353102744455,
+    "no_fits_or_forwards": true
+  },
+  "original_EXIT_CODE": 1,
+  "reason": "Verifier expected1275 instead of3*3*(53+32)=765 rows",
+  "no_rescoring": true,
+  "no_threshold_rescan": true,
+  "immutable_delivery_preserved": true,
+  "verification_git_commit": "c4525329db8c67beeff7b834801fc4ccfcad0f21",
+  "verification_code_sha256": "62f2d65c9f42b4723a6256537830118423d687a9ded9864b9f19e2713c41f473",
+  "manifest_sha256": "ffa4582ebf943450f6cc6f1971a1293655430b72438616fa42b4c27ebd7adf79"
+}

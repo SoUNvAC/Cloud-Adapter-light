@@ -1,0 +1,11 @@
+﻿domain,comparison,mean_delta_recall_pp,recall_groups
+calibration,MIN_minus_SourceS_O_tail,20.548322955133703,13
+calibration,G7_minus_SourceS_O_tail,23.24756750678807,13
+calibration,G7_100_tail_minus_mean,-6.279320498709844,13
+calibration,SourceS_100_tail_minus_mean,-16.478689506287814,13
+calibration,MIN_tail_minus_mean,-7.19733522520185,13
+development,MIN_minus_SourceS_O_tail,10.196353102744455,7
+development,G7_minus_SourceS_O_tail,13.106919207988975,7
+development,G7_100_tail_minus_mean,-1.5612864840972345,7
+development,SourceS_100_tail_minus_mean,-9.219035813134363,7
+development,MIN_tail_minus_mean,-16.945072087102243,7

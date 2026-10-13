@@ -1,0 +1,23 @@
+{
+  "verified": true,
+  "files": 12,
+  "oracle_points": 12,
+  "frozen_points": 6,
+  "per_group_rows": 765,
+  "decision": "存在值得另立校准研究的经验工作点",
+  "primary_recall_gain_pp": 10.196353102744455,
+  "no_fits_or_forwards": true,
+  "csv_rows": {
+    "operating_points.csv": 18,
+    "per_group.csv": 765,
+    "comparisons.csv": 10,
+    "paired_changes.csv": 425
+  },
+  "execution_git_commit": "c32889b",
+  "verification_fix_commit": "c452532",
+  "runtime_code_and_protocol_hashes_match_execution_git": true,
+  "all_paired_csv_values_recomputed": true,
+  "remote_receipt_verified": true,
+  "manifest_sha256": "ffa4582ebf943450f6cc6f1971a1293655430b72438616fa42b4c27ebd7adf79",
+  "no_rescoring": true
+}
