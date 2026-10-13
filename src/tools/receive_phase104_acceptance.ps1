@@ -1,4 +1,4 @@
-# One-shot Phase104 completion collector, shared data only. Never work_dirs or imagery.
+﻿# One-shot Phase104 completion collector, shared data only. Never work_dirs or imagery.
 $ErrorActionPreference = 'Stop'
 Set-Location -LiteralPath 'D:\Cloud-Adapter-light'
 $phase104Python = 'C:\Users\Administrator\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe'
