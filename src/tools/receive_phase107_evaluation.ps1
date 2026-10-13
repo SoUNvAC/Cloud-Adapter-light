@@ -10,7 +10,7 @@ New-Item -ItemType Directory -Path $phase107Data -Force | Out-Null
 Set-Content -LiteralPath (Join-Path $phase107Out 'COLLECTOR_PID') -Value $PID
 try {
     while ($true) {
-        $phase107Query = "if test -f '/home/scv/shared/phase107_20261013_logs/EXIT_CODE'; then cat '/home/scv/shared/phase107_20261013_logs/EXIT_CODE'; else printf RUNNING; fi"
+        $phase107Query = "if test -f '/home/scv/shared/phase107_20261013_logs/RESUME_EXIT_CODE'; then cat '/home/scv/shared/phase107_20261013_logs/RESUME_EXIT_CODE'; else printf RUNNING; fi"
         $ErrorActionPreference = 'Continue'
         $phase107Reply = & ssh -o ConnectionAttempts=3 -o ConnectTimeout=15 gzs $phase107Query 2>&1
         $phase107SshExit = $LASTEXITCODE
