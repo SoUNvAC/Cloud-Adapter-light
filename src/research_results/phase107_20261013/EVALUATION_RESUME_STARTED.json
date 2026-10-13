@@ -1,0 +1,9 @@
+{
+  "utc": "2026-10-13T12:31:37.968934+00:00",
+  "R_model_sha256": "80be9ffd61c57d426ce710f18fc7d90bf0a151cf95615c1a6141bbc8a6b76aa8",
+  "resume_code_sha256": "e86d0b41f788c10078166af07179baff2b54d0a6c16a714ee877f33591eec7ff",
+  "reference_sha256": "49e50f4f1bea2ef71e5dc533846243dd0fbc543e32adb0b46cc6529185afab71",
+  "resume_lock_sha256": "34b3a0de729c0cac72b8a291b8b28af2374b53cda5a9fdee5d1bfd5a9559c604",
+  "additional_fits": 0,
+  "additional_forwards": 0
+}

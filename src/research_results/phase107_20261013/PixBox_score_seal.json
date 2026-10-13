@@ -1,0 +1,24 @@
+{
+  "utc": "2026-10-13T12:32:36.032375+00:00",
+  "score_sha256": "fdb570e019bd10d137620c59235acf6afbda54c0bf2e9ec7ac04c3e824f0f95b",
+  "CPU": {
+    "R": {
+      "max_abs_error": 0.0,
+      "bitwise_equal": 9498,
+      "samples": 9498,
+      "tolerance": "one float32 ULP"
+    },
+    "S": {
+      "max_abs_error": 0.0,
+      "bitwise_equal": 9498,
+      "samples": 9498,
+      "tolerance": "one float32 ULP"
+    },
+    "S_Phase106_scores_bitwise_equal": true
+  },
+  "all_point_ids": 9500,
+  "shared20m_score_identity": true,
+  "no_label_access": true,
+  "model_lock_sha256": "74d008cdb6e16a0a088603a5df8c50fb77687f70dcf2814c418f05c483dab004",
+  "development_aggregate_sha256": "c373960824fb60b6337d0742ad3592c9d6f10273fb7dcf8fb782285d6a29a4f5"
+}

@@ -1,0 +1,27 @@
+{
+  "status": "complete",
+  "utc": "2026-10-13T12:39:58.588141+00:00",
+  "fit_attempts": 1,
+  "fit_seconds": 4.339552318997448,
+  "new_forwards": 0,
+  "new_download_bytes": 0,
+  "new_thresholds": 0,
+  "PixBox_score_sha256": "fdb570e019bd10d137620c59235acf6afbda54c0bf2e9ec7ac04c3e824f0f95b",
+  "local_private_join_sha256": "c6d976cc6c8b945f008b5f9d48a37b27460d60c0956d91d41727b7c35fdf3a7c",
+  "report_sha256": {
+    ".gitattributes": "f06202a408fef9b9ea69bb6b1cb8160dbb0378c5bb67a444d510d231813824c8",
+    "CPU_acceptance.json": "9195d70f090375071e5f963b82a08352ffee4d991476590f376733a74427ac3e",
+    "development_per_group.csv": "ea64e37cb11c88759e2dc7940b9390cc9b5f9cb7fa010e5cd1ab56cebbf0629d",
+    "evaluation_resume_lock.json": "34b3a0de729c0cac72b8a291b8b28af2374b53cda5a9fdee5d1bfd5a9559c604",
+    "fit_input_lock.json": "9eb2722df7ef24923441d14781576d083d0c5ee6505967d41c3b5ccb8d607536",
+    "fixed_comparisons.json": "d23e2a055243923994ae685c8c23ba76d3741df8a02e6e954048a68d846590be",
+    "LOCAL_SCORE_SEAL.json": "fe439d12667148e951728d36c90a50157f6158037d21268781da87dcb333462e",
+    "model_lock.json": "74d008cdb6e16a0a088603a5df8c50fb77687f70dcf2814c418f05c483dab004",
+    "PixBox_per_group.csv": "ed97c958d54c3c29aaa6b6fce5568bb528a6e221a20088920fe5e71f268e0836",
+    "PixBox_score_seal.json": "9214eccbbf392e056e79591c5e944087456bd20a0798bf9f37d8daf4e5ceeade",
+    "pre_fit_lock.json": "68133303a071c2038cec8259236a156f340e1b7ce01daa258fff7225e50515b8",
+    "R_model.json": "80be9ffd61c57d426ce710f18fc7d90bf0a151cf95615c1a6141bbc8a6b76aa8",
+    "README.md": "ccd63252ea50160f5e31ec6832ae45e4e33529f1fc3dddaca62c2487eca7fa6a",
+    "two_pool_three_score_summary.csv": "73c47b873717d9c86e33f0a2898502c7e9e4e361670e769d8606edfecc7416d1"
+  }
+}

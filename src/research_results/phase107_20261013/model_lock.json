@@ -1,0 +1,47 @@
+{
+  "status": "sole_R_fit_complete_before_evaluation",
+  "R_model_sha256": "80be9ffd61c57d426ce710f18fc7d90bf0a151cf95615c1a6141bbc8a6b76aa8",
+  "original_S": {
+    "mean": [
+      -1.3017376375641958,
+      0.39505300565154255,
+      0.24701699410550032,
+      0.19859101917179514
+    ],
+    "scale": [
+      0.47215399307502803,
+      0.25285773867447897,
+      0.15938402654881018,
+      0.12964792447247495
+    ],
+    "theta": [
+      0.7245657698267233,
+      -0.7644546961740207,
+      -0.030448672972106964,
+      -1.305605618836399,
+      -5.609376498409121
+    ],
+    "iterations": 17,
+    "optimizer_success": true,
+    "objective": 0.06688625399654928,
+    "penalty": 0.001,
+    "positive_features": 1,
+    "threshold": -1.0312467813491821,
+    "fit_macro_fpr": 0.009999993579556667,
+    "nonshadow": "source",
+    "columns": [
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "fit_input_lock_sha256": "9eb2722df7ef24923441d14781576d083d0c5ee6505967d41c3b5ccb8d607536",
+  "fit_attempts": 1,
+  "fit_seconds": 4.339552318997448,
+  "peak_process_rss_bytes": 443269120,
+  "independent_standardization_max_abs_error": 0.0,
+  "new_forwards": 0,
+  "new_downloads": 0,
+  "new_thresholds": 0
+}

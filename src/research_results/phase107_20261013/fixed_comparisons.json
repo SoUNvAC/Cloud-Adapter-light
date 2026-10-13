@@ -1,0 +1,90 @@
+{
+  "rows": [
+    {
+      "domain": "PixBox",
+      "comparison": "S-R",
+      "primary": true,
+      "groups": 8,
+      "mean_delta_AP_pp": 2.271791160963568,
+      "CI95_pp": [
+        -3.143397262271308,
+        8.807788646601107
+      ],
+      "width_pp": 11.951185908872414,
+      "seed": 107013,
+      "resamples": 10000,
+      "improved": 4,
+      "stable": 2,
+      "declined": 2,
+      "worst_group": "44SKJ",
+      "worst_delta_AP_pp": -10.646011902081653,
+      "evidence": "uncertain",
+      "exploratory": true
+    },
+    {
+      "domain": "PixBox",
+      "comparison": "R-A",
+      "primary": false,
+      "groups": 8,
+      "mean_delta_AP_pp": 6.03490385832435,
+      "CI95_pp": [
+        -6.321803069150378,
+        18.975620818266172
+      ],
+      "width_pp": 25.29742388741655,
+      "seed": 107013,
+      "resamples": 10000,
+      "improved": 6,
+      "stable": 0,
+      "declined": 2,
+      "worst_group": "19FDV",
+      "worst_delta_AP_pp": -24.9963240867337,
+      "evidence": "uncertain",
+      "exploratory": true
+    },
+    {
+      "domain": "development",
+      "comparison": "S-R",
+      "primary": false,
+      "groups": 7,
+      "mean_delta_AP_pp": 2.2181574530567874,
+      "CI95_pp": [
+        0.06465440015776615,
+        4.911209187167253
+      ],
+      "width_pp": 4.846554787009486,
+      "seed": 107013,
+      "resamples": 10000,
+      "improved": 3,
+      "stable": 3,
+      "declined": 1,
+      "worst_group": "32TML",
+      "worst_delta_AP_pp": -1.664002371254092,
+      "evidence": "positive",
+      "exploratory": true
+    },
+    {
+      "domain": "development",
+      "comparison": "R-A",
+      "primary": false,
+      "groups": 7,
+      "mean_delta_AP_pp": 3.4717890757107326,
+      "CI95_pp": [
+        1.2512109591183822,
+        5.377921879336385
+      ],
+      "width_pp": 4.126710920218002,
+      "seed": 107013,
+      "resamples": 10000,
+      "improved": 5,
+      "stable": 2,
+      "declined": 0,
+      "worst_group": "35RPM",
+      "worst_delta_AP_pp": -0.3403531293375339,
+      "evidence": "positive",
+      "exploratory": true
+    }
+  ],
+  "sole_primary": "PixBox S-R",
+  "both_pools_previously_exposed": true
+}
