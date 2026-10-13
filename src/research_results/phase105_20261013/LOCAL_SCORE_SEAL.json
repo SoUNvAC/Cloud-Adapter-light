@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-13T10:04:24.159607+00:00",
+  "score_sha256": "11e460502c088c5a157208680676e8e40d98995eab693045f0c6bd5998879a5d",
+  "remote_seal_sha256": "572fca81cf4416d41f47328ea94436a191c020f4c7d281ad2ef47f2996c75562",
+  "locked_before_reference_join_and_metrics": true
+}

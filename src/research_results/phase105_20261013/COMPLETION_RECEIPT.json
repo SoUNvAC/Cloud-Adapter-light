@@ -1,0 +1,27 @@
+{
+  "utc": "2026-10-13T11:18:55.673649+00:00",
+  "status": "complete_saved_evaluation_verified",
+  "original_frozen_evaluator_sha256": "436b0830df9e713ddcc13b19d1de803aa1434216e5e12f4d1196015545379bdb",
+  "post_evaluation_print_only_fix_sha256": "c42d271f100434b8dfbddbfaeb5da2511d5ad3f96a53c43f1b67db933e38ff92",
+  "issue": "Missing json import only at final print after all statistics, verification, reports and mirrored outputs had been saved; original collector exit1/error log preserved",
+  "no_inference_or_evaluation_rerun": true,
+  "actual_Source_forwards": 531,
+  "model_fits": 0,
+  "score_sha256": "11e460502c088c5a157208680676e8e40d98995eab693045f0c6bd5998879a5d",
+  "all_saved_results_hash_chain_verified": true,
+  "payload_sha256": {
+    ".gitattributes": "f06202a408fef9b9ea69bb6b1cb8160dbb0378c5bb67a444d510d231813824c8",
+    "cost.json": "e52a661c6a6a3eb9ec2742b4cc030344c6b4252cfe77ee5c6f7b372156e39579",
+    "CPU_statistics_acceptance.json": "5721bad778f2ca89164ac0fec8d89946c6603f48781701b0d1c254772a649ca2",
+    "CPU_tree_acceptance.json": "6706a428345d538d2a20593c262f9e0782b74225b2a31d179a2842a3c6435e34",
+    "evaluation_lock.json": "0afd757eb72cc99b79dce29f4f7fe1dc90b575521eee9fb4914c6bcb1f362881",
+    "forward_receipts.json": "32e57fbe8d64def22062a3713d99c11c08efb4e3b6f33fc2eaa39e06c18b6c4e",
+    "LOCAL_SCORE_SEAL.json": "cfe1fc22246ad6eec7fbf846f0d995e367c201b32439ef648bbc1c46d5996b21",
+    "per_group_results.csv": "03fcd4f781183cadcb5c6c63c374b7c9fd841fef1645c7f8140ec7259fa9fb78",
+    "primary_endpoint.json": "3072eb951cbf8f89ae277593fb5ae948bd30eac485b1f87ea7bdf14a62d65c7f",
+    "README.md": "40dfa0f712e66301e8e92ee0719f025c62367e5b303d0b7db6fe3195a45b7a25",
+    "SCORES_SEALED.json": "572fca81cf4416d41f47328ea94436a191c020f4c7d281ad2ef47f2996c75562",
+    "task_lock.json": "8fead8f7e883d27b849c89c86c159978f4bafef42816d15603f66568e8f9c46d",
+    "two_model_summary.csv": "736680664d2783c3c6d15a2821f0a68f60a63e6b2e1e8c63ab9e0a845199d39b"
+  }
+}

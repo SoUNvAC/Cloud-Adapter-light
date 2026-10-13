@@ -1,0 +1,39 @@
+{
+  "status": "passed",
+  "rows": [
+    {
+      "model": "G6",
+      "points": 9498,
+      "reload_bitwise_equal": true,
+      "independent_CPU_tree_max_abs_error": 0.0,
+      "model_sha256": "385b26b0b90b10281e24b0a3f73479ac2d9811c65ac345af75c1f35c0ebc9cd0",
+      "feature_columns": 6
+    },
+    {
+      "model": "G7",
+      "points": 9498,
+      "reload_bitwise_equal": true,
+      "independent_CPU_tree_max_abs_error": 0.0,
+      "model_sha256": "e0e701b1fa68fdb96eb93eab1c88687f6eef3574b7f455db0e8f42c441ea9513",
+      "feature_columns": 7
+    }
+  ],
+  "environment_versions": {
+    "numpy": "1.26.4",
+    "scipy": "1.13.1",
+    "scikit-learn": "1.5.2",
+    "joblib": "1.4.2",
+    "threadpoolctl": "3.5.0"
+  },
+  "zero_fit": true,
+  "all_original_points": 9500,
+  "valid_input_points": 9498,
+  "shared20m_cells_consistent": true,
+  "independent_point_inputs_bitwise_equal": true,
+  "distinct20m_cells": 9484,
+  "score_sha256": "11e460502c088c5a157208680676e8e40d98995eab693045f0c6bd5998879a5d",
+  "point_inputs_sha256": "9906a6fa349f118defce465fe06dffa04d0185e59fd4d8842f046b7bcc7f07ae",
+  "feature_matrix_sha256": "26d53c82cf406b551d7ce93d480f78da32c70a19c8584f428605397671f5b81f",
+  "seconds": 2.564521230990067,
+  "peak_process_rss_bytes": 209321984
+}

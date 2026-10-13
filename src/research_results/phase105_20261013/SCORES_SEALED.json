@@ -1,0 +1,12 @@
+{
+  "status": "no_label_scores_complete_before_local_reference_join",
+  "utc": "2026-10-13T10:01:31.304647+00:00",
+  "score_sha256": "11e460502c088c5a157208680676e8e40d98995eab693045f0c6bd5998879a5d",
+  "evaluation_lock_sha256": "0afd757eb72cc99b79dce29f4f7fe1dc90b575521eee9fb4914c6bcb1f362881",
+  "forward_receipts_sha256": "32e57fbe8d64def22062a3713d99c11c08efb4e3b6f33fc2eaa39e06c18b6c4e",
+  "CPU_tree_acceptance_sha256": "6706a428345d538d2a20593c262f9e0782b74225b2a31d179a2842a3c6435e34",
+  "model_sha256": {
+    "G6": "385b26b0b90b10281e24b0a3f73479ac2d9811c65ac345af75c1f35c0ebc9cd0",
+    "G7": "e0e701b1fa68fdb96eb93eab1c88687f6eef3574b7f455db0e8f42c441ea9513"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "comparison": "G7_153 minus G6_153",
+  "unit": "related group; products merged before AP",
+  "n_groups": 8,
+  "mean_delta_AP_pp": 8.7453583448297,
+  "paired_group_bootstrap95_pp": [
+    2.21337215917866,
+    16.319340100214603
+  ],
+  "CI_width_pp": 14.105967941035942,
+  "seed": 105013,
+  "resamples": 10000,
+  "rule": "lower>0 AND total width<=20pp AND >=8 groups each>=5 positive/20 negative",
+  "passed": true,
+  "conclusion": "预定Source条件增量复现证据通过",
+  "improved": 5,
+  "stable": 2,
+  "declined": 1,
+  "worst_group": "48XWG",
+  "worst_delta_AP_pp": -1.0665678083819325,
+  "descriptive_interval": true,
+  "no_full_scene_safety_claim": true
+}

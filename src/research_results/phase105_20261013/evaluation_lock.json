@@ -1,0 +1,75 @@
+{
+  "created_utc": "2026-10-13T09:34:48.619059+00:00",
+  "local_task_lock_sha256": "8fead8f7e883d27b849c89c86c159978f4bafef42816d15603f66568e8f9c46d",
+  "source_checkpoint_sha256": "64dd9a20288c35ab3362b8b1c1dafc216d9c44d60868475177e139d6be859dc9",
+  "original153_models": {
+    "G6": "385b26b0b90b10281e24b0a3f73479ac2d9811c65ac345af75c1f35c0ebc9cd0",
+    "G7": "e0e701b1fa68fdb96eb93eab1c88687f6eef3574b7f455db0e8f42c441ea9513"
+  },
+  "window_index_sha256": "0238604b0da093e73238286e1f1cc350787544d44916ffaa975ccead52627bf3",
+  "no_label_inputs": true,
+  "Source_lineage": {
+    "phase93_fit_input_sha256": "d047e88d574c36bad3553dfd55445fa844b898ee0a2914718c63ab69bd460563",
+    "phase67_control_sha256": "c2a83964073918015460e0ad89a9857b60b6a764e0f8562652472b224915f5ad",
+    "recovery_lock_sha256": "bcb91cf56d3b796c22bbf60891fb8d045dd8e6af80f5c42a00818fa72501f31f"
+  },
+  "actual_code_sha256": {
+    "src/tools/evaluate_phase105_local.py": "436b0830df9e713ddcc13b19d1de803aa1434216e5e12f4d1196015545379bdb",
+    "src/tools/phase105_common.py": "9be4e7cc5e9ce962c922329be506c47d7c74a9321542ead587bc19fc9fb2627e",
+    "src/tools/prepare_phase105.py": "7116fa6f1a18c2bcd1b27214f304e5ae55cafacda982343a8b6b146e9d814d1a",
+    "src/tools/receive_phase105_evaluation.ps1": "1d9b9e1abb4a1441c9a3c7a5b82673179d4a18275622995e868f2b401895d73c",
+    "src/tools/run_phase105.sh": "dc7ddd1f0b27b926297854c4ce871a78c3920a89c6290af559f775a6f9535ea3",
+    "src/tools/run_phase105_source.py": "ad90b0cfa84b8cdadc2c23206cf75dcfeee38026765b7eaefcdca5aff2eb4636",
+    "src/tools/run_phase105_trees.py": "b61de794ba11dd8c646d73e9ecd234b051e659c0281b315b970e4c18c7559587",
+    "src/tools/test_phase105.py": "5b7e9bbd26814cb61df67f0a1474592faa75e6f25c407bbe3f47823211b711ba"
+  },
+  "original_runtime": {
+    "status": "passed",
+    "mmcv": "2.1.0",
+    "mmseg": "1.2.2",
+    "torch": "2.1.0+cu121",
+    "cv2": "4.10.0",
+    "numpy": "1.26.4",
+    "Resize_source_sha256": "ce4708c3f06cda614741471cc21d84fe6d5d4212628da4c9e57ca392b793323e",
+    "postprocess_source_sha256": "cf8f6e27eab74d4b3ad1347f9e8d50da7c252ce177f803fa142c8969c460fdb7",
+    "original_data_preprocessor": {
+      "type": "SegDataPreProcessor",
+      "mean": [
+        123.675,
+        116.28,
+        103.53
+      ],
+      "std": [
+        58.395,
+        57.12,
+        57.375
+      ],
+      "size": [
+        512,
+        512
+      ],
+      "bgr_to_rgb": true,
+      "pad_val": 0,
+      "seg_pad_val": 255
+    },
+    "decode_head_align_corners": false,
+    "config_inheritance_sha256": {
+      "src/configs/protocol/phase65a_explore_rgb.py": "6185e449d7af15f726890d69aad1d0bf334fb3d2c9020b7609b37b1bab94515d",
+      "src/configs/protocol/phase64_source_parent_rgb.py": "d2ff071bb34a7921d37b988a4c31c616f899c1bbd631100f56ae0900910a1d20",
+      "src/configs/protocol/phase22_clean_v8_l1c.py": "8c984c3ec7132ebdf8c125077a841146e958244bb780a58cf5a5d47577d26120",
+      "src/configs/light/cloud_adapter_dinov2_s_mask2former_lite_q25_d2_p2_l1c.py": "bac947991566dda0935264f9c67dbaccd83520dc2ea74ffa18da9c85517855a1",
+      "src/configs/light/cloud_adapter_dinov2_s_mask2former_lite_q25_d2_l1c.py": "994b8797ee918f57d6fd65220b266c50fcbfe50d9609355661826fac2970ed9a",
+      "src/configs/light/cloud_adapter_dinov2_s_mask2former_lite_q25_l1c.py": "3ea705b1dc54a69e013ffff75f1c084d260aa49480943248ba446c79bbc76df7",
+      "src/configs/light/cloud_adapter_dinov2_s_mask2former_lite_l1c.py": "daa63b797ebc851133b911b13a5b3d8430abe19d44797403c86a492e344c19d2",
+      "src/configs/control/cloud_adapter_dinov2_s_mask2former_4x_l1c.py": "be8b73b09724998a23b7ccd76ecee016269332fd76b2acce53e970406576cf18",
+      "src/configs/light/cloud_adapter_dinov2_s_light_l1c.py": "588e45a64be804e4832596836a3e8c109cd792e45e43128a0d108b436fa18514",
+      "src/configs/_base_/datasets/cloudsen12_high_l1c.py": "67b217f5aaecfe929b7b0d51fadc8cdd67cf5c202c890c37cac75ab89c34d7c6",
+      "src/configs/_base_/default_runtime.py": "ea4ba3b2c9ae2d5919e7477be29dea7d2dd534b49e0ed72a16c43e2d1794aafe",
+      "src/configs/_base_/models/cloud_adapter_dinov2_small.py": "40230a2bfaad681b7525f963aa5211a9603ac2061eca520aa64722120778a492"
+    },
+    "network_built": false,
+    "model_loaded": false,
+    "forwards": 0
+  },
+  "max_forwards": 531
+}
