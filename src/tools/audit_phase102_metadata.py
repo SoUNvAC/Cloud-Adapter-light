@@ -132,7 +132,7 @@ def main(identity_only=False):
         for members in groups:
             known_groups.append({'source':source,'group_id':hashlib.sha256('|'.join(members).encode()).hexdigest(),
                 'members':members,'member_count':len(members),'metadata_representative_only':min(members),
-                'connectivity_complete':all(r['record_key'] in geo and not r['spatial_unknown'] for r in selected if r['record_key'] in members),
+                'connectivity_complete':all(r['metadata_complete'] and r['record_key'] in geo and not r['spatial_unknown'] and not r['parent_proxy'] for r in selected if r['record_key'] in members),
                 'role_allocation':'none; not calibration/confirmation split'})
     index=[]
     for r in rows:index.append({k:r.get(k,'') for k in ['source','record_key','product_id','sensing_key','utc_day','tile','orbit',

@@ -1,5 +1,5 @@
 """Independent CPU checks of fixed metadata identities, components and exclusion reasons."""
-import csv,hashlib,json
+import csv,hashlib,json,math
 from collections import defaultdict,deque
 from pathlib import Path
 
@@ -55,6 +55,35 @@ def main():
     near=project_geometry(box(501999.9,5000000,502999.9,5001000),'EPSG:32632','EPSG:4326')
     far=project_geometry(box(502000.1,5000000,503000.1,5001000),'EPSG:32632','EPSG:4326')
     assert buffered_intersects(a,near,'EPSG:32632') and not buffered_intersects(a,far,'EPSG:32632')
+    # Independent full-parent native-grid distance search (no STRtree) for PixBox.
+    # This verifies the5 extra spatial exclusions and all16 admitted records against
+    # every registered history envelope, not merely reported matching IDs.
+    from shapely.geometry import Polygon
+    def densify(poly,step):
+        ring=list(poly.exterior.coords);out=[]
+        for a,b in zip(ring[:-1],ring[1:]):
+            n=max(1,math.ceil(math.hypot(b[0]-a[0],b[1]-a[1])/step))
+            out.extend((a[0]+j*(b[0]-a[0])/n,a[1]+j*(b[1]-a[1])/n) for j in range(n))
+        return Polygon(out+[out[0]])
+    spatial_checked=0;new_exclusions=0
+    for r in index:
+        c=by[r['record_key']]
+        if c['source']!='PixBox5036991' or c['tile'] in tiles:continue
+        s=c['grid'];native=box(s['ULX'],s['ULY']+s['NROWS']*s['YDIM'],s['ULX']+s['NCOLS']*s['XDIM'],s['ULY'])
+        wgs=project_geometry(densify(native,250),c['crs'],'EPSG:4326')
+        l,b,rr,t=wgs.bounds;lonpad=.06/max(.001,math.cos(math.radians(min(89.99,max(abs(b),abs(t))+.06))))
+        search=box(l-lonpad,b-.06,rr+lonpad,t+.06);hits=[]
+        for h in history:
+            bounds=h['wgs84_bounds']
+            if not bounds:raise AssertionError('Unresolved historical envelope')
+            rect=box(*bounds)
+            if not search.intersects(rect):continue
+            assert bounds[2]-bounds[0]<180,'Unknown wide footprint blocks pass'
+            other=project_geometry(densify(rect,.002),'EPSG:4326',c['crs'])
+            if native.distance(other)<=2000:hits.append(h['product'])
+        spatial_checked+=1
+        assert bool(hits)==('both_1000m_buffers_intersect' in json.loads(r['exclusion_reasons']))
+        if hits:new_exclusions+=1
     checks=load(BASE/'coordinate_grid_checks.json');assert len(checks)==29
     audit=load(BASE/'metadata_audit.json')
     for name,h in audit['input_SHA256'].items():assert hashlib.sha256((BASE/'inputs'/name).read_bytes()).hexdigest()==h
@@ -62,6 +91,8 @@ def main():
         'PixBox_products':29,'coordinate_records_allowlist_only':17351,
         'history_identity_tile_exclusion_verified':True,'BFS_components_match':True,
         'fixed_1000m_each_buffer_contact_test_passed':True,'all_input_hashes_match':True,
+        'independent_full_history_distance_checked_products':spatial_checked,
+        'independent_additional_geometry_exclusions':new_exclusions,
         'existing_history_footprint_geometry_lineage':'Phase86 positions-only metadata; no historical raster reopened',
         'coordinate_grid_checks':len(checks),'coordinate_pass_count':sum(c['passed'] for c in checks),
         'conservative_metadata_transfer_budget_bytes':conservative_total,
