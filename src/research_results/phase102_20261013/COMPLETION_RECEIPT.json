@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "result_commit": "6baffefe1e24eb2ddc2fe0f5204e423c400f8bf9",
+  "local_remote_commit_identical": true,
+  "git_push": "succeeded",
+  "remote_git_pull": "ff-only succeeded",
+  "SSH": "gzs existing configuration",
+  "remote_CPU_environment": "existing cloud-lite-pt210",
+  "payload_files": 23,
+  "payload_manifest_sha256": "a701b12f3402543d763c388c305380ac8b6411a328d8d7863e47d1d8660ad756",
+  "all_remote_payload_SHA256_match": true,
+  "raw_label_ZIP_transferred": false,
+  "work_dirs_sync": false,
+  "new_model_predictions_fits_training_or_performance_evaluations": 0,
+  "receipt_is_supplement_to_payload_manifest": true
+}
