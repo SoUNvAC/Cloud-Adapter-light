@@ -1,0 +1,122 @@
+{
+  "task": "Ground cloud shadow vs Surface+Cloud, sampled-point binary reference",
+  "C": "CLOUD_CHARACTERISTICS_ID",
+  "S": "SHADOW_ID",
+  "U": "SURFACE_ID",
+  "required_semantic_fields": [
+    "CLOUD_CHARACTERISTICS_ID",
+    "SHADOW_ID",
+    "SURFACE_ID"
+  ],
+  "known_codes": {
+    "C": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "S": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "U": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35
+    ]
+  },
+  "numeric_encoding": "finite mathematically integral values only; all raw attributes retained",
+  "global_ignore_priority": [
+    "missing/unknown requiredC/S/U fields",
+    "U in9/15/16 spatial cloud mixture",
+    "S4 shadow above cloud"
+  ],
+  "positive": {
+    "C": [
+      1,
+      7
+    ],
+    "S": [
+      3
+    ]
+  },
+  "negative_surface": {
+    "C": [
+      1,
+      7
+    ],
+    "S": [
+      1,
+      2
+    ],
+    "S2_terrain_tree_building_shadow_is_hard_negative": true
+  },
+  "negative_cloud": {
+    "C": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      9
+    ],
+    "S": [
+      1
+    ]
+  },
+  "other_combinations": "ignore with recorded reasons, including C0/S0, fog/haze/border/mixedcloud and cloud-shadow conflict",
+  "U0": "known None of classes code; not automatically globally excluded by this fixed task; no Surface subtype inference",
+  "C1_vs_C7": "separate supports, never adapt definition based on counts",
+  "duplicate_position": "same original product and canonical integral10m index; coordinate-pending positions remain ignored",
+  "duplicate_attributes": "all original categorical columns, exact whitespace-normalized tuple; no majority vote",
+  "position_rule": "original XML continuous coordinates floor to10/20m cells; exact original10m index; any disagreement/noninteger/boundary<=0.02m pending; no translation search",
+  "20m_policy": "list label combinations and positive/negative conflict; no10m label expansion or majority truth",
+  "clustering": "fixed1km UTM grid anchored0m, per-CRS spatial cells pooled across dates within group; descriptive counts only",
+  "AP_support": "at least one coordinate-valid deduplicated positive and negative per existing group; compute noAP",
+  "scope": "only16 admitted products /10 fixedPhase102groups; no new roles"
+}

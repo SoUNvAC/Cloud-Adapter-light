@@ -1,0 +1,370 @@
+[
+  {
+    "product_id": "S2A_MSIL1C_20170113T072241_N0204_R006_T40UEE_20170113T072238",
+    "product_link": "1407300752",
+    "group_id": "83648a01da773580ef92aade342ca7d137afc328617a58cbe425f0b73689e510",
+    "crs": "EPSG:32640",
+    "grid10": {
+      "ULX": 499980.0,
+      "ULY": 6000000.0,
+      "XDIM": 10.0,
+      "YDIM": -10.0,
+      "NROWS": 10980,
+      "NCOLS": 10980
+    },
+    "grid20": {
+      "ULX": 499980.0,
+      "ULY": 6000000.0,
+      "XDIM": 20.0,
+      "YDIM": -20.0,
+      "NROWS": 5490,
+      "NCOLS": 5490
+    },
+    "original_XML_prefix_sha256": "bfe3f618b02d42638c9c0a05c7a136a2b6a6b85b0b143b71a43863ae33b99658"
+  },
+  {
+    "product_id": "S2A_MSIL1C_20170706T051651_N0205_R062_T48XWG_20170706T051649",
+    "product_link": "2019111565",
+    "group_id": "cff44b9f6e50c2d2b4bdfb7ce491b1bedcacde5befc4d36e3f7ad563ae4ee263",
+    "crs": "EPSG:32648",
+    "grid10": {
+      "ULX": 499980.0,
+      "ULY": 8200020.0,
+      "XDIM": 10.0,
+      "YDIM": -10.0,
+      "NROWS": 10980,
+      "NCOLS": 10980
+    },
+    "grid20": {
+      "ULX": 499980.0,
+      "ULY": 8200020.0,
+      "XDIM": 20.0,
+      "YDIM": -20.0,
+      "NROWS": 5490,
+      "NCOLS": 5490
+    },
+    "original_XML_prefix_sha256": "0ec5c8c5a0a7e01ba740a8d92c0c927fec561c6a8f917f71a4ebc9bacc33c8cd"
+  },
+  {
+    "product_id": "S2A_MSIL1C_20170712T071621_N0205_R006_T40UEE_20170712T071617",
+    "product_link": "1899752240",
+    "group_id": "83648a01da773580ef92aade342ca7d137afc328617a58cbe425f0b73689e510",
+    "crs": "EPSG:32640",
+    "grid10": {
+      "ULX": 499980.0,
+      "ULY": 6000000.0,
+      "XDIM": 10.0,
+      "YDIM": -10.0,
+      "NROWS": 10980,
+      "NCOLS": 10980
+    },
+    "grid20": {
+      "ULX": 499980.0,
+      "ULY": 6000000.0,
+      "XDIM": 20.0,
+      "YDIM": -20.0,
+      "NROWS": 5490,
+      "NCOLS": 5490
+    },
+    "original_XML_prefix_sha256": "a93e00025d5d2d89849ae422443af37e4328956f513640444a3612cadec13438"
+  },
+  {
+    "product_id": "S2A_MSIL1C_20170725T142751_N0205_R053_T19GBQ_20170725T143854",
+    "product_link": "1248336059",
+    "group_id": "f26a773db22d5077389e8d526ebee5f2a8ce4974253a36eebb3209a527322150",
+    "crs": "EPSG:32719",
+    "grid10": {
+      "ULX": 199980.0,
+      "ULY": 5500000.0,
+      "XDIM": 10.0,
+      "YDIM": -10.0,
+      "NROWS": 10980,
+      "NCOLS": 10980
+    },
+    "grid20": {
+      "ULX": 199980.0,
+      "ULY": 5500000.0,
+      "XDIM": 20.0,
+      "YDIM": -20.0,
+      "NROWS": 5490,
+      "NCOLS": 5490
+    },
+    "original_XML_prefix_sha256": "43b8996b4568b51bd6267bb801f8d9ca5fc2442eaa7c3e204213b2c982678540"
+  },
+  {
+    "product_id": "S2A_MSIL1C_20170726T102021_N0205_R065_T33VVE_20170726T102259",
+    "product_link": "1386821964",
+    "group_id": "04edcb802a945878b1247f3febb93af7473a9926a87e1d7b3506c2859dedb896",
+    "crs": "EPSG:32633",
+    "grid10": {
+      "ULX": 399960.0,
+      "ULY": 6500040.0,
+      "XDIM": 10.0,
+      "YDIM": -10.0,
+      "NROWS": 10980,
+      "NCOLS": 10980
+    },
+    "grid20": {
+      "ULX": 399960.0,
+      "ULY": 6500040.0,
+      "XDIM": 20.0,
+      "YDIM": -20.0,
+      "NROWS": 5490,
+      "NCOLS": 5490
+    },
+    "original_XML_prefix_sha256": "35569928595635d01da8ffb1eec93ef300a1f8103adb84b4c28a90db7857d82d"
+  },
+  {
+    "product_id": "S2A_MSIL1C_20170908T100031_N0205_R122_T32SPJ_20170908T100655",
+    "product_link": "701404038",
+    "group_id": "6085b26a3e9d46fe957beb7d4550d3c98c68353a414f59430523ebbbc82e0e71",
+    "crs": "EPSG:32632",
+    "grid10": {
+      "ULX": 600000.0,
+      "ULY": 4400040.0,
+      "XDIM": 10.0,
+      "YDIM": -10.0,
+      "NROWS": 10980,
+      "NCOLS": 10980
+    },
+    "grid20": {
+      "ULX": 600000.0,
+      "ULY": 4400040.0,
+      "XDIM": 20.0,
+      "YDIM": -20.0,
+      "NROWS": 5490,
+      "NCOLS": 5490
+    },
+    "original_XML_prefix_sha256": "e6a9d2fefcf60a55fcff5e039174717b44a637dc2e8a17fe5ed962b1c5df8315"
+  },
+  {
+    "product_id": "S2A_MSIL1C_20170917T052641_N0205_R105_T48XWG_20170917T052642",
+    "product_link": "1559102360",
+    "group_id": "cff44b9f6e50c2d2b4bdfb7ce491b1bedcacde5befc4d36e3f7ad563ae4ee263",
+    "crs": "EPSG:32648",
+    "grid10": {
+      "ULX": 499980.0,
+      "ULY": 8200020.0,
+      "XDIM": 10.0,
+      "YDIM": -10.0,
+      "NROWS": 10980,
+      "NCOLS": 10980
+    },
+    "grid20": {
+      "ULX": 499980.0,
+      "ULY": 8200020.0,
+      "XDIM": 20.0,
+      "YDIM": -20.0,
+      "NROWS": 5490,
+      "NCOLS": 5490
+    },
+    "original_XML_prefix_sha256": "a93fb23321440f5148d9327c8b46a516b2cf70ab6fbc7bfbfab24c2146e554e7"
+  },
+  {
+    "product_id": "S2A_MSIL1C_20171107T150421_N0206_R125_T22WES_20171107T165127",
+    "product_link": "522655885",
+    "group_id": "2c03bd1fba39cca8c1502d66af6da0bfbe17d6d4222a4c44b10cc16851be48c2",
+    "crs": "EPSG:32622",
+    "grid10": {
+      "ULX": 499980.0,
+      "ULY": 7200000.0,
+      "XDIM": 10.0,
+      "YDIM": -10.0,
+      "NROWS": 10980,
+      "NCOLS": 10980
+    },
+    "grid20": {
+      "ULX": 499980.0,
+      "ULY": 7200000.0,
+      "XDIM": 20.0,
+      "YDIM": -20.0,
+      "NROWS": 5490,
+      "NCOLS": 5490
+    },
+    "original_XML_prefix_sha256": "3b1d5060f77190d4499dab9ec846cb3c4a53dbccea7d78904cc5797b6f385f5e"
+  },
+  {
+    "product_id": "S2A_MSIL1C_20180106T032121_N0206_R118_T48NUG_20180106T083912",
+    "product_link": "960993216",
+    "group_id": "c4c5212f3648436c2b2a5b8c46962e4bc03be605ff0d9e8ee74aa6f12e2659a1",
+    "crs": "EPSG:32648",
+    "grid10": {
+      "ULX": 300000.0,
+      "ULY": 200040.0,
+      "XDIM": 10.0,
+      "YDIM": -10.0,
+      "NROWS": 10980,
+      "NCOLS": 10980
+    },
+    "grid20": {
+      "ULX": 300000.0,
+      "ULY": 200040.0,
+      "XDIM": 20.0,
+      "YDIM": -20.0,
+      "NROWS": 5490,
+      "NCOLS": 5490
+    },
+    "original_XML_prefix_sha256": "bd49d9f7b80ba41d7d2fdc8d3244aed0ac95e915732f4ae1fa4271c380c7b975"
+  },
+  {
+    "product_id": "S2A_MSIL1C_20180217T053911_N0206_R005_T44SKJ_20180217T082149",
+    "product_link": "1470797653",
+    "group_id": "d312ffb54a77972b608f434a44f0a2bd51df4589ca27764a673fad60a14f58e0",
+    "crs": "EPSG:32644",
+    "grid10": {
+      "ULX": 199980.0,
+      "ULY": 4400040.0,
+      "XDIM": 10.0,
+      "YDIM": -10.0,
+      "NROWS": 10980,
+      "NCOLS": 10980
+    },
+    "grid20": {
+      "ULX": 199980.0,
+      "ULY": 4400040.0,
+      "XDIM": 20.0,
+      "YDIM": -20.0,
+      "NROWS": 5490,
+      "NCOLS": 5490
+    },
+    "original_XML_prefix_sha256": "8b3d12cf0822657d6f8289e0aa26898c60195ff6e48ec03ead7e91ef194ad521"
+  },
+  {
+    "product_id": "S2A_MSIL1C_20180222T012651_N0206_R074_T54TWN_20180222T031349",
+    "product_link": "1041598282",
+    "group_id": "d7f945e363690b9300fc4b029a8a82841f3b130d6b64da59c407fbac84db62f7",
+    "crs": "EPSG:32654",
+    "grid10": {
+      "ULX": 499980.0,
+      "ULY": 4800000.0,
+      "XDIM": 10.0,
+      "YDIM": -10.0,
+      "NROWS": 10980,
+      "NCOLS": 10980
+    },
+    "grid20": {
+      "ULX": 499980.0,
+      "ULY": 4800000.0,
+      "XDIM": 20.0,
+      "YDIM": -20.0,
+      "NROWS": 5490,
+      "NCOLS": 5490
+    },
+    "original_XML_prefix_sha256": "9222bed53ebaaacd71aec91cdc6c84f92ca41a62b2bc5bed3ba5686f2a0eb1d1"
+  },
+  {
+    "product_id": "S2A_MSIL1C_20180302T142851_N0206_R053_T19GBQ_20180302T192732",
+    "product_link": "1727140056",
+    "group_id": "f26a773db22d5077389e8d526ebee5f2a8ce4974253a36eebb3209a527322150",
+    "crs": "EPSG:32719",
+    "grid10": {
+      "ULX": 199980.0,
+      "ULY": 5500000.0,
+      "XDIM": 10.0,
+      "YDIM": -10.0,
+      "NROWS": 10980,
+      "NCOLS": 10980
+    },
+    "grid20": {
+      "ULX": 199980.0,
+      "ULY": 5500000.0,
+      "XDIM": 20.0,
+      "YDIM": -20.0,
+      "NROWS": 5490,
+      "NCOLS": 5490
+    },
+    "original_XML_prefix_sha256": "d0a86efbf2b5feb03230517c36be03441724d09ab8e5ce629b879944b099a124"
+  },
+  {
+    "product_id": "S2A_MSIL1C_20180303T140051_N0206_R067_T19FDV_20180303T202004",
+    "product_link": "433871481",
+    "group_id": "6c7173585d6f3e04ab9c04f7d3e9150020db35fb51dd47e2a2b5eb2c0d5c3457",
+    "crs": "EPSG:32719",
+    "grid10": {
+      "ULX": 399960.0,
+      "ULY": 4000000.0,
+      "XDIM": 10.0,
+      "YDIM": -10.0,
+      "NROWS": 10980,
+      "NCOLS": 10980
+    },
+    "grid20": {
+      "ULX": 399960.0,
+      "ULY": 4000000.0,
+      "XDIM": 20.0,
+      "YDIM": -20.0,
+      "NROWS": 5490,
+      "NCOLS": 5490
+    },
+    "original_XML_prefix_sha256": "f2a4407504ddc757508536b64fadfd0886fca26196bdc15210fa428ef31678e1"
+  },
+  {
+    "product_id": "S2B_MSIL1C_20170731T102019_N0205_R065_T33VVE_20170731T102348",
+    "product_link": "784585929",
+    "group_id": "04edcb802a945878b1247f3febb93af7473a9926a87e1d7b3506c2859dedb896",
+    "crs": "EPSG:32633",
+    "grid10": {
+      "ULX": 399960.0,
+      "ULY": 6500040.0,
+      "XDIM": 10.0,
+      "YDIM": -10.0,
+      "NROWS": 10980,
+      "NCOLS": 10980
+    },
+    "grid20": {
+      "ULX": 399960.0,
+      "ULY": 6500040.0,
+      "XDIM": 20.0,
+      "YDIM": -20.0,
+      "NROWS": 5490,
+      "NCOLS": 5490
+    },
+    "original_XML_prefix_sha256": "5e75d6293aa59894337b375c5055c8755295277fd73582529d7e82592ddd59c8"
+  },
+  {
+    "product_id": "S2B_MSIL1C_20170916T101019_N0205_R022_T32SPJ_20170916T101354",
+    "product_link": "1892503998",
+    "group_id": "6085b26a3e9d46fe957beb7d4550d3c98c68353a414f59430523ebbbc82e0e71",
+    "crs": "EPSG:32632",
+    "grid10": {
+      "ULX": 600000.0,
+      "ULY": 4400040.0,
+      "XDIM": 10.0,
+      "YDIM": -10.0,
+      "NROWS": 10980,
+      "NCOLS": 10980
+    },
+    "grid20": {
+      "ULX": 600000.0,
+      "ULY": 4400040.0,
+      "XDIM": 20.0,
+      "YDIM": -20.0,
+      "NROWS": 5490,
+      "NCOLS": 5490
+    },
+    "original_XML_prefix_sha256": "9115915f4fd68aef0d4a2c3d70998699b85b92798d9ebd7e195091fc52f4984f"
+  },
+  {
+    "product_id": "S2B_MSIL1C_20180302T150259_N0206_R125_T22WES_20180302T183800",
+    "product_link": "1821333386",
+    "group_id": "2c03bd1fba39cca8c1502d66af6da0bfbe17d6d4222a4c44b10cc16851be48c2",
+    "crs": "EPSG:32622",
+    "grid10": {
+      "ULX": 499980.0,
+      "ULY": 7200000.0,
+      "XDIM": 10.0,
+      "YDIM": -10.0,
+      "NROWS": 10980,
+      "NCOLS": 10980
+    },
+    "grid20": {
+      "ULX": 499980.0,
+      "ULY": 7200000.0,
+      "XDIM": 20.0,
+      "YDIM": -20.0,
+      "NROWS": 5490,
+      "NCOLS": 5490
+    },
+    "original_XML_prefix_sha256": "8343b828f03bc9035ead89539d786b92614223841e2f5088a28efd75297e354f"
+  }
+]

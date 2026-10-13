@@ -1129,3 +1129,7 @@ Phase101完成：本地摘录验收后git push，gzs远端ff-only pull至46ca8bc
 Phase102 CPU及本地验收完成：执行版本994a5e2，gzs既有cloud-lite-pt210正常；111条批量请求取消后未扩下载，原29产品GCS六波段索引/XML获取正常。PixBox 29唯一产品，8同tile+5空间相交共排除13，16元数据通过产品合10相关组；独立无STRtree全历史距离遍历21产品核实5排除及16通过，BFS分组和双方1000m接触边界复核通过，29/29坐标格网通过。Kappa 180键排除、899待核实、794未完整连接分量（非独立组），原唯一产品数与精确子块位置不明保持pending。Phase86 history_sources/products两原文件SHA与原artifact清单一致；Source基础预训练未知。取得PixBox标签CSV但仅投影位置白名单，未读类别统计，无有效云影组数判断。六波段16产品潜在8.34GB只估算未下载；PixBox选择性样本不能估全场景FPR，未切分、拟合、预测、选择模型。README/READINESS/元数据索引/排除与组表/来源SHA和CPU回执已在本地outputs/phase102/phase102_20261013；待小结果push/pull完成；不传work_dirs/像元、不变更旧失败，止损2026-10-20不变。
 
 Phase102最终同步完成：git push及gzs ff-only pull到6baffef成功，23个payload SHA逐项远端复核一致，manifest=a701b12f3402543d763c388c305380ac8b6411a328d8d7863e47d1d8660ad756。元数据审计结束，有缺项保持pending；PixBox16产品/10组仅候选位置准入，不能支持全场景FPR终点，不推断有影组数；下一步只建议另立输入/标签核验协议，未授权或执行新增影像下载、复核、角色划分、拟合或预测。原PixBox含标签小包仅本地保留，无work_dirs同步；原失败不变。
+
+
+### Phase103 2026-10-13：标签语义与支持锁（读取前）
+按授权仅固定Phase102准入16产品/10组；已保存主映射、全部已知C/S/U编码、C1 None属性缺席与C7 Clear分列、全局排除、全属性重复冲突ignore、原XML10/20格网、不搜索平移及1km固定位置聚集描述规则。五项合成测试通过，未解析任何新增逐点类别。官方定义与已取得CMIX公开说明未发现实质冲突，但未独立验证可执行CMIX C1映射，不宣称完整复刻。prelabel_lock已冻结代码SHA、成员/分组/位置来源SHA及已有ZIP hash，下一步仅既有conda计算16产品坐标元数据；类别解析与独立计数留本地受控data，不将逐点标签传远端/git。零训练/拟合/预测/影像下载，不读13排除产品类别，Kappa不扩展，无旧sealed访问，止损2026-10-20不变。

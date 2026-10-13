@@ -1,0 +1,12 @@
+{
+  "status": "no_material_conflict_found_for_fixed_conservative_task",
+  "official_definitions_file_sha256": "f238a5962f55a402b915e0a90f37f07773857f6cd3ad0c2317b816ac3a43a142",
+  "definitions": "https://zenodo.org/records/5036991",
+  "official_cloud_characteristics_C1": "None",
+  "official_cloud_characteristics_C7": "Clear",
+  "C1_interpretation": "User predefines absence of this cloud property; distinct from explicitClear C7; not an inferred mapping from frequencies",
+  "CMIX_source": "https://ntrs.nasa.gov/api/citations/20220006382/downloads/rse-2022-112990.pdf",
+  "CMIX_review_scope": "Published section2.1.5 description retrieved via primary-source indexed text; direct full-PDF views failed due10.68MB tool size restriction. No row-level executable C1 mapping independently verified; do not claim fullCMIX replication. No retrieved contrary definition; task uses the explicitly authorized conservative mapping.",
+  "no_published_class_frequency_used_for_mapping": true,
+  "label_point_values_accessed": false
+}
