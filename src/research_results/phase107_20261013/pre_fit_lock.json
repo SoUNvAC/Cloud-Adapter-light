@@ -1,0 +1,95 @@
+{
+  "utc": "2026-10-13T12:20:41.439165+00:00",
+  "status": "frozen_before_sole_fit",
+  "protocol_sha256": "973eea7729a821e610d92729a52d668739d01f2be5baf23dfd4f3a7bd1ce783f",
+  "code_sha256": {
+    "src/tools/phase107_common.py": "3fe810f9283303f6b2fd245984fa84ff5227396f9e90b9ec904645534391c499",
+    "src/tools/prepare_phase107.py": "664017efdfe229b1bca56d6d819c5fbbd6b2db8d5362623424842d48faf6b166",
+    "src/tools/run_phase107.py": "ba4fc16078e654a8eef8b85dfabd225b68d042f0d5eeaf219b8e3cbd39099c58",
+    "src/tools/finish_phase107.py": "4ce642171de9c81071a8879f2358d694cf2bddf9e4d0dd21ac7591a01bb4c01e",
+    "src/tools/run_phase107.sh": "1c39459f3aa1078506bbbb9771f17a4cb9a096e8dc22160b559387a78fd316ee",
+    "src/tools/test_phase107.py": "7501666e0f4577093cc070abc26cbe6584e4f50cbef48259622a3aa3750c4ace",
+    "src/tools/receive_phase107_evaluation.ps1": "4335c0f26d291e64774a9e9ec1e849e2ee91fcb09453b12115ff31c3ee5e3fe4"
+  },
+  "original_control_sha256": "c2a83964073918015460e0ad89a9857b60b6a764e0f8562652472b224915f5ad",
+  "fit_input_audit_sha256": "cad8b3808287796c855f48854a5f1b42ac3e35f2771a38ceb7e27032239ae488",
+  "original_S": {
+    "mean": [
+      -1.3017376375641958,
+      0.39505300565154255,
+      0.24701699410550032,
+      0.19859101917179514
+    ],
+    "scale": [
+      0.47215399307502803,
+      0.25285773867447897,
+      0.15938402654881018,
+      0.12964792447247495
+    ],
+    "theta": [
+      0.7245657698267233,
+      -0.7644546961740207,
+      -0.030448672972106964,
+      -1.305605618836399,
+      -5.609376498409121
+    ],
+    "iterations": 17,
+    "optimizer_success": true,
+    "objective": 0.06688625399654928,
+    "penalty": 0.001,
+    "positive_features": 1,
+    "threshold": -1.0312467813491821,
+    "fit_macro_fpr": 0.009999993579556667,
+    "nonshadow": "source",
+    "columns": [
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "historical_numeric_code_sha256": {
+    "run_phase67.py": "4aaf7856810499697beed13173f27f35b695df7fdc27d0d40831c1e0f54a28c1",
+    "phase67_controls.py": "3cb77eb229d28eff7cae5887a1ec77d2fe93c314e006f7a3b467d75ecc529459",
+    "phase65d_recovery_math.py": "ef0f76bc81cc348ce411c65f8459c5615d29df93477b62a52dc137e86af2c51e",
+    "phase65d_metrics.py": "631782b1987816a4d0a444f3d220359bbc9dd84df0c52376da3a199a31dc4c17",
+    "run_phase65d_recovery.py": "a8553f58629e528a4ff02a6fac91bd8ab08915b7d6e914f0f8db95b9c3547129",
+    "prepare_phase65a_explore.py": "67be1466d9b6821351ac8fac5d58780e05a6a61ec53e6cf30698f79b4b395521",
+    "phase66_statistics.py": "b5162439977e2357f21b15db50aafd1ce4c40be9a3ee1e40ad65648eaf13e04d"
+  },
+  "new_model": "Source_RGB",
+  "columns": [
+    1,
+    5,
+    6,
+    7
+  ],
+  "fit_groups": 153,
+  "fit_attempt_limit": 1,
+  "rule": "original fit_model; four inputs; positive_features1; penalty.001; original fixed153 sample indices/labels",
+  "weights": "1/(153*n_i), normalized by original fit_model; not tree weights",
+  "threshold_fits": 0,
+  "PixBox_input_sha256": "9906a6fa349f118defce465fe06dffa04d0185e59fd4d8842f046b7bcc7f07ae",
+  "PixBox_score_sha256": "725aa5a0880998ac5135f8c9d17ac2a3a446c58770ea58422db5b4887650580e",
+  "phase106_group_sha256": "f64567f0e26a54938187cb9baaadb59e0e5516c9fe73ee38113b8574e696bf6d",
+  "phase106_summary_sha256": "d41ca6ac2683f7de37196b37335c4d728d8d449c9ee93764c4bc17e93d486a55",
+  "reference_sha256": "b1448f3fbd05c9e77af7ed0ea50dbde4be7480a35a4c532a2fec45789af25f96",
+  "primary": "PixBox S-R mean related-group AP",
+  "auxiliary": [
+    "development S-R",
+    "PixBox R-A",
+    "development R-A"
+  ],
+  "bootstrap": {
+    "seed": 107013,
+    "resamples": 10000,
+    "paired_related_groups": true
+  },
+  "domains": {
+    "development": 32,
+    "PixBox": 10
+  },
+  "new_forwards": 0,
+  "new_downloads": 0,
+  "exploratory": true
+}
