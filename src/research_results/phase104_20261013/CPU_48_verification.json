@@ -1,0 +1,443 @@
+{
+  "status": "passed",
+  "selection_uses_labels_or_image_results": false,
+  "selection_rule": "SHA256(PHASE104_INPUT|point_id) first48 of9500",
+  "rows": [
+    {
+      "point_id": "1248336383",
+      "product_id": "S2A_MSIL1C_20170725T142751_N0205_R053_T19GBQ_20170725T143854",
+      "all_six_original_DN_exact": true,
+      "arithmetic_TOA_max_abs_error": 0.0,
+      "grid_index_exact": true,
+      "window_exact": true,
+      "input_valid": true
+    },
+    {
+      "point_id": "522656248",
+      "product_id": "S2A_MSIL1C_20171107T150421_N0206_R125_T22WES_20171107T165127",
+      "all_six_original_DN_exact": true,
+      "arithmetic_TOA_max_abs_error": 0.0,
+      "grid_index_exact": true,
+      "window_exact": true,
+      "input_valid": true
+    },
+    {
+      "point_id": "701404537",
+      "product_id": "S2A_MSIL1C_20170908T100031_N0205_R122_T32SPJ_20170908T100655",
+      "all_six_original_DN_exact": true,
+      "arithmetic_TOA_max_abs_error": 0.0,
+      "grid_index_exact": true,
+      "window_exact": true,
+      "input_valid": true
+    },
+    {
+      "point_id": "1503514141",
+      "product_id": "S2A_MSIL1C_20180217T053911_N0206_R005_T44SKJ_20180217T082149",
+      "all_six_original_DN_exact": true,
+      "arithmetic_TOA_max_abs_error": 0.0,
+      "grid_index_exact": true,
+      "window_exact": true,
+      "input_valid": true
+    },
+    {
+      "point_id": "960993260",
+      "product_id": "S2A_MSIL1C_20180106T032121_N0206_R118_T48NUG_20180106T083912",
+      "all_six_original_DN_exact": true,
+      "arithmetic_TOA_max_abs_error": 0.0,
+      "grid_index_exact": true,
+      "window_exact": true,
+      "input_valid": true
+    },
+    {
+      "point_id": "1821333451",
+      "product_id": "S2B_MSIL1C_20180302T150259_N0206_R125_T22WES_20180302T183800",
+      "all_six_original_DN_exact": true,
+      "arithmetic_TOA_max_abs_error": 0.0,
+      "grid_index_exact": true,
+      "window_exact": true,
+      "input_valid": true
+    },
+    {
+      "point_id": "1892504394",
+      "product_id": "S2B_MSIL1C_20170916T101019_N0205_R022_T32SPJ_20170916T101354",
+      "all_six_original_DN_exact": true,
+      "arithmetic_TOA_max_abs_error": 0.0,
+      "grid_index_exact": true,
+      "window_exact": true,
+      "input_valid": true
+    },
+    {
+      "point_id": "784586058",
+      "product_id": "S2B_MSIL1C_20170731T102019_N0205_R065_T33VVE_20170731T102348",
+      "all_six_original_DN_exact": true,
+      "arithmetic_TOA_max_abs_error": 0.0,
+      "grid_index_exact": true,
+      "window_exact": true,
+      "input_valid": true
+    },
+    {
+      "point_id": "1892504457",
+      "product_id": "S2B_MSIL1C_20170916T101019_N0205_R022_T32SPJ_20170916T101354",
+      "all_six_original_DN_exact": true,
+      "arithmetic_TOA_max_abs_error": 0.0,
+      "grid_index_exact": true,
+      "window_exact": true,
+      "input_valid": true
+    },
+    {
+      "point_id": "784586043",
+      "product_id": "S2B_MSIL1C_20170731T102019_N0205_R065_T33VVE_20170731T102348",
+      "all_six_original_DN_exact": true,
+      "arithmetic_TOA_max_abs_error": 0.0,
+      "grid_index_exact": true,
+      "window_exact": true,
+      "input_valid": true
+    },
+    {
+      "point_id": "960993553",
+      "product_id": "S2A_MSIL1C_20180106T032121_N0206_R118_T48NUG_20180106T083912",
+      "all_six_original_DN_exact": true,
+      "arithmetic_TOA_max_abs_error": 0.0,
+      "grid_index_exact": true,
+      "window_exact": true,
+      "input_valid": true
+    },
+    {
+      "point_id": "1041598643",
+      "product_id": "S2A_MSIL1C_20180222T012651_N0206_R074_T54TWN_20180222T031349",
+      "all_six_original_DN_exact": true,
+      "arithmetic_TOA_max_abs_error": 0.0,
+      "grid_index_exact": true,
+      "window_exact": true,
+      "input_valid": true
+    },
+    {
+      "point_id": "1899752531",
+      "product_id": "S2A_MSIL1C_20170712T071621_N0205_R006_T40UEE_20170712T071617",
+      "all_six_original_DN_exact": true,
+      "arithmetic_TOA_max_abs_error": 0.0,
+      "grid_index_exact": true,
+      "window_exact": true,
+      "input_valid": true
+    },
+    {
+      "point_id": "1899752338",
+      "product_id": "S2A_MSIL1C_20170712T071621_N0205_R006_T40UEE_20170712T071617",
+      "all_six_original_DN_exact": true,
+      "arithmetic_TOA_max_abs_error": 0.0,
+      "grid_index_exact": true,
+      "window_exact": true,
+      "input_valid": true
+    },
+    {
+      "point_id": "1821333465",
+      "product_id": "S2B_MSIL1C_20180302T150259_N0206_R125_T22WES_20180302T183800",
+      "all_six_original_DN_exact": true,
+      "arithmetic_TOA_max_abs_error": 0.0,
+      "grid_index_exact": true,
+      "window_exact": true,
+      "input_valid": true
+    },
+    {
+      "point_id": "1041598819",
+      "product_id": "S2A_MSIL1C_20180222T012651_N0206_R074_T54TWN_20180222T031349",
+      "all_six_original_DN_exact": true,
+      "arithmetic_TOA_max_abs_error": 0.0,
+      "grid_index_exact": true,
+      "window_exact": true,
+      "input_valid": true
+    },
+    {
+      "point_id": "1248336187",
+      "product_id": "S2A_MSIL1C_20170725T142751_N0205_R053_T19GBQ_20170725T143854",
+      "all_six_original_DN_exact": true,
+      "arithmetic_TOA_max_abs_error": 0.0,
+      "grid_index_exact": true,
+      "window_exact": true,
+      "input_valid": true
+    },
+    {
+      "point_id": "784586029",
+      "product_id": "S2B_MSIL1C_20170731T102019_N0205_R065_T33VVE_20170731T102348",
+      "all_six_original_DN_exact": true,
+      "arithmetic_TOA_max_abs_error": 0.0,
+      "grid_index_exact": true,
+      "window_exact": true,
+      "input_valid": true
+    },
+    {
+      "point_id": "784586046",
+      "product_id": "S2B_MSIL1C_20170731T102019_N0205_R065_T33VVE_20170731T102348",
+      "all_six_original_DN_exact": true,
+      "arithmetic_TOA_max_abs_error": 0.0,
+      "grid_index_exact": true,
+      "window_exact": true,
+      "input_valid": true
+    },
+    {
+      "point_id": "1899752598",
+      "product_id": "S2A_MSIL1C_20170712T071621_N0205_R006_T40UEE_20170712T071617",
+      "all_six_original_DN_exact": true,
+      "arithmetic_TOA_max_abs_error": 0.0,
+      "grid_index_exact": true,
+      "window_exact": true,
+      "input_valid": true
+    },
+    {
+      "point_id": "701404410",
+      "product_id": "S2A_MSIL1C_20170908T100031_N0205_R122_T32SPJ_20170908T100655",
+      "all_six_original_DN_exact": true,
+      "arithmetic_TOA_max_abs_error": 0.0,
+      "grid_index_exact": true,
+      "window_exact": true,
+      "input_valid": true
+    },
+    {
+      "point_id": "1386822006",
+      "product_id": "S2A_MSIL1C_20170726T102021_N0205_R065_T33VVE_20170726T102259",
+      "all_six_original_DN_exact": true,
+      "arithmetic_TOA_max_abs_error": 0.0,
+      "grid_index_exact": true,
+      "window_exact": true,
+      "input_valid": true
+    },
+    {
+      "point_id": "433871769",
+      "product_id": "S2A_MSIL1C_20180303T140051_N0206_R067_T19FDV_20180303T202004",
+      "all_six_original_DN_exact": true,
+      "arithmetic_TOA_max_abs_error": 0.0,
+      "grid_index_exact": true,
+      "window_exact": true,
+      "input_valid": true
+    },
+    {
+      "point_id": "960993765",
+      "product_id": "S2A_MSIL1C_20180106T032121_N0206_R118_T48NUG_20180106T083912",
+      "all_six_original_DN_exact": true,
+      "arithmetic_TOA_max_abs_error": 0.0,
+      "grid_index_exact": true,
+      "window_exact": true,
+      "input_valid": true
+    },
+    {
+      "point_id": "960993740",
+      "product_id": "S2A_MSIL1C_20180106T032121_N0206_R118_T48NUG_20180106T083912",
+      "all_six_original_DN_exact": true,
+      "arithmetic_TOA_max_abs_error": 0.0,
+      "grid_index_exact": true,
+      "window_exact": true,
+      "input_valid": true
+    },
+    {
+      "point_id": "784586016",
+      "product_id": "S2B_MSIL1C_20170731T102019_N0205_R065_T33VVE_20170731T102348",
+      "all_six_original_DN_exact": true,
+      "arithmetic_TOA_max_abs_error": 0.0,
+      "grid_index_exact": true,
+      "window_exact": true,
+      "input_valid": true
+    },
+    {
+      "point_id": "1559102388",
+      "product_id": "S2A_MSIL1C_20170917T052641_N0205_R105_T48XWG_20170917T052642",
+      "all_six_original_DN_exact": true,
+      "arithmetic_TOA_max_abs_error": 0.0,
+      "grid_index_exact": true,
+      "window_exact": true,
+      "input_valid": true
+    },
+    {
+      "point_id": "1470796413",
+      "product_id": "S2A_MSIL1C_20170113T072241_N0204_R006_T40UEE_20170113T072238",
+      "all_six_original_DN_exact": true,
+      "arithmetic_TOA_max_abs_error": 0.0,
+      "grid_index_exact": true,
+      "window_exact": true,
+      "input_valid": true
+    },
+    {
+      "point_id": "1892504473",
+      "product_id": "S2B_MSIL1C_20170916T101019_N0205_R022_T32SPJ_20170916T101354",
+      "all_six_original_DN_exact": true,
+      "arithmetic_TOA_max_abs_error": 0.0,
+      "grid_index_exact": true,
+      "window_exact": true,
+      "input_valid": true
+    },
+    {
+      "point_id": "522656302",
+      "product_id": "S2A_MSIL1C_20171107T150421_N0206_R125_T22WES_20171107T165127",
+      "all_six_original_DN_exact": true,
+      "arithmetic_TOA_max_abs_error": 0.0,
+      "grid_index_exact": true,
+      "window_exact": true,
+      "input_valid": true
+    },
+    {
+      "point_id": "960993404",
+      "product_id": "S2A_MSIL1C_20180106T032121_N0206_R118_T48NUG_20180106T083912",
+      "all_six_original_DN_exact": true,
+      "arithmetic_TOA_max_abs_error": 0.0,
+      "grid_index_exact": true,
+      "window_exact": true,
+      "input_valid": true
+    },
+    {
+      "point_id": "960993298",
+      "product_id": "S2A_MSIL1C_20180106T032121_N0206_R118_T48NUG_20180106T083912",
+      "all_six_original_DN_exact": true,
+      "arithmetic_TOA_max_abs_error": 0.0,
+      "grid_index_exact": true,
+      "window_exact": true,
+      "input_valid": true
+    },
+    {
+      "point_id": "1041598610",
+      "product_id": "S2A_MSIL1C_20180222T012651_N0206_R074_T54TWN_20180222T031349",
+      "all_six_original_DN_exact": true,
+      "arithmetic_TOA_max_abs_error": 0.0,
+      "grid_index_exact": true,
+      "window_exact": true,
+      "input_valid": true
+    },
+    {
+      "point_id": "1503514242",
+      "product_id": "S2A_MSIL1C_20180217T053911_N0206_R005_T44SKJ_20180217T082149",
+      "all_six_original_DN_exact": true,
+      "arithmetic_TOA_max_abs_error": 0.0,
+      "grid_index_exact": true,
+      "window_exact": true,
+      "input_valid": true
+    },
+    {
+      "point_id": "1821333675",
+      "product_id": "S2B_MSIL1C_20180302T150259_N0206_R125_T22WES_20180302T183800",
+      "all_six_original_DN_exact": true,
+      "arithmetic_TOA_max_abs_error": 0.0,
+      "grid_index_exact": true,
+      "window_exact": true,
+      "input_valid": true
+    },
+    {
+      "point_id": "2019111814",
+      "product_id": "S2A_MSIL1C_20170706T051651_N0205_R062_T48XWG_20170706T051649",
+      "all_six_original_DN_exact": true,
+      "arithmetic_TOA_max_abs_error": 0.0,
+      "grid_index_exact": true,
+      "window_exact": true,
+      "input_valid": true
+    },
+    {
+      "point_id": "701404041",
+      "product_id": "S2A_MSIL1C_20170908T100031_N0205_R122_T32SPJ_20170908T100655",
+      "all_six_original_DN_exact": true,
+      "arithmetic_TOA_max_abs_error": 0.0,
+      "grid_index_exact": true,
+      "window_exact": true,
+      "input_valid": true
+    },
+    {
+      "point_id": "1041598674",
+      "product_id": "S2A_MSIL1C_20180222T012651_N0206_R074_T54TWN_20180222T031349",
+      "all_six_original_DN_exact": true,
+      "arithmetic_TOA_max_abs_error": 0.0,
+      "grid_index_exact": true,
+      "window_exact": true,
+      "input_valid": true
+    },
+    {
+      "point_id": "1041598831",
+      "product_id": "S2A_MSIL1C_20180222T012651_N0206_R074_T54TWN_20180222T031349",
+      "all_six_original_DN_exact": true,
+      "arithmetic_TOA_max_abs_error": 0.0,
+      "grid_index_exact": true,
+      "window_exact": true,
+      "input_valid": true
+    },
+    {
+      "point_id": "1821333527",
+      "product_id": "S2B_MSIL1C_20180302T150259_N0206_R125_T22WES_20180302T183800",
+      "all_six_original_DN_exact": true,
+      "arithmetic_TOA_max_abs_error": 0.0,
+      "grid_index_exact": true,
+      "window_exact": true,
+      "input_valid": true
+    },
+    {
+      "point_id": "2019111783",
+      "product_id": "S2A_MSIL1C_20170706T051651_N0205_R062_T48XWG_20170706T051649",
+      "all_six_original_DN_exact": true,
+      "arithmetic_TOA_max_abs_error": 0.0,
+      "grid_index_exact": true,
+      "window_exact": true,
+      "input_valid": true
+    },
+    {
+      "point_id": "1899752597",
+      "product_id": "S2A_MSIL1C_20170712T071621_N0205_R006_T40UEE_20170712T071617",
+      "all_six_original_DN_exact": true,
+      "arithmetic_TOA_max_abs_error": 0.0,
+      "grid_index_exact": true,
+      "window_exact": true,
+      "input_valid": true
+    },
+    {
+      "point_id": "1899752373",
+      "product_id": "S2A_MSIL1C_20170712T071621_N0205_R006_T40UEE_20170712T071617",
+      "all_six_original_DN_exact": true,
+      "arithmetic_TOA_max_abs_error": 0.0,
+      "grid_index_exact": true,
+      "window_exact": true,
+      "input_valid": true
+    },
+    {
+      "point_id": "1386822225",
+      "product_id": "S2A_MSIL1C_20170726T102021_N0205_R065_T33VVE_20170726T102259",
+      "all_six_original_DN_exact": true,
+      "arithmetic_TOA_max_abs_error": 0.0,
+      "grid_index_exact": true,
+      "window_exact": true,
+      "input_valid": true
+    },
+    {
+      "point_id": "433871746",
+      "product_id": "S2A_MSIL1C_20180303T140051_N0206_R067_T19FDV_20180303T202004",
+      "all_six_original_DN_exact": true,
+      "arithmetic_TOA_max_abs_error": 0.0,
+      "grid_index_exact": true,
+      "window_exact": true,
+      "input_valid": true
+    },
+    {
+      "point_id": "784586315",
+      "product_id": "S2B_MSIL1C_20170731T102019_N0205_R065_T33VVE_20170731T102348",
+      "all_six_original_DN_exact": true,
+      "arithmetic_TOA_max_abs_error": 0.0,
+      "grid_index_exact": true,
+      "window_exact": true,
+      "input_valid": true
+    },
+    {
+      "point_id": "1892504479",
+      "product_id": "S2B_MSIL1C_20170916T101019_N0205_R022_T32SPJ_20170916T101354",
+      "all_six_original_DN_exact": true,
+      "arithmetic_TOA_max_abs_error": 0.0,
+      "grid_index_exact": true,
+      "window_exact": true,
+      "input_valid": true
+    },
+    {
+      "point_id": "1470796512",
+      "product_id": "S2A_MSIL1C_20170113T072241_N0204_R006_T40UEE_20170113T072238",
+      "all_six_original_DN_exact": true,
+      "arithmetic_TOA_max_abs_error": 0.0,
+      "grid_index_exact": true,
+      "window_exact": true,
+      "input_valid": true
+    }
+  ],
+  "path": "independent per-point native raster read, integer DN sum/4; native float32 TOA then Python double mean; original coordinates",
+  "point_inputs_sha256": "9906a6fa349f118defce465fe06dffa04d0185e59fd4d8842f046b7bcc7f07ae",
+  "models_loaded": 0,
+  "forwards": 0
+}

@@ -1,0 +1,6 @@
+{
+  "cap_bytes": 9000000000,
+  "reserved_bytes": 8344418736,
+  "actual_received_bytes": 8344418736,
+  "accounting": "reserve whole bounded HTTP response before opening; uncertain failed response bytes stay charged"
+}

@@ -1,0 +1,48 @@
+{
+  "status": "passed",
+  "mmcv": "2.1.0",
+  "mmseg": "1.2.2",
+  "torch": "2.1.0+cu121",
+  "cv2": "4.10.0",
+  "numpy": "1.26.4",
+  "Resize_source_sha256": "ce4708c3f06cda614741471cc21d84fe6d5d4212628da4c9e57ca392b793323e",
+  "postprocess_source_sha256": "cf8f6e27eab74d4b3ad1347f9e8d50da7c252ce177f803fa142c8969c460fdb7",
+  "original_data_preprocessor": {
+    "type": "SegDataPreProcessor",
+    "mean": [
+      123.675,
+      116.28,
+      103.53
+    ],
+    "std": [
+      58.395,
+      57.12,
+      57.375
+    ],
+    "size": [
+      512,
+      512
+    ],
+    "bgr_to_rgb": true,
+    "pad_val": 0,
+    "seg_pad_val": 255
+  },
+  "decode_head_align_corners": false,
+  "config_inheritance_sha256": {
+    "src/configs/protocol/phase65a_explore_rgb.py": "6185e449d7af15f726890d69aad1d0bf334fb3d2c9020b7609b37b1bab94515d",
+    "src/configs/protocol/phase64_source_parent_rgb.py": "d2ff071bb34a7921d37b988a4c31c616f899c1bbd631100f56ae0900910a1d20",
+    "src/configs/protocol/phase22_clean_v8_l1c.py": "8c984c3ec7132ebdf8c125077a841146e958244bb780a58cf5a5d47577d26120",
+    "src/configs/light/cloud_adapter_dinov2_s_mask2former_lite_q25_d2_p2_l1c.py": "bac947991566dda0935264f9c67dbaccd83520dc2ea74ffa18da9c85517855a1",
+    "src/configs/light/cloud_adapter_dinov2_s_mask2former_lite_q25_d2_l1c.py": "994b8797ee918f57d6fd65220b266c50fcbfe50d9609355661826fac2970ed9a",
+    "src/configs/light/cloud_adapter_dinov2_s_mask2former_lite_q25_l1c.py": "3ea705b1dc54a69e013ffff75f1c084d260aa49480943248ba446c79bbc76df7",
+    "src/configs/light/cloud_adapter_dinov2_s_mask2former_lite_l1c.py": "daa63b797ebc851133b911b13a5b3d8430abe19d44797403c86a492e344c19d2",
+    "src/configs/control/cloud_adapter_dinov2_s_mask2former_4x_l1c.py": "be8b73b09724998a23b7ccd76ecee016269332fd76b2acce53e970406576cf18",
+    "src/configs/light/cloud_adapter_dinov2_s_light_l1c.py": "588e45a64be804e4832596836a3e8c109cd792e45e43128a0d108b436fa18514",
+    "src/configs/_base_/datasets/cloudsen12_high_l1c.py": "67b217f5aaecfe929b7b0d51fadc8cdd67cf5c202c890c37cac75ab89c34d7c6",
+    "src/configs/_base_/default_runtime.py": "ea4ba3b2c9ae2d5919e7477be29dea7d2dd534b49e0ed72a16c43e2d1794aafe",
+    "src/configs/_base_/models/cloud_adapter_dinov2_small.py": "40230a2bfaad681b7525f963aa5211a9603ac2061eca520aa64722120778a492"
+  },
+  "network_built": false,
+  "model_loaded": false,
+  "forwards": 0
+}

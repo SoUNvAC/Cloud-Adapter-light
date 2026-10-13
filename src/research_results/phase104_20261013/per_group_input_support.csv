@@ -1,0 +1,11 @@
+key,tiles,products,raw_points,positive_before,positive_after,surface_negative_before,surface_negative_after,cloud_negative_before,cloud_negative_after,negative_after,reference_ignored,input_invalid,reference_valid_input_lost,loss_reasons_nonexclusive,all_20m_cells,all_multisample20m_cells,retained_20m_cells,retained_multisample20m_cells,minimum_support_met,AP_defined
+04edcb802a945878b1247f3febb93af7473a9926a87e1d7b3506c2859dedb896,33VVE,2,1100,77,77,398,398,513,513,911,112,0,0,{},1096,3,988,0,True,True
+2c03bd1fba39cca8c1502d66af6da0bfbe17d6d4222a4c44b10cc16851be48c2,22WES,2,1150,24,24,626,626,418,418,1044,82,0,0,{},1150,0,1068,0,True,True
+6085b26a3e9d46fe957beb7d4550d3c98c68353a414f59430523ebbbc82e0e71,32SPJ,2,1150,127,127,181,181,742,740,921,100,2,2,"{""B11:NODATA"":2,""B12:NODATA"":2}",1148,2,1048,0,True,True
+6c7173585d6f3e04ab9c04f7d3e9150020db35fb51dd47e2a2b5eb2c0d5c3457,19FDV,1,550,50,50,370,370,130,130,500,0,0,0,{},550,0,550,0,True,True
+83648a01da773580ef92aade342ca7d137afc328617a58cbe425f0b73689e510,40UEE,2,1100,54,54,666,666,256,256,922,124,0,0,{},1090,9,976,0,True,True
+c4c5212f3648436c2b2a5b8c46962e4bc03be605ff0d9e8ee74aa6f12e2659a1,48NUG,1,550,0,0,99,99,323,323,422,128,0,0,{},550,0,422,0,False,False
+cff44b9f6e50c2d2b4bdfb7ce491b1bedcacde5befc4d36e3f7ad563ae4ee263,48XWG,2,1350,26,26,394,394,730,730,1124,200,0,0,{},1350,0,1150,0,True,True
+d312ffb54a77972b608f434a44f0a2bd51df4589ca27764a673fad60a14f58e0,44SKJ,1,700,14,14,297,297,369,369,666,20,0,0,{},700,0,680,0,True,True
+d7f945e363690b9300fc4b029a8a82841f3b130d6b64da59c407fbac84db62f7,54TWN,1,550,7,7,192,192,320,320,512,31,0,0,{},550,0,519,0,True,True
+f26a773db22d5077389e8d526ebee5f2a8ce4974253a36eebb3209a527322150,19GBQ,2,1300,0,0,961,961,205,205,1166,134,0,0,{},1300,0,1166,0,False,False

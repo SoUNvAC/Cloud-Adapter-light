@@ -1,0 +1,17 @@
+{
+  "status": "all_fixed_points_processed",
+  "point_count": 9500,
+  "input_valid": 9498,
+  "input_invalid": 2,
+  "native10_cell_count": 9500,
+  "native20_cell_count": 9484,
+  "window_count": 529,
+  "coordinate_sha256": "c2f029a349096738935d9239585c67ca6dfc5a4c71017f5e8634af982b86ce68",
+  "point_inputs_sha256": "9906a6fa349f118defce465fe06dffa04d0185e59fd4d8842f046b7bcc7f07ae",
+  "point_validity_sha256": "272097f2c6416d1aba0558b17bffa1f837a7020715418e5e4665aafa12c47844",
+  "window_index_sha256": "0238604b0da093e73238286e1f1cc350787544d44916ffaa975ccead52627bf3",
+  "grid_acceptance_sha256": "84bd243a1249c213429395f1e2267ec2e528df30760ece6bd964f26630fbf56b",
+  "labels_accessed": false,
+  "models_loaded": 0,
+  "forwards": 0
+}

@@ -1,0 +1,25 @@
+{
+  "expected_payload_bytes": 8344418736,
+  "observed_received_bytes": 8344418736,
+  "charged_upper_bound_bytes": 8344418736,
+  "cumulative_cap_bytes": 9000000000,
+  "one_remote_imagery_copy": true,
+  "no_dense_float_cache": true,
+  "disk_before": {
+    "utc": "2026-10-13T05:40:16.092637+00:00",
+    "filesystem_free_bytes": 650704998400,
+    "host_free_user_report_bytes": 12400000000,
+    "host_report_not_independently_verified": true,
+    "expected_payload_bytes": 8344418736,
+    "expected_host_remaining_bytes": 4055581264,
+    "no_dense_float_cache": true
+  },
+  "disk_after_download": {
+    "utc": "2026-10-13T08:16:01.490920+00:00",
+    "filesystem_free_bytes": 642359898112,
+    "disk_delta_bytes": 8345100288,
+    "actual_received_bytes": 8344418736,
+    "host_remaining_estimate_bytes": 4055581264
+  },
+  "host_free_is_user_report_and_remaining_is_estimate": true
+}
