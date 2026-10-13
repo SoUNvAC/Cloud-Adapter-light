@@ -1,0 +1,29 @@
+{
+  "status": "passed",
+  "independent_AP_max_abs_error": 3.3306690738754696e-16,
+  "independent_scalar_bootstrap": true,
+  "NA_groups": 2,
+  "all_point_ids": 9500,
+  "positive": 379,
+  "negative": 8188,
+  "reference_ignored": 931,
+  "invalid_input": 2,
+  "remote_score_acceptance": {
+    "status": "passed",
+    "points": 9500,
+    "valid": 9498,
+    "scalar_float32_max_abs_error": 0.0,
+    "scalar_bitwise_equal": 9498,
+    "scalar_tolerance": "one float32 ULP; actual original vectorized Fortran output preserved",
+    "Phase90_Fortran_replay_bitwise_equal": true,
+    "shared20m_score_identity": true,
+    "seconds": 0.5828534880129155,
+    "numpy": "1.26.4",
+    "new_forwards": 0,
+    "new_fits": 0,
+    "new_download_bytes": 0
+  },
+  "new_network_forwards": 0,
+  "new_fits": 0,
+  "new_download_bytes": 0
+}
