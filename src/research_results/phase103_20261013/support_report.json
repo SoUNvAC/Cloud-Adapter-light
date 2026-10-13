@@ -1,0 +1,105 @@
+{
+  "status": "completed_fixed_reference_support_only",
+  "total_support": {
+    "raw_points": 9500,
+    "deduplicated_positions": 9500,
+    "duplicates_merged_extra_rows": 0,
+    "duplicate_attribute_conflict_positions": 0,
+    "duplicate_attribute_conflict_rows": 0,
+    "valid_positive": 379,
+    "valid_surface_negative": 4184,
+    "valid_cloud_negative": 4006,
+    "terrain_tree_building_shadow_negative_subset": 331,
+    "valid_negative_total": 8190,
+    "ignored_positions": 931,
+    "ignore_all_reasons_nonexclusive": {
+      "shadow_above_cloud": 116,
+      "spatial_cloud_mixture_SURFACE_ID": 178,
+      "cloud_surface_shadow_conflict": 392,
+      "haze": 128,
+      "fog": 117
+    },
+    "ignore_primary_reason_exclusive": {
+      "shadow_above_cloud": 116,
+      "spatial_cloud_mixture_SURFACE_ID": 178,
+      "cloud_surface_shadow_conflict": 392,
+      "haze": 128,
+      "fog": 117
+    },
+    "position_pending": 0,
+    "C1_C7_effective_support": {
+      "1": {
+        "effective_positions": 0,
+        "positive": 0,
+        "surface_negative": 0
+      },
+      "7": {
+        "effective_positions": 4563,
+        "positive": 379,
+        "surface_negative": 4184
+      }
+    },
+    "20m_cells": 9484,
+    "20m_positive_negative_conflict_cells": 0,
+    "20m_multisample_cells": 14,
+    "max_positions_per20m_cell": 3,
+    "max_raw_points_per20m_cell": 3,
+    "unique_fixed_1km_spatial_cells": 8020,
+    "max_positions_per_fixed_1km_spatial_cell": 15,
+    "largest_fixed_1km_cell_position_fraction": 0.0015789473684210526,
+    "can_compute_sampled_point_AP": true
+  },
+  "candidate_products": 16,
+  "candidate_groups": 10,
+  "AP_computable_groups": 8,
+  "AP_or_recall_or_FPR_computed": false,
+  "labels_are_published_reference_not_new_verified_truth": true,
+  "20m_labels_expanded_or_majority_voted": false,
+  "new_calibration_split": false,
+  "new_training_fits_predictions_imagery_downloads": 0,
+  "code_mapping_membership_changed_after_label_access": false,
+  "prelabel_lock_sha256": "5d8cda922e9bbc60f8997a8d22581d1f6067020dfd4e994dcf988e4e6f81da24",
+  "controlled_data_SHA256": {
+    "coordinate_metadata.csv": "c2f029a349096738935d9239585c67ca6dfc5a4c71017f5e8634af982b86ce68",
+    "original_PixBox-S2-CMIX.zip": "d0de504201487aca30cc9e293db7ecbfe15ca52381a728dea0c06aa98bba9428",
+    "allowed_original_rows.csv": "b6d7d135dae253f10e39567357c4126b5e778bcd6b076af51c5e637c8e44d76f",
+    "parsed_allowed_rows.json": "abd9495089fb5da733c79e4978b94466e58de8e9f1e34da4c29119f5b1365634",
+    "deduplicated_locations.json": "b1448f3fbd05c9e77af7ed0ea50dbde4be7480a35a4c532a2fec45789af25f96",
+    "duplicate_conflicts_full.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "20m_cell_combinations_full.json": "41c4acde7ca9e698286f912b8cc680243c6e7dc775533ad863507ef680e0eab7"
+  },
+  "access_record": {
+    "labels_interpreted_products": [
+      "S2A_MSIL1C_20170113T072241_N0204_R006_T40UEE_20170113T072238",
+      "S2A_MSIL1C_20170706T051651_N0205_R062_T48XWG_20170706T051649",
+      "S2A_MSIL1C_20170712T071621_N0205_R006_T40UEE_20170712T071617",
+      "S2A_MSIL1C_20170725T142751_N0205_R053_T19GBQ_20170725T143854",
+      "S2A_MSIL1C_20170726T102021_N0205_R065_T33VVE_20170726T102259",
+      "S2A_MSIL1C_20170908T100031_N0205_R122_T32SPJ_20170908T100655",
+      "S2A_MSIL1C_20170917T052641_N0205_R105_T48XWG_20170917T052642",
+      "S2A_MSIL1C_20171107T150421_N0206_R125_T22WES_20171107T165127",
+      "S2A_MSIL1C_20180106T032121_N0206_R118_T48NUG_20180106T083912",
+      "S2A_MSIL1C_20180217T053911_N0206_R005_T44SKJ_20180217T082149",
+      "S2A_MSIL1C_20180222T012651_N0206_R074_T54TWN_20180222T031349",
+      "S2A_MSIL1C_20180302T142851_N0206_R053_T19GBQ_20180302T192732",
+      "S2A_MSIL1C_20180303T140051_N0206_R067_T19FDV_20180303T202004",
+      "S2B_MSIL1C_20170731T102019_N0205_R065_T33VVE_20170731T102348",
+      "S2B_MSIL1C_20170916T101019_N0205_R022_T32SPJ_20170916T101354",
+      "S2B_MSIL1C_20180302T150259_N0206_R125_T22WES_20180302T183800"
+    ],
+    "allowed_rows_semantically_parsed": 9500,
+    "excluded_rows_remainder_opaque": 7851,
+    "physical_ZIP_stream_contains_all29_products": true,
+    "excluded13_category_values_interpreted": false,
+    "raw_and_derived_class_tables_in_git": false,
+    "historical_Phase102_original_copy_retained_unmodified": true,
+    "Phase103_labels_transferred_to_remote": false
+  },
+  "limits": [
+    "selected-point reference only",
+    "unknown sampling weights",
+    "no dense mIoU or scene FPR support",
+    "group count not pixel count",
+    "C1 operational absence interpretation distinct from explicit C7 Clear"
+  ]
+}

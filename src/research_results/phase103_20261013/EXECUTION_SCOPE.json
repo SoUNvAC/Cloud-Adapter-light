@@ -1,0 +1,25 @@
+{
+  "phase": 103,
+  "prelabel_rule_commit": "fc4b92d1ccf2fe60a47eeda297edb155d59109cc",
+  "prelabel_coordinate_binding_commit": "339dda79df9502a5ad34ccff2d089409ed1a422d",
+  "mapping_or_initial_classification_and_independent_counter_code_changed_after_labels": false,
+  "initial_frozen_code_SHA256": {
+    "src/tools/phase103_reference.py": "22f0e7621f8db45f785bc07fcd06cf3204034295f18a38bf15a41db0c6ea68a9",
+    "src/tools/verify_phase103_reference.py": "cade4605228081e72883d6f85cb7b08710d2b26b9d0425ada879c65228c1a519",
+    "src/tools/prepare_phase103_positions.py": "f3f754478fb267fba222dcd04f3af44981af2a535ad0f8924421811e179f9ebe",
+    "src/tools/test_phase103_reference.py": "8eb60d5f7c3b1b016c05719e71403468c082200b690ad35e91e6d76f71847fae"
+  },
+  "post_count_aggregate_verifier_SHA256": "80b3228d2e3f1adacd0d39aaf3489c6f0fc25ddb8b0bed30238b3e507ae3bb5b",
+  "label_interpretation_location": "local controlled data only",
+  "labels_interpreted_products": 16,
+  "excluded_product_labels_interpreted": 0,
+  "label_rows_parsed": 9500,
+  "new_training_fitting_predictions_performance_evaluation_imagery_downloads": 0,
+  "new_calibration_split": false,
+  "new_model_or_representative_selection": false,
+  "Kappa_extension": false,
+  "sealed_data_read": false,
+  "work_dirs_sync": false,
+  "raw_or_derived_point_labels_in_git": false,
+  "deadline_beijing": "2026-10-20"
+}

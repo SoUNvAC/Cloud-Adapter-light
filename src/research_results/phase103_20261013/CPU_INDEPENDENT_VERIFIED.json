@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "independent_truth_table_rows": 9500,
+  "deduplicated_positions": 9500,
+  "products": 16,
+  "groups": 10,
+  "20m_cells_checked": 9484,
+  "all_group_product_counts_match": true,
+  "C1_C7_counts_match": true,
+  "duplicate_attributes_checked_all_categories": true,
+  "all_controlled_data_SHA256_match": true,
+  "excluded13_labels_interpreted": false,
+  "raw_derived_labels_transferred": false,
+  "model_scores_loaded_or_metrics_computed": false,
+  "independent_code_sha256": "cade4605228081e72883d6f85cb7b08710d2b26b9d0425ada879c65228c1a519"
+}

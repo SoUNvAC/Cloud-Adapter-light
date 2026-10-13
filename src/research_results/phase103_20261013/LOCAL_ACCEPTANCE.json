@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "frozen_mapping_members_and_prelabel_code_hashes_unchanged": true,
+  "prelabel_lock_sha256": "5d8cda922e9bbc60f8997a8d22581d1f6067020dfd4e994dcf988e4e6f81da24",
+  "coordinate_file_matches_prelabel_binding": true,
+  "independent_primary_counter_verified": true,
+  "additional_duplicate_pending_cell_counter_assertions": 234,
+  "all_group_product_cluster_counts_and_exclusive_ignore_counts_match": true,
+  "group_totals_match_total_support": true,
+  "labels_now_accessed": true,
+  "authorized_products": 16,
+  "excluded13_classes_interpreted": false,
+  "new_metrics_computed": false,
+  "raw_and_derived_point_data_local_controlled_only": true,
+  "data_directory": "data/pixbox_s2_cmix_5036991/phase103_20261013",
+  "git_payload_contains_only_aggregates_rules_metadata_and_hashes": true,
+  "completed_utc": "2026-10-13T05:06:34.141283+00:00"
+}

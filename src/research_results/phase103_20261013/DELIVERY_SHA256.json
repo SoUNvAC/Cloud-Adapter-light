@@ -1,0 +1,18 @@
+{
+  ".gitattributes": "f06202a408fef9b9ea69bb6b1cb8160dbb0378c5bb67a444d510d231813824c8",
+  "coordinate_metadata_verification.json": "c698e6a010f02be9f8f95e775ebc5ac21a000bb0b5f4cef623a3f1113b843c0a",
+  "CPU_INDEPENDENT_VERIFIED.json": "9b3f1af74fec633219c5ef75b82924bdb6643ae42d327b18df5d01c1c75d2122",
+  "duplicates_and_position_conflicts.csv": "738abda1c2c43a8ea158f6a392e82dfb770eb1bc158bfb6412e48a15fa2bd5cd",
+  "EXECUTION_SCOPE.json": "d4ce78d87b33e52fe4a79ee6da0c403ce28575eea37f7e6b2a9fa797722877f9",
+  "INPUT_READINESS.md": "5bd49fb670a0d04d7671dfdc4407e0f61186928b9670b52c37dfd7758d91f7f2",
+  "LOCAL_ACCEPTANCE.json": "ed23ecdcebbdcf7263ae6497c90aa26b8a84f1ace3b9931d7998d066036c41b6",
+  "member_grid_metadata.json": "089fa9b9ea68b92c3762f8043e1ac0bffea98a9b1dfcc311daeb1b972b6b8473",
+  "per_group_support.csv": "113e568ad264f716d7b9a4cddde9b85c4880fe4573259af1aa787b1d29f0b5bb",
+  "per_product_support.csv": "7390be7fd0140c11247468292fdb7db1a030dd59b956b9618a2dedd1171d56f8",
+  "prelabel_lock.json": "5d8cda922e9bbc60f8997a8d22581d1f6067020dfd4e994dcf988e4e6f81da24",
+  "README.md": "67a8d0eb54e6f2f727b787b0952c6603d847c578101f10821388483f7f2d488c",
+  "READY_BEFORE_LABEL_ACCESS.json": "d18dcd76900d98e125373b1844591fbb7862472a2fca8d392669564a0681a496",
+  "reference_mapping.json": "7cebeac7e8a364d15da6a82d9a1407179804ff819649491c72ee5f5dd80763da",
+  "semantic_basis.json": "02ce73aab6ce9340691ee1ac7602b54894a8410ca0fb9acc6f9fe76cbf656745",
+  "support_report.json": "b29a6d9148ea02166dec79e412dd612077dabaa982fccf872a354ac384c5bf3e"
+}
