@@ -3,7 +3,7 @@
   "CLAIMS_AND_GAPS.md": "dfc0557de9966c06a82dc936d0d42b84a54e974f573a17f03e9785a07fe880b5",
   "evidence_matrix.csv": "72ec12eb47e566acb1527c8f922bec6cf06b6822fd947c4821f63ae02d78c595",
   "EXECUTION_SCOPE.json": "f2ee0a6d83be11fcc65991b7945460e4f8d9d4b1ae46c6daf251765f5e2a6102",
-  "extracted_values.json": "4d6ea09e2d98beb45e2e1e23c6dcedcbf027f46c14bc13f8a3efc4750baa46b7",
+  "extracted_values.json": "8325aa11bbc3ccd5d3ab8759065db48fff10982b89e1793900d47baaebc7f0a8",
   "extraction_specs.json": "3f5d51c94712b8935a1ed0e4477a05752b717a703b4c74b335e12aed93ae7805",
   "README.md": "dfb6c3e2a39a4eff7ae18c325e063b539ea03454410de98de5afa8f789317747",
   "source_files_sha256.json": "b8629298da6c0b93d5b805febe219876b0fa3af90a282ffcd25f2c18ce003048",
@@ -190,5 +190,5 @@
   "sources/99/per_group.csv": "0e55ed6cb1c976fc6df4180337e4d7e59559215609c4e553a48a5945960aaee5",
   "sources/99/phase99_report.json": "6fad1ee2169d0e9ba7289da5323daf359e401a0879a0b0948e465c067749556a",
   "sources/99/REMOTE_RECOVERY_VERIFIED.json": "f11d842d535cb7caee16624c118a46a9a85c6cc65df52e3cab0a88dedbc46c34",
-  "VERIFICATION.json": "ce7270d23ed807daa72a00056ca53706c658b8461f15732817a4f8c427463db8"
+  "VERIFICATION.json": "3f7e67bafc33506d756d5e51ea813097426e72f8cadedabd1547b519bb06561c"
 }

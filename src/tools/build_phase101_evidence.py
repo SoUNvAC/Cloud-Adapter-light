@@ -194,8 +194,8 @@ def collect():
                           'copy':copy.relative_to(DEST).as_posix(),'sha256':sha(p),'bytes':p.stat().st_size})
         sources[phase]={'report':(DEST/'sources'/phase/report.relative_to(base)).relative_to(DEST).as_posix(),
                         'original_report':report.relative_to(ROOT).as_posix(),'files':files}
-    (DEST/'source_files_sha256.json').write_text(json.dumps(sources,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-    (DEST/'extraction_specs.json').write_text(json.dumps(specs,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    (DEST/'source_files_sha256.json').write_text(json.dumps(sources,ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n')
+    (DEST/'extraction_specs.json').write_text(json.dumps(specs,ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n')
 
 
 def render():
@@ -255,7 +255,7 @@ def render():
                          'source_sha256':sha(DEST/source['report']),'exact_extracted_values':values})
     with (DEST/'evidence_matrix.csv').open('w',encoding='utf-8-sig',newline='') as f:
         w=csv.DictWriter(f,fieldnames=list(rows[0]));w.writeheader();w.writerows(rows)
-    (DEST/'extracted_values.json').write_text(json.dumps(extracts,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    (DEST/'extracted_values.json').write_text(json.dumps(extracts,ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n')
     # Reopen rendered CSV and compare exact extraction objects: no metric recomputation.
     with (DEST/'evidence_matrix.csv').open(encoding='utf-8-sig',newline='') as f: rendered=list(csv.DictReader(f))
     assert len(rendered)==len(extracts)
@@ -284,7 +284,7 @@ def render():
         'unverified':['expert_A identity/experience','human_B not performed',
                       '54 recovered precrash probability blocks lack precrash SHA',
                       'older phases without standalone CPU receipt: no invented receipt']}
-    (DEST/'VERIFICATION.json').write_text(json.dumps(verification,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    (DEST/'VERIFICATION.json').write_text(json.dumps(verification,ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n')
     print(json.dumps({'status':'passed','rows':len(rows),'sources':len(sources),'source_bytes':sum(f['bytes'] for s in sources.values() for f in s['files'])}))
 
 
