@@ -1,0 +1,17 @@
+{
+  "status": "ready_before_point_class_access",
+  "created_utc": "2026-10-13T04:58:24.392071+00:00",
+  "prelabel_commit": "fc4b92d1ccf2fe60a47eeda297edb155d59109cc",
+  "prelabel_lock_sha256": "5d8cda922e9bbc60f8997a8d22581d1f6067020dfd4e994dcf988e4e6f81da24",
+  "mapping_sha256": "7cebeac7e8a364d15da6a82d9a1407179804ff819649491c72ee5f5dd80763da",
+  "coordinate_metadata_sha256": "c2f029a349096738935d9239585c67ca6dfc5a4c71017f5e8634af982b86ce68",
+  "coordinate_CPU_receipt_sha256": "c698e6a010f02be9f8f95e775ebc5ac21a000bb0b5f4cef623a3f1113b843c0a",
+  "code_files_all_match_prelabel_lock": true,
+  "member_and_historical_metadata_hashes_all_match": true,
+  "class_values_accessed": false,
+  "coordinate_10m20m_rule_fixed_no_shift_search": true,
+  "products": 16,
+  "groups": 10,
+  "coordinate_rows": 9500,
+  "position_pending": 0
+}

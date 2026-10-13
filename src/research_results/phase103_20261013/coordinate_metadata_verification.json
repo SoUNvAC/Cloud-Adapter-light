@@ -1,0 +1,174 @@
+{
+  "status": "passed_coordinate_metadata_only",
+  "products": 16,
+  "points": 9500,
+  "pending": 0,
+  "checks": [
+    {
+      "product_id": "S2A_MSIL1C_20180222T012651_N0206_R074_T54TWN_20180222T031349",
+      "points": 550,
+      "pending_reasons": {},
+      "min_fractional_x10": 0.4377180767128266,
+      "max_fractional_x10": 0.5628168886992171,
+      "min_fractional_y10": 0.47874723970926425,
+      "max_fractional_y10": 0.5215299244036942,
+      "index_rule": "floor of original XML native coordinates, exact original indices; no shift search"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20170725T142751_N0205_R053_T19GBQ_20170725T143854",
+      "points": 550,
+      "pending_reasons": {},
+      "min_fractional_x10": 0.46749270478608196,
+      "max_fractional_x10": 0.5323016406794068,
+      "min_fractional_y10": 0.4784741506909995,
+      "max_fractional_y10": 0.5219271834012034,
+      "index_rule": "floor of original XML native coordinates, exact original indices; no shift search"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20170726T102021_N0205_R065_T33VVE_20170726T102259",
+      "points": 550,
+      "pending_reasons": {},
+      "min_fractional_x10": 0.49705704103143944,
+      "max_fractional_x10": 0.5030201560002752,
+      "min_fractional_y10": 0.47883993629375254,
+      "max_fractional_y10": 0.5211475560445251,
+      "index_rule": "floor of original XML native coordinates, exact original indices; no shift search"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20170113T072241_N0204_R006_T40UEE_20170113T072238",
+      "points": 550,
+      "pending_reasons": {},
+      "min_fractional_x10": 0.4873261721686504,
+      "max_fractional_x10": 0.5126944701878529,
+      "min_fractional_y10": 0.4788841066883833,
+      "max_fractional_y10": 0.5214220391590061,
+      "index_rule": "floor of original XML native coordinates, exact original indices; no shift search"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20180217T053911_N0206_R005_T44SKJ_20180217T082149",
+      "points": 700,
+      "pending_reasons": {},
+      "min_fractional_x10": 0.4670987277263521,
+      "max_fractional_x10": 0.5332710410693835,
+      "min_fractional_y10": 0.47838584119381267,
+      "max_fractional_y10": 0.521444315183544,
+      "index_rule": "floor of original XML native coordinates, exact original indices; no shift search"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20170917T052641_N0205_R105_T48XWG_20170917T052642",
+      "points": 550,
+      "pending_reasons": {},
+      "min_fractional_x10": 0.4862884077010676,
+      "max_fractional_x10": 0.5132346625086939,
+      "min_fractional_y10": 0.4575641981325589,
+      "max_fractional_y10": 0.542508236505455,
+      "index_rule": "floor of original XML native coordinates, exact original indices; no shift search"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20180302T142851_N0206_R053_T19GBQ_20180302T192732",
+      "points": 750,
+      "pending_reasons": {},
+      "min_fractional_x10": 0.4675240467477124,
+      "max_fractional_x10": 0.5326913486087506,
+      "min_fractional_y10": 0.47805056050424355,
+      "max_fractional_y10": 0.5221125044859036,
+      "index_rule": "floor of original XML native coordinates, exact original indices; no shift search"
+    },
+    {
+      "product_id": "S2B_MSIL1C_20180302T150259_N0206_R125_T22WES_20180302T183800",
+      "points": 600,
+      "pending_reasons": {},
+      "min_fractional_x10": 0.49038517688131833,
+      "max_fractional_x10": 0.5099834581369578,
+      "min_fractional_y10": 0.45742110507580946,
+      "max_fractional_y10": 0.5424059429205954,
+      "index_rule": "floor of original XML native coordinates, exact original indices; no shift search"
+    },
+    {
+      "product_id": "S2B_MSIL1C_20170916T101019_N0205_R022_T32SPJ_20170916T101354",
+      "points": 600,
+      "pending_reasons": {},
+      "min_fractional_x10": 0.4955692590565377,
+      "max_fractional_x10": 0.5042068325219589,
+      "min_fractional_y10": 0.47893182691223046,
+      "max_fractional_y10": 0.5211450854312716,
+      "index_rule": "floor of original XML native coordinates, exact original indices; no shift search"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20170712T071621_N0205_R006_T40UEE_20170712T071617",
+      "points": 550,
+      "pending_reasons": {},
+      "min_fractional_x10": 0.4871384550588118,
+      "max_fractional_x10": 0.5127596931761218,
+      "min_fractional_y10": 0.478645830135747,
+      "max_fractional_y10": 0.5211822954006493,
+      "index_rule": "floor of original XML native coordinates, exact original indices; no shift search"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20170706T051651_N0205_R062_T48XWG_20170706T051649",
+      "points": 800,
+      "pending_reasons": {},
+      "min_fractional_x10": 0.48669225877347344,
+      "max_fractional_x10": 0.5133392759253184,
+      "min_fractional_y10": 0.45760894399154495,
+      "max_fractional_y10": 0.5422406238503754,
+      "index_rule": "floor of original XML native coordinates, exact original indices; no shift search"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20180303T140051_N0206_R067_T19FDV_20180303T202004",
+      "points": 550,
+      "pending_reasons": {},
+      "min_fractional_x10": 0.4755738966168792,
+      "max_fractional_x10": 0.5245485497525806,
+      "min_fractional_y10": 0.4786778884008527,
+      "max_fractional_y10": 0.5215058857575059,
+      "index_rule": "floor of original XML native coordinates, exact original indices; no shift search"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20171107T150421_N0206_R125_T22WES_20171107T165127",
+      "points": 550,
+      "pending_reasons": {},
+      "min_fractional_x10": 0.4901062805674883,
+      "max_fractional_x10": 0.5093427185202017,
+      "min_fractional_y10": 0.45749278720450093,
+      "max_fractional_y10": 0.5423522450028031,
+      "index_rule": "floor of original XML native coordinates, exact original indices; no shift search"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20170908T100031_N0205_R122_T32SPJ_20170908T100655",
+      "points": 550,
+      "pending_reasons": {},
+      "min_fractional_x10": 0.4957136821003587,
+      "max_fractional_x10": 0.5042455651564524,
+      "min_fractional_y10": 0.4789455318823457,
+      "max_fractional_y10": 0.5211528200652538,
+      "index_rule": "floor of original XML native coordinates, exact original indices; no shift search"
+    },
+    {
+      "product_id": "S2B_MSIL1C_20170731T102019_N0205_R065_T33VVE_20170731T102348",
+      "points": 550,
+      "pending_reasons": {},
+      "min_fractional_x10": 0.49702890182379633,
+      "max_fractional_x10": 0.5031351998159153,
+      "min_fractional_y10": 0.4789935588833032,
+      "max_fractional_y10": 0.5210562350221153,
+      "index_rule": "floor of original XML native coordinates, exact original indices; no shift search"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20180106T032121_N0206_R118_T48NUG_20180106T083912",
+      "points": 550,
+      "pending_reasons": {},
+      "min_fractional_x10": 0.4583465978619188,
+      "max_fractional_x10": 0.5426618535420857,
+      "min_fractional_y10": 0.49933163962577964,
+      "max_fractional_y10": 0.5006839942011538,
+      "index_rule": "floor of original XML native coordinates, exact original indices; no shift search"
+    }
+  ],
+  "source_position_sha256": "86027b822d8748bc31cb68054b4437e564181f1d26045e94142658f477b2ab38",
+  "member_grid_metadata_sha256": "089fa9b9ea68b92c3762f8043e1ac0bffea98a9b1dfcc311daeb1b972b6b8473",
+  "coordinate_metadata_sha256": "c2f029a349096738935d9239585c67ca6dfc5a4c71017f5e8634af982b86ce68",
+  "code_sha256": "f3f754478fb267fba222dcd04f3af44981af2a535ad0f8924421811e179f9ebe",
+  "class_values_read": false,
+  "raster_opened": false
+}
