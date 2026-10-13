@@ -1,0 +1,545 @@
+[
+  {
+    "file": "tarrio.pdf",
+    "url": "https://ntrs.nasa.gov/api/citations/20210014061/downloads/Masek_Comparison_Cloud_Detection.pdf",
+    "ok": false,
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "file": "cmix.pdf",
+    "url": "https://ntrs.nasa.gov/api/citations/20220006382/downloads/rse-2022-112990.pdf",
+    "ok": false,
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "file": "cloud_adapter.pdf",
+    "url": "https://arxiv.org/pdf/2411.13127",
+    "final_url": "https://arxiv.org/pdf/2411.13127",
+    "bytes": 7802993,
+    "sha256": "997a19d92412eef158aedcba412f77195b42fd321c65891b0edc996aa7d4dd48",
+    "access_date": "2026-10-13",
+    "ok": true,
+    "content_scope": "raw_public_artifact; consult reading_level before inferring review"
+  },
+  {
+    "file": "sensei.pdf",
+    "url": "https://arxiv.org/pdf/2111.08349",
+    "ok": false,
+    "error": "size cap"
+  },
+  {
+    "file": "cloud_adapter.html",
+    "url": "https://arxiv.org/abs/2411.13127",
+    "final_url": "https://arxiv.org/abs/2411.13127",
+    "bytes": 43145,
+    "sha256": "6c95589c6c0721e9c519cd395f727b0a6f0a173ff081f883e3b473fbec45814b",
+    "access_date": "2026-10-13",
+    "ok": true,
+    "content_scope": "raw_public_artifact; consult reading_level before inferring review"
+  },
+  {
+    "file": "fmask_author.html",
+    "url": "https://shi-eo.github.io/publication/2025-fmask5",
+    "final_url": "https://shi-eo.github.io/publication/2025-fmask5",
+    "bytes": 12099,
+    "sha256": "0c318008f37ecad48d79258943646983d2ecadfa559c04ad0ed2487879268e41",
+    "access_date": "2026-10-13",
+    "ok": true,
+    "content_scope": "raw_public_artifact; consult reading_level before inferring review"
+  },
+  {
+    "file": "clouds2mask_repo.json",
+    "url": "https://api.github.com/repos/DPIRD-DMA/CloudS2Mask",
+    "final_url": "https://api.github.com/repos/DPIRD-DMA/CloudS2Mask",
+    "bytes": 6373,
+    "sha256": "b55bcbe68d52e34a24ca41951c8e1c5cd7332bf132e262fb0e7888a52e4d4d5f",
+    "access_date": "2026-10-13",
+    "ok": true,
+    "content_scope": "raw_public_artifact; consult reading_level before inferring review"
+  },
+  {
+    "file": "clouds2mask_tree.json",
+    "url": "https://api.github.com/repos/DPIRD-DMA/CloudS2Mask/git/trees/HEAD?recursive=1",
+    "final_url": "https://api.github.com/repos/DPIRD-DMA/CloudS2Mask/git/trees/HEAD?recursive=1",
+    "bytes": 7548,
+    "sha256": "a1603a996473b5808180093a221f20cd29ab29c878931e7cc7925231d6f0c759",
+    "access_date": "2026-10-13",
+    "ok": true,
+    "content_scope": "raw_public_artifact; consult reading_level before inferring review"
+  },
+  {
+    "file": "clouds2mask_readme.txt",
+    "url": "https://api.github.com/repos/DPIRD-DMA/CloudS2Mask/readme",
+    "final_url": "https://api.github.com/repos/DPIRD-DMA/CloudS2Mask/readme",
+    "bytes": 4813,
+    "sha256": "d91c1578ab23863c4fe4dcb6d970639168b3219478ff205a5a8175b1405dc5fb",
+    "access_date": "2026-10-13",
+    "ok": true,
+    "content_scope": "raw_public_artifact; consult reading_level before inferring review"
+  },
+  {
+    "file": "omni_repo.json",
+    "url": "https://api.github.com/repos/DPIRD-DMA/OmniCloudMask",
+    "final_url": "https://api.github.com/repos/DPIRD-DMA/OmniCloudMask",
+    "bytes": 6672,
+    "sha256": "8accea0c07e705a6dc4785aee621bb7ea80a8a6725d1a7a63ac2f86cb9f28ca2",
+    "access_date": "2026-10-13",
+    "ok": true,
+    "content_scope": "raw_public_artifact; consult reading_level before inferring review"
+  },
+  {
+    "file": "omni_tree.json",
+    "url": "https://api.github.com/repos/DPIRD-DMA/OmniCloudMask/git/trees/HEAD?recursive=1",
+    "final_url": "https://api.github.com/repos/DPIRD-DMA/OmniCloudMask/git/trees/HEAD?recursive=1",
+    "bytes": 29248,
+    "sha256": "48a69c1dd481070060185a858816351ebb80582aa7b86befe1f78f21dc69376f",
+    "access_date": "2026-10-13",
+    "ok": true,
+    "content_scope": "raw_public_artifact; consult reading_level before inferring review"
+  },
+  {
+    "file": "omni_readme.txt",
+    "url": "https://api.github.com/repos/DPIRD-DMA/OmniCloudMask/readme",
+    "final_url": "https://api.github.com/repos/DPIRD-DMA/OmniCloudMask/readme",
+    "bytes": 3969,
+    "sha256": "171977f3371ddf91538406fe860c9b0a75a61c6a5b2fbfa7ac02106f48000b6a",
+    "access_date": "2026-10-13",
+    "ok": true,
+    "content_scope": "raw_public_artifact; consult reading_level before inferring review"
+  },
+  {
+    "file": "fmask_repo.json",
+    "url": "https://api.github.com/repos/GERSL/Fmask",
+    "final_url": "https://api.github.com/repos/GERSL/Fmask",
+    "bytes": 5851,
+    "sha256": "c6d7da937430d3eb446a58db76b57477be200d83cc2c7334289cf01651b3f8e8",
+    "access_date": "2026-10-13",
+    "ok": true,
+    "content_scope": "raw_public_artifact; consult reading_level before inferring review"
+  },
+  {
+    "file": "fmask_tree.json",
+    "url": "https://api.github.com/repos/GERSL/Fmask/git/trees/HEAD?recursive=1",
+    "final_url": "https://api.github.com/repos/GERSL/Fmask/git/trees/HEAD?recursive=1",
+    "bytes": 3827,
+    "sha256": "521da8f4da0c6c6574752d2e6017d35033c904e983fdd83b1285bc2a0656b0bf",
+    "access_date": "2026-10-13",
+    "ok": true,
+    "content_scope": "raw_public_artifact; consult reading_level before inferring review"
+  },
+  {
+    "file": "fmask_readme.txt",
+    "url": "https://api.github.com/repos/GERSL/Fmask/readme",
+    "final_url": "https://api.github.com/repos/GERSL/Fmask/readme",
+    "bytes": 16017,
+    "sha256": "7d45560cd46a109e2b39e89a6c9f668986180c569ce793b0037f450d9e932b9a",
+    "access_date": "2026-10-13",
+    "ok": true,
+    "content_scope": "raw_public_artifact; consult reading_level before inferring review"
+  },
+  {
+    "file": "sensei_repo_repo.json",
+    "url": "https://api.github.com/repos/aliFrancis/SEnSeI",
+    "final_url": "https://api.github.com/repos/aliFrancis/SEnSeI",
+    "bytes": 5204,
+    "sha256": "a25b5e0cc46da30b175a6e2c4e2a8373755c164e9819049702f48789052396e5",
+    "access_date": "2026-10-13",
+    "ok": true,
+    "content_scope": "raw_public_artifact; consult reading_level before inferring review"
+  },
+  {
+    "file": "sensei_repo_tree.json",
+    "url": "https://api.github.com/repos/aliFrancis/SEnSeI/git/trees/HEAD?recursive=1",
+    "final_url": "https://api.github.com/repos/aliFrancis/SEnSeI/git/trees/HEAD?recursive=1",
+    "bytes": 8852,
+    "sha256": "52a479838f14105c5decd565f060ec2b85a1bc113f8754faee9e1c8b9cf0096d",
+    "access_date": "2026-10-13",
+    "ok": true,
+    "content_scope": "raw_public_artifact; consult reading_level before inferring review"
+  },
+  {
+    "file": "sensei_repo_readme.txt",
+    "url": "https://api.github.com/repos/aliFrancis/SEnSeI/readme",
+    "final_url": "https://api.github.com/repos/aliFrancis/SEnSeI/readme",
+    "bytes": 3956,
+    "sha256": "9926b3f3530f11aeb9e88e5a4a5608520ab21a0b070206596ad7f5836160abfe",
+    "access_date": "2026-10-13",
+    "ok": true,
+    "content_scope": "raw_public_artifact; consult reading_level before inferring review"
+  },
+  {
+    "file": "sensei2_repo.json",
+    "url": "https://api.github.com/repos/aliFrancis/SEnSeI-v2",
+    "ok": false,
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "file": "sensei2_tree.json",
+    "url": "https://api.github.com/repos/aliFrancis/SEnSeI-v2/git/trees/HEAD?recursive=1",
+    "ok": false,
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "file": "sensei2_readme.txt",
+    "url": "https://api.github.com/repos/aliFrancis/SEnSeI-v2/readme",
+    "ok": false,
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "file": "adapter_repo_repo.json",
+    "url": "https://api.github.com/repos/XavierJiezou/Cloud-Adapter",
+    "final_url": "https://api.github.com/repos/XavierJiezou/Cloud-Adapter",
+    "bytes": 5746,
+    "sha256": "eed1b63ef1462e3056138518b14b6e28b5ec5fc3209e98a538167cae1478fb37",
+    "access_date": "2026-10-13",
+    "ok": true,
+    "content_scope": "raw_public_artifact; consult reading_level before inferring review"
+  },
+  {
+    "file": "adapter_repo_tree.json",
+    "url": "https://api.github.com/repos/XavierJiezou/Cloud-Adapter/git/trees/HEAD?recursive=1",
+    "final_url": "https://api.github.com/repos/XavierJiezou/Cloud-Adapter/git/trees/HEAD?recursive=1",
+    "bytes": 104013,
+    "sha256": "a4750a406b0fb1ff2f01dfc01bb7d55683b292e442e463960dab15fa4b188e16",
+    "access_date": "2026-10-13",
+    "ok": true,
+    "content_scope": "raw_public_artifact; consult reading_level before inferring review"
+  },
+  {
+    "file": "adapter_repo_readme.txt",
+    "url": "https://api.github.com/repos/XavierJiezou/Cloud-Adapter/readme",
+    "final_url": "https://api.github.com/repos/XavierJiezou/Cloud-Adapter/readme",
+    "bytes": 10404,
+    "sha256": "b70ff502fda06520d1e1de22132781290e509e61bcdf17a71bfbe564eae82936",
+    "access_date": "2026-10-13",
+    "ok": true,
+    "content_scope": "raw_public_artifact; consult reading_level before inferring review"
+  },
+  {
+    "file": "sensei.html",
+    "url": "https://arxiv.org/html/2111.08349",
+    "ok": true,
+    "bytes": 394821,
+    "sha256": "0571cf354582f0e55f166ee5c590b290843188be1ae103ed9c96428ddf183d68",
+    "access_date": "2026-10-13",
+    "content_scope": "raw_public_artifact; consult reading_level before inferring review"
+  },
+  {
+    "file": "tarrio2.pdf",
+    "url": "https://ntrs.nasa.gov/api/citations/20210014061/downloads/Masek_Comparison_Cloud_Detection.pdf?attachment=true",
+    "ok": false,
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "file": "cmix2.pdf",
+    "url": "https://ntrs.nasa.gov/api/citations/20220006382/downloads/rse-2022-112990.pdf?attachment=true",
+    "ok": false,
+    "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>"
+  },
+  {
+    "file": "clouds2mask_paper.html",
+    "url": "https://www.sciencedirect.com/science/article/pii/S0034425724001330",
+    "ok": false,
+    "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>"
+  },
+  {
+    "file": "omni_paper.html",
+    "url": "https://www.sciencedirect.com/science/article/pii/S0034425725000987",
+    "ok": false,
+    "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>"
+  },
+  {
+    "file": "fmask_doi.json",
+    "url": "https://api.crossref.org/works/10.1016/j.rse.2026.115672",
+    "ok": false,
+    "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>"
+  },
+  {
+    "file": "adapter_doi_search.json",
+    "url": "https://api.crossref.org/works?query.title=Adapting%20Vision%20Foundation%20Models%20for%20Robust%20Cloud%20Segmentation%20in%20Remote%20Sensing%20Images&rows=2",
+    "ok": true,
+    "bytes": 16701,
+    "sha256": "4b6ae0505d3ec0d7a5a27e58cbae3dcca0b66d7012e0d5a7aee596db9452a173",
+    "access_date": "2026-10-13",
+    "content_scope": "raw_public_artifact; consult reading_level before inferring review"
+  },
+  {
+    "file": "sensei_doi.json",
+    "url": "https://api.crossref.org/works/10.1109/TGRS.2021.3128280",
+    "ok": true,
+    "bytes": 10174,
+    "sha256": "6581ea7067ec29b3b7d74cf1cbbcc1134655e1cb6ef52679c19f62e0f551f47f",
+    "access_date": "2026-10-13",
+    "content_scope": "raw_public_artifact; consult reading_level before inferring review"
+  },
+  {
+    "file": "clouds2mask_clouds2mask_model_settings.py",
+    "url": "https://raw.githubusercontent.com/DPIRD-DMA/CloudS2Mask/7819f2adcf7f5dacef77f3b8d7c85443cb28cbe8/clouds2mask/model_settings.py",
+    "ok": false,
+    "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>"
+  },
+  {
+    "file": "clouds2mask_clouds2mask_model_download_links.csv",
+    "url": "https://raw.githubusercontent.com/DPIRD-DMA/CloudS2Mask/7819f2adcf7f5dacef77f3b8d7c85443cb28cbe8/clouds2mask/model_download_links.csv",
+    "ok": false,
+    "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>"
+  },
+  {
+    "file": "clouds2mask_clouds2mask_processing_settings.py",
+    "url": "https://raw.githubusercontent.com/DPIRD-DMA/CloudS2Mask/7819f2adcf7f5dacef77f3b8d7c85443cb28cbe8/clouds2mask/processing_settings.py",
+    "ok": false,
+    "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>"
+  },
+  {
+    "file": "clouds2mask_LICENSE",
+    "url": "https://raw.githubusercontent.com/DPIRD-DMA/CloudS2Mask/7819f2adcf7f5dacef77f3b8d7c85443cb28cbe8/LICENSE",
+    "ok": true,
+    "bytes": 1066,
+    "sha256": "77d366de845c0c515b5387cee177d54cb991fdac76d82c1d1d3239ec53a30d84",
+    "access_date": "2026-10-13",
+    "content_scope": "raw_public_artifact; consult reading_level before inferring review"
+  },
+  {
+    "file": "omni_omnicloudmask_model_download_links.csv",
+    "url": "https://raw.githubusercontent.com/DPIRD-DMA/OmniCloudMask/f68cf49b4cecc93ec5cb71e80110d76f61df073c/omnicloudmask/model_download_links.csv",
+    "ok": true,
+    "bytes": 1083,
+    "sha256": "bab75e2c434aba2f3028874112dbe432be48f24f0a01a1269b2ec24c486b63a1",
+    "access_date": "2026-10-13",
+    "content_scope": "raw_public_artifact; consult reading_level before inferring review"
+  },
+  {
+    "file": "omni_omnicloudmask_model_utils.py",
+    "url": "https://raw.githubusercontent.com/DPIRD-DMA/OmniCloudMask/f68cf49b4cecc93ec5cb71e80110d76f61df073c/omnicloudmask/model_utils.py",
+    "ok": true,
+    "bytes": 12064,
+    "sha256": "f749ceced40f8b0899f56e95e79b9f43ea77b74898376175407c21c26796a1dd",
+    "access_date": "2026-10-13",
+    "content_scope": "raw_public_artifact; consult reading_level before inferring review"
+  },
+  {
+    "file": "omni_MODEL_CHANGELOG.md",
+    "url": "https://raw.githubusercontent.com/DPIRD-DMA/OmniCloudMask/f68cf49b4cecc93ec5cb71e80110d76f61df073c/MODEL_CHANGELOG.md",
+    "ok": true,
+    "bytes": 917,
+    "sha256": "4b46d62a5b2b3a02d320fdc937af592d8f513e67b1a8e1dbffcaf3492800359d",
+    "access_date": "2026-10-13",
+    "content_scope": "raw_public_artifact; consult reading_level before inferring review"
+  },
+  {
+    "file": "omni_LICENSE",
+    "url": "https://raw.githubusercontent.com/DPIRD-DMA/OmniCloudMask/f68cf49b4cecc93ec5cb71e80110d76f61df073c/LICENSE",
+    "ok": true,
+    "bytes": 1066,
+    "sha256": "be191ea647a0f0c629b9370d9e7f3be9f3db5942e442e3e819bb0caa6e28c18e",
+    "access_date": "2026-10-13",
+    "content_scope": "raw_public_artifact; consult reading_level before inferring review"
+  },
+  {
+    "file": "fmask_LICENSE",
+    "url": "https://raw.githubusercontent.com/GERSL/Fmask/8440060933a45df2bafb3329be0709ebd5480b9f/LICENSE",
+    "ok": true,
+    "bytes": 1103,
+    "sha256": "df4eefe7e3b130c7097922772f7d6672589aa4e606ba7e047dd812301e2787c6",
+    "access_date": "2026-10-13",
+    "content_scope": "raw_public_artifact; consult reading_level before inferring review"
+  },
+  {
+    "file": "cmix_dlr.pdf",
+    "url": "https://elib.dlr.de/187708/1/1-s2.0-S0034425722001043-main.pdf",
+    "sha256": "dab4eb2858dc03781823b6bf5adf8e1e2edf2be5bd7d7ad14109e12e64fefdd3",
+    "bytes": 10684332,
+    "ok": true,
+    "access_date": "2026-10-13",
+    "content_scope": "raw_public_artifact; consult reading_level before inferring review"
+  },
+  {
+    "file": "tarrio_publisher.html",
+    "url": "https://www.sciencedirect.com/science/article/pii/S2666017220300109",
+    "ok": false,
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "file": "fmask_crossref.json",
+    "url": "https://api.crossref.org/works/10.1016%2Fj.rse.2026.115672",
+    "ok": false,
+    "error": "HTTP Error 406: Not Acceptable"
+  },
+  {
+    "file": "omni_crossref.json",
+    "url": "https://api.crossref.org/works/10.1016%2Fj.rse.2025.114694",
+    "ok": false,
+    "error": "HTTP Error 406: Not Acceptable"
+  },
+  {
+    "file": "clouds2mask_crossref.json",
+    "url": "https://api.crossref.org/works/10.1016%2Fj.rse.2024.114122",
+    "ok": false,
+    "error": "HTTP Error 406: Not Acceptable"
+  },
+  {
+    "file": "clouds2mask_clouds2mask_model_settings.py",
+    "url": "https://api.github.com/repos/DPIRD-DMA/CloudS2Mask/contents/clouds2mask/model_settings.py?ref=7819f2adcf7f5dacef77f3b8d7c85443cb28cbe8",
+    "sha256": "c958b3aba029851df3ff3498d4340af1de9a28628b2d5c8650cce4f4d2574fd4",
+    "bytes": 5715,
+    "ok": true,
+    "access_date": "2026-10-13",
+    "content_scope": "raw_public_artifact; consult reading_level before inferring review"
+  },
+  {
+    "file": "clouds2mask_clouds2mask_processing_settings.py",
+    "url": "https://api.github.com/repos/DPIRD-DMA/CloudS2Mask/contents/clouds2mask/processing_settings.py?ref=7819f2adcf7f5dacef77f3b8d7c85443cb28cbe8",
+    "sha256": "edcecdcf10b089c05b93ea9301a973dd9a18276d13381eb55012ffaa42558d4a",
+    "bytes": 14346,
+    "ok": true,
+    "access_date": "2026-10-13",
+    "content_scope": "raw_public_artifact; consult reading_level before inferring review"
+  },
+  {
+    "file": "clouds2mask_clouds2mask_model_download_links.csv",
+    "url": "https://api.github.com/repos/DPIRD-DMA/CloudS2Mask/contents/clouds2mask/model_download_links.csv?ref=7819f2adcf7f5dacef77f3b8d7c85443cb28cbe8",
+    "sha256": "db5e798905779b62fc8e3d759fb0d971522ccecbc8bfcf06a519a9da885b6e0d",
+    "bytes": 306,
+    "ok": true,
+    "access_date": "2026-10-13",
+    "content_scope": "raw_public_artifact; consult reading_level before inferring review"
+  },
+  {
+    "file": "fmask_final.json",
+    "url": "https://api.crossref.org/works/10.1016/j.rse.2026.115672",
+    "bytes": 34345,
+    "sha256": "8cd49c45f76e2acc49176e53872095cfda4a53f39c2c62d50e6278cf3f5c9cf7",
+    "ok": true,
+    "access_date": "2026-10-13",
+    "content_scope": "raw_public_artifact; consult reading_level before inferring review"
+  },
+  {
+    "file": "omni_final.json",
+    "url": "https://api.crossref.org/works/10.1016/j.rse.2025.114694",
+    "bytes": 22446,
+    "sha256": "6bb3bd8d48420756962ba951b0a735bc53c542cf0b3a23e8cf47528948796192",
+    "ok": true,
+    "access_date": "2026-10-13",
+    "content_scope": "raw_public_artifact; consult reading_level before inferring review"
+  },
+  {
+    "file": "clouds2mask_final.json",
+    "url": "https://api.crossref.org/works/10.1016/j.rse.2024.114122",
+    "bytes": 18666,
+    "sha256": "021202d1c691154ceebb0e6232ae412696f4e67f0236efb4518cfbd0d8dcfc91",
+    "ok": true,
+    "access_date": "2026-10-13",
+    "content_scope": "raw_public_artifact; consult reading_level before inferring review"
+  },
+  {
+    "file": "uwa_clouds2mask.html",
+    "url": "https://research-repository.uwa.edu.au/en/publications/clouds2mask-a-novel-deep-learning-approach-for-improved-cloud-and/",
+    "bytes": 63823,
+    "sha256": "93edce9ad5179d9f166356209ba427db71bc1d911e05c6aa3aadca5a1a3be223",
+    "ok": true,
+    "access_date": "2026-10-13",
+    "content_scope": "raw_public_artifact; consult reading_level before inferring review"
+  },
+  {
+    "file": "tarrio_nasa.html",
+    "url": "https://ntrs.nasa.gov/citations/20210014061",
+    "ok": false,
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "file": "fmask_full.xml",
+    "url": "https://api.elsevier.com/content/article/pii/S0034425726004426?httpAccept=text/xml",
+    "bytes": 1922,
+    "sha256": "d7753ac7434b136101a04c9663265f4c60e98e4c58f9e7bb334b861ca7bb1198",
+    "ok": true,
+    "access_date": "2026-10-13",
+    "content_scope": "bibliographic_coredata_only"
+  },
+  {
+    "file": "clouds2mask_full.xml",
+    "url": "https://api.elsevier.com/content/article/pii/S0034425724001330?httpAccept=text/xml",
+    "bytes": 2053,
+    "sha256": "622df01060cb38794aeb2bfc83b7cd9661681efe8b4316864a550354d2977258",
+    "ok": true,
+    "access_date": "2026-10-13",
+    "content_scope": "bibliographic_coredata_only"
+  },
+  {
+    "file": "omni_full.xml",
+    "url": "https://api.elsevier.com/content/article/pii/S0034425725000987?httpAccept=text/xml",
+    "bytes": 2093,
+    "sha256": "2bc4fd89c0562783dbcd650cf96d7939a078e0cfc78642d8dd4244d9f5955661",
+    "ok": true,
+    "access_date": "2026-10-13",
+    "content_scope": "bibliographic_coredata_only"
+  },
+  {
+    "file": "tarrio_full.xml",
+    "url": "https://api.elsevier.com/content/article/pii/S2666017220300109?httpAccept=text/xml",
+    "bytes": 1963,
+    "sha256": "1c6b86932cf7714244146d51700f574984dd86460c2cb8e151e904b9d84217e4",
+    "ok": true,
+    "access_date": "2026-10-13",
+    "content_scope": "bibliographic_coredata_only"
+  },
+  {
+    "file": "clouds2mask_commit.json",
+    "url": "https://api.github.com/repos/DPIRD-DMA/CloudS2Mask/commits/HEAD",
+    "ok": true,
+    "bytes": 5475,
+    "sha256": "1d6a9d3d749ca064d43f7f075624b1f89335db1ded1a03adcdb29015c2bba3a8",
+    "access_date": "2026-10-13",
+    "commit": "7819f2adcf7f5dacef77f3b8d7c85443cb28cbe8",
+    "tree_response_sha": "7819f2adcf7f5dacef77f3b8d7c85443cb28cbe8",
+    "commit_tree_sha": "23b7484e2ba94ee25a7ccaf99331a38b04a654c6",
+    "content_scope": "raw_public_artifact; consult reading_level before inferring review"
+  },
+  {
+    "file": "omni_commit.json",
+    "url": "https://api.github.com/repos/DPIRD-DMA/OmniCloudMask/commits/HEAD",
+    "ok": true,
+    "bytes": 149112,
+    "sha256": "46d9d48f716d587a898f40c7b5495c24576b903256594afaeba04fcc21b8f8f4",
+    "access_date": "2026-10-13",
+    "commit": "f68cf49b4cecc93ec5cb71e80110d76f61df073c",
+    "tree_response_sha": "f68cf49b4cecc93ec5cb71e80110d76f61df073c",
+    "commit_tree_sha": "7b3a6c43998cadf7b8abfc003a7861f8473ae027",
+    "content_scope": "raw_public_artifact; consult reading_level before inferring review"
+  },
+  {
+    "file": "fmask_commit.json",
+    "url": "https://api.github.com/repos/GERSL/Fmask/commits/HEAD",
+    "ok": true,
+    "bytes": 5565,
+    "sha256": "5cb30dc80e2e294e9d8baf250b159f721c677b07f5894755ec1761852ca1ac4b",
+    "access_date": "2026-10-13",
+    "commit": "8440060933a45df2bafb3329be0709ebd5480b9f",
+    "tree_response_sha": "8440060933a45df2bafb3329be0709ebd5480b9f",
+    "commit_tree_sha": "e047756764e183f9e3a334999a4b0c11ac79144d",
+    "content_scope": "raw_public_artifact; consult reading_level before inferring review"
+  },
+  {
+    "file": "sensei_repo_commit.json",
+    "url": "https://api.github.com/repos/aliFrancis/SEnSeI/commits/HEAD",
+    "ok": true,
+    "bytes": 7019,
+    "sha256": "1413b425ba92ee8949f4434375a1d98cff078f20f394a9dfd3ebe093498ca4c2",
+    "access_date": "2026-10-13",
+    "commit": "88189442e4ca4d71612610d7c7be1e534fe51277",
+    "tree_response_sha": "88189442e4ca4d71612610d7c7be1e534fe51277",
+    "commit_tree_sha": "2245fa9815895c5aac7d030e0d33d70601529eca",
+    "content_scope": "raw_public_artifact; consult reading_level before inferring review"
+  },
+  {
+    "file": "adapter_repo_commit.json",
+    "url": "https://api.github.com/repos/XavierJiezou/Cloud-Adapter/commits/HEAD",
+    "ok": true,
+    "bytes": 5528,
+    "sha256": "ddae995e539c8d28287ac7dd9722b0090b038222796ba96a106928045cd73d37",
+    "access_date": "2026-10-13",
+    "commit": "78c7ea50611b2381f45206a4269a2346116f4525",
+    "tree_response_sha": "78c7ea50611b2381f45206a4269a2346116f4525",
+    "commit_tree_sha": "54854a97df53eafe94405e0b2887055c3b752587",
+    "content_scope": "raw_public_artifact; consult reading_level before inferring review"
+  }
+]

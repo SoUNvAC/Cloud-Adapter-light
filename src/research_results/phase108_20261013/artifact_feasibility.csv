@@ -1,0 +1,8 @@
+﻿id,code_url,code_commit,code_license,public_weights,declared_download_bytes,input_feasibility,training_overlap,weight_aux_license,reading_basis
+P1,https://github.com/XavierJiezou/Cloud-Adapter,78c7ea50611b2381f45206a4269a2346116f4525,Apache-2.0,作者提供checkpoint；本地已有固定Source,无需为108下载；新权重总量unknown,本项目RGB源实现已存在；不是论文完整复现,CloudSEN12为任务训练来源；基础VFM与各评价产品重叠unknown,独立权重/基础模型许可仍需对应版本核对,repo API/README；不下载weights
+P2,unknown,unknown,unknown,RF集成权重发布未核实,unknown；还需各算法与时序输入,六波段不能直接代替五种原掩膜,参考点与本项目产品逐ID重叠unknown,各算法分别检查,原文片段不证明实现可直接取得
+P3,https://github.com/DPIRD-DMA/CloudS2Mask,7819f2adcf7f5dacef77f3b8d7c85443cb28cbe8,MIT,4份10/20m模型下载ID公开,精确bytes unknown；134-byte LFS pointer不是模型大小,固定实现13输入；现有6输入不足，不零填充,确定训练来源Catalogue/ALCD/CloudSEN12；逐产品完整重叠清单unknown；作者声明PixBox非训练产品,MIT代码；权重下载独立条款未核实,固定processing_settings.py/下载CSV+正文§2.1
+P4,https://github.com/aliFrancis/SEnSeI,88189442e4ca4d71612610d7c7be1e534fe51277,GPL-3.0,示例.h5和光谱编码.hdf5存在,19846304 + 2815208（Git tree元数据，非下载量实测）,需波长描述/反射率预处理；原模型云目标不是影目标,确定Catalogue是训练来源；精确与本项目相关组重叠需清单核对,代码GPL-3.0；独立权重条款未核实,固定tree/README/原文VI
+P5,https://github.com/GERSL/Fmask,8440060933a45df2bafb3329be0709ebd5480b9f,MIT,完整5.0.1包链接含模型及辅助数据,约3GB为作者声明，未实际下载；解压/临时空间unknown,SAFE及辅助数据要求未满足验收；六波段充分性未证,训练产品与Catalogue/ALCD/PixBox完整交集unknown,辅助数据/权重不能由MIT代码许可自动覆盖,固定README/许可证；5.0.2 develop修复未发布
+P6,https://doi.org/10.1016/j.rse.2022.112990,not applicable,论文CC BY 4.0；不是代码授权,统一checkpoint不适用,各参赛算法资源unknown,参考语义/采样映射需逐项一致,各算法的训练来源不能由CMIX统一保证,逐算法/参考集单列,公开PDF正文
+P7,https://github.com/DPIRD-DMA/OmniCloudMask,f68cf49b4cecc93ec5cb71e80110d76f61df073c,MIT,V1-V4各双模型公开Google Drive ID,精确权重大小unknown；不下载探大小,B04/B03/B08可由现有6波段提供；20m在论文范围，仍需归一化/valid/概率接口验收,V1 CloudSEN12 High；V4含KappaSet等；与所有本项目评价产品逐ID重叠unknown,MIT代码；独立权重条款未核实,固定README/changelog/下载CSV；V1与V4不可混淆

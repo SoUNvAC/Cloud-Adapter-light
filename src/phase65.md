@@ -1170,3 +1170,7 @@ Source 529唯一窗口+2预定重复共531次前向，约1608.36秒，重复验�
 
 ### 2026-10-13 Phase107 同容量RGB探索性对照完成
 唯一R模型SHA80be9ffd61c57d426ce710f18fc7d90bf0a151cf95615c1a6141bbc8a6b76aa8，拟合1次4.339552秒，独立标准化逐值一致；原拟合后报告路径错误exit1及原日志保留，只恢复评价，追加拟合/前向为0，resume exit0。原Source索引/manifest/checkpoint身份验收通过；development旧A/S及Phase106 PixBox旧A/S逐组与池化AP精确复现，独立CPU评分/AP并列及区间通过。development宏AP A/R/S=69.315032/72.786822/75.004979%，池化20.594657/26.518875/21.602996%；PixBox宏45.884981/51.919885/54.191676%，池化37.645703/42.464431/42.051268%。主要PixBox S-R=2.271791pp，95%描述区间[-3.143397,8.807789]pp，改善/稳定/下降4/2/2，最差44SKJ−10.646012pp；development S-R=2.218157pp[0.064654,4.911209]。PixBox R-A=6.034904pp[-6.321803,18.975621]，development R-A=3.471789pp[1.251211,5.377922]；均10000次seed107013相关组bootstrap。光谱特异性证据不确定，不称等效或独立确认、不选部署赢家、不继续搜索；新阈值/网络前向/影像下载0，只传shared小报告/无标签评分，标签仍本地，work_dirs及大缓存未同步。
+
+
+### 2026-10-13 Phase108 文献定位与强对照缺口完成
+按用户协议执行六个入口及唯一新增OmniCloudMask；零训练/拟合/前向/校准/新评价/指标重算/权重下载/依赖安装。保存44份公开文献/代码/元数据原字节SHA，5作者仓库commit及README Git blob核验；CMIX正文DLR镜像、Cloud-Adapter PDF、SEnSeI HTML可得；NASA/出版商部分403/超时/SSL，Tarrio仅正文索引片段，CloudS2Mask索引正文，Fmask5/Omni正式全文未取得，明确unknown及coredata非全文。Fmask5已登记2026正式DOI/卷347（刊期2026-12-15），不沿用旧in Revise；训练来源重叠Catalogue/ALCD不能叫新泛化。数据结果/推断分列，原66/72/85/94—100及105—107支持与失败边界不变，未重算统计。只选OmniCloudMask和Fmask5-UPL两个强对照；单页NEXT_QUESTION只问冻结读出对成熟基线的独立实用增量，目前无已验收新未暴露密集参考池，成本上限草案非执行授权。当前Source与历史模型不变，预算2026-10-20北京时间；不增特征/波段，不同步work_dirs。小交付位于outputs/phase108/phase108_20261013并同字节镜像research_results；本轮SSH仅用于最终代码/文档ff同步，无下载进程或研究运行。

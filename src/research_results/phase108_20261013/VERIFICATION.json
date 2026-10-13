@@ -1,0 +1,22 @@
+{
+  "phase": 108,
+  "date": "2026-10-13",
+  "protocol": "src/research_plans/PHASE108_LITERATURE_POSITIONING_20261013.md",
+  "required_sources": 6,
+  "additional_papers": 1,
+  "strong_controls": 2,
+  "training": 0,
+  "fits": 0,
+  "forwards": 0,
+  "calibrations": 0,
+  "new_evaluations": 0,
+  "metric_recomputations": 0,
+  "weight_downloads": 0,
+  "dependency_installs": 0,
+  "work_dirs_transfer": 0,
+  "public_source_bytes_verified": true,
+  "repository_commit_and_readme_git_blob_verified": true,
+  "full_text_available_not_universal": true,
+  "unknowns_retained": true,
+  "scope": "literature positioning delivered; no claim of exhaustive or all-full-text review"
+}
