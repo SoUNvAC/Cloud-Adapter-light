@@ -1,0 +1,136 @@
+[
+  {
+    "file": "S2A_MSIL1C_20170113T072241_N0204_R006_T40UEE_20170113T072238_B8A_metadata.json",
+    "url": "https://storage.googleapis.com/storage/v1/b/gcp-public-data-sentinel-2/o/tiles%2F40%2FU%2FEE%2FS2A_MSIL1C_20170113T072241_N0204_R006_T40UEE_20170113T072238.SAFE%2FGRANULE%2FL1C_T40UEE_A008154_20170113T072238%2FIMG_DATA%2FT40UEE_20170113T072241_B8A.jp2?generation=1484527265272966",
+    "sha256": "f17282e178148192e4ba619574a68912ea688b10bd46bda0bf6de15715f81747",
+    "bytes": 1492,
+    "scope": "public object metadata or author HTML, no pixels/weights"
+  },
+  {
+    "file": "S2A_MSIL1C_20170706T051651_N0205_R062_T48XWG_20170706T051649_B8A_metadata.json",
+    "url": "https://storage.googleapis.com/storage/v1/b/gcp-public-data-sentinel-2/o/tiles%2F48%2FX%2FWG%2FS2A_MSIL1C_20170706T051651_N0205_R062_T48XWG_20170706T051649.SAFE%2FGRANULE%2FL1C_T48XWG_A010641_20170706T051649%2FIMG_DATA%2FT48XWG_20170706T051651_B8A.jp2?generation=1499443993732523",
+    "sha256": "518a16f0a173ba5b8bf6e2bdffd9c367f11a35c44eba7d0c8ddc9c62ae7f2934",
+    "bytes": 1492,
+    "scope": "public object metadata or author HTML, no pixels/weights"
+  },
+  {
+    "file": "S2A_MSIL1C_20170712T071621_N0205_R006_T40UEE_20170712T071617_B8A_metadata.json",
+    "url": "https://storage.googleapis.com/storage/v1/b/gcp-public-data-sentinel-2/o/tiles%2F40%2FU%2FEE%2FS2A_MSIL1C_20170712T071621_N0205_R006_T40UEE_20170712T071617.SAFE%2FGRANULE%2FL1C_T40UEE_A010728_20170712T071617%2FIMG_DATA%2FT40UEE_20170712T071621_B8A.jp2?generation=1501294544550842",
+    "sha256": "a7e20b1681bbe6929267a3de568a04221ed4898f4c7374ac2e810f39b46ab489",
+    "bytes": 1492,
+    "scope": "public object metadata or author HTML, no pixels/weights"
+  },
+  {
+    "file": "S2A_MSIL1C_20170725T142751_N0205_R053_T19GBQ_20170725T143854_B8A_metadata.json",
+    "url": "https://storage.googleapis.com/storage/v1/b/gcp-public-data-sentinel-2/o/tiles%2F19%2FG%2FBQ%2FS2A_MSIL1C_20170725T142751_N0205_R053_T19GBQ_20170725T143854.SAFE%2FGRANULE%2FL1C_T19GBQ_A010918_20170725T143854%2FIMG_DATA%2FT19GBQ_20170725T142751_B8A.jp2?generation=1501208080151814",
+    "sha256": "8dba88c137d9f2526030692fd4ce1451a707a41fa503f3a127c604a839bbee13",
+    "bytes": 1492,
+    "scope": "public object metadata or author HTML, no pixels/weights"
+  },
+  {
+    "file": "S2A_MSIL1C_20170726T102021_N0205_R065_T33VVE_20170726T102259_B8A_metadata.json",
+    "url": "https://storage.googleapis.com/storage/v1/b/gcp-public-data-sentinel-2/o/tiles%2F33%2FV%2FVE%2FS2A_MSIL1C_20170726T102021_N0205_R065_T33VVE_20170726T102259.SAFE%2FGRANULE%2FL1C_T33VVE_A010930_20170726T102259%2FIMG_DATA%2FT33VVE_20170726T102021_B8A.jp2?generation=1501207538266794",
+    "sha256": "e2b956d4953457c94d8f96b93456cd8bbbc1a328f9c8949ebcfb2fcc248b7362",
+    "bytes": 1492,
+    "scope": "public object metadata or author HTML, no pixels/weights"
+  },
+  {
+    "file": "S2A_MSIL1C_20170908T100031_N0205_R122_T32SPJ_20170908T100655_B8A_metadata.json",
+    "url": "https://storage.googleapis.com/storage/v1/b/gcp-public-data-sentinel-2/o/tiles%2F32%2FS%2FPJ%2FS2A_MSIL1C_20170908T100031_N0205_R122_T32SPJ_20170908T100655.SAFE%2FGRANULE%2FL1C_T32SPJ_A011559_20170908T100655%2FIMG_DATA%2FT32SPJ_20170908T100031_B8A.jp2?generation=1505771801708499",
+    "sha256": "1c22f4ea5739704dab70f988491c009ed4b2a191fd945b6e958e9bd1472807a7",
+    "bytes": 1492,
+    "scope": "public object metadata or author HTML, no pixels/weights"
+  },
+  {
+    "file": "S2A_MSIL1C_20170917T052641_N0205_R105_T48XWG_20170917T052642_B8A_metadata.json",
+    "url": "https://storage.googleapis.com/storage/v1/b/gcp-public-data-sentinel-2/o/tiles%2F48%2FX%2FWG%2FS2A_MSIL1C_20170917T052641_N0205_R105_T48XWG_20170917T052642.SAFE%2FGRANULE%2FL1C_T48XWG_A011685_20170917T052642%2FIMG_DATA%2FT48XWG_20170917T052641_B8A.jp2?generation=1505769909369575",
+    "sha256": "2cb376285c714923c3bf016612d97b15fcfd423d93429b3845a8e36516c5e016",
+    "bytes": 1492,
+    "scope": "public object metadata or author HTML, no pixels/weights"
+  },
+  {
+    "file": "S2A_MSIL1C_20171107T150421_N0206_R125_T22WES_20171107T165127_B8A_metadata.json",
+    "url": "https://storage.googleapis.com/storage/v1/b/gcp-public-data-sentinel-2/o/tiles%2F22%2FW%2FES%2FS2A_MSIL1C_20171107T150421_N0206_R125_T22WES_20171107T165127.SAFE%2FGRANULE%2FL1C_T22WES_A012420_20171107T150422%2FIMG_DATA%2FT22WES_20171107T150421_B8A.jp2?generation=1512153834827966",
+    "sha256": "723c119de2751010c1c3b683bb4061148118b27498fb938c68345a152fb6f4ff",
+    "bytes": 1492,
+    "scope": "public object metadata or author HTML, no pixels/weights"
+  },
+  {
+    "file": "S2A_MSIL1C_20180106T032121_N0206_R118_T48NUG_20180106T083912_B8A_metadata.json",
+    "url": "https://storage.googleapis.com/storage/v1/b/gcp-public-data-sentinel-2/o/tiles%2F48%2FN%2FUG%2FS2A_MSIL1C_20180106T032121_N0206_R118_T48NUG_20180106T083912.SAFE%2FGRANULE%2FL1C_T48NUG_A013271_20180106T033051%2FIMG_DATA%2FT48NUG_20180106T032121_B8A.jp2?generation=1516128916220457",
+    "sha256": "f7aa301a9e4754f9e0330c3331e8c11f29f9c642b46c579c365050c7a31cc7c9",
+    "bytes": 1492,
+    "scope": "public object metadata or author HTML, no pixels/weights"
+  },
+  {
+    "file": "S2A_MSIL1C_20180217T053911_N0206_R005_T44SKJ_20180217T082149_B8A_metadata.json",
+    "url": "https://storage.googleapis.com/storage/v1/b/gcp-public-data-sentinel-2/o/tiles%2F44%2FS%2FKJ%2FS2A_MSIL1C_20180217T053911_N0206_R005_T44SKJ_20180217T082149.SAFE%2FGRANULE%2FL1C_T44SKJ_A013873_20180217T053905%2FIMG_DATA%2FT44SKJ_20180217T053911_B8A.jp2?generation=1519671018955861",
+    "sha256": "92e9b1eee54ee7c2b2ba84a3196813ed77f21da24922321f891092424ab86768",
+    "bytes": 1492,
+    "scope": "public object metadata or author HTML, no pixels/weights"
+  },
+  {
+    "file": "S2A_MSIL1C_20180222T012651_N0206_R074_T54TWN_20180222T031349_B8A_metadata.json",
+    "url": "https://storage.googleapis.com/storage/v1/b/gcp-public-data-sentinel-2/o/tiles%2F54%2FT%2FWN%2FS2A_MSIL1C_20180222T012651_N0206_R074_T54TWN_20180222T031349.SAFE%2FGRANULE%2FL1C_T54TWN_A013942_20180222T012651%2FIMG_DATA%2FT54TWN_20180222T012651_B8A.jp2?generation=1520438788121324",
+    "sha256": "1fa976c9077e8bcab3382130e090c6810f0275c46a82bc945553427e346265d1",
+    "bytes": 1492,
+    "scope": "public object metadata or author HTML, no pixels/weights"
+  },
+  {
+    "file": "S2A_MSIL1C_20180302T142851_N0206_R053_T19GBQ_20180302T192732_B8A_metadata.json",
+    "url": "https://storage.googleapis.com/storage/v1/b/gcp-public-data-sentinel-2/o/tiles%2F19%2FG%2FBQ%2FS2A_MSIL1C_20180302T142851_N0206_R053_T19GBQ_20180302T192732.SAFE%2FGRANULE%2FL1C_T19GBQ_A014064_20180302T144301%2FIMG_DATA%2FT19GBQ_20180302T142851_B8A.jp2?generation=1525538932898596",
+    "sha256": "88d7662e43a3b372a84e791e04b6d9ca424c070803e20d77823baf755a816a88",
+    "bytes": 1492,
+    "scope": "public object metadata or author HTML, no pixels/weights"
+  },
+  {
+    "file": "S2A_MSIL1C_20180303T140051_N0206_R067_T19FDV_20180303T202004_B8A_metadata.json",
+    "url": "https://storage.googleapis.com/storage/v1/b/gcp-public-data-sentinel-2/o/tiles%2F19%2FF%2FDV%2FS2A_MSIL1C_20180303T140051_N0206_R067_T19FDV_20180303T202004.SAFE%2FGRANULE%2FL1C_T19FDV_A014078_20180303T141721%2FIMG_DATA%2FT19FDV_20180303T140051_B8A.jp2?generation=1520451771250150",
+    "sha256": "1d12cef042286829a31814dcbd86131c556dfac35a9b1ce389196afc71c54534",
+    "bytes": 1492,
+    "scope": "public object metadata or author HTML, no pixels/weights"
+  },
+  {
+    "file": "S2B_MSIL1C_20170731T102019_N0205_R065_T33VVE_20170731T102348_B8A_metadata.json",
+    "url": "https://storage.googleapis.com/storage/v1/b/gcp-public-data-sentinel-2/o/tiles%2F33%2FV%2FVE%2FS2B_MSIL1C_20170731T102019_N0205_R065_T33VVE_20170731T102348.SAFE%2FGRANULE%2FL1C_T33VVE_A002093_20170731T102348%2FIMG_DATA%2FT33VVE_20170731T102019_B8A.jp2?generation=1504206967777849",
+    "sha256": "9fa27229e6acc85fb6e41d8e98a5d535bef1430048c05a16406e3a666b969d29",
+    "bytes": 1492,
+    "scope": "public object metadata or author HTML, no pixels/weights"
+  },
+  {
+    "file": "S2B_MSIL1C_20170916T101019_N0205_R022_T32SPJ_20170916T101354_B8A_metadata.json",
+    "url": "https://storage.googleapis.com/storage/v1/b/gcp-public-data-sentinel-2/o/tiles%2F32%2FS%2FPJ%2FS2B_MSIL1C_20170916T101019_N0205_R022_T32SPJ_20170916T101354.SAFE%2FGRANULE%2FL1C_T32SPJ_A002765_20170916T101354%2FIMG_DATA%2FT32SPJ_20170916T101019_B8A.jp2?generation=1505752206977526",
+    "sha256": "7b2782b9531b278a5c1e2b615f66b7725ea9f1eed52fca17e4e97d2564191d5a",
+    "bytes": 1492,
+    "scope": "public object metadata or author HTML, no pixels/weights"
+  },
+  {
+    "file": "S2B_MSIL1C_20180302T150259_N0206_R125_T22WES_20180302T183800_B8A_metadata.json",
+    "url": "https://storage.googleapis.com/storage/v1/b/gcp-public-data-sentinel-2/o/tiles%2F22%2FW%2FES%2FS2B_MSIL1C_20180302T150259_N0206_R125_T22WES_20180302T183800.SAFE%2FGRANULE%2FL1C_T22WES_A005156_20180302T150257%2FIMG_DATA%2FT22WES_20180302T150259_B8A.jp2?generation=1525299922415292",
+    "sha256": "23883588bb90f9d499f58077c4456985fd58b1056b7a01a8f41a07fd4c14411c",
+    "bytes": 1492,
+    "scope": "public object metadata or author HTML, no pixels/weights"
+  },
+  {
+    "file": "author_training_map_page.html",
+    "url": "https://dpird-dma.github.io/OCM-training-data-map/",
+    "sha256": "56e1c61e139260bac8ba1c39cc684003afe54c54ab341870e45565f6205fcfbf",
+    "bytes": 2113,
+    "scope": "public object metadata or author HTML, no pixels/weights"
+  },
+  {
+    "local_only_path": "outputs/phase110/phase110_20261014/remote_environment_probe.txt",
+    "sha256": "06fe980e480995283f6ab35b5f422e09c1df5965d96d74e5bd8e3d67d497b999",
+    "scope": "read-only host metadata; personal registry paths/GUID retained locally, not mirrored"
+  },
+  {
+    "local_only_path": "outputs/phase110/phase110_20261014/remote_environment_probe2.txt",
+    "sha256": "43f73f08ceb7b35750a62cc14d475c585665e36b8c1190ec0935d482df05e6b4",
+    "scope": "read-only host metadata; personal registry paths/GUID retained locally, not mirrored"
+  },
+  {
+    "local_only_path": "outputs/phase110/phase110_20261014/remote_distro_identity.txt",
+    "sha256": "367cea15d2e2d9f9d1d534288a889baaf679a9044d8b9d853aaf79fec74156a3",
+    "scope": "read-only host metadata; personal registry paths/GUID retained locally, not mirrored"
+  }
+]

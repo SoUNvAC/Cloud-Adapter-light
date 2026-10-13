@@ -1,0 +1,50 @@
+[
+  {
+    "path": "src/research_results/phase104_20261013/object_manifest.json",
+    "sha256": "0313ec61fef75acad7152e0deb639b094aa77b3a1b4041545e09939955b5500a"
+  },
+  {
+    "path": "src/research_results/phase104_20261013/input_operator_lock.json",
+    "sha256": "3d0c21f1c424baf49c2f363a5ad2ae48e56ed8ad87b469e926144a9825f5200b"
+  },
+  {
+    "path": "src/research_results/phase109_20261013/DELIVERY_SHA256.json",
+    "sha256": "9d4873fe3b3b948e61af45167783af080553d2b4beca80d3be0a656e2e2cd61d"
+  },
+  {
+    "path": "src/research_results/phase109_20261013/VERSION_SOURCE_LOCK.json",
+    "sha256": "c27a883bf9e56a9b68fd9810decb40e060df76eba8aa3edfa231ade836e2f886"
+  },
+  {
+    "path": "src/research_results/phase109_20261013/WEIGHTS_AND_LICENSE.json",
+    "sha256": "28f644070835e9ba42269c133ae7d64d20c59e538533242b55fc40815142b739"
+  },
+  {
+    "path": "src/research_results/phase109_20261013/sources/omni_MODEL_CHANGELOG.md",
+    "sha256": "4b46d62a5b2b3a02d320fdc937af592d8f513e67b1a8e1dbffcaf3492800359d"
+  },
+  {
+    "path": "src/research_results/phase109_20261013/sources/pyproject.toml",
+    "sha256": "1ea7820eecd235fc2ad9fe3cd5636c0d3be3716c65924527a42e87f8b2137a01"
+  },
+  {
+    "path": "src/research_results/phase109_20261013/sources/omni_omnicloudmask_model_utils.py",
+    "sha256": "f749ceced40f8b0899f56e95e79b9f43ea77b74898376175407c21c26796a1dd"
+  },
+  {
+    "path": "src/research_results/phase109_20261013/sources/omnicloudmask__download_models.py",
+    "sha256": "6e9b7f7970489a5cb0ae93e900527b591db4cfc42661c789306927e38e27a2ec"
+  },
+  {
+    "path": "src/research_results/phase102_20261013/metadata_audit.json",
+    "sha256": "f74a40331379ce120a1938e348adb4c60350feb76dcdb769e8bcd18a45482c35"
+  },
+  {
+    "path": "src/research_plans/PHASE110_OCM_INPUT_PROVENANCE_PLAN_20261014.md",
+    "sha256": "bd3630232c26ec8968b5ebb43fc3f282b914914b14d0bf5ee1a3f8da6e5bb651"
+  },
+  {
+    "path": "src/tools/verify_phase110_metadata.py",
+    "sha256": "68ac1c325d9d98d14c5182101498451438755b21380235f080a716df170957a3"
+  }
+]

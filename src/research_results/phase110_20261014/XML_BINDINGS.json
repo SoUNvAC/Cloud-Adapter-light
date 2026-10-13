@@ -1,0 +1,162 @@
+[
+  {
+    "product_id": "S2A_MSIL1C_20170113T072241_N0204_R006_T40UEE_20170113T072238",
+    "xml_path": "outputs/phase102/phase102_20261013/acquired/pixbox_17_product.xml",
+    "xml_sha256": "48189bbe9e9f7c68dd936b1e9563cee7da58fea862c890aa25884f74498bbfec",
+    "tile_prefix_path": "outputs/phase102/phase102_20261013/acquired/pixbox_17_tile_prefix.xml",
+    "tile_prefix_sha256": "bfe3f618b02d42638c9c0a05c7a136a2b6a6b85b0b143b71a43863ae33b99658",
+    "listing_path": "outputs/phase102/phase102_20261013/acquired/gcs_pixbox_17.json",
+    "listing_sha256": "4e17dce54c290e77f54e413dc1ab178d372b427eb3aa673441da0fa14c7556db",
+    "B8A_image_file": "GRANULE/L1C_T40UEE_A008154_20170113T072238/IMG_DATA/T40UEE_20170113T072241_B8A"
+  },
+  {
+    "product_id": "S2A_MSIL1C_20170706T051651_N0205_R062_T48XWG_20170706T051649",
+    "xml_path": "outputs/phase102/phase102_20261013/acquired/pixbox_27_product.xml",
+    "xml_sha256": "4c79beb2998199fdc74ec8bacaea882ea055d30fff47b536f8ac255ea2f76f2a",
+    "tile_prefix_path": "outputs/phase102/phase102_20261013/acquired/pixbox_27_tile_prefix.xml",
+    "tile_prefix_sha256": "0ec5c8c5a0a7e01ba740a8d92c0c927fec561c6a8f917f71a4ebc9bacc33c8cd",
+    "listing_path": "outputs/phase102/phase102_20261013/acquired/gcs_pixbox_27.json",
+    "listing_sha256": "fc9b6a76776321c8c3b42f88b355642b02f749b3f73ef686433ba3331bd5b11a",
+    "B8A_image_file": "GRANULE/L1C_T48XWG_A010641_20170706T051649/IMG_DATA/T48XWG_20170706T051651_B8A"
+  },
+  {
+    "product_id": "S2A_MSIL1C_20170712T071621_N0205_R006_T40UEE_20170712T071617",
+    "xml_path": "outputs/phase102/phase102_20261013/acquired/pixbox_26_product.xml",
+    "xml_sha256": "23f604ea137aebaacf841bf0947b60209b39c0f10a8145621d3884d56bc5654f",
+    "tile_prefix_path": "outputs/phase102/phase102_20261013/acquired/pixbox_26_tile_prefix.xml",
+    "tile_prefix_sha256": "a93e00025d5d2d89849ae422443af37e4328956f513640444a3612cadec13438",
+    "listing_path": "outputs/phase102/phase102_20261013/acquired/gcs_pixbox_26.json",
+    "listing_sha256": "06cc241c49e5760ff16f5a0f2548bf63372482f9c2140986c04881436f483b96",
+    "B8A_image_file": "GRANULE/L1C_T40UEE_A010728_20170712T071617/IMG_DATA/T40UEE_20170712T071621_B8A"
+  },
+  {
+    "product_id": "S2A_MSIL1C_20170725T142751_N0205_R053_T19GBQ_20170725T143854",
+    "xml_path": "outputs/phase102/phase102_20261013/acquired/pixbox_14_product.xml",
+    "xml_sha256": "7d67d82bfc22a8498918bf3ff7b7f6e9789439f6940e8794f3890cc88c3b741e",
+    "tile_prefix_path": "outputs/phase102/phase102_20261013/acquired/pixbox_14_tile_prefix.xml",
+    "tile_prefix_sha256": "43b8996b4568b51bd6267bb801f8d9ca5fc2442eaa7c3e204213b2c982678540",
+    "listing_path": "outputs/phase102/phase102_20261013/acquired/gcs_pixbox_14.json",
+    "listing_sha256": "a347b6cbefd254b2dd4699466e03a25fb6558a3e1e04b59f444617dd040e54f8",
+    "B8A_image_file": "GRANULE/L1C_T19GBQ_A010918_20170725T143854/IMG_DATA/T19GBQ_20170725T142751_B8A"
+  },
+  {
+    "product_id": "S2A_MSIL1C_20170726T102021_N0205_R065_T33VVE_20170726T102259",
+    "xml_path": "outputs/phase102/phase102_20261013/acquired/pixbox_16_product.xml",
+    "xml_sha256": "304d804f9b5bfaafeafe15144eaa26b762a8070fbd819900c984989de8286df5",
+    "tile_prefix_path": "outputs/phase102/phase102_20261013/acquired/pixbox_16_tile_prefix.xml",
+    "tile_prefix_sha256": "35569928595635d01da8ffb1eec93ef300a1f8103adb84b4c28a90db7857d82d",
+    "listing_path": "outputs/phase102/phase102_20261013/acquired/gcs_pixbox_16.json",
+    "listing_sha256": "929a4298edbff4e84b124ef9fffd5239166d726720c1f93d26ccb57cbc98836f",
+    "B8A_image_file": "GRANULE/L1C_T33VVE_A010930_20170726T102259/IMG_DATA/T33VVE_20170726T102021_B8A"
+  },
+  {
+    "product_id": "S2A_MSIL1C_20170908T100031_N0205_R122_T32SPJ_20170908T100655",
+    "xml_path": "outputs/phase102/phase102_20261013/acquired/pixbox_06_product.xml",
+    "xml_sha256": "da6a4c3e4b903566309598b7f57dca0941efd53911bab40ca588ba5be63c7ee9",
+    "tile_prefix_path": "outputs/phase102/phase102_20261013/acquired/pixbox_06_tile_prefix.xml",
+    "tile_prefix_sha256": "e6a9d2fefcf60a55fcff5e039174717b44a637dc2e8a17fe5ed962b1c5df8315",
+    "listing_path": "outputs/phase102/phase102_20261013/acquired/gcs_pixbox_06.json",
+    "listing_sha256": "30494c3baa34dc80eec786c994a89fa21b42a484307e2f6e1e115dabb034c5f1",
+    "B8A_image_file": "GRANULE/L1C_T32SPJ_A011559_20170908T100655/IMG_DATA/T32SPJ_20170908T100031_B8A"
+  },
+  {
+    "product_id": "S2A_MSIL1C_20170917T052641_N0205_R105_T48XWG_20170917T052642",
+    "xml_path": "outputs/phase102/phase102_20261013/acquired/pixbox_19_product.xml",
+    "xml_sha256": "dc2f431e4d051a74cc86b9e25e4e122ff622254a38de4122c7687aad02e38c53",
+    "tile_prefix_path": "outputs/phase102/phase102_20261013/acquired/pixbox_19_tile_prefix.xml",
+    "tile_prefix_sha256": "a93fb23321440f5148d9327c8b46a516b2cf70ab6fbc7bfbfab24c2146e554e7",
+    "listing_path": "outputs/phase102/phase102_20261013/acquired/gcs_pixbox_19.json",
+    "listing_sha256": "b9f6c1af37b26112b54fe796aa09dacfab891d9c5bb0646129f8a969a0da695e",
+    "B8A_image_file": "GRANULE/L1C_T48XWG_A011685_20170917T052642/IMG_DATA/T48XWG_20170917T052641_B8A"
+  },
+  {
+    "product_id": "S2A_MSIL1C_20171107T150421_N0206_R125_T22WES_20171107T165127",
+    "xml_path": "outputs/phase102/phase102_20261013/acquired/pixbox_04_product.xml",
+    "xml_sha256": "bf1a9ce822e1998a8c1912333f1910be80c3454f0f8530e2a77ef26ca9afe6d7",
+    "tile_prefix_path": "outputs/phase102/phase102_20261013/acquired/pixbox_04_tile_prefix.xml",
+    "tile_prefix_sha256": "3b1d5060f77190d4499dab9ec846cb3c4a53dbccea7d78904cc5797b6f385f5e",
+    "listing_path": "outputs/phase102/phase102_20261013/acquired/gcs_pixbox_04.json",
+    "listing_sha256": "b278a1b5cccf7516471280ed43973b26788157938bb20f381912c070e8c4f329",
+    "B8A_image_file": "GRANULE/L1C_T22WES_A012420_20171107T150422/IMG_DATA/T22WES_20171107T150421_B8A"
+  },
+  {
+    "product_id": "S2A_MSIL1C_20180106T032121_N0206_R118_T48NUG_20180106T083912",
+    "xml_path": "outputs/phase102/phase102_20261013/acquired/pixbox_10_product.xml",
+    "xml_sha256": "0ad9123a5e4d096a71c82f0ea3c0232cbb4d967f6632e92d17a8ac51213339ca",
+    "tile_prefix_path": "outputs/phase102/phase102_20261013/acquired/pixbox_10_tile_prefix.xml",
+    "tile_prefix_sha256": "bd49d9f7b80ba41d7d2fdc8d3244aed0ac95e915732f4ae1fa4271c380c7b975",
+    "listing_path": "outputs/phase102/phase102_20261013/acquired/gcs_pixbox_10.json",
+    "listing_sha256": "69a80f963162ed6ca23daacb442aae1b734487448ac8f0a3b18ff6fd7d49502c",
+    "B8A_image_file": "GRANULE/L1C_T48NUG_A013271_20180106T033051/IMG_DATA/T48NUG_20180106T032121_B8A"
+  },
+  {
+    "product_id": "S2A_MSIL1C_20180217T053911_N0206_R005_T44SKJ_20180217T082149",
+    "xml_path": "outputs/phase102/phase102_20261013/acquired/pixbox_18_product.xml",
+    "xml_sha256": "57dd184c4c7128dba818cd06c1bb9b379ce1cf2b316d0a8821b942c5f6821e56",
+    "tile_prefix_path": "outputs/phase102/phase102_20261013/acquired/pixbox_18_tile_prefix.xml",
+    "tile_prefix_sha256": "8b3d12cf0822657d6f8289e0aa26898c60195ff6e48ec03ead7e91ef194ad521",
+    "listing_path": "outputs/phase102/phase102_20261013/acquired/gcs_pixbox_18.json",
+    "listing_sha256": "06a79483831e261b245cc202eef2ea574f41e929cc1f730c8c4257549c00e9a2",
+    "B8A_image_file": "GRANULE/L1C_T44SKJ_A013873_20180217T053905/IMG_DATA/T44SKJ_20180217T053911_B8A"
+  },
+  {
+    "product_id": "S2A_MSIL1C_20180222T012651_N0206_R074_T54TWN_20180222T031349",
+    "xml_path": "outputs/phase102/phase102_20261013/acquired/pixbox_11_product.xml",
+    "xml_sha256": "28b289903769098bef009517fddfbd27e10ab8e19ae34c69505bcb0b2e0bc371",
+    "tile_prefix_path": "outputs/phase102/phase102_20261013/acquired/pixbox_11_tile_prefix.xml",
+    "tile_prefix_sha256": "9222bed53ebaaacd71aec91cdc6c84f92ca41a62b2bc5bed3ba5686f2a0eb1d1",
+    "listing_path": "outputs/phase102/phase102_20261013/acquired/gcs_pixbox_11.json",
+    "listing_sha256": "0b84484852ded3f1663a1c1590bb3438e43c35a36ccc18daeb410f1899151994",
+    "B8A_image_file": "GRANULE/L1C_T54TWN_A013942_20180222T012651/IMG_DATA/T54TWN_20180222T012651_B8A"
+  },
+  {
+    "product_id": "S2A_MSIL1C_20180302T142851_N0206_R053_T19GBQ_20180302T192732",
+    "xml_path": "outputs/phase102/phase102_20261013/acquired/pixbox_22_product.xml",
+    "xml_sha256": "4082c2fd491e665647e4b3c65c236784812423f89d2683c1b64e3c8bc5ece232",
+    "tile_prefix_path": "outputs/phase102/phase102_20261013/acquired/pixbox_22_tile_prefix.xml",
+    "tile_prefix_sha256": "d0a86efbf2b5feb03230517c36be03441724d09ab8e5ce629b879944b099a124",
+    "listing_path": "outputs/phase102/phase102_20261013/acquired/gcs_pixbox_22.json",
+    "listing_sha256": "350a4bdc436b3a2d6401e6b70bc7b96e65a4b4b40bb97d32c11a4c1783bc0a52",
+    "B8A_image_file": "GRANULE/L1C_T19GBQ_A014064_20180302T144301/IMG_DATA/T19GBQ_20180302T142851_B8A"
+  },
+  {
+    "product_id": "S2A_MSIL1C_20180303T140051_N0206_R067_T19FDV_20180303T202004",
+    "xml_path": "outputs/phase102/phase102_20261013/acquired/pixbox_03_product.xml",
+    "xml_sha256": "f91a9f6c64ac7741e094721d394593fec36bfbe54f38e842e83d678ae22a1bb1",
+    "tile_prefix_path": "outputs/phase102/phase102_20261013/acquired/pixbox_03_tile_prefix.xml",
+    "tile_prefix_sha256": "f2a4407504ddc757508536b64fadfd0886fca26196bdc15210fa428ef31678e1",
+    "listing_path": "outputs/phase102/phase102_20261013/acquired/gcs_pixbox_03.json",
+    "listing_sha256": "54fdbcf2c8ffe98627b9d080f9fdd3b8d4df264c7bca4d6857b2f5d2a5ad38d9",
+    "B8A_image_file": "GRANULE/L1C_T19FDV_A014078_20180303T141721/IMG_DATA/T19FDV_20180303T140051_B8A"
+  },
+  {
+    "product_id": "S2B_MSIL1C_20170731T102019_N0205_R065_T33VVE_20170731T102348",
+    "xml_path": "outputs/phase102/phase102_20261013/acquired/pixbox_07_product.xml",
+    "xml_sha256": "84813d92e0878aae51a5eb197ff9a4d9fbf14ec08be563683bb31595e3ba8769",
+    "tile_prefix_path": "outputs/phase102/phase102_20261013/acquired/pixbox_07_tile_prefix.xml",
+    "tile_prefix_sha256": "5e75d6293aa59894337b375c5055c8755295277fd73582529d7e82592ddd59c8",
+    "listing_path": "outputs/phase102/phase102_20261013/acquired/gcs_pixbox_07.json",
+    "listing_sha256": "e2f1c5f39b6dc74d84b83389d5461a5cd41bccbfda19a9d7a1619975974e7368",
+    "B8A_image_file": "GRANULE/L1C_T33VVE_A002093_20170731T102348/IMG_DATA/T33VVE_20170731T102019_B8A"
+  },
+  {
+    "product_id": "S2B_MSIL1C_20170916T101019_N0205_R022_T32SPJ_20170916T101354",
+    "xml_path": "outputs/phase102/phase102_20261013/acquired/pixbox_25_product.xml",
+    "xml_sha256": "f64bbe938aa13030f73179eb6402ff8c792e872bc5760d389aa4b58f5bd776ff",
+    "tile_prefix_path": "outputs/phase102/phase102_20261013/acquired/pixbox_25_tile_prefix.xml",
+    "tile_prefix_sha256": "9115915f4fd68aef0d4a2c3d70998699b85b92798d9ebd7e195091fc52f4984f",
+    "listing_path": "outputs/phase102/phase102_20261013/acquired/gcs_pixbox_25.json",
+    "listing_sha256": "0c90f1c91ed848b4f6d57a8911be3e1149d9389be0256e109053e98f4a86230e",
+    "B8A_image_file": "GRANULE/L1C_T32SPJ_A002765_20170916T101354/IMG_DATA/T32SPJ_20170916T101019_B8A"
+  },
+  {
+    "product_id": "S2B_MSIL1C_20180302T150259_N0206_R125_T22WES_20180302T183800",
+    "xml_path": "outputs/phase102/phase102_20261013/acquired/pixbox_23_product.xml",
+    "xml_sha256": "92bad566545e24c2ed0cdb6deac54e54342e82c21429e2d5d75001368173c1f0",
+    "tile_prefix_path": "outputs/phase102/phase102_20261013/acquired/pixbox_23_tile_prefix.xml",
+    "tile_prefix_sha256": "8343b828f03bc9035ead89539d786b92614223841e2f5088a28efd75297e354f",
+    "listing_path": "outputs/phase102/phase102_20261013/acquired/gcs_pixbox_23.json",
+    "listing_sha256": "518fd31d7b1650328e9ff8c8bba7614a78288a9e3ad9a3f3f3319548a5b90cfb",
+    "B8A_image_file": "GRANULE/L1C_T22WES_A005156_20180302T150257/IMG_DATA/T22WES_20180302T150259_B8A"
+  }
+]

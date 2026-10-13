@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OmniCloudMask Training Data Distribution</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div id="loading" class="loading">Loading training data distribution...</div>
+    <div id="map"></div>
+    <div class="info-panel" id="info-panel">
+        <div class="panel-header" onclick="togglePanel()">
+            <h3>OmniCloudMask Training Data Distribution (v4 models)</h3>
+            <button class="toggle-btn" id="toggle-btn" aria-label="Toggle panel">▼</button>
+        </div>
+        <div class="panel-content" id="panel-content">
+            <div class="info-description">Select datasets to visualise. Grids coloured by training image count (log scale)
+            </div>
+
+            <div class="control-buttons">
+                <button onclick="selectAllDatasets()">Select All</button>
+                <button onclick="deselectAllDatasets()">Deselect All</button>
+            </div>
+
+            <div class="dataset-controls" id="dataset-controls"></div>
+
+            <div id="legend"></div>
+            <div id="stats" class="stats"></div>
+
+            <div class="links-section">
+                <strong>Related Links:</strong><br>
+                <a href="https://github.com/DPIRD-DMA/OmniCloudMask" target="_blank">OmniCloudMask Project</a><br>
+                <a href="https://cloudsen12.github.io" target="_blank">CloudSEN12 Dataset</a><br>
+                <a href="https://zenodo.org/records/7100327" target="_blank">KappaMask Dataset</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+    <script src="https://unpkg.com/geojson-vt@3.2.1/geojson-vt.js"></script>
+    <script src="https://unpkg.com/leaflet.vectorgrid@latest/dist/Leaflet.VectorGrid.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

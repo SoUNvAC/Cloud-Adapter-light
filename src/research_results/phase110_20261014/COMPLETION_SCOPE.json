@@ -1,0 +1,22 @@
+{
+  "phase": 110,
+  "date": "2026-10-14",
+  "wall_seconds_since_metadata_preparation": 1045.788583,
+  "planning_budget_cpu_hours": 2,
+  "total_CPU_accounting": "not independently aggregated; metadata validator reports its process CPU only",
+  "public_success_body_bytes": 25985,
+  "public_conservative_reserved_bytes": 4224308,
+  "public_cap_bytes": 20000000,
+  "model_downloads": 0,
+  "image_downloads": 0,
+  "installations": 0,
+  "model_loads": 0,
+  "network_forwards": 0,
+  "performance_evaluations": 0,
+  "label_access": 0,
+  "work_dirs_sync": 0,
+  "strict_paper_reproduction": "ended_due_to_missing_bound_provenance",
+  "old_pool_exploration": "planning_only_implementation_pending",
+  "new_independent_dense_confirmation": "not_ready",
+  "research_deadline_beijing": "2026-10-20"
+}

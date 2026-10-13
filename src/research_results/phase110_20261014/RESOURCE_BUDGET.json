@@ -1,0 +1,41 @@
+{
+  "unit": "bytes, decimal GB caps",
+  "model_aux_download_cap": 4000000000,
+  "new_intermediate_cap": 4000000000,
+  "declared_weights_bytes": 202479912,
+  "declared_B8A_bytes": 521604536,
+  "known_total_download_bytes": 724084448,
+  "known_payload_under_cap": true,
+  "weight_archive_extraction": "not applicable; safetensors are not archive files",
+  "conversion_copies": {
+    "default_downloader": "converts V1 to .pth; exact extra bytes unverified",
+    "controlled_plan": "use existing load_model_from_weights(..., model_library=fastai, path=.safetensors) for both V1 weights, then pass custom_models; no conversion or default downloader",
+    "actual_tensor_equivalence_verified": false
+  },
+  "environment_dependency_cost": {
+    "actual_bytes": "unknown; not downloaded/resolved/installed",
+    "separate_proposed_peak_cap_bytes": 4000000000,
+    "includes": "runtime files plus package/download/unpack caches; must be independently priced before authorization; not hidden in existing env",
+    "existing_cloud_lite_pt210_modified": false
+  },
+  "host_conservative_free_bytes": 13343952896,
+  "planned_min_reserve_bytes": 4000000000,
+  "conservative_planning_sum_bytes": 8724084448,
+  "post_planning_residual_bytes": 4619868448,
+  "resource_plan_is_not_actual_peak_acceptance": true,
+  "full_scene_shape": [
+    5490,
+    5490
+  ],
+  "four_class_float32_scene_bytes": 482241600,
+  "gradient_float32_scene_bytes": 120560400,
+  "three_band_float32_scene_bytes": 361681200,
+  "full16_four_class_outputs_bytes": 7715865600,
+  "store_full16_outputs": false,
+  "scene_processing": "one full scene at a time, extract fixed coordinate scores/valid metadata then release in-memory dense outputs; no persistent full four-class arrays",
+  "planned_cpu_ram_cap_bytes": 17179869184,
+  "planned_gpu_peak_cap_bytes": 21474836480,
+  "actual_ram_vram_peaks": "unknown, no forward",
+  "future_inference_budget": "at most6 GPUh/24 CPUh subject to separate protocol; stop new research by2026-10-20 Beijing; no fitting",
+  "paper_full_reproduction": "ended_this_round"
+}

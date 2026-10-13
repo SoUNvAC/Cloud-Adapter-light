@@ -1,0 +1,76 @@
+{
+  "measured_utc": "2026-10-13T16:47:27.2625770Z",
+  "measured_beijing": "2026-10-14T00:47:27+08:00",
+  "linux_identity": {
+    "WSL_DISTRO_NAME": null,
+    "os_release": {
+      "NAME": "Debian GNU/Linux",
+      "ID": "debian",
+      "PRETTY_NAME": "Debian GNU/Linux 13 (trixie)",
+      "VERSION_ID": "13",
+      "VERSION": "13 (trixie)",
+      "VERSION_CODENAME": "trixie",
+      "DEBIAN_VERSION_FULL": "13.5",
+      "HOME_URL": "https://www.debian.org/",
+      "SUPPORT_URL": "https://www.debian.org/support",
+      "BUG_REPORT_URL": "https://bugs.debian.org/"
+    }
+  },
+  "conda_metadata": {
+    "python": "3.10.21 (main, Aug 27 2026, 14:42:07) [GCC 14.3.0]",
+    "prefix": "/home/scv/miniconda3/envs/cloud-lite-pt210",
+    "packages": {
+      "torch": "2.1.0+cu121",
+      "torchvision": "0.16.0+cu121",
+      "fastai": "not_installed",
+      "timm": "0.9.16",
+      "segmentation-models-pytorch": "not_installed",
+      "safetensors": "0.8.0",
+      "numpy": "1.26.4",
+      "rasterio": "1.3.11",
+      "huggingface-hub": "0.35.3",
+      "gdown": "not_installed",
+      "platformdirs": "4.11.8"
+    }
+  },
+  "ram": {
+    "total_bytes": 33627484160,
+    "available_bytes": 32789594112
+  },
+  "gpu": {
+    "name": "NVIDIA GeForce RTX 4090 D",
+    "total_mib": 24564,
+    "free_mib": 23611,
+    "driver": "576.88"
+  },
+  "filesystem": {
+    "paths": [
+      "/home/scv/Cloud-Adapter-light",
+      "/home/scv/shared"
+    ],
+    "device": "/dev/sdd",
+    "type": "ext4",
+    "total_bytes": 1081101176832,
+    "free_bytes": 783518625792
+  },
+  "windows_physical_budget": {
+    "conservative_volume": "I:",
+    "free_bytes": 13343952896,
+    "total_bytes": 4096787476480,
+    "filesystem": "NTFS",
+    "registered_Debian_VHD_volume": "I:",
+    "registered_Ubuntu_VHD_volume": "C:",
+    "mapping_scope": "Linux OS is Debian13 and registry Debian is on I; WSL_DISTRO_NAME absent in SSH, live VHD handle mapping not verified. Use smallest free registered WSL volume (I) conservatively, not ext4 free."
+  },
+  "runtime_declared_requirements_satisfied": false,
+  "requirements_difference": {
+    "torch": "2.1.0+cu121 installed, current author pyproject requires >=2.3.0",
+    "missing": [
+      "fastai",
+      "segmentation-models-pytorch",
+      "gdown"
+    ],
+    "not_a_runtime_load_test": true
+  },
+  "initial_probe_notes": "nvidia-smi/powershell.exe absent from SSH PATH; successful explicit standard WSL/Windows binary queries. Initial header printf option error did not affect read-only metadata. No PATH/system/credential modifications."
+}

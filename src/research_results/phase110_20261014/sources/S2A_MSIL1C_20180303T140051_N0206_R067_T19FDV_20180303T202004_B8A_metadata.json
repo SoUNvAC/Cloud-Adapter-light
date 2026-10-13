@@ -1,0 +1,20 @@
+{
+  "kind": "storage#object",
+  "id": "gcp-public-data-sentinel-2/tiles/19/F/DV/S2A_MSIL1C_20180303T140051_N0206_R067_T19FDV_20180303T202004.SAFE/GRANULE/L1C_T19FDV_A014078_20180303T141721/IMG_DATA/T19FDV_20180303T140051_B8A.jp2/1520451771250150",
+  "selfLink": "https://www.googleapis.com/storage/v1/b/gcp-public-data-sentinel-2/o/tiles%2F19%2FF%2FDV%2FS2A_MSIL1C_20180303T140051_N0206_R067_T19FDV_20180303T202004.SAFE%2FGRANULE%2FL1C_T19FDV_A014078_20180303T141721%2FIMG_DATA%2FT19FDV_20180303T140051_B8A.jp2",
+  "mediaLink": "https://storage.googleapis.com/download/storage/v1/b/gcp-public-data-sentinel-2/o/tiles%2F19%2FF%2FDV%2FS2A_MSIL1C_20180303T140051_N0206_R067_T19FDV_20180303T202004.SAFE%2FGRANULE%2FL1C_T19FDV_A014078_20180303T141721%2FIMG_DATA%2FT19FDV_20180303T140051_B8A.jp2?generation=1520451771250150&alt=media",
+  "name": "tiles/19/F/DV/S2A_MSIL1C_20180303T140051_N0206_R067_T19FDV_20180303T202004.SAFE/GRANULE/L1C_T19FDV_A014078_20180303T141721/IMG_DATA/T19FDV_20180303T140051_B8A.jp2",
+  "bucket": "gcp-public-data-sentinel-2",
+  "generation": "1520451771250150",
+  "metageneration": "1",
+  "contentType": "application/octet-stream",
+  "storageClass": "STANDARD",
+  "size": "33826774",
+  "md5Hash": "s1MzBpa0/bn6ikBpVeLaXg==",
+  "crc32c": "Arqfdw==",
+  "etag": "CObr5J382tkCEAE=",
+  "timeCreated": "2018-03-07T19:42:51.241Z",
+  "updated": "2018-03-07T19:42:51.241Z",
+  "timeStorageClassUpdated": "2018-03-07T19:42:51.241Z",
+  "timeFinalized": "2018-03-07T19:42:51.241Z"
+}

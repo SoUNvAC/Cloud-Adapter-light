@@ -1,0 +1,112 @@
+{
+  "phase": 110,
+  "status": "metadata_only_verified",
+  "objects": 16,
+  "declared_B8A_bytes": 521604536,
+  "unchanged_phase104_manifest_sha256": "0313ec61fef75acad7152e0deb639b094aa77b3a1b4041545e09939955b5500a",
+  "products": [
+    {
+      "product_id": "S2A_MSIL1C_20170113T072241_N0204_R006_T40UEE_20170113T072238",
+      "original_identity": true,
+      "declared_checksum_only": true,
+      "grid20_and_baseline": true
+    },
+    {
+      "product_id": "S2A_MSIL1C_20170706T051651_N0205_R062_T48XWG_20170706T051649",
+      "original_identity": true,
+      "declared_checksum_only": true,
+      "grid20_and_baseline": true
+    },
+    {
+      "product_id": "S2A_MSIL1C_20170712T071621_N0205_R006_T40UEE_20170712T071617",
+      "original_identity": true,
+      "declared_checksum_only": true,
+      "grid20_and_baseline": true
+    },
+    {
+      "product_id": "S2A_MSIL1C_20170725T142751_N0205_R053_T19GBQ_20170725T143854",
+      "original_identity": true,
+      "declared_checksum_only": true,
+      "grid20_and_baseline": true
+    },
+    {
+      "product_id": "S2A_MSIL1C_20170726T102021_N0205_R065_T33VVE_20170726T102259",
+      "original_identity": true,
+      "declared_checksum_only": true,
+      "grid20_and_baseline": true
+    },
+    {
+      "product_id": "S2A_MSIL1C_20170908T100031_N0205_R122_T32SPJ_20170908T100655",
+      "original_identity": true,
+      "declared_checksum_only": true,
+      "grid20_and_baseline": true
+    },
+    {
+      "product_id": "S2A_MSIL1C_20170917T052641_N0205_R105_T48XWG_20170917T052642",
+      "original_identity": true,
+      "declared_checksum_only": true,
+      "grid20_and_baseline": true
+    },
+    {
+      "product_id": "S2A_MSIL1C_20171107T150421_N0206_R125_T22WES_20171107T165127",
+      "original_identity": true,
+      "declared_checksum_only": true,
+      "grid20_and_baseline": true
+    },
+    {
+      "product_id": "S2A_MSIL1C_20180106T032121_N0206_R118_T48NUG_20180106T083912",
+      "original_identity": true,
+      "declared_checksum_only": true,
+      "grid20_and_baseline": true
+    },
+    {
+      "product_id": "S2A_MSIL1C_20180217T053911_N0206_R005_T44SKJ_20180217T082149",
+      "original_identity": true,
+      "declared_checksum_only": true,
+      "grid20_and_baseline": true
+    },
+    {
+      "product_id": "S2A_MSIL1C_20180222T012651_N0206_R074_T54TWN_20180222T031349",
+      "original_identity": true,
+      "declared_checksum_only": true,
+      "grid20_and_baseline": true
+    },
+    {
+      "product_id": "S2A_MSIL1C_20180302T142851_N0206_R053_T19GBQ_20180302T192732",
+      "original_identity": true,
+      "declared_checksum_only": true,
+      "grid20_and_baseline": true
+    },
+    {
+      "product_id": "S2A_MSIL1C_20180303T140051_N0206_R067_T19FDV_20180303T202004",
+      "original_identity": true,
+      "declared_checksum_only": true,
+      "grid20_and_baseline": true
+    },
+    {
+      "product_id": "S2B_MSIL1C_20170731T102019_N0205_R065_T33VVE_20170731T102348",
+      "original_identity": true,
+      "declared_checksum_only": true,
+      "grid20_and_baseline": true
+    },
+    {
+      "product_id": "S2B_MSIL1C_20170916T101019_N0205_R022_T32SPJ_20170916T101354",
+      "original_identity": true,
+      "declared_checksum_only": true,
+      "grid20_and_baseline": true
+    },
+    {
+      "product_id": "S2B_MSIL1C_20180302T150259_N0206_R125_T22WES_20180302T183800",
+      "original_identity": true,
+      "declared_checksum_only": true,
+      "grid20_and_baseline": true
+    }
+  ],
+  "XML_bindings_verified": 16,
+  "raster_reads": 0,
+  "weight_loads": 0,
+  "forwards": 0,
+  "performance_evaluations": 0,
+  "checksum_content_verified": false,
+  "validator_process_cpu_seconds": 0.015625
+}
