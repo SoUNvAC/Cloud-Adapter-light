@@ -1,0 +1,7 @@
+﻿pool,author_v1_scope,overlap_state,decision,limits
+Source监督,V1 changelog仅CloudSEN12 High；Source同为CloudSEN12 High监督来源,训练来源数据集级已知共同；作者V1具体fit/validation清单与权重绑定未取得,pending_product_scope,8490 Source_train、535 Source_val记录已有位置；不能把项目清单当作者V1完整清单
+Catalogue4172871全部池,V1没有明确列Catalogue训练；当前V3/V4训练项不倒推V1,作者完整训练产品及footprint未锁；与CloudSEN12空间/日期关联未完全证明,pending_metadata,原项目513产品位置记录可用，未宣称不重叠
+ALCD1460961,V1未明确列ALCD训练,37产品已在项目历史位置索引；作者V1清单不足，交集pending,pending_metadata,标签原生60m及版本差异限制不变
+PixBox5036991,作者代码有PixBox验证notebook，但当前notebook默认latest不能证明V1版本；论文摘要声称跨传感器验证,项目原审计13产品排除、16产品/10组元数据通过，已被105—107暴露；不是V1训练独立认证,exposed_pool_and_pending_v1_overlap,无采样概率/密集真值，不能评价全景FPR
+KappaSet7100327候选池,V1 changelog不含Kappa；V3+含，不混淆,Phase102 180键excluded/899键pending，0完整元数据通过；原1079键与1038产品不一致,pending_metadata,794连接分量为上界，不是794独立场景
+新独立密集参考池,没有已验收清单,未取得新的未暴露可靠密集参考,not_available,旧池不能重命名充当确认；基础VFM预训练未知保留

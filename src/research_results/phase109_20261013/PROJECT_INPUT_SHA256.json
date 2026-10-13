@@ -1,0 +1,52 @@
+[
+  {
+    "path": "src/research_results/phase102_20261013/metadata_audit.json",
+    "sha256": "f74a40331379ce120a1938e348adb4c60350feb76dcdb769e8bcd18a45482c35",
+    "scope": "metadata/code/protocol only"
+  },
+  {
+    "path": "src/research_results/phase102_20261013/inputs/history_positions_only.json",
+    "sha256": "88379af9c1f6d6493b22cb188579647751c053f206a55d1f23fb93b1167b42c7",
+    "scope": "metadata/code/protocol only"
+  },
+  {
+    "path": "src/research_results/phase102_20261013/inputs/candidate_products_metadata.json",
+    "sha256": "27247292f1fd94c6c4fc9e1b0fde179c9328b2518d2a3c24e2f8e8fc819ce0cc",
+    "scope": "metadata/code/protocol only"
+  },
+  {
+    "path": "src/research_results/phase102_20261013/related_groups.csv",
+    "sha256": "19049becad199b3aa51ef262d6e25e03e84f18309a82f96bc39067967ce1b4da",
+    "scope": "metadata/code/protocol only"
+  },
+  {
+    "path": "src/research_results/phase102_20261013/overlap_exclusions.csv",
+    "sha256": "4576c4d039e869a71a6e6f2f80c7b03e2232f953b6ed860b5fe7ad7b5e49fddc",
+    "scope": "metadata/code/protocol only"
+  },
+  {
+    "path": "src/research_results/phase104_20261013/object_manifest.json",
+    "sha256": "0313ec61fef75acad7152e0deb639b094aa77b3a1b4041545e09939955b5500a",
+    "scope": "metadata/code/protocol only"
+  },
+  {
+    "path": "src/research_results/phase104_20261013/input_operator_lock.json",
+    "sha256": "3d0c21f1c424baf49c2f363a5ad2ae48e56ed8ad87b469e926144a9825f5200b",
+    "scope": "metadata/code/protocol only"
+  },
+  {
+    "path": "src/research_results/phase108_20261013/VERIFICATION.json",
+    "sha256": "6b4db18716dd1c59362424eae971d087af4a3a639f170ca6ac20963db3087316",
+    "scope": "metadata/code/protocol only"
+  },
+  {
+    "path": "src/research_plans/PHASE109_OMNICLOUDMASK_ADMISSION_20261013.md",
+    "sha256": "caea1bcdfb1684d1348e4912678dfca37a323a71cae2213c1bc7b8640fda5fd7",
+    "scope": "metadata/code/protocol only"
+  },
+  {
+    "path": "src/tools/verify_phase109_arrays.py",
+    "sha256": "e11eeda734885edb90c38d0b8bd7f96e62cafe703be2e90e466e084f976b5495",
+    "scope": "metadata/code/protocol only"
+  }
+]

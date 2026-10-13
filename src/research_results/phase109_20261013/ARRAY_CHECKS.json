@@ -1,0 +1,75 @@
+{
+  "phase": 109,
+  "date": "2026-10-14",
+  "checks": [
+    {
+      "name": "author_channel_norm_zero_constant_all_nodata",
+      "passed": true
+    },
+    {
+      "name": "author_channel_norm_population_std",
+      "passed": true
+    },
+    {
+      "name": "per_channel_positive_affine_with_same_valid_support",
+      "passed": true
+    },
+    {
+      "name": "legacy_vs_current_partial_nodata_semantics_detected",
+      "passed": true
+    },
+    {
+      "name": "author_window_indices_legacy_current_match",
+      "passed": true
+    },
+    {
+      "name": "edge_windows_no_padding_cover_entire_grid",
+      "passed": true
+    },
+    {
+      "name": "average_outputs_then_softmax_not_probability_average",
+      "passed": true
+    },
+    {
+      "name": "author_confidence_not_probability_simplex",
+      "passed": true
+    },
+    {
+      "name": "class_axis_shadow_channel_is_three",
+      "passed": true
+    },
+    {
+      "name": "class_independent_weighted_overlap_constant_reconstruction",
+      "passed": true
+    },
+    {
+      "name": "hard_argmax_equivalent_after_positive_weight_division",
+      "passed": true
+    },
+    {
+      "name": "uncovered_and_nodata_excluded_not_uniform_probability",
+      "passed": true
+    },
+    {
+      "name": "v1_requires_both_historical_model_ids",
+      "passed": true
+    },
+    {
+      "name": "v1_declared_safetensors_payload",
+      "passed": true
+    }
+  ],
+  "n_passed": 14,
+  "test_scope": "author NumPy-only functions extracted by AST plus algebraic synthetic-output checks; no upstream Torch execution or network",
+  "network_forwards": 0,
+  "weight_loads": 0,
+  "fits": 0,
+  "real_output_consistency_verified": false,
+  "calibration_verified": false,
+  "source_sha256": {
+    "omni_omnicloudmask_model_utils.py": "f749ceced40f8b0899f56e95e79b9f43ea77b74898376175407c21c26796a1dd",
+    "v1_20240925__omnicloudmask__model_utils.py": "140421dd6416784d3da000cd499bfb95336e21dd26e408e6c20ffec3992dde5f",
+    "omnicloudmask__raster_utils.py": "0d5c85f70d578b7a76a8cbdeeeca7097daca6f2e38c338ab82a9753c6f7ac506",
+    "v1_20240925__omnicloudmask__raster_utils.py": "0021e124e06a20b7c0378bce2f19450cece085e2a565b44316d1daf962a509ed"
+  }
+}

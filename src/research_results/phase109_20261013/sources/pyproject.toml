@@ -1,0 +1,82 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "omnicloudmask"
+authors = [{name = "Nick Wright", email = "nicholas.wright@dpird.wa.gov.au"}]
+dynamic = ["version"]
+description = "Python library for cloud and cloud shadow segmentation in high to moderate resolution satellite imagery"
+requires-python = ">=3.10"
+dependencies = [
+    "gdown>=5.1.0",
+    "huggingface-hub>=0.28.1",
+    "platformdirs>=4.0.0",
+    "rasterio>=1.3",
+    "safetensors>=0.3.0",
+    "segmentation-models-pytorch>=0.5.0",
+    "timm>=0.9",
+    "torch>=2.3.0",
+    "tqdm>=4.0",
+]
+license = "MIT"
+readme = {file = "README.md", content-type = "text/markdown"}
+keywords = ["sentinel-2", "landsat", "maxar", "planetscope", "satellite", "cloud", "remote-sensing", "mask", "shadow"]
+
+[tool.setuptools.dynamic]
+version = {attr = "omnicloudmask.__version__.__version__"}
+
+[dependency-groups]
+# what CI needs to lint and run the tests
+test = [
+    "pytest>=8.4.0",
+    "ruff>=0.12.2",
+]
+dev = [
+    {include-group = "test"},
+    "cubo>=2024.1.1",
+    "earthaccess>=0.11.0",
+    "fastai>=2.7",
+    "geopandas>=1.0.1",
+    "h5py>=3.14.0",
+    "jupyter>=1.1.1",
+    "line-profiler>=5.0.0",
+    "matplotlib>=3.0.0",
+    "myst-parser>=3.0.1",
+    "netcdf4>=1.7.2",
+    "opencv-python>=4.12.0.88",
+    "planetary-computer>=1.0.0",
+    "pystac>=1.10.1",
+    "pystac-client>=0.8.3",
+    "rioxarray>=0.15.0",
+    "s2dl>=0.3",
+    "seaborn>=0.13.0",
+    "spandrel>=0.4.1",
+    "sphinx>=7.4.7",
+    "sphinx-autobuild>=2024.10.3",
+    "sphinx-rtd-theme>=3.1.0",
+    "tacoreader>=0.5.6",
+]
+
+[project.optional-dependencies]
+legacy = ["fastai>=2.7",]
+
+[project.urls]
+Homepage = "https://github.com/DPIRD-DMA/OmniCloudMask"
+
+[tool.setuptools.package-data]
+omnicloudmask = ["model_download_links.csv"]
+
+[tool.setuptools]
+packages = ["omnicloudmask"]
+
+[tool.ruff.lint]
+select = ["E", "F", "B"]
+
+[tool.ruff]
+exclude = ["training/Train OCM models.ipynb"]
+
+[tool.pytest.ini_options]
+markers = [
+    "slow: needs the downloaded test scenes or other large downloads; deselect with -m 'not slow'",
+]

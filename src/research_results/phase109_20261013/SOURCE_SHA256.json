@@ -1,0 +1,212 @@
+[
+  {
+    "file": "docs__api.md",
+    "bytes": 8907,
+    "sha256": "e4a5e516032c31a5506331bf364dec15030463f307d195a15bc43e6ada91d67c",
+    "provenance": "Phase109 acquisition; URL in access_ledger or historical trace"
+  },
+  {
+    "file": "docs__how-it-works.md",
+    "bytes": 5211,
+    "sha256": "aef7acee0a814569975dbb7ebec8d730b756e5f7c58ea16baad4a7c2d228c650",
+    "provenance": "Phase109 acquisition; URL in access_ledger or historical trace"
+  },
+  {
+    "file": "docs__resolution.md",
+    "bytes": 4731,
+    "sha256": "7ca61c4cb8bedb1d4cf38e5c6efcde398ad6eb59ce71d59ce367af078399f4eb",
+    "provenance": "Phase109 acquisition; URL in access_ledger or historical trace"
+  },
+  {
+    "file": "docs__usage.md",
+    "bytes": 9442,
+    "sha256": "7e88020b21d652d7da3e063ce7447f0c9f692cd96e2a50ba32a70897ef33692c",
+    "provenance": "Phase109 acquisition; URL in access_ledger or historical trace"
+  },
+  {
+    "file": "hf_model_info.json",
+    "bytes": 2853,
+    "sha256": "9a88f951c6e55f0636f2d6e56228eae63d9e9f64d426e39ecb6c6c3c05bd6527",
+    "provenance": "Phase109 acquisition; URL in access_ledger or historical trace"
+  },
+  {
+    "file": "hf_README.md",
+    "bytes": 24,
+    "sha256": "d8d7a46d41a1a37fe4f0a5f637bf55c649310185329127d8a2204632e480be17",
+    "provenance": "Phase109 acquisition; URL in access_ledger or historical trace"
+  },
+  {
+    "file": "omni_commit.json",
+    "bytes": 149112,
+    "sha256": "46d9d48f716d587a898f40c7b5495c24576b903256594afaeba04fcc21b8f8f4",
+    "provenance": "Phase108 verified local artifact"
+  },
+  {
+    "file": "omni_LICENSE",
+    "bytes": 1066,
+    "sha256": "be191ea647a0f0c629b9370d9e7f3be9f3db5942e442e3e819bb0caa6e28c18e",
+    "provenance": "Phase108 verified local artifact"
+  },
+  {
+    "file": "omni_MODEL_CHANGELOG.md",
+    "bytes": 917,
+    "sha256": "4b46d62a5b2b3a02d320fdc937af592d8f513e67b1a8e1dbffcaf3492800359d",
+    "provenance": "Phase108 verified local artifact"
+  },
+  {
+    "file": "omni_omnicloudmask_model_download_links.csv",
+    "bytes": 1083,
+    "sha256": "bab75e2c434aba2f3028874112dbe432be48f24f0a01a1269b2ec24c486b63a1",
+    "provenance": "Phase108 verified local artifact"
+  },
+  {
+    "file": "omni_omnicloudmask_model_utils.py",
+    "bytes": 12064,
+    "sha256": "f749ceced40f8b0899f56e95e79b9f43ea77b74898376175407c21c26796a1dd",
+    "provenance": "Phase108 verified local artifact"
+  },
+  {
+    "file": "omni_readme.txt",
+    "bytes": 3969,
+    "sha256": "171977f3371ddf91538406fe860c9b0a75a61c6a5b2fbfa7ac02106f48000b6a",
+    "provenance": "Phase108 verified local artifact"
+  },
+  {
+    "file": "omni_tree.json",
+    "bytes": 29248,
+    "sha256": "48a69c1dd481070060185a858816351ebb80582aa7b86befe1f78f21dc69376f",
+    "provenance": "Phase108 verified local artifact"
+  },
+  {
+    "file": "omnicloudmask____init__.py",
+    "bytes": 353,
+    "sha256": "75cbbdc34afbbf9534dbc330f260e4f33c9f88b28d68a13f7a5d51f533397058",
+    "provenance": "Phase109 acquisition; URL in access_ledger or historical trace"
+  },
+  {
+    "file": "omnicloudmask__cloud_mask.py",
+    "bytes": 58540,
+    "sha256": "9130116e5daa130ceaed28de222484f141abf365c614c0b77aaf7b4f8cf7c33c",
+    "provenance": "Phase109 acquisition; URL in access_ledger or historical trace"
+  },
+  {
+    "file": "omnicloudmask__data_loaders.py",
+    "bytes": 6157,
+    "sha256": "78a9d9992b9e857978f5f4e4a3784b679c1c6a76787884adcb4ccbcafbd58a88",
+    "provenance": "Phase109 acquisition; URL in access_ledger or historical trace"
+  },
+  {
+    "file": "omnicloudmask__download_models.py",
+    "bytes": 4997,
+    "sha256": "6e9b7f7970489a5cb0ae93e900527b591db4cfc42661c789306927e38e27a2ec",
+    "provenance": "Phase109 acquisition; URL in access_ledger or historical trace"
+  },
+  {
+    "file": "omnicloudmask__raster_utils.py",
+    "bytes": 6063,
+    "sha256": "0d5c85f70d578b7a76a8cbdeeeca7097daca6f2e38c338ab82a9753c6f7ac506",
+    "provenance": "Phase109 acquisition; URL in access_ledger or historical trace"
+  },
+  {
+    "file": "pyproject.toml",
+    "bytes": 2097,
+    "sha256": "1ea7820eecd235fc2ad9fe3cd5636c0d3be3716c65924527a42e87f8b2137a01",
+    "provenance": "Phase109 acquisition; URL in access_ledger or historical trace"
+  },
+  {
+    "file": "training__augs.py",
+    "bytes": 29200,
+    "sha256": "af6a52f760486f8f126b585fa30d0f80287202ad3e811a06fa19920dec6af205",
+    "provenance": "Phase109 acquisition; URL in access_ledger or historical trace"
+  },
+  {
+    "file": "training__Get datasets__1 Download CloudSEN12.ipynb",
+    "bytes": 10621,
+    "sha256": "f064bcdce822b525cc9774a61adb74a5a01dc854155f33995ef7c7eff6bc142f",
+    "provenance": "Phase109 acquisition; URL in access_ledger or historical trace"
+  },
+  {
+    "file": "training__helpers.py",
+    "bytes": 4808,
+    "sha256": "33deb5e3a91d71d8779154c86abd316b8cadae5e56d262981b91c846cad97938",
+    "provenance": "Phase109 acquisition; URL in access_ledger or historical trace"
+  },
+  {
+    "file": "training__Train OCM models.ipynb",
+    "bytes": 24307,
+    "sha256": "87b774d0abc4a7651391cc0d4d2e4c988768225fedb64bb996fdb5a2f7856e15",
+    "provenance": "Phase109 acquisition; URL in access_ledger or historical trace"
+  },
+  {
+    "file": "training__utils.py",
+    "bytes": 2365,
+    "sha256": "96685450871061040a58e5d1a1426fb1e4a039f8d953b68680fc14d495038344",
+    "provenance": "Phase109 acquisition; URL in access_ledger or historical trace"
+  },
+  {
+    "file": "training_history.json",
+    "bytes": 6558,
+    "sha256": "939b56df166f377e0d3bd07763ececdd135260d63a147eae7edafaad2e7153c4",
+    "provenance": "Phase109 acquisition; URL in access_ledger or historical trace"
+  },
+  {
+    "file": "v1_20240925__model_download_links.csv",
+    "bytes": 270,
+    "sha256": "0dfe41e13b645a4d18fe95eb24326fb02b364b516ca8abc0d515b39aec34e41f",
+    "provenance": "Phase109 acquisition; URL in access_ledger or historical trace"
+  },
+  {
+    "file": "v1_20240925__omnicloudmask__cloud_mask.py",
+    "bytes": 18381,
+    "sha256": "8da24ae9fc472addb0b8205688339a07fd509414dc2a0af50ec199425fab2c99",
+    "provenance": "Phase109 acquisition; URL in access_ledger or historical trace"
+  },
+  {
+    "file": "v1_20240925__omnicloudmask__data_loaders.py",
+    "bytes": 4982,
+    "sha256": "40f9b12f6ed67d4506175956215a5d79e26e56b7a6f23c5d0d8470246ba9164b",
+    "provenance": "Phase109 acquisition; URL in access_ledger or historical trace"
+  },
+  {
+    "file": "v1_20240925__omnicloudmask__download_models.py",
+    "bytes": 1521,
+    "sha256": "22068b5dcdb72c4c349a6869c6adbee2fec7969ed9bdd01f089ba0d187605e8b",
+    "provenance": "Phase109 acquisition; URL in access_ledger or historical trace"
+  },
+  {
+    "file": "v1_20240925__omnicloudmask__model_utils.py",
+    "bytes": 6463,
+    "sha256": "140421dd6416784d3da000cd499bfb95336e21dd26e408e6c20ffec3992dde5f",
+    "provenance": "Phase109 acquisition; URL in access_ledger or historical trace"
+  },
+  {
+    "file": "v1_20240925__omnicloudmask__raster_utils.py",
+    "bytes": 3185,
+    "sha256": "0021e124e06a20b7c0378bce2f19450cece085e2a565b44316d1daf962a509ed",
+    "provenance": "Phase109 acquisition; URL in access_ledger or historical trace"
+  },
+  {
+    "file": "v1_20240925__README.md",
+    "bytes": 6312,
+    "sha256": "c3372c97e57d9e039f62c4eb70322d94573e273d6d96f60f63b35b099645178e",
+    "provenance": "Phase109 acquisition; URL in access_ledger or historical trace"
+  },
+  {
+    "file": "v1_history.json",
+    "bytes": 160236,
+    "sha256": "efe7efb22e9f1d95b399161dc50bcd413272d5d62ddc435117b06772be871b85",
+    "provenance": "Phase109 acquisition; URL in access_ledger or historical trace"
+  },
+  {
+    "file": "validation dataset__Sentinel-2__Get stats.ipynb",
+    "bytes": 21516,
+    "sha256": "1f536a4ad6342f669963fece46f14778abc946529ebbec676bb5189e8b653225",
+    "provenance": "Phase109 acquisition; URL in access_ledger or historical trace"
+  },
+  {
+    "file": "validation dataset__Sentinel-2__OCM inference.ipynb",
+    "bytes": 2175,
+    "sha256": "3eb2cf85265fcae5bfa6fb994ac6aab71df13531127712886e7c359dcafdc290",
+    "provenance": "Phase109 acquisition; URL in access_ledger or historical trace"
+  }
+]

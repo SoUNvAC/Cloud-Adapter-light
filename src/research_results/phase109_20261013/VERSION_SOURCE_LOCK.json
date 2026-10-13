@@ -1,0 +1,43 @@
+{
+  "phase": 109,
+  "protocol_date": "2026-10-13",
+  "started_date": "2026-10-13",
+  "completed_date": "2026-10-14",
+  "code_commit": "f68cf49b4cecc93ec5cb71e80110d76f61df073c",
+  "historical_v1_trace_commit": "1c9b086828f64f78907ff7fcc265003c8918ff4c",
+  "historical_trace_is_not_claimed_paper_exact_commit": true,
+  "hf_model_revision": "c9a4fb88188709127aa25cfe51ae7fd41b0132f8",
+  "model_version": 1,
+  "required_ensemble_size": 2,
+  "classes": [
+    "Clear",
+    "Thick Cloud",
+    "Thin Cloud",
+    "Cloud Shadow"
+  ],
+  "shadow_index": 3,
+  "normalization": "per patch per channel nonzero population zscore; no Source preprocessor",
+  "canonical_s2_channels": [
+    "B04",
+    "B03",
+    "B8A"
+  ],
+  "existing_pixbox_channels": [
+    "B02",
+    "B03",
+    "B04",
+    "B08",
+    "B11",
+    "B12"
+  ],
+  "existing_pixbox_products": 16,
+  "code_path": "predict_from_array, export_confidence=True, softmax_output=True, model_version=1, custom_models=None, compile_models=False; no call in this phase",
+  "score_definition": "clip(softmax(gradient-normalized mosaic(mean raw model outputs))+0.001,0.001,0.999)[3]; invalid/uncovered excluded",
+  "default_patch_size": 1000,
+  "default_overlap": 300,
+  "canonical_resolution_range_m": [
+    10,
+    50
+  ],
+  "actual_paper_run_settings_fully_bound": false
+}

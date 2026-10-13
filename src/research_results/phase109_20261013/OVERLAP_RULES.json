@@ -1,0 +1,24 @@
+{
+  "rules_source": "Phase102 accepted metadata_audit.json rules; inherited Phase86",
+  "buffer_each_m": 1000,
+  "contact": "distance<=2000m including boundary contact",
+  "grouping": "same tile at any date OR same UTC day and known orbit OR buffered intersection; transitive components",
+  "unknown_geometry": "pending, never disjoint",
+  "historical_records": 9717,
+  "history_roles": {
+    "Source_train": 8490,
+    "Source_val": 535,
+    "Catalogue_65b_confirmation": 66,
+    "Catalogue_65a_confirmation": 65,
+    "Catalogue_65c_final": 66,
+    "Catalogue_fit": 155,
+    "Catalogue_unused_release_conservative": 129,
+    "Catalogue_development_val": 32,
+    "historical_used": 142,
+    "ALCD_full_release_including_used9": 37
+  },
+  "author_v1_geometries_available": false,
+  "new_author_v1_spatial_comparison_performed": false,
+  "why": "No complete author V1 training+validation product/footprint manifest bound to these weights. Applying the geometry rule to an assumed substitute would certify the wrong input set.",
+  "phase102_results_reused_not_recomputed": true
+}
