@@ -1,0 +1,16 @@
+{
+  "eligibility": "documented remote-sensing experience; has_seen_original_reveal=no; actual submission metadata recorded; identity verification reported honestly, not assumed",
+  "minimum_related_groups": 3,
+  "case_requirements": [
+    "落地云影",
+    "20m同质",
+    "具体依据完整",
+    "可判断且不确定性已记录"
+  ],
+  "not_a_population_rate_or_significance_test": true,
+  "unknown_exposure_cannot_be_assumed_blind": true,
+  "prior_reveal_exposure_means_post_hoc_review_only": true,
+  "no_replacement_if_gate_fails": true,
+  "passing_does_not_prove_ranking_damage_low_contrast_domain_shift_spectral_deficit_or_recovery": true,
+  "no_automatic_training_or_threshold_change": true
+}

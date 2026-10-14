@@ -1,0 +1,17 @@
+{
+  "original_opinion_sha256": "552f12c66a15f34a306104a70b2ad9bea7a7717d2261f9e9292c1f58a699b9a6",
+  "original_raw_statuses": {
+    "reviewed": 1,
+    "draft": 46
+  },
+  "missing_evidence": 24,
+  "missing_context": 46,
+  "missing_human_arbitration": 46,
+  "original_final_opinion_not_modified": true,
+  "original_reviewer_not_asked_to_refill": true,
+  "independent_reviewer_id": "unknown",
+  "independent_reviewer_experience": "unknown",
+  "independent_exposure": "unknown",
+  "independent_actual_submission_time": null,
+  "independent_identity_verification": "unknown"
+}

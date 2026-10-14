@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "archive_members": 31,
+  "images": 28,
+  "all_zip_member_sha_match_local": true,
+  "reviewer_pack_has_no_private_trace_or_original_aliases": true,
+  "all7_blank_records_and_unknown_metadata_preserved": true,
+  "no_fake_actual_submission_time": true,
+  "Phase112_113_114_deliveries_unchanged": true,
+  "original_Phase114_raw_opinion_not_modified": true,
+  "no_independent_review_started": true
+}

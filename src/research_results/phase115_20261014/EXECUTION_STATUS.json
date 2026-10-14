@@ -1,0 +1,20 @@
+{
+  "utc": "2026-10-14T08:40:27.232425+00:00",
+  "status": "awaiting_independent_review",
+  "material_preparation_completed": true,
+  "fixed_cases": 7,
+  "related_groups": 5,
+  "evidence_images": 28,
+  "independent_reviewers_arranged": 0,
+  "independent_reviews_submitted": 0,
+  "independent_identity_verification": "unknown",
+  "independent_actual_submission_time": null,
+  "support_gate_evaluated": false,
+  "independent_support_claim": false,
+  "new_model_or_threshold_authorized": false,
+  "new_forward_fit_download_or_sampling": 0,
+  "labels_or_original_final_opinions_changed": false,
+  "performance_recomputed": false,
+  "external_contacts": 0,
+  "work_dirs_synced": false
+}

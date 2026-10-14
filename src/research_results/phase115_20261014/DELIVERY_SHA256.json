@@ -1,0 +1,14 @@
+{
+  "src/research_results/phase115_20261014/.gitattributes": "f06202a408fef9b9ea69bb6b1cb8160dbb0378c5bb67a444d510d231813824c8",
+  "src/research_results/phase115_20261014/SEVEN_CASE_ANON_LOCK.json": "676e966a5c398713318d8be25cbcafcccbee1801fc8e922363c5f292b25d882b",
+  "src/research_results/phase115_20261014/PACKAGE_SHA.json": "d017211a5d07b25e7f47d24c8255c2e445a0d74dc41b5b118378b9cc6052f99e",
+  "src/research_results/phase115_20261014/CPU_MATERIAL_ACCEPTANCE.json": "a853384be9c01e15cb94d1f9d75a80a20367cf3daa6997d0125f3930c57af146",
+  "src/research_results/phase115_20261014/MISSING_FIELDS_PRESERVED.json": "d5588b0a15a423d71815ba61d5165ee2f318b346783a6ed7b6cb48b86647db4a",
+  "src/research_results/phase115_20261014/CPU_PACKAGE_ACCEPTANCE.json": "faefb69e08316bdd35b753fd9e6542a5aa9534bbfc1b8448e90e26cbebff03cf",
+  "src/research_results/phase115_20261014/EXECUTION_STATUS.json": "56bedb7ca1ad0358460137f08095835a80680a031122fe3d131c15e7b32ef9ae",
+  "src/research_results/phase115_20261014/FUTURE_INTERPRETATION_RULES.json": "1e0354febed4ca6df203fe3158becc22556c49779625f5ca722a1c62a1c67e4a",
+  "src/research_results/phase115_20261014/DECISION_STATUS.md": "f306e9a0242bea62e9a1b7a173e6383381c7d1e968300ce0e0286d76f6e0838b",
+  "src/research_results/phase115_20261014/README.md": "b423e68714ef4e99611108a0b46c3387a2daaf1a0d65c9c6dc657aad240ec1d4",
+  "src/tools/prepare_phase115.py": "adb3b8cb181b292c450e4917a4e768f293143abed731d24d19a8c3fefb297e3b",
+  "src/research_plans/PHASE115_SEVEN_CASE_ADJUDICATION_PACK_20261014.md": "77e9ac0505fc3ea724cf621a387b54063e953c47e66e16c3a544b937b901dd1b"
+}
