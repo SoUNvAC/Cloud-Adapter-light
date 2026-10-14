@@ -1,0 +1,50 @@
+{
+  "phase": 117,
+  "status": "locked_before_input_gate_and_training",
+  "source_sha256": {
+    "src/tools/run_phase117.py": "324830339a3777fddd8a5ef688139aaf40f22d14effa3aedfe4f5de83c0c0c73",
+    "src/tools/test_phase117.py": "684606620d5cd851087dbeb2fd1ca6db4a93e745bc172a36c0535609a73a0405",
+    "src/tools/summarize_phase117.py": "07b6794f1713116d072d472bde83efffae985b925dad9bfd8a523ed66a837799",
+    "src/tools/phase65d_metrics.py": "631782b1987816a4d0a444f3d220359bbc9dd84df0c52376da3a199a31dc4c17",
+    "src/research_plans/PHASE117_STRONG_BASE_INPUT_ADAPTATION_20261014.md": "1d35a91898cae1137a972cb9f147a2444512946e885b54c14ea5b84f74b397ec",
+    "src/research_results/phase111_20261014/PRE_EXECUTION_LOCK.json": "b0f9081bf1e74ec80cbd1ff54776c4989a3505564fc87028fcd0be2c3ae6f723",
+    "src/research_results/phase112_20261014/CPU_MOSAIC_ACCEPTANCE.json": "0d41deb564f3dafcfca05a0fb8d949a30947e1d994dccc7ebe7bbf9a61216b6b"
+  },
+  "official_readme_sha256": "fe30cf507184ee3f3cf16e16bce271b0701763d00144b138e0b3edf075e50ce6",
+  "original_split_sha256": "a431745e7a17bbd4a7b9e12ef3bf76767d4eb827911bd5cb5e632683c2177f7b",
+  "band_order": [
+    "B01",
+    "B02",
+    "B03",
+    "B04",
+    "B05",
+    "B06",
+    "B07",
+    "B08",
+    "B8A",
+    "B09",
+    "B10",
+    "B11",
+    "B12"
+  ],
+  "official_identity_basis": "README: numerical band order with8A between8 and9;1022x1022x13,float32,L1C/10000 TOA;non20m bands bilinear20m",
+  "base_indices": [
+    3,
+    2,
+    8
+  ],
+  "extra_indices": [
+    1,
+    11,
+    12
+  ],
+  "fixed_training_seeds": [
+    11701,
+    11702
+  ],
+  "fixed_steps_each": 1000,
+  "main_network_call_cap": 9500,
+  "gpu_wall_seconds_cap": 21600,
+  "no_automatic_retries": true,
+  "no_external_evaluation_pools": true
+}
