@@ -98,7 +98,7 @@ def main():
             state['gpu_reserved_peak_bytes']=max(state['gpu_reserved_peak_bytes'],vram)
             observed_gpu=max(0,gpu_used_bytes()-baseline_gpu)
             state['gpu_observed_delta_peak_bytes']=max(state['gpu_observed_delta_peak_bytes'],observed_gpu)
-            if rss>16*1024**3 or max(vram,observed_gpu)>20*1024**3 or time.monotonic()-started>3600:
+            if rss>16*1024**3 or max(vram,observed_gpu)>20*1024**3 or time.monotonic()-started>before['max_gpu_phase_wall_seconds']:
                 state.update(status='stopped_resource_limit',elapsed_seconds=time.monotonic()-started)
                 write('RUN_STATUS.json',state)
                 os.kill(os.getpid(),signal.SIGTERM)
@@ -182,7 +182,9 @@ def main():
     write('INPUT_ACCEPTANCE.json',{'product_id':pid,'points':len(points),'bindings':bindings,
           'coordinate_sha256':sha(coordinate),'no_labels':True,'invalid_rule':'native 0/65535/nonfinite; one-native-pixel Chebyshev halo covers bilinear interpolation support, then any corresponding 2x2 invalid excludes20m cell; invalid channel set to nodata before normalization; B8A native20m no halo'})
     cpu=np.zeros((4,5490,5490),dtype=np.float32);grad=np.zeros((5490,5490),dtype=np.float32)
-    axis=np.minimum(np.minimum(np.arange(1,1001),np.arange(1000,0,-1)),300).astype(np.float32)/np.float32(300)
+    # Author CUDA scalar division uses a rounded float32 reciprocal. NumPy
+    # direct division has a different last-bit rounding; derive it independently.
+    axis=np.minimum(np.minimum(np.arange(1,1001),np.arange(1000,0,-1)),300).astype(np.float32)*np.float32(1/300)
     gradient=axis[:,None]*axis[None,:]
     latest={};original_infer=mu.infer_batch;original_store=mu.store_results
     def observed_infer(ms,patch_batch):
@@ -262,7 +264,7 @@ def main():
           'gradient_field_max_error':gradient_field_max_error,'coverage_exactly_equal':same_coverage,
           'confidence_range':[confidence_min,confidence_max]})
     assert max_error<=1e-5 and confidence_min>=.001-1e-7 and confidence_max<=.999+1e-7
-    assert same_coverage
+    assert same_coverage and gradient_field_max_error==0
     scores=[]
     for p in points:
         y,x=int(p['row20']),int(p['col20']);okay=bool(original_valid[y,x]&author_valid[y,x]&coverage[y,x])
