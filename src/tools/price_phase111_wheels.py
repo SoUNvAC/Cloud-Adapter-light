@@ -17,7 +17,8 @@ CAP = 4000000000
 
 
 def directory_price(url, out, name):
-    assert urllib.parse.urlparse(url).hostname == "files.pythonhosted.org"
+    assert urllib.parse.urlparse(url).hostname in {
+        "files.pythonhosted.org", "download.pytorch.org", "download-r2.pytorch.org"}
     with urllib.request.urlopen(urllib.request.Request(url, method="HEAD"), timeout=30) as r:
         length = int(r.headers["Content-Length"])
 
