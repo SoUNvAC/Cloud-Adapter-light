@@ -283,4 +283,7 @@ if __name__=='__main__':
                          all_calls=STATE['main_calls']+STATE['repeat_calls']+STATE['construction_calls']+STATE.get('previous_attempt_calls',0))
             write(ROOT/('PREPARE_FAILURE.json' if args.prepare else 'RUN_STATUS.json'),STATE)
             (ROOT/('PREPARE_EXIT_CODE' if args.prepare else 'EXIT_CODE')).write_text('1\n')
-        raise
+        traceback.print_exc();sys.stderr.flush();sys.stdout.flush()
+        # Author patch prefetch may retain non-daemon producer threads on a callback
+        # exception. End this failed attempt after all counters and evidence close.
+        os._exit(1)

@@ -3,7 +3,7 @@
   "status": "locked_before_input_planning_or_forward",
   "source_sha256": {
     "src/tools/phase118_common.py": "123e8d09ed478f9572dae5be29d9b41793a8faa612bcb6290ab4a48025300751",
-    "src/tools/run_phase118.py": "bcf176a880bf276f9fa89e66fc5decc74e302fd2d28d86cdc0ff4b2bddc02204",
+    "src/tools/run_phase118.py": "44b0af7ed11b1d7de33a54ff3dc5fa6c8807a21c188a819c064d871d9702b415",
     "src/tools/test_phase118.py": "c83992dacb5d24e596263a71129ca4edecea5c0d44daddf37251dd770c4c0af8",
     "src/research_plans/PHASE118_RESOLUTION_CONTEXT_DIAGNOSTIC_20261014.md": "ea6bd46273ca58ae721dcc9ebc361da7ca50575dd47076e81f859d136ca04317",
     "src/research_plans/EXPLORATION_POLICY_20261014.md": "f38bf963cbfab243149ca425bbb3e2b9624ea0e97c159779507484c443c8bba5",
@@ -46,5 +46,5 @@
   "recovery_inclusive_gpu_wall_seconds": 18000,
   "no_new_download_training_fitting_calibration_or_threshold_search": true,
   "utc": "2026-10-14T13:20:02.474987+00:00",
-  "engineering_revision": "author keyword API correction; first15 calls /140.191sec retained; same32 frozen inputs/settings and1e-5 tolerance"
+  "engineering_revision": "author keyword API correction; first15 calls /140.191sec retained; same32 frozen inputs/settings and1e-5 tolerance; failed-prefetch process termination after persisted evidence"
 }
