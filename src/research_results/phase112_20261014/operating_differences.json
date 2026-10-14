@@ -1,0 +1,11 @@
+{
+  "G7_minus_Omni": {
+    "macro_recall": -0.19984919389446942,
+    "macro_precision": -0.3814350609838467,
+    "macro_negative_FP_fraction": 0.09023526056851071,
+    "max_group_negative_FP_fraction": 0.15931637900032572
+  },
+  "not_matched_false_positive_budget": true,
+  "Omni_threshold_not_author_argmax": true,
+  "not_full_scene_FPR": true
+}

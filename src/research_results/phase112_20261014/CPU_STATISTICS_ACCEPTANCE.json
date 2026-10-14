@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "independent_AP_all_four_scores_groups_and_pool": true,
+  "ties_aggregated": true,
+  "scalar_bootstrap_max_abs_error": 7.105427357601002e-15,
+  "original_points": 9500,
+  "common_valid": 9498,
+  "ignored_on_common_support": 931,
+  "positive": 379,
+  "negative": 8188,
+  "no_positive_groups": 2,
+  "private_join_sha256": "fbbd3658524054ef210ddcde5c303dd356233e2f21fd4aa027cb35b63dbb1d07",
+  "extra_model_calls": 0,
+  "threshold_scans": 0
+}

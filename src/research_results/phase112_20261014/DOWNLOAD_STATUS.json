@@ -1,0 +1,125 @@
+{
+  "status": "all_files_verified",
+  "files": {
+    "S2A_MSIL1C_20170706T051651_N0205_R062_T48XWG_20170706T051649": {
+      "path": "/home/scv/shared/phase112_20261014/B8A/S2A_MSIL1C_20170706T051651_N0205_R062_T48XWG_20170706T051649/B8A.jp2",
+      "bytes": 33473754,
+      "generation": "1499443993732523",
+      "md5_pass": true,
+      "length_pass": true,
+      "sha256": "3d5b3485148155ed20b347c51bb92d18707014ebe349f7b03b4f381889ffd1c9"
+    },
+    "S2A_MSIL1C_20170712T071621_N0205_R006_T40UEE_20170712T071617": {
+      "path": "/home/scv/shared/phase112_20261014/B8A/S2A_MSIL1C_20170712T071621_N0205_R006_T40UEE_20170712T071617/B8A.jp2",
+      "bytes": 33714973,
+      "generation": "1501294544550842",
+      "md5_pass": true,
+      "length_pass": true,
+      "sha256": "447c4d61eddd1a01071b786caeb07d20cfe267cd2011b6f230b49fce63b59db4"
+    },
+    "S2A_MSIL1C_20170725T142751_N0205_R053_T19GBQ_20170725T143854": {
+      "path": "/home/scv/shared/phase112_20261014/B8A/S2A_MSIL1C_20170725T142751_N0205_R053_T19GBQ_20170725T143854/B8A.jp2",
+      "bytes": 33729883,
+      "generation": "1501208080151814",
+      "md5_pass": true,
+      "length_pass": true,
+      "sha256": "229fe92b96481d53d18b01745d069a462f12ada1ac63521cd5e855bfd856bb4f"
+    },
+    "S2A_MSIL1C_20170726T102021_N0205_R065_T33VVE_20170726T102259": {
+      "path": "/home/scv/shared/phase112_20261014/B8A/S2A_MSIL1C_20170726T102021_N0205_R065_T33VVE_20170726T102259/B8A.jp2",
+      "bytes": 33004414,
+      "generation": "1501207538266794",
+      "md5_pass": true,
+      "length_pass": true,
+      "sha256": "522e6274863dc0e982203cb4b2a4ba75846ce2f7d84fde8cfe73d889dfb34be8"
+    },
+    "S2A_MSIL1C_20170908T100031_N0205_R122_T32SPJ_20170908T100655": {
+      "path": "/home/scv/shared/phase112_20261014/B8A/S2A_MSIL1C_20170908T100031_N0205_R122_T32SPJ_20170908T100655/B8A.jp2",
+      "bytes": 26901518,
+      "generation": "1505771801708499",
+      "md5_pass": true,
+      "length_pass": true,
+      "sha256": "93fe1f66b7fb652ff54def172870264aff5c7352bdbc29c175eb175b427217c5"
+    },
+    "S2A_MSIL1C_20170917T052641_N0205_R105_T48XWG_20170917T052642": {
+      "path": "/home/scv/shared/phase112_20261014/B8A/S2A_MSIL1C_20170917T052641_N0205_R105_T48XWG_20170917T052642/B8A.jp2",
+      "bytes": 33730850,
+      "generation": "1505769909369575",
+      "md5_pass": true,
+      "length_pass": true,
+      "sha256": "f03c0bd7c1a151ea0eb4ca9424c9fe64221a413498b922cca9d6a4675f597e12"
+    },
+    "S2A_MSIL1C_20171107T150421_N0206_R125_T22WES_20171107T165127": {
+      "path": "/home/scv/shared/phase112_20261014/B8A/S2A_MSIL1C_20171107T150421_N0206_R125_T22WES_20171107T165127/B8A.jp2",
+      "bytes": 33841290,
+      "generation": "1512153834827966",
+      "md5_pass": true,
+      "length_pass": true,
+      "sha256": "8f8d8fffbd857a8dc10b172317a6bfb67a3e6e241eb2a894ee74e4413cc32237"
+    },
+    "S2A_MSIL1C_20180106T032121_N0206_R118_T48NUG_20180106T083912": {
+      "path": "/home/scv/shared/phase112_20261014/B8A/S2A_MSIL1C_20180106T032121_N0206_R118_T48NUG_20180106T083912/B8A.jp2",
+      "bytes": 30800158,
+      "generation": "1516128916220457",
+      "md5_pass": true,
+      "length_pass": true,
+      "sha256": "82f9eecdb89beada483985e20ecd2ca90c6b49be07fddc23542942348ea3d0d9"
+    },
+    "S2A_MSIL1C_20180217T053911_N0206_R005_T44SKJ_20180217T082149": {
+      "path": "/home/scv/shared/phase112_20261014/B8A/S2A_MSIL1C_20180217T053911_N0206_R005_T44SKJ_20180217T082149/B8A.jp2",
+      "bytes": 32089724,
+      "generation": "1519671018955861",
+      "md5_pass": true,
+      "length_pass": true,
+      "sha256": "56fdd8c93e91694e0b374fa386fa3d76705f823eb7e94557aec547db8da1403a"
+    },
+    "S2A_MSIL1C_20180222T012651_N0206_R074_T54TWN_20180222T031349": {
+      "path": "/home/scv/shared/phase112_20261014/B8A/S2A_MSIL1C_20180222T012651_N0206_R074_T54TWN_20180222T031349/B8A.jp2",
+      "bytes": 33737068,
+      "generation": "1520438788121324",
+      "md5_pass": true,
+      "length_pass": true,
+      "sha256": "f057c35ae11b24152a67f783d9651f3707fcdf7c8f37c407be0ae719c84c12d2"
+    },
+    "S2A_MSIL1C_20180302T142851_N0206_R053_T19GBQ_20180302T192732": {
+      "path": "/home/scv/shared/phase112_20261014/B8A/S2A_MSIL1C_20180302T142851_N0206_R053_T19GBQ_20180302T192732/B8A.jp2",
+      "bytes": 33821612,
+      "generation": "1525538932898596",
+      "md5_pass": true,
+      "length_pass": true,
+      "sha256": "62278c288bdd18155a297d164e07072a070bf5c1c399dbf1a5202c6a455b1ff7"
+    },
+    "S2A_MSIL1C_20180303T140051_N0206_R067_T19FDV_20180303T202004": {
+      "path": "/home/scv/shared/phase112_20261014/B8A/S2A_MSIL1C_20180303T140051_N0206_R067_T19FDV_20180303T202004/B8A.jp2",
+      "bytes": 33826774,
+      "generation": "1520451771250150",
+      "md5_pass": true,
+      "length_pass": true,
+      "sha256": "92c86ce137233fa5d75b4457d18b8d1c7a682e484b321615d7018adb2f805b3e"
+    },
+    "S2B_MSIL1C_20170731T102019_N0205_R065_T33VVE_20170731T102348": {
+      "path": "/home/scv/shared/phase112_20261014/B8A/S2B_MSIL1C_20170731T102019_N0205_R065_T33VVE_20170731T102348/B8A.jp2",
+      "bytes": 33902656,
+      "generation": "1504206967777849",
+      "md5_pass": true,
+      "length_pass": true,
+      "sha256": "b857f2efd030eb43a7f944a62460483acb23c89831504261b44da76cca7493f1"
+    },
+    "S2B_MSIL1C_20170916T101019_N0205_R022_T32SPJ_20170916T101354": {
+      "path": "/home/scv/shared/phase112_20261014/B8A/S2B_MSIL1C_20170916T101019_N0205_R022_T32SPJ_20170916T101354/B8A.jp2",
+      "bytes": 27546998,
+      "generation": "1505752206977526",
+      "md5_pass": true,
+      "length_pass": true,
+      "sha256": "ee9a17117a1879e01ac8f854eca2b263ffec03323df95ff38574ba3c5325a381"
+    },
+    "S2B_MSIL1C_20180302T150259_N0206_R125_T22WES_20180302T183800": {
+      "path": "/home/scv/shared/phase112_20261014/B8A/S2B_MSIL1C_20180302T150259_N0206_R125_T22WES_20180302T183800/B8A.jp2",
+      "bytes": 33762974,
+      "generation": "1525299922415292",
+      "md5_pass": true,
+      "length_pass": true,
+      "sha256": "149f0a1dfba9be304507b55267a0f23a72e23d800faa3daa9e61f04d23da23a0"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "comparison": "G7_153 minus Omni",
+  "unit": "related group; products merged within group",
+  "support_pass": true,
+  "n_AP_groups": 8,
+  "resamples": 10000,
+  "seed": 112014,
+  "descriptive_interval": true,
+  "rule": "at least8 positive groups, each>=5positive/20negative; CI lower>0 AND width<=20pp",
+  "passed": false,
+  "mean_delta_AP_pp": -36.12340787381598,
+  "CI95_pp": [
+    -56.13968524583238,
+    -17.891634614147492
+  ],
+  "width_pp": 38.24805063168489,
+  "improved": 0,
+  "stable": 0,
+  "declined": 8,
+  "worst_group": "48XWG",
+  "worst_delta_AP_pp": -85.64689083256575,
+  "conclusion": "增益未获本次探索支持"
+}

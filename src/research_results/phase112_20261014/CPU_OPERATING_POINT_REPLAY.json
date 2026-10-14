@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "rows": [
+    {
+      "score": "G7",
+      "TP": 239,
+      "FP": 893,
+      "positive": 379,
+      "negative": 8188,
+      "scalar_counts_passed": true
+    },
+    {
+      "score": "Omni",
+      "TP": 304,
+      "FP": 93,
+      "positive": 379,
+      "negative": 8188,
+      "scalar_counts_passed": true
+    }
+  ],
+  "thresholds_unchanged": true,
+  "extra_network_calls": 0
+}
