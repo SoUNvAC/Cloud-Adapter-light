@@ -1,0 +1,6 @@
+{
+  "host_free_after_bytes": 13343952896,
+  "new_root_intermediate_bytes": 553005986,
+  "main_run_elapsed_seconds": 2193.7664706730066,
+  "gpu_time_bound": "single GPU main-run wall time is conservative upper bound; no active-kernel timer"
+}

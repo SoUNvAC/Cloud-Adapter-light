@@ -1,0 +1,5932 @@
+{
+  "O": [
+    {
+      "product": "S2A_MSIL1C_20180310T165111_N0206_R026_T17VNJ_20180310T220933",
+      "group_id": "939442aa2d28f4a9befbb03559ae9e97d3d2bd6838df5270fb28702f64a42127",
+      "ap": null,
+      "confusion": [
+        [
+          1044484,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 0,
+      "recall": null,
+      "fpr": 0.0,
+      "precision": null,
+      "miou_percent": 100.0,
+      "iou_percent": [
+        100.0,
+        null,
+        null
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2B_MSIL1C_20180822T014649_N0206_R017_T56WNB_20180822T032508",
+      "group_id": "2912a1d22565a8ccdc422c8926598ba79303b57ba83a9699bd100bfbfacd5b71",
+      "ap": null,
+      "confusion": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          10565,
+          1000806,
+          33113
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 33113,
+      "recall": null,
+      "fpr": 0.03170273551342098,
+      "precision": 0.0,
+      "miou_percent": 31.93940740116651,
+      "iou_percent": [
+        0.0,
+        95.81822220349953,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2A_MSIL1C_20180321T075621_N0206_R035_T34HGK_20180321T101406",
+      "group_id": "9bf33cddf082423bbac9aaa2b8af7017afaf29ea6fbfb7ab41164406ea1b9aa6",
+      "ap": null,
+      "confusion": [
+        [
+          1044484,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 0,
+      "recall": null,
+      "fpr": 0.0,
+      "precision": null,
+      "miou_percent": 100.0,
+      "iou_percent": [
+        100.0,
+        null,
+        null
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2B_MSIL1C_20180612T171859_N0206_R012_T15UVU_20180612T204912",
+      "group_id": "e4c96f5ad8a0d2bdc2856a163a49b90c4a2a91709481bdfc20df0e972196360c",
+      "ap": null,
+      "confusion": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          999827,
+          44657
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 44657,
+      "recall": null,
+      "fpr": 0.042755082892605344,
+      "precision": 0.0,
+      "miou_percent": 47.862245855369736,
+      "iou_percent": [
+        null,
+        95.72449171073947,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2B_MSIL1C_20180824T111239_N0206_R051_T28LGP_20180824T164334",
+      "group_id": "646618dd0ca2b4b2fdaf830e42b5c7841ec1d558f16aba6d400fbde04d577278",
+      "ap": null,
+      "confusion": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1002909,
+          41575
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 41575,
+      "recall": null,
+      "fpr": 0.039804343580179306,
+      "precision": 0.0,
+      "miou_percent": 48.009782820991035,
+      "iou_percent": [
+        null,
+        96.01956564198207,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2A_MSIL1C_20180410T214911_N0206_R043_T02LKH_20180410T231102",
+      "group_id": "140a08cf98d8a79e1c38b8903719256bdf8c6c631d6495bd7c56fecd26097e26",
+      "ap": null,
+      "confusion": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1775,
+          981968,
+          60741
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 60741,
+      "recall": null,
+      "fpr": 0.05815407416485078,
+      "precision": 0.0,
+      "miou_percent": 31.338217403681305,
+      "iou_percent": [
+        0.0,
+        94.01465221104392,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2B_MSIL1C_20180701T074609_N0206_R135_T38TNN_20180701T100320",
+      "group_id": "8fd6358af16a4eb15ba4d38a7365844bc3cb5c9c343ade539f8e88e242cd420b",
+      "ap": 0.940041551025199,
+      "confusion": [
+        [
+          1033041,
+          129,
+          166
+        ],
+        [
+          2376,
+          5163,
+          19
+        ],
+        [
+          911,
+          82,
+          2597
+        ]
+      ],
+      "positive": 3590,
+      "negative": 1040894,
+      "true_positive": 2597,
+      "false_positive": 185,
+      "recall": 0.7233983286908078,
+      "fpr": 0.00017773183436545892,
+      "precision": 0.9335010783608915,
+      "miou_percent": 78.30186209463633,
+      "iou_percent": [
+        99.654454898261,
+        66.45642939889304,
+        68.79470198675497
+      ],
+      "shadow_to_surface": 911,
+      "shadow_to_cloud": 82
+    },
+    {
+      "product": "S2B_MSIL1C_20181218T043159_N0207_R133_T46RDT_20181218T072156",
+      "group_id": "5ae729c6b6efccd197016be42bc8d0d7b269c30b04d48b7e8999e4c58191a607",
+      "ap": null,
+      "confusion": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1004392,
+          40092
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 40092,
+      "recall": null,
+      "fpr": 0.038384503735815964,
+      "precision": 0.0,
+      "miou_percent": 48.0807748132092,
+      "iou_percent": [
+        null,
+        96.1615496264184,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2A_MSIL1C_20180710T090601_N0206_R050_T34QBG_20180710T112311",
+      "group_id": "f9c24c9b6029766e0c62dc9375251f6fdad6c3dc0dadcac647bc80d66d22ab28",
+      "ap": null,
+      "confusion": [
+        [
+          1044484,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 0,
+      "recall": null,
+      "fpr": 0.0,
+      "precision": null,
+      "miou_percent": 100.0,
+      "iou_percent": [
+        100.0,
+        null,
+        null
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2B_MSIL1C_20180131T082149_N0206_R121_T34JDL_20180131T120726",
+      "group_id": "8a8bb46c20fbcc5e573176a6c6145d72749f160f9545f15b018ef5396b82389d",
+      "ap": 0.9694609958678035,
+      "confusion": [
+        [
+          795287,
+          794,
+          716
+        ],
+        [
+          22844,
+          116620,
+          6318
+        ],
+        [
+          13542,
+          274,
+          88089
+        ]
+      ],
+      "positive": 101905,
+      "negative": 942579,
+      "true_positive": 88089,
+      "false_positive": 7034,
+      "recall": 0.8644227466758255,
+      "fpr": 0.007462504469121421,
+      "precision": 0.9260536358188871,
+      "miou_percent": 85.24229220478722,
+      "iou_percent": [
+        95.45165947937008,
+        79.41436840313246,
+        80.86084873185911
+      ],
+      "shadow_to_surface": 13542,
+      "shadow_to_cloud": 274
+    },
+    {
+      "product": "S2B_MSIL1C_20180214T025819_N0206_R032_T51TUM_20180214T072411",
+      "group_id": "1cfce2528bc2fcf176d11f38ec8132d791f1762735fa1cc1c1f2ae349223ad12",
+      "ap": null,
+      "confusion": [
+        [
+          1044484,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 0,
+      "recall": null,
+      "fpr": 0.0,
+      "precision": null,
+      "miou_percent": 100.0,
+      "iou_percent": [
+        100.0,
+        null,
+        null
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2A_MSIL1C_20181118T084231_N0207_R064_T35RPM_20181118T101007",
+      "group_id": "f75a22fdd7b8a18e2a48389aa30ff6b2e9d62236713d45e90ea1902ba4a20ef2",
+      "ap": 0.8946753355708319,
+      "confusion": [
+        [
+          153628,
+          35520,
+          36016
+        ],
+        [
+          31649,
+          428718,
+          122925
+        ],
+        [
+          6078,
+          1874,
+          228076
+        ]
+      ],
+      "positive": 236028,
+      "negative": 808456,
+      "true_positive": 228076,
+      "false_positive": 158941,
+      "recall": 0.9663090819733252,
+      "fpr": 0.19659820695251196,
+      "precision": 0.5893177819062212,
+      "miou_percent": 61.751613072393106,
+      "iou_percent": [
+        58.43790772601572,
+        69.0716400885472,
+        57.7452914026164
+      ],
+      "shadow_to_surface": 6078,
+      "shadow_to_cloud": 1874
+    },
+    {
+      "product": "S2A_MSIL1C_20180703T023551_N0206_R089_T50PLR_20180703T053714",
+      "group_id": "ae93b6cb56e3c05137355ffd83e2d95bf4cbd2fa11e4c61322b45ccfbe090a12",
+      "ap": null,
+      "confusion": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1010277,
+          34207
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 34207,
+      "recall": null,
+      "fpr": 0.032750142654171824,
+      "precision": 0.0,
+      "miou_percent": 48.36249286729141,
+      "iou_percent": [
+        null,
+        96.72498573458282,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2A_MSIL1C_20180805T024551_N0206_R132_T52UDG_20180805T054920",
+      "group_id": "6086b24be5e9e183e82b7585ebe885909747b726ec67ccadc7ca2b1c167801f5",
+      "ap": 0.9549218092116721,
+      "confusion": [
+        [
+          672204,
+          15515,
+          32049
+        ],
+        [
+          10123,
+          243464,
+          9446
+        ],
+        [
+          225,
+          166,
+          61292
+        ]
+      ],
+      "positive": 61683,
+      "negative": 982801,
+      "true_positive": 61292,
+      "false_positive": 41495,
+      "recall": 0.9936611384011802,
+      "fpr": 0.042221161761129666,
+      "precision": 0.5963010886590717,
+      "miou_percent": 79.60829099090412,
+      "iou_percent": [
+        92.06810972503,
+        87.35262670694691,
+        59.40413654073543
+      ],
+      "shadow_to_surface": 225,
+      "shadow_to_cloud": 166
+    },
+    {
+      "product": "S2A_MSIL1C_20180211T234711_N0206_R073_T60WWT_20180212T011403",
+      "group_id": "f2381df323f89c657500585513ba32695bff189c66ec9e974a2a573d7a28f432",
+      "ap": null,
+      "confusion": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          985872,
+          58612
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 58612,
+      "recall": null,
+      "fpr": 0.05611574710574791,
+      "precision": 0.0,
+      "miou_percent": 47.1942126447126,
+      "iou_percent": [
+        null,
+        94.3884252894252,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2A_MSIL1C_20180804T045701_N0206_R119_T45RTH_20180804T075337",
+      "group_id": "c2a41ae0294bc9db9eb04bcfbf2650fe1c7bdaf285b7713938de8bfac54cba54",
+      "ap": null,
+      "confusion": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1021855,
+          22629
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 22629,
+      "recall": null,
+      "fpr": 0.021665243316316956,
+      "precision": 0.0,
+      "miou_percent": 48.916737834184154,
+      "iou_percent": [
+        null,
+        97.83347566836831,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2B_MSIL1C_20181004T102019_N0206_R065_T32TML_20181004T141056",
+      "group_id": "6208a338d14f2674799eb7d6b1b4f55d159e2e8f3b23a83c12dbb43b4f5cd4ef",
+      "ap": 0.8944430233060745,
+      "confusion": [
+        [
+          681347,
+          1769,
+          8984
+        ],
+        [
+          16193,
+          221258,
+          4728
+        ],
+        [
+          24456,
+          1260,
+          84489
+        ]
+      ],
+      "positive": 110205,
+      "negative": 934279,
+      "true_positive": 84489,
+      "false_positive": 13712,
+      "recall": 0.7666530556689806,
+      "fpr": 0.014676558073123767,
+      "precision": 0.8603680206922536,
+      "miou_percent": 83.79991897072334,
+      "iou_percent": [
+        92.9850467213193,
+        90.23278196469936,
+        68.18192822615138
+      ],
+      "shadow_to_surface": 24456,
+      "shadow_to_cloud": 1260
+    },
+    {
+      "product": "S2A_MSIL1C_20180602T081011_N0206_R078_T36PWC_20180602T115947",
+      "group_id": "59b71cbd6e0a8dd40404706487ccbd2fcd8e85d825523d3a052bae1ab5f167b5",
+      "ap": null,
+      "confusion": [
+        [
+          1034697,
+          9787,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 0,
+      "recall": null,
+      "fpr": 0.0,
+      "precision": null,
+      "miou_percent": 49.53149114778206,
+      "iou_percent": [
+        99.06298229556413,
+        0.0,
+        null
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2B_MSIL1C_20180508T150719_N0206_R082_T18MYV_20180508T202621",
+      "group_id": "c7e7a075f679fb9b65a472b172abde8f2d95fd6b7261370e72a9d2522849fb43",
+      "ap": null,
+      "confusion": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          4,
+          1011655,
+          32825
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 32825,
+      "recall": null,
+      "fpr": 0.03142700127527085,
+      "precision": 0.0,
+      "miou_percent": 32.285638969417754,
+      "iou_percent": [
+        0.0,
+        96.85691690825327,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2B_MSIL1C_20180420T103019_N0206_R108_T31TGF_20180420T114307",
+      "group_id": "acee9848efe8570d1198119ec4aa2a53a904443472ca0646c320c7b2fab89e53",
+      "ap": null,
+      "confusion": [
+        [
+          1044484,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 0,
+      "recall": null,
+      "fpr": 0.0,
+      "precision": null,
+      "miou_percent": 100.0,
+      "iou_percent": [
+        100.0,
+        null,
+        null
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2A_MSIL1C_20180430T111621_N0206_R037_T40XDR_20180430T132750",
+      "group_id": "f55d113c0d378ebf46f9a0e9ec28337ea3301758e7d4d26a7e6113d556aa403e",
+      "ap": 0.9821120118571188,
+      "confusion": [
+        [
+          873447,
+          17304,
+          13091
+        ],
+        [
+          24097,
+          30526,
+          517
+        ],
+        [
+          2727,
+          248,
+          82527
+        ]
+      ],
+      "positive": 85502,
+      "negative": 958982,
+      "true_positive": 82527,
+      "false_positive": 13608,
+      "recall": 0.9652054922691867,
+      "fpr": 0.014190047362724223,
+      "precision": 0.8584490560149789,
+      "miou_percent": 73.03784170423783,
+      "iou_percent": [
+        93.85182224342567,
+        41.99361690419854,
+        83.2680859650893
+      ],
+      "shadow_to_surface": 2727,
+      "shadow_to_cloud": 248
+    },
+    {
+      "product": "S2A_MSIL1C_20180909T151911_N0206_R068_T25XEG_20180909T205122",
+      "group_id": "f4766b335797560339a903cef2910fbb6a4436a282b64d036c6354f68717a2c1",
+      "ap": null,
+      "confusion": [
+        [
+          1043763,
+          0,
+          721
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 721,
+      "recall": null,
+      "fpr": 0.0006902930059244565,
+      "precision": 0.0,
+      "miou_percent": 49.965485349703776,
+      "iou_percent": [
+        99.93097069940755,
+        null,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2A_MSIL1C_20180707T021601_N0206_R003_T51SXR_20180707T041118",
+      "group_id": "18e5a8b99775c466f1f4c3b18610d90ec94d16598d32bbb2361ae69249049020",
+      "ap": null,
+      "confusion": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1019035,
+          25449
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 25449,
+      "recall": null,
+      "fpr": 0.02436514106487031,
+      "precision": 0.0,
+      "miou_percent": 48.78174294675649,
+      "iou_percent": [
+        null,
+        97.56348589351298,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2A_MSIL1C_20180522T183921_N0206_R070_T12VVH_20180522T233949",
+      "group_id": "338616d4467f5a91aa9c8c34abcbe296dd7aca061c0f780d6861d590655e2f1f",
+      "ap": null,
+      "confusion": [
+        [
+          1044484,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 0,
+      "recall": null,
+      "fpr": 0.0,
+      "precision": null,
+      "miou_percent": 100.0,
+      "iou_percent": [
+        100.0,
+        null,
+        null
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2A_MSIL1C_20180317T045651_N0206_R119_T50XMG_20180317T075452",
+      "group_id": "f1712665f0fe8eec4694c7da49ce2dfabf6c2ebe1547ff7a6ba59a051366ec3a",
+      "ap": null,
+      "confusion": [
+        [
+          1044484,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 0,
+      "recall": null,
+      "fpr": 0.0,
+      "precision": null,
+      "miou_percent": 100.0,
+      "iou_percent": [
+        100.0,
+        null,
+        null
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2B_MSIL1C_20181001T165109_N0206_R026_T16UDV_20181001T221311",
+      "group_id": "ff26582f3cbe6eba262e621e7ea9de9dc72b2d8a821ecfddf74e74b249728286",
+      "ap": null,
+      "confusion": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1016067,
+          28417
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 28417,
+      "recall": null,
+      "fpr": 0.027206735574695256,
+      "precision": 0.0,
+      "miou_percent": 48.63966322126524,
+      "iou_percent": [
+        null,
+        97.27932644253048,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2A_MSIL1C_20180608T152641_N0206_R025_T18MUA_20180608T202221",
+      "group_id": "f3c0fdae99da17df642fb987b86059960905cabb5eda09b0d5e4c3d7172c8396",
+      "ap": null,
+      "confusion": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          9,
+          1026994,
+          17481
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 17481,
+      "recall": null,
+      "fpr": 0.01673649380938339,
+      "precision": 0.0,
+      "miou_percent": 32.77516298318915,
+      "iou_percent": [
+        0.0,
+        98.32548894956744,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2A_MSIL1C_20181114T054101_N0207_R005_T44UNA_20181114T093234",
+      "group_id": "79aa19a7b0464ac5ac354f17f9fe96b109c7550cde405ab4e7a304c2e361e16c",
+      "ap": null,
+      "confusion": [
+        [
+          1044484,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 0,
+      "recall": null,
+      "fpr": 0.0,
+      "precision": null,
+      "miou_percent": 100.0,
+      "iou_percent": [
+        100.0,
+        null,
+        null
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2A_MSIL1C_20181118T152621_N0207_R068_T20VPK_20181118T172424",
+      "group_id": "90c4becf227f62264ee7e5f1b31b05fbee8f59464f744a77e1ecfb16624fbd44",
+      "ap": null,
+      "confusion": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1015465,
+          29019
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 29019,
+      "recall": null,
+      "fpr": 0.027783096725272956,
+      "precision": 0.0,
+      "miou_percent": 48.61084516373636,
+      "iou_percent": [
+        null,
+        97.22169032747271,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2A_MSIL1C_20180922T185101_N0206_R113_T10SEE_20180922T225409",
+      "group_id": "0e28969b45fbf20e3aa6d65331a994c914ac07abfdc2593c6d55264d4cd7c53c",
+      "ap": null,
+      "confusion": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          78905,
+          945643,
+          19936
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 19936,
+      "recall": null,
+      "fpr": 0.01908693670750342,
+      "precision": 0.0,
+      "miou_percent": 30.178952797106835,
+      "iou_percent": [
+        0.0,
+        90.5368583913205,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2B_MSIL1C_20181111T094229_N0207_R036_T32NKF_20181111T131623",
+      "group_id": "ed188cfd4fad4684fafc74170d129ca0591b418d0c9df514b6929431f6d46fe3",
+      "ap": 0.8303571661873828,
+      "confusion": [
+        [
+          588240,
+          15535,
+          5634
+        ],
+        [
+          44055,
+          332468,
+          1504
+        ],
+        [
+          15566,
+          3393,
+          38089
+        ]
+      ],
+      "positive": 57048,
+      "negative": 987436,
+      "true_positive": 38089,
+      "false_positive": 7138,
+      "recall": 0.6676658252699481,
+      "fpr": 0.007228822931308966,
+      "precision": 0.84217392265682,
+      "miou_percent": 77.00683035091825,
+      "iou_percent": [
+        87.92430832698085,
+        83.75458175359928,
+        59.34160097217461
+      ],
+      "shadow_to_surface": 15566,
+      "shadow_to_cloud": 3393
+    },
+    {
+      "product": "S2A_MSIL1C_20181021T160311_N0206_R097_T20WNV_20181021T192258",
+      "group_id": "0876b85f78d99180dd199fef6b0e29b964106f55b1224e5ec9d05aa8443fe33b",
+      "ap": null,
+      "confusion": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1001087,
+          43397
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 43397,
+      "recall": null,
+      "fpr": 0.041548745600698524,
+      "precision": 0.0,
+      "miou_percent": 47.92256271996507,
+      "iou_percent": [
+        null,
+        95.84512543993014,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    }
+  ],
+  "R11701": [
+    {
+      "product": "S2A_MSIL1C_20180310T165111_N0206_R026_T17VNJ_20180310T220933",
+      "group_id": "939442aa2d28f4a9befbb03559ae9e97d3d2bd6838df5270fb28702f64a42127",
+      "ap": null,
+      "confusion": [
+        [
+          1044484,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 0,
+      "recall": null,
+      "fpr": 0.0,
+      "precision": null,
+      "miou_percent": 100.0,
+      "iou_percent": [
+        100.0,
+        null,
+        null
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2B_MSIL1C_20180822T014649_N0206_R017_T56WNB_20180822T032508",
+      "group_id": "2912a1d22565a8ccdc422c8926598ba79303b57ba83a9699bd100bfbfacd5b71",
+      "ap": null,
+      "confusion": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          6983,
+          1002734,
+          34767
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 34767,
+      "recall": null,
+      "fpr": 0.033286292561685964,
+      "precision": 0.0,
+      "miou_percent": 32.00093698579075,
+      "iou_percent": [
+        0.0,
+        96.00281095737225,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2A_MSIL1C_20180321T075621_N0206_R035_T34HGK_20180321T101406",
+      "group_id": "9bf33cddf082423bbac9aaa2b8af7017afaf29ea6fbfb7ab41164406ea1b9aa6",
+      "ap": null,
+      "confusion": [
+        [
+          1044484,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 0,
+      "recall": null,
+      "fpr": 0.0,
+      "precision": null,
+      "miou_percent": 100.0,
+      "iou_percent": [
+        100.0,
+        null,
+        null
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2B_MSIL1C_20180612T171859_N0206_R012_T15UVU_20180612T204912",
+      "group_id": "e4c96f5ad8a0d2bdc2856a163a49b90c4a2a91709481bdfc20df0e972196360c",
+      "ap": null,
+      "confusion": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1002674,
+          41810
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 41810,
+      "recall": null,
+      "fpr": 0.040029335059225415,
+      "precision": 0.0,
+      "miou_percent": 47.99853324703873,
+      "iou_percent": [
+        null,
+        95.99706649407746,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2B_MSIL1C_20180824T111239_N0206_R051_T28LGP_20180824T164334",
+      "group_id": "646618dd0ca2b4b2fdaf830e42b5c7841ec1d558f16aba6d400fbde04d577278",
+      "ap": null,
+      "confusion": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1006375,
+          38109
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 38109,
+      "recall": null,
+      "fpr": 0.03648595861688642,
+      "precision": 0.0,
+      "miou_percent": 48.175702069155676,
+      "iou_percent": [
+        null,
+        96.35140413831135,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2A_MSIL1C_20180410T214911_N0206_R043_T02LKH_20180410T231102",
+      "group_id": "140a08cf98d8a79e1c38b8903719256bdf8c6c631d6495bd7c56fecd26097e26",
+      "ap": null,
+      "confusion": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1640,
+          989075,
+          53769
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 53769,
+      "recall": null,
+      "fpr": 0.05147900781629972,
+      "precision": 0.0,
+      "miou_percent": 31.56502796277077,
+      "iou_percent": [
+        0.0,
+        94.69508388831231,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2B_MSIL1C_20180701T074609_N0206_R135_T38TNN_20180701T100320",
+      "group_id": "8fd6358af16a4eb15ba4d38a7365844bc3cb5c9c343ade539f8e88e242cd420b",
+      "ap": 0.9375448332659527,
+      "confusion": [
+        [
+          1033084,
+          148,
+          104
+        ],
+        [
+          2325,
+          5219,
+          14
+        ],
+        [
+          1131,
+          96,
+          2363
+        ]
+      ],
+      "positive": 3590,
+      "negative": 1040894,
+      "true_positive": 2363,
+      "false_positive": 118,
+      "recall": 0.6582172701949861,
+      "fpr": 0.00011336408894661705,
+      "precision": 0.9524385328496574,
+      "miou_percent": 76.75417975830243,
+      "iou_percent": [
+        99.64235835153049,
+        66.8931043322225,
+        63.727076591154265
+      ],
+      "shadow_to_surface": 1131,
+      "shadow_to_cloud": 96
+    },
+    {
+      "product": "S2B_MSIL1C_20181218T043159_N0207_R133_T46RDT_20181218T072156",
+      "group_id": "5ae729c6b6efccd197016be42bc8d0d7b269c30b04d48b7e8999e4c58191a607",
+      "ap": null,
+      "confusion": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1008785,
+          35699
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 35699,
+      "recall": null,
+      "fpr": 0.034178599193477356,
+      "precision": 0.0,
+      "miou_percent": 48.29107004032613,
+      "iou_percent": [
+        null,
+        96.58214008065227,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2A_MSIL1C_20180710T090601_N0206_R050_T34QBG_20180710T112311",
+      "group_id": "f9c24c9b6029766e0c62dc9375251f6fdad6c3dc0dadcac647bc80d66d22ab28",
+      "ap": null,
+      "confusion": [
+        [
+          1044484,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 0,
+      "recall": null,
+      "fpr": 0.0,
+      "precision": null,
+      "miou_percent": 100.0,
+      "iou_percent": [
+        100.0,
+        null,
+        null
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2B_MSIL1C_20180131T082149_N0206_R121_T34JDL_20180131T120726",
+      "group_id": "8a8bb46c20fbcc5e573176a6c6145d72749f160f9545f15b018ef5396b82389d",
+      "ap": 0.9698547195207997,
+      "confusion": [
+        [
+          795259,
+          952,
+          586
+        ],
+        [
+          22260,
+          117563,
+          5959
+        ],
+        [
+          14279,
+          318,
+          87308
+        ]
+      ],
+      "positive": 101905,
+      "negative": 942579,
+      "true_positive": 87308,
+      "false_positive": 6545,
+      "recall": 0.8567587458907806,
+      "fpr": 0.006943715062610136,
+      "precision": 0.9302632840718996,
+      "miou_percent": 85.29420870796645,
+      "iou_percent": [
+        95.43077462152121,
+        79.94654951989773,
+        80.5053019824804
+      ],
+      "shadow_to_surface": 14279,
+      "shadow_to_cloud": 318
+    },
+    {
+      "product": "S2B_MSIL1C_20180214T025819_N0206_R032_T51TUM_20180214T072411",
+      "group_id": "1cfce2528bc2fcf176d11f38ec8132d791f1762735fa1cc1c1f2ae349223ad12",
+      "ap": null,
+      "confusion": [
+        [
+          1044484,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 0,
+      "recall": null,
+      "fpr": 0.0,
+      "precision": null,
+      "miou_percent": 100.0,
+      "iou_percent": [
+        100.0,
+        null,
+        null
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2A_MSIL1C_20181118T084231_N0207_R064_T35RPM_20181118T101007",
+      "group_id": "f75a22fdd7b8a18e2a48389aa30ff6b2e9d62236713d45e90ea1902ba4a20ef2",
+      "ap": 0.8977058536504303,
+      "confusion": [
+        [
+          147564,
+          43462,
+          34138
+        ],
+        [
+          27071,
+          440871,
+          115350
+        ],
+        [
+          6056,
+          2724,
+          227248
+        ]
+      ],
+      "positive": 236028,
+      "negative": 808456,
+      "true_positive": 227248,
+      "false_positive": 149488,
+      "recall": 0.9628010236073686,
+      "fpr": 0.18490554835389927,
+      "precision": 0.6032022424190946,
+      "miou_percent": 62.038305467169906,
+      "iou_percent": [
+        57.130910484685884,
+        70.03755492646287,
+        58.946450990360965
+      ],
+      "shadow_to_surface": 6056,
+      "shadow_to_cloud": 2724
+    },
+    {
+      "product": "S2A_MSIL1C_20180703T023551_N0206_R089_T50PLR_20180703T053714",
+      "group_id": "ae93b6cb56e3c05137355ffd83e2d95bf4cbd2fa11e4c61322b45ccfbe090a12",
+      "ap": null,
+      "confusion": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1014469,
+          30015
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 30015,
+      "recall": null,
+      "fpr": 0.028736677632208822,
+      "precision": 0.0,
+      "miou_percent": 48.56316611838956,
+      "iou_percent": [
+        null,
+        97.12633223677912,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2A_MSIL1C_20180805T024551_N0206_R132_T52UDG_20180805T054920",
+      "group_id": "6086b24be5e9e183e82b7585ebe885909747b726ec67ccadc7ca2b1c167801f5",
+      "ap": 0.9497215748103138,
+      "confusion": [
+        [
+          674387,
+          16400,
+          28981
+        ],
+        [
+          9824,
+          244848,
+          8361
+        ],
+        [
+          360,
+          228,
+          61095
+        ]
+      ],
+      "positive": 61683,
+      "negative": 982801,
+      "true_positive": 61095,
+      "false_positive": 37342,
+      "recall": 0.9904673897183989,
+      "fpr": 0.03799548433507902,
+      "precision": 0.6206507715594746,
+      "miou_percent": 80.54537043811723,
+      "iou_percent": [
+        92.38785563982289,
+        87.5517143970736,
+        61.69654127745518
+      ],
+      "shadow_to_surface": 360,
+      "shadow_to_cloud": 228
+    },
+    {
+      "product": "S2A_MSIL1C_20180211T234711_N0206_R073_T60WWT_20180212T011403",
+      "group_id": "f2381df323f89c657500585513ba32695bff189c66ec9e974a2a573d7a28f432",
+      "ap": null,
+      "confusion": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          993582,
+          50902
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 50902,
+      "recall": null,
+      "fpr": 0.04873411177193715,
+      "precision": 0.0,
+      "miou_percent": 47.56329441140315,
+      "iou_percent": [
+        null,
+        95.1265888228063,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2A_MSIL1C_20180804T045701_N0206_R119_T45RTH_20180804T075337",
+      "group_id": "c2a41ae0294bc9db9eb04bcfbf2650fe1c7bdaf285b7713938de8bfac54cba54",
+      "ap": null,
+      "confusion": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1024355,
+          20129
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 20129,
+      "recall": null,
+      "fpr": 0.01927171694348597,
+      "precision": 0.0,
+      "miou_percent": 49.0364141528257,
+      "iou_percent": [
+        null,
+        98.0728283056514,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2B_MSIL1C_20181004T102019_N0206_R065_T32TML_20181004T141056",
+      "group_id": "6208a338d14f2674799eb7d6b1b4f55d159e2e8f3b23a83c12dbb43b4f5cd4ef",
+      "ap": 0.8947170153293494,
+      "confusion": [
+        [
+          682997,
+          2016,
+          7087
+        ],
+        [
+          15583,
+          222682,
+          3914
+        ],
+        [
+          27946,
+          1498,
+          80761
+        ]
+      ],
+      "positive": 110205,
+      "negative": 934279,
+      "true_positive": 80761,
+      "false_positive": 11001,
+      "recall": 0.7328251894197177,
+      "fpr": 0.011774855262721307,
+      "precision": 0.8801137725856019,
+      "miou_percent": 83.37024773753976,
+      "iou_percent": [
+        92.84530653359234,
+        90.63424680393824,
+        66.6311898750887
+      ],
+      "shadow_to_surface": 27946,
+      "shadow_to_cloud": 1498
+    },
+    {
+      "product": "S2A_MSIL1C_20180602T081011_N0206_R078_T36PWC_20180602T115947",
+      "group_id": "59b71cbd6e0a8dd40404706487ccbd2fcd8e85d825523d3a052bae1ab5f167b5",
+      "ap": null,
+      "confusion": [
+        [
+          1030649,
+          13835,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 0,
+      "recall": null,
+      "fpr": 0.0,
+      "precision": null,
+      "miou_percent": 49.33771125263767,
+      "iou_percent": [
+        98.67542250527534,
+        0.0,
+        null
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2B_MSIL1C_20180508T150719_N0206_R082_T18MYV_20180508T202621",
+      "group_id": "c7e7a075f679fb9b65a472b172abde8f2d95fd6b7261370e72a9d2522849fb43",
+      "ap": null,
+      "confusion": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1014484,
+          30000
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 30000,
+      "recall": null,
+      "fpr": 0.028722316473971835,
+      "precision": 0.0,
+      "miou_percent": 48.56388417630141,
+      "iou_percent": [
+        null,
+        97.12776835260281,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2B_MSIL1C_20180420T103019_N0206_R108_T31TGF_20180420T114307",
+      "group_id": "acee9848efe8570d1198119ec4aa2a53a904443472ca0646c320c7b2fab89e53",
+      "ap": null,
+      "confusion": [
+        [
+          1044484,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 0,
+      "recall": null,
+      "fpr": 0.0,
+      "precision": null,
+      "miou_percent": 100.0,
+      "iou_percent": [
+        100.0,
+        null,
+        null
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2A_MSIL1C_20180430T111621_N0206_R037_T40XDR_20180430T132750",
+      "group_id": "f55d113c0d378ebf46f9a0e9ec28337ea3301758e7d4d26a7e6113d556aa403e",
+      "ap": 0.9794699747208859,
+      "confusion": [
+        [
+          876027,
+          16907,
+          10908
+        ],
+        [
+          24728,
+          29918,
+          494
+        ],
+        [
+          3703,
+          333,
+          81466
+        ]
+      ],
+      "positive": 85502,
+      "negative": 958982,
+      "true_positive": 81466,
+      "false_positive": 11402,
+      "recall": 0.9527964258146008,
+      "fpr": 0.011889691360213226,
+      "precision": 0.8772235861653099,
+      "miou_percent": 73.12339353773467,
+      "iou_percent": [
+        93.9667886981603,
+        41.334622823984525,
+        84.0687690910592
+      ],
+      "shadow_to_surface": 3703,
+      "shadow_to_cloud": 333
+    },
+    {
+      "product": "S2A_MSIL1C_20180909T151911_N0206_R068_T25XEG_20180909T205122",
+      "group_id": "f4766b335797560339a903cef2910fbb6a4436a282b64d036c6354f68717a2c1",
+      "ap": null,
+      "confusion": [
+        [
+          1044231,
+          0,
+          253
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 253,
+      "recall": null,
+      "fpr": 0.0002422248689304958,
+      "precision": 0.0,
+      "miou_percent": 49.98788875655348,
+      "iou_percent": [
+        99.97577751310696,
+        null,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2A_MSIL1C_20180707T021601_N0206_R003_T51SXR_20180707T041118",
+      "group_id": "18e5a8b99775c466f1f4c3b18610d90ec94d16598d32bbb2361ae69249049020",
+      "ap": null,
+      "confusion": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          16,
+          1021893,
+          22575
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 22575,
+      "recall": null,
+      "fpr": 0.02161354314666381,
+      "precision": 0.0,
+      "miou_percent": 32.61237127615167,
+      "iou_percent": [
+        0.0,
+        97.837113828455,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2A_MSIL1C_20180522T183921_N0206_R070_T12VVH_20180522T233949",
+      "group_id": "338616d4467f5a91aa9c8c34abcbe296dd7aca061c0f780d6861d590655e2f1f",
+      "ap": null,
+      "confusion": [
+        [
+          1044484,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 0,
+      "recall": null,
+      "fpr": 0.0,
+      "precision": null,
+      "miou_percent": 100.0,
+      "iou_percent": [
+        100.0,
+        null,
+        null
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2A_MSIL1C_20180317T045651_N0206_R119_T50XMG_20180317T075452",
+      "group_id": "f1712665f0fe8eec4694c7da49ce2dfabf6c2ebe1547ff7a6ba59a051366ec3a",
+      "ap": null,
+      "confusion": [
+        [
+          1044484,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 0,
+      "recall": null,
+      "fpr": 0.0,
+      "precision": null,
+      "miou_percent": 100.0,
+      "iou_percent": [
+        100.0,
+        null,
+        null
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2B_MSIL1C_20181001T165109_N0206_R026_T16UDV_20181001T221311",
+      "group_id": "ff26582f3cbe6eba262e621e7ea9de9dc72b2d8a821ecfddf74e74b249728286",
+      "ap": null,
+      "confusion": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1019368,
+          25116
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 25116,
+      "recall": null,
+      "fpr": 0.024046323352009222,
+      "precision": 0.0,
+      "miou_percent": 48.79768383239954,
+      "iou_percent": [
+        null,
+        97.59536766479908,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2A_MSIL1C_20180608T152641_N0206_R025_T18MUA_20180608T202221",
+      "group_id": "f3c0fdae99da17df642fb987b86059960905cabb5eda09b0d5e4c3d7172c8396",
+      "ap": null,
+      "confusion": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          42,
+          1029246,
+          15196
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 15196,
+      "recall": null,
+      "fpr": 0.014548810704615868,
+      "precision": 0.0,
+      "miou_percent": 32.84703260174402,
+      "iou_percent": [
+        0.0,
+        98.54109780523206,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2A_MSIL1C_20181114T054101_N0207_R005_T44UNA_20181114T093234",
+      "group_id": "79aa19a7b0464ac5ac354f17f9fe96b109c7550cde405ab4e7a304c2e361e16c",
+      "ap": null,
+      "confusion": [
+        [
+          1044484,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 0,
+      "recall": null,
+      "fpr": 0.0,
+      "precision": null,
+      "miou_percent": 100.0,
+      "iou_percent": [
+        100.0,
+        null,
+        null
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2A_MSIL1C_20181118T152621_N0207_R068_T20VPK_20181118T172424",
+      "group_id": "90c4becf227f62264ee7e5f1b31b05fbee8f59464f744a77e1ecfb16624fbd44",
+      "ap": null,
+      "confusion": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1018776,
+          25708
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 25708,
+      "recall": null,
+      "fpr": 0.0246131103970956,
+      "precision": 0.0,
+      "miou_percent": 48.76934448014522,
+      "iou_percent": [
+        null,
+        97.53868896029044,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2A_MSIL1C_20180922T185101_N0206_R113_T10SEE_20180922T225409",
+      "group_id": "0e28969b45fbf20e3aa6d65331a994c914ac07abfdc2593c6d55264d4cd7c53c",
+      "ap": null,
+      "confusion": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          153583,
+          877484,
+          13417
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 13417,
+      "recall": null,
+      "fpr": 0.012845577337709338,
+      "precision": 0.0,
+      "miou_percent": 28.003747943163006,
+      "iou_percent": [
+        0.0,
+        84.01124382948902,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2B_MSIL1C_20181111T094229_N0207_R036_T32NKF_20181111T131623",
+      "group_id": "ed188cfd4fad4684fafc74170d129ca0591b418d0c9df514b6929431f6d46fe3",
+      "ap": 0.826984275780514,
+      "confusion": [
+        [
+          589809,
+          15218,
+          4382
+        ],
+        [
+          45534,
+          331294,
+          1199
+        ],
+        [
+          17539,
+          3549,
+          35960
+        ]
+      ],
+      "positive": 57048,
+      "negative": 987436,
+      "true_positive": 35960,
+      "false_positive": 5581,
+      "recall": 0.6303463749824709,
+      "fpr": 0.005652011877225461,
+      "precision": 0.865650802821309,
+      "miou_percent": 76.20549076377033,
+      "iou_percent": [
+        87.70628804934556,
+        83.49269394194468,
+        57.41749030002076
+      ],
+      "shadow_to_surface": 17539,
+      "shadow_to_cloud": 3549
+    },
+    {
+      "product": "S2A_MSIL1C_20181021T160311_N0206_R097_T20WNV_20181021T192258",
+      "group_id": "0876b85f78d99180dd199fef6b0e29b964106f55b1224e5ec9d05aa8443fe33b",
+      "ap": null,
+      "confusion": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1005208,
+          39276
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 39276,
+      "recall": null,
+      "fpr": 0.03760325672772393,
+      "precision": 0.0,
+      "miou_percent": 48.1198371636138,
+      "iou_percent": [
+        null,
+        96.2396743272276,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    }
+  ],
+  "S11701": [
+    {
+      "product": "S2A_MSIL1C_20180310T165111_N0206_R026_T17VNJ_20180310T220933",
+      "group_id": "939442aa2d28f4a9befbb03559ae9e97d3d2bd6838df5270fb28702f64a42127",
+      "ap": null,
+      "confusion": [
+        [
+          1044484,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 0,
+      "recall": null,
+      "fpr": 0.0,
+      "precision": null,
+      "miou_percent": 100.0,
+      "iou_percent": [
+        100.0,
+        null,
+        null
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2B_MSIL1C_20180822T014649_N0206_R017_T56WNB_20180822T032508",
+      "group_id": "2912a1d22565a8ccdc422c8926598ba79303b57ba83a9699bd100bfbfacd5b71",
+      "ap": null,
+      "confusion": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          6847,
+          1002117,
+          35520
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 35520,
+      "recall": null,
+      "fpr": 0.03400722270518265,
+      "precision": 0.0,
+      "miou_percent": 31.981246242163593,
+      "iou_percent": [
+        0.0,
+        95.94373872649078,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2A_MSIL1C_20180321T075621_N0206_R035_T34HGK_20180321T101406",
+      "group_id": "9bf33cddf082423bbac9aaa2b8af7017afaf29ea6fbfb7ab41164406ea1b9aa6",
+      "ap": null,
+      "confusion": [
+        [
+          1044484,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 0,
+      "recall": null,
+      "fpr": 0.0,
+      "precision": null,
+      "miou_percent": 100.0,
+      "iou_percent": [
+        100.0,
+        null,
+        null
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2B_MSIL1C_20180612T171859_N0206_R012_T15UVU_20180612T204912",
+      "group_id": "e4c96f5ad8a0d2bdc2856a163a49b90c4a2a91709481bdfc20df0e972196360c",
+      "ap": null,
+      "confusion": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1002605,
+          41879
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 41879,
+      "recall": null,
+      "fpr": 0.04009539638711555,
+      "precision": 0.0,
+      "miou_percent": 47.99523018064422,
+      "iou_percent": [
+        null,
+        95.99046036128844,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2B_MSIL1C_20180824T111239_N0206_R051_T28LGP_20180824T164334",
+      "group_id": "646618dd0ca2b4b2fdaf830e42b5c7841ec1d558f16aba6d400fbde04d577278",
+      "ap": null,
+      "confusion": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1006168,
+          38316
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 38316,
+      "recall": null,
+      "fpr": 0.03668414260055683,
+      "precision": 0.0,
+      "miou_percent": 48.16579286997216,
+      "iou_percent": [
+        null,
+        96.33158573994432,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2A_MSIL1C_20180410T214911_N0206_R043_T02LKH_20180410T231102",
+      "group_id": "140a08cf98d8a79e1c38b8903719256bdf8c6c631d6495bd7c56fecd26097e26",
+      "ap": null,
+      "confusion": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1632,
+          987901,
+          54951
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 54951,
+      "recall": null,
+      "fpr": 0.052610667085374214,
+      "precision": 0.0,
+      "miou_percent": 31.527561296614724,
+      "iou_percent": [
+        0.0,
+        94.58268388984418,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2B_MSIL1C_20180701T074609_N0206_R135_T38TNN_20180701T100320",
+      "group_id": "8fd6358af16a4eb15ba4d38a7365844bc3cb5c9c343ade539f8e88e242cd420b",
+      "ap": 0.9364779807753548,
+      "confusion": [
+        [
+          1033095,
+          134,
+          107
+        ],
+        [
+          2441,
+          5102,
+          15
+        ],
+        [
+          1125,
+          89,
+          2376
+        ]
+      ],
+      "positive": 3590,
+      "negative": 1040894,
+      "true_positive": 2376,
+      "false_positive": 122,
+      "recall": 0.6618384401114206,
+      "fpr": 0.00011720693941938372,
+      "precision": 0.9511609287429944,
+      "miou_percent": 76.40381582059348,
+      "iou_percent": [
+        99.63284862021676,
+        65.56997815190849,
+        64.00862068965517
+      ],
+      "shadow_to_surface": 1125,
+      "shadow_to_cloud": 89
+    },
+    {
+      "product": "S2B_MSIL1C_20181218T043159_N0207_R133_T46RDT_20181218T072156",
+      "group_id": "5ae729c6b6efccd197016be42bc8d0d7b269c30b04d48b7e8999e4c58191a607",
+      "ap": null,
+      "confusion": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1007918,
+          36566
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 36566,
+      "recall": null,
+      "fpr": 0.03500867413957514,
+      "precision": 0.0,
+      "miou_percent": 48.249566293021246,
+      "iou_percent": [
+        null,
+        96.49913258604249,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2A_MSIL1C_20180710T090601_N0206_R050_T34QBG_20180710T112311",
+      "group_id": "f9c24c9b6029766e0c62dc9375251f6fdad6c3dc0dadcac647bc80d66d22ab28",
+      "ap": null,
+      "confusion": [
+        [
+          1044484,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 0,
+      "recall": null,
+      "fpr": 0.0,
+      "precision": null,
+      "miou_percent": 100.0,
+      "iou_percent": [
+        100.0,
+        null,
+        null
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2B_MSIL1C_20180131T082149_N0206_R121_T34JDL_20180131T120726",
+      "group_id": "8a8bb46c20fbcc5e573176a6c6145d72749f160f9545f15b018ef5396b82389d",
+      "ap": 0.9695742805783022,
+      "confusion": [
+        [
+          795339,
+          875,
+          583
+        ],
+        [
+          22633,
+          117110,
+          6039
+        ],
+        [
+          14306,
+          309,
+          87290
+        ]
+      ],
+      "positive": 101905,
+      "negative": 942579,
+      "true_positive": 87290,
+      "false_positive": 6622,
+      "recall": 0.8565821107894608,
+      "fpr": 0.0070254058280526084,
+      "precision": 0.9294871794871795,
+      "miou_percent": 85.17042674555974,
+      "iou_percent": [
+        95.39458533636547,
+        79.6850972333737,
+        80.43159766694002
+      ],
+      "shadow_to_surface": 14306,
+      "shadow_to_cloud": 309
+    },
+    {
+      "product": "S2B_MSIL1C_20180214T025819_N0206_R032_T51TUM_20180214T072411",
+      "group_id": "1cfce2528bc2fcf176d11f38ec8132d791f1762735fa1cc1c1f2ae349223ad12",
+      "ap": null,
+      "confusion": [
+        [
+          1044484,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 0,
+      "recall": null,
+      "fpr": 0.0,
+      "precision": null,
+      "miou_percent": 100.0,
+      "iou_percent": [
+        100.0,
+        null,
+        null
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2A_MSIL1C_20181118T084231_N0207_R064_T35RPM_20181118T101007",
+      "group_id": "f75a22fdd7b8a18e2a48389aa30ff6b2e9d62236713d45e90ea1902ba4a20ef2",
+      "ap": 0.8967471609012143,
+      "confusion": [
+        [
+          149071,
+          41592,
+          34501
+        ],
+        [
+          29110,
+          437215,
+          116967
+        ],
+        [
+          6067,
+          2565,
+          227396
+        ]
+      ],
+      "positive": 236028,
+      "negative": 808456,
+      "true_positive": 227396,
+      "false_positive": 151468,
+      "recall": 0.963428067856356,
+      "fpr": 0.18735466123079053,
+      "precision": 0.6002048228388023,
+      "miou_percent": 61.8749021560071,
+      "iou_percent": [
+        57.25990143696153,
+        69.68136055679426,
+        58.68344447426554
+      ],
+      "shadow_to_surface": 6067,
+      "shadow_to_cloud": 2565
+    },
+    {
+      "product": "S2A_MSIL1C_20180703T023551_N0206_R089_T50PLR_20180703T053714",
+      "group_id": "ae93b6cb56e3c05137355ffd83e2d95bf4cbd2fa11e4c61322b45ccfbe090a12",
+      "ap": null,
+      "confusion": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1013740,
+          30744
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 30744,
+      "recall": null,
+      "fpr": 0.029434629922526337,
+      "precision": 0.0,
+      "miou_percent": 48.52826850387368,
+      "iou_percent": [
+        null,
+        97.05653700774737,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2A_MSIL1C_20180805T024551_N0206_R132_T52UDG_20180805T054920",
+      "group_id": "6086b24be5e9e183e82b7585ebe885909747b726ec67ccadc7ca2b1c167801f5",
+      "ap": 0.9508851057222122,
+      "confusion": [
+        [
+          674249,
+          16115,
+          29404
+        ],
+        [
+          9958,
+          244600,
+          8475
+        ],
+        [
+          345,
+          218,
+          61120
+        ]
+      ],
+      "positive": 61683,
+      "negative": 982801,
+      "true_positive": 61120,
+      "false_positive": 37879,
+      "recall": 0.9908726877745895,
+      "fpr": 0.03854188182551707,
+      "precision": 0.6173799735350862,
+      "miou_percent": 80.43272364650603,
+      "iou_percent": [
+        92.35389434726211,
+        87.55539328336305,
+        61.38888330889295
+      ],
+      "shadow_to_surface": 345,
+      "shadow_to_cloud": 218
+    },
+    {
+      "product": "S2A_MSIL1C_20180211T234711_N0206_R073_T60WWT_20180212T011403",
+      "group_id": "f2381df323f89c657500585513ba32695bff189c66ec9e974a2a573d7a28f432",
+      "ap": null,
+      "confusion": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          993014,
+          51470
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 51470,
+      "recall": null,
+      "fpr": 0.04927792096384435,
+      "precision": 0.0,
+      "miou_percent": 47.53610395180778,
+      "iou_percent": [
+        null,
+        95.07220790361556,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2A_MSIL1C_20180804T045701_N0206_R119_T45RTH_20180804T075337",
+      "group_id": "c2a41ae0294bc9db9eb04bcfbf2650fe1c7bdaf285b7713938de8bfac54cba54",
+      "ap": null,
+      "confusion": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1023884,
+          20600
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 20600,
+      "recall": null,
+      "fpr": 0.01972265731212733,
+      "precision": 0.0,
+      "miou_percent": 49.013867134393635,
+      "iou_percent": [
+        null,
+        98.02773426878727,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2B_MSIL1C_20181004T102019_N0206_R065_T32TML_20181004T141056",
+      "group_id": "6208a338d14f2674799eb7d6b1b4f55d159e2e8f3b23a83c12dbb43b4f5cd4ef",
+      "ap": 0.8941026229282537,
+      "confusion": [
+        [
+          683015,
+          1985,
+          7100
+        ],
+        [
+          15604,
+          222687,
+          3888
+        ],
+        [
+          28135,
+          1489,
+          80581
+        ]
+      ],
+      "positive": 110205,
+      "negative": 934279,
+      "true_positive": 80581,
+      "false_positive": 10988,
+      "recall": 0.7311918696973821,
+      "fpr": 0.011760940789635644,
+      "precision": 0.880003057803405,
+      "miou_percent": 83.32070326443598,
+      "iou_percent": [
+        92.82125573664891,
+        90.65104028853709,
+        66.48981376812192
+      ],
+      "shadow_to_surface": 28135,
+      "shadow_to_cloud": 1489
+    },
+    {
+      "product": "S2A_MSIL1C_20180602T081011_N0206_R078_T36PWC_20180602T115947",
+      "group_id": "59b71cbd6e0a8dd40404706487ccbd2fcd8e85d825523d3a052bae1ab5f167b5",
+      "ap": null,
+      "confusion": [
+        [
+          1031860,
+          12624,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 0,
+      "recall": null,
+      "fpr": 0.0,
+      "precision": null,
+      "miou_percent": 49.39568246138763,
+      "iou_percent": [
+        98.79136492277526,
+        0.0,
+        null
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2B_MSIL1C_20180508T150719_N0206_R082_T18MYV_20180508T202621",
+      "group_id": "c7e7a075f679fb9b65a472b172abde8f2d95fd6b7261370e72a9d2522849fb43",
+      "ap": null,
+      "confusion": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1014332,
+          30152
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 30152,
+      "recall": null,
+      "fpr": 0.028867842877439962,
+      "precision": 0.0,
+      "miou_percent": 48.556607856128004,
+      "iou_percent": [
+        null,
+        97.11321571225601,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2B_MSIL1C_20180420T103019_N0206_R108_T31TGF_20180420T114307",
+      "group_id": "acee9848efe8570d1198119ec4aa2a53a904443472ca0646c320c7b2fab89e53",
+      "ap": null,
+      "confusion": [
+        [
+          1044484,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 0,
+      "recall": null,
+      "fpr": 0.0,
+      "precision": null,
+      "miou_percent": 100.0,
+      "iou_percent": [
+        100.0,
+        null,
+        null
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2A_MSIL1C_20180430T111621_N0206_R037_T40XDR_20180430T132750",
+      "group_id": "f55d113c0d378ebf46f9a0e9ec28337ea3301758e7d4d26a7e6113d556aa403e",
+      "ap": 0.979935328140693,
+      "confusion": [
+        [
+          877789,
+          14457,
+          11596
+        ],
+        [
+          28424,
+          26016,
+          700
+        ],
+        [
+          3416,
+          287,
+          81799
+        ]
+      ],
+      "positive": 85502,
+      "negative": 958982,
+      "true_positive": 81799,
+      "false_positive": 12296,
+      "recall": 0.9566910715538818,
+      "fpr": 0.012821929921520946,
+      "precision": 0.8693235559806578,
+      "miou_percent": 71.56030783761449,
+      "iou_percent": [
+        93.81274834826363,
+        37.2274054146872,
+        83.64076974989264
+      ],
+      "shadow_to_surface": 3416,
+      "shadow_to_cloud": 287
+    },
+    {
+      "product": "S2A_MSIL1C_20180909T151911_N0206_R068_T25XEG_20180909T205122",
+      "group_id": "f4766b335797560339a903cef2910fbb6a4436a282b64d036c6354f68717a2c1",
+      "ap": null,
+      "confusion": [
+        [
+          1044154,
+          0,
+          330
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 330,
+      "recall": null,
+      "fpr": 0.0003159454812136902,
+      "precision": 0.0,
+      "miou_percent": 49.98420272593931,
+      "iou_percent": [
+        99.96840545187862,
+        null,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2A_MSIL1C_20180707T021601_N0206_R003_T51SXR_20180707T041118",
+      "group_id": "18e5a8b99775c466f1f4c3b18610d90ec94d16598d32bbb2361ae69249049020",
+      "ap": null,
+      "confusion": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          19,
+          1021741,
+          22724
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 22724,
+      "recall": null,
+      "fpr": 0.021756197318484535,
+      "precision": 0.0,
+      "miou_percent": 32.607520396036065,
+      "iou_percent": [
+        0.0,
+        97.8225611881082,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2A_MSIL1C_20180522T183921_N0206_R070_T12VVH_20180522T233949",
+      "group_id": "338616d4467f5a91aa9c8c34abcbe296dd7aca061c0f780d6861d590655e2f1f",
+      "ap": null,
+      "confusion": [
+        [
+          1044484,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 0,
+      "recall": null,
+      "fpr": 0.0,
+      "precision": null,
+      "miou_percent": 100.0,
+      "iou_percent": [
+        100.0,
+        null,
+        null
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2A_MSIL1C_20180317T045651_N0206_R119_T50XMG_20180317T075452",
+      "group_id": "f1712665f0fe8eec4694c7da49ce2dfabf6c2ebe1547ff7a6ba59a051366ec3a",
+      "ap": null,
+      "confusion": [
+        [
+          1044484,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 0,
+      "recall": null,
+      "fpr": 0.0,
+      "precision": null,
+      "miou_percent": 100.0,
+      "iou_percent": [
+        100.0,
+        null,
+        null
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2B_MSIL1C_20181001T165109_N0206_R026_T16UDV_20181001T221311",
+      "group_id": "ff26582f3cbe6eba262e621e7ea9de9dc72b2d8a821ecfddf74e74b249728286",
+      "ap": null,
+      "confusion": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1019097,
+          25387
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 25387,
+      "recall": null,
+      "fpr": 0.0243057816108241,
+      "precision": 0.0,
+      "miou_percent": 48.784710919458796,
+      "iou_percent": [
+        null,
+        97.56942183891759,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2A_MSIL1C_20180608T152641_N0206_R025_T18MUA_20180608T202221",
+      "group_id": "f3c0fdae99da17df642fb987b86059960905cabb5eda09b0d5e4c3d7172c8396",
+      "ap": null,
+      "confusion": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          27,
+          1028673,
+          15784
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 15784,
+      "recall": null,
+      "fpr": 0.015111768107505716,
+      "precision": 0.0,
+      "miou_percent": 32.82874606025559,
+      "iou_percent": [
+        0.0,
+        98.48623818076678,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2A_MSIL1C_20181114T054101_N0207_R005_T44UNA_20181114T093234",
+      "group_id": "79aa19a7b0464ac5ac354f17f9fe96b109c7550cde405ab4e7a304c2e361e16c",
+      "ap": null,
+      "confusion": [
+        [
+          1044484,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 0,
+      "recall": null,
+      "fpr": 0.0,
+      "precision": null,
+      "miou_percent": 100.0,
+      "iou_percent": [
+        100.0,
+        null,
+        null
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2A_MSIL1C_20181118T152621_N0207_R068_T20VPK_20181118T172424",
+      "group_id": "90c4becf227f62264ee7e5f1b31b05fbee8f59464f744a77e1ecfb16624fbd44",
+      "ap": null,
+      "confusion": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1018567,
+          25917
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 25917,
+      "recall": null,
+      "fpr": 0.02481320920186427,
+      "precision": 0.0,
+      "miou_percent": 48.75933953990679,
+      "iou_percent": [
+        null,
+        97.51867907981358,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2A_MSIL1C_20180922T185101_N0206_R113_T10SEE_20180922T225409",
+      "group_id": "0e28969b45fbf20e3aa6d65331a994c914ac07abfdc2593c6d55264d4cd7c53c",
+      "ap": null,
+      "confusion": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          161711,
+          869232,
+          13541
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 13541,
+      "recall": null,
+      "fpr": 0.012964296245801754,
+      "precision": 0.0,
+      "miou_percent": 27.740396214781654,
+      "iou_percent": [
+        0.0,
+        83.22118864434496,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2B_MSIL1C_20181111T094229_N0207_R036_T32NKF_20181111T131623",
+      "group_id": "ed188cfd4fad4684fafc74170d129ca0591b418d0c9df514b6929431f6d46fe3",
+      "ap": 0.8274485196697616,
+      "confusion": [
+        [
+          590020,
+          15123,
+          4266
+        ],
+        [
+          45477,
+          331386,
+          1164
+        ],
+        [
+          17773,
+          3550,
+          35725
+        ]
+      ],
+      "positive": 57048,
+      "negative": 987436,
+      "true_positive": 35725,
+      "false_positive": 5430,
+      "recall": 0.6262270368812228,
+      "fpr": 0.005499090573971376,
+      "precision": 0.8680597740250273,
+      "miou_percent": 76.14345806543271,
+      "iou_percent": [
+        87.71457751996182,
+        83.53566927148978,
+        57.1801274048465
+      ],
+      "shadow_to_surface": 17773,
+      "shadow_to_cloud": 3550
+    },
+    {
+      "product": "S2A_MSIL1C_20181021T160311_N0206_R097_T20WNV_20181021T192258",
+      "group_id": "0876b85f78d99180dd199fef6b0e29b964106f55b1224e5ec9d05aa8443fe33b",
+      "ap": null,
+      "confusion": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1005010,
+          39474
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 39474,
+      "recall": null,
+      "fpr": 0.03779282401645214,
+      "precision": 0.0,
+      "miou_percent": 48.11035879917739,
+      "iou_percent": [
+        null,
+        96.22071759835478,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    }
+  ],
+  "R11702": [
+    {
+      "product": "S2A_MSIL1C_20180310T165111_N0206_R026_T17VNJ_20180310T220933",
+      "group_id": "939442aa2d28f4a9befbb03559ae9e97d3d2bd6838df5270fb28702f64a42127",
+      "ap": null,
+      "confusion": [
+        [
+          1044484,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 0,
+      "recall": null,
+      "fpr": 0.0,
+      "precision": null,
+      "miou_percent": 100.0,
+      "iou_percent": [
+        100.0,
+        null,
+        null
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2B_MSIL1C_20180822T014649_N0206_R017_T56WNB_20180822T032508",
+      "group_id": "2912a1d22565a8ccdc422c8926598ba79303b57ba83a9699bd100bfbfacd5b71",
+      "ap": null,
+      "confusion": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          6899,
+          1003300,
+          34285
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 34285,
+      "recall": null,
+      "fpr": 0.032824820677004145,
+      "precision": 0.0,
+      "miou_percent": 32.01900013148438,
+      "iou_percent": [
+        0.0,
+        96.05700039445315,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2A_MSIL1C_20180321T075621_N0206_R035_T34HGK_20180321T101406",
+      "group_id": "9bf33cddf082423bbac9aaa2b8af7017afaf29ea6fbfb7ab41164406ea1b9aa6",
+      "ap": null,
+      "confusion": [
+        [
+          1044484,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 0,
+      "recall": null,
+      "fpr": 0.0,
+      "precision": null,
+      "miou_percent": 100.0,
+      "iou_percent": [
+        100.0,
+        null,
+        null
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2B_MSIL1C_20180612T171859_N0206_R012_T15UVU_20180612T204912",
+      "group_id": "e4c96f5ad8a0d2bdc2856a163a49b90c4a2a91709481bdfc20df0e972196360c",
+      "ap": null,
+      "confusion": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1002184,
+          42300
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 42300,
+      "recall": null,
+      "fpr": 0.04049846622830029,
+      "precision": 0.0,
+      "miou_percent": 47.975076688584984,
+      "iou_percent": [
+        null,
+        95.95015337716997,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2B_MSIL1C_20180824T111239_N0206_R051_T28LGP_20180824T164334",
+      "group_id": "646618dd0ca2b4b2fdaf830e42b5c7841ec1d558f16aba6d400fbde04d577278",
+      "ap": null,
+      "confusion": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1005673,
+          38811
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 38811,
+      "recall": null,
+      "fpr": 0.03715806082237737,
+      "precision": 0.0,
+      "miou_percent": 48.14209695888113,
+      "iou_percent": [
+        null,
+        96.28419391776227,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2A_MSIL1C_20180410T214911_N0206_R043_T02LKH_20180410T231102",
+      "group_id": "140a08cf98d8a79e1c38b8903719256bdf8c6c631d6495bd7c56fecd26097e26",
+      "ap": null,
+      "confusion": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1413,
+          989416,
+          53655
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 53655,
+      "recall": null,
+      "fpr": 0.05136986301369863,
+      "precision": 0.0,
+      "miou_percent": 31.57591052934591,
+      "iou_percent": [
+        0.0,
+        94.72773158803773,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2B_MSIL1C_20180701T074609_N0206_R135_T38TNN_20180701T100320",
+      "group_id": "8fd6358af16a4eb15ba4d38a7365844bc3cb5c9c343ade539f8e88e242cd420b",
+      "ap": 0.9418764845681471,
+      "confusion": [
+        [
+          1033093,
+          144,
+          99
+        ],
+        [
+          2292,
+          5252,
+          14
+        ],
+        [
+          1124,
+          102,
+          2364
+        ]
+      ],
+      "positive": 3590,
+      "negative": 1040894,
+      "true_positive": 2364,
+      "false_positive": 113,
+      "recall": 0.6584958217270195,
+      "fpr": 0.00010856052585565869,
+      "precision": 0.9543802987484861,
+      "miou_percent": 76.92867386468333,
+      "iou_percent": [
+        99.64707085204562,
+        67.29882111737571,
+        63.84012962462868
+      ],
+      "shadow_to_surface": 1124,
+      "shadow_to_cloud": 102
+    },
+    {
+      "product": "S2B_MSIL1C_20181218T043159_N0207_R133_T46RDT_20181218T072156",
+      "group_id": "5ae729c6b6efccd197016be42bc8d0d7b269c30b04d48b7e8999e4c58191a607",
+      "ap": null,
+      "confusion": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1008320,
+          36164
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 36164,
+      "recall": null,
+      "fpr": 0.03462379509882392,
+      "precision": 0.0,
+      "miou_percent": 48.2688102450588,
+      "iou_percent": [
+        null,
+        96.5376204901176,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2A_MSIL1C_20180710T090601_N0206_R050_T34QBG_20180710T112311",
+      "group_id": "f9c24c9b6029766e0c62dc9375251f6fdad6c3dc0dadcac647bc80d66d22ab28",
+      "ap": null,
+      "confusion": [
+        [
+          1044484,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 0,
+      "recall": null,
+      "fpr": 0.0,
+      "precision": null,
+      "miou_percent": 100.0,
+      "iou_percent": [
+        100.0,
+        null,
+        null
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2B_MSIL1C_20180131T082149_N0206_R121_T34JDL_20180131T120726",
+      "group_id": "8a8bb46c20fbcc5e573176a6c6145d72749f160f9545f15b018ef5396b82389d",
+      "ap": 0.9700159069532356,
+      "confusion": [
+        [
+          795407,
+          759,
+          631
+        ],
+        [
+          23028,
+          116751,
+          6003
+        ],
+        [
+          14121,
+          290,
+          87494
+        ]
+      ],
+      "positive": 101905,
+      "negative": 942579,
+      "true_positive": 87494,
+      "false_positive": 6634,
+      "recall": 0.8585839752710858,
+      "fpr": 0.007038136856433254,
+      "precision": 0.9295215026347102,
+      "miou_percent": 85.16774550691729,
+      "iou_percent": [
+        95.37871756684486,
+        79.51386287636807,
+        80.61065607753895
+      ],
+      "shadow_to_surface": 14121,
+      "shadow_to_cloud": 290
+    },
+    {
+      "product": "S2B_MSIL1C_20180214T025819_N0206_R032_T51TUM_20180214T072411",
+      "group_id": "1cfce2528bc2fcf176d11f38ec8132d791f1762735fa1cc1c1f2ae349223ad12",
+      "ap": null,
+      "confusion": [
+        [
+          1044484,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 0,
+      "recall": null,
+      "fpr": 0.0,
+      "precision": null,
+      "miou_percent": 100.0,
+      "iou_percent": [
+        100.0,
+        null,
+        null
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2A_MSIL1C_20181118T084231_N0207_R064_T35RPM_20181118T101007",
+      "group_id": "f75a22fdd7b8a18e2a48389aa30ff6b2e9d62236713d45e90ea1902ba4a20ef2",
+      "ap": 0.8983376379700355,
+      "confusion": [
+        [
+          153083,
+          37347,
+          34734
+        ],
+        [
+          29477,
+          436454,
+          117361
+        ],
+        [
+          6448,
+          2089,
+          227491
+        ]
+      ],
+      "positive": 236028,
+      "negative": 808456,
+      "true_positive": 227491,
+      "false_positive": 152095,
+      "recall": 0.9638305624756385,
+      "fpr": 0.1881302136418061,
+      "precision": 0.5993134625618437,
+      "miou_percent": 62.44434627598526,
+      "iou_percent": [
+        58.63249696463658,
+        70.08742179571176,
+        58.61312006760744
+      ],
+      "shadow_to_surface": 6448,
+      "shadow_to_cloud": 2089
+    },
+    {
+      "product": "S2A_MSIL1C_20180703T023551_N0206_R089_T50PLR_20180703T053714",
+      "group_id": "ae93b6cb56e3c05137355ffd83e2d95bf4cbd2fa11e4c61322b45ccfbe090a12",
+      "ap": null,
+      "confusion": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1014060,
+          30424
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 30424,
+      "recall": null,
+      "fpr": 0.02912825854680397,
+      "precision": 0.0,
+      "miou_percent": 48.5435870726598,
+      "iou_percent": [
+        null,
+        97.0871741453196,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2A_MSIL1C_20180805T024551_N0206_R132_T52UDG_20180805T054920",
+      "group_id": "6086b24be5e9e183e82b7585ebe885909747b726ec67ccadc7ca2b1c167801f5",
+      "ap": 0.9466408284084481,
+      "confusion": [
+        [
+          674129,
+          16783,
+          28856
+        ],
+        [
+          9507,
+          245593,
+          7933
+        ],
+        [
+          403,
+          261,
+          61019
+        ]
+      ],
+      "positive": 61683,
+      "negative": 982801,
+      "true_positive": 61019,
+      "false_positive": 36789,
+      "recall": 0.9892352836275797,
+      "fpr": 0.03743280684492588,
+      "precision": 0.6238651235072795,
+      "miou_percent": 80.68023319176382,
+      "iou_percent": [
+        92.387189965985,
+        87.68767160459446,
+        61.965838004712005
+      ],
+      "shadow_to_surface": 403,
+      "shadow_to_cloud": 261
+    },
+    {
+      "product": "S2A_MSIL1C_20180211T234711_N0206_R073_T60WWT_20180212T011403",
+      "group_id": "f2381df323f89c657500585513ba32695bff189c66ec9e974a2a573d7a28f432",
+      "ap": null,
+      "confusion": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          992552,
+          51932
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 51932,
+      "recall": null,
+      "fpr": 0.049720244637543515,
+      "precision": 0.0,
+      "miou_percent": 47.513987768122824,
+      "iou_percent": [
+        null,
+        95.02797553624565,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2A_MSIL1C_20180804T045701_N0206_R119_T45RTH_20180804T075337",
+      "group_id": "c2a41ae0294bc9db9eb04bcfbf2650fe1c7bdaf285b7713938de8bfac54cba54",
+      "ap": null,
+      "confusion": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1024605,
+          19879
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 19879,
+      "recall": null,
+      "fpr": 0.01903236430620287,
+      "precision": 0.0,
+      "miou_percent": 49.04838178468985,
+      "iou_percent": [
+        null,
+        98.0967635693797,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2B_MSIL1C_20181004T102019_N0206_R065_T32TML_20181004T141056",
+      "group_id": "6208a338d14f2674799eb7d6b1b4f55d159e2e8f3b23a83c12dbb43b4f5cd4ef",
+      "ap": 0.8893238447977316,
+      "confusion": [
+        [
+          683694,
+          1911,
+          6495
+        ],
+        [
+          16187,
+          222602,
+          3390
+        ],
+        [
+          31981,
+          1576,
+          76648
+        ]
+      ],
+      "positive": 110205,
+      "negative": 934279,
+      "true_positive": 76648,
+      "false_positive": 9885,
+      "recall": 0.6955038337643482,
+      "fpr": 0.010580351265521327,
+      "precision": 0.8857661239064866,
+      "miou_percent": 82.2649134423909,
+      "iou_percent": [
+        92.35763264115158,
+        90.61164345086418,
+        63.82546423515697
+      ],
+      "shadow_to_surface": 31981,
+      "shadow_to_cloud": 1576
+    },
+    {
+      "product": "S2A_MSIL1C_20180602T081011_N0206_R078_T36PWC_20180602T115947",
+      "group_id": "59b71cbd6e0a8dd40404706487ccbd2fcd8e85d825523d3a052bae1ab5f167b5",
+      "ap": null,
+      "confusion": [
+        [
+          1037181,
+          7303,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 0,
+      "recall": null,
+      "fpr": 0.0,
+      "precision": null,
+      "miou_percent": 49.65040153798431,
+      "iou_percent": [
+        99.30080307596862,
+        0.0,
+        null
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2B_MSIL1C_20180508T150719_N0206_R082_T18MYV_20180508T202621",
+      "group_id": "c7e7a075f679fb9b65a472b172abde8f2d95fd6b7261370e72a9d2522849fb43",
+      "ap": null,
+      "confusion": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1015312,
+          29172
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 29172,
+      "recall": null,
+      "fpr": 0.027929580539290216,
+      "precision": 0.0,
+      "miou_percent": 48.603520973035494,
+      "iou_percent": [
+        null,
+        97.20704194607099,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2B_MSIL1C_20180420T103019_N0206_R108_T31TGF_20180420T114307",
+      "group_id": "acee9848efe8570d1198119ec4aa2a53a904443472ca0646c320c7b2fab89e53",
+      "ap": null,
+      "confusion": [
+        [
+          1044484,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 0,
+      "recall": null,
+      "fpr": 0.0,
+      "precision": null,
+      "miou_percent": 100.0,
+      "iou_percent": [
+        100.0,
+        null,
+        null
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2A_MSIL1C_20180430T111621_N0206_R037_T40XDR_20180430T132750",
+      "group_id": "f55d113c0d378ebf46f9a0e9ec28337ea3301758e7d4d26a7e6113d556aa403e",
+      "ap": 0.982850263754203,
+      "confusion": [
+        [
+          874332,
+          16637,
+          12873
+        ],
+        [
+          24194,
+          30341,
+          605
+        ],
+        [
+          2736,
+          262,
+          82504
+        ]
+      ],
+      "positive": 85502,
+      "negative": 958982,
+      "true_positive": 82504,
+      "false_positive": 13478,
+      "recall": 0.9649364927136207,
+      "fpr": 0.014054486945531824,
+      "precision": 0.8595778375112,
+      "miou_percent": 73.13596450393221,
+      "iou_percent": [
+        93.93621638811653,
+        42.117464151362455,
+        83.35421297231764
+      ],
+      "shadow_to_surface": 2736,
+      "shadow_to_cloud": 262
+    },
+    {
+      "product": "S2A_MSIL1C_20180909T151911_N0206_R068_T25XEG_20180909T205122",
+      "group_id": "f4766b335797560339a903cef2910fbb6a4436a282b64d036c6354f68717a2c1",
+      "ap": null,
+      "confusion": [
+        [
+          1044194,
+          0,
+          290
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 290,
+      "recall": null,
+      "fpr": 0.0002776490592483944,
+      "precision": 0.0,
+      "miou_percent": 49.98611754703758,
+      "iou_percent": [
+        99.97223509407516,
+        null,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2A_MSIL1C_20180707T021601_N0206_R003_T51SXR_20180707T041118",
+      "group_id": "18e5a8b99775c466f1f4c3b18610d90ec94d16598d32bbb2361ae69249049020",
+      "ap": null,
+      "confusion": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1022138,
+          22345
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 22345,
+      "recall": null,
+      "fpr": 0.021393338720363357,
+      "precision": 0.0,
+      "miou_percent": 32.62019012896958,
+      "iou_percent": [
+        0.0,
+        97.86057038690875,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2A_MSIL1C_20180522T183921_N0206_R070_T12VVH_20180522T233949",
+      "group_id": "338616d4467f5a91aa9c8c34abcbe296dd7aca061c0f780d6861d590655e2f1f",
+      "ap": null,
+      "confusion": [
+        [
+          1044484,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 0,
+      "recall": null,
+      "fpr": 0.0,
+      "precision": null,
+      "miou_percent": 100.0,
+      "iou_percent": [
+        100.0,
+        null,
+        null
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2A_MSIL1C_20180317T045651_N0206_R119_T50XMG_20180317T075452",
+      "group_id": "f1712665f0fe8eec4694c7da49ce2dfabf6c2ebe1547ff7a6ba59a051366ec3a",
+      "ap": null,
+      "confusion": [
+        [
+          1044484,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 0,
+      "recall": null,
+      "fpr": 0.0,
+      "precision": null,
+      "miou_percent": 100.0,
+      "iou_percent": [
+        100.0,
+        null,
+        null
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2B_MSIL1C_20181001T165109_N0206_R026_T16UDV_20181001T221311",
+      "group_id": "ff26582f3cbe6eba262e621e7ea9de9dc72b2d8a821ecfddf74e74b249728286",
+      "ap": null,
+      "confusion": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1019565,
+          24919
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 24919,
+      "recall": null,
+      "fpr": 0.02385771347383014,
+      "precision": 0.0,
+      "miou_percent": 48.80711432630849,
+      "iou_percent": [
+        null,
+        97.61422865261699,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2A_MSIL1C_20180608T152641_N0206_R025_T18MUA_20180608T202221",
+      "group_id": "f3c0fdae99da17df642fb987b86059960905cabb5eda09b0d5e4c3d7172c8396",
+      "ap": null,
+      "confusion": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          3,
+          1029788,
+          14693
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 14693,
+      "recall": null,
+      "fpr": 0.014067233198402274,
+      "precision": 0.0,
+      "miou_percent": 32.86432981899834,
+      "iou_percent": [
+        0.0,
+        98.59298945699503,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2A_MSIL1C_20181114T054101_N0207_R005_T44UNA_20181114T093234",
+      "group_id": "79aa19a7b0464ac5ac354f17f9fe96b109c7550cde405ab4e7a304c2e361e16c",
+      "ap": null,
+      "confusion": [
+        [
+          1044484,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 0,
+      "recall": null,
+      "fpr": 0.0,
+      "precision": null,
+      "miou_percent": 100.0,
+      "iou_percent": [
+        100.0,
+        null,
+        null
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2A_MSIL1C_20181118T152621_N0207_R068_T20VPK_20181118T172424",
+      "group_id": "90c4becf227f62264ee7e5f1b31b05fbee8f59464f744a77e1ecfb16624fbd44",
+      "ap": null,
+      "confusion": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1018469,
+          26015
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 26015,
+      "recall": null,
+      "fpr": 0.024907035435679244,
+      "precision": 0.0,
+      "miou_percent": 48.754648228216034,
+      "iou_percent": [
+        null,
+        97.50929645643207,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2A_MSIL1C_20180922T185101_N0206_R113_T10SEE_20180922T225409",
+      "group_id": "0e28969b45fbf20e3aa6d65331a994c914ac07abfdc2593c6d55264d4cd7c53c",
+      "ap": null,
+      "confusion": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          140743,
+          888936,
+          14805
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 14805,
+      "recall": null,
+      "fpr": 0.014174463179905101,
+      "precision": 0.0,
+      "miou_percent": 28.36922346345181,
+      "iou_percent": [
+        0.0,
+        85.10767039035542,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2B_MSIL1C_20181111T094229_N0207_R036_T32NKF_20181111T131623",
+      "group_id": "ed188cfd4fad4684fafc74170d129ca0591b418d0c9df514b6929431f6d46fe3",
+      "ap": 0.8294290213486017,
+      "confusion": [
+        [
+          590327,
+          15238,
+          3844
+        ],
+        [
+          45967,
+          330914,
+          1146
+        ],
+        [
+          18200,
+          3636,
+          35212
+        ]
+      ],
+      "positive": 57048,
+      "negative": 987436,
+      "true_positive": 35212,
+      "false_positive": 4990,
+      "recall": 0.6172346094516898,
+      "fpr": 0.005053492074423052,
+      "precision": 0.8758768220486542,
+      "miou_percent": 75.92464853904636,
+      "iou_percent": [
+        87.64074135658039,
+        83.37444350102419,
+        56.758760759534475
+      ],
+      "shadow_to_surface": 18200,
+      "shadow_to_cloud": 3636
+    },
+    {
+      "product": "S2A_MSIL1C_20181021T160311_N0206_R097_T20WNV_20181021T192258",
+      "group_id": "0876b85f78d99180dd199fef6b0e29b964106f55b1224e5ec9d05aa8443fe33b",
+      "ap": null,
+      "confusion": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1005957,
+          38527
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 38527,
+      "recall": null,
+      "fpr": 0.036886156226423765,
+      "precision": 0.0,
+      "miou_percent": 48.15569218867881,
+      "iou_percent": [
+        null,
+        96.31138437735763,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    }
+  ],
+  "S11702": [
+    {
+      "product": "S2A_MSIL1C_20180310T165111_N0206_R026_T17VNJ_20180310T220933",
+      "group_id": "939442aa2d28f4a9befbb03559ae9e97d3d2bd6838df5270fb28702f64a42127",
+      "ap": null,
+      "confusion": [
+        [
+          1044484,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 0,
+      "recall": null,
+      "fpr": 0.0,
+      "precision": null,
+      "miou_percent": 100.0,
+      "iou_percent": [
+        100.0,
+        null,
+        null
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2B_MSIL1C_20180822T014649_N0206_R017_T56WNB_20180822T032508",
+      "group_id": "2912a1d22565a8ccdc422c8926598ba79303b57ba83a9699bd100bfbfacd5b71",
+      "ap": null,
+      "confusion": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          6503,
+          1002297,
+          35684
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 35684,
+      "recall": null,
+      "fpr": 0.034164238035240366,
+      "precision": 0.0,
+      "miou_percent": 31.98699070545839,
+      "iou_percent": [
+        0.0,
+        95.96097211637516,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2A_MSIL1C_20180321T075621_N0206_R035_T34HGK_20180321T101406",
+      "group_id": "9bf33cddf082423bbac9aaa2b8af7017afaf29ea6fbfb7ab41164406ea1b9aa6",
+      "ap": null,
+      "confusion": [
+        [
+          1044484,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 0,
+      "recall": null,
+      "fpr": 0.0,
+      "precision": null,
+      "miou_percent": 100.0,
+      "iou_percent": [
+        100.0,
+        null,
+        null
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2B_MSIL1C_20180612T171859_N0206_R012_T15UVU_20180612T204912",
+      "group_id": "e4c96f5ad8a0d2bdc2856a163a49b90c4a2a91709481bdfc20df0e972196360c",
+      "ap": null,
+      "confusion": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1001880,
+          42604
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 42604,
+      "recall": null,
+      "fpr": 0.04078951903523654,
+      "precision": 0.0,
+      "miou_percent": 47.96052404823817,
+      "iou_percent": [
+        null,
+        95.92104809647634,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2B_MSIL1C_20180824T111239_N0206_R051_T28LGP_20180824T164334",
+      "group_id": "646618dd0ca2b4b2fdaf830e42b5c7841ec1d558f16aba6d400fbde04d577278",
+      "ap": null,
+      "confusion": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1005732,
+          38752
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 38752,
+      "recall": null,
+      "fpr": 0.03710157359997855,
+      "precision": 0.0,
+      "miou_percent": 48.144921320001075,
+      "iou_percent": [
+        null,
+        96.28984264000215,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2A_MSIL1C_20180410T214911_N0206_R043_T02LKH_20180410T231102",
+      "group_id": "140a08cf98d8a79e1c38b8903719256bdf8c6c631d6495bd7c56fecd26097e26",
+      "ap": null,
+      "confusion": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1469,
+          987556,
+          55459
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 55459,
+      "recall": null,
+      "fpr": 0.05309703164433347,
+      "precision": 0.0,
+      "miou_percent": 31.5165510752997,
+      "iou_percent": [
+        0.0,
+        94.5496532258991,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2B_MSIL1C_20180701T074609_N0206_R135_T38TNN_20180701T100320",
+      "group_id": "8fd6358af16a4eb15ba4d38a7365844bc3cb5c9c343ade539f8e88e242cd420b",
+      "ap": 0.9388693310351393,
+      "confusion": [
+        [
+          1033085,
+          137,
+          114
+        ],
+        [
+          2427,
+          5116,
+          15
+        ],
+        [
+          1067,
+          95,
+          2428
+        ]
+      ],
+      "positive": 3590,
+      "negative": 1040894,
+      "true_positive": 2428,
+      "false_positive": 129,
+      "recall": 0.6763231197771588,
+      "fpr": 0.00012393192774672542,
+      "precision": 0.9495502542041455,
+      "miou_percent": 76.86637038085037,
+      "iou_percent": [
+        99.63880288957688,
+        65.67394094993581,
+        65.28636730303845
+      ],
+      "shadow_to_surface": 1067,
+      "shadow_to_cloud": 95
+    },
+    {
+      "product": "S2B_MSIL1C_20181218T043159_N0207_R133_T46RDT_20181218T072156",
+      "group_id": "5ae729c6b6efccd197016be42bc8d0d7b269c30b04d48b7e8999e4c58191a607",
+      "ap": null,
+      "confusion": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1007127,
+          37357
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 37357,
+      "recall": null,
+      "fpr": 0.03576598588393887,
+      "precision": 0.0,
+      "miou_percent": 48.211700705803054,
+      "iou_percent": [
+        null,
+        96.42340141160611,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2A_MSIL1C_20180710T090601_N0206_R050_T34QBG_20180710T112311",
+      "group_id": "f9c24c9b6029766e0c62dc9375251f6fdad6c3dc0dadcac647bc80d66d22ab28",
+      "ap": null,
+      "confusion": [
+        [
+          1044484,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 0,
+      "recall": null,
+      "fpr": 0.0,
+      "precision": null,
+      "miou_percent": 100.0,
+      "iou_percent": [
+        100.0,
+        null,
+        null
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2B_MSIL1C_20180131T082149_N0206_R121_T34JDL_20180131T120726",
+      "group_id": "8a8bb46c20fbcc5e573176a6c6145d72749f160f9545f15b018ef5396b82389d",
+      "ap": 0.9697342922413159,
+      "confusion": [
+        [
+          795396,
+          776,
+          625
+        ],
+        [
+          23057,
+          116648,
+          6077
+        ],
+        [
+          14070,
+          273,
+          87562
+        ]
+      ],
+      "positive": 101905,
+      "negative": 942579,
+      "true_positive": 87562,
+      "false_positive": 6702,
+      "recall": 0.8592512634316275,
+      "fpr": 0.007110279350590242,
+      "precision": 0.9289018076890435,
+      "miou_percent": 85.14880829028985,
+      "iou_percent": [
+        95.37991471644898,
+        79.4437142020418,
+        80.62279595237875
+      ],
+      "shadow_to_surface": 14070,
+      "shadow_to_cloud": 273
+    },
+    {
+      "product": "S2B_MSIL1C_20180214T025819_N0206_R032_T51TUM_20180214T072411",
+      "group_id": "1cfce2528bc2fcf176d11f38ec8132d791f1762735fa1cc1c1f2ae349223ad12",
+      "ap": null,
+      "confusion": [
+        [
+          1044484,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 0,
+      "recall": null,
+      "fpr": 0.0,
+      "precision": null,
+      "miou_percent": 100.0,
+      "iou_percent": [
+        100.0,
+        null,
+        null
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2A_MSIL1C_20181118T084231_N0207_R064_T35RPM_20181118T101007",
+      "group_id": "f75a22fdd7b8a18e2a48389aa30ff6b2e9d62236713d45e90ea1902ba4a20ef2",
+      "ap": 0.8967093617108759,
+      "confusion": [
+        [
+          152704,
+          37316,
+          35144
+        ],
+        [
+          31618,
+          432632,
+          119042
+        ],
+        [
+          6197,
+          2172,
+          227659
+        ]
+      ],
+      "positive": 236028,
+      "negative": 808456,
+      "true_positive": 227659,
+      "false_positive": 154186,
+      "recall": 0.9645423424339485,
+      "fpr": 0.19071662527088673,
+      "precision": 0.5962078853985255,
+      "miou_percent": 61.95898434295324,
+      "iou_percent": [
+        58.06699394248211,
+        69.46786987379171,
+        58.34208921258591
+      ],
+      "shadow_to_surface": 6197,
+      "shadow_to_cloud": 2172
+    },
+    {
+      "product": "S2A_MSIL1C_20180703T023551_N0206_R089_T50PLR_20180703T053714",
+      "group_id": "ae93b6cb56e3c05137355ffd83e2d95bf4cbd2fa11e4c61322b45ccfbe090a12",
+      "ap": null,
+      "confusion": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1012782,
+          31702
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 31702,
+      "recall": null,
+      "fpr": 0.03035182922859517,
+      "precision": 0.0,
+      "miou_percent": 48.48240853857024,
+      "iou_percent": [
+        null,
+        96.96481707714048,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2A_MSIL1C_20180805T024551_N0206_R132_T52UDG_20180805T054920",
+      "group_id": "6086b24be5e9e183e82b7585ebe885909747b726ec67ccadc7ca2b1c167801f5",
+      "ap": 0.9502590469165543,
+      "confusion": [
+        [
+          673716,
+          16240,
+          29812
+        ],
+        [
+          9727,
+          245002,
+          8304
+        ],
+        [
+          335,
+          220,
+          61128
+        ]
+      ],
+      "positive": 61683,
+      "negative": 982801,
+      "true_positive": 61128,
+      "false_positive": 38116,
+      "recall": 0.9910023831525704,
+      "fpr": 0.038783029321296986,
+      "precision": 0.6159364797871911,
+      "miou_percent": 80.40730513575939,
+      "iou_percent": [
+        92.31136017976789,
+        87.6594404868816,
+        61.251114740628665
+      ],
+      "shadow_to_surface": 335,
+      "shadow_to_cloud": 220
+    },
+    {
+      "product": "S2A_MSIL1C_20180211T234711_N0206_R073_T60WWT_20180212T011403",
+      "group_id": "f2381df323f89c657500585513ba32695bff189c66ec9e974a2a573d7a28f432",
+      "ap": null,
+      "confusion": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          992387,
+          52097
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 52097,
+      "recall": null,
+      "fpr": 0.04987821737815036,
+      "precision": 0.0,
+      "miou_percent": 47.50608913109248,
+      "iou_percent": [
+        null,
+        95.01217826218496,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2A_MSIL1C_20180804T045701_N0206_R119_T45RTH_20180804T075337",
+      "group_id": "c2a41ae0294bc9db9eb04bcfbf2650fe1c7bdaf285b7713938de8bfac54cba54",
+      "ap": null,
+      "confusion": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1023923,
+          20561
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 20561,
+      "recall": null,
+      "fpr": 0.019685318300711165,
+      "precision": 0.0,
+      "miou_percent": 49.01573408496444,
+      "iou_percent": [
+        null,
+        98.03146816992889,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2B_MSIL1C_20181004T102019_N0206_R065_T32TML_20181004T141056",
+      "group_id": "6208a338d14f2674799eb7d6b1b4f55d159e2e8f3b23a83c12dbb43b4f5cd4ef",
+      "ap": 0.891531247404532,
+      "confusion": [
+        [
+          683284,
+          1952,
+          6864
+        ],
+        [
+          15744,
+          222780,
+          3655
+        ],
+        [
+          29745,
+          1532,
+          78928
+        ]
+      ],
+      "positive": 110205,
+      "negative": 934279,
+      "true_positive": 78928,
+      "false_positive": 10519,
+      "recall": 0.7161925502472665,
+      "fpr": 0.01125894941446827,
+      "precision": 0.8823996333024026,
+      "miou_percent": 82.90052879483156,
+      "iou_percent": [
+        92.63749866117851,
+        90.68520697052466,
+        65.37888075279149
+      ],
+      "shadow_to_surface": 29745,
+      "shadow_to_cloud": 1532
+    },
+    {
+      "product": "S2A_MSIL1C_20180602T081011_N0206_R078_T36PWC_20180602T115947",
+      "group_id": "59b71cbd6e0a8dd40404706487ccbd2fcd8e85d825523d3a052bae1ab5f167b5",
+      "ap": null,
+      "confusion": [
+        [
+          1034723,
+          9761,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 0,
+      "recall": null,
+      "fpr": 0.0,
+      "precision": null,
+      "miou_percent": 49.53273578149594,
+      "iou_percent": [
+        99.06547156299187,
+        0.0,
+        null
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2B_MSIL1C_20180508T150719_N0206_R082_T18MYV_20180508T202621",
+      "group_id": "c7e7a075f679fb9b65a472b172abde8f2d95fd6b7261370e72a9d2522849fb43",
+      "ap": null,
+      "confusion": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1014557,
+          29927
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 29927,
+      "recall": null,
+      "fpr": 0.028652425503885172,
+      "precision": 0.0,
+      "miou_percent": 48.56737872480574,
+      "iou_percent": [
+        null,
+        97.13475744961148,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2B_MSIL1C_20180420T103019_N0206_R108_T31TGF_20180420T114307",
+      "group_id": "acee9848efe8570d1198119ec4aa2a53a904443472ca0646c320c7b2fab89e53",
+      "ap": null,
+      "confusion": [
+        [
+          1044484,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 0,
+      "recall": null,
+      "fpr": 0.0,
+      "precision": null,
+      "miou_percent": 100.0,
+      "iou_percent": [
+        100.0,
+        null,
+        null
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2A_MSIL1C_20180430T111621_N0206_R037_T40XDR_20180430T132750",
+      "group_id": "f55d113c0d378ebf46f9a0e9ec28337ea3301758e7d4d26a7e6113d556aa403e",
+      "ap": 0.9821855894985304,
+      "confusion": [
+        [
+          874090,
+          16577,
+          13175
+        ],
+        [
+          26730,
+          27595,
+          815
+        ],
+        [
+          2742,
+          259,
+          82501
+        ]
+      ],
+      "positive": 85502,
+      "negative": 958982,
+      "true_positive": 82501,
+      "false_positive": 13990,
+      "recall": 0.9649014058150687,
+      "fpr": 0.014588386434781882,
+      "precision": 0.8550123845747272,
+      "miou_percent": 71.6386178670704,
+      "iou_percent": [
+        93.65443998482826,
+        38.339168611759476,
+        82.92224500462349
+      ],
+      "shadow_to_surface": 2742,
+      "shadow_to_cloud": 259
+    },
+    {
+      "product": "S2A_MSIL1C_20180909T151911_N0206_R068_T25XEG_20180909T205122",
+      "group_id": "f4766b335797560339a903cef2910fbb6a4436a282b64d036c6354f68717a2c1",
+      "ap": null,
+      "confusion": [
+        [
+          1043989,
+          0,
+          495
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 495,
+      "recall": null,
+      "fpr": 0.0004739182218205353,
+      "precision": 0.0,
+      "miou_percent": 49.976304088908975,
+      "iou_percent": [
+        99.95260817781795,
+        null,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2A_MSIL1C_20180707T021601_N0206_R003_T51SXR_20180707T041118",
+      "group_id": "18e5a8b99775c466f1f4c3b18610d90ec94d16598d32bbb2361ae69249049020",
+      "ap": null,
+      "confusion": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          4,
+          1021783,
+          22697
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 22697,
+      "recall": null,
+      "fpr": 0.021730347233657958,
+      "precision": 0.0,
+      "miou_percent": 32.60886077080485,
+      "iou_percent": [
+        0.0,
+        97.82658231241456,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2A_MSIL1C_20180522T183921_N0206_R070_T12VVH_20180522T233949",
+      "group_id": "338616d4467f5a91aa9c8c34abcbe296dd7aca061c0f780d6861d590655e2f1f",
+      "ap": null,
+      "confusion": [
+        [
+          1044484,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 0,
+      "recall": null,
+      "fpr": 0.0,
+      "precision": null,
+      "miou_percent": 100.0,
+      "iou_percent": [
+        100.0,
+        null,
+        null
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2A_MSIL1C_20180317T045651_N0206_R119_T50XMG_20180317T075452",
+      "group_id": "f1712665f0fe8eec4694c7da49ce2dfabf6c2ebe1547ff7a6ba59a051366ec3a",
+      "ap": null,
+      "confusion": [
+        [
+          1044484,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 0,
+      "recall": null,
+      "fpr": 0.0,
+      "precision": null,
+      "miou_percent": 100.0,
+      "iou_percent": [
+        100.0,
+        null,
+        null
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2B_MSIL1C_20181001T165109_N0206_R026_T16UDV_20181001T221311",
+      "group_id": "ff26582f3cbe6eba262e621e7ea9de9dc72b2d8a821ecfddf74e74b249728286",
+      "ap": null,
+      "confusion": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1019046,
+          25438
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 25438,
+      "recall": null,
+      "fpr": 0.024354609548829852,
+      "precision": 0.0,
+      "miou_percent": 48.78226952255851,
+      "iou_percent": [
+        null,
+        97.56453904511702,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2A_MSIL1C_20180608T152641_N0206_R025_T18MUA_20180608T202221",
+      "group_id": "f3c0fdae99da17df642fb987b86059960905cabb5eda09b0d5e4c3d7172c8396",
+      "ap": null,
+      "confusion": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          9,
+          1028982,
+          15493
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 15493,
+      "recall": null,
+      "fpr": 0.01483316163770819,
+      "precision": 0.0,
+      "miou_percent": 32.83860738891165,
+      "iou_percent": [
+        0.0,
+        98.51582216673495,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2A_MSIL1C_20181114T054101_N0207_R005_T44UNA_20181114T093234",
+      "group_id": "79aa19a7b0464ac5ac354f17f9fe96b109c7550cde405ab4e7a304c2e361e16c",
+      "ap": null,
+      "confusion": [
+        [
+          1044484,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 0,
+      "recall": null,
+      "fpr": 0.0,
+      "precision": null,
+      "miou_percent": 100.0,
+      "iou_percent": [
+        100.0,
+        null,
+        null
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2A_MSIL1C_20181118T152621_N0207_R068_T20VPK_20181118T172424",
+      "group_id": "90c4becf227f62264ee7e5f1b31b05fbee8f59464f744a77e1ecfb16624fbd44",
+      "ap": null,
+      "confusion": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1018059,
+          26425
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 26425,
+      "recall": null,
+      "fpr": 0.025299573760823528,
+      "precision": 0.0,
+      "miou_percent": 48.735021311958825,
+      "iou_percent": [
+        null,
+        97.47004262391765,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2A_MSIL1C_20180922T185101_N0206_R113_T10SEE_20180922T225409",
+      "group_id": "0e28969b45fbf20e3aa6d65331a994c914ac07abfdc2593c6d55264d4cd7c53c",
+      "ap": null,
+      "confusion": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          159943,
+          870117,
+          14424
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 14424,
+      "recall": null,
+      "fpr": 0.013809689760685659,
+      "precision": 0.0,
+      "miou_percent": 27.76863982598106,
+      "iou_percent": [
+        0.0,
+        83.30591947794318,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    },
+    {
+      "product": "S2B_MSIL1C_20181111T094229_N0207_R036_T32NKF_20181111T131623",
+      "group_id": "ed188cfd4fad4684fafc74170d129ca0591b418d0c9df514b6929431f6d46fe3",
+      "ap": 0.8293342814344175,
+      "confusion": [
+        [
+          590083,
+          15298,
+          4028
+        ],
+        [
+          45230,
+          331658,
+          1139
+        ],
+        [
+          17965,
+          3617,
+          35466
+        ]
+      ],
+      "positive": 57048,
+      "negative": 987436,
+      "true_positive": 35466,
+      "false_positive": 5167,
+      "recall": 0.6216870004206984,
+      "fpr": 0.005232744198104991,
+      "precision": 0.8728373489528216,
+      "miou_percent": 76.09664222336595,
+      "iou_percent": [
+        87.7311166748934,
+        83.553264708698,
+        57.00554528650647
+      ],
+      "shadow_to_surface": 17965,
+      "shadow_to_cloud": 3617
+    },
+    {
+      "product": "S2A_MSIL1C_20181021T160311_N0206_R097_T20WNV_20181021T192258",
+      "group_id": "0876b85f78d99180dd199fef6b0e29b964106f55b1224e5ec9d05aa8443fe33b",
+      "ap": null,
+      "confusion": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1005478,
+          39006
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "positive": 0,
+      "negative": 1044484,
+      "true_positive": 0,
+      "false_positive": 39006,
+      "recall": null,
+      "fpr": 0.03734475587945818,
+      "precision": 0.0,
+      "miou_percent": 48.13276220602709,
+      "iou_percent": [
+        null,
+        96.26552441205418,
+        0.0
+      ],
+      "shadow_to_surface": 0,
+      "shadow_to_cloud": 0
+    }
+  ]
+}

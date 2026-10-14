@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "group_policy_checks": 160,
+  "independent_sklearn_AP_and_confusion": true,
+  "common_label_SHA_across_all_policies": true,
+  "bootstrap_scalar_replay_max_error": 0.0,
+  "CPU_new_model_calls": 0,
+  "all_frozen_base_and_cost_gates_passed": true
+}

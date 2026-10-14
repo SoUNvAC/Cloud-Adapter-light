@@ -1,0 +1,29 @@
+{
+  "status": "completed_fixed_patch_closed",
+  "passed": false,
+  "all_continuation_conditions": {
+    "mean_S_R_at_least_1pp": false,
+    "paired_group_CI_lower_gt_0": false,
+    "each_seed_S_R_gt_0": false,
+    "each_seed_S_macro_AP_not_below_O": false,
+    "each_seed_S_pooled_mIoU_loss_at_most_1pp": true,
+    "each_seed_S_macro_Shadow_recall_loss_at_most_1pp": false
+  },
+  "all_delivery_SHA_passed": true,
+  "delivery_files": 29,
+  "archive_bytes": 122777,
+  "archive_sha256": "e9ad322a99112530c1655aef3e4fa52ff542c5030867ed755710a9f254794ccd",
+  "main_network_calls": 9299,
+  "four_trainings": 4,
+  "steps_each": 1000,
+  "trainable_parameters_each": 21,
+  "paired_schedule_SHA_passed": true,
+  "frozen_base_state_bitwise_unchanged": true,
+  "CPU_group_policy_checks": 160,
+  "work_dirs_synced": false,
+  "large_score_caches_transferred": false,
+  "label_pixels_in_git": false,
+  "no_automatic_new_experiment": true,
+  "budget_deadline_beijing": "2026-10-20",
+  "utc": "2026-10-14T12:34:00.577734+00:00"
+}

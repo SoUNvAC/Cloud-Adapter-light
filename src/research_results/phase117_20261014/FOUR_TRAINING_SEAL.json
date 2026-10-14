@@ -1,0 +1,16 @@
+{
+  "models": {
+    "R11701": "b228788f4e0843cceb91650d5a24d5ce79f5ada696e71dab1273bf05b5757783",
+    "S11701": "b65ac3ca1ff06abb7f782e71644a4458d501ab71487c6b0ab2f975faf0f47bc8",
+    "R11702": "d06d8d444af1df650d418b7b78e7ec5f6e18c7c912ce3c4781d2566cc6db8240",
+    "S11702": "51f7a7835cb035ebe036307f415bee2ebf2d7a3c7f5e372bc2f5acabc0a65c0b"
+  },
+  "schedule_sha256": "15d15f942db909df42499688c77e03b0d6d0a008d96dc47e331907e6eb10a96d",
+  "code_sha256": "324830339a3777fddd8a5ef688139aaf40f22d14effa3aedfe4f5de83c0c0c73",
+  "training_calls": 8000,
+  "base_state_hashes": [
+    "2dd309e6012bc78438b6f9d630e1193d7f42c90cc13e0a43d0d6814d004b6d96",
+    "a8e54adf9a3850b9617df2f2b710f558a3c5b37e39939396c7ef5e398613f520"
+  ],
+  "no_development_evaluation_before_this_seal": true
+}

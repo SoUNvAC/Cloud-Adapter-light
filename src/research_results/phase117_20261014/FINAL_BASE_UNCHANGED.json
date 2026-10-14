@@ -1,0 +1,8 @@
+{
+  "bitwise_unchanged": true,
+  "state_dict_sha256": [
+    "2dd309e6012bc78438b6f9d630e1193d7f42c90cc13e0a43d0d6814d004b6d96",
+    "a8e54adf9a3850b9617df2f2b710f558a3c5b37e39939396c7ef5e398613f520"
+  ],
+  "all_base_gradients_none": true
+}
