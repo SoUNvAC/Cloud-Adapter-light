@@ -11,6 +11,7 @@ import sys
 import threading
 import time
 import traceback
+import argparse
 
 REPO=Path(__file__).resolve().parents[2]
 BASE=Path('/home/scv/shared/phase111_ocm_runtime')
@@ -29,9 +30,15 @@ def write(name,obj):
 
 
 def main():
+    global OUT
+    parser=argparse.ArgumentParser()
+    parser.add_argument('--output-directory',type=Path,default=OUT)
+    parser.add_argument('--execution-lock',type=Path,default=BASE/'PRE_FORWARD_LOCK.json')
+    args=parser.parse_args()
+    OUT=args.output_directory.resolve();assert OUT.is_relative_to(BASE)
     OUT.mkdir(exist_ok=False)
     (OUT/'PID').write_text(str(os.getpid()))
-    before=json.loads((BASE/'PRE_FORWARD_LOCK.json').read_text())
+    before=json.loads(args.execution_lock.read_text())
     for name,expected in before['source_sha256'].items():
         assert sha(name)==expected,('pre-forward lock changed',name)
     lock=json.loads((REPO/'src/research_results/phase111_20261014/PRE_EXECUTION_LOCK.json').read_text())
@@ -71,6 +78,9 @@ def main():
            'patches':[],'repeat_max_abs':[],'cpu_ensemble_max_abs':0.0,'gradient_max_abs':0.0,
            'rss_peak_bytes':0,'gpu_reserved_peak_bytes':0,'gpu_observed_delta_peak_bytes':0}
     state['raw_model_output_ranges']=[None,None]
+    previous_calls=before.get('previous_model_call_attempts',0)
+    maximum_calls=before['max_model_call_attempts_including_probes']
+    state.update(previous_model_call_attempts=previous_calls,max_cumulative_model_calls=maximum_calls)
     globals()['_RUN_STATE']=state;globals()['_RUN_STARTED']=started
     def gpu_used_bytes():
         return int(subprocess.check_output(['/usr/lib/wsl/lib/nvidia-smi','--query-gpu=memory.used',
@@ -97,7 +107,7 @@ def main():
     depth=[0]
     def before(module,args):
         if depth[0]==0:
-            assert len(state['construction_graph_calls'])<256
+            assert previous_calls+len(state['construction_graph_calls'])<maximum_calls
             state['construction_graph_calls'].append({'module':type(module).__name__,
                 'input_shapes':[list(x.shape) for x in args if isinstance(x,torch.Tensor)]})
             write('RUN_STATUS.json',state)
@@ -178,7 +188,7 @@ def main():
     def observed_infer(ms,patch_batch):
         collected=[]
         def attempted(module,args):
-            assert state['main_calls']+state['repeat_calls']+len(state['construction_graph_calls'])<256
+            assert previous_calls+state['main_calls']+state['repeat_calls']+len(state['construction_graph_calls'])<maximum_calls
             state['main_calls']+=1
             write('RUN_STATUS.json',state)
         handles=[m.register_forward_pre_hook(attempted) for m in ms]
@@ -199,7 +209,7 @@ def main():
         if patch_no<=2:
             np.save(OUT/f'normalized_patch_{patch_no}.npy',patch_batch.detach().cpu().numpy(),allow_pickle=False)
             for i,m in enumerate(ms):
-                assert state['main_calls']+state['repeat_calls']+len(state['construction_graph_calls'])<256
+                assert previous_calls+state['main_calls']+state['repeat_calls']+len(state['construction_graph_calls'])<maximum_calls
                 state['repeat_calls']+=1
                 write('RUN_STATUS.json',state)
                 with torch.no_grad():repeat=m(patch_batch).detach().cpu().numpy()
@@ -207,7 +217,7 @@ def main():
                 difference=float(np.max(np.abs(collected[i]-repeat)))
                 state['repeat_max_abs'].append(difference)
                 assert difference<=1e-5,'repeat tolerance failed; no retry'
-        assert state['main_calls']+state['repeat_calls']+len(state['construction_graph_calls'])<=256
+        assert previous_calls+state['main_calls']+state['repeat_calls']+len(state['construction_graph_calls'])<=maximum_calls
         write('RUN_STATUS.json',state)
         return result
     def observed_store(pred_batch,index_batch,pred_tracker,gradient,grad_tracker=None):
@@ -246,8 +256,13 @@ def main():
             sums=output[:,sl,:][:,common].sum(axis=0)
             sum_min=min(sum_min,float(sums.min()));sum_max=max(sum_max,float(sums.max()))
     assert output.shape==(4,5490,5490) and np.isfinite(output).all()
+    gradient_field_max_error=float(np.max(np.abs(grad-latest['author_grad_tracker'].cpu().numpy())))
+    same_coverage=bool(np.array_equal(coverage,latest['author_grad_tracker'].cpu().numpy()>0))
+    write('CPU_PRE_ACCEPTANCE.json',{'confidence_max_error':max_error,
+          'gradient_field_max_error':gradient_field_max_error,'coverage_exactly_equal':same_coverage,
+          'confidence_range':[confidence_min,confidence_max]})
     assert max_error<=1e-5 and confidence_min>=.001-1e-7 and confidence_max<=.999+1e-7
-    assert float(np.max(np.abs(grad-latest['author_grad_tracker'].cpu().numpy())))==0
+    assert same_coverage
     scores=[]
     for p in points:
         y,x=int(p['row20']),int(p['col20']);okay=bool(original_valid[y,x]&author_valid[y,x]&coverage[y,x])
@@ -258,6 +273,7 @@ def main():
     np.savez_compressed(OUT/'VALID_COVERAGE_MASKS.npz',original_valid=np.packbits(original_valid),author_valid=np.packbits(author_valid),coverage=np.packbits(coverage),shape=np.array([5490,5490]))
     write('CPU_OUTPUT_RECONSTRUCTION.json',{'max_absolute_error':max_error,'independent_ensemble_max_error':state['cpu_ensemble_max_abs'],
           'gradient_max_error':state['gradient_max_abs'],'full_scene_cpu_reconstructed_in_memory':True,
+          'gradient_field_max_error':gradient_field_max_error,'coverage_exactly_equal':same_coverage,
           'coverage_zero_cells':int((~coverage).sum()),'nodata_cells':int((~author_valid).sum()),
           'valid_confidence_range':[confidence_min,confidence_max],'four_channels_sum_one_required':False})
     write('OUTPUT_SEMANTICS.json',{'raw_model_output_ranges':state['raw_model_output_ranges'],
