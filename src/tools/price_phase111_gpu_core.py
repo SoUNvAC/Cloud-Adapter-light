@@ -17,7 +17,16 @@ def main():
     resolved = json.loads((base / "PIP_RESOLUTION.json").read_text(encoding="utf-8"))
     items = {x["metadata"]["name"].lower().replace("_", "-"): x for x in resolved["install"]}
     torch = items["torch"]
-    direct = {Requirement(s).name.lower().replace("_", "-") for s in torch["metadata"]["requires_dist"]}
+    direct_requirements = [Requirement(s) for s in torch["metadata"]["requires_dist"]]
+    direct = {r.name.lower().replace("_", "-") for r in direct_requirements}
+    toolkit = next(r for r in direct_requirements if r.name == "cuda-toolkit")
+    toolkit_required = set()
+    for spec in items["cuda-toolkit"]["metadata"]["requires_dist"]:
+        req = Requirement(spec)
+        if any(req.marker is None or req.marker.evaluate({**resolved["environment"], "extra": extra})
+               for extra in toolkit.extras):
+            toolkit_required.add(req.name.lower().replace("_", "-"))
+    direct.update(toolkit_required)
     gpu_names = {n for n in items if n in direct and (n.startswith("nvidia-") or n == "triton")}
     gpu_names.add("torch")
     old = json.loads((base / "EXISTING_PACKAGES.json").read_text(encoding="utf-8"))
@@ -44,12 +53,14 @@ def main():
         rows.append(row)
         total += row["mandatory_library_payload_bytes"]
         print(json.dumps({"package": name, "core_new_library_lower_bound_bytes": total}), flush=True)
-    result = {"scope": "Only torch and resolved direct nvidia/triton dependencies; excludes rasterio/hf-xet and other packages",
+    result = {"scope": "Only torch and required nvidia/triton dependencies, including its explicit cuda-toolkit extras; excludes rasterio/hf-xet and other packages",
               "environment_cap_bytes": 4000000000,
               "core_new_library_lower_bound_bytes": total,
               "gate": "STOP_ENVIRONMENT_BUDGET" if total > 4000000000 else "incomplete_core_pricing",
               "estimate_type": "Uncompressed library logical bytes declared by official wheel central directories; not actual installation measurement",
               "priced_packages": rows, "torch_direct_dependency_names": sorted(direct),
+              "torch_cuda_toolkit_extras": sorted(toolkit.extras),
+              "toolkit_required_dependency_names": sorted(toolkit_required),
               "excluded_costs": ["all non-core dependencies", "Python/runtime files", "installation caches", "unpack temporaries"],
               "model_download_or_forward": False, "installation": False}
     (out / "ENVIRONMENT_CORE_PRICE.json").write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
