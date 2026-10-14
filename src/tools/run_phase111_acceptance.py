@@ -157,6 +157,8 @@ def main():
             del native,native_valid
     image=np.stack(arrays);original_valid=np.logical_and.reduce(valid)
     del arrays,valid
+    checked_overlap,checked_patch=cm.check_patch_size(image,0,1000,300)
+    assert (checked_overlap,checked_patch)==(300,1000),'Author helper would alter frozen patch configuration'
     coordinate=Path('/home/scv/shared/phase103_positions_20261013/coordinate_metadata.csv')
     assert sha(coordinate)=='c2f029a349096738935d9239585c67ca6dfc5a4c71017f5e8634af982b86ce68'
     with coordinate.open(encoding='utf-8-sig') as f:
