@@ -18,3 +18,7 @@
 完整补跑仍需128主+4重复+11构建=143，累计297，比本次明确批准286多11；因此等待仅新增11次构建额度授权。独立输出目录及恢复锁已准备，全部模型/输入/阈值/精度/资源验收不变，不训练、不读标签、不运行其他场景。
 
 若获新增授权：采用--authorized-construction-retry生成PRE_FORWARD_RECOVERY_RETRY_LOCK.json（前154、上限297），输出single_scene_recovery_retry_20261014，复用首次INPUT_ACCEPTANCE及两个归一化patch的SHA。此段为待批准方案。
+
+
+### 2026-10-14T12:19:51.181093+08:00 新增构建额度已获授权
+用户明确回复“允许累计297次完成恢复”。前两次累计154次保留；按既定修复追加128主/4重复/11构建=143，累计上限297。在single_scene_recovery_retry_20261014独立输出，PRE_FORWARD_RECOVERY_RETRY_LOCK.json另行封存；所有输入、模型、资源门和验收标准不变，禁止自动再次重跑及其他15景。
