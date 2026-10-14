@@ -1,5 +1,5 @@
-sampling_stratum,sampled_points,reviewed,not_reviewed,clearly_interpretable,mixed_or_scale_question,unable_to_determine,possible_reference_conflict,reason
-FN,12,0,12,,,,,"No sealed review; categories unassessed, not zero"
-FP,17,0,17,,,,,"No sealed review; categories unassessed, not zero"
-TP,8,0,8,,,,,"No sealed review; categories unassessed, not zero"
-TN,10,0,10,,,,,"No sealed review; categories unassessed, not zero"
+stratum,sampled,accepted_final_candidates,not_accepted,clearly_interpretable_candidate,mixed_or_scale_question,unable_to_determine,possible_reference_disagreement,categories_overlap
+FN,12,12,0,7,0,2,3,True
+FP,17,17,0,8,1,5,5,True
+TP,8,8,0,6,0,1,2,True
+TN,10,10,0,7,0,1,0,True

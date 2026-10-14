@@ -1,0 +1,37 @@
+{
+  "original_raw_opinion_SHA_preserved": "552f12c66a15f34a306104a70b2ad9bea7a7717d2261f9e9292c1f58a699b9a6",
+  "accepted_candidates": 47,
+  "original_complete_records": 1,
+  "original_draft_records": 46,
+  "missing_evidence": 24,
+  "missing_larger_context": 46,
+  "missing_human_arbitration": 46,
+  "point_class_counts": {
+    "Cloud": 8,
+    "Shadow": 14,
+    "无法判断": 9,
+    "Surface": 15,
+    "混合": 1
+  },
+  "clear_self_report_high_homogeneous_concrete": 28,
+  "mixed_or_scale_question": 1,
+  "unable_to_determine": 9,
+  "possible_class_reference_disagreement": 10,
+  "categories_overlap_not_partition": true,
+  "FN_Shadow_candidates": 7,
+  "FN_Shadow_candidate_groups": [
+    "19FDV",
+    "33VVE",
+    "40UEE",
+    "44SKJ",
+    "54TWN"
+  ],
+  "FN_Shadow_with_written_evidence": 2,
+  "FN_Shadow_missing_written_evidence": 5,
+  "unknown_candidate_near_RGB_native_saturation_count": 0,
+  "unknown_candidate_near_RGB_native_nodata_count": 0,
+  "display_clipping_not_quantified": true,
+  "reviewer_identity_and_expertise_unprovided": true,
+  "no_removal_or_label_edit_or_metrics_recompute": true,
+  "hypothesis_status": "one_unvalidated_candidate_only"
+}

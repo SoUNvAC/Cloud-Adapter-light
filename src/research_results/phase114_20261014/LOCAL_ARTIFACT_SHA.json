@@ -193,5 +193,14 @@
     "A033_10240_FALSE.png": "71e6f0e017805c92099e4aabd8fdc28e864322de1c9898549e6619d7dbfe056b"
   },
   "private_reveal_sha256": "0e82edcbe2520ab13db754a0cd011f8d2ccc3efb15c16c752d8f084531829b6d",
-  "opinions_sealed": false
+  "opinions_sealed": true,
+  "current_reveal_status_sha256": "41cf07f7fe27dd89c9d20523961b00317b4584cadd3202ce5ddd010c757a2507",
+  "original_opinion_file_sha256": "552f12c66a15f34a306104a70b2ad9bea7a7717d2261f9e9292c1f58a699b9a6",
+  "final_candidates_accepted": 47,
+  "original_form_complete_records": 1,
+  "original_draft_records": 46,
+  "final_acceptance_lock_sha256": "5fb3318979112ffffb6d89e0796b0aee591eae89374255075ff821caf3ed38bb",
+  "private_final_reveal_sha256": "ad471da3d7845983886aa32fc687f71b7e8a826791193ed2b952037692a5ac97",
+  "private_final_reveal_page_sha256": "fe63f9e985ee627c9046bc0fff32306b360d4bf2165324310ab8b1b7fad9f962",
+  "original_blind_page_unchanged": true
 }

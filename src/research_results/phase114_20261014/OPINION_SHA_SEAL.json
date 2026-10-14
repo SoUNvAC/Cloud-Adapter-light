@@ -1,0 +1,9 @@
+{
+  "utc": "2026-10-14T08:08:29.143798+00:00",
+  "opinion_sha256": "552f12c66a15f34a306104a70b2ad9bea7a7717d2261f9e9292c1f58a699b9a6",
+  "reviewed": 1,
+  "not_reviewed_or_draft": 46,
+  "before_private_reveal_read": true,
+  "sampling_lock_sha256": "22a171263ccb0fbd9a78a17cc67a2ad6c80e72bd30b02e9c32ee2247988bf4a2",
+  "AI_opinion_is_not_human_confirmation": false
+}

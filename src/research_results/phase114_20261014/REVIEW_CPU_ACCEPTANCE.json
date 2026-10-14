@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "sealed_submission_SHA_unchanged": true,
+  "accepted_candidate_IDs_equal_revealed_IDs": true,
+  "all47_anonymous_records_preserved": true,
+  "strata_sample_total": 47,
+  "reviewed_plus_pending": 47,
+  "public_summary_has_no_point_labels_or_scores": true,
+  "no_forward_fit_download_threshold_search_label_edit_or_performance_recompute": true
+}

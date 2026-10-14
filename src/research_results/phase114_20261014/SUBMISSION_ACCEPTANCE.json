@@ -1,0 +1,24 @@
+{
+  "status": "user_final_candidates_accepted_missing_fields_preserved",
+  "original_file_SHA": "552f12c66a15f34a306104a70b2ad9bea7a7717d2261f9e9292c1f58a699b9a6",
+  "records": 47,
+  "accepted_final_candidates": 47,
+  "schema_complete_original_records": 1,
+  "draft": 46,
+  "all_candidate_classes_provided": true,
+  "missing_fields_all_final_candidates": {
+    "point_candidate_class": 0,
+    "cell_20m_state": 0,
+    "visible_evidence": 24,
+    "confidence": 0,
+    "larger_context_needed": 46,
+    "human_arbitration_needed": 46
+  },
+  "review_mode_declared": "human",
+  "reviewer_id_provided": false,
+  "reviewer_experience_provided": false,
+  "human_expertise_not_assumed": true,
+  "all_final_candidates_revealed_after_final_acceptance_lock": true,
+  "original_draft_statuses_preserved": true,
+  "missing_fields_marked_not_provided": true
+}
