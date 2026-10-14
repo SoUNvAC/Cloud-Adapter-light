@@ -1,0 +1,24 @@
+{
+  "comparison": "Source_spectral minus Omni within fixed Omni bins",
+  "n_groups": 6,
+  "minimum_groups": 4,
+  "support_pass": true,
+  "passed": false,
+  "seed": 113014,
+  "resamples": 10000,
+  "post_hoc_descriptive": true,
+  "rule": "at least4 eligible groups AND mean>=2pp AND 95% CI lower>0",
+  "total_comparable_pairs_all_groups": 30967,
+  "mean_delta_conditional_AUC_pp": -11.131946221953894,
+  "CI95_pp": [
+    -23.555696281820207,
+    -1.2763609549633628
+  ],
+  "width_pp": 22.279335326856845,
+  "macro_conditional_AUC": {
+    "Source_spectral": 0.7627312409000222,
+    "Omni": 0.8740507031195609,
+    "Source": 0.7115925216191897
+  },
+  "conclusion": "未满足固定补充线索判据，关闭本组补充评分假说"
+}

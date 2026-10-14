@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "all30_fixed_Omni_marginals_equal_Phase112": true,
+  "strata_partition": 8567,
+  "Omni_missed_shadow_recovered_by_spectral": 31,
+  "Omni_missed_shadow_still_missed": 44,
+  "Omni_detected_shadow_missed_by_spectral": 113,
+  "new_negative_false_positives_on_Omni_correct_rejections": 241,
+  "new_OR_AND_metrics_computed": false,
+  "new_model_calls": 0
+}

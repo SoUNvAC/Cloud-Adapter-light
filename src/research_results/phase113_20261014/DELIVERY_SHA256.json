@@ -1,0 +1,18 @@
+{
+  "src/research_results/phase113_20261014/.gitattributes": "f06202a408fef9b9ea69bb6b1cb8160dbb0378c5bb67a444d510d231813824c8",
+  "src/research_results/phase113_20261014/INPUT_BIN_LOCK.json": "7289f403e418ecc2d4339a2ef2ad8b0f846c02b70597ef042692c6bba58152b4",
+  "src/research_results/phase113_20261014/SYNTHETIC_CPU_TESTS.json": "34a92876eae71ccf48e6c3c614318d4d8e8609add12a55f1877b1d1a0104a1a0",
+  "src/research_results/phase113_20261014/PRIOR_AP_REPLAY.json": "fbb7821a235cb72e462aa5c34018b4f9bb2bc08147e4ff179bf32a27fc8972a9",
+  "src/research_results/phase113_20261014/per_bin_support_and_AUC.csv": "00ed76dd81bdd21605e88acd8189377b4fb3f159c08d451a6291956466c832d3",
+  "src/research_results/phase113_20261014/per_group_conditional_AUC.csv": "1788db66a253f6d7ca409e0be491ad3ece3109f3272d609b8916d31ae18de10e",
+  "src/research_results/phase113_20261014/fixed_error_flow_per_group.csv": "7156ddb904ff840d4077226dc31229d5fdd7af8eb43b83baa48deb1492e650a6",
+  "src/research_results/phase113_20261014/PRIMARY_DIAGNOSTIC.json": "7f0eaf83c2bdefa761c1986b4cb530ffd41fea48e0876e76dc98252c8f6e6bb4",
+  "src/research_results/phase113_20261014/fixed_error_flow_pooled.csv": "de2f03e62e736f6e8b02c1ad14c556048267bf363b6993859adf6bc4f527f104",
+  "src/research_results/phase113_20261014/CPU_ACCEPTANCE.json": "9c45203edc3e603ce90a24e4eaead07ef79ca0df910f5fe6cbfe45b55f72c564",
+  "src/research_results/phase113_20261014/COST.json": "6c0cb16d7d098cd33c470591f7365dd8e780f5d1b67ccc1b7084727bf9bf9419",
+  "src/research_results/phase113_20261014/CPU_ERROR_FLOW_ACCEPTANCE.json": "9f7daf111c13dd2d59d03447dbc669b6a61391de39f7e37f412218fa4aa84d61",
+  "src/research_results/phase113_20261014/EXECUTION_STATUS.json": "0f1204330065ac540993a4a239c968057cd5cc10bca5f71e8a166cb57e49bafe",
+  "src/research_results/phase113_20261014/README.md": "92a6063d7b6312345ec78bcb8e737e69ca55acec25cdf4203530ea6d2dfeda7a",
+  "src/tools/phase113.py": "ebbeb7093a01d256b5735a959a2c6c69e8f40f661d33d68ee7bf90e33e8ba2b1",
+  "src/research_plans/PHASE113_STRONG_BASE_COMPLEMENT_DIAGNOSTIC_20261014.md": "41a4b8a9c7c737dc729cb3e9667981144107b3aaa3c6b0d46d667d91213c9144"
+}

@@ -1,0 +1,16 @@
+{
+  "utc": "2026-10-14T07:15:39.681309+00:00",
+  "status": "completed_complement_hypothesis_closed",
+  "eligible_groups": 6,
+  "primary_rule_passed": false,
+  "existing_Source_spectral_Omni_complement_hypothesis_closed": true,
+  "Phase112_G7_increment_failure_remains_closed": true,
+  "Phase105_limited_increment_fact_unchanged": true,
+  "new_forward_count": 0,
+  "new_fit_count": 0,
+  "new_download_bytes": 0,
+  "threshold_scans": 0,
+  "new_fusion_authorized": false,
+  "other_pool_pixels_accessed": false,
+  "work_dirs_synced": false
+}

@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "pair_credit_exact_integer_comparison": true,
+  "independent_brute_force_pairs_all_scores_all50_bins": true,
+  "total_pairs_all_groups": 30967,
+  "NA_no_shadow_groups": 2,
+  "bootstrap_scalar_max_absolute_error": 2.220446049250313e-15,
+  "old_AP_three_scores_reproduced": true,
+  "synthetic_tests": {
+    "fixed_bin_boundaries": true,
+    "hand_pair_tie_case": true,
+    "random_exact_integer_pair_replays": 10,
+    "model_calls": 0
+  },
+  "same_pairs_same_groups_all_scores": true
+}
