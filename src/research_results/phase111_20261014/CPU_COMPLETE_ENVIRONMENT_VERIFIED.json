@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "independent_zipfile_packages": 126,
+  "uncompressed_declared_bytes": 7587769316,
+  "active_dependency_packages": 126,
+  "checked_active_requirements": 233,
+  "torch": "2.11.0+cu128",
+  "torchvision": "0.26.0+cu128",
+  "source": "fixed pip resolution and official wheel directory metadata; no runtime imports or model calls",
+  "installation_content_verified_here": false
+}

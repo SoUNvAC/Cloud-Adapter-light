@@ -32,6 +32,8 @@ def main():
     OUT.mkdir(exist_ok=False)
     (OUT/'PID').write_text(str(os.getpid()))
     lock=json.loads((REPO/'src/research_results/phase111_20261014/PRE_EXECUTION_LOCK.json').read_text())
+    for name,expected in lock['source_files_sha256'].items():
+        assert sha(REPO/name)==expected,('frozen input identity changed',name)
     assets=json.loads((BASE/'ASSET_VERIFICATION.json').read_text())
     assert assets['status']=='all_files_verified'
     assert json.loads((BASE/'RUNTIME_IMPORT_ACCEPTANCE.json').read_text())['dependency_check']=='passed'

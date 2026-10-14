@@ -1,0 +1,20 @@
+{
+  "updated_beijing": "2026-10-14T10:34:22.877906+08:00",
+  "status": "user_authorized_environment_cap_override_installing",
+  "environment_cap_override": "user explicitly allowed exceeding former4GB environment cap",
+  "driver": "576.88",
+  "relocked_torch": "2.11.0+cu128",
+  "relocked_torchvision": "0.26.0+cu128",
+  "resolved_packages": 126,
+  "cpu_dependency_closure_checked": 233,
+  "estimated_uncompressed_environment_bytes": 7587769316,
+  "estimated_additional_peak_with_safety_and_selected_inputs_bytes": 8335969118,
+  "physical_host_reserve_bytes": 4000000000,
+  "installer_pid": 2202,
+  "runtime": "/home/scv/shared/phase111_ocm_runtime/runtime_cuda128",
+  "already_verified_installed_torch_wheel_sha256": "72d53f3176a69cc20710c4ecb95f7dc4c6ba10c4e4eda45b8396ee79ee40f75a",
+  "model_calls": 0,
+  "labels_accessed": false,
+  "performance_evaluated": false,
+  "original_conda_not_installation_target": true
+}
