@@ -1,6 +1,8 @@
 """Complete environment payload and sequential-install peak estimate, no install."""
 import argparse
 import json
+import time
+import urllib.error
 from pathlib import Path
 from price_phase111_wheels import directory_price
 
@@ -30,7 +32,16 @@ def main():
             row = dict(old_rows[url], reused_directory_evidence=str(previous_base))
             dest.write_text(json.dumps(row, indent=2) + "\n", encoding="utf-8")
         else:
-            row = directory_price(url, out, name)
+            for attempt in range(3):
+                try:
+                    row = directory_price(url, out, name)
+                    break
+                except urllib.error.URLError as exc:
+                    with (out / "metadata_network_retries.jsonl").open("a") as retry_log:
+                        retry_log.write(json.dumps({"name":name,"attempt":attempt+1,"error":str(exc)})+"\n")
+                    if attempt == 2:
+                        raise
+                    time.sleep(attempt+1)
             row.update(version=item["metadata"]["version"],
                        wheel_declared_sha256=item["download_info"]["archive_info"]["hashes"]["sha256"])
             dest.write_text(json.dumps(row, indent=2) + "\n", encoding="utf-8")
