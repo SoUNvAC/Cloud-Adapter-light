@@ -102,9 +102,15 @@ def main():
     pre=torch.nn.modules.module.register_module_forward_pre_hook(before)
     post=torch.nn.modules.module.register_module_forward_hook(after,always_call=True)
     models=[]
+    with (BASE/'assets/vendor/omnicloudmask/model_download_links.csv').open() as f:
+        author_index=list(csv.DictReader(f))
+    bindings_models=[]
     try:
         for w in lock['weights']:
-            name=w['google_drive_filename'].split('_509_',1)[1].rsplit('_PT_state.pth',1)[0]
+            matching=[r for r in author_index if r['file_name']==w['google_drive_filename'] and r['version']=='1']
+            assert len(matching)==1 and matching[0]['google_drive_id']==w['google_drive_file_id'] and matching[0]['model_library']=='fastai'
+            name=matching[0]['timm_model_name']
+            bindings_models.append({'timm_model_name':name,'weight_filename':w['hf_filename'],'model_library':'fastai'})
             models.append(mu.load_model_from_weights(model_name=name,weights_path=BASE/'assets/weights'/w['hf_filename'],
                           model_library='fastai',device=torch.device('cuda'),dtype=torch.float32,
                           in_chans=3,n_out=4,compile_models=False,patch_size=1000,batch_size=1))
@@ -116,6 +122,7 @@ def main():
     assert head_channels==[4,4]
     assert all(p.dtype==torch.float32 for model in models for p in model.parameters())
     write('MODEL_LOAD_ACCEPTANCE.json',{'models':2,'state_dict_strict_load':'passed',
+          'architecture_bindings':bindings_models,
           'declared_class_order':['Clear','Thick Cloud','Thin Cloud','Shadow'],'shadow_channel':3,
           'semantic_identity_basis':'fixed author V1 ensemble and source documentation; not inferred from labels',
           'actual_last_conv_output_channels':head_channels,
