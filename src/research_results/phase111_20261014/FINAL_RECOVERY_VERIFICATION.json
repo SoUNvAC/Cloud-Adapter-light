@@ -1,0 +1,22 @@
+{
+  "utc": "2026-10-14T04:23:12.855861+00:00",
+  "status": "passed",
+  "attempt_call_counts": [
+    143,
+    11,
+    143
+  ],
+  "cumulative_calls": 297,
+  "cumulative_main": 256,
+  "cumulative_repeats": 8,
+  "cumulative_construction": 33,
+  "cumulative_model_phase_wall_seconds": 216.1143088889985,
+  "host_free_after_bytes": 13343952896,
+  "score_sha256": "05d1f3e45d038441b0f7527b9349c67d1a0853b497da59aa18a7558ff610f451",
+  "input_acceptance_and_two_normalized_patches_equal_first_attempt": true,
+  "first_two_status_records_unchanged": true,
+  "all_attempt_processes_exited": true,
+  "labels_accessed": false,
+  "performance_evaluated": false,
+  "raw_arrays_or_scores_copied_to_git": false
+}

@@ -1,8 +1,8 @@
 {
   "src/research_results/phase111_20261014/PRE_EXECUTION_LOCK.json": "b0f9081bf1e74ec80cbd1ff54776c4989a3505564fc87028fcd0be2c3ae6f723",
-  "src/research_results/phase111_20261014/EXECUTION_STATUS.json": "a6afd4c10cdb0dca719aa4afcb1a1431fabc938925babc08f3e96ae1df208177",
-  "src/research_results/phase111_20261014/RUNTIME_DECISION.md": "ddaf2bc3b5cf6c9507b63a661973de454284b295235ea972c73ef4d6113bd70a",
-  "src/research_results/phase111_20261014/README.md": "5fff339daf566817a461cd824a8c7d2b1e54d3f905bc58948efbd7cbbcba1ee1",
+  "src/research_results/phase111_20261014/EXECUTION_STATUS.json": "205a571f473ad3f00bd957eaf4bcae7725a9f0e83dc0358e85aaa9e1eb7bc9ba",
+  "src/research_results/phase111_20261014/RUNTIME_DECISION.md": "68d05be9a8d913678d82b83feccfca178fa78c9f46fa52a3af7d1350670ddadb",
+  "src/research_results/phase111_20261014/README.md": "68d05be9a8d913678d82b83feccfca178fa78c9f46fa52a3af7d1350670ddadb",
   "src/research_results/phase111_20261014/.gitattributes": "f06202a408fef9b9ea69bb6b1cb8160dbb0378c5bb67a444d510d231813824c8",
   "src/research_results/phase111_20261014/INITIAL_SSH_BLOCKED_EXECUTION_STATUS.json": "dc42b4b2ab96e4f0eff7d5f2ac42cb8a52635f9c2518a7c832e4b652e5d01996",
   "src/research_results/phase111_20261014/INITIAL_SSH_BLOCKED_RUNTIME_DECISION.md": "a7ebbad540614f1489572c5bed095340972236acad4a712496e471d171bae2af",
@@ -28,6 +28,8 @@
   "src/research_results/phase111_20261014/PIP_CHECK.txt": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09",
   "src/research_results/phase111_20261014/FINAL_ENVIRONMENT_PROBE.json": "3a157c0ab623aa720c31024d2962b9d63431f483363dc470260067f6a83727b6",
   "src/research_results/phase111_20261014/SOFTWARE_ACCEPTANCE.json": "7093045cf1b4754c51d547520fe283d2d92ac2cb51bd8bfcb866aea5a357a8e0",
+  "src/research_results/phase111_20261014/FINAL_RECOVERY_VERIFICATION.json": "103c8fba3fc0a6bf93e4e3ae23dfbf464007f3c98a4dfaac8d06e3d1da732c3f",
+  "src/research_results/phase111_20261014/INTERRUPTED_RECOVERY_DECISION.md": "ddaf2bc3b5cf6c9507b63a661973de454284b295235ea972c73ef4d6113bd70a",
   "src/research_results/phase111_20261014/first_attempt/CONSTRUCTION_CALLS.json": "19d5142fe05128a1ecee5645ac027f0668264b9b5052ea3dc8e69c2ac7a95fba",
   "src/research_results/phase111_20261014/first_attempt/INPUT_ACCEPTANCE.json": "e0c69d754cf44e15e602bce38a12c4c8760a54caaf581d7bafccb8d8206fca46",
   "src/research_results/phase111_20261014/first_attempt/MODEL_LOAD_ACCEPTANCE.json": "ef91381bebb132b411cbea2f75342066da228ca10eae3bcb1fad542f6f736f66",
@@ -37,6 +39,14 @@
   "src/research_results/phase111_20261014/recovery_attempt_1/RUN_STATUS.json": "d644dc2a7c2d78d4b508767dfccf024640a838ceb5ab8826c67d2cf690ab9a6e",
   "src/research_results/phase111_20261014/recovery_attempt_1/FAILURE.txt": "1d73a9bb7f2e2136a19acce118b14295f04b54fbacbdd301288de2926919a725",
   "src/research_results/phase111_20261014/recovery_attempt_1/PRE_FORWARD_RECOVERY_LOCK.json": "a9697fc90666810f7c8707a927855dfc040e00f2968475bbc8e9184d374626a7",
+  "src/research_results/phase111_20261014/recovery_success/RUN_STATUS.json": "87765e8f11b11b4fbd0b89f662fd264eb76d34d2233060884de5da7bc756e9bb",
+  "src/research_results/phase111_20261014/recovery_success/CPU_PRE_ACCEPTANCE.json": "acfd29f8ee327a1ef3ef9236559255047467c8120b1025aae39b7a8d285a6259",
+  "src/research_results/phase111_20261014/recovery_success/CPU_OUTPUT_RECONSTRUCTION.json": "4c17795fac256994a2299e5229243202519e9e051834383718e2de3a6de6fb96",
+  "src/research_results/phase111_20261014/recovery_success/OUTPUT_SEMANTICS.json": "dad3dc2242aa8a6c85e68589bd9cb2f14a110ce26624464fc7b814141e251f38",
+  "src/research_results/phase111_20261014/recovery_success/MODEL_LOAD_ACCEPTANCE.json": "ef91381bebb132b411cbea2f75342066da228ca10eae3bcb1fad542f6f736f66",
+  "src/research_results/phase111_20261014/recovery_success/INPUT_ACCEPTANCE.json": "e0c69d754cf44e15e602bce38a12c4c8760a54caaf581d7bafccb8d8206fca46",
+  "src/research_results/phase111_20261014/recovery_success/SYNTHETIC_INPUT_OPERATOR_CHECK.json": "46523819d6d2783a7d0060de1c4aa97b7a2a3b3b2379b81d8c277966090321c1",
+  "src/research_results/phase111_20261014/recovery_success/PRE_FORWARD_RECOVERY_RETRY_LOCK.json": "b7dc06e8cc090487748379442a6aa5d3761ab95bc0ec5707a0dd53ae9c39f36b",
   "src/tools/prepare_phase111_lock.py": "932ed208294a87f0fd9fdd49f2d630ae587178b97bee09a8e249f65e77bb5df4",
   "src/tools/phase111_resource_gate.py": "b5bef6afe99bee9103e35ca735e5e907b843dd4482882923fd90006b7aa64b36",
   "src/tools/price_phase111_wheels.py": "70930b7fd825d36b4e8546efffaacf84ec8fa608ddf7156d82ca877a48488fc3",
@@ -52,5 +62,5 @@
   "src/tools/diagnose_phase111_gradient.py": "778596c72d92d6dfe0d32af6c51ff503882a1208dbbcc40812e4a29811ef83ea",
   "src/research_plans/PHASE111_OCM_RUNTIME_ACCEPTANCE_20261014.md": "9af3b5b208e246306a224fd8ed2802fc7e6675be04b50be2f04071d1e52e4056",
   "src/research_plans/PHASE111_ENVIRONMENT_RESUME_20261014.md": "dcfe7ad30a6d1132206bb011021b3b6c8acbeae7a29230050deaff1ec9c8f79d",
-  "src/research_plans/PHASE111_CPU_VERIFIER_RECOVERY_20261014.md": "6415cca31951d5c425580b799d6f3e5c0937b1e6669dba3d80f07476f05c15bf"
+  "src/research_plans/PHASE111_CPU_VERIFIER_RECOVERY_20261014.md": "c30c0f72f468f74e4cc9e87223e98a0d0c1b7e437aacce5a67ff826d5c1de510"
 }

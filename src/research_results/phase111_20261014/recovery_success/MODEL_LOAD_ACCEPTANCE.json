@@ -1,0 +1,37 @@
+{
+  "models": 2,
+  "state_dict_strict_load": "passed",
+  "architecture_bindings": [
+    {
+      "timm_model_name": "regnety_004",
+      "weight_filename": "PM_model_2.2.10_RG_NIR_509_regnety_004.pycls_in1k_PT_state.safetensors",
+      "model_library": "fastai"
+    },
+    {
+      "timm_model_name": "convnextv2_nano",
+      "weight_filename": "PM_model_2.2.10_RG_NIR_509_convnextv2_nano.fcmae_ft_in1k_PT_state.safetensors",
+      "model_library": "fastai"
+    }
+  ],
+  "declared_class_order": [
+    "Clear",
+    "Thick Cloud",
+    "Thin Cloud",
+    "Shadow"
+  ],
+  "shadow_channel": 3,
+  "semantic_identity_basis": "fixed author V1 ensemble and source documentation; not inferred from labels",
+  "actual_last_conv_output_channels": [
+    4,
+    4
+  ],
+  "parameter_counts": [
+    18039132,
+    32535144
+  ],
+  "parameter_dtype": "torch.float32",
+  "autocast": false,
+  "matmul_allow_tf32": false,
+  "cudnn_allow_tf32": true,
+  "construction_graph_calls": 11
+}

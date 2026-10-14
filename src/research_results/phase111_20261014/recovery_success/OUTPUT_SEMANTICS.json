@@ -1,0 +1,29 @@
+{
+  "raw_model_output_ranges": [
+    [
+      -16.915510177612305,
+      11.031421661376953
+    ],
+    [
+      -25.121917724609375,
+      14.933177947998047
+    ]
+  ],
+  "raw_model_output_shape": [
+    1,
+    4,
+    1000,
+    1000
+  ],
+  "raw_and_final_finite": true,
+  "valid_final_confidence_range": [
+    0.0010000000474974513,
+    0.9990000128746033
+  ],
+  "valid_final_four_channel_sum_range": [
+    1.002000093460083,
+    1.0040003061294556
+  ],
+  "operator": "mean raw classes, gradient mosaic/division, class softmax, +0.001, clip[0.001,0.999]",
+  "confidence_not_calibrated_probability": true
+}

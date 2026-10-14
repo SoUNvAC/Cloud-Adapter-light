@@ -1,0 +1,9 @@
+{
+  "confidence_max_error": 2.384185791015625e-07,
+  "gradient_field_max_error": 0.0,
+  "coverage_exactly_equal": true,
+  "confidence_range": [
+    0.0010000000474974513,
+    0.9990000128746033
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "max_absolute_error": 2.384185791015625e-07,
+  "independent_ensemble_max_error": 0.0,
+  "gradient_max_error": 0.0,
+  "full_scene_cpu_reconstructed_in_memory": true,
+  "gradient_field_max_error": 0.0,
+  "coverage_exactly_equal": true,
+  "coverage_zero_cells": 0,
+  "nodata_cells": 0,
+  "valid_confidence_range": [
+    0.0010000000474974513,
+    0.9990000128746033
+  ],
+  "four_channels_sum_one_required": false
+}

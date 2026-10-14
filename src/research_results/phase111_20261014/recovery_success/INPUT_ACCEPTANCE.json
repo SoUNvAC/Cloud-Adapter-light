@@ -1,0 +1,51 @@
+{
+  "product_id": "S2A_MSIL1C_20170113T072241_N0204_R006_T40UEE_20170113T072238",
+  "points": 550,
+  "bindings": [
+    {
+      "band": "B04",
+      "path": "/home/scv/shared/data/pixbox_s2_cmix_5036991/phase104_20261013/imagery/S2A_MSIL1C_20170113T072241_N0204_R006_T40UEE_20170113T072238/B04.jp2",
+      "sha256": "2bd3f215a3405a17b592f7c6cd61d276dcd64149ba6576e2b6c037e01be29451",
+      "native_shape": [
+        10980,
+        10980
+      ],
+      "target_shape": [
+        5490,
+        5490
+      ],
+      "bilinear_native_uint16": true
+    },
+    {
+      "band": "B03",
+      "path": "/home/scv/shared/data/pixbox_s2_cmix_5036991/phase104_20261013/imagery/S2A_MSIL1C_20170113T072241_N0204_R006_T40UEE_20170113T072238/B03.jp2",
+      "sha256": "5f2d96ab465f10ee746db6627c244921bc2e9d00938139d4802a53b73fcab66a",
+      "native_shape": [
+        10980,
+        10980
+      ],
+      "target_shape": [
+        5490,
+        5490
+      ],
+      "bilinear_native_uint16": true
+    },
+    {
+      "band": "B8A",
+      "path": "/home/scv/shared/phase111_ocm_runtime/assets/B8A.jp2",
+      "sha256": "639935df24ed83d13c1d1c3bbbd1046469256530fb57179f4840437eb35078e5",
+      "native_shape": [
+        5490,
+        5490
+      ],
+      "target_shape": [
+        5490,
+        5490
+      ],
+      "bilinear_native_uint16": false
+    }
+  ],
+  "coordinate_sha256": "c2f029a349096738935d9239585c67ca6dfc5a4c71017f5e8634af982b86ce68",
+  "no_labels": true,
+  "invalid_rule": "native 0/65535/nonfinite; one-native-pixel Chebyshev halo covers bilinear interpolation support, then any corresponding 2x2 invalid excludes20m cell; invalid channel set to nodata before normalization; B8A native20m no halo"
+}
