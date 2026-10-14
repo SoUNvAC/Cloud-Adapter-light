@@ -1,0 +1,71 @@
+{
+  "utc": "2026-10-14T07:11:26.442404+00:00",
+  "source_sha256": {
+    "src/research_plans/PHASE113_STRONG_BASE_COMPLEMENT_DIAGNOSTIC_20261014.md": "41a4b8a9c7c737dc729cb3e9667981144107b3aaa3c6b0d46d667d91213c9144",
+    "src/tools/phase113.py": "ebbeb7093a01d256b5735a959a2c6c69e8f40f661d33d68ee7bf90e33e8ba2b1",
+    "src/tools/phase89_cpu_ap.py": "9bedbc46503916362564a0f34b1748d75d095edce436f70f533372895a42062e",
+    "src/research_results/phase112_20261014/COMMON_SUPPORT_LOCK.json": "c4005b23212025158d942388b272e0edf2a9fc15a963bd08cd3cbf95730e848e",
+    "src/research_results/phase112_20261014/CPU_STATISTICS_ACCEPTANCE.json": "63033abe0bdfd7c484cb7ff09ed292e18d4873e39ba98576f546040e52eb3a9c",
+    "src/research_results/phase112_20261014/four_score_summary.csv": "35b7cfaa46f1220177742dc4477fcc02fb5f3d26f86161358fd97c50280b8974",
+    "src/research_results/phase112_20261014/per_group_results.csv": "2404b172f11ea59b84f4dd5bbc9d2a0a89d040885829918fb75d8b1a9db30ba7",
+    "src/research_results/phase106_20261013/model_lock.json": "faa15ffb2fb4d824afff100438ec591b3313a9411c390c7368e85f0c5fc1ff45",
+    "src/research_results/phase106_20261013/input_score_lock.json": "5e5d1a392e921d9c809394f2622492960056113b3c7c16f993c9cc7bd2f5ad8b"
+  },
+  "private_inputs_sha256": {
+    "data/pixbox_s2_cmix_5036991/phase105_20261013/point_scores_no_labels.json": "11e460502c088c5a157208680676e8e40d98995eab693045f0c6bd5998879a5d",
+    "data/pixbox_s2_cmix_5036991/phase106_20261013/point_scores_no_labels.json": "725aa5a0880998ac5135f8c9d17ac2a3a446c58770ea58422db5b4887650580e",
+    "data/pixbox_s2_cmix_5036991/phase112_20261014/joined_reference_scores_private.csv": "fbbd3658524054ef210ddcde5c303dd356233e2f21fd4aa027cb35b63dbb1d07",
+    "data/pixbox_s2_cmix_5036991/phase112_20261014/COMMON_SUPPORT_PRIVATE.json": "d8ec2a007dbf26eafe2e94a46f181313671cef1048afbcb0926e1391b0e9de6f",
+    "outputs/phase67/phase67_20261010/delivery/control_lock.json": "c2a83964073918015460e0ad89a9857b60b6a764e0f8562652472b224915f5ad"
+  },
+  "omni_score_sha256": {
+    "S2A_MSIL1C_20170113T072241_N0204_R006_T40UEE_20170113T072238": "05d1f3e45d038441b0f7527b9349c67d1a0853b497da59aa18a7558ff610f451",
+    "S2A_MSIL1C_20170706T051651_N0205_R062_T48XWG_20170706T051649": "1ded63bcc12f68c7c95c9fe53ef77718fa8f92f1e94284fa135197ca2e37a4fe",
+    "S2A_MSIL1C_20170712T071621_N0205_R006_T40UEE_20170712T071617": "e64097ac52914e29ea28e217c7acc3b8e26383d7a4032defd329b3bfb7eb71d9",
+    "S2A_MSIL1C_20170725T142751_N0205_R053_T19GBQ_20170725T143854": "4e5176aa2ef56a6af239cf0d8ddafbc42677d64c100e7ec8347219cb00f06dd8",
+    "S2A_MSIL1C_20170726T102021_N0205_R065_T33VVE_20170726T102259": "6a85065e1f2d3c7b0ffd406a21dd4578171d4c3ab916fe9870b214115b2db85d",
+    "S2A_MSIL1C_20170908T100031_N0205_R122_T32SPJ_20170908T100655": "17db8e5fe70e4a03654121e215dc8143d431db5cd817870b4b8049818fbf488e",
+    "S2A_MSIL1C_20170917T052641_N0205_R105_T48XWG_20170917T052642": "2c74e93ceec83b549f2863999cc8306fb8841e532e17a72259bbbde25e939743",
+    "S2A_MSIL1C_20171107T150421_N0206_R125_T22WES_20171107T165127": "20b384a5922028d14748e8f0c381b3bef03b638d6c94d0ab6b87727152c15742",
+    "S2A_MSIL1C_20180106T032121_N0206_R118_T48NUG_20180106T083912": "6c72d3c2a6f4f7485a61f13c1748a7e6a61009ad62eaec431aeadbf78455ef43",
+    "S2A_MSIL1C_20180217T053911_N0206_R005_T44SKJ_20180217T082149": "2cf6f44b7aef3bcffdda80671aa7916e8d84e1bd87a9d4ce70726428585b14ba",
+    "S2A_MSIL1C_20180222T012651_N0206_R074_T54TWN_20180222T031349": "84918fb9b22b4ad20bac93a441b635c5c9069ac716fbc997f1dbe32af93f6d28",
+    "S2A_MSIL1C_20180302T142851_N0206_R053_T19GBQ_20180302T192732": "816e2571c19815110fb3061459383cae26d15643fadf6472f012fb51468f84a0",
+    "S2A_MSIL1C_20180303T140051_N0206_R067_T19FDV_20180303T202004": "e8dd97a1768a40839d3c5175b89f4ca7f287abbed382036ff739034d2a9e9e66",
+    "S2B_MSIL1C_20170731T102019_N0205_R065_T33VVE_20170731T102348": "1099c8f6588853013d49260c07e52bb8679210702205700a62d39526418ca165",
+    "S2B_MSIL1C_20170916T101019_N0205_R022_T32SPJ_20170916T101354": "2025d286c19822d7ac3c0da6c67ecc1d2a6d1de9918c971188e2a5a4a9000fb9",
+    "S2B_MSIL1C_20180302T150259_N0206_R125_T22WES_20180302T183800": "470b8b52970974dcdbdbab2e12296c24bb04957714877ef500907e32b39f457e"
+  },
+  "bin_edges": [
+    0.0,
+    0.2,
+    0.4,
+    0.6,
+    0.8,
+    1.0
+  ],
+  "intervals": "[0,.2),[.2,.4),[.4,.6),[.6,.8),[.8,1]",
+  "pair_rule": "only same group/same fixed bin; win2/tie1/loss0; denominator twice summed bin pair counts",
+  "score_names": [
+    "Source_spectral",
+    "Omni",
+    "Source"
+  ],
+  "primary": "Source_spectral minus Omni",
+  "participating_positive_min": 5,
+  "participating_negative_min": 20,
+  "minimum_groups": 4,
+  "bootstrap_seed": 113014,
+  "resamples": 10000,
+  "minimum_mean_delta_pp": 2,
+  "CI_lower_must_exceed": 0,
+  "thresholds": {
+    "Omni": 0.5,
+    "Source_spectral": -1.0312467813491821
+  },
+  "post_hoc_old_pool": true,
+  "new_fits": 0,
+  "new_forwards": 0,
+  "downloads": 0,
+  "threshold_scans": 0
+}

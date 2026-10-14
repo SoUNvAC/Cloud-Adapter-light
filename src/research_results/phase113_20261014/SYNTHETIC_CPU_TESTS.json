@@ -1,0 +1,6 @@
+{
+  "fixed_bin_boundaries": true,
+  "hand_pair_tie_case": true,
+  "random_exact_integer_pair_replays": 10,
+  "model_calls": 0
+}
