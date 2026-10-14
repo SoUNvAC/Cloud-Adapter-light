@@ -46,9 +46,20 @@ def main():
     import torch
     import rasterio
     from rasterio.enums import Resampling
+    from rasterio.io import MemoryFile
+    from rasterio.transform import from_origin
+    from scipy.ndimage import binary_dilation
     from omnicloudmask import cloud_mask as cm,model_utils as mu
     torch.set_num_threads(4)
     assert torch.__version__=='2.11.0+cu128' and torch.cuda.is_available()
+    synthetic=np.full((8,8),100,np.uint16);synthetic[3,3]=65535
+    with MemoryFile() as memory:
+        with memory.open(driver='GTiff',height=8,width=8,count=1,dtype='uint16',transform=from_origin(0,80,10,10),nodata=0) as ds:
+            ds.write(synthetic,1);resampled=ds.read(1,out_shape=(4,4),resampling=Resampling.bilinear)
+    invalid=binary_dilation(synthetic==65535,structure=np.ones((3,3),bool)).reshape(4,2,4,2).any(axis=(1,3))
+    assert np.all(invalid[resampled!=100])
+    write('SYNTHETIC_INPUT_OPERATOR_CHECK.json',{'status':'passed','saturated_influence_cells':np.argwhere(resampled!=100).tolist(),
+           'all_affected_cells_excluded':True,'halo_native_pixels':1,'synthetic_only':True,'model_calls':0})
     started=time.monotonic()
     state={'status':'running','construction_graph_calls':[],'main_calls':0,'repeat_calls':0,
            'patches':[],'repeat_max_abs':[],'cpu_ensemble_max_abs':0.0,'gradient_max_abs':0.0,
@@ -123,7 +134,7 @@ def main():
             # Preserve author's uint16 bilinear read, separately propagate the
             # frozen native invalid footprint to the common 20m validity mask.
             a=ds.read(1,out_shape=(5490,5490),resampling=Resampling.bilinear) if band!='B8A' else native
-            v=native_valid.reshape(5490,2,5490,2).all(axis=(1,3)) if band!='B8A' else native_valid
+            v=(~binary_dilation(~native_valid,structure=np.ones((3,3),bool))).reshape(5490,2,5490,2).all(axis=(1,3)) if band!='B8A' else native_valid
             a=a.copy();a[~v]=0
             arrays.append(a);valid.append(v)
             bindings.append({'band':band,'path':str(path),'sha256':expected,'native_shape':[ds.height,ds.width],
@@ -137,7 +148,7 @@ def main():
         reader=csv.DictReader(f);assert not set(reader.fieldnames)&{'label','class','reference','prediction'}
         points=[r for r in reader if r['product_id']==pid]
     write('INPUT_ACCEPTANCE.json',{'product_id':pid,'points':len(points),'bindings':bindings,
-          'coordinate_sha256':sha(coordinate),'no_labels':True,'invalid_rule':'native 0/65535/nonfinite; any corresponding 2x2 invalid excludes 20m cell; invalid channel set to nodata before normalization'})
+          'coordinate_sha256':sha(coordinate),'no_labels':True,'invalid_rule':'native 0/65535/nonfinite; one-native-pixel Chebyshev halo covers bilinear interpolation support, then any corresponding 2x2 invalid excludes20m cell; invalid channel set to nodata before normalization; B8A native20m no halo'})
     cpu=np.zeros((4,5490,5490),dtype=np.float32);grad=np.zeros((5490,5490),dtype=np.float32)
     axis=np.minimum(np.minimum(np.arange(1,1001),np.arange(1000,0,-1)),300).astype(np.float32)/np.float32(300)
     gradient=axis[:,None]*axis[None,:]
