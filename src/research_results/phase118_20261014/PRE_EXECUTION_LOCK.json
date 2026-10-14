@@ -1,0 +1,45 @@
+{
+  "phase": 118,
+  "status": "locked_before_input_planning_or_forward",
+  "source_sha256": {
+    "src/tools/phase118_common.py": "123e8d09ed478f9572dae5be29d9b41793a8faa612bcb6290ab4a48025300751",
+    "src/tools/run_phase118.py": "d4ea80767d4e4f3a638f85ff594faa0a06278b105778c50a3a86fa092a46b6d5",
+    "src/tools/test_phase118.py": "10e7bd466b3d577af4570306ccb98d68467e0d6ba8dce3d2b6af0d39a2cbc5ec",
+    "src/research_plans/PHASE118_RESOLUTION_CONTEXT_DIAGNOSTIC_20261014.md": "ea6bd46273ca58ae721dcc9ebc361da7ca50575dd47076e81f859d136ca04317",
+    "src/research_plans/EXPLORATION_POLICY_20261014.md": "f38bf963cbfab243149ca425bbb3e2b9624ea0e97c159779507484c443c8bba5",
+    "src/research_results/phase104_20261013/object_manifest.json": "0313ec61fef75acad7152e0deb639b094aa77b3a1b4041545e09939955b5500a",
+    "src/research_results/phase111_20261014/ASSET_VERIFICATION.json": "1ab86c5885b6720e237a1461df1f8561159326ee8fc5d03eeceddee46df8d990",
+    "src/research_results/phase111_20261014/PRE_EXECUTION_LOCK.json": "b0f9081bf1e74ec80cbd1ff54776c4989a3505564fc87028fcd0be2c3ae6f723",
+    "src/research_results/phase112_20261014/DOWNLOAD_STATUS.json": "e3816e810c0b87ca58853c66d5a46787c33fea0ef8d56b4f9542349ee07ef403"
+  },
+  "coordinate_sha256": "c2f029a349096738935d9239585c67ca6dfc5a4c71017f5e8634af982b86ce68",
+  "settings": {
+    "O20": "reuse phase112",
+    "C20": {
+      "grid_m": 20,
+      "patch": 500,
+      "overlap": 150
+    },
+    "H10": {
+      "grid_m": 10,
+      "patch": 1000,
+      "overlap": 300
+    }
+  },
+  "primary": "H10-C20 group-equal AP",
+  "auxiliary": [
+    "C20-O20",
+    "H10-O20"
+  ],
+  "bootstrap_seed": 118014,
+  "resamples": 10000,
+  "statistical_stop_policy": "effect size and uncertainty; no minimum1pp or CI lower>0 continuation gate",
+  "ram_required_available_bytes": 27917287424,
+  "cpu_peak_bytes_cap": 25769803776,
+  "planned_calls_cap": 20000,
+  "recovery_inclusive_calls_cap": 25000,
+  "planned_gpu_wall_seconds": 14400,
+  "recovery_inclusive_gpu_wall_seconds": 18000,
+  "no_new_download_training_fitting_calibration_or_threshold_search": true,
+  "utc": "2026-10-14T13:20:02.474987+00:00"
+}

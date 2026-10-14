@@ -27,3 +27,7 @@ src/research_plans/PHASE116_RESEARCH_ROUTE_CLOSEOUT_20261014.md -text
 
 src/tools/*phase117*.py -text
 src/research_plans/PHASE117_STRONG_BASE_INPUT_ADAPTATION_20261014.md -text
+
+src/tools/*phase118*.py -text
+src/research_plans/PHASE118_RESOLUTION_CONTEXT_DIAGNOSTIC_20261014.md -text
+src/research_plans/EXPLORATION_POLICY_20261014.md -text
