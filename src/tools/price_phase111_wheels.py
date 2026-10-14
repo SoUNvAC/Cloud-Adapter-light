@@ -73,16 +73,31 @@ def directory_price(url, out, name):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--gate-directory", type=Path, required=True)
+    ap.add_argument("--continue-from", type=Path)
     args = ap.parse_args()
     base = args.gate_directory
-    out = base / "wheel_pricing"
+    out = base / ("wheel_pricing_continued" if args.continue_from else "wheel_pricing")
     out.mkdir(exist_ok=False)
     resolution = json.loads((base / "PIP_RESOLUTION.json").read_text(encoding="utf-8"))
     existing = json.loads((base / "EXISTING_PACKAGES.json").read_text(encoding="utf-8"))
     items = {x["metadata"]["name"].lower().replace("_", "-"): x for x in resolution["install"]}
     rows = []
-    total = 0
-    for name in ["torch", "nvidia-cudnn-cu13", "nvidia-cublas", "nvidia-cusolver", "nvidia-cusparse", "triton"]:
+    if args.continue_from:
+        previous = json.loads(args.continue_from.read_text(encoding="utf-8"))
+        for row in previous["priced_packages"]:
+            cd = args.continue_from.parent / (row["name"] + ".central-directory.bin")
+            assert hashlib.sha256(cd.read_bytes()).hexdigest() == row["central_directory_sha256"]
+            assert items[row["name"]]["download_info"]["url"] == row["url"]
+            assert items[row["name"]]["metadata"]["version"] == row["version"]
+            rows.append(row)
+    total = sum(row["mandatory_library_payload_bytes"] for row in rows)
+    priority = ["torch", "nvidia-cudnn-cu13", "nvidia-cublas", "nvidia-cusolver", "nvidia-cusparse", "triton"]
+    order = priority + [name for name in items if name not in priority]
+    for name in order:
+        if total > CAP:
+            break
+        if any(row["name"] == name for row in rows):
+            continue
         if name not in items:
             continue
         item = items[name]
