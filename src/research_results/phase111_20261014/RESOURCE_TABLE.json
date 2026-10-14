@@ -1,0 +1,41 @@
+{
+  "before": {
+    "utc": "2026-10-14T01:31:21.459428+00:00",
+    "physical_volume": {
+      "DeviceID": "I:",
+      "Size": 4096787476480,
+      "FreeSpace": 13343952896,
+      "FileSystem": "NTFS"
+    },
+    "volume_mapping": "Conservative Phase110 Debian registry mapping to I; not WSL ext4 free",
+    "ram": {
+      "MemTotal": 33626763264,
+      "MemAvailable": 32775184384
+    },
+    "gpu_csv": "NVIDIA GeForce RTX 4090 D, 24564, 23611",
+    "wsl_disk_free_bytes": 783517683712,
+    "python": "3.10.21 (main, Aug 27 2026, 14:42:07) [GCC 14.3.0]",
+    "python_executable": "/home/scv/miniconda3/envs/cloud-lite-pt210/bin/python",
+    "original_environment_installation": false
+  },
+  "after": {
+    "utc": "2026-10-14T01:42:30.642051+00:00",
+    "host_volume": {
+      "DeviceID": "I:",
+      "Size": 4096787476480,
+      "FreeSpace": 13343952896,
+      "FileSystem": "NTFS"
+    },
+    "original_environment_versions_changed": {},
+    "torch": "2.1.0+cu121",
+    "gate_files_bytes": 3278036,
+    "installation": false,
+    "model_calls": 0,
+    "weight_band_download_bytes": 0
+  },
+  "resolver_elapsed_seconds": 111.48673701400003,
+  "gpu_inference_seconds": 0,
+  "runtime_ram_vram_peak": "not measured; no runtime/inference",
+  "remote_gate_files_bytes_at_post_probe": 3278036,
+  "file_size_is_logical_not_VHD_physical_growth": true
+}

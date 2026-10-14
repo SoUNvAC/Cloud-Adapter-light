@@ -1,7 +1,6 @@
-# Phase111：单景无标签运行验收（未完成）
+# Phase111：资源与环境准入已执行，预算门失败
 
-数据结果：哈希锁已生成，T40UEE为固定单景；三次SSH握手失败。实际资源、依赖与输出验收均尚未获得。
+1. 数据结果：物理盘可用13.34GB；126依赖解析成功。仅9个新Torch必需GPU核心包的共享库大小下界4.172GB，独立CPU目录解析核验通过，超过4GB环境上限。原环境版本未变；安装、权重/B8A下载、模型调用、标签访问和性能评价均0。
+2. 结论分析：按协议在安装前停止；实际单景runtime未通过，不能给出模型性能或兼容性结论。固定T40UEE单景不重选，其他15景不启动。
 
-结论分析：本轮停在远端资源门之前，不能推断runtime可用或不可用。安装、下载、前向、标签访问及性能评价均未进行。详见RUNTIME_DECISION.md及EXECUTION_STATUS.json。
-
-PRE_EXECUTION_LOCK.json记录完整选择排序、代码/HF/输入哈希及预算；prepare_phase111_lock.py可重复生成并拒绝覆盖不同锁。无需重新选景。其余15景不启动。
+详见RUNTIME_DECISION.md。DEPENDENCY_AND_PATH_LOCK.json为未安装的版本/路径候选锁，ENVIRONMENT_CORE_PRICE.json为元数据空间下界，RESOURCE_TABLE.json为真实资源探针。原SSH阻塞记录保留。raw pip报告与wheel目录二进制只在outputs及远端shared受控目录，Git仅小结果/SHA与代码。

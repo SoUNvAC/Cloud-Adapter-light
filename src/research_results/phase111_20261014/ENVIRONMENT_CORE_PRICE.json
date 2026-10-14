@@ -1,0 +1,521 @@
+{
+  "scope": "Only torch and required nvidia/triton dependencies, including its explicit cuda-toolkit extras; excludes rasterio/hf-xet and other packages",
+  "environment_cap_bytes": 4000000000,
+  "core_new_library_lower_bound_bytes": 4172008262,
+  "gate": "STOP_ENVIRONMENT_BUDGET",
+  "estimate_type": "Uncompressed library logical bytes declared by official wheel central directories; not actual installation measurement",
+  "priced_packages": [
+    {
+      "name": "torch",
+      "url": "https://files.pythonhosted.org/packages/54/91/365b45c4c8a16c7c398354b341273d15cdbd01c9feeadac16a02ce070b27/torch-2.14.1-cp310-cp310-manylinux_2_28_x86_64.whl",
+      "wheel_declared_length": 554550266,
+      "wheel_entries": 13043,
+      "uncompressed_all_entries_bytes": 1144035269,
+      "mandatory_library_payload_bytes": 1036204621,
+      "library_entries": [
+        {
+          "path": "torch/_C.cpython-310-x86_64-linux-gnu.so",
+          "uncompressed_bytes": 18721,
+          "compressed_bytes": 2033
+        },
+        {
+          "path": "torch/lib/libc10.so",
+          "uncompressed_bytes": 1649953,
+          "compressed_bytes": 546820
+        },
+        {
+          "path": "torch/lib/libc10_cuda.so",
+          "uncompressed_bytes": 673217,
+          "compressed_bytes": 252621
+        },
+        {
+          "path": "torch/lib/libcaffe2_nvrtc.so",
+          "uncompressed_bytes": 24465,
+          "compressed_bytes": 3446
+        },
+        {
+          "path": "torch/lib/libgomp.so.1",
+          "uncompressed_bytes": 2115577,
+          "compressed_bytes": 112667
+        },
+        {
+          "path": "torch/lib/libshm.so",
+          "uncompressed_bytes": 58977,
+          "compressed_bytes": 15470
+        },
+        {
+          "path": "torch/lib/libtorch.so",
+          "uncompressed_bytes": 145745,
+          "compressed_bytes": 40651
+        },
+        {
+          "path": "torch/lib/libtorch_cpu.so",
+          "uncompressed_bytes": 446314593,
+          "compressed_bytes": 120811601
+        },
+        {
+          "path": "torch/lib/libtorch_cuda.so",
+          "uncompressed_bytes": 502842281,
+          "compressed_bytes": 355960511
+        },
+        {
+          "path": "torch/lib/libtorch_cuda_linalg.so",
+          "uncompressed_bytes": 43988825,
+          "compressed_bytes": 34682735
+        },
+        {
+          "path": "torch/lib/libtorch_global_deps.so",
+          "uncompressed_bytes": 18681,
+          "compressed_bytes": 1912
+        },
+        {
+          "path": "torch/lib/libtorch_nvshmem.so",
+          "uncompressed_bytes": 4053793,
+          "compressed_bytes": 3702505
+        },
+        {
+          "path": "torch/lib/libtorch_python.so",
+          "uncompressed_bytes": 34299793,
+          "compressed_bytes": 10191033
+        }
+      ],
+      "central_directory_sha256": "dcad4a56cd1dc908b91e393f115adcec6b892e6e7941bbe8d562ca0c10c04aaa",
+      "http_range_body_bytes": 1292712,
+      "content_checksum_validated": false,
+      "estimate_type": "ZIP central-directory declared uncompressed logical bytes, not installed disk measurement",
+      "version": "2.14.1",
+      "existing_version": "2.1.0+cu121",
+      "wheel_declared_sha256": "1fee6b20869a90ccec05e35559a706338ac8aab40a9c4fb58f16667e93af36ae"
+    },
+    {
+      "name": "nvidia-cudnn-cu13",
+      "url": "https://files.pythonhosted.org/packages/5c/ba/791cffd048fe5b044e620df55267e3e95c0e6e07d50b41e377c03dfc910f/nvidia_cudnn_cu13-9.24.0.43-py3-none-manylinux_2_27_x86_64.whl",
+      "wheel_declared_length": 553099438,
+      "wheel_entries": 31,
+      "uncompressed_all_entries_bytes": 966381021,
+      "mandatory_library_payload_bytes": 965278448,
+      "library_entries": [
+        {
+          "path": "nvidia/cudnn/lib/libcudnn.so.9",
+          "uncompressed_bytes": 129240,
+          "compressed_bytes": 42027
+        },
+        {
+          "path": "nvidia/cudnn/lib/libcudnn_adv.so.9",
+          "uncompressed_bytes": 109169040,
+          "compressed_bytes": 101703413
+        },
+        {
+          "path": "nvidia/cudnn/lib/libcudnn_cnn.so.9",
+          "uncompressed_bytes": 4203896,
+          "compressed_bytes": 1435540
+        },
+        {
+          "path": "nvidia/cudnn/lib/libcudnn_engines_precompiled.so.9",
+          "uncompressed_bytes": 260072464,
+          "compressed_bytes": 202156418
+        },
+        {
+          "path": "nvidia/cudnn/lib/libcudnn_engines_runtime_compiled.so.9",
+          "uncompressed_bytes": 33586832,
+          "compressed_bytes": 18511662
+        },
+        {
+          "path": "nvidia/cudnn/lib/libcudnn_engines_tensor_ir.so.9",
+          "uncompressed_bytes": 201345448,
+          "compressed_bytes": 71653369
+        },
+        {
+          "path": "nvidia/cudnn/lib/libcudnn_ext.so.9",
+          "uncompressed_bytes": 127944928,
+          "compressed_bytes": 50529685
+        },
+        {
+          "path": "nvidia/cudnn/lib/libcudnn_graph.so.9",
+          "uncompressed_bytes": 128148560,
+          "compressed_bytes": 50923201
+        },
+        {
+          "path": "nvidia/cudnn/lib/libcudnn_heuristic.so.9",
+          "uncompressed_bytes": 60822216,
+          "compressed_bytes": 21023677
+        },
+        {
+          "path": "nvidia/cudnn/lib/libcudnn_ops.so.9",
+          "uncompressed_bytes": 39855824,
+          "compressed_bytes": 34932112
+        }
+      ],
+      "central_directory_sha256": "79d9a807ac46aeacfa8f61c3ebd2f65dbd9a32d4db56bb51259d1f86d49b11dd",
+      "http_range_body_bytes": 65557,
+      "content_checksum_validated": false,
+      "estimate_type": "ZIP central-directory declared uncompressed logical bytes, not installed disk measurement",
+      "version": "9.24.0.43",
+      "existing_version": "not_installed",
+      "wheel_declared_sha256": "71f181cd810e90f9b6023b01186fe82d13d65f0ec098581ee201d39fad769e4b"
+    },
+    {
+      "name": "nvidia-cublas",
+      "url": "https://files.pythonhosted.org/packages/3b/cd/154ca20c38269e05eff77c1464e6c1da89f50a6390b565e9d82e06bc11e1/nvidia_cublas-13.1.1.3-py3-none-manylinux_2_27_x86_64.whl",
+      "wheel_declared_length": 423138758,
+      "wheel_entries": 14,
+      "uncompressed_all_entries_bytes": 597144857,
+      "mandatory_library_payload_bytes": 596523368,
+      "library_entries": [
+        {
+          "path": "nvidia/cu13/lib/libcublas.so.13",
+          "uncompressed_bytes": 54177976,
+          "compressed_bytes": 48006231
+        },
+        {
+          "path": "nvidia/cu13/lib/libcublasLt.so.13",
+          "uncompressed_bytes": 541607888,
+          "compressed_bytes": 374853219
+        },
+        {
+          "path": "nvidia/cu13/lib/libnvblas.so.13",
+          "uncompressed_bytes": 737504,
+          "compressed_bytes": 212651
+        }
+      ],
+      "central_directory_sha256": "54c0cd54f2ef2db5d0c9145110237c2b4ede198ddbabd598f6cc0d1d4c4b55e3",
+      "http_range_body_bytes": 65557,
+      "content_checksum_validated": false,
+      "estimate_type": "ZIP central-directory declared uncompressed logical bytes, not installed disk measurement",
+      "version": "13.1.1.3",
+      "existing_version": "not_installed",
+      "wheel_declared_sha256": "37936a16db8fe4ac1f065c2139360608a543a09275cb1a1af612e08cfa065436"
+    },
+    {
+      "name": "nvidia-cusolver",
+      "url": "https://files.pythonhosted.org/packages/5f/67/cba3777620cdacb99102da4042883709c41c709f4b6323c10781a9c3aa34/nvidia_cusolver-12.0.4.66-py3-none-manylinux_2_27_x86_64.whl",
+      "wheel_declared_length": 200941980,
+      "wheel_entries": 13,
+      "uncompressed_all_entries_bytes": 245427965,
+      "mandatory_library_payload_bytes": 245109712,
+      "library_entries": [
+        {
+          "path": "nvidia/cu13/lib/libcusolver.so.12",
+          "uncompressed_bytes": 141152872,
+          "compressed_bytes": 121286843
+        },
+        {
+          "path": "nvidia/cu13/lib/libcusolverMg.so.12",
+          "uncompressed_bytes": 103956840,
+          "compressed_bytes": 79614354
+        }
+      ],
+      "central_directory_sha256": "eb3d4067b68acf289470bea9d36d3a06a1402877fbd9258f952f25e68eb5db2d",
+      "http_range_body_bytes": 65557,
+      "content_checksum_validated": false,
+      "estimate_type": "ZIP central-directory declared uncompressed logical bytes, not installed disk measurement",
+      "version": "12.0.4.66",
+      "existing_version": "not_installed",
+      "wheel_declared_sha256": "0a759da5dea5c0ea10fd307de75cdeb59e7ea4fcb8add0924859b944babf1112"
+    },
+    {
+      "name": "nvidia-cusparse",
+      "url": "https://files.pythonhosted.org/packages/fa/18/623c77619c31d62efd55302939756966f3ecc8d724a14dab2b75f1508850/nvidia_cusparse-12.6.3.3-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+      "wheel_declared_length": 145942937,
+      "wheel_entries": 8,
+      "uncompressed_all_entries_bytes": 162926567,
+      "mandatory_library_payload_bytes": 162565256,
+      "library_entries": [
+        {
+          "path": "nvidia/cu13/lib/libcusparse.so.12",
+          "uncompressed_bytes": 162565256,
+          "compressed_bytes": 145908273
+        }
+      ],
+      "central_directory_sha256": "76a02b2abc1caf6f22efc43e3ca7168d75814d9937718155fd495a803357f9d0",
+      "http_range_body_bytes": 65557,
+      "content_checksum_validated": false,
+      "estimate_type": "ZIP central-directory declared uncompressed logical bytes, not installed disk measurement",
+      "version": "12.6.3.3",
+      "existing_version": "not_installed",
+      "wheel_declared_sha256": "2b3c89c88d01ee0e477cb7f82ef60a11a4bcd57b6b87c33f789350b59759360b"
+    },
+    {
+      "name": "triton",
+      "url": "https://files.pythonhosted.org/packages/65/65/18d0871f353eb170b0b9c562cd65f6ab9619b6e7b8aaecea9709e9ad16a6/triton-3.8.0-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+      "wheel_declared_length": 247838081,
+      "wheel_entries": 486,
+      "uncompressed_all_entries_bytes": 935502803,
+      "mandatory_library_payload_bytes": 660553160,
+      "library_entries": [
+        {
+          "path": "triton/_C/libproton.so",
+          "uncompressed_bytes": 26133392,
+          "compressed_bytes": 6665653
+        },
+        {
+          "path": "triton/_C/libtriton.so",
+          "uncompressed_bytes": 505125504,
+          "compressed_bytes": 138837030
+        },
+        {
+          "path": "triton/backends/nvidia/lib/cupti/libcheckpoint.so",
+          "uncompressed_bytes": 1644872,
+          "compressed_bytes": 563853
+        },
+        {
+          "path": "triton/backends/nvidia/lib/cupti/libcupti.so",
+          "uncompressed_bytes": 7595792,
+          "compressed_bytes": 2328460
+        },
+        {
+          "path": "triton/backends/nvidia/lib/cupti/libcupti.so.12",
+          "uncompressed_bytes": 7595792,
+          "compressed_bytes": 2328460
+        },
+        {
+          "path": "triton/backends/nvidia/lib/cupti/libcupti.so.2025.1.1",
+          "uncompressed_bytes": 7595792,
+          "compressed_bytes": 2328460
+        },
+        {
+          "path": "triton/backends/nvidia/lib/cupti/libnvperf_host.so",
+          "uncompressed_bytes": 25825936,
+          "compressed_bytes": 5343314
+        },
+        {
+          "path": "triton/backends/nvidia/lib/cupti/libnvperf_target.so",
+          "uncompressed_bytes": 5275312,
+          "compressed_bytes": 1462348
+        },
+        {
+          "path": "triton/backends/nvidia/lib/cupti/libpcsamplingutil.so",
+          "uncompressed_bytes": 970064,
+          "compressed_bytes": 335074
+        },
+        {
+          "path": "triton/backends/nvidia/lib/cupti-blackwell/libcheckpoint.so",
+          "uncompressed_bytes": 1646312,
+          "compressed_bytes": 596298
+        },
+        {
+          "path": "triton/backends/nvidia/lib/cupti-blackwell/libcupti.so",
+          "uncompressed_bytes": 5994368,
+          "compressed_bytes": 2029995
+        },
+        {
+          "path": "triton/backends/nvidia/lib/cupti-blackwell/libcupti.so.13",
+          "uncompressed_bytes": 5994368,
+          "compressed_bytes": 2029995
+        },
+        {
+          "path": "triton/backends/nvidia/lib/cupti-blackwell/libcupti.so.2026.2.0",
+          "uncompressed_bytes": 5994368,
+          "compressed_bytes": 2029995
+        },
+        {
+          "path": "triton/backends/nvidia/lib/cupti-blackwell/libnvperf_host.so",
+          "uncompressed_bytes": 33840176,
+          "compressed_bytes": 7153006
+        },
+        {
+          "path": "triton/backends/nvidia/lib/cupti-blackwell/libnvperf_target.so",
+          "uncompressed_bytes": 6011056,
+          "compressed_bytes": 1768665
+        },
+        {
+          "path": "triton/backends/nvidia/lib/cupti-blackwell/libpcsamplingutil.so",
+          "uncompressed_bytes": 703936,
+          "compressed_bytes": 255915
+        },
+        {
+          "path": "triton/instrumentation/libGPUInstrumentationTestLib.so",
+          "uncompressed_bytes": 7375448,
+          "compressed_bytes": 2449232
+        },
+        {
+          "path": "triton/plugins/libMLIRDialectPlugin.so",
+          "uncompressed_bytes": 2290464,
+          "compressed_bytes": 668875
+        },
+        {
+          "path": "triton/plugins/libMLIRDialectPlugin.so.23.0git",
+          "uncompressed_bytes": 2290464,
+          "compressed_bytes": 668875
+        },
+        {
+          "path": "triton/plugins/libTritonPluginsTestLib.so",
+          "uncompressed_bytes": 649744,
+          "compressed_bytes": 183899
+        }
+      ],
+      "central_directory_sha256": "effc230dd8b7e93829c3f2ffeb2750f9bf645ffc39967b3b472f24dd59a30aac",
+      "http_range_body_bytes": 65557,
+      "content_checksum_validated": false,
+      "estimate_type": "ZIP central-directory declared uncompressed logical bytes, not installed disk measurement",
+      "version": "3.8.0",
+      "existing_version": "2.1.0",
+      "wheel_declared_sha256": "6d914c52f89dc942b1819db959e7c07a5999f678ec760f677625c706b7e0d743"
+    },
+    {
+      "name": "nvidia-cusparselt-cu13",
+      "url": "https://files.pythonhosted.org/packages/34/7d/2661f2fb3ac4302f3a246f5fc030213ac60c1fe0bce84f9783dbd831dbb7/nvidia_cusparselt_cu13-0.8.1-py3-none-manylinux2014_x86_64.whl",
+      "wheel_declared_length": 170148586,
+      "wheel_entries": 7,
+      "uncompressed_all_entries_bytes": 233961706,
+      "mandatory_library_payload_bytes": 233912153,
+      "library_entries": [
+        {
+          "path": "nvidia/cusparselt/lib/libcusparseLt.so.0",
+          "uncompressed_bytes": 233912153,
+          "compressed_bytes": 170135648
+        }
+      ],
+      "central_directory_sha256": "141779894eb5e064b4cf501303a7c7d82e0a03438526cc72704cac3fb1a42f07",
+      "http_range_body_bytes": 65557,
+      "content_checksum_validated": false,
+      "estimate_type": "ZIP central-directory declared uncompressed logical bytes, not installed disk measurement",
+      "version": "0.8.1",
+      "existing_version": "not_installed",
+      "wheel_declared_sha256": "786ce87568c303fadb5afcc7102d454cd3040d75f6f8626f5db460d1871f4dd0"
+    },
+    {
+      "name": "nvidia-cuda-cupti",
+      "url": "https://files.pythonhosted.org/packages/33/6d/737d164b4837a9bbd202f5ae3078975f0525a55730fe871d8ed4e3b952b0/nvidia_cuda_cupti-13.0.85-py3-none-manylinux_2_25_x86_64.whl",
+      "wheel_declared_length": 10715597,
+      "wheel_entries": 47,
+      "uncompressed_all_entries_bytes": 45233935,
+      "mandatory_library_payload_bytes": 43948952,
+      "library_entries": [
+        {
+          "path": "nvidia/cu13/lib/libcheckpoint.so",
+          "uncompressed_bytes": 1382856,
+          "compressed_bytes": 485058
+        },
+        {
+          "path": "nvidia/cu13/lib/libcupti.so.13",
+          "uncompressed_bytes": 4152208,
+          "compressed_bytes": 1485037
+        },
+        {
+          "path": "nvidia/cu13/lib/libnvperf_host.so",
+          "uncompressed_bytes": 32405040,
+          "compressed_bytes": 6765055
+        },
+        {
+          "path": "nvidia/cu13/lib/libnvperf_target.so",
+          "uncompressed_bytes": 5304944,
+          "compressed_bytes": 1501169
+        },
+        {
+          "path": "nvidia/cu13/lib/libpcsamplingutil.so",
+          "uncompressed_bytes": 703904,
+          "compressed_bytes": 255917
+        }
+      ],
+      "central_directory_sha256": "3604b2f15a3952360f930ee61070e1ca673a99ee161c8fe607733162fbdd8f6b",
+      "http_range_body_bytes": 65557,
+      "content_checksum_validated": false,
+      "estimate_type": "ZIP central-directory declared uncompressed logical bytes, not installed disk measurement",
+      "version": "13.0.85",
+      "existing_version": "not_installed",
+      "wheel_declared_sha256": "4eb01c08e859bf924d222250d2e8f8b8ff6d3db4721288cf35d14252a4d933c8"
+    },
+    {
+      "name": "nvidia-cuda-nvrtc",
+      "url": "https://files.pythonhosted.org/packages/c3/68/483a78f5e8f31b08fb1bb671559968c0ca3a065ac7acabfc7cee55214fd6/nvidia_cuda_nvrtc-13.0.88-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl",
+      "wheel_declared_length": 90215200,
+      "wheel_entries": 10,
+      "uncompressed_all_entries_bytes": 228019534,
+      "mandatory_library_payload_bytes": 227912592,
+      "library_entries": [
+        {
+          "path": "nvidia/cu13/lib/libnvrtc-builtins.alt.so.13.0",
+          "uncompressed_bytes": 4372424,
+          "compressed_bytes": 993882
+        },
+        {
+          "path": "nvidia/cu13/lib/libnvrtc-builtins.so.13.0",
+          "uncompressed_bytes": 4380616,
+          "compressed_bytes": 991272
+        },
+        {
+          "path": "nvidia/cu13/lib/libnvrtc.alt.so.13",
+          "uncompressed_bytes": 109821488,
+          "compressed_bytes": 44116694
+        },
+        {
+          "path": "nvidia/cu13/lib/libnvrtc.so.13",
+          "uncompressed_bytes": 109338064,
+          "compressed_bytes": 44085802
+        }
+      ],
+      "central_directory_sha256": "da3722d14fae90517377935f92a0db66092475b62641e21a270d879b5aab3eff",
+      "http_range_body_bytes": 65557,
+      "content_checksum_validated": false,
+      "estimate_type": "ZIP central-directory declared uncompressed logical bytes, not installed disk measurement",
+      "version": "13.0.88",
+      "existing_version": "not_installed",
+      "wheel_declared_sha256": "ad9b6d2ead2435f11cbb6868809d2adeeee302e9bb94bcf0539c7a40d80e8575"
+    }
+  ],
+  "torch_direct_dependency_names": [
+    "cuda-bindings",
+    "cuda-toolkit",
+    "filelock",
+    "fsspec",
+    "jinja2",
+    "networkx",
+    "nvidia-cublas",
+    "nvidia-cuda-cupti",
+    "nvidia-cuda-nvrtc",
+    "nvidia-cuda-runtime",
+    "nvidia-cudnn-cu13",
+    "nvidia-cufft",
+    "nvidia-cufile",
+    "nvidia-curand",
+    "nvidia-cusolver",
+    "nvidia-cusparse",
+    "nvidia-cusparselt-cu13",
+    "nvidia-nccl-cu13",
+    "nvidia-nvjitlink",
+    "nvidia-nvshmem-cu13",
+    "nvidia-nvtx",
+    "opt-einsum",
+    "optree",
+    "pyyaml",
+    "setuptools",
+    "sympy",
+    "triton",
+    "typing-extensions"
+  ],
+  "torch_cuda_toolkit_extras": [
+    "cublas",
+    "cudart",
+    "cufft",
+    "cufile",
+    "cupti",
+    "curand",
+    "cusolver",
+    "cusparse",
+    "nvjitlink",
+    "nvrtc",
+    "nvtx"
+  ],
+  "toolkit_required_dependency_names": [
+    "nvidia-cublas",
+    "nvidia-cuda-cupti",
+    "nvidia-cuda-nvrtc",
+    "nvidia-cuda-runtime",
+    "nvidia-cufft",
+    "nvidia-cufile",
+    "nvidia-curand",
+    "nvidia-cusolver",
+    "nvidia-cusparse",
+    "nvidia-nvjitlink",
+    "nvidia-nvtx"
+  ],
+  "excluded_costs": [
+    "all non-core dependencies",
+    "Python/runtime files",
+    "installation caches",
+    "unpack temporaries"
+  ],
+  "model_download_or_forward": false,
+  "installation": false
+}

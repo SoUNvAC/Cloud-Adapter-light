@@ -1,9 +1,23 @@
 {
   "src/research_results/phase111_20261014/PRE_EXECUTION_LOCK.json": "b0f9081bf1e74ec80cbd1ff54776c4989a3505564fc87028fcd0be2c3ae6f723",
-  "src/research_results/phase111_20261014/EXECUTION_STATUS.json": "dc42b4b2ab96e4f0eff7d5f2ac42cb8a52635f9c2518a7c832e4b652e5d01996",
-  "src/research_results/phase111_20261014/RUNTIME_DECISION.md": "a7ebbad540614f1489572c5bed095340972236acad4a712496e471d171bae2af",
-  "src/research_results/phase111_20261014/README.md": "03a6cf01a55260531329cf61a8cd77a54c563890cfd31289f712fd557dc0274b",
+  "src/research_results/phase111_20261014/EXECUTION_STATUS.json": "abe4d54d3de9dd0e04b28db9b100b4c4e5e9f7c5027badb66fcc442b43ecbf39",
+  "src/research_results/phase111_20261014/RUNTIME_DECISION.md": "4775c2a2c5f2b929ee36e77f931945a2abf17a04e059df076c352bf5dd2297de",
+  "src/research_results/phase111_20261014/README.md": "f94cfe50919af523883abdab0a15d133fa6f3b63c3229e25591e89550f258733",
   "src/research_results/phase111_20261014/.gitattributes": "f06202a408fef9b9ea69bb6b1cb8160dbb0378c5bb67a444d510d231813824c8",
+  "src/research_results/phase111_20261014/INITIAL_SSH_BLOCKED_EXECUTION_STATUS.json": "dc42b4b2ab96e4f0eff7d5f2ac42cb8a52635f9c2518a7c832e4b652e5d01996",
+  "src/research_results/phase111_20261014/INITIAL_SSH_BLOCKED_RUNTIME_DECISION.md": "a7ebbad540614f1489572c5bed095340972236acad4a712496e471d171bae2af",
+  "src/research_results/phase111_20261014/INITIAL_SSH_BLOCKED_README.md": "03a6cf01a55260531329cf61a8cd77a54c563890cfd31289f712fd557dc0274b",
+  "src/research_results/phase111_20261014/DEPENDENCY_AND_PATH_LOCK.json": "da26f64f83bbc10255be45db1580abdae8b13a2b8002f8dbc75dc8bb50e3c831",
+  "src/research_results/phase111_20261014/RESOURCE_TABLE.json": "120b0085286c07b8decac5016090cfe00f550e1b8fb3be7da5ef8c0d584c1142",
+  "src/research_results/phase111_20261014/CPU_ENVIRONMENT_PRICE_VERIFIED.json": "c22f6f6e465df54772815a84d34db2c5f906d29703602d3080e73396ef284a5a",
+  "src/research_results/phase111_20261014/ENVIRONMENT_CORE_PRICE.json": "3bc73ab33bee080ff2a66a7d2a22f0f5aeec0b7ee1b09ef94e1b5bda24de8665",
+  "src/research_results/phase111_20261014/RAW_GATE_EVIDENCE_SHA256.json": "5414b551ec80f8c6afa85a2645628ea911ad09f2f9b710496a01eff775c2a40e",
+  "src/research_results/phase111_20261014/METADATA_TRANSFER_SCOPE.json": "caab6c8ca00f838f1c1945f8506608ab35f8eaaf0c0f8b3601191efc1fb84513",
+  ".gitattributes": "bab9eb122d2e0d5eb96220fff970efae777b031af14243ca34469badb1cbb48b",
+  "src/research_plans/PHASE111_OCM_RUNTIME_ACCEPTANCE_20261014.md": "9af3b5b208e246306a224fd8ed2802fc7e6675be04b50be2f04071d1e52e4056",
   "src/tools/prepare_phase111_lock.py": "932ed208294a87f0fd9fdd49f2d630ae587178b97bee09a8e249f65e77bb5df4",
-  "src/research_plans/PHASE111_OCM_RUNTIME_ACCEPTANCE_20261014.md": "9af3b5b208e246306a224fd8ed2802fc7e6675be04b50be2f04071d1e52e4056"
+  "src/tools/phase111_resource_gate.py": "1697ff0742c421b00544a21699951500a2959d61e5a16f001d9e1f7933280516",
+  "src/tools/price_phase111_wheels.py": "246bd1f75fcf48ead94c3ca546f49cabbeaa592229d1f8ec242fff82da58f45f",
+  "src/tools/price_phase111_gpu_core.py": "b209400ccd13fc92eccfb96bf6e40740c8ab35691a28b6002ff625e31217cf97",
+  "src/tools/verify_phase111_environment_price.py": "10d809914bee813c3971ec7cc943889672b4348cd968a678a99513a9c17fa1fb"
 }

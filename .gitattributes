@@ -1,2 +1,6 @@
 src/tools/prepare_phase111_lock.py -text
 src/research_plans/PHASE111_OCM_RUNTIME_ACCEPTANCE_20261014.md -text
+src/tools/phase111_resource_gate.py -text
+src/tools/price_phase111_wheels.py -text
+src/tools/price_phase111_gpu_core.py -text
+src/tools/verify_phase111_environment_price.py -text

@@ -1,7 +1,8 @@
 """Price resolved mandatory new runtime libraries from wheel ZIP directories only.
 
-No wheel installation/full downloads. A lower bound exceeding the environment
-cap is sufficient to stop; small/existing packages need not be downloaded.
+No installation or full large-wheel downloads. A small wheel may fit entirely
+inside the bounded tail range; this is not an installation or checksum check.
+A lower bound exceeding the environment cap is sufficient to stop.
 """
 import argparse
 import hashlib
@@ -66,6 +67,7 @@ def directory_price(url, out, name):
             "mandatory_library_payload_bytes": sum(x["uncompressed_bytes"] for x in libraries),
             "library_entries": libraries, "central_directory_sha256": hashlib.sha256(cd).hexdigest(),
             "http_range_body_bytes": transferred,
+            "tail_range_covers_entire_wheel": tail_start == 0,
             "content_checksum_validated": False,
             "estimate_type": "ZIP central-directory declared uncompressed logical bytes, not installed disk measurement"}
 

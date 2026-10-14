@@ -1,0 +1,22 @@
+{
+  "wheel_range_response_body_bytes_unique_packages": 2362145,
+  "priced_unique_packages": 19,
+  "small_wheels_wholly_covered_by_tail_range": [
+    {
+      "name": "gdown",
+      "declared_bytes": 50970
+    },
+    {
+      "name": "platformdirs",
+      "declared_bytes": 32596
+    },
+    {
+      "name": "cuda-toolkit",
+      "declared_bytes": 2512
+    }
+  ],
+  "pip_resolver_total_http_bytes": "not independently measured; dry-run log retained",
+  "complete_large_Torch_CUDA_wheel_downloads": 0,
+  "weight_band_download_bytes": 0,
+  "note": "Range metadata reads of small dependency wheels may cover entire wheel; no package installed, no payload extracted, no content checksum acceptance claimed."
+}
