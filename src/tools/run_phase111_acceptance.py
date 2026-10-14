@@ -5,6 +5,8 @@ import json
 import os
 from pathlib import Path
 import signal
+import subprocess
+import resource
 import sys
 import threading
 import time
@@ -49,6 +51,11 @@ def main():
     state={'status':'running','construction_graph_calls':[],'main_calls':0,'repeat_calls':0,
            'patches':[],'repeat_max_abs':[],'cpu_ensemble_max_abs':0.0,'gradient_max_abs':0.0,
            'rss_peak_bytes':0,'gpu_reserved_peak_bytes':0,'gpu_observed_delta_peak_bytes':0}
+    def gpu_used_bytes():
+        return int(subprocess.check_output(['/usr/lib/wsl/lib/nvidia-smi','--query-gpu=memory.used',
+                    '--format=csv,noheader,nounits'],text=True).strip())*1024**2
+    baseline_gpu=gpu_used_bytes()
+    state['gpu_smi_baseline_used_bytes']=baseline_gpu
     torch.cuda.reset_peak_memory_stats()
     finished=threading.Event()
     def guard():
@@ -58,7 +65,9 @@ def main():
             state['rss_peak_bytes']=max(state['rss_peak_bytes'],rss)
             vram=torch.cuda.max_memory_reserved()
             state['gpu_reserved_peak_bytes']=max(state['gpu_reserved_peak_bytes'],vram)
-            if rss>16*1024**3 or vram>20*1024**3 or time.monotonic()-started>3600:
+            observed_gpu=max(0,gpu_used_bytes()-baseline_gpu)
+            state['gpu_observed_delta_peak_bytes']=max(state['gpu_observed_delta_peak_bytes'],observed_gpu)
+            if rss>16*1024**3 or max(vram,observed_gpu)>20*1024**3 or time.monotonic()-started>3600:
                 state.update(status='stopped_resource_limit',elapsed_seconds=time.monotonic()-started)
                 write('RUN_STATUS.json',state)
                 os.kill(os.getpid(),signal.SIGTERM)
@@ -196,6 +205,9 @@ def main():
     state.update(status='runtime_single_scene_passed',elapsed_seconds=time.monotonic()-started,
                  unlabelled_score_sha256=sha(OUT/'UNLABELLED_POINT_SCORES.json'),point_count=len(points),
                  valid_points=sum(x['valid'] for x in scores),training=0,fitting=0,labels_accessed=False,performance_evaluated=False)
+    state['rss_peak_bytes']=max(state['rss_peak_bytes'],resource.getrusage(resource.RUSAGE_SELF).ru_maxrss*1024)
+    state['gpu_reserved_peak_bytes']=torch.cuda.max_memory_reserved()
+    assert state['rss_peak_bytes']<=16*1024**3 and state['gpu_reserved_peak_bytes']<=20*1024**3
     finished.set();write('RUN_STATUS.json',state)
     print(json.dumps(state),flush=True)
 
