@@ -12,6 +12,7 @@ import threading
 import time
 import traceback
 import argparse
+sys.dont_write_bytecode=True
 
 REPO=Path(__file__).resolve().parents[2]
 BASE=Path('/home/scv/shared/phase111_ocm_runtime')

@@ -4,3 +4,6 @@ src/tools/phase111_resource_gate.py -text
 src/tools/price_phase111_wheels.py -text
 src/tools/price_phase111_gpu_core.py -text
 src/tools/verify_phase111_environment_price.py -text
+src/tools/*phase111*.py -text
+src/research_plans/PHASE111_ENVIRONMENT_RESUME_20261014.md -text
+src/research_plans/PHASE111_CPU_VERIFIER_RECOVERY_20261014.md -text

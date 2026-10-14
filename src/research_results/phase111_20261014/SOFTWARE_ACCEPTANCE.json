@@ -1,0 +1,24 @@
+{
+  "runtime": {
+    "torch": "2.11.0+cu128",
+    "cuda": "12.8",
+    "cuda_available": true,
+    "torchvision": "0.26.0+cu128",
+    "fastai": "2.8.12",
+    "timm": "1.0.30",
+    "smp": "0.5.0",
+    "rasterio": "1.4.4",
+    "dependency_check": "passed",
+    "host_free_after_bytes": 13343952896,
+    "model_calls": 0
+  },
+  "installed_packages": 126,
+  "all_installed_wheel_sha_and_versions_match_resolution": true,
+  "runtime_logical_file_bytes": 7649042903,
+  "unique_verified_wheel_payload_declared_bytes": 4173242665,
+  "total_http_bytes_including_retries": "not independently measured; unique verified payload is not retry-inclusive network traffic",
+  "host_free_after_bytes": 13343952896,
+  "original_environment_versions_changed": {},
+  "original_torch": "2.1.0+cu121",
+  "first_scene_process_exited": true
+}

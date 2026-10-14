@@ -1,0 +1,125 @@
+{
+  "calls": [
+    {
+      "module": "Sequential",
+      "input_shapes": [
+        [
+          1,
+          3,
+          509,
+          509
+        ]
+      ]
+    },
+    {
+      "module": "Sequential",
+      "input_shapes": [
+        [
+          1,
+          3,
+          509,
+          509
+        ]
+      ]
+    },
+    {
+      "module": "Sequential",
+      "input_shapes": [
+        [
+          1,
+          440,
+          16,
+          16
+        ]
+      ]
+    },
+    {
+      "module": "UnetBlock",
+      "input_shapes": [
+        [
+          1,
+          440,
+          16,
+          16
+        ]
+      ]
+    },
+    {
+      "module": "UnetBlock",
+      "input_shapes": [
+        [
+          1,
+          428,
+          32,
+          32
+        ]
+      ]
+    },
+    {
+      "module": "UnetBlock",
+      "input_shapes": [
+        [
+          1,
+          318,
+          64,
+          64
+        ]
+      ]
+    },
+    {
+      "module": "UnetBlock",
+      "input_shapes": [
+        [
+          1,
+          207,
+          128,
+          128
+        ]
+      ]
+    },
+    {
+      "module": "Sequential",
+      "input_shapes": [
+        [
+          1,
+          3,
+          509,
+          509
+        ]
+      ]
+    },
+    {
+      "module": "Sequential",
+      "input_shapes": [
+        [
+          1,
+          3,
+          509,
+          509
+        ]
+      ]
+    },
+    {
+      "module": "Sequential",
+      "input_shapes": [
+        [
+          1,
+          640,
+          15,
+          15
+        ]
+      ]
+    },
+    {
+      "module": "UnetBlock",
+      "input_shapes": [
+        [
+          1,
+          640,
+          15,
+          15
+        ]
+      ]
+    }
+  ]
+}

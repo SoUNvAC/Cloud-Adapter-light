@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/home/scv/Cloud-Adapter-light/src/tools/run_phase111_acceptance.py", line 280, in <module>
+    try:main()
+  File "/home/scv/Cloud-Adapter-light/src/tools/run_phase111_acceptance.py", line 250, in main
+    assert float(np.max(np.abs(grad-latest['author_grad_tracker'].cpu().numpy())))==0
+AssertionError

@@ -1,6 +1,6 @@
-# Phase111：资源与环境准入已执行，预算门失败
+# Phase111：待授权恢复CPU验收
 
-1. 数据结果：物理盘可用13.34GB；126依赖解析成功。仅9个新Torch必需GPU核心包的共享库大小下界4.172GB，独立CPU目录解析核验通过，超过4GB环境上限。原环境版本未变；安装、权重/B8A下载、模型调用、标签访问和性能评价均0。
-2. 结论分析：按协议在安装前停止；实际单景runtime未通过，不能给出模型性能或兼容性结论。固定T40UEE单景不重选，其他15景不启动。
+1. 数据结果：环境、资产、双权重严格加载与550点输入通过；完成128主+4重复+11构建调用，重复差0。79.82秒，RAM4.20GiB、显存reserved8.52GiB。末端CPU浮点等零断言中断，分数未封存。
+2. 结论分析：已用纯算子验证修复，额外模型调用0。补跑同一场景需新增143次、累计286，超过原256上限，等待明确授权；模型/输入/精度/验收门槛不变，不读标签或评价性能。
 
-详见RUNTIME_DECISION.md。DEPENDENCY_AND_PATH_LOCK.json为未安装的版本/路径候选锁，ENVIRONMENT_CORE_PRICE.json为元数据空间下界，RESOURCE_TABLE.json为真实资源探针。原SSH阻塞记录保留。raw pip报告与wheel目录二进制只在outputs及远端shared受控目录，Git仅小结果/SHA与代码。
+见RUNTIME_DECISION.md及PHASE111_CPU_VERIFIER_RECOVERY_20261014.md。首次失败保留在first_attempt；原SSH与环境预算停止记录分别保留，未改写历史。

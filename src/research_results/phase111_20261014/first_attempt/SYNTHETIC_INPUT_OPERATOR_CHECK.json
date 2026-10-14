@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "saturated_influence_cells": [
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      2,
+      2
+    ]
+  ],
+  "all_affected_cells_excluded": true,
+  "halo_native_pixels": 1,
+  "synthetic_only": true,
+  "model_calls": 0
+}

@@ -1,0 +1,138 @@
+{
+  "files": [
+    {
+      "path": "/home/scv/shared/phase111_ocm_runtime/assets/vendor/omnicloudmask/__init__.py",
+      "url": "https://raw.githubusercontent.com/DPIRD-DMA/OmniCloudMask/f68cf49b4cecc93ec5cb71e80110d76f61df073c/omnicloudmask/__init__.py",
+      "bytes": 353,
+      "sha256": "75cbbdc34afbbf9534dbc330f260e4f33c9f88b28d68a13f7a5d51f533397058",
+      "length_pass": true,
+      "declared_sha_pass": false,
+      "md5_pass": false,
+      "git_blob_pass": true
+    },
+    {
+      "path": "/home/scv/shared/phase111_ocm_runtime/assets/vendor/omnicloudmask/__version__.py",
+      "url": "https://raw.githubusercontent.com/DPIRD-DMA/OmniCloudMask/f68cf49b4cecc93ec5cb71e80110d76f61df073c/omnicloudmask/__version__.py",
+      "bytes": 22,
+      "sha256": "ac7aa83aa6b72f1597beb0669e79b62c3995f489663046f9a8e9b0e5da23ddf9",
+      "length_pass": true,
+      "declared_sha_pass": false,
+      "md5_pass": false,
+      "git_blob_pass": true
+    },
+    {
+      "path": "/home/scv/shared/phase111_ocm_runtime/assets/vendor/omnicloudmask/cloud_mask.py",
+      "url": "https://raw.githubusercontent.com/DPIRD-DMA/OmniCloudMask/f68cf49b4cecc93ec5cb71e80110d76f61df073c/omnicloudmask/cloud_mask.py",
+      "bytes": 58540,
+      "sha256": "9130116e5daa130ceaed28de222484f141abf365c614c0b77aaf7b4f8cf7c33c",
+      "length_pass": true,
+      "declared_sha_pass": false,
+      "md5_pass": false,
+      "git_blob_pass": true
+    },
+    {
+      "path": "/home/scv/shared/phase111_ocm_runtime/assets/vendor/omnicloudmask/data_loaders.py",
+      "url": "https://raw.githubusercontent.com/DPIRD-DMA/OmniCloudMask/f68cf49b4cecc93ec5cb71e80110d76f61df073c/omnicloudmask/data_loaders.py",
+      "bytes": 6157,
+      "sha256": "78a9d9992b9e857978f5f4e4a3784b679c1c6a76787884adcb4ccbcafbd58a88",
+      "length_pass": true,
+      "declared_sha_pass": false,
+      "md5_pass": false,
+      "git_blob_pass": true
+    },
+    {
+      "path": "/home/scv/shared/phase111_ocm_runtime/assets/vendor/omnicloudmask/download_models.py",
+      "url": "https://raw.githubusercontent.com/DPIRD-DMA/OmniCloudMask/f68cf49b4cecc93ec5cb71e80110d76f61df073c/omnicloudmask/download_models.py",
+      "bytes": 4997,
+      "sha256": "6e9b7f7970489a5cb0ae93e900527b591db4cfc42661c789306927e38e27a2ec",
+      "length_pass": true,
+      "declared_sha_pass": false,
+      "md5_pass": false,
+      "git_blob_pass": true
+    },
+    {
+      "path": "/home/scv/shared/phase111_ocm_runtime/assets/vendor/omnicloudmask/model_download_links.csv",
+      "url": "https://raw.githubusercontent.com/DPIRD-DMA/OmniCloudMask/f68cf49b4cecc93ec5cb71e80110d76f61df073c/omnicloudmask/model_download_links.csv",
+      "bytes": 1083,
+      "sha256": "bab75e2c434aba2f3028874112dbe432be48f24f0a01a1269b2ec24c486b63a1",
+      "length_pass": true,
+      "declared_sha_pass": false,
+      "md5_pass": false,
+      "git_blob_pass": true
+    },
+    {
+      "path": "/home/scv/shared/phase111_ocm_runtime/assets/vendor/omnicloudmask/model_utils.py",
+      "url": "https://raw.githubusercontent.com/DPIRD-DMA/OmniCloudMask/f68cf49b4cecc93ec5cb71e80110d76f61df073c/omnicloudmask/model_utils.py",
+      "bytes": 12064,
+      "sha256": "f749ceced40f8b0899f56e95e79b9f43ea77b74898376175407c21c26796a1dd",
+      "length_pass": true,
+      "declared_sha_pass": false,
+      "md5_pass": false,
+      "git_blob_pass": true
+    },
+    {
+      "path": "/home/scv/shared/phase111_ocm_runtime/assets/vendor/omnicloudmask/mps_patch.py",
+      "url": "https://raw.githubusercontent.com/DPIRD-DMA/OmniCloudMask/f68cf49b4cecc93ec5cb71e80110d76f61df073c/omnicloudmask/mps_patch.py",
+      "bytes": 3449,
+      "sha256": "f67b72029ee4faa1f603b1fd163df812a3a98397278eb12788e135c6159c73b8",
+      "length_pass": true,
+      "declared_sha_pass": false,
+      "md5_pass": false,
+      "git_blob_pass": true
+    },
+    {
+      "path": "/home/scv/shared/phase111_ocm_runtime/assets/vendor/omnicloudmask/optimizations.py",
+      "url": "https://raw.githubusercontent.com/DPIRD-DMA/OmniCloudMask/f68cf49b4cecc93ec5cb71e80110d76f61df073c/omnicloudmask/optimizations.py",
+      "bytes": 2465,
+      "sha256": "2f4c6581b6badb93572f03c8b717f952eb60f96be9028943633b59e9d50011b7",
+      "length_pass": true,
+      "declared_sha_pass": false,
+      "md5_pass": false,
+      "git_blob_pass": true
+    },
+    {
+      "path": "/home/scv/shared/phase111_ocm_runtime/assets/vendor/omnicloudmask/raster_utils.py",
+      "url": "https://raw.githubusercontent.com/DPIRD-DMA/OmniCloudMask/f68cf49b4cecc93ec5cb71e80110d76f61df073c/omnicloudmask/raster_utils.py",
+      "bytes": 6063,
+      "sha256": "0d5c85f70d578b7a76a8cbdeeeca7097daca6f2e38c338ab82a9753c6f7ac506",
+      "length_pass": true,
+      "declared_sha_pass": false,
+      "md5_pass": false,
+      "git_blob_pass": true
+    },
+    {
+      "path": "/home/scv/shared/phase111_ocm_runtime/assets/weights/PM_model_2.2.10_RG_NIR_509_regnety_004.pycls_in1k_PT_state.safetensors",
+      "url": "https://huggingface.co/NickWright/OmniCloudMask/resolve/c9a4fb88188709127aa25cfe51ae7fd41b0132f8/PM_model_2.2.10_RG_NIR_509_regnety_004.pycls_in1k_PT_state.safetensors",
+      "bytes": 72314968,
+      "sha256": "044f2d6a3b4b59817f19d4ca080485f01c4bf9a6fddd053df184ee98144b46a2",
+      "length_pass": true,
+      "declared_sha_pass": true,
+      "md5_pass": false,
+      "git_blob_pass": false
+    },
+    {
+      "path": "/home/scv/shared/phase111_ocm_runtime/assets/weights/PM_model_2.2.10_RG_NIR_509_convnextv2_nano.fcmae_ft_in1k_PT_state.safetensors",
+      "url": "https://huggingface.co/NickWright/OmniCloudMask/resolve/c9a4fb88188709127aa25cfe51ae7fd41b0132f8/PM_model_2.2.10_RG_NIR_509_convnextv2_nano.fcmae_ft_in1k_PT_state.safetensors",
+      "bytes": 130164944,
+      "sha256": "221c7393fe17c1a22791e43ae98a5daeee6c7a01bf2d68f1a319770d217041c1",
+      "length_pass": true,
+      "declared_sha_pass": true,
+      "md5_pass": false,
+      "git_blob_pass": false
+    },
+    {
+      "path": "/home/scv/shared/phase111_ocm_runtime/assets/B8A.jp2",
+      "url": "https://storage.googleapis.com/gcp-public-data-sentinel-2/tiles/40/U/EE/S2A_MSIL1C_20170113T072241_N0204_R006_T40UEE_20170113T072238.SAFE/GRANULE/L1C_T40UEE_A008154_20170113T072238/IMG_DATA/T40UEE_20170113T072241_B8A.jp2?generation=1484527265272966",
+      "bytes": 33719890,
+      "sha256": "639935df24ed83d13c1d1c3bbbd1046469256530fb57179f4840437eb35078e5",
+      "length_pass": true,
+      "declared_sha_pass": false,
+      "md5_pass": true,
+      "git_blob_pass": false
+    }
+  ],
+  "status": "all_files_verified",
+  "selected_product_id": "S2A_MSIL1C_20170113T072241_N0204_R006_T40UEE_20170113T072238",
+  "code_commit": "f68cf49b4cecc93ec5cb71e80110d76f61df073c",
+  "model_calls": 0
+}
