@@ -1,0 +1,15 @@
+{
+  "previous_cumulative_calls": 3072,
+  "second_attempt_main_calls": 3042,
+  "second_attempt_repeat_calls": 4,
+  "second_attempt_construction_calls": 11,
+  "initial_attempt_calls": 15,
+  "reuse_completed_scenes": 5,
+  "cause": "planner omitted original author compile_batches all_indexes duplicate moved-coordinate suppression",
+  "scientific_verdict": null,
+  "label_reference_joined": false,
+  "remaining_scenes_replay_only_unsealed": true,
+  "cumulative_model_cap": 25000,
+  "cumulative_GPU_wall_cap_seconds": 18000,
+  "root": "/home/scv/shared/phase118_20261014/recovery_002"
+}

@@ -51,11 +51,13 @@ def prepare():
             assert cm.check_patch_size(array,0,size,overlap) == (overlap,size)
             indexes = ru.make_patch_indexes(array.shape[2],array.shape[1],size,overlap)
             actual = []
+            seen = set()
             for index in indexes:
                 patch, moved = ru.get_patch(array,index,0)
                 if patch is not None:
                     assert patch.shape == (3,size,size) and np.isfinite(patch).all()
-                    actual.append(list(moved))
+                    if tuple(moved) not in seen:
+                        actual.append(list(moved));seen.add(tuple(moved))
                 del patch
             suffix = '10' if setting == 'H10' else '20'
             yy = np.array([int(q['row'+suffix]) for q in points])
@@ -161,8 +163,15 @@ def run():
     for m in models:
         for p in m.parameters(): p.requires_grad_(False)
     coord=coordinates(); repeated={'C20':0,'H10':0}; receipts=[]; scores_hash={}
+    reused = load(ROOT/'REUSED_SCENE_RECEIPTS.json') if (ROOT/'REUSED_SCENE_RECEIPTS.json').exists() else []
+    for receipt in reused:
+        mode,pid=receipt['setting'],receipt['product_id'];p=ROOT/'scores'/mode/pid/'UNLABELLED_POINT_SCORES.json'
+        assert sha(p)==receipt['score_sha256']
+        receipts.append(receipt);scores_hash[mode+'/'+pid]=receipt['score_sha256']
+    reuse_keys={(r['setting'],r['product_id']) for r in reused}
     for row in plan['rows']:
         mode,pid,size,overlap = row['setting'],row['product_id'],row['patch_size'],row['overlap']
+        if (mode,pid) in reuse_keys:continue
         STATE.update(status='running',setting=mode,product_id=pid,patch_completed=0)
         out=ROOT/'scores'/mode/pid;out.mkdir(parents=True,exist_ok=False)
         started=time.monotonic(); calls_before=STATE['main_calls']
@@ -258,9 +267,52 @@ def run():
 
 
 if __name__=='__main__':
-    ap=argparse.ArgumentParser();ap.add_argument('--prepare',action='store_true');ap.add_argument('--recover',action='store_true');args=ap.parse_args()
+    ap=argparse.ArgumentParser();ap.add_argument('--prepare',action='store_true');ap.add_argument('--recover',action='store_true');ap.add_argument('--resume-verified',action='store_true');args=ap.parse_args()
     try:
-        if args.recover:
+        if args.resume_verified:
+            assert not args.prepare and not args.recover
+            original_root=ROOT;prior=ROOT/'recovery_001'
+            assert (prior/'EXIT_CODE').read_text().strip()=='1'
+            old_pid=int((prior/'RUN_PID').read_text());proc=Path(f'/proc/{old_pid}/stat')
+            assert not proc.exists() or proc.read_text().split(') ')[1].split()[0]=='Z'
+            old=load(prior/'RUN_STATUS.json');done=load(prior/'SCENE_RECEIPTS.json')
+            assert len(done)==5 and old['all_calls']==3072
+            ROOT=original_root/'recovery_002';ROOT.mkdir(exist_ok=False)
+            plan=load(prior/'INPUT_PATCH_PLAN.json');dedup_counts=[]
+            for row in plan['rows']:
+                original=row['actual_patch_coordinates'];unique=list(dict.fromkeys(tuple(p) for p in original))
+                row['actual_patch_coordinates']=[list(p) for p in unique]
+                dedup_counts.append({'setting':row['setting'],'product_id':row['product_id'],
+                                      'old':len(original),'author_unique':len(unique)})
+            plan['planned_calls_including_11_construction_and_8_repeats']=2*sum(len(r['actual_patch_coordinates']) for r in plan['rows'])+19
+            plan['engineering_revision']='author compile_batches deduplicates moved coordinates; no inference setting changed'
+            write(ROOT/'INPUT_PATCH_PLAN.json',plan)
+            native_lock=load(REPO/'src/research_results/phase118_20261014/NATIVE_ASSET_SHA_LOCK.json')['files']
+            checked=0
+            for row in plan['rows']:
+                for binding in row['input_bindings']:
+                    if binding['band'] in ('B04','B03','B8A'):
+                        assert binding['sha256']==native_lock[row['product_id']+'/'+binding['band']]['sha256'];checked+=1
+            assert checked==96
+            write(ROOT/'CPU_HISTORICAL_INPUT_SHA_ACCEPTANCE.json',{'status':'passed','binding_checks':96,
+                 'deduplication_only':True,'plan_sha256':sha(ROOT/'INPUT_PATCH_PLAN.json'),'model_calls':0})
+            (ROOT/'PREPARE_EXIT_CODE').write_text('0\n')
+            for r in done:
+                source=prior/'scores'/r['setting']/r['product_id'];target=ROOT/'scores'/r['setting']/r['product_id']
+                target.mkdir(parents=True,exist_ok=False)
+                assert sha(source/'UNLABELLED_POINT_SCORES.json')==r['score_sha256']
+                cpu=load(source/'CPU_POINT_RECONSTRUCTION.json')
+                planned=next(p for p in plan['rows'] if p['setting']==r['setting'] and p['product_id']==r['product_id'])
+                assert cpu['actual_patch_coordinates']==planned['actual_patch_coordinates'] and cpu['max_confidence_error']<=1e-5
+                for name in ('UNLABELLED_POINT_SCORES.json','CPU_POINT_RECONSTRUCTION.json'):
+                    (target/name).write_bytes((source/name).read_bytes())
+            write(ROOT/'REUSED_SCENE_RECEIPTS.json',done)
+            write(ROOT/'AUTHOR_DEDUPLICATION_CORRECTION.json',{'rows':dedup_counts,'original_plan_sha256':sha(prior/'INPUT_PATCH_PLAN.json'),
+                  'new_plan_sha256':sha(ROOT/'INPUT_PATCH_PLAN.json'),'same_all_inputs_and_window_settings':True})
+            STATE.update(recovery=True,previous_attempt_calls=old['all_calls'],previous_attempt_seconds=old['elapsed_seconds'],
+                         first_attempt_preserved=str(original_root),second_attempt_preserved=str(prior),reused_verified_scenes=5,
+                         recovery_scope='preserve5 validated scores; replay unsealed sixth scene; match original author deduplication')
+        elif args.recover:
             assert not args.prepare
             original_root=ROOT
             assert (ROOT/'EXIT_CODE').read_text().strip()=='1'

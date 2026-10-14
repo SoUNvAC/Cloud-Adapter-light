@@ -10,8 +10,9 @@ from install_phase111_runtime import host_free
 
 def main():
     global ROOT
-    parser=argparse.ArgumentParser();parser.add_argument('--recover',action='store_true');args=parser.parse_args()
-    if args.recover:ROOT=ROOT/'recovery_001'
+    parser=argparse.ArgumentParser();parser.add_argument('--recover',action='store_true');parser.add_argument('--resume-verified',action='store_true');args=parser.parse_args()
+    if args.resume_verified:ROOT=ROOT/'recovery_002'
+    elif args.recover:ROOT=ROOT/'recovery_001'
     assert (ROOT/'EXIT_CODE').read_text().strip()=='0'
     pid=int((ROOT/'RUN_PID').read_text())
     try:

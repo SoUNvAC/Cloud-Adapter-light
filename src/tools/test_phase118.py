@@ -15,6 +15,8 @@ def main():
     store=next(n for n in ast.walk(tree) if isinstance(n,ast.FunctionDef) and n.name=='observed_store')
     signature=inspect.Signature([inspect.Parameter(a.arg,inspect.Parameter.POSITIONAL_OR_KEYWORD) for a in store.args.args])
     signature.bind(pred_batch=None,index_batch=None,pred_tracker=None,gradient=None,grad_tracker=None)
+    moved=[(0,500,0,500),(0,500,0,500),(1,501,1,501)]
+    assert list(dict.fromkeys(moved))==[moved[0],moved[2]]
     a=(np.arange(64).reshape(8,8)*13+100).astype(np.uint16)
     with MemoryFile() as f:
         with f.open(driver='GTiff',height=8,width=8,count=1,dtype='uint16',transform=from_origin(0,160,20,20),nodata=0) as ds:
