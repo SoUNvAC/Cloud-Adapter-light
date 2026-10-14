@@ -1,0 +1,179 @@
+{
+  "phase": 111,
+  "selection_rule": "ascending SHA256(UTF8('PHASE111_SCENE|' + product_id))",
+  "ranking": [
+    {
+      "product_id": "S2A_MSIL1C_20170113T072241_N0204_R006_T40UEE_20170113T072238",
+      "selection_sha256": "02e4d1c5c2b110672987aa6a8a198cfabeef5536e3e5a07860b6e8022b0d2e35"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20170908T100031_N0205_R122_T32SPJ_20170908T100655",
+      "selection_sha256": "038d0d70431e33d93e93207ce3abab6e946aa987fbd758581b16e8c3ab2dc460"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20180303T140051_N0206_R067_T19FDV_20180303T202004",
+      "selection_sha256": "07961c8647e4e5cd5cf18971559c3e5090bf8d344eb48e1cb332e573cb7b433e"
+    },
+    {
+      "product_id": "S2B_MSIL1C_20170916T101019_N0205_R022_T32SPJ_20170916T101354",
+      "selection_sha256": "117a74c37c026ed3516ca079f50380538808615839495ffca003f74fcaa5e26c"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20170725T142751_N0205_R053_T19GBQ_20170725T143854",
+      "selection_sha256": "291cc5a6c4e5e844d8307f5fd3be605f9180d894b5fdfdc67ff97e026d4522c6"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20180302T142851_N0206_R053_T19GBQ_20180302T192732",
+      "selection_sha256": "64cb7053ff225054b661ef12e3abaec62a1c315cd85996772530c56675e3a202"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20170706T051651_N0205_R062_T48XWG_20170706T051649",
+      "selection_sha256": "6f920a3976eb3f0a822e39ae55c79de4fc39709534acc91a5fbd76f54c658ae9"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20170917T052641_N0205_R105_T48XWG_20170917T052642",
+      "selection_sha256": "827c944483ed805d0fe8d6b17e5b19fce18c1d14ae45f37a4c8c8c0c24a7d76b"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20170726T102021_N0205_R065_T33VVE_20170726T102259",
+      "selection_sha256": "9671815e578f531bb9b3ef2d0d8a66933d0330245c68ae46f89f3894600dbbf5"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20180217T053911_N0206_R005_T44SKJ_20180217T082149",
+      "selection_sha256": "a80ba4babb4c6e808cbc50a3c82d091798fa595676215dd8927b73ac7199e542"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20170712T071621_N0205_R006_T40UEE_20170712T071617",
+      "selection_sha256": "b211fe109ec9a0029e064e0ef1fa818632a7cb814b5913822195814103d7f835"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20180222T012651_N0206_R074_T54TWN_20180222T031349",
+      "selection_sha256": "b68cf5e62dc744f308afa05a875e9a0e406b74a59a4133816d99159bdfc9cf6a"
+    },
+    {
+      "product_id": "S2B_MSIL1C_20170731T102019_N0205_R065_T33VVE_20170731T102348",
+      "selection_sha256": "bf596c1c56d8e1764c064774354df6e4889a40877e49c0ffe07fec732e83143f"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20171107T150421_N0206_R125_T22WES_20171107T165127",
+      "selection_sha256": "d59d9c4042c58bdd82c42bf84dff366446e82727675e708826a83d15b326be34"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20180106T032121_N0206_R118_T48NUG_20180106T083912",
+      "selection_sha256": "de72508455243552877a113c5bcbe892e6632720b8ae033b9da86dcfda56b08f"
+    },
+    {
+      "product_id": "S2B_MSIL1C_20180302T150259_N0206_R125_T22WES_20180302T183800",
+      "selection_sha256": "eb239ddac7d20fae6bd0917633ae1e90a8063a2219ff593dd6490c9870172020"
+    }
+  ],
+  "selected_product_id": "S2A_MSIL1C_20170113T072241_N0204_R006_T40UEE_20170113T072238",
+  "selected_b8a": {
+    "product_id": "S2A_MSIL1C_20170113T072241_N0204_R006_T40UEE_20170113T072238",
+    "product_link": "1407300752",
+    "group_id": "83648a01da773580ef92aade342ca7d137afc328617a58cbe425f0b73689e510",
+    "name": "tiles/40/U/EE/S2A_MSIL1C_20170113T072241_N0204_R006_T40UEE_20170113T072238.SAFE/GRANULE/L1C_T40UEE_A008154_20170113T072238/IMG_DATA/T40UEE_20170113T072241_B8A.jp2",
+    "generation": "1484527265272966",
+    "bytes": 33719890,
+    "md5_base64": "MMw0wBf2G4yGUs5bKOE6Qw==",
+    "crc32c_base64": "quOrrQ==",
+    "processing_baseline": "02.04",
+    "band": "B8A",
+    "xml_band_id": "8",
+    "native_resolution_m": 20,
+    "crs": "EPSG:32640",
+    "grid20": {
+      "NROWS": 5490,
+      "NCOLS": 5490,
+      "ULX": 499980.0,
+      "ULY": 6000000.0,
+      "XDIM": 20.0,
+      "YDIM": -20.0
+    },
+    "status": "metadata_pass_original_object_live",
+    "body_downloaded": false,
+    "checksum_content_verified": false,
+    "frozen_listing_crc32c_base64": "unknown",
+    "metadata_url": "https://storage.googleapis.com/storage/v1/b/gcp-public-data-sentinel-2/o/tiles%2F40%2FU%2FEE%2FS2A_MSIL1C_20170113T072241_N0204_R006_T40UEE_20170113T072238.SAFE%2FGRANULE%2FL1C_T40UEE_A008154_20170113T072238%2FIMG_DATA%2FT40UEE_20170113T072241_B8A.jp2?generation=1484527265272966",
+    "object_metadata_sha256": "f17282e178148192e4ba619574a68912ea688b10bd46bda0bf6de15715f81747",
+    "future_media_url": "https://storage.googleapis.com/gcp-public-data-sentinel-2/tiles/40/U/EE/S2A_MSIL1C_20170113T072241_N0204_R006_T40UEE_20170113T072238.SAFE/GRANULE/L1C_T40UEE_A008154_20170113T072238/IMG_DATA/T40UEE_20170113T072241_B8A.jp2?generation=1484527265272966"
+  },
+  "source_files_sha256": {
+    "src/research_plans/PHASE111_OCM_RUNTIME_ACCEPTANCE_20261014.md": "9af3b5b208e246306a224fd8ed2802fc7e6675be04b50be2f04071d1e52e4056",
+    "src/research_results/phase104_20261013/object_manifest.json": "0313ec61fef75acad7152e0deb639b094aa77b3a1b4041545e09939955b5500a",
+    "src/research_results/phase109_20261013/VERSION_SOURCE_LOCK.json": "c27a883bf9e56a9b68fd9810decb40e060df76eba8aa3edfa231ade836e2f886",
+    "src/research_results/phase109_20261013/WEIGHTS_AND_LICENSE.json": "28f644070835e9ba42269c133ae7d64d20c59e538533242b55fc40815142b739",
+    "src/research_results/phase110_20261014/B8A_OBJECTS.json": "f7e47697b45c61cefb16b692fa6312cfedb380612515ca1e567ba90c72b824f0"
+  },
+  "code_commit": "f68cf49b4cecc93ec5cb71e80110d76f61df073c",
+  "hf_model_revision": "c9a4fb88188709127aa25cfe51ae7fd41b0132f8",
+  "weights": [
+    {
+      "version": 1,
+      "required": true,
+      "architecture": "regnety_004",
+      "google_drive_file_id": "1tGJh9nnrH-apjmV70AcK8VtXnbBtRb67",
+      "google_drive_filename": "PM_model_2.2.10_RG_NIR_509_regnety_004.pycls_in1k_PT_state.pth",
+      "google_drive_length": "unknown",
+      "google_drive_checksum": "unknown",
+      "hf_filename": "PM_model_2.2.10_RG_NIR_509_regnety_004.pycls_in1k_PT_state.safetensors",
+      "hf_revision": "c9a4fb88188709127aa25cfe51ae7fd41b0132f8",
+      "declared_length_bytes": 72314968,
+      "declared_sha256": "044f2d6a3b4b59817f19d4ca080485f01c4bf9a6fddd053df184ee98144b46a2",
+      "checksum_content_verified": false,
+      "license_declaration": "MIT in author HF model card; no separate LICENSE in model repository",
+      "code_license": "MIT",
+      "format": "safetensors; author loader converts V1 to .pth",
+      "state_tensor_equivalence_to_original_google_drive": "not verified; author mapping in download_models.py:40-63"
+    },
+    {
+      "version": 1,
+      "required": true,
+      "architecture": "convnextv2_nano",
+      "google_drive_file_id": "1QXQ_oPhLKEowC9fxlZGLOACt8gCNMbWP",
+      "google_drive_filename": "PM_model_2.2.10_RG_NIR_509_convnextv2_nano.fcmae_ft_in1k_PT_state.pth",
+      "google_drive_length": "unknown",
+      "google_drive_checksum": "unknown",
+      "hf_filename": "PM_model_2.2.10_RG_NIR_509_convnextv2_nano.fcmae_ft_in1k_PT_state.safetensors",
+      "hf_revision": "c9a4fb88188709127aa25cfe51ae7fd41b0132f8",
+      "declared_length_bytes": 130164944,
+      "declared_sha256": "221c7393fe17c1a22791e43ae98a5daeee6c7a01bf2d68f1a319770d217041c1",
+      "checksum_content_verified": false,
+      "license_declaration": "MIT in author HF model card; no separate LICENSE in model repository",
+      "code_license": "MIT",
+      "format": "safetensors; author loader converts V1 to .pth",
+      "state_tensor_equivalence_to_original_google_drive": "not verified; author mapping in download_models.py:40-63"
+    }
+  ],
+  "scope": "single scene, no labels, no performance evaluation, no fitting",
+  "resource_caps": {
+    "host_min_free_bytes": 4000000000,
+    "environment_peak_bytes_including_caches": 4000000000,
+    "new_intermediate_bytes": 4000000000,
+    "weight_band_download_bytes_including_retries": 4000000000,
+    "ram_bytes": 17179869184,
+    "vram_bytes": 21474836480,
+    "gpu_seconds": 3600,
+    "main_and_repeat_calls": 256
+  },
+  "inference": {
+    "channels": [
+      "B04",
+      "B03",
+      "B8A"
+    ],
+    "dtype": "float32",
+    "patch_size": 1000,
+    "overlap": 300,
+    "batch_size": 1,
+    "mosaic": "CPU",
+    "export_confidence": true,
+    "softmax_output": true,
+    "compile_models": false,
+    "repeat_first_valid_patches": 2,
+    "repeat_extra_calls": 4,
+    "repeat_max_absolute_difference": 1e-05
+  },
+  "resource_gate": "must be measured and passed before installation/download/forward",
+  "inherited_declarations_are_not_actual_content_validation": true
+}

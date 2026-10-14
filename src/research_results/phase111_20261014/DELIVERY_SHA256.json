@@ -1,0 +1,9 @@
+{
+  "src/research_results/phase111_20261014/PRE_EXECUTION_LOCK.json": "b0f9081bf1e74ec80cbd1ff54776c4989a3505564fc87028fcd0be2c3ae6f723",
+  "src/research_results/phase111_20261014/EXECUTION_STATUS.json": "dc42b4b2ab96e4f0eff7d5f2ac42cb8a52635f9c2518a7c832e4b652e5d01996",
+  "src/research_results/phase111_20261014/RUNTIME_DECISION.md": "a7ebbad540614f1489572c5bed095340972236acad4a712496e471d171bae2af",
+  "src/research_results/phase111_20261014/README.md": "03a6cf01a55260531329cf61a8cd77a54c563890cfd31289f712fd557dc0274b",
+  "src/research_results/phase111_20261014/.gitattributes": "f06202a408fef9b9ea69bb6b1cb8160dbb0378c5bb67a444d510d231813824c8",
+  "src/tools/prepare_phase111_lock.py": "932ed208294a87f0fd9fdd49f2d630ae587178b97bee09a8e249f65e77bb5df4",
+  "src/research_plans/PHASE111_OCM_RUNTIME_ACCEPTANCE_20261014.md": "9af3b5b208e246306a224fd8ed2802fc7e6675be04b50be2f04071d1e52e4056"
+}

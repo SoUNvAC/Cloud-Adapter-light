@@ -1,0 +1,54 @@
+{
+  "phase": 111,
+  "measured_beijing": "2026-10-14T09:23:44.781532+08:00",
+  "status": "blocked_before_resource_gate",
+  "reason": "Three bounded ssh gzs attempts closed by remote host during key exchange; no remote command executed.",
+  "ssh_attempts": [
+    {
+      "attempt": 1,
+      "exit_code": 1,
+      "error": "kex_exchange_identification: Connection closed by remote host"
+    },
+    {
+      "attempt": 2,
+      "exit_code": 1,
+      "error": "kex_exchange_identification: Connection closed by remote host"
+    },
+    {
+      "attempt": 3,
+      "exit_code": 1,
+      "error": "kex_exchange_identification: Connection closed by remote host"
+    }
+  ],
+  "remote_resource_measurement": "not_available_this_run",
+  "dependency_resolution": "not_started_without_remote_access",
+  "environment_installation": "not_started",
+  "weight_content_validation": "not_started",
+  "b8a_content_validation": "not_started",
+  "class_order_runtime_validation": "not_started",
+  "runtime_decision": "NOT_ACCEPTED_NOT_TESTED",
+  "model_calls": {
+    "construction_shape_probes": 0,
+    "main": 0,
+    "repeat": 0
+  },
+  "new_weight_or_band_download_bytes": 0,
+  "fitting_calls": 0,
+  "labels_accessed": false,
+  "performance_metrics_computed": false,
+  "work_dirs_synced": false,
+  "original_environment_modified": false,
+  "historical_phase110_resource_numbers_are_not_current_measurements": true,
+  "remaining": [
+    "Re-measure remote physical host space/RAM/VRAM",
+    "Resolve and lock dependency versions and paths; enforce environment/cache peak <=4GB and physical free >=4GB",
+    "Only after gates pass: establish controlled runtime, validate both V1 weights and selected B8A",
+    "Run one complete scene, repeat first two valid patches, independent CPU reconstruction, seal unlabelled point scores"
+  ],
+  "claim_limits": [
+    "No runtime incompatibility conclusion; access failure precedes compatibility testing",
+    "Old exposed pool remains exploratory; V1 exact training-position intersection unknown",
+    "Point samples do not establish full-scene FPR",
+    "No other 15 scenes or performance evaluation authorized by this phase"
+  ]
+}
