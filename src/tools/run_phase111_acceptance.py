@@ -114,10 +114,15 @@ def main():
     assert len(models)==2 and all(not m.training for m in models)
     head_channels=[list(m for m in model.modules() if isinstance(m,torch.nn.Conv2d))[-1].out_channels for model in models]
     assert head_channels==[4,4]
+    assert all(p.dtype==torch.float32 for model in models for p in model.parameters())
     write('MODEL_LOAD_ACCEPTANCE.json',{'models':2,'state_dict_strict_load':'passed',
           'declared_class_order':['Clear','Thick Cloud','Thin Cloud','Shadow'],'shadow_channel':3,
           'semantic_identity_basis':'fixed author V1 ensemble and source documentation; not inferred from labels',
           'actual_last_conv_output_channels':head_channels,
+          'parameter_counts':[sum(p.numel() for p in model.parameters()) for model in models],
+          'parameter_dtype':'torch.float32','autocast':False,
+          'matmul_allow_tf32':torch.backends.cuda.matmul.allow_tf32,
+          'cudnn_allow_tf32':torch.backends.cudnn.allow_tf32,
           'construction_graph_calls':len(state['construction_graph_calls'])})
     manifest=json.loads((REPO/'src/research_results/phase104_20261013/object_manifest.json').read_text())
     pid=lock['selected_product_id'];product=next(p for p in manifest['products'] if p['product_id']==pid)
