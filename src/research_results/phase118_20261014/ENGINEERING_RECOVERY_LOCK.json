@@ -1,0 +1,21 @@
+{
+  "first_attempt_remote_pid": 52634,
+  "exit_code": 1,
+  "main_calls": 2,
+  "repeat_calls": 2,
+  "construction_calls": 11,
+  "total_calls": 15,
+  "elapsed_seconds": 140.19102211699646,
+  "repeat_errors": [
+    0,
+    0
+  ],
+  "cause": "capture observed_store did not accept author pred_batch keyword",
+  "scientific_verdict": null,
+  "preserved_remote_root": "/home/scv/shared/phase118_20261014",
+  "recovery_root": "/home/scv/shared/phase118_20261014/recovery_001",
+  "projected_cumulative_calls": 16300,
+  "authorized_total_cap": 25000,
+  "settings_model_input_plan_and_tolerance_unchanged": true,
+  "no_scores_sealed_in_failed_attempt": true
+}

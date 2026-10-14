@@ -1,5 +1,6 @@
 """Package only sealed point scores and small CPU receipts from shared, no pixels."""
 import json
+import argparse
 import os
 from pathlib import Path
 import zipfile
@@ -8,6 +9,9 @@ from install_phase111_runtime import host_free
 
 
 def main():
+    global ROOT
+    parser=argparse.ArgumentParser();parser.add_argument('--recover',action='store_true');args=parser.parse_args()
+    if args.recover:ROOT=ROOT/'recovery_001'
     assert (ROOT/'EXIT_CODE').read_text().strip()=='0'
     pid=int((ROOT/'RUN_PID').read_text())
     try:
@@ -19,7 +23,8 @@ def main():
         assert stat.split(') ')[1].split()[0]=='Z','worker still alive'
     state=load(ROOT/'RUN_STATUS.json')
     assert state['status']=='all_scores_sealed_before_local_reference_join'
-    assert state['all_calls']<=20000 and state['elapsed_seconds']<=14400
+    assert state['all_calls']<=(25000 if state.get('recovery') else 20000)
+    assert state['elapsed_seconds']<=(18000 if state.get('recovery') else 14400)
     assert state['rss_peak_bytes']<=24*1024**3 and state['gpu_reserved_peak_bytes']<=20*1024**3
     assert state['repeat_calls']==8 and max(state['repeat_max_abs'])<=1e-5
     receipts=load(ROOT/'SCENE_RECEIPTS.json');seal=load(ROOT/'SCORES_SEALED.json')
@@ -39,7 +44,8 @@ def main():
     write(ROOT/'COST_SNAPSHOT.json',{'host_free_after_bytes':free,'new_intermediate_bytes_before_package':size,
          'main_call_total':state['all_calls'],'main_run_wall_seconds':state['elapsed_seconds'],
          'single_GPU_wall_time_is_conservative_upper_bound_not_kernel_timer':True,
-         'reserved_recovery_budget_used':False,'no_download_fit_training':True})
+         'reserved_recovery_budget_used':state.get('recovery',False),'previous_attempt_calls':state.get('previous_attempt_calls',0),
+         'no_download_fit_training':True})
     with zipfile.ZipFile(ROOT/'point_scores_private.zip','x',compression=zipfile.ZIP_DEFLATED) as z:
         for p in paths:z.write(p,p.relative_to(ROOT/'scores').as_posix())
     small=[p for p in ROOT.iterdir() if p.suffix=='.json']

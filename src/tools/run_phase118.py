@@ -107,12 +107,13 @@ def run():
     finished = threading.Event()
 
     def check():
-        STATE['elapsed_seconds'] = time.monotonic()-START
+        STATE['elapsed_seconds'] = time.monotonic()-START+STATE.get('previous_attempt_seconds',0)
         STATE['rss_peak_bytes'] = max(STATE['rss_peak_bytes'],resource.getrusage(resource.RUSAGE_SELF).ru_maxrss*1024)
         STATE['gpu_reserved_peak_bytes'] = max(STATE['gpu_reserved_peak_bytes'],torch.cuda.max_memory_reserved())
-        STATE['all_calls'] = STATE['main_calls']+STATE['repeat_calls']+STATE['construction_calls']
+        STATE['all_calls'] = STATE['main_calls']+STATE['repeat_calls']+STATE['construction_calls']+STATE.get('previous_attempt_calls',0)
         assert STATE['rss_peak_bytes'] <= 24*1024**3 and STATE['gpu_reserved_peak_bytes'] <= 20*1024**3
-        assert STATE['elapsed_seconds'] <= 14400 and STATE['all_calls'] <= 20000
+        assert STATE['elapsed_seconds'] <= (18000 if STATE.get('recovery') else 14400)
+        assert STATE['all_calls'] <= (25000 if STATE.get('recovery') else 20000)
 
     def monitor():
         try:
@@ -179,7 +180,7 @@ def run():
             collected=[]
             def attempted(m,a):
                 STATE['main_calls']+=1
-                assert STATE['main_calls']+STATE['repeat_calls']+STATE['construction_calls']<=20000
+                assert STATE['main_calls']+STATE['repeat_calls']+STATE['construction_calls']+STATE.get('previous_attempt_calls',0)<=(25000 if STATE.get('recovery') else 20000)
             handles=[m.register_forward_pre_hook(attempted) for m in ms]
             handles += [m.register_forward_hook(lambda m,a,o:collected.append(o.detach().cpu().numpy().copy())) for m in ms]
             try: result=old_infer(ms,batch)
@@ -198,17 +199,17 @@ def run():
                     STATE['repeat_max_abs'].append(e);assert e<=1e-5
                 repeated[mode]+=1
             return result
-        def observed_store(pred,indexes,tracker,gradient,grad_tracker=None):
+        def observed_store(pred_batch,index_batch,pred_tracker,gradient,grad_tracker=None):
             gradient_error=float(np.max(np.abs(gradient.detach().cpu().numpy()-cpu_gradient)))
             assert gradient_error<=1e-7
-            for i,(t,b,l,r) in enumerate(indexes):
+            for i,(t,b,l,r) in enumerate(index_batch):
                 inside=(yy>=t)&(yy<b)&(xx>=l)&(xx<r);dy=yy[inside]-t;dx=xx[inside]-l
                 weights=cpu_gradient[dy,dx]
                 cpu[:,inside]+=latest['mean'][i,:,dy,dx].T*weights[None]
                 grad[inside]+=weights
                 actual_indexes.append([t,b,l,r]);STATE['patch_completed']=len(actual_indexes)
             latest['grad_tracker']=grad_tracker
-            return old_store(pred,indexes,tracker,gradient,grad_tracker)
+            return old_store(pred_batch,index_batch,pred_tracker,gradient,grad_tracker)
         mu.infer_batch=observed_infer;cm.infer_batch=observed_infer;mu.store_results=observed_store
         def forbidden(*a,**k): raise AssertionError('no automatic download or fallback')
         cm.get_models=forbidden
@@ -257,12 +258,29 @@ def run():
 
 
 if __name__=='__main__':
-    ap=argparse.ArgumentParser();ap.add_argument('--prepare',action='store_true');args=ap.parse_args()
+    ap=argparse.ArgumentParser();ap.add_argument('--prepare',action='store_true');ap.add_argument('--recover',action='store_true');args=ap.parse_args()
     try:
+        if args.recover:
+            assert not args.prepare
+            original_root=ROOT
+            assert (ROOT/'EXIT_CODE').read_text().strip()=='1'
+            old_pid=int((ROOT/'RUN_PID').read_text())
+            proc=Path(f'/proc/{old_pid}/stat')
+            assert not proc.exists() or proc.read_text().split(') ')[1].split()[0]=='Z'
+            old_state=load(ROOT/'RUN_STATUS.json')
+            assert old_state['main_calls']==2 and old_state['repeat_calls']==2 and old_state['construction_calls']==11
+            assert not (ROOT/'SCENE_RECEIPTS.json').exists()
+            ROOT=original_root/'recovery_001';ROOT.mkdir(exist_ok=False)
+            for name in ('INPUT_PATCH_PLAN.json','PREPARE_EXIT_CODE','CPU_HISTORICAL_INPUT_SHA_ACCEPTANCE.json'):
+                (ROOT/name).write_bytes((original_root/name).read_bytes())
+            STATE.update(recovery=True,previous_attempt_calls=15,previous_attempt_seconds=old_state['elapsed_seconds'],
+                         first_attempt_preserved=str(original_root),recovery_scope='keyword API fix only; fixed original32 scene plan')
         prepare() if args.prepare else run()
     except Exception:
         if ROOT.exists():
-            STATE.update(status='paused_engineering_no_scientific_verdict',failure=traceback.format_exc(),elapsed_seconds=time.monotonic()-START)
+            STATE.update(status='paused_engineering_no_scientific_verdict',failure=traceback.format_exc(),
+                         elapsed_seconds=time.monotonic()-START+STATE.get('previous_attempt_seconds',0),
+                         all_calls=STATE['main_calls']+STATE['repeat_calls']+STATE['construction_calls']+STATE.get('previous_attempt_calls',0))
             write(ROOT/('PREPARE_FAILURE.json' if args.prepare else 'RUN_STATUS.json'),STATE)
             (ROOT/('PREPARE_EXIT_CODE' if args.prepare else 'EXIT_CODE')).write_text('1\n')
         raise

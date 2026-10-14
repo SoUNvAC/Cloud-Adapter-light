@@ -3,8 +3,8 @@
   "status": "locked_before_input_planning_or_forward",
   "source_sha256": {
     "src/tools/phase118_common.py": "123e8d09ed478f9572dae5be29d9b41793a8faa612bcb6290ab4a48025300751",
-    "src/tools/run_phase118.py": "d4ea80767d4e4f3a638f85ff594faa0a06278b105778c50a3a86fa092a46b6d5",
-    "src/tools/test_phase118.py": "10e7bd466b3d577af4570306ccb98d68467e0d6ba8dce3d2b6af0d39a2cbc5ec",
+    "src/tools/run_phase118.py": "bcf176a880bf276f9fa89e66fc5decc74e302fd2d28d86cdc0ff4b2bddc02204",
+    "src/tools/test_phase118.py": "c83992dacb5d24e596263a71129ca4edecea5c0d44daddf37251dd770c4c0af8",
     "src/research_plans/PHASE118_RESOLUTION_CONTEXT_DIAGNOSTIC_20261014.md": "ea6bd46273ca58ae721dcc9ebc361da7ca50575dd47076e81f859d136ca04317",
     "src/research_plans/EXPLORATION_POLICY_20261014.md": "f38bf963cbfab243149ca425bbb3e2b9624ea0e97c159779507484c443c8bba5",
     "src/research_results/phase104_20261013/object_manifest.json": "0313ec61fef75acad7152e0deb639b094aa77b3a1b4041545e09939955b5500a",
@@ -13,7 +13,8 @@
     "src/research_results/phase112_20261014/DOWNLOAD_STATUS.json": "e3816e810c0b87ca58853c66d5a46787c33fea0ef8d56b4f9542349ee07ef403",
     "src/tools/verify_phase118_plan.py": "eb9fbb15ed187105ee58dc1860843237b2444960a622cdfff5871d4ebd40f8ed",
     "src/research_results/phase118_20261014/NATIVE_ASSET_SHA_LOCK.json": "ea086e558eabe6d7a39ba3d094a40998ccb6f553001b8961fd233cc9d4e1aba9",
-    "src/research_results/phase104_20261013/download_status.json": "81e60e3033b545e61e26374f09eb67210744e37124cfd6b817f7c464186ae7d0"
+    "src/research_results/phase104_20261013/download_status.json": "81e60e3033b545e61e26374f09eb67210744e37124cfd6b817f7c464186ae7d0",
+    "src/tools/collect_phase118.py": "fd28ab34ba6b37acd5fda59e3169a549cae8d617014475e1f368f1ff08c30fd5"
   },
   "coordinate_sha256": "c2f029a349096738935d9239585c67ca6dfc5a4c71017f5e8634af982b86ce68",
   "settings": {
@@ -44,5 +45,6 @@
   "planned_gpu_wall_seconds": 14400,
   "recovery_inclusive_gpu_wall_seconds": 18000,
   "no_new_download_training_fitting_calibration_or_threshold_search": true,
-  "utc": "2026-10-14T13:20:02.474987+00:00"
+  "utc": "2026-10-14T13:20:02.474987+00:00",
+  "engineering_revision": "author keyword API correction; first15 calls /140.191sec retained; same32 frozen inputs/settings and1e-5 tolerance"
 }
