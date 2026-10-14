@@ -1,0 +1,9 @@
+{
+  "utc": "2026-10-14T11:27:13.307920+00:00",
+  "status": "completed_route_closed",
+  "new_experiments_fit_forward_download_review_sampling_thresholds": 0,
+  "interval_recomputations": 0,
+  "work_dirs_synced": false,
+  "next_experiment_authorized": false,
+  "budget_deadline_beijing": "2026-10-20"
+}

@@ -1,0 +1,12 @@
+{
+  "src/research_results/phase116_20261014/RESULTS_DRAFT.md": "82b0b6fa3752ee76be38bee6fd5ed00d391c556c91dea4cd273cb3d600a59dbf",
+  "src/research_results/phase116_20261014/CLAIM_BOUNDARIES.md": "4067809ca4ea9e28abca1f5fe6c37d93fd64b6fa84b4fd1176282f000324d69c",
+  "src/research_results/phase116_20261014/BRANCH_STATUS.md": "13b09bbe0deb84eee2093ccaf35bbc94d725e5dcb783b3ae75aa7c8cee22f8e1",
+  "src/research_results/phase116_20261014/README.md": "35ace236fc7b6b0fdbbd5f357217739da68f447d206c9db0a9ebf8965204e1d3",
+  "src/research_results/phase116_20261014/SOURCE_SHA256.json": "9bcf4014e1a86ba291a053b0b25ae5d03067f785b816c0dc1f5f8843635a6eee",
+  "src/research_results/phase116_20261014/CPU_EXCERPT_ACCEPTANCE.json": "5938a54d8a04454910e57998314f35788f6fb5369a49634f2d8fa8e899cf21db",
+  "src/research_results/phase116_20261014/EXECUTION_STATUS.json": "699153893466dd4bf952f6af5cb398c4355752462de2c42ab3cc6c2e151bcc5e",
+  "src/research_results/phase116_20261014/CPU_EXCERPT_SECOND_CHECK.json": "3e0befbb5406949ed03d9c9cd2b3f593a0ca3dd85b9ac3d95e81e3cd5d15a3be",
+  "src/research_results/phase116_20261014/.gitattributes": "f06202a408fef9b9ea69bb6b1cb8160dbb0378c5bb67a444d510d231813824c8",
+  "src/tools/closeout_phase116.py": "bd9094b7aa09d08c631568e3fdbd69fc8eeb5fbfcc8ca2c578bd02dfad50997f"
+}

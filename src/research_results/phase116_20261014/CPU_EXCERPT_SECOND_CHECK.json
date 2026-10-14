@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "checks": 24,
+  "scope": "exact source values rounded for text; no metrics, intervals or bootstrap recomputed",
+  "CI_endpoints_and_operating_costs_checked": true,
+  "markdown_chars": 2093
+}

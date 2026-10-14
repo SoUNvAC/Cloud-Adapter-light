@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "mode": "accepted aggregate lookup and formatting only",
+  "historical_source_hashes_unchanged": true,
+  "phase66_original_delivery_sha_matches": true,
+  "primary_comparisons_exact_rounded": true,
+  "all_four_AP_rows_read_directly_from_accepted_csv": true,
+  "model_and_support_scope_checked_against_final_READMEs_and_locks": true,
+  "phase115_final_complete_cases_groups": [
+    2,
+    1
+  ],
+  "independent_review_cases_groups": [
+    0,
+    0
+  ],
+  "bootstrap_AP_or_AUC_recomputed": false,
+  "new_pixel_or_private_opinion_read": false,
+  "draft_format": "short Markdown manuscript, no paginated PDF generated"
+}
