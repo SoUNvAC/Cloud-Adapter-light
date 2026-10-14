@@ -1,0 +1,20 @@
+{
+  "utc": "2026-10-14T07:48:22.511858+00:00",
+  "status": "completed_blind_material_preparation_review_not_executed",
+  "sampled_points": 47,
+  "evidence_images": 188,
+  "renderer_exit_code": 0,
+  "reviewed": 0,
+  "unreviewed": 47,
+  "opinions_sealed": false,
+  "reveal_executed": false,
+  "new_failure_hypothesis_proposed": false,
+  "new_forwards": 0,
+  "training": 0,
+  "fits": 0,
+  "new_original_imagery_downloads": 0,
+  "threshold_search": 0,
+  "labels_modified": false,
+  "performance_recomputed_after_exclusion": false,
+  "work_dirs_synced": false
+}

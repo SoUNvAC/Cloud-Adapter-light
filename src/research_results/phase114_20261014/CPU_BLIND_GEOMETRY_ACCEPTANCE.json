@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "sampled_points": 47,
+  "images": 188,
+  "geometry_records": 94,
+  "all_png_dimensions": [
+    1024,
+    1088
+  ],
+  "all_188_image_SHA_passed": true,
+  "private_reveal_not_opened_by_reviewer": true,
+  "anonymous_html_no_reference_decision_layer_group_product_score_or_model_names": true,
+  "all_opinions_not_reviewed": true,
+  "all_pending_template_reveal_gate_rejected": true,
+  "no_data_outside_crop_padding_test_passed": true,
+  "original_point_20m_cell_inclusion_tests_passed": true,
+  "visual_layout_QA_images": 2,
+  "visual_QA_not_class_interpretation": true,
+  "display_interpolation_nearest_no_added_detail": true
+}

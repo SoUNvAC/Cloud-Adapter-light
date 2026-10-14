@@ -1,0 +1,19 @@
+{
+  "src/research_results/phase114_20261014/.gitattributes": "f06202a408fef9b9ea69bb6b1cb8160dbb0378c5bb67a444d510d231813824c8",
+  "src/research_results/phase114_20261014/SAMPLING_BLIND_LOCK.json": "22a171263ccb0fbd9a78a17cc67a2ad6c80e72bd30b02e9c32ee2247988bf4a2",
+  "src/research_results/phase114_20261014/CPU_SAMPLING_ACCEPTANCE.json": "40ea3a3b33b4528fd4af93682907e644db153f0e62f920196a66b09b64801fe1",
+  "src/research_results/phase114_20261014/group_review_status.csv": "fbb459aa9c9fd91c6a35c00fd5e656888c164a392413709fbd16257f71fd414f",
+  "src/research_results/phase114_20261014/review_category_status.csv": "5d4a5e59fbdd1e69555989f27980d0b359a5216ba392f4cda29796b4396ccb93",
+  "src/research_results/phase114_20261014/EVIDENCE_SEAL.json": "6cd4ea5d91f386aab32d65ee4ecf9606bb2d74f00305e9e417d4f419243cc136",
+  "src/research_results/phase114_20261014/RENDER_ACCEPTANCE.json": "b4fae0987c004e60ec64af07dd8d8e2facea1f9cd08a556ed0c085f10e283eae",
+  "src/research_results/phase114_20261014/CPU_BLIND_GEOMETRY_ACCEPTANCE.json": "9ed7b61f74cb4011bbc30e148f507049b9523cb073fd1632eed6003f367d442e",
+  "src/research_results/phase114_20261014/EXECUTION_STATUS.json": "5a656d9ff9dd2264eded6ba365137ded72b75176da7c11c7b91470d881d780ba",
+  "src/research_results/phase114_20261014/NEXT_HYPOTHESIS.md": "133674ed49ef50926a5e49b1fc3a2edfa95ad52939e02f7815df050b699497e0",
+  "src/research_results/phase114_20261014/README.md": "ad1b4683f809232dbb10a3b1d8fcf509d9cda9fd0e3ac43785b059e3c758fe58",
+  "src/research_results/phase114_20261014/LOCAL_ARTIFACT_SHA.json": "1d259395509589e706d6ab3320bd925de7836c23d664fe8042ca03f88fe20b10",
+  "src/tools/prepare_phase114.py": "cc5a1c1bcee5d4ca1a8d45b4e0ad0ee24516ef1bcdd189ea3baa57c39096f190",
+  "src/tools/render_phase114.py": "6d6273ceec1cc21ee00ebf1d93b4a40c3a606cdf70e4d761bb646458fb5b4477",
+  "src/tools/seal_phase114_opinions.py": "c20f9d3d5e4c4a22b23d036b4f7a3c391dad78b9804bb2b6b1f90df818689ee9",
+  "src/tools/phase114_blind_viewer.html": "34d889f8c49fb5e6c8902ceffe2df2aecdce01a5506d97ef065bda851e109b32",
+  "src/research_plans/PHASE114_OMNI_RESIDUAL_BLIND_AUDIT_20261014.md": "ebfa3a2b429d9a5c64a906223e34ffd43a1b27a66c859aa9cda36aa794cad901"
+}

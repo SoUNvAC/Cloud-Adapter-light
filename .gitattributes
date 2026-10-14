@@ -16,3 +16,5 @@ src/research_plans/PHASE113_STRONG_BASE_COMPLEMENT_DIAGNOSTIC_20261014.md -text
 
 src/tools/*phase114*.py -text
 src/research_plans/PHASE114_OMNI_RESIDUAL_BLIND_AUDIT_20261014.md -text
+
+src/tools/phase114_blind_viewer.html -text
