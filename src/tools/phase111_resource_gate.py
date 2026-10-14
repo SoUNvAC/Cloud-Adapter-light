@@ -23,10 +23,13 @@ REQUIREMENTS = ["gdown>=5.1.0", "huggingface-hub>=0.28.1", "platformdirs>=4.0.0"
 
 
 def run(cmd, timeout=45):
-    result = subprocess.run(cmd, capture_output=True, text=True, timeout=timeout)
+    result = subprocess.run(cmd, capture_output=True, timeout=timeout)
     if result.returncode:
-        raise RuntimeError(f"{cmd[0]} exit {result.returncode}: {result.stderr[-2000:]}")
-    return result.stdout.strip()
+        detail = result.stderr[-4000:].decode("utf-8", errors="replace")
+        if "\ufffd" in detail:
+            detail = result.stderr[-4000:].decode("gb18030", errors="replace")
+        raise RuntimeError(f"{cmd[0]} exit {result.returncode}: {detail}")
+    return result.stdout.decode("utf-8-sig").strip()
 
 
 def save(out, name, obj):
