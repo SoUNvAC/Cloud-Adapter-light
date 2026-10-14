@@ -18,3 +18,6 @@ src/tools/*phase114*.py -text
 src/research_plans/PHASE114_OMNI_RESIDUAL_BLIND_AUDIT_20261014.md -text
 
 src/tools/phase114_blind_viewer.html -text
+
+src/tools/*phase115*.py -text
+src/research_plans/PHASE115_SEVEN_CASE_ADJUDICATION_PACK_20261014.md -text
