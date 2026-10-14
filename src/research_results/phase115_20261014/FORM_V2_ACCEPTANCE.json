@@ -1,0 +1,21 @@
+{
+  "scope": "interface upgrade requested by user",
+  "javascript_syntax": "passed Node24 --check",
+  "in_memory_form_checks": [
+    "blank defaults",
+    "draft and complete states",
+    "navigation preserves fields",
+    "browser save",
+    "export timestamp only on export",
+    "unknown identity preserved"
+  ],
+  "fixed_cases": 7,
+  "unchanged_image_count": 28,
+  "unchanged_template": true,
+  "v1_archive_preserved": true,
+  "v2_zip_members_verified": 31,
+  "original_phase115_delivery_verified": true,
+  "new_independent_opinions": 0,
+  "status": "awaiting_independent_review",
+  "limitation": "DOM stub verification; no graphical browser automation"
+}
