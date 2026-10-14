@@ -39,6 +39,7 @@ def save(out, name, obj):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--output", required=True)
+    ap.add_argument("--cuda128", action="store_true", help="Hardware-compatible environment re-lock before installation; code/weights unchanged")
     args = ap.parse_args()
     out = Path(args.output).resolve()
     assert out.is_relative_to(Path("/home/scv/shared")), out
@@ -77,11 +78,13 @@ def main():
     temp.mkdir()
     env = dict(os.environ, TMPDIR=str(temp), PIP_DISABLE_PIP_VERSION_CHECK="1",
                PIP_NO_CACHE_DIR="1", PIP_CONFIG_FILE=os.devnull)
+    requirements = REQUIREMENTS + (["torch==2.11.0+cu128", "torchvision==0.26.0+cu128"] if args.cuda128 else [])
+    index_args = ["--extra-index-url", "https://download.pytorch.org/whl/cu128"] if args.cuda128 else []
     cmd = [sys.executable, "-m", "pip", "--isolated", "install", "--dry-run",
            "--ignore-installed", "--only-binary=:all:", "--no-cache-dir",
            "--index-url", "https://pypi.org/simple", "--timeout", "20", "--retries", "0",
-           "--report", str(out / "PIP_RESOLUTION.json"), *REQUIREMENTS]
-    save(out, "RESOLUTION_REQUEST.json", {"command": cmd, "requirements": REQUIREMENTS,
+           "--report", str(out / "PIP_RESOLUTION.json"), *index_args, *requirements]
+    save(out, "RESOLUTION_REQUEST.json", {"command": cmd, "requirements": requirements,
          "installation": False, "existing_environment_read_only": True,
          "timeout_seconds": 240, "metadata_workspace_cap_bytes": 50000000})
     started = time.monotonic()
