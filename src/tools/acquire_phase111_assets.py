@@ -6,6 +6,8 @@ import os
 from pathlib import Path
 import urllib.parse
 import urllib.request
+import urllib.error
+import time
 from install_phase111_runtime import host_free
 
 
@@ -32,7 +34,21 @@ def main():
         path.parent.mkdir(parents=True,exist_ok=True)
         h=hashlib.sha256();m=hashlib.md5();data=bytearray() if git_sha else None
         n=0
-        with urllib.request.urlopen(url,timeout=60) as response,path.open('xb') as out:
+        for attempt in range(3):
+            if attempt:
+                assert budget['reserved_bytes']+size<=budget['cap_bytes']
+                budget['reserved_bytes']+=size;save('ASSET_BUDGET.json',budget)
+            try:
+                response=urllib.request.urlopen(url,timeout=60)
+                break
+            except urllib.error.HTTPError:
+                raise
+            except urllib.error.URLError as exc:
+                with (BASE/'ASSET_CONNECTION_RETRIES.jsonl').open('a') as retry_log:
+                    retry_log.write(json.dumps({'url':url,'attempt':attempt+1,'error':str(exc)})+'\n')
+                if attempt==2:raise
+                time.sleep(attempt+1)
+        with response,path.open('xb') as out:
             while True:
                 chunk=response.read(1024*1024)
                 if not chunk: break
