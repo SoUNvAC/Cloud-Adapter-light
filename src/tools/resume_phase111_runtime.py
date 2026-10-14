@@ -91,9 +91,12 @@ def main():
                 manifest_path.write_text(json.dumps({'url':url,'size':size,'initial_prefix':prefix,'intervals':intervals})+'\n')
             with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
                 futures=[pool.submit(fetch_interval,s) for s in intervals]
+                checked=time.monotonic()
                 while not all(f.done() for f in futures):
-                    assert host_free()>=4256000000
-                    time.sleep(10)
+                    if time.monotonic()-checked>=15:
+                        assert host_free()>=4256000000
+                        checked=time.monotonic()
+                    time.sleep(.2)
                 parts=[f.result() for f in futures]
             for part,(_,start,end) in zip(parts,intervals):
                 present=wheel.stat().st_size if wheel.exists() else 0
