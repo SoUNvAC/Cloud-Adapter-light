@@ -10,7 +10,10 @@
     "src/research_results/phase104_20261013/object_manifest.json": "0313ec61fef75acad7152e0deb639b094aa77b3a1b4041545e09939955b5500a",
     "src/research_results/phase111_20261014/ASSET_VERIFICATION.json": "1ab86c5885b6720e237a1461df1f8561159326ee8fc5d03eeceddee46df8d990",
     "src/research_results/phase111_20261014/PRE_EXECUTION_LOCK.json": "b0f9081bf1e74ec80cbd1ff54776c4989a3505564fc87028fcd0be2c3ae6f723",
-    "src/research_results/phase112_20261014/DOWNLOAD_STATUS.json": "e3816e810c0b87ca58853c66d5a46787c33fea0ef8d56b4f9542349ee07ef403"
+    "src/research_results/phase112_20261014/DOWNLOAD_STATUS.json": "e3816e810c0b87ca58853c66d5a46787c33fea0ef8d56b4f9542349ee07ef403",
+    "src/tools/verify_phase118_plan.py": "eb9fbb15ed187105ee58dc1860843237b2444960a622cdfff5871d4ebd40f8ed",
+    "src/research_results/phase118_20261014/NATIVE_ASSET_SHA_LOCK.json": "ea086e558eabe6d7a39ba3d094a40998ccb6f553001b8961fd233cc9d4e1aba9",
+    "src/research_results/phase104_20261013/download_status.json": "81e60e3033b545e61e26374f09eb67210744e37124cfd6b817f7c464186ae7d0"
   },
   "coordinate_sha256": "c2f029a349096738935d9239585c67ca6dfc5a4c71017f5e8634af982b86ce68",
   "settings": {
