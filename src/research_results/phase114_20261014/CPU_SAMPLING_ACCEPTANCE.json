@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "original_FN": 75,
+  "original_FP": 93,
+  "all10_groups_used": true,
+  "hash_order_quota_replayed": true,
+  "no_duplicate_points": true,
+  "max_group_samples": 6,
+  "point20m_binding_matches_frozen_coordinates": true,
+  "anonymous_payload_no_label_score_group_or_sampling_layer": true
+}

@@ -1,0 +1,145 @@
+{
+  "utc": "2026-10-14T07:33:12.346758+00:00",
+  "source_sha256": {
+    "src/tools/prepare_phase114.py": "cc5a1c1bcee5d4ca1a8d45b4e0ad0ee24516ef1bcdd189ea3baa57c39096f190",
+    "src/tools/render_phase114.py": "6d6273ceec1cc21ee00ebf1d93b4a40c3a606cdf70e4d761bb646458fb5b4477",
+    "src/research_plans/PHASE114_OMNI_RESIDUAL_BLIND_AUDIT_20261014.md": "ebfa3a2b429d9a5c64a906223e34ffd43a1b27a66c859aa9cda36aa794cad901",
+    "src/research_results/phase112_20261014/COMMON_SUPPORT_LOCK.json": "c4005b23212025158d942388b272e0edf2a9fc15a963bd08cd3cbf95730e848e",
+    "src/research_results/phase112_20261014/CPU_STATISTICS_ACCEPTANCE.json": "63033abe0bdfd7c484cb7ff09ed292e18d4873e39ba98576f546040e52eb3a9c",
+    "src/research_results/phase104_20261013/object_manifest.json": "0313ec61fef75acad7152e0deb639b094aa77b3a1b4041545e09939955b5500a"
+  },
+  "private_reveal_sha256": "0e82edcbe2520ab13db754a0cd011f8d2ccc3efb15c16c752d8f084531829b6d",
+  "anonymous_inputs_sha256": "f5939d421830c830fc3a2b144529d72b927eae0a116bedd4f39f4467e48c8c80",
+  "joined_input_sha256": "fbbd3658524054ef210ddcde5c303dd356233e2f21fd4aa027cb35b63dbb1d07",
+  "coordinate_sha256": "c2f029a349096738935d9239585c67ca6dfc5a4c71017f5e8634af982b86ce68",
+  "counts": [
+    {
+      "group_id": "04edcb802a945878b1247f3febb93af7473a9926a87e1d7b3506c2859dedb896",
+      "FN_available": 6,
+      "FN_selected": 2,
+      "FP_available": 33,
+      "FP_selected": 2,
+      "TP_available": 71,
+      "TP_selected": 1,
+      "TN_available": 878,
+      "TN_selected": 1
+    },
+    {
+      "group_id": "2c03bd1fba39cca8c1502d66af6da0bfbe17d6d4222a4c44b10cc16851be48c2",
+      "FN_available": 21,
+      "FN_selected": 2,
+      "FP_available": 8,
+      "FP_selected": 2,
+      "TP_available": 3,
+      "TP_selected": 1,
+      "TN_available": 1036,
+      "TN_selected": 1
+    },
+    {
+      "group_id": "6085b26a3e9d46fe957beb7d4550d3c98c68353a414f59430523ebbbc82e0e71",
+      "FN_available": 21,
+      "FN_selected": 2,
+      "FP_available": 4,
+      "FP_selected": 2,
+      "TP_available": 106,
+      "TP_selected": 1,
+      "TN_available": 917,
+      "TN_selected": 1
+    },
+    {
+      "group_id": "6c7173585d6f3e04ab9c04f7d3e9150020db35fb51dd47e2a2b5eb2c0d5c3457",
+      "FN_available": 16,
+      "FN_selected": 2,
+      "FP_available": 10,
+      "FP_selected": 2,
+      "TP_available": 34,
+      "TP_selected": 1,
+      "TN_available": 490,
+      "TN_selected": 1
+    },
+    {
+      "group_id": "83648a01da773580ef92aade342ca7d137afc328617a58cbe425f0b73689e510",
+      "FN_available": 1,
+      "FN_selected": 1,
+      "FP_available": 1,
+      "FP_selected": 1,
+      "TP_available": 53,
+      "TP_selected": 1,
+      "TN_available": 921,
+      "TN_selected": 1
+    },
+    {
+      "group_id": "c4c5212f3648436c2b2a5b8c46962e4bc03be605ff0d9e8ee74aa6f12e2659a1",
+      "FN_available": 0,
+      "FN_selected": 0,
+      "FP_available": 3,
+      "FP_selected": 2,
+      "TP_available": 0,
+      "TP_selected": 0,
+      "TN_available": 419,
+      "TN_selected": 1
+    },
+    {
+      "group_id": "cff44b9f6e50c2d2b4bdfb7ce491b1bedcacde5befc4d36e3f7ad563ae4ee263",
+      "FN_available": 0,
+      "FN_selected": 0,
+      "FP_available": 26,
+      "FP_selected": 2,
+      "TP_available": 26,
+      "TP_selected": 1,
+      "TN_available": 1098,
+      "TN_selected": 1
+    },
+    {
+      "group_id": "d312ffb54a77972b608f434a44f0a2bd51df4589ca27764a673fad60a14f58e0",
+      "FN_available": 9,
+      "FN_selected": 2,
+      "FP_available": 6,
+      "FP_selected": 2,
+      "TP_available": 5,
+      "TP_selected": 1,
+      "TN_available": 660,
+      "TN_selected": 1
+    },
+    {
+      "group_id": "d7f945e363690b9300fc4b029a8a82841f3b130d6b64da59c407fbac84db62f7",
+      "FN_available": 1,
+      "FN_selected": 1,
+      "FP_available": 2,
+      "FP_selected": 2,
+      "TP_available": 6,
+      "TP_selected": 1,
+      "TN_available": 510,
+      "TN_selected": 1
+    },
+    {
+      "group_id": "f26a773db22d5077389e8d526ebee5f2a8ce4974253a36eebb3209a527322150",
+      "FN_available": 0,
+      "FN_selected": 0,
+      "FP_available": 0,
+      "FP_selected": 0,
+      "TP_available": 0,
+      "TP_selected": 0,
+      "TN_available": 1166,
+      "TN_selected": 1
+    }
+  ],
+  "n_samples": 47,
+  "n_groups": 10,
+  "sampling_prefix": "PHASE114_AUDIT|",
+  "anonymization_prefix": "PHASE114_BLIND|",
+  "threshold": 0.5,
+  "extents_m": [
+    640,
+    10240
+  ],
+  "display_TOA_min_max": [
+    0,
+    0.3
+  ],
+  "display_interpolation": "nearest only; no added detail",
+  "extent_alignment": "20m grid aligned, original point cell at central vicinity",
+  "review_status": "not_executed",
+  "reveal_status": "not_executed",
+  "no_sample_replacement": true
+}
