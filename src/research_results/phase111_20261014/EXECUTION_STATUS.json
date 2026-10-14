@@ -1,7 +1,7 @@
 {
   "phase": 111,
-  "updated_beijing": "2026-10-14T12:06:33.128992+08:00",
-  "status": "awaiting_authorization_for_single_scene_verifier_recovery",
+  "updated_beijing": "2026-10-14T12:18:21.275767+08:00",
+  "status": "stopped_recovery_hook_name_collision",
   "environment": "accepted",
   "asset_status": "all_files_verified",
   "models_strictly_loaded": 2,
@@ -33,12 +33,18 @@
     "construction": 11,
     "total": 143
   },
-  "proposed_cumulative_call_cap": 286,
-  "recovery_authorized": false,
+  "proposed_cumulative_call_cap": 297,
+  "recovery_authorized": true,
   "training": 0,
   "fitting": 0,
   "labels_accessed": false,
   "performance_evaluated": false,
   "other15_scenes_started": false,
-  "work_dirs_synced": false
+  "work_dirs_synced": false,
+  "recovery_main_calls": 0,
+  "recovery_repeat_calls": 0,
+  "recovery_construction_graph_calls": 11,
+  "cumulative_model_calls": 154,
+  "recovery_process_exited": true,
+  "second_recovery_authorized": false
 }

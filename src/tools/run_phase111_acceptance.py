@@ -39,8 +39,8 @@ def main():
     OUT=args.output_directory.resolve();assert OUT.is_relative_to(BASE)
     OUT.mkdir(exist_ok=False)
     (OUT/'PID').write_text(str(os.getpid()))
-    before=json.loads(args.execution_lock.read_text())
-    for name,expected in before['source_sha256'].items():
+    execution_config=json.loads(args.execution_lock.read_text())
+    for name,expected in execution_config['source_sha256'].items():
         assert sha(name)==expected,('pre-forward lock changed',name)
     lock=json.loads((REPO/'src/research_results/phase111_20261014/PRE_EXECUTION_LOCK.json').read_text())
     for name,expected in lock['source_files_sha256'].items():
@@ -79,8 +79,8 @@ def main():
            'patches':[],'repeat_max_abs':[],'cpu_ensemble_max_abs':0.0,'gradient_max_abs':0.0,
            'rss_peak_bytes':0,'gpu_reserved_peak_bytes':0,'gpu_observed_delta_peak_bytes':0}
     state['raw_model_output_ranges']=[None,None]
-    previous_calls=before.get('previous_model_call_attempts',0)
-    maximum_calls=before['max_model_call_attempts_including_probes']
+    previous_calls=execution_config.get('previous_model_call_attempts',0)
+    maximum_calls=execution_config['max_model_call_attempts_including_probes']
     state.update(previous_model_call_attempts=previous_calls,max_cumulative_model_calls=maximum_calls)
     globals()['_RUN_STATE']=state;globals()['_RUN_STARTED']=started
     def gpu_used_bytes():
@@ -99,7 +99,7 @@ def main():
             state['gpu_reserved_peak_bytes']=max(state['gpu_reserved_peak_bytes'],vram)
             observed_gpu=max(0,gpu_used_bytes()-baseline_gpu)
             state['gpu_observed_delta_peak_bytes']=max(state['gpu_observed_delta_peak_bytes'],observed_gpu)
-            if rss>16*1024**3 or max(vram,observed_gpu)>20*1024**3 or time.monotonic()-started>before['max_gpu_phase_wall_seconds']:
+            if rss>16*1024**3 or max(vram,observed_gpu)>20*1024**3 or time.monotonic()-started>execution_config['max_gpu_phase_wall_seconds']:
                 state.update(status='stopped_resource_limit',elapsed_seconds=time.monotonic()-started)
                 write('RUN_STATUS.json',state)
                 os.kill(os.getpid(),signal.SIGTERM)
@@ -182,8 +182,8 @@ def main():
         points=[r for r in reader if r['product_id']==pid]
     write('INPUT_ACCEPTANCE.json',{'product_id':pid,'points':len(points),'bindings':bindings,
           'coordinate_sha256':sha(coordinate),'no_labels':True,'invalid_rule':'native 0/65535/nonfinite; one-native-pixel Chebyshev halo covers bilinear interpolation support, then any corresponding 2x2 invalid excludes20m cell; invalid channel set to nodata before normalization; B8A native20m no halo'})
-    if before.get('authorized_recovery'):
-        assert sha(OUT/'INPUT_ACCEPTANCE.json')==sha(Path(before['prior_attempt_directory'])/'INPUT_ACCEPTANCE.json')
+    if execution_config.get('authorized_recovery'):
+        assert sha(OUT/'INPUT_ACCEPTANCE.json')==sha(Path(execution_config['prior_attempt_directory'])/'INPUT_ACCEPTANCE.json')
     cpu=np.zeros((4,5490,5490),dtype=np.float32);grad=np.zeros((5490,5490),dtype=np.float32)
     # Author CUDA scalar division uses a rounded float32 reciprocal. NumPy
     # direct division has a different last-bit rounding; derive it independently.
@@ -213,8 +213,8 @@ def main():
         patch_no=state['main_calls']//2
         if patch_no<=2:
             np.save(OUT/f'normalized_patch_{patch_no}.npy',patch_batch.detach().cpu().numpy(),allow_pickle=False)
-            if before.get('authorized_recovery'):
-                assert sha(OUT/f'normalized_patch_{patch_no}.npy')==sha(Path(before['prior_attempt_directory'])/f'normalized_patch_{patch_no}.npy')
+            if execution_config.get('authorized_recovery'):
+                assert sha(OUT/f'normalized_patch_{patch_no}.npy')==sha(Path(execution_config['prior_attempt_directory'])/f'normalized_patch_{patch_no}.npy')
             for i,m in enumerate(ms):
                 assert previous_calls+state['main_calls']+state['repeat_calls']+len(state['construction_graph_calls'])<maximum_calls
                 state['repeat_calls']+=1

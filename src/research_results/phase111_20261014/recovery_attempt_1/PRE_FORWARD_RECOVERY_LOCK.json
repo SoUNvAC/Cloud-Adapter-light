@@ -1,0 +1,42 @@
+{
+  "utc": "2026-10-14T04:15:21.844131+00:00",
+  "git_commit": "83f86bb109788e579df988d570ba928ed04bb291",
+  "source_sha256": {
+    "/home/scv/Cloud-Adapter-light/src/research_results/phase111_20261014/PRE_EXECUTION_LOCK.json": "b0f9081bf1e74ec80cbd1ff54776c4989a3505564fc87028fcd0be2c3ae6f723",
+    "/home/scv/Cloud-Adapter-light/src/tools/run_phase111_acceptance.py": "a38875159c7ac5a074da53fb0d379ba6bac1a8108dbcedd42aeaff04fa4927c8",
+    "/home/scv/Cloud-Adapter-light/src/research_plans/PHASE111_ENVIRONMENT_RESUME_20261014.md": "dcfe7ad30a6d1132206bb011021b3b6c8acbeae7a29230050deaff1ec9c8f79d",
+    "/home/scv/shared/phase111_ocm_runtime/resource_gate_20261014_cuda128_metadata/PIP_RESOLUTION.json": "8641004523d9e7aa3ce880ce04c8865fe159455e1d7713f68f81707a6735afe1",
+    "/home/scv/Cloud-Adapter-light/src/research_plans/PHASE111_CPU_VERIFIER_RECOVERY_20261014.md": "21b9b2d855c0c424516b2c915c38f0ba7a6566b345f302c12eb670fb048da8fc"
+  },
+  "runtime": {
+    "torch": "2.11.0+cu128",
+    "cuda": "12.8",
+    "cuda_available": true,
+    "torchvision": "0.26.0+cu128",
+    "fastai": "2.8.12",
+    "timm": "1.0.30",
+    "smp": "0.5.0",
+    "rasterio": "1.4.4",
+    "dependency_check": "passed",
+    "host_free_after_bytes": 13343952896,
+    "model_calls": 0
+  },
+  "environment_4GB_cap_user_override": true,
+  "physical_reserve_bytes": 4000000000,
+  "ram_bytes": 17179869184,
+  "vram_bytes": 21474836480,
+  "max_gpu_phase_wall_seconds": 3400,
+  "max_model_call_attempts_including_probes": 286,
+  "main_scene_attempts": 1,
+  "repeat_first_valid_patches": 2,
+  "extra_repeat_calls": 4,
+  "repeat_max_abs_tolerance": 1e-05,
+  "cpu_reconstruction_max_abs_tolerance": 1e-05,
+  "input_mask": "native specials; 1-native-pixel square support halo for B04/B03 bilinear; native B8A",
+  "model_calls_before_lock": 143,
+  "no_labels_or_performance_metrics": true,
+  "previous_model_call_attempts": 143,
+  "authorized_recovery": true,
+  "prior_attempt_directory": "/home/scv/shared/phase111_ocm_runtime/single_scene_acceptance",
+  "prior_failed_status_sha256": "127f087d949e3aee0076b14a38c5e657e9ab468f02b968bc40e27ca095cf5305"
+}

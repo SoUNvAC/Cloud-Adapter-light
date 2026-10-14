@@ -11,7 +11,7 @@ BASE=Path('/home/scv/shared/phase111_ocm_runtime')
 
 
 def main():
-    ap=argparse.ArgumentParser();ap.add_argument('--authorized-recovery',action='store_true');args=ap.parse_args()
+    ap=argparse.ArgumentParser();ap.add_argument('--authorized-recovery',action='store_true');ap.add_argument('--authorized-construction-retry',action='store_true');args=ap.parse_args()
     runtime=json.loads((BASE/'RUNTIME_IMPORT_ACCEPTANCE.json').read_text())
     assert runtime['dependency_check']=='passed' and runtime['cuda_available']
     original=REPO/'src/research_results/phase111_20261014/PRE_EXECUTION_LOCK.json'
@@ -29,7 +29,7 @@ def main():
          'input_mask':'native specials; 1-native-pixel square support halo for B04/B03 bilinear; native B8A',
          'model_calls_before_lock':0,'no_labels_or_performance_metrics':True}
     destination=BASE/'PRE_FORWARD_LOCK.json'
-    if args.authorized_recovery:
+    if args.authorized_recovery or args.authorized_construction_retry:
         old=BASE/'single_scene_acceptance/RUN_STATUS.json'
         prior=json.loads(old.read_text())
         assert prior['status']=='failed_no_automatic_rerun'
@@ -42,6 +42,17 @@ def main():
                    authorized_recovery=True,prior_attempt_directory=str(old.parent),
                    prior_failed_status_sha256=hashlib.sha256(old.read_bytes()).hexdigest())
         destination=BASE/'PRE_FORWARD_RECOVERY_LOCK.json'
+    if args.authorized_construction_retry:
+        failed=BASE/'single_scene_recovery_20261014/RUN_STATUS.json'
+        second=json.loads(failed.read_text())
+        assert second['status']=='failed_no_automatic_rerun'
+        assert second['main_calls']==0 and second['repeat_calls']==0 and len(second['construction_graph_calls'])==11
+        assert second['previous_model_call_attempts']==143
+        obj.update(previous_model_call_attempts=154,model_calls_before_lock=154,
+                   max_model_call_attempts_including_probes=297,
+                   interrupted_recovery_status_sha256=hashlib.sha256(failed.read_bytes()).hexdigest(),
+                   authorized_construction_retry=True)
+        destination=BASE/'PRE_FORWARD_RECOVERY_RETRY_LOCK.json'
     with destination.open('x') as f:json.dump(obj,f,indent=2);f.write('\n')
     print(json.dumps({'status':'pre_forward_lock_saved','git_commit':obj['git_commit']}))
 
