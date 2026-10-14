@@ -1,0 +1,17 @@
+{
+  "utc": "2026-10-14T06:26:25.942395+00:00",
+  "status": "remote_download_worker_started",
+  "worker_pid": 12945,
+  "new_scenes": 15,
+  "reused_scene": "T40UEE",
+  "remote_root": "/home/scv/shared/phase112_20261014",
+  "download_declared_bytes": 487884646,
+  "new_model_calls_cap": 1935,
+  "main_cap": 1920,
+  "repeat_cap": 4,
+  "construction_cap": 11,
+  "fitting": 0,
+  "threshold_scans": 0,
+  "reference_join_started": false,
+  "work_dirs_synced": false
+}
