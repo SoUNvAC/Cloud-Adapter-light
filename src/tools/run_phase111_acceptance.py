@@ -67,6 +67,7 @@ def main():
            'patches':[],'repeat_max_abs':[],'cpu_ensemble_max_abs':0.0,'gradient_max_abs':0.0,
            'rss_peak_bytes':0,'gpu_reserved_peak_bytes':0,'gpu_observed_delta_peak_bytes':0}
     state['raw_model_output_ranges']=[None,None]
+    globals()['_RUN_STATE']=state;globals()['_RUN_STARTED']=started
     def gpu_used_bytes():
         return int(subprocess.check_output(['/usr/lib/wsl/lib/nvidia-smi','--query-gpu=memory.used',
                     '--format=csv,noheader,nounits'],text=True).strip())*1024**2
@@ -182,6 +183,7 @@ def main():
                 state['repeat_calls']+=1
                 write('RUN_STATUS.json',state)
                 with torch.no_grad():repeat=m(patch_batch).detach().cpu().numpy()
+                assert repeat.shape==collected[i].shape and np.isfinite(repeat).all()
                 difference=float(np.max(np.abs(collected[i]-repeat)))
                 state['repeat_max_abs'].append(difference)
                 assert difference<=1e-5,'repeat tolerance failed; no retry'
@@ -255,4 +257,13 @@ if __name__=='__main__':
     try:main()
     except Exception:
         if OUT.exists():(OUT/'FAILURE.txt').write_text(traceback.format_exc())
+        state=globals().get('_RUN_STATE')
+        if state is not None:
+            state.update(status='failed_no_automatic_rerun',failure_type=sys.exc_info()[0].__name__,
+                         elapsed_seconds=time.monotonic()-globals()['_RUN_STARTED'])
+            state['rss_peak_bytes']=max(state['rss_peak_bytes'],resource.getrusage(resource.RUSAGE_SELF).ru_maxrss*1024)
+            torch=sys.modules.get('torch')
+            if torch is not None and torch.cuda.is_initialized():
+                state['gpu_reserved_peak_bytes']=max(state['gpu_reserved_peak_bytes'],torch.cuda.max_memory_reserved())
+            write('RUN_STATUS.json',state)
         raise
