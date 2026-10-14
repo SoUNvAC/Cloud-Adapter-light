@@ -173,6 +173,7 @@ def main():
             state['raw_model_output_ranges'][i]=[min(float(x.min()),old[0]) if old else float(x.min()),
                                                  max(float(x.max()),old[1]) if old else float(x.max())]
         mean=np.mean(np.stack(collected),axis=0,dtype=np.float32)
+        assert np.isfinite(mean).all() and torch.isfinite(result).all().item()
         state['cpu_ensemble_max_abs']=max(state['cpu_ensemble_max_abs'],float(np.max(np.abs(mean-result.detach().cpu().numpy()))))
         latest['mean']=mean
         patch_no=state['main_calls']//2
