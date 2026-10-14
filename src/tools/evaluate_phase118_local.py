@@ -84,12 +84,13 @@ def main():
         ref=refs[r['point_id']]
         assert all(str(r[k])==str(ref[k]) for k in ('product_id','group_id','row20','col20'))
         r=dict(r,reference=ref['reference']);joined.append(r)
+        groups[r['group_id']]  # retain every original group even with zero common support
         if r['common_valid'] and r['reference']!='ignore':groups[r['group_id']].append(r)
     table(D/'JOINED_REFERENCE_SCORES_PRIVATE.csv',joined)
     group_rows=[]
     for gid,rr in sorted(groups.items()):
         pos=sum(r['reference']=='positive_ground_cloud_shadow' for r in rr);neg=len(rr)-pos
-        d={'group_id':gid,'tiles':','.join(sorted({r['product_id'].split('_T')[1][:5] for r in rr})),
+        d={'group_id':gid,'tiles':','.join(sorted({r['product_id'].split('_T')[1][:5] for r in rows if r['group_id']==gid})),
            'positive':pos,'negative':neg,'sparse_support':bool(pos>0 and (pos<5 or neg<20))}
         for policy in allpoints:
             d[policy+'_AP']=ap(rr,policy)

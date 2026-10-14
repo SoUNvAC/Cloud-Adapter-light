@@ -1,6 +1,6 @@
 {
   "source_sha256": {
-    "src/tools/evaluate_phase118_local.py": "54b2ec314a96b2b73af0574c6955cec31c1d1b3d7a25b3e5649ba21ea46a6315",
+    "src/tools/evaluate_phase118_local.py": "2d9399cc09a0d00f1e19bb5121e8cfa41241d3d29513c3b77b621b7221b48082",
     "src/tools/phase89_cpu_ap.py": "9bedbc46503916362564a0f34b1748d75d095edce436f70f533372895a42062e",
     "src/research_results/phase103_20261013/README.md": "67a8d0eb54e6f2f727b787b0952c6603d847c578101f10821388483f7f2d488c",
     "src/research_plans/PHASE118_RESOLUTION_CONTEXT_DIAGNOSTIC_20261014.md": "ea6bd46273ca58ae721dcc9ebc361da7ca50575dd47076e81f859d136ca04317",
@@ -9,5 +9,6 @@
   "original_reference_sha256": "b1448f3fbd05c9e77af7ed0ea50dbde4be7480a35a4c532a2fec45789af25f96",
   "bootstrap_seed": 118014,
   "no_after_result_statistical_thresholds": true,
-  "label_join_after_all_scores_and_common_support_seal": true
+  "label_join_after_all_scores_and_common_support_seal": true,
+  "implementation_note": "Keep all original groups as explicitNA if all common support is lost; no reference join or metric evaluation has occurred"
 }
