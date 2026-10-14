@@ -53,6 +53,7 @@ def main():
     state={'status':'running','construction_graph_calls':[],'main_calls':0,'repeat_calls':0,
            'patches':[],'repeat_max_abs':[],'cpu_ensemble_max_abs':0.0,'gradient_max_abs':0.0,
            'rss_peak_bytes':0,'gpu_reserved_peak_bytes':0,'gpu_observed_delta_peak_bytes':0}
+    state['raw_model_output_ranges']=[None,None]
     def gpu_used_bytes():
         return int(subprocess.check_output(['/usr/lib/wsl/lib/nvidia-smi','--query-gpu=memory.used',
                     '--format=csv,noheader,nounits'],text=True).strip())*1024**2
@@ -147,6 +148,10 @@ def main():
             for h in handles:h.remove()
         state['main_calls']+=2
         assert len(collected)==2 and all(x.shape==(1,4,1000,1000) and np.isfinite(x).all() for x in collected)
+        for i,x in enumerate(collected):
+            old=state['raw_model_output_ranges'][i]
+            state['raw_model_output_ranges'][i]=[min(float(x.min()),old[0]) if old else float(x.min()),
+                                                 max(float(x.max()),old[1]) if old else float(x.max())]
         mean=np.mean(np.stack(collected),axis=0,dtype=np.float32)
         state['cpu_ensemble_max_abs']=max(state['cpu_ensemble_max_abs'],float(np.max(np.abs(mean-result.detach().cpu().numpy()))))
         latest['mean']=mean
@@ -180,7 +185,7 @@ def main():
     finally:
         mu.infer_batch=original_infer;mu.store_results=original_store
     author_valid=np.any(image!=0,axis=0);coverage=grad>0
-    max_error=0.;confidence_min=1.;confidence_max=0.
+    max_error=0.;confidence_min=1.;confidence_max=0.;sum_min=4.;sum_max=0.
     for y in range(0,5490,128):
         sl=slice(y,min(y+128,5490));g=grad[sl]
         with np.errstate(divide='ignore',invalid='ignore'):
@@ -192,6 +197,8 @@ def main():
         if common.any():
             confidence_min=min(confidence_min,float(output[:,sl,:][:,common].min()))
             confidence_max=max(confidence_max,float(output[:,sl,:][:,common].max()))
+            sums=output[:,sl,:][:,common].sum(axis=0)
+            sum_min=min(sum_min,float(sums.min()));sum_max=max(sum_max,float(sums.max()))
     assert output.shape==(4,5490,5490) and np.isfinite(output).all()
     assert max_error<=1e-5 and confidence_min>=.001-1e-7 and confidence_max<=.999+1e-7
     assert float(np.max(np.abs(grad-latest['author_grad_tracker'].cpu().numpy())))==0
@@ -207,6 +214,12 @@ def main():
           'gradient_max_error':state['gradient_max_abs'],'full_scene_cpu_reconstructed_in_memory':True,
           'coverage_zero_cells':int((~coverage).sum()),'nodata_cells':int((~author_valid).sum()),
           'valid_confidence_range':[confidence_min,confidence_max],'four_channels_sum_one_required':False})
+    write('OUTPUT_SEMANTICS.json',{'raw_model_output_ranges':state['raw_model_output_ranges'],
+          'raw_model_output_shape':[1,4,1000,1000],'raw_and_final_finite':True,
+          'valid_final_confidence_range':[confidence_min,confidence_max],
+          'valid_final_four_channel_sum_range':[sum_min,sum_max],
+          'operator':'mean raw classes, gradient mosaic/division, class softmax, +0.001, clip[0.001,0.999]',
+          'confidence_not_calibrated_probability':True})
     state.update(status='runtime_single_scene_passed',elapsed_seconds=time.monotonic()-started,
                  unlabelled_score_sha256=sha(OUT/'UNLABELLED_POINT_SCORES.json'),point_count=len(points),
                  valid_points=sum(x['valid'] for x in scores),training=0,fitting=0,labels_accessed=False,performance_evaluated=False)
