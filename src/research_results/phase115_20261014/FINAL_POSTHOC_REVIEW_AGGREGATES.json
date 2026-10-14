@@ -1,0 +1,48 @@
+{
+  "sealed_submission_sha256": "490be6b292715621cf2033a2b233955f03910d9158b0bbdb76d9155736452ca1",
+  "raw_bytes": 2945,
+  "accepted_as_final": true,
+  "classification": "post_hoc_review_only",
+  "records": 7,
+  "original_record_status_counts": {
+    "draft": 5,
+    "reviewed": 2
+  },
+  "candidate_class_counts": {
+    "落地云影": 7
+  },
+  "cell_state_counts": {
+    "同质": 7
+  },
+  "visible_evidence_provided": 7,
+  "uncertainty_provided": 2,
+  "context_sufficient_self_report": 7,
+  "related_groups": 5,
+  "case_counts_by_tile": {
+    "44SKJ": 2,
+    "33VVE": 2,
+    "40UEE": 1,
+    "19FDV": 1,
+    "54TWN": 1
+  },
+  "complete_fields_cases": 2,
+  "complete_fields_groups": 1,
+  "complete_fields_tiles": [
+    "33VVE"
+  ],
+  "reviewer_metadata_as_provided": {
+    "reviewer_id": "unknown",
+    "reviewer_experience": "unknown",
+    "has_seen_original_reveal": "unknown",
+    "identity_verification": "unknown"
+  },
+  "actual_submitted_at_as_provided": "2026-10-14T09:40:46.272Z",
+  "eligible_independent_cases": 0,
+  "eligible_independent_groups": 0,
+  "minimum_independent_groups": 3,
+  "independent_support_established": false,
+  "status": "posthoc_review_completed_independent_adjudication_unresolved_line_closed",
+  "original_labels_or_statuses_changed": false,
+  "performance_recomputed": false,
+  "new_forward_fit_download_sampling_or_contacts": 0
+}

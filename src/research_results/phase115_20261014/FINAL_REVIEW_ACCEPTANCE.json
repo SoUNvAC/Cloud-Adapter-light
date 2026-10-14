@@ -1,0 +1,12 @@
+{
+  "submission_seal_matches_original": true,
+  "records": 7,
+  "raw_statuses_unchanged": true,
+  "missing_uncertainty": 5,
+  "complete_cases": 2,
+  "complete_related_groups": 1,
+  "eligibility_gate_not_established": true,
+  "historical_phase112_to115_delivery_hashes_unchanged": true,
+  "new_opinions_generated_by_AI": 0,
+  "no_pixel_or_model_evaluation": true
+}
