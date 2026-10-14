@@ -79,6 +79,7 @@ def main():
     depth=[0]
     def before(module,args):
         if depth[0]==0:
+            assert len(state['construction_graph_calls'])<256
             state['construction_graph_calls'].append({'module':type(module).__name__,
                 'input_shapes':[list(x.shape) for x in args if isinstance(x,torch.Tensor)]})
             write('RUN_STATUS.json',state)
@@ -142,11 +143,16 @@ def main():
     gradient=axis[:,None]*axis[None,:]
     latest={};original_infer=mu.infer_batch;original_store=mu.store_results
     def observed_infer(ms,patch_batch):
-        collected=[];handles=[m.register_forward_hook(lambda m,a,o:collected.append(o.detach().cpu().numpy().copy())) for m in ms]
+        collected=[]
+        def attempted(module,args):
+            assert state['main_calls']+state['repeat_calls']+len(state['construction_graph_calls'])<256
+            state['main_calls']+=1
+            write('RUN_STATUS.json',state)
+        handles=[m.register_forward_pre_hook(attempted) for m in ms]
+        handles.extend(m.register_forward_hook(lambda m,a,o:collected.append(o.detach().cpu().numpy().copy())) for m in ms)
         try: result=original_infer(ms,patch_batch)
         finally:
             for h in handles:h.remove()
-        state['main_calls']+=2
         assert len(collected)==2 and all(x.shape==(1,4,1000,1000) and np.isfinite(x).all() for x in collected)
         for i,x in enumerate(collected):
             old=state['raw_model_output_ranges'][i]
@@ -159,8 +165,10 @@ def main():
         if patch_no<=2:
             np.save(OUT/f'normalized_patch_{patch_no}.npy',patch_batch.detach().cpu().numpy(),allow_pickle=False)
             for i,m in enumerate(ms):
-                with torch.no_grad():repeat=m(patch_batch).detach().cpu().numpy()
+                assert state['main_calls']+state['repeat_calls']+len(state['construction_graph_calls'])<256
                 state['repeat_calls']+=1
+                write('RUN_STATUS.json',state)
+                with torch.no_grad():repeat=m(patch_batch).detach().cpu().numpy()
                 difference=float(np.max(np.abs(collected[i]-repeat)))
                 state['repeat_max_abs'].append(difference)
                 assert difference<=1e-5,'repeat tolerance failed; no retry'
