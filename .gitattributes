@@ -7,3 +7,6 @@ src/tools/verify_phase111_environment_price.py -text
 src/tools/*phase111*.py -text
 src/research_plans/PHASE111_ENVIRONMENT_RESUME_20261014.md -text
 src/research_plans/PHASE111_CPU_VERIFIER_RECOVERY_20261014.md -text
+
+src/tools/*phase112*.py -text
+src/research_plans/PHASE112_OCM_PIXBOX_COMPARISON_20261014.md -text
