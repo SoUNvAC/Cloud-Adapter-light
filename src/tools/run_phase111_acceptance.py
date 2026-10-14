@@ -54,6 +54,7 @@ def main():
     from omnicloudmask import cloud_mask as cm,model_utils as mu
     torch.set_num_threads(4)
     assert torch.__version__=='2.11.0+cu128' and torch.cuda.is_available()
+    assert not torch.is_autocast_enabled()
     synthetic=np.full((8,8),100,np.uint16);synthetic[3,3]=65535
     with MemoryFile() as memory:
         with memory.open(driver='GTiff',height=8,width=8,count=1,dtype='uint16',transform=from_origin(0,80,10,10),nodata=0) as ds:
@@ -143,6 +144,7 @@ def main():
         with rasterio.open(path) as ds:
             g=product['grid20' if band=='B8A' else 'grid10']
             assert ds.crs.to_string()==product['crs'] and (ds.height,ds.width)==(g['NROWS'],g['NCOLS'])
+            assert ds.count==1 and ds.dtypes==('uint16',)
             assert tuple(ds.transform)[:6]==(g['XDIM'],0,g['ULX'],0,g['YDIM'],g['ULY'])
             native=ds.read(1)
             native_valid=np.isfinite(native)&(native!=0)&(native!=65535)
@@ -181,7 +183,7 @@ def main():
         try: result=original_infer(ms,patch_batch)
         finally:
             for h in handles:h.remove()
-        assert len(collected)==2 and all(x.shape==(1,4,1000,1000) and np.isfinite(x).all() for x in collected)
+        assert len(collected)==2 and all(x.shape==(1,4,1000,1000) and x.dtype==np.float32 and np.isfinite(x).all() for x in collected)
         for i,x in enumerate(collected):
             old=state['raw_model_output_ranges'][i]
             state['raw_model_output_ranges'][i]=[min(float(x.min()),old[0]) if old else float(x.min()),
