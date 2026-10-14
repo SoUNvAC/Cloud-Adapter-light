@@ -181,6 +181,8 @@ def main():
         points=[r for r in reader if r['product_id']==pid]
     write('INPUT_ACCEPTANCE.json',{'product_id':pid,'points':len(points),'bindings':bindings,
           'coordinate_sha256':sha(coordinate),'no_labels':True,'invalid_rule':'native 0/65535/nonfinite; one-native-pixel Chebyshev halo covers bilinear interpolation support, then any corresponding 2x2 invalid excludes20m cell; invalid channel set to nodata before normalization; B8A native20m no halo'})
+    if before.get('authorized_recovery'):
+        assert sha(OUT/'INPUT_ACCEPTANCE.json')==sha(Path(before['prior_attempt_directory'])/'INPUT_ACCEPTANCE.json')
     cpu=np.zeros((4,5490,5490),dtype=np.float32);grad=np.zeros((5490,5490),dtype=np.float32)
     # Author CUDA scalar division uses a rounded float32 reciprocal. NumPy
     # direct division has a different last-bit rounding; derive it independently.
@@ -210,6 +212,8 @@ def main():
         patch_no=state['main_calls']//2
         if patch_no<=2:
             np.save(OUT/f'normalized_patch_{patch_no}.npy',patch_batch.detach().cpu().numpy(),allow_pickle=False)
+            if before.get('authorized_recovery'):
+                assert sha(OUT/f'normalized_patch_{patch_no}.npy')==sha(Path(before['prior_attempt_directory'])/f'normalized_patch_{patch_no}.npy')
             for i,m in enumerate(ms):
                 assert previous_calls+state['main_calls']+state['repeat_calls']+len(state['construction_graph_calls'])<maximum_calls
                 state['repeat_calls']+=1

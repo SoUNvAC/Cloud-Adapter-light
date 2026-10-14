@@ -4,12 +4,14 @@ import hashlib
 import json
 from pathlib import Path
 import subprocess
+import argparse
 
 REPO=Path(__file__).resolve().parents[2]
 BASE=Path('/home/scv/shared/phase111_ocm_runtime')
 
 
 def main():
+    ap=argparse.ArgumentParser();ap.add_argument('--authorized-recovery',action='store_true');args=ap.parse_args()
     runtime=json.loads((BASE/'RUNTIME_IMPORT_ACCEPTANCE.json').read_text())
     assert runtime['dependency_check']=='passed' and runtime['cuda_available']
     original=REPO/'src/research_results/phase111_20261014/PRE_EXECUTION_LOCK.json'
@@ -26,7 +28,21 @@ def main():
          'repeat_max_abs_tolerance':1e-5,'cpu_reconstruction_max_abs_tolerance':1e-5,
          'input_mask':'native specials; 1-native-pixel square support halo for B04/B03 bilinear; native B8A',
          'model_calls_before_lock':0,'no_labels_or_performance_metrics':True}
-    with (BASE/'PRE_FORWARD_LOCK.json').open('x') as f:json.dump(obj,f,indent=2);f.write('\n')
+    destination=BASE/'PRE_FORWARD_LOCK.json'
+    if args.authorized_recovery:
+        old=BASE/'single_scene_acceptance/RUN_STATUS.json'
+        prior=json.loads(old.read_text())
+        assert prior['status']=='failed_no_automatic_rerun'
+        assert prior['main_calls']==128 and prior['repeat_calls']==4 and len(prior['construction_graph_calls'])==11
+        assert json.loads((BASE/'GRADIENT_VERIFIER_FIX_VERIFIED.json').read_text())['fixed_independent_cpu_gradient_field_max_abs']==0
+        recovery_protocol=REPO/'src/research_plans/PHASE111_CPU_VERIFIER_RECOVERY_20261014.md'
+        obj['source_sha256'][str(recovery_protocol)]=hashlib.sha256(recovery_protocol.read_bytes()).hexdigest()
+        obj.update(previous_model_call_attempts=143,max_model_call_attempts_including_probes=286,
+                   max_gpu_phase_wall_seconds=3400,model_calls_before_lock=143,
+                   authorized_recovery=True,prior_attempt_directory=str(old.parent),
+                   prior_failed_status_sha256=hashlib.sha256(old.read_bytes()).hexdigest())
+        destination=BASE/'PRE_FORWARD_RECOVERY_LOCK.json'
+    with destination.open('x') as f:json.dump(obj,f,indent=2);f.write('\n')
     print(json.dumps({'status':'pre_forward_lock_saved','git_commit':obj['git_commit']}))
 
 
