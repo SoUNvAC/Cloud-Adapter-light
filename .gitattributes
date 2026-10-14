@@ -21,3 +21,6 @@ src/tools/phase114_blind_viewer.html -text
 
 src/tools/*phase115*.py -text
 src/research_plans/PHASE115_SEVEN_CASE_ADJUDICATION_PACK_20261014.md -text
+
+src/tools/*phase116*.py -text
+src/research_plans/PHASE116_RESEARCH_ROUTE_CLOSEOUT_20261014.md -text
