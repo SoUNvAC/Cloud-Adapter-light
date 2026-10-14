@@ -86,6 +86,9 @@ def main():
         assert digest(wheel)==expected,'Integrity mismatch; never bypass or retry as success'
         command=[sys.executable,'-m','pip','--isolated','--disable-pip-version-check','--python',str(python),
                  'install','--no-deps','--no-cache-dir','--no-compile',str(wheel)]
+        if name in actual:
+            assert actual[name]==item['metadata']['version']
+            command.append('--force-reinstall')
         result=subprocess.run(command,env=env,capture_output=True,text=True,timeout=240)
         (temp/(name+'.install.log')).write_text(result.stdout+result.stderr)
         assert result.returncode==0,(name,result.stderr)
