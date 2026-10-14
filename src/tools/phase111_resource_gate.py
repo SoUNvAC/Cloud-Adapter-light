@@ -14,6 +14,10 @@ import shutil
 import subprocess
 import sys
 import time
+import urllib.request
+import urllib.parse
+import hashlib
+from html.parser import HTMLParser
 
 
 REQUIREMENTS = ["gdown>=5.1.0", "huggingface-hub>=0.28.1", "platformdirs>=4.0.0",
@@ -79,7 +83,35 @@ def main():
     env = dict(os.environ, TMPDIR=str(temp), PIP_DISABLE_PIP_VERSION_CHECK="1",
                PIP_NO_CACHE_DIR="1", PIP_CONFIG_FILE=os.devnull)
     requirements = REQUIREMENTS + (["torch==2.11.0+cu128", "torchvision==0.26.0+cu128"] if args.cuda128 else [])
-    index_args = ["--extra-index-url", "https://download.pytorch.org/whl/cu128"] if args.cuda128 else []
+    index_args = []
+    if args.cuda128:
+        candidates = []
+        class Links(HTMLParser):
+            def handle_starttag(self, tag, attrs):
+                if tag == "a":
+                    href = dict(attrs).get("href")
+                    if href:
+                        candidates.append(href)
+        selected = []
+        for package, version in [("torch", "2.11.0"), ("torchvision", "0.26.0")]:
+            url = f"https://download.pytorch.org/whl/cu128/{package}/"
+            with urllib.request.urlopen(url, timeout=30) as response:
+                body = response.read(2000000)
+            (out / (package + "_official_index.html")).write_bytes(body)
+            candidates.clear()
+            Links().feed(body.decode("utf-8"))
+            filename = f"{package}-{version}+cu128-cp310-cp310-manylinux_2_28_x86_64.whl"
+            matches = [u for u in candidates if urllib.parse.unquote(urllib.parse.urlsplit(u).path).endswith("/" + filename)]
+            assert len(matches) == 1, (filename, matches)
+            wheel = matches[0]
+            raw = urllib.parse.urldefrag(wheel)[0]
+            with urllib.request.urlopen(raw + ".metadata", timeout=30) as response:
+                metadata = response.read(1000000)
+            (out / (package + ".METADATA")).write_bytes(metadata)
+            selected.append(f'<a href="{wheel}" data-dist-info-metadata="sha256={hashlib.sha256(metadata).hexdigest()}">{filename}</a>')
+        links = out / "official_torch_candidates.html"
+        links.write_text("\n".join(selected), encoding="utf-8")
+        index_args = ["--find-links", str(links)]
     cmd = [sys.executable, "-m", "pip", "--isolated", "install", "--dry-run",
            "--ignore-installed", "--only-binary=:all:", "--no-cache-dir",
            "--index-url", "https://pypi.org/simple", "--timeout", "20", "--retries", "0",
