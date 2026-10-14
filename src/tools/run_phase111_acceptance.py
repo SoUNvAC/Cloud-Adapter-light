@@ -31,6 +31,9 @@ def write(name,obj):
 def main():
     OUT.mkdir(exist_ok=False)
     (OUT/'PID').write_text(str(os.getpid()))
+    before=json.loads((BASE/'PRE_FORWARD_LOCK.json').read_text())
+    for name,expected in before['source_sha256'].items():
+        assert sha(name)==expected,('pre-forward lock changed',name)
     lock=json.loads((REPO/'src/research_results/phase111_20261014/PRE_EXECUTION_LOCK.json').read_text())
     for name,expected in lock['source_files_sha256'].items():
         assert sha(REPO/name)==expected,('frozen input identity changed',name)
