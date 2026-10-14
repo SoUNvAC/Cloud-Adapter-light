@@ -1,0 +1,46 @@
+{
+  "state_dict_hashes": [
+    "2dd309e6012bc78438b6f9d630e1193d7f42c90cc13e0a43d0d6814d004b6d96",
+    "a8e54adf9a3850b9617df2f2b710f558a3c5b37e39939396c7ef5e398613f520"
+  ],
+  "trainable_base_parameters": 0,
+  "weights": [
+    {
+      "version": 1,
+      "required": true,
+      "architecture": "regnety_004",
+      "google_drive_file_id": "1tGJh9nnrH-apjmV70AcK8VtXnbBtRb67",
+      "google_drive_filename": "PM_model_2.2.10_RG_NIR_509_regnety_004.pycls_in1k_PT_state.pth",
+      "google_drive_length": "unknown",
+      "google_drive_checksum": "unknown",
+      "hf_filename": "PM_model_2.2.10_RG_NIR_509_regnety_004.pycls_in1k_PT_state.safetensors",
+      "hf_revision": "c9a4fb88188709127aa25cfe51ae7fd41b0132f8",
+      "declared_length_bytes": 72314968,
+      "declared_sha256": "044f2d6a3b4b59817f19d4ca080485f01c4bf9a6fddd053df184ee98144b46a2",
+      "checksum_content_verified": false,
+      "license_declaration": "MIT in author HF model card; no separate LICENSE in model repository",
+      "code_license": "MIT",
+      "format": "safetensors; author loader converts V1 to .pth",
+      "state_tensor_equivalence_to_original_google_drive": "not verified; author mapping in download_models.py:40-63"
+    },
+    {
+      "version": 1,
+      "required": true,
+      "architecture": "convnextv2_nano",
+      "google_drive_file_id": "1QXQ_oPhLKEowC9fxlZGLOACt8gCNMbWP",
+      "google_drive_filename": "PM_model_2.2.10_RG_NIR_509_convnextv2_nano.fcmae_ft_in1k_PT_state.pth",
+      "google_drive_length": "unknown",
+      "google_drive_checksum": "unknown",
+      "hf_filename": "PM_model_2.2.10_RG_NIR_509_convnextv2_nano.fcmae_ft_in1k_PT_state.safetensors",
+      "hf_revision": "c9a4fb88188709127aa25cfe51ae7fd41b0132f8",
+      "declared_length_bytes": 130164944,
+      "declared_sha256": "221c7393fe17c1a22791e43ae98a5daeee6c7a01bf2d68f1a319770d217041c1",
+      "checksum_content_verified": false,
+      "license_declaration": "MIT in author HF model card; no separate LICENSE in model repository",
+      "code_license": "MIT",
+      "format": "safetensors; author loader converts V1 to .pth",
+      "state_tensor_equivalence_to_original_google_drive": "not verified; author mapping in download_models.py:40-63"
+    }
+  ],
+  "eval_always": true
+}

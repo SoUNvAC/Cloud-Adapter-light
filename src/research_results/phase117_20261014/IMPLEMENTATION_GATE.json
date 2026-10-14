@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "zero_patch_max_diff": 0.0,
+  "trainable_parameters": 21,
+  "both_R_S_gradient_passed": true,
+  "base_state_bitwise_unchanged": true,
+  "gate_calls": 8,
+  "construction_calls": 11
+}

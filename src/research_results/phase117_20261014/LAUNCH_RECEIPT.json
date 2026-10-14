@@ -1,0 +1,18 @@
+{
+  "status": "launched_input_audit_pending",
+  "remote_pid": 33146,
+  "remote_root": "/home/scv/shared/phase117_20261014",
+  "initial_observed_calls": 0,
+  "initial_host_free_bytes": 13343952896,
+  "runtime": "existing phase111 runtime_cuda128, unchanged",
+  "local_validation": [
+    "AST of all three scripts",
+    "numpy synthetic band and common support check"
+  ],
+  "remote_synthetic_CPU_validation": "passed zero patch,21 parameters,parent logits,gradient; Omni calls0",
+  "local_torch_not_installed": true,
+  "no_local_environment_installation": true,
+  "no_automatic_retry": true,
+  "no_work_dirs_sync": true,
+  "utc": "2026-10-14T11:51:09.305492+00:00"
+}

@@ -1,0 +1,5 @@
+{
+  "finite_nonzero_patch_gradient": true,
+  "max_absolute_gradient": 0.01967630535364151,
+  "frozen_base_gradient_none": true
+}
