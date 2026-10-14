@@ -1,0 +1,10 @@
+{
+  "host_free_after_bytes": 13343952896,
+  "new_intermediate_bytes_before_package": 12308083,
+  "main_call_total": 16771,
+  "main_run_wall_seconds": 3031.3245607959907,
+  "single_GPU_wall_time_is_conservative_upper_bound_not_kernel_timer": true,
+  "reserved_recovery_budget_used": true,
+  "previous_attempt_calls": 3072,
+  "no_download_fit_training": true
+}

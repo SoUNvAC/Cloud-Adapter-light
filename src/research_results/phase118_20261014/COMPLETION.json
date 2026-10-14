@@ -1,0 +1,30 @@
+{
+  "phase": 118,
+  "status": "completed_exploratory_uncertainty_reported",
+  "utc": "2026-10-14T14:57:02.120906+00:00",
+  "primary": {
+    "comparison": "H10-C20",
+    "primary": true,
+    "n_related_groups": 8,
+    "mean_delta_AP_pp": -0.03237280526931818,
+    "CI95_pp": [
+      -3.920432344566772,
+      4.294691101663482
+    ],
+    "positive_direction_groups": 3,
+    "negative_direction_groups": 5,
+    "exact_zero_groups": 0,
+    "seed": 118014,
+    "resamples": 10000,
+    "no_minimum_effect_or_significance_pass_gate": true,
+    "unit": "related group, not pixels or settings"
+  },
+  "all32_scenes_sealed": true,
+  "CPU_acceptance_passed": true,
+  "common_support": 9500,
+  "all_original10_groups_retained": true,
+  "work_dirs_transferred": false,
+  "all_models_settings_reference_thresholds_unchanged": true,
+  "no_followup_experiment_started": true,
+  "historical_phase117_verdict_unchanged": true
+}

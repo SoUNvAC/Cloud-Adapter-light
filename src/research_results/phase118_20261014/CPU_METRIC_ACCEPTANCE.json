@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "independent_tied_AP_all_groups_and_pool": true,
+  "paired_group_bootstrap_scalar_passed": true,
+  "common_support_sealed_before_original_reference_join": true,
+  "sparse_groups_retained": true,
+  "new_CPU_model_calls": 0,
+  "no_threshold_scan_or_reference_changes": true,
+  "evaluated_positive": 379,
+  "evaluated_negative": 8190,
+  "ignore_on_common_support": 931
+}

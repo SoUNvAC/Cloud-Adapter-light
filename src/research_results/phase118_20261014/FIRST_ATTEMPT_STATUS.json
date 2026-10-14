@@ -1,0 +1,24 @@
+{
+  "status": "paused_engineering_no_scientific_verdict",
+  "main_calls": 2,
+  "repeat_calls": 2,
+  "construction_calls": 11,
+  "host_free_before_bytes": 13343952896,
+  "repeat_max_abs": [
+    0.0,
+    0.0
+  ],
+  "cpu_point_errors": [],
+  "cpu_ensemble_errors": [],
+  "rss_peak_bytes": 2640764928,
+  "gpu_reserved_peak_bytes": 2449473536,
+  "setting": "C20",
+  "product_id": "S2A_MSIL1C_20170113T072241_N0204_R006_T40UEE_20170113T072238",
+  "patch_completed": 0,
+  "elapsed_seconds": 594.9767438779963,
+  "all_calls": 15,
+  "host_min_free_bytes": 13343952896,
+  "intermediate_peak_bytes": 800087,
+  "gpu_observed_peak_bytes": 3443523584,
+  "failure": "Traceback (most recent call last):\n  File \"/home/scv/Cloud-Adapter-light/src/tools/run_phase118.py\", line 262, in <module>\n    prepare() if args.prepare else run()\n  File \"/home/scv/Cloud-Adapter-light/src/tools/run_phase118.py\", line 216, in run\n    output=cm.predict_from_array(image_array,patch_size=size,patch_overlap=overlap,batch_size=1,\n  File \"/home/scv/shared/phase111_ocm_runtime/assets/vendor/omnicloudmask/cloud_mask.py\", line 610, in predict_from_array\n    pred_tracker = coordinator(\n  File \"/home/scv/shared/phase111_ocm_runtime/assets/vendor/omnicloudmask/cloud_mask.py\", line 407, in coordinator\n    run_models_on_array(\n  File \"/home/scv/shared/phase111_ocm_runtime/assets/vendor/omnicloudmask/cloud_mask.py\", line 205, in run_models_on_array\n    inference_and_store(\n  File \"/home/scv/shared/phase111_ocm_runtime/assets/vendor/omnicloudmask/model_utils.py\", line 196, in inference_and_store\n    store_results(\nTypeError: run.<locals>.observed_store() got an unexpected keyword argument 'pred_batch'\n"
+}

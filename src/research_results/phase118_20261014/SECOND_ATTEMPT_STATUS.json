@@ -1,0 +1,43 @@
+{
+  "status": "paused_engineering_no_scientific_verdict",
+  "main_calls": 3042,
+  "repeat_calls": 4,
+  "construction_calls": 11,
+  "recovery": true,
+  "previous_attempt_calls": 15,
+  "previous_attempt_seconds": 594.9767438779963,
+  "first_attempt_preserved": "/home/scv/shared/phase118_20261014",
+  "recovery_scope": "keyword API fix only; fixed original32 scene plan",
+  "host_free_before_bytes": 13343952896,
+  "repeat_max_abs": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "cpu_point_errors": [
+    1.1920928955078125e-07,
+    1.1920928955078125e-07,
+    1.1920928955078125e-07,
+    1.1920928955078125e-07,
+    1.1920928955078125e-07
+  ],
+  "cpu_ensemble_errors": [
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "rss_peak_bytes": 3993157632,
+  "gpu_reserved_peak_bytes": 2480930816,
+  "setting": "C20",
+  "product_id": "S2A_MSIL1C_20170908T100031_N0205_R122_T32SPJ_20170908T100655",
+  "patch_completed": 241,
+  "elapsed_seconds": 988.4434252039937,
+  "all_calls": 3072,
+  "host_min_free_bytes": 13343952896,
+  "intermediate_peak_bytes": 2613822,
+  "gpu_observed_peak_bytes": 3474980864,
+  "failure": "Traceback (most recent call last):\n  File \"/home/scv/Cloud-Adapter-light/src/tools/run_phase118.py\", line 278, in <module>\n    prepare() if args.prepare else run()\n  File \"/home/scv/Cloud-Adapter-light/src/tools/run_phase118.py\", line 224, in run\n    assert actual_indexes==row['actual_patch_coordinates']\nAssertionError\n"
+}

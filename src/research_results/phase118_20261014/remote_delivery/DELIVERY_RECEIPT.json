@@ -1,0 +1,9 @@
+{
+  "private_scores_archive_sha256": "ceaa48caf2fd62fd9dde34eb24cad7fdd857f2590c5aff3b770af007ba561230",
+  "private_scores_archive_bytes": 1420026,
+  "small_archive_sha256": "7cb58d52dd81e275f78c510ab1d6865f66cb225b95e63acb2ae94645c8fbeaa3",
+  "small_archive_bytes": 37971,
+  "labels_accessed_or_transferred": false,
+  "dense_array_files_transferred": false,
+  "work_dirs_transferred": false
+}

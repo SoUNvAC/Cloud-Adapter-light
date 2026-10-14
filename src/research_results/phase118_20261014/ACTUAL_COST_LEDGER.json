@@ -1,0 +1,49 @@
+{
+  "actual_cumulative_network_calls": 16771,
+  "final_successful_scene_calls": 16240,
+  "corrected_clean_plan_total_including_checks": 16259,
+  "engineering_overhead_vs_clean_plan_calls": 512,
+  "all_attempt_construction_calls": 33,
+  "all_attempt_repeat_calls": 14,
+  "all_attempt_main_forward_calls": 16724,
+  "attempts": [
+    {
+      "attempt": "first",
+      "calls": 15,
+      "outcome": "keyword capture API failure; 0 sealed scenes",
+      "conservative_wall_seconds": 594.9767438779963
+    },
+    {
+      "attempt": "recovery_001",
+      "own_calls": 3057,
+      "outcome": "planner omitted author deduplication; 5 sealed scenes reused",
+      "own_wall_seconds": 393.46668132599734
+    },
+    {
+      "attempt": "recovery_002",
+      "own_calls": 13699,
+      "outcome": "32 sealed scenes, exit0; original settings unchanged",
+      "own_wall_seconds": 2042.881135591997
+    }
+  ],
+  "successful_scene_costs": {
+    "C20": {
+      "scene_calls": 8120,
+      "seconds": 1029.593374654025,
+      "scenes": 16
+    },
+    "H10": {
+      "scene_calls": 8120,
+      "seconds": 1326.9126335620022,
+      "scenes": 16
+    }
+  },
+  "conservative_cumulative_wall_seconds": 3031.3245607959907,
+  "wall_is_not_active_GPU_kernel_timer": true,
+  "CPU_RSS_peak_bytes": 9359851520,
+  "GPU_observed_peak_bytes": 10227810304,
+  "host_physical_free_bytes": 13343952896,
+  "original_O20_new_calls": 0,
+  "fitting_training_download_threshold_search": 0,
+  "new_file_size_before_package_bytes": 12308083
+}

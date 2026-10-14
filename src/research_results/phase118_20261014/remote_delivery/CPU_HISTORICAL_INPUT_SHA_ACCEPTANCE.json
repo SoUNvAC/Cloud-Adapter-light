@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "binding_checks": 96,
+  "deduplication_only": true,
+  "plan_sha256": "cffed37652e3086a5496b7c0bb579a885795b3d79ae9c50a39a807ae5fe971b7",
+  "model_calls": 0
+}

@@ -1,0 +1,322 @@
+[
+  {
+    "setting": "C20",
+    "product_id": "S2A_MSIL1C_20170113T072241_N0204_R006_T40UEE_20170113T072238",
+    "calls": 512,
+    "seconds": 72.13475621600082,
+    "points": 550,
+    "valid": 550,
+    "score_sha256": "489d7d431d7f43107ffcf0484dea89448a8e2b2f7e52ac88de11384905e81e4c",
+    "cpu_error": 1.1920928955078125e-07
+  },
+  {
+    "setting": "C20",
+    "product_id": "S2A_MSIL1C_20170706T051651_N0205_R062_T48XWG_20170706T051649",
+    "calls": 512,
+    "seconds": 63.5711111549972,
+    "points": 800,
+    "valid": 800,
+    "score_sha256": "8d2bda528e4d82f4b2b8d5aa59c71349c09ee170928b736f243ecf912b856cc3",
+    "cpu_error": 1.1920928955078125e-07
+  },
+  {
+    "setting": "C20",
+    "product_id": "S2A_MSIL1C_20170712T071621_N0205_R006_T40UEE_20170712T071617",
+    "calls": 512,
+    "seconds": 64.38240653600224,
+    "points": 550,
+    "valid": 550,
+    "score_sha256": "d8e1b2a2e068a6df5f58523b8560867a54d0c546a687366e0abc3cb095f9b02f",
+    "cpu_error": 1.1920928955078125e-07
+  },
+  {
+    "setting": "C20",
+    "product_id": "S2A_MSIL1C_20170725T142751_N0205_R053_T19GBQ_20170725T143854",
+    "calls": 512,
+    "seconds": 67.43819605599856,
+    "points": 550,
+    "valid": 550,
+    "score_sha256": "406b6cdda0dff72c14bd5a86ef6149cd84a062e54e9998a11b84309ff65dd558",
+    "cpu_error": 1.1920928955078125e-07
+  },
+  {
+    "setting": "C20",
+    "product_id": "S2A_MSIL1C_20170726T102021_N0205_R065_T33VVE_20170726T102259",
+    "calls": 512,
+    "seconds": 62.6001316710026,
+    "points": 550,
+    "valid": 550,
+    "score_sha256": "cb94719b99309963ecf80e8bd51850d628b8e9256371599698f13d7064068f70",
+    "cpu_error": 1.1920928955078125e-07
+  },
+  {
+    "setting": "C20",
+    "product_id": "S2A_MSIL1C_20170908T100031_N0205_R122_T32SPJ_20170908T100655",
+    "calls": 482,
+    "seconds": 58.064353976005805,
+    "points": 550,
+    "valid": 550,
+    "score_sha256": "8cb505a3b1570b403ee583a7d388328f0845402a4d11e407f592fe75066135cf",
+    "cpu_error": 1.1920928955078125e-07
+  },
+  {
+    "setting": "C20",
+    "product_id": "S2A_MSIL1C_20170917T052641_N0205_R105_T48XWG_20170917T052642",
+    "calls": 512,
+    "seconds": 63.8444379499997,
+    "points": 550,
+    "valid": 550,
+    "score_sha256": "52ee3109147fb2d7b86a5531c86101876f9cafd2392472f6ac1bbc42452cf44e",
+    "cpu_error": 1.1920928955078125e-07
+  },
+  {
+    "setting": "C20",
+    "product_id": "S2A_MSIL1C_20171107T150421_N0206_R125_T22WES_20171107T165127",
+    "calls": 512,
+    "seconds": 67.44523669000046,
+    "points": 550,
+    "valid": 550,
+    "score_sha256": "cf57b0d21d520764279088dcefa750168e17cb5cabe400420e7fa6ee6cef11eb",
+    "cpu_error": 1.1920928955078125e-07
+  },
+  {
+    "setting": "C20",
+    "product_id": "S2A_MSIL1C_20180106T032121_N0206_R118_T48NUG_20180106T083912",
+    "calls": 512,
+    "seconds": 60.52835628900357,
+    "points": 550,
+    "valid": 550,
+    "score_sha256": "76a836c31d291d8a651c167680ab9564185d52c7e856c982b6e00f373f88c24d",
+    "cpu_error": 5.960464477539063e-08
+  },
+  {
+    "setting": "C20",
+    "product_id": "S2A_MSIL1C_20180217T053911_N0206_R005_T44SKJ_20180217T082149",
+    "calls": 512,
+    "seconds": 63.08194551800261,
+    "points": 700,
+    "valid": 700,
+    "score_sha256": "28ff20e437cc6f171c36aa4e657d35947779d768d4861d4750de9cc7b3813af0",
+    "cpu_error": 1.1920928955078125e-07
+  },
+  {
+    "setting": "C20",
+    "product_id": "S2A_MSIL1C_20180222T012651_N0206_R074_T54TWN_20180222T031349",
+    "calls": 512,
+    "seconds": 67.95868929200515,
+    "points": 550,
+    "valid": 550,
+    "score_sha256": "9fccb2b2a20258fb73f316873c0bf901051d461e18bfdd4bee43e543c4faa42d",
+    "cpu_error": 1.1920928955078125e-07
+  },
+  {
+    "setting": "C20",
+    "product_id": "S2A_MSIL1C_20180302T142851_N0206_R053_T19GBQ_20180302T192732",
+    "calls": 512,
+    "seconds": 64.35234275499533,
+    "points": 750,
+    "valid": 750,
+    "score_sha256": "1b15eb767984c657ef7f00f51599345717affe1bf925ddf7fe2d439a52cdbada",
+    "cpu_error": 1.1920928955078125e-07
+  },
+  {
+    "setting": "C20",
+    "product_id": "S2A_MSIL1C_20180303T140051_N0206_R067_T19FDV_20180303T202004",
+    "calls": 512,
+    "seconds": 63.951183480006875,
+    "points": 550,
+    "valid": 550,
+    "score_sha256": "88f5aa9fc291228d4919093d250ccc91b018365fcaccec5f8f9778d3cace3e5c",
+    "cpu_error": 1.1920928955078125e-07
+  },
+  {
+    "setting": "C20",
+    "product_id": "S2B_MSIL1C_20170731T102019_N0205_R065_T33VVE_20170731T102348",
+    "calls": 512,
+    "seconds": 65.27614153700415,
+    "points": 550,
+    "valid": 550,
+    "score_sha256": "ec32091635769d7846cd04ce957be313bb82776052259cca1b36ddebf054f4bd",
+    "cpu_error": 1.1920928955078125e-07
+  },
+  {
+    "setting": "C20",
+    "product_id": "S2B_MSIL1C_20170916T101019_N0205_R022_T32SPJ_20170916T101354",
+    "calls": 470,
+    "seconds": 56.50469659100054,
+    "points": 600,
+    "valid": 600,
+    "score_sha256": "2d5c4147f00bb4958d18c43bb9a3c57470e5fabe6e68266edd75e8a8776f6a53",
+    "cpu_error": 1.1920928955078125e-07
+  },
+  {
+    "setting": "C20",
+    "product_id": "S2B_MSIL1C_20180302T150259_N0206_R125_T22WES_20180302T183800",
+    "calls": 512,
+    "seconds": 68.45938894199935,
+    "points": 600,
+    "valid": 600,
+    "score_sha256": "e6c33cc094ec052974c567a7d80e146786b7668352347c916bc10cffd773a8d6",
+    "cpu_error": 1.1920928955078125e-07
+  },
+  {
+    "setting": "H10",
+    "product_id": "S2A_MSIL1C_20170113T072241_N0204_R006_T40UEE_20170113T072238",
+    "calls": 512,
+    "seconds": 88.33840805199725,
+    "points": 550,
+    "valid": 550,
+    "score_sha256": "dd3aeaad2146c91eb15f45bfb62412ae5cc968c8313f906177755385639f8bcd",
+    "cpu_error": 8.940696716308594e-08
+  },
+  {
+    "setting": "H10",
+    "product_id": "S2A_MSIL1C_20170706T051651_N0205_R062_T48XWG_20170706T051649",
+    "calls": 512,
+    "seconds": 82.64995252800145,
+    "points": 800,
+    "valid": 800,
+    "score_sha256": "a919f0348da3b41eedac1b8837c0bf2cd8b75d4dd02b1aa16093f716878bec9d",
+    "cpu_error": 1.1920928955078125e-07
+  },
+  {
+    "setting": "H10",
+    "product_id": "S2A_MSIL1C_20170712T071621_N0205_R006_T40UEE_20170712T071617",
+    "calls": 512,
+    "seconds": 83.54869126700214,
+    "points": 550,
+    "valid": 550,
+    "score_sha256": "76c4d2db97bbb4ebcd8e336ea549d9cbcd9292e9ef6d0c011d614822c1f0dc68",
+    "cpu_error": 1.1920928955078125e-07
+  },
+  {
+    "setting": "H10",
+    "product_id": "S2A_MSIL1C_20170725T142751_N0205_R053_T19GBQ_20170725T143854",
+    "calls": 512,
+    "seconds": 86.11713600799703,
+    "points": 550,
+    "valid": 550,
+    "score_sha256": "62bddf7402348f9a1d73588c6312281d5a811d7553675ec87f7000fd07fb3e21",
+    "cpu_error": 1.1920928955078125e-07
+  },
+  {
+    "setting": "H10",
+    "product_id": "S2A_MSIL1C_20170726T102021_N0205_R065_T33VVE_20170726T102259",
+    "calls": 512,
+    "seconds": 81.73157484300464,
+    "points": 550,
+    "valid": 550,
+    "score_sha256": "3b48b2e54c0d7b97b3c574028f6520660e24a188b506d0a27f2a0f7eb7390b78",
+    "cpu_error": 1.7881393432617188e-07
+  },
+  {
+    "setting": "H10",
+    "product_id": "S2A_MSIL1C_20170908T100031_N0205_R122_T32SPJ_20170908T100655",
+    "calls": 482,
+    "seconds": 74.78305010999611,
+    "points": 550,
+    "valid": 550,
+    "score_sha256": "7ed6a7aff955a256fc0a7a59f3b7311cae3763f2985a84737bc0c6c10d6e44d7",
+    "cpu_error": 1.1920928955078125e-07
+  },
+  {
+    "setting": "H10",
+    "product_id": "S2A_MSIL1C_20170917T052641_N0205_R105_T48XWG_20170917T052642",
+    "calls": 512,
+    "seconds": 82.50215599499643,
+    "points": 550,
+    "valid": 550,
+    "score_sha256": "3cec4003c9043c238b8d649edd9f502358327eb57514fc1ae332ea4446b05f88",
+    "cpu_error": 1.1920928955078125e-07
+  },
+  {
+    "setting": "H10",
+    "product_id": "S2A_MSIL1C_20171107T150421_N0206_R125_T22WES_20171107T165127",
+    "calls": 512,
+    "seconds": 85.85307752500375,
+    "points": 550,
+    "valid": 550,
+    "score_sha256": "f6040a5eab73cfc95974ddbfb04a9f222cfa6fbac2c4686616ad744841541bf2",
+    "cpu_error": 1.1920928955078125e-07
+  },
+  {
+    "setting": "H10",
+    "product_id": "S2A_MSIL1C_20180106T032121_N0206_R118_T48NUG_20180106T083912",
+    "calls": 512,
+    "seconds": 80.17694098900392,
+    "points": 550,
+    "valid": 550,
+    "score_sha256": "f7d921f183fa2aac62c357f8f1f3ecca23e6b6e42a7e78cd0162e8d46fc7ccff",
+    "cpu_error": 1.1920928955078125e-07
+  },
+  {
+    "setting": "H10",
+    "product_id": "S2A_MSIL1C_20180217T053911_N0206_R005_T44SKJ_20180217T082149",
+    "calls": 512,
+    "seconds": 82.58147305899911,
+    "points": 700,
+    "valid": 700,
+    "score_sha256": "0b7bbc7e663e20a944ddfc548c0cdbc4dab2fbdfb7e152cd50aa0a159ccd6443",
+    "cpu_error": 1.1920928955078125e-07
+  },
+  {
+    "setting": "H10",
+    "product_id": "S2A_MSIL1C_20180222T012651_N0206_R074_T54TWN_20180222T031349",
+    "calls": 512,
+    "seconds": 86.1870053790044,
+    "points": 550,
+    "valid": 550,
+    "score_sha256": "f3d599d98b475f1ab5e3c6a64f24ab7cec997b66b9733dafb7c44e7c81b2e9e1",
+    "cpu_error": 5.960464477539063e-08
+  },
+  {
+    "setting": "H10",
+    "product_id": "S2A_MSIL1C_20180302T142851_N0206_R053_T19GBQ_20180302T192732",
+    "calls": 512,
+    "seconds": 83.51142419499956,
+    "points": 750,
+    "valid": 750,
+    "score_sha256": "4091a3baf6ac3a10cb57633525504fc5247060537221c268a72d0d9e57594a39",
+    "cpu_error": 2.9802322387695312e-08
+  },
+  {
+    "setting": "H10",
+    "product_id": "S2A_MSIL1C_20180303T140051_N0206_R067_T19FDV_20180303T202004",
+    "calls": 512,
+    "seconds": 83.35409002000233,
+    "points": 550,
+    "valid": 550,
+    "score_sha256": "390c6c9ea1ced4c0b0f3f935f3f7a088f18867636a8cb57a15c1df991605cc1a",
+    "cpu_error": 1.1920928955078125e-07
+  },
+  {
+    "setting": "H10",
+    "product_id": "S2B_MSIL1C_20170731T102019_N0205_R065_T33VVE_20170731T102348",
+    "calls": 512,
+    "seconds": 84.04081349299668,
+    "points": 550,
+    "valid": 550,
+    "score_sha256": "8b8bb04b3eb6b4baf46f7981877b5fd13aeb22e55847cc460a41eb08618dd96b",
+    "cpu_error": 1.1920928955078125e-07
+  },
+  {
+    "setting": "H10",
+    "product_id": "S2B_MSIL1C_20170916T101019_N0205_R022_T32SPJ_20170916T101354",
+    "calls": 470,
+    "seconds": 75.05876788299793,
+    "points": 600,
+    "valid": 600,
+    "score_sha256": "8ddc0fa2899663da4427a863db6715250fba434c11d3cc3354a34eb34e784691",
+    "cpu_error": 1.1920928955078125e-07
+  },
+  {
+    "setting": "H10",
+    "product_id": "S2B_MSIL1C_20180302T150259_N0206_R125_T22WES_20180302T183800",
+    "calls": 512,
+    "seconds": 86.47807221599942,
+    "points": 600,
+    "valid": 600,
+    "score_sha256": "1e2c6a27595343cee6054a80bf11fbdab5dbd8e71d925c7f8d6d38c576c1972b",
+    "cpu_error": 1.1920928955078125e-07
+  }
+]
