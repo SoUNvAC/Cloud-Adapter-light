@@ -38,8 +38,10 @@ def main():
     assert assets['status']=='all_files_verified'
     assert json.loads((BASE/'RUNTIME_IMPORT_ACCEPTANCE.json').read_text())['dependency_check']=='passed'
     for item in assets['files']:assert sha(item['path'])==item['sha256']
-    for key in ['HF_HOME','TORCH_HOME','XDG_CACHE_HOME','MPLCONFIGDIR']:
+    for key in ['HF_HOME','TORCH_HOME','XDG_CACHE_HOME','MPLCONFIGDIR','CUDA_CACHE_PATH',
+                'TRITON_CACHE_DIR','TORCHINDUCTOR_CACHE_DIR','TORCH_EXTENSIONS_DIR','TMPDIR']:
         os.environ[key]=str(BASE/'controlled_caches'/key.lower())
+        Path(os.environ[key]).mkdir(parents=True,exist_ok=True)
     os.environ.update(HF_HUB_OFFLINE='1',GDAL_NUM_THREADS='1',OPJ_NUM_THREADS='1',PYTHONDONTWRITEBYTECODE='1')
     sys.path.insert(0,str(BASE/'assets/vendor'))
     import numpy as np
