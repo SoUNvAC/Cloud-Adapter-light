@@ -215,11 +215,14 @@ def main():
         return original_store(pred_batch,index_batch,pred_tracker,gradient,grad_tracker)
     globals_gradient=gradient
     mu.infer_batch=observed_infer;cm.infer_batch=observed_infer;mu.store_results=observed_store
+    def no_automatic_models(*args,**kwargs):raise AssertionError('Automatic model download/fallback is forbidden')
+    cm.get_models=no_automatic_models
     try:
         output=cm.predict_from_array(image,patch_size=1000,patch_overlap=300,batch_size=1,
                inference_device='cuda',mosaic_device='cpu',inference_dtype=torch.float32,
                export_confidence=True,softmax_output=True,no_data_value=0,apply_no_data_mask=True,
-               custom_models=models,pred_classes=4,compile_models=False)
+               custom_models=models,pred_classes=4,compile_models=False,model_version=1,
+               destination_model_dir=BASE/'assets/weights')
     finally:
         mu.infer_batch=original_infer;mu.store_results=original_store
     author_valid=np.any(image!=0,axis=0);coverage=grad>0
