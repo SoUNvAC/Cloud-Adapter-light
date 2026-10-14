@@ -55,6 +55,7 @@ def main():
     if not treepath.exists(): treepath=BASE/'AUTHOR_COMMIT_TREE.json'
     tree=json.loads(treepath.read_text())
     code_commit=lock['code_commit']
+    assert tree['sha']==code_commit and not tree['truncated']
     for row in tree['tree']:
         if row['type']=='blob' and row['path'].startswith('omnicloudmask/') and row['path'].endswith(('.py','.csv')):
             fetch(f'https://raw.githubusercontent.com/DPIRD-DMA/OmniCloudMask/{code_commit}/'+row['path'],
