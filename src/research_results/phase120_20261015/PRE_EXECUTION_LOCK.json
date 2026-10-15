@@ -1,0 +1,73 @@
+{
+  "phase": 120,
+  "status": "frozen_before_any_model_construction",
+  "source_sha256": {
+    "src/tools/phase120_metrics.py": "c11f38d833648ae6c00082736ac29477643212b9387561f491d14800ea69886c",
+    "src/tools/infer_phase120.py": "3c803a44710dfb29273d42f7a3aea64c73e73b6e0cdb42e498e2a96b61f73cb9",
+    "src/tools/phase120_common.py": "db6c3e57656f2302b102a706e2044fb5c2713df47cf9f4fdc23686dbd6251da0",
+    "src/tools/train_phase120.py": "a81908a4f1dc3b51ee2ca552c2ee45fea6022f6cb358126abf3d2168a0bf8af5",
+    "src/tools/evaluate_phase120_catalogue.py": "0d9d4cd750ebf2ab0b2f6100e074cb0ffba78fcdd440ba77b987ba6e32162d4d",
+    "src/tools/run_phase120.py": "fd2a776e0b4a9d8ea5cf0e0ff33c1343c4e8ecce9b2c6e28976f4cd9d3798302",
+    "src/tools/test_phase120.py": "39955da97dde7a908244b6ac75f096fb15768d8a45d4b5065373cfd781206ebb",
+    "src/tools/test_phase120_numpy.py": "c59fecdd8b149e44049b6c0b93a168736dc8e58babb5473608dae0707535f64c",
+    "src/tools/phase119_common.py": "142a6c3f01798321a2b11607502909908bdec1d39a5c79fc992307e32d2f6745",
+    "src/tools/phase118_common.py": "123e8d09ed478f9572dae5be29d9b41793a8faa612bcb6290ab4a48025300751",
+    "src/tools/phase89_cpu_ap.py": "9bedbc46503916362564a0f34b1748d75d095edce436f70f533372895a42062e",
+    "src/research_plans/PHASE120_ENSEMBLE_TO_REGNET_DISTILLATION_20261015.md": "c3ea187411d0b0c2e10216a9f6c24c132d892711de7dff7ff0bc840ff921197a",
+    "src/research_plans/EXPLORATION_POLICY_20261014.md": "f38bf963cbfab243149ca425bbb3e2b9624ea0e97c159779507484c443c8bba5"
+  },
+  "original_split_sha256": "a431745e7a17bbd4a7b9e12ef3bf76767d4eb827911bd5cb5e632683c2177f7b",
+  "phase119_plan_sha256": "f1e74f385db5f81a25792169713237a8bafec36b2fb6ded9641ee0b1695abdf6",
+  "benchmark_products": [
+    "S2A_MSIL1C_20170726T102021_N0205_R065_T33VVE_20170726T102259",
+    "S2A_MSIL1C_20171107T150421_N0206_R125_T22WES_20171107T165127",
+    "S2A_MSIL1C_20180222T012651_N0206_R074_T54TWN_20180222T031349"
+  ],
+  "benchmark_used": "S2A_MSIL1C_20170726T102021_N0205_R065_T33VVE_20170726T102259",
+  "fit": 153,
+  "development": 32,
+  "seed": 12001,
+  "steps_per_arm": 1000,
+  "arms": [
+    "C",
+    "D"
+  ],
+  "checkpoint_selection": "fixed endpoint only",
+  "optimizer": {
+    "name": "AdamW",
+    "lr": 0.0001,
+    "weight_decay": 0.01,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08
+  },
+  "loss_C": "unweighted parent CE valid only",
+  "loss_D": "CE + 4*mean_valid sum_class KL(teacher softmax(lE/2) || student softmax(lS/2))",
+  "teacher": "independent frozen original RegNet+ConvNeXt raw output average",
+  "student": "original RegNet; exact author encoder frozen incl buffers; decoder only",
+  "crop": 512,
+  "normalization": "author channel_norm independently per B04/B03/B8A nonzero crop",
+  "augmentation": "fixed paired horizontal flip only",
+  "evaluation_order": [
+    "seal C and D",
+    "Catalogue32 common support then original reference",
+    "PixBox16/10groups common support then local original reference"
+  ],
+  "bootstrap_seed": 120015,
+  "bootstrap_resamples": 10000,
+  "operating_confidence": 0.5,
+  "planned_calls_cap": 8000,
+  "recovery_calls_cap": 10000,
+  "planned_seconds": 14400,
+  "recovery_seconds": 18000,
+  "CPU_GiB": 16,
+  "GPU_GiB": 20,
+  "host_min_free_bytes": 4000000000,
+  "intermediate_bytes_cap": 4000000000,
+  "new_downloads": 0,
+  "PixBox_for_fitting_or_selection": false,
+  "original_failed_split_unchanged": true,
+  "work_dirs_sync": false
+}

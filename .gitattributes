@@ -34,3 +34,6 @@ src/research_plans/EXPLORATION_POLICY_20261014.md -text
 
 src/tools/*phase119*.py -text
 src/research_plans/PHASE119_SINGLE_MODEL_EFFICIENCY_20261015.md -text
+
+src/tools/*phase120*.py -text
+src/research_plans/PHASE120_ENSEMBLE_TO_REGNET_DISTILLATION_20261015.md -text
