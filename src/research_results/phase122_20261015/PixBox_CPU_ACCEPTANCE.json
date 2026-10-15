@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "support_loss": 0,
+  "groups": 10,
+  "label_uploads": 0,
+  "model_calls": 0,
+  "AP_same_for_both_thresholds": true,
+  "not_full_scene_FPR": true
+}

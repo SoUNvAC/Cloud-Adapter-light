@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "scenes": 154,
+  "max_independent_confidence_error": 2.980232238769531e-07,
+  "deployed_parameters": 18039132,
+  "teacher_in_deployment": 0,
+  "raw_logit_mosaic": true,
+  "model_calls_in_verifier": 0
+}

@@ -1,0 +1,26 @@
+{
+  "phase": 122,
+  "status": "completed_exploratory",
+  "model_calls": 2612,
+  "training_steps": 1000,
+  "training_groups": 100,
+  "calibration_groups": 53,
+  "seed": 12201,
+  "thresholds": {
+    "R": 0.7693686485290528,
+    "C": 0.36361625790596014
+  },
+  "controller_wall_seconds": 1361.1433818340302,
+  "new_downloads": 0,
+  "model_retries": 0,
+  "CPU_peak_bytes": 3963998208,
+  "GPU_reserved_peak_bytes": 3422552064,
+  "minimum_remote_host_free_bytes": 13343952896,
+  "intermediate_peak_bytes": 1221024431,
+  "local_intermediate_peak_bytes": 937980032,
+  "labels_uploaded": 0,
+  "work_dirs_transfers": 0,
+  "Git_weights_uploaded": false,
+  "original_failed_split_preserved": true,
+  "new_independent_confirmation_claim": false
+}

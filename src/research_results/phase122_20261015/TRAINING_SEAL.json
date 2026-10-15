@@ -1,0 +1,11 @@
+{
+  "models": {
+    "C": "59f88f462b85c6a2eb8725781085efbc474962e862dd0a2401f4b344d88b5b9e"
+  },
+  "receipts": {
+    "C": "ad6f54cb3fe6c8c6afc5bc0c15256b0a14ce57c90a782002f84d06544de7d21e"
+  },
+  "source_lock_sha256": "58adf87df16dd4a0097d9cecb73c208c58e03532f8cbe56da4e95d43ec23d459",
+  "fixed1000_endpoint_before_calibration": true,
+  "calibration_groups_not_read_for_training": true
+}

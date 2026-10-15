@@ -1,0 +1,7 @@
+{
+  "before_reference_join": true,
+  "original": 9500,
+  "common": 9500,
+  "loss": 0,
+  "mask_sha256": "ffc02759776a1598647db607b7a7bcef4ce80463efd00d319b832853ce6f1727"
+}

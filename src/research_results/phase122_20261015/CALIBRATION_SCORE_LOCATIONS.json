@@ -1,0 +1,748 @@
+{
+  "files": [
+    {
+      "model": "R",
+      "group_id": "03d78b176919677764f2e5502dba04548b895fe21bc4ad59834cd899e66bfd77",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/R_Calibration/scores/Calibration/S2B_MSIL1C_20180125T080209_N0206_R035_T36NXN_20180125T100104.npz",
+      "sha256": "16932a9e38165bbe055273e111bb48b677abc5ff8509e5696252714fea905dbd",
+      "bytes": 5238035
+    },
+    {
+      "model": "R",
+      "group_id": "05866d12c622c49931f3fe35aabab1c84b2d957744421b676c9b831f37bb1a69",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/R_Calibration/scores/Calibration/S2B_MSIL1C_20180201T012709_N0206_R131_T53LKK_20180201T025415.npz",
+      "sha256": "f2442e53877f79e264ec7edf5ed36a0dd8cee99c2789d463cd52868331754be1",
+      "bytes": 5339341
+    },
+    {
+      "model": "R",
+      "group_id": "076f2e3603e90803ba4fcf0955aa4e4bf5a54f1abe416d2f648770953e2d2727",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/R_Calibration/scores/Calibration/S2B_MSIL1C_20180517T220529_N0206_R072_T04WES_20180517T234440.npz",
+      "sha256": "36e8d9679e91dda3214040bcdd8edcbaf44bd9732c17e81463d5326d3352575d",
+      "bytes": 5264856
+    },
+    {
+      "model": "R",
+      "group_id": "0a148b939ef9e3ea5182557896cba6a8bbd8572bc60765ad520716128284aec9",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/R_Calibration/scores/Calibration/S2A_MSIL1C_20180309T071721_N0206_R006_T37LFE_20180309T110254.npz",
+      "sha256": "1e24863ba70c8685e4c048c99efac8a0aca53d42dda8c03d7488672ae8c34446",
+      "bytes": 5243037
+    },
+    {
+      "model": "R",
+      "group_id": "0dff11d4f6b3f336ca29408c81266ab5228e50520de2fb2cc5d0e5ee3ba2bd12",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/R_Calibration/scores/Calibration/S2B_MSIL1C_20180417T021339_N0206_R060_T50LRQ_20180417T052932.npz",
+      "sha256": "269005692fb5bd20bf7c495c07007e725b3d3380aa811d80cf27a18a5f059370",
+      "bytes": 5368518
+    },
+    {
+      "model": "R",
+      "group_id": "19f46ffc7d93ba7ccf50cc13def2a1b60e823e332628cff77972e45f5bddafdd",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/R_Calibration/scores/Calibration/S2A_MSIL1C_20180910T150721_N0206_R082_T19PFN_20180910T201336.npz",
+      "sha256": "de47ccb5d133411753e7723dac3a9fe9e7277972300b30e74ea97dd304ef6f12",
+      "bytes": 2222443
+    },
+    {
+      "model": "R",
+      "group_id": "1bc068c333e3254d407c67b8e60debb9c4c47365b3ceeba9179c359cba64eccb",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/R_Calibration/scores/Calibration/S2B_MSIL1C_20180518T030539_N0206_R075_T54XWH_20180518T055019.npz",
+      "sha256": "fb645d225e2b019c57e98ff68b126a575ddbd6cc87416664a09f502fd364a1b7",
+      "bytes": 5386057
+    },
+    {
+      "model": "R",
+      "group_id": "1c688b6525582d8dd0de00c7bb9df44da9f03fa41d3bedbb496224ae8f9115f7",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/R_Calibration/scores/Calibration/S2B_MSIL1C_20181218T061249_N0207_R134_T41RQK_20181218T080326.npz",
+      "sha256": "34768eb15d2a4fc09869fa789caff874b440177812d31f151d2b4a0ad81b3f3f",
+      "bytes": 3933301
+    },
+    {
+      "model": "R",
+      "group_id": "1d469d48462297892e18c21ede5f3d5442baedcf47af1cd873fd48102f3f19bd",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/R_Calibration/scores/Calibration/S2B_MSIL1C_20180327T022549_N0206_R046_T50QQH_20180327T060147.npz",
+      "sha256": "da519f050b14d2aec091fb2fffb337e26bb8c69b60cbf818b388a523f88f7d07",
+      "bytes": 2151595
+    },
+    {
+      "model": "R",
+      "group_id": "2803dfd39d29814756df3cdfd37e0bb670afbf98dd12bf78304322db08749312",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/R_Calibration/scores/Calibration/S2B_MSIL1C_20180922T075619_N0206_R035_T35KMQ_20180922T114414.npz",
+      "sha256": "fcec9ce475a278236dfafa47cf60d7e8e29bac6e2196fecc7b529045b79cd592",
+      "bytes": 5041464
+    },
+    {
+      "model": "R",
+      "group_id": "296404c2ec660dfdfb2491a14af4cd0e99cbc28aa8ea9565acbd4a20376006be",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/R_Calibration/scores/Calibration/S2B_MSIL1C_20180401T181919_N0206_R127_T11SQU_20180401T215241.npz",
+      "sha256": "655e2ffeaa7ff83a46b7c49d9e79f6ce7aa9c32ec78b88abf6bae107396afcc5",
+      "bytes": 5373098
+    },
+    {
+      "model": "R",
+      "group_id": "29d9ba1a53bbc74d4c34e155c5c657b3f385a21fd6dc9a3e9010490fdd848e12",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/R_Calibration/scores/Calibration/S2B_MSIL1C_20180810T160819_N0206_R140_T16QDD_20180810T211922.npz",
+      "sha256": "5167a57de40f298cb947fb6f4698bcd12b24c7fe7099e0c6e6a805eed305f190",
+      "bytes": 5409445
+    },
+    {
+      "model": "R",
+      "group_id": "2a8f8c28dbec378627355cd5acaad8b20d09afd14d32d278cc52c10427864709",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/R_Calibration/scores/Calibration/S2A_MSIL1C_20180817T215051_N0206_R029_T14XMQ_20180818T001725.npz",
+      "sha256": "fc84a9c86183172e09c3531c402e032e3bd5f0a7ff2f56ad613da636fea99531",
+      "bytes": 3984822
+    },
+    {
+      "model": "R",
+      "group_id": "37bbe9df272ed8a6c50e430e148d3a7abecf77eb974e6985b39c477948cdd942",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/R_Calibration/scores/Calibration/S2A_MSIL1C_20181030T095121_N0206_R079_T33TWK_20181030T130454.npz",
+      "sha256": "4217d87d2ea46163010294020490de106527da40bcdd108dc1307333381ca134",
+      "bytes": 5369764
+    },
+    {
+      "model": "R",
+      "group_id": "37ff39543d248a3bb646c6b5543d9307a90a62b8a1e935b3838d1ea7e3fdf68e",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/R_Calibration/scores/Calibration/S2B_MSIL1C_20180505T025549_N0206_R032_T56XMJ_20180505T044859.npz",
+      "sha256": "4faa168ecd79f862a752f3a492580d47e4c2a0b3138845db7553e240c45133bd",
+      "bytes": 5403673
+    },
+    {
+      "model": "R",
+      "group_id": "43618af6b01bdcb3f2a9ddaea6771c1b8abc889a0d578753e766158a09e5fa78",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/R_Calibration/scores/Calibration/S2B_MSIL1C_20181220T033139_N0207_R018_T48SYC_20181220T060651.npz",
+      "sha256": "e08e2844eb8ce491fcba566f5286f6f5f0f3dd86dabda05ccb06b5e44eb97f19",
+      "bytes": 5364419
+    },
+    {
+      "model": "R",
+      "group_id": "466103525fc1d6b9b172319d36d14b972764cc7699d41bedef4529959358a545",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/R_Calibration/scores/Calibration/S2A_MSIL1C_20180919T101701_N0206_R065_T39XWH_20180919T122556.npz",
+      "sha256": "553da0c209de5e5a4b24b7287913c7bfcb320466dfc197565444f5194e49cf11",
+      "bytes": 5387159
+    },
+    {
+      "model": "R",
+      "group_id": "4ccbdb66dad51a8fdad216ea687140ed14d35eec7fff414990f2dcb0b5790643",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/R_Calibration/scores/Calibration/S2B_MSIL1C_20180605T140729_N0206_R053_T24WWU_20180605T160557.npz",
+      "sha256": "2efc865e9c9fd51e9ece67f27b5c9991e663583ad03685924b2894658205af64",
+      "bytes": 5359630
+    },
+    {
+      "model": "R",
+      "group_id": "53482a05815bb2ed88a146c80425e14af6384fbf12fc574fb57c1c4d4b9e652f",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/R_Calibration/scores/Calibration/S2B_MSIL1C_20181007T103019_N0206_R108_T31RCK_20181007T160704.npz",
+      "sha256": "e42162263ab495c2140a47d23d03b6e4cacf891195c432e246918a04c0e41c53",
+      "bytes": 5257880
+    },
+    {
+      "model": "R",
+      "group_id": "55b01ca2cb939ad9732bb0c1c2b4186bc7316a47639f137cc041ad741ab02cf5",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/R_Calibration/scores/Calibration/S2A_MSIL1C_20181030T044921_N0206_R076_T45RXQ_20181030T065311.npz",
+      "sha256": "08fe066ef718441aada74a28f72ca17570c561ef595736ef4d16d9d53613aeb6",
+      "bytes": 5298735
+    },
+    {
+      "model": "R",
+      "group_id": "5955951adb0636a28a90c96c08b4d0cdbd5c88cb512e1e9683da188485130b0c",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/R_Calibration/scores/Calibration/S2B_MSIL1C_20180624T075609_N0206_R035_T37QBE_20180624T101209.npz",
+      "sha256": "1b972024ce42436a61d3d8da6ce3089ef76d5c1a50f2afeb29cf6c70fa2c8886",
+      "bytes": 4866942
+    },
+    {
+      "model": "R",
+      "group_id": "5b33c9b05b691e7619fc032c182bbfbbad64c7c1bf6b11b032dad252cfcacbdf",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/R_Calibration/scores/Calibration/S2A_MSIL1C_20180913T081601_N0206_R121_T35LKE_20180913T103649.npz",
+      "sha256": "8392762f7bd46c2dc797aaf0f13d8aa0c20691f4ceb52a9da4899270cec4df99",
+      "bytes": 4935798
+    },
+    {
+      "model": "R",
+      "group_id": "5fd2a7bb69959c894af74a06cca629a8b98a8fbbf5a77df856f9412fd61cf38d",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/R_Calibration/scores/Calibration/S2A_MSIL1C_20180824T150721_N0206_R125_T21UUP_20180824T185559.npz",
+      "sha256": "3f3821b7828ba79cdd48002994d11e8df2aa6eb5d267f4209a2d02c78685d085",
+      "bytes": 3434230
+    },
+    {
+      "model": "R",
+      "group_id": "68670de47ebe611d5669a3e02618516e34fb700bec0082d945a5905e91639e85",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/R_Calibration/scores/Calibration/S2A_MSIL1C_20180723T124301_N0206_R095_T28WDU_20180723T144245.npz",
+      "sha256": "575032ecef717b09713ef03f3b0ae5280c76a88796e6dc2146b15a7e22c5e018",
+      "bytes": 5384631
+    },
+    {
+      "model": "R",
+      "group_id": "701f720b8813d6c9e687c3016aa0243c5feb4d5aa3ea026d313114d196674b23",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/R_Calibration/scores/Calibration/S2B_MSIL1C_20180422T042659_N0206_R133_T48VUK_20180422T074056.npz",
+      "sha256": "2d7fe0614bcf99c8cd48983344d5e7fb5a1233bff6822509c15e542b39ffa7a4",
+      "bytes": 5349578
+    },
+    {
+      "model": "R",
+      "group_id": "751f4e9db721c4de70de35877bb5b4c233ae9598fe12954ada42a9b4ec83b47f",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/R_Calibration/scores/Calibration/S2B_MSIL1C_20180325T064629_N0206_R020_T39PWK_20180325T120625.npz",
+      "sha256": "7fb6ed14d6b4f57aea61d15e335692848ddc2e815e36aba8ea345d5ec72d552a",
+      "bytes": 5350958
+    },
+    {
+      "model": "R",
+      "group_id": "762ed1681e71575f3aeb50dfc53ee61bace6cdeae4565adc8dd78a7f3fb7088c",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/R_Calibration/scores/Calibration/S2A_MSIL1C_20180422T033541_N0206_R061_T49UFV_20180422T062036.npz",
+      "sha256": "19e8203ebe64ef9d13e49a4b6f0527f01ce09a2a94e9175a7dd5ce091efa5099",
+      "bytes": 4751545
+    },
+    {
+      "model": "R",
+      "group_id": "7ab5b903dd033295ae1873d82995fa9bac54ccc910327bccea8ae8f39a4b12f6",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/R_Calibration/scores/Calibration/S2A_MSIL1C_20180521T054641_N0206_R048_T42QXL_20180521T085815.npz",
+      "sha256": "20c650f4543cb91197585ce164a16eef68bbd7ac5a57a204a534eb97c5a40244",
+      "bytes": 5189123
+    },
+    {
+      "model": "R",
+      "group_id": "7c24e4c98a7327b6b9e84cb89f1d8c24a1b21d49f4b089d00b8f811f8fcf3573",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/R_Calibration/scores/Calibration/S2B_MSIL1C_20180208T224659_N0206_R101_T02WPS_20180209T001736.npz",
+      "sha256": "c3e82d697b0510a4fa2a0d895e50bfe8db1470f6617ee0f6ed505ef8712e73e5",
+      "bytes": 5311956
+    },
+    {
+      "model": "R",
+      "group_id": "80709e721d2b44ed9fa67c705d0c4318e6864678a8340aae01f6fbc146329546",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/R_Calibration/scores/Calibration/S2B_MSIL1C_20180120T004659_N0206_R102_T54KUV_20180120T020340.npz",
+      "sha256": "40acca06093dcb564ba25136a2464646bad4658bedf2605b2c52b01a2fd7839e",
+      "bytes": 5320948
+    },
+    {
+      "model": "R",
+      "group_id": "8644c7cf71ce5c827ae39e44070ea12137940d432d125285eff23a04a44f3b29",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/R_Calibration/scores/Calibration/S2B_MSIL1C_20180125T232159_N0206_R044_T58PHU_20180126T003547.npz",
+      "sha256": "2108a68b3163e27788cd073482e6812929e91ff1400bf381a84a084472d52f99",
+      "bytes": 5420086
+    },
+    {
+      "model": "R",
+      "group_id": "86c9c25c3a8bdbabb45152325c6e5c573f72029e5f8b060cb53bf60e7cce50aa",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/R_Calibration/scores/Calibration/S2B_MSIL1C_20180625T230019_N0206_R058_T58KHC_20180626T001009.npz",
+      "sha256": "4d9b0e7c9a153e3853251dba42436f2def4aac96c358bfd4b0a8a2d1dd0f22b8",
+      "bytes": 5317879
+    },
+    {
+      "model": "R",
+      "group_id": "87c69a30946a5550e3e982bce4740ebba46a780d18a73afe65480d666613598b",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/R_Calibration/scores/Calibration/S2B_MSIL1C_20181004T210519_N0206_R071_T56CNU_20181004T234310.npz",
+      "sha256": "f4c76daefac003276a820bff45fc0376828d58f87a7463b1aa908e2c46d5b3b9",
+      "bytes": 5390782
+    },
+    {
+      "model": "R",
+      "group_id": "8cb6b7742f39a379ee744e8463dcc629031e9960e1ee44dfea719ea36df8d999",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/R_Calibration/scores/Calibration/S2B_MSIL1C_20181025T081009_N0206_R078_T37TGL_20181025T102247.npz",
+      "sha256": "581d93824cfa239f75fe235f3b6d17c84b8b709088d3662e9be44584db0ebf46",
+      "bytes": 5214330
+    },
+    {
+      "model": "R",
+      "group_id": "8f67b5ebbaaebb0484037637fac81c9370ea8d5c9cf40ab810a203caabb10e43",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/R_Calibration/scores/Calibration/S2A_MSIL1C_20180718T135111_N0206_R024_T22MEB_20180718T185303.npz",
+      "sha256": "c7e3e5981154f775fd59da01ec84396182482adf687f2eb47cc4517e9aa756b5",
+      "bytes": 5313701
+    },
+    {
+      "model": "R",
+      "group_id": "95b1ca604dab33a1953ff4344a0129d9f4e9de19254bb5b965d04a21a0db5e28",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/R_Calibration/scores/Calibration/S2A_MSIL1C_20180818T061631_N0206_R034_T43VFG_20180818T074215.npz",
+      "sha256": "8b2e3b40fc8499ce5950ac5a3434c49640d41400e5668b9863a526085fc5f4b8",
+      "bytes": 5389217
+    },
+    {
+      "model": "R",
+      "group_id": "961fc36543f2aee6cadf2e9b99970dd78dc8303f83243171d3cef22aed79c78f",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/R_Calibration/scores/Calibration/S2A_MSIL1C_20181112T070221_N0207_R120_T38KRD_20181112T102254.npz",
+      "sha256": "bf4666b0adce0fff853bb18019d6584d5f7c13fe290395acbb4bab8b9403cbf0",
+      "bytes": 5294800
+    },
+    {
+      "model": "R",
+      "group_id": "a18d45433f5efcad1918f98b1012b012c8a06541e6f8a2d2612336733a663044",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/R_Calibration/scores/Calibration/S2A_MSIL1C_20180209T112221_N0206_R037_T29RKM_20180209T164004.npz",
+      "sha256": "0ab1749575a56593ec6dc73bcc968b8e434e3245ea05c7d31b4a3ea5c98329cb",
+      "bytes": 5370851
+    },
+    {
+      "model": "R",
+      "group_id": "ab8efe1599f53b1e49f2e743bf22a3e8e4b54f7582fe1674dd4a6a3c4819aaf5",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/R_Calibration/scores/Calibration/S2B_MSIL1C_20180615T205019_N0206_R057_T08WPC_20180615T223116.npz",
+      "sha256": "1b3c6404567fab81ef160572395625a8310c52ad46fbc3781609ac79a611241f",
+      "bytes": 5363350
+    },
+    {
+      "model": "R",
+      "group_id": "b4cd53594d1a77a4c6b342d13c3b8c1e6d03871f91d35937aa13e3da601b22f9",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/R_Calibration/scores/Calibration/S2A_MSIL1C_20181214T090351_N0207_R007_T34QGM_20181214T102932.npz",
+      "sha256": "799a49736f9f5ade7ddb34c66d8cacc2a66e38434355672e7cd0151550018dad",
+      "bytes": 4694452
+    },
+    {
+      "model": "R",
+      "group_id": "b980986dd002ed671e2e8a4061fe6564b2e7a96de69d7c0276bfa1a5ab08a71a",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/R_Calibration/scores/Calibration/S2A_MSIL1C_20181102T015621_N0206_R117_T51LYE_20181102T061209.npz",
+      "sha256": "ec7e78ab5fb3757ddb823f3a0bfb4643945b35292fef4cbeed790e40dda461b8",
+      "bytes": 4897269
+    },
+    {
+      "model": "R",
+      "group_id": "c21b41ed1837aa7ae3f10d8623dacdc65d5e9d1b85ef2707a55a25c3a6ac1aa8",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/R_Calibration/scores/Calibration/S2A_MSIL1C_20180327T163911_N0206_R126_T17VNF_20180327T215534.npz",
+      "sha256": "6c8540dac99cdd8fb3cd47909749619c9966686dd532f95426b235e551bee095",
+      "bytes": 5279123
+    },
+    {
+      "model": "R",
+      "group_id": "c22fc88309c49b926de5498f89a92e5b33fc7df5ebda48b126ff77b606836ca7",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/R_Calibration/scores/Calibration/S2B_MSIL1C_20180808T022319_N0206_R103_T50MRV_20180808T054332.npz",
+      "sha256": "ea55f786678c68a48afb48bc21631aa78c1f8c6a42c3ec247ff1c6d155974a0e",
+      "bytes": 5289629
+    },
+    {
+      "model": "R",
+      "group_id": "c67f100fedbc51645ba49545fc5c8b2316becaf226bfeedd24f41d404bbf6b05",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/R_Calibration/scores/Calibration/S2B_MSIL1C_20180816T162829_N0206_R083_T18VUM_20180816T213305.npz",
+      "sha256": "1a49e3f1faf860898504130c1c0bbdc0cd82ac0e1c213ca89a6d7169322991d9",
+      "bytes": 5388624
+    },
+    {
+      "model": "R",
+      "group_id": "dafd2f0e178ebc18d71541cc0509c2fcd3301f28f09134650e92170af12abbea",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/R_Calibration/scores/Calibration/S2A_MSIL1C_20180613T141951_N0206_R096_T23VNK_20180613T162358.npz",
+      "sha256": "8396a96575835ac66ad1b984e31efe72c3e0ff6a3db4f5174a65aaa89695387f",
+      "bytes": 5376985
+    },
+    {
+      "model": "R",
+      "group_id": "eb235dc51d3294bea3f8c7c41c3a20b791bf7c7373da26efb5d360215972ee0b",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/R_Calibration/scores/Calibration/S2B_MSIL1C_20180827T174039_N0206_R098_T12RYN_20180827T214315.npz",
+      "sha256": "534126b8db7009418eb5e7ddea2301b405cf4a464d26544d9d6f1e4604d3f49d",
+      "bytes": 5300992
+    },
+    {
+      "model": "R",
+      "group_id": "eb8b3a67a4a788375333c72e30f424235e306414e3c08b39d0b3e02613da01cf",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/R_Calibration/scores/Calibration/S2B_MSIL1C_20180630T002059_N0206_R116_T55HCC_20180630T014728.npz",
+      "sha256": "57e70408ffa2452069c924bc952a28ddfcf6d446202d8b72a89fe91569dc75f9",
+      "bytes": 4971929
+    },
+    {
+      "model": "R",
+      "group_id": "ee243f2eb72e6ff5310faf10c8cbd310c8f87e69835cda784f731d6ccd325aa0",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/R_Calibration/scores/Calibration/S2A_MSIL1C_20180108T104421_N0206_R008_T31TEF_20180108T124506.npz",
+      "sha256": "bf6043bc5ba5a1b9dfbdb704577d1ac407435f27523338c101cea2dbc95e9b9c",
+      "bytes": 5293340
+    },
+    {
+      "model": "R",
+      "group_id": "eef079ec280eeeb05b3f12a94134f41f8a3ba210f979a1b3c8710a23c478eb84",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/R_Calibration/scores/Calibration/S2B_MSIL1C_20180315T032529_N0206_R018_T49SCC_20180315T070512.npz",
+      "sha256": "243acd11973ece1aa5c6eefa356a5edd3ca04a0e3480f57b465b56c66f1b5c73",
+      "bytes": 4870130
+    },
+    {
+      "model": "R",
+      "group_id": "f2138d7dbee6fc93ba7a4712d669a09234d526aa71fbd7182f491f0013837cab",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/R_Calibration/scores/Calibration/S2A_MSIL1C_20180621T083651_N0206_R064_T34KBG_20180621T123155.npz",
+      "sha256": "59dade5f940ab322264f8b6ee13153e67ec0b9d51a72e9a10c9f5d0959ced722",
+      "bytes": 5182594
+    },
+    {
+      "model": "R",
+      "group_id": "f3cc667ba54723ffcdce064e8d82a75173140023e3c830b63cc878b97c32cdb4",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/R_Calibration/scores/Calibration/S2A_MSIL1C_20181114T040011_N0207_R004_T48UXA_20181114T084110.npz",
+      "sha256": "d2f684f30c019828c35decbbe11a9283b7ff69c6b5b11207ba72dcc171afa821",
+      "bytes": 5144534
+    },
+    {
+      "model": "R",
+      "group_id": "f5e4907d7bb75199ac9d1caad4df407783996cfc178964e0b7a6a568418044f2",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/R_Calibration/scores/Calibration/S2A_MSIL1C_20180904T160901_N0206_R140_T27XWJ_20180904T192941.npz",
+      "sha256": "6e8cd57eab1b9d2b5b72e4db83e9ea22a15bd49bb97e4e4188227b1664bbde1d",
+      "bytes": 5371719
+    },
+    {
+      "model": "R",
+      "group_id": "fc02608e82c1a5855735f626492136061649142fbe2891d5456a9803682699ca",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/R_Calibration/scores/Calibration/S2B_MSIL1C_20180826T062619_N0206_R077_T40QHL_20180826T092057.npz",
+      "sha256": "4e289cb06cddaec364d6e9f3d5631a692d21bc914e9c9d3ba6ea8f7a3b76e71b",
+      "bytes": 5414306
+    },
+    {
+      "model": "C",
+      "group_id": "03d78b176919677764f2e5502dba04548b895fe21bc4ad59834cd899e66bfd77",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/C_Calibration/scores/Calibration/S2B_MSIL1C_20180125T080209_N0206_R035_T36NXN_20180125T100104.npz",
+      "sha256": "a5a581d5747038a8e8476cb48b356d83d1607630fba4514d8430312fd362d6c1",
+      "bytes": 5134340
+    },
+    {
+      "model": "C",
+      "group_id": "05866d12c622c49931f3fe35aabab1c84b2d957744421b676c9b831f37bb1a69",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/C_Calibration/scores/Calibration/S2B_MSIL1C_20180201T012709_N0206_R131_T53LKK_20180201T025415.npz",
+      "sha256": "4388915bf99ebc8b59ad19ad3745e78de3dae135a56fa6f490fb2e61ee582f24",
+      "bytes": 4949548
+    },
+    {
+      "model": "C",
+      "group_id": "076f2e3603e90803ba4fcf0955aa4e4bf5a54f1abe416d2f648770953e2d2727",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/C_Calibration/scores/Calibration/S2B_MSIL1C_20180517T220529_N0206_R072_T04WES_20180517T234440.npz",
+      "sha256": "f73b743c6fdf2b38c015353305f4ac217f63cd6276737476dfd58422ae3320c2",
+      "bytes": 5147004
+    },
+    {
+      "model": "C",
+      "group_id": "0a148b939ef9e3ea5182557896cba6a8bbd8572bc60765ad520716128284aec9",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/C_Calibration/scores/Calibration/S2A_MSIL1C_20180309T071721_N0206_R006_T37LFE_20180309T110254.npz",
+      "sha256": "bd01beceae52cc1b6fd16c1057ac06e5f34a8eb89e4de3370f83b8d261bcc5d8",
+      "bytes": 5128822
+    },
+    {
+      "model": "C",
+      "group_id": "0dff11d4f6b3f336ca29408c81266ab5228e50520de2fb2cc5d0e5ee3ba2bd12",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/C_Calibration/scores/Calibration/S2B_MSIL1C_20180417T021339_N0206_R060_T50LRQ_20180417T052932.npz",
+      "sha256": "c33af2a29088f33c248bf9d9f3ef6a1515382a5a940a35613ec12c07abf539a3",
+      "bytes": 5292789
+    },
+    {
+      "model": "C",
+      "group_id": "19f46ffc7d93ba7ccf50cc13def2a1b60e823e332628cff77972e45f5bddafdd",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/C_Calibration/scores/Calibration/S2A_MSIL1C_20180910T150721_N0206_R082_T19PFN_20180910T201336.npz",
+      "sha256": "163334062a52c89a50cd8935b14a877a155d49e0c63e4e58cba17676a9e15df6",
+      "bytes": 3052405
+    },
+    {
+      "model": "C",
+      "group_id": "1bc068c333e3254d407c67b8e60debb9c4c47365b3ceeba9179c359cba64eccb",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/C_Calibration/scores/Calibration/S2B_MSIL1C_20180518T030539_N0206_R075_T54XWH_20180518T055019.npz",
+      "sha256": "5d71703528881f43088b790bd67c4a462d2d5df3b0dd21d386c1d9b9823c52d9",
+      "bytes": 5127557
+    },
+    {
+      "model": "C",
+      "group_id": "1c688b6525582d8dd0de00c7bb9df44da9f03fa41d3bedbb496224ae8f9115f7",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/C_Calibration/scores/Calibration/S2B_MSIL1C_20181218T061249_N0207_R134_T41RQK_20181218T080326.npz",
+      "sha256": "a6564a681cd597b227552b13a961be284d1934129734e73e2a622c4ab18d3b88",
+      "bytes": 4075010
+    },
+    {
+      "model": "C",
+      "group_id": "1d469d48462297892e18c21ede5f3d5442baedcf47af1cd873fd48102f3f19bd",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/C_Calibration/scores/Calibration/S2B_MSIL1C_20180327T022549_N0206_R046_T50QQH_20180327T060147.npz",
+      "sha256": "9b002e93b3bc41789ed33a65a8197def46d8d6bb552f227cf42f8e9e5dcdb2f3",
+      "bytes": 2345404
+    },
+    {
+      "model": "C",
+      "group_id": "2803dfd39d29814756df3cdfd37e0bb670afbf98dd12bf78304322db08749312",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/C_Calibration/scores/Calibration/S2B_MSIL1C_20180922T075619_N0206_R035_T35KMQ_20180922T114414.npz",
+      "sha256": "28e6af932735cab9185122d1c4d4acb4f10902eec22d69c1f8e3fa2e2a5a113f",
+      "bytes": 4722488
+    },
+    {
+      "model": "C",
+      "group_id": "296404c2ec660dfdfb2491a14af4cd0e99cbc28aa8ea9565acbd4a20376006be",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/C_Calibration/scores/Calibration/S2B_MSIL1C_20180401T181919_N0206_R127_T11SQU_20180401T215241.npz",
+      "sha256": "a69be7442546a88dec78350a32aa303a06534fb14b4490e42f3b47429905dfa3",
+      "bytes": 5160583
+    },
+    {
+      "model": "C",
+      "group_id": "29d9ba1a53bbc74d4c34e155c5c657b3f385a21fd6dc9a3e9010490fdd848e12",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/C_Calibration/scores/Calibration/S2B_MSIL1C_20180810T160819_N0206_R140_T16QDD_20180810T211922.npz",
+      "sha256": "86611666ca99db889893837bd679faa2021cdc405a0c919bf64e486429ade68c",
+      "bytes": 5060140
+    },
+    {
+      "model": "C",
+      "group_id": "2a8f8c28dbec378627355cd5acaad8b20d09afd14d32d278cc52c10427864709",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/C_Calibration/scores/Calibration/S2A_MSIL1C_20180817T215051_N0206_R029_T14XMQ_20180818T001725.npz",
+      "sha256": "e243308e59ce07dee9137c62535588ad7395789c475f5f54dc5085e82d5ca9ad",
+      "bytes": 4249908
+    },
+    {
+      "model": "C",
+      "group_id": "37bbe9df272ed8a6c50e430e148d3a7abecf77eb974e6985b39c477948cdd942",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/C_Calibration/scores/Calibration/S2A_MSIL1C_20181030T095121_N0206_R079_T33TWK_20181030T130454.npz",
+      "sha256": "d457b2502c9aa1258786dcbf41c27f0f85b90199dbd5e89aa3a11337c05236e0",
+      "bytes": 5238942
+    },
+    {
+      "model": "C",
+      "group_id": "37ff39543d248a3bb646c6b5543d9307a90a62b8a1e935b3838d1ea7e3fdf68e",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/C_Calibration/scores/Calibration/S2B_MSIL1C_20180505T025549_N0206_R032_T56XMJ_20180505T044859.npz",
+      "sha256": "79ad3a2e3a7009e8c93fb4513a32d470939a15947e69d55a633e0db3552c708c",
+      "bytes": 5191165
+    },
+    {
+      "model": "C",
+      "group_id": "43618af6b01bdcb3f2a9ddaea6771c1b8abc889a0d578753e766158a09e5fa78",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/C_Calibration/scores/Calibration/S2B_MSIL1C_20181220T033139_N0207_R018_T48SYC_20181220T060651.npz",
+      "sha256": "204dfeb4fda734b09084060c512608c39ba77115ee0bfbce7c73f81fb89b8330",
+      "bytes": 4809275
+    },
+    {
+      "model": "C",
+      "group_id": "466103525fc1d6b9b172319d36d14b972764cc7699d41bedef4529959358a545",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/C_Calibration/scores/Calibration/S2A_MSIL1C_20180919T101701_N0206_R065_T39XWH_20180919T122556.npz",
+      "sha256": "ce1b580cf646fb645f6c6b2dbc70a61e1ee038a4cb91f55fa783c49e29062002",
+      "bytes": 5146960
+    },
+    {
+      "model": "C",
+      "group_id": "4ccbdb66dad51a8fdad216ea687140ed14d35eec7fff414990f2dcb0b5790643",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/C_Calibration/scores/Calibration/S2B_MSIL1C_20180605T140729_N0206_R053_T24WWU_20180605T160557.npz",
+      "sha256": "7fdb46059ac5bfade0f52b026bc07815536ad307b4fd02a7c346f99ed0350e1e",
+      "bytes": 5111546
+    },
+    {
+      "model": "C",
+      "group_id": "53482a05815bb2ed88a146c80425e14af6384fbf12fc574fb57c1c4d4b9e652f",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/C_Calibration/scores/Calibration/S2B_MSIL1C_20181007T103019_N0206_R108_T31RCK_20181007T160704.npz",
+      "sha256": "50e153e3e6394bac04d3510af5fb99982c5def6d9d1ef3b25779ef357016b893",
+      "bytes": 4837940
+    },
+    {
+      "model": "C",
+      "group_id": "55b01ca2cb939ad9732bb0c1c2b4186bc7316a47639f137cc041ad741ab02cf5",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/C_Calibration/scores/Calibration/S2A_MSIL1C_20181030T044921_N0206_R076_T45RXQ_20181030T065311.npz",
+      "sha256": "1fdda0f71bb5cf81c09854e046efbfc4dccfaee42da2269f674e0a3c70fcba4f",
+      "bytes": 5296730
+    },
+    {
+      "model": "C",
+      "group_id": "5955951adb0636a28a90c96c08b4d0cdbd5c88cb512e1e9683da188485130b0c",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/C_Calibration/scores/Calibration/S2B_MSIL1C_20180624T075609_N0206_R035_T37QBE_20180624T101209.npz",
+      "sha256": "53508a303a7faf1a0815c95e6b02f554f533e4edc17557ccf8b46613fb4b72ec",
+      "bytes": 4773305
+    },
+    {
+      "model": "C",
+      "group_id": "5b33c9b05b691e7619fc032c182bbfbbad64c7c1bf6b11b032dad252cfcacbdf",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/C_Calibration/scores/Calibration/S2A_MSIL1C_20180913T081601_N0206_R121_T35LKE_20180913T103649.npz",
+      "sha256": "f869a142a0f6bc64afc072c8ceb8ca6ccae1c3fe177a19c75b2bcbd853fa3002",
+      "bytes": 4598687
+    },
+    {
+      "model": "C",
+      "group_id": "5fd2a7bb69959c894af74a06cca629a8b98a8fbbf5a77df856f9412fd61cf38d",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/C_Calibration/scores/Calibration/S2A_MSIL1C_20180824T150721_N0206_R125_T21UUP_20180824T185559.npz",
+      "sha256": "426bef0fea00880bef651416ef94a600f5f5965336e6791f72e945b76c63a368",
+      "bytes": 3410490
+    },
+    {
+      "model": "C",
+      "group_id": "68670de47ebe611d5669a3e02618516e34fb700bec0082d945a5905e91639e85",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/C_Calibration/scores/Calibration/S2A_MSIL1C_20180723T124301_N0206_R095_T28WDU_20180723T144245.npz",
+      "sha256": "af1b493df63bee5557ee7e0aa53df145f1cfabf232e49c10c7de6676d6dac518",
+      "bytes": 4755834
+    },
+    {
+      "model": "C",
+      "group_id": "701f720b8813d6c9e687c3016aa0243c5feb4d5aa3ea026d313114d196674b23",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/C_Calibration/scores/Calibration/S2B_MSIL1C_20180422T042659_N0206_R133_T48VUK_20180422T074056.npz",
+      "sha256": "9154776974b9dc2f55d049903beb2f139e6305f03c03d8f60ab2ee4f27c118ee",
+      "bytes": 5223203
+    },
+    {
+      "model": "C",
+      "group_id": "751f4e9db721c4de70de35877bb5b4c233ae9598fe12954ada42a9b4ec83b47f",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/C_Calibration/scores/Calibration/S2B_MSIL1C_20180325T064629_N0206_R020_T39PWK_20180325T120625.npz",
+      "sha256": "ac5bef9ad2ea12fdbef61dfd9cb7d65d54461e78d85cf2c8311a416962ab0093",
+      "bytes": 5338040
+    },
+    {
+      "model": "C",
+      "group_id": "762ed1681e71575f3aeb50dfc53ee61bace6cdeae4565adc8dd78a7f3fb7088c",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/C_Calibration/scores/Calibration/S2A_MSIL1C_20180422T033541_N0206_R061_T49UFV_20180422T062036.npz",
+      "sha256": "db8f32a45ceb9b9a2b038498832bf1758e740fff4dfbfe5d73ac14bee8b53e49",
+      "bytes": 4469652
+    },
+    {
+      "model": "C",
+      "group_id": "7ab5b903dd033295ae1873d82995fa9bac54ccc910327bccea8ae8f39a4b12f6",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/C_Calibration/scores/Calibration/S2A_MSIL1C_20180521T054641_N0206_R048_T42QXL_20180521T085815.npz",
+      "sha256": "0303fc208c81f4f494d86c5cba2ed87c15ad3ce9e3baf64f0dcb2e9b2630517f",
+      "bytes": 4762155
+    },
+    {
+      "model": "C",
+      "group_id": "7c24e4c98a7327b6b9e84cb89f1d8c24a1b21d49f4b089d00b8f811f8fcf3573",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/C_Calibration/scores/Calibration/S2B_MSIL1C_20180208T224659_N0206_R101_T02WPS_20180209T001736.npz",
+      "sha256": "352aca8a6192a7e9ece51b428cdf4bf9bfbd4380feafdef528b3a9341e42c6ba",
+      "bytes": 5244150
+    },
+    {
+      "model": "C",
+      "group_id": "80709e721d2b44ed9fa67c705d0c4318e6864678a8340aae01f6fbc146329546",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/C_Calibration/scores/Calibration/S2B_MSIL1C_20180120T004659_N0206_R102_T54KUV_20180120T020340.npz",
+      "sha256": "69331cb7ca426e7de731ee01fd6c6cd972e99df195d746a11077c54d59fcd779",
+      "bytes": 5264327
+    },
+    {
+      "model": "C",
+      "group_id": "8644c7cf71ce5c827ae39e44070ea12137940d432d125285eff23a04a44f3b29",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/C_Calibration/scores/Calibration/S2B_MSIL1C_20180125T232159_N0206_R044_T58PHU_20180126T003547.npz",
+      "sha256": "c944944f1600140752da4ccfb1366460e139cf060d4eb09709ae5f518678700e",
+      "bytes": 5316771
+    },
+    {
+      "model": "C",
+      "group_id": "86c9c25c3a8bdbabb45152325c6e5c573f72029e5f8b060cb53bf60e7cce50aa",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/C_Calibration/scores/Calibration/S2B_MSIL1C_20180625T230019_N0206_R058_T58KHC_20180626T001009.npz",
+      "sha256": "8945e53924009a88c68ae35e9da32f784e6e9c41f799aacc770a384b7049a0de",
+      "bytes": 5116304
+    },
+    {
+      "model": "C",
+      "group_id": "87c69a30946a5550e3e982bce4740ebba46a780d18a73afe65480d666613598b",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/C_Calibration/scores/Calibration/S2B_MSIL1C_20181004T210519_N0206_R071_T56CNU_20181004T234310.npz",
+      "sha256": "4c4445ebf79af01c7c05b7d8e84af6e27969ff762fb8323417180211c5e900e2",
+      "bytes": 5270853
+    },
+    {
+      "model": "C",
+      "group_id": "8cb6b7742f39a379ee744e8463dcc629031e9960e1ee44dfea719ea36df8d999",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/C_Calibration/scores/Calibration/S2B_MSIL1C_20181025T081009_N0206_R078_T37TGL_20181025T102247.npz",
+      "sha256": "43d8362da8a7ce7b8abaf8215333e516e8894a4704ff465cf57964ef73f5ef52",
+      "bytes": 4355498
+    },
+    {
+      "model": "C",
+      "group_id": "8f67b5ebbaaebb0484037637fac81c9370ea8d5c9cf40ab810a203caabb10e43",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/C_Calibration/scores/Calibration/S2A_MSIL1C_20180718T135111_N0206_R024_T22MEB_20180718T185303.npz",
+      "sha256": "996f7c32ee3a5ede9a8f6955bac2eb63ef57a7ef3affad05f2777812cfc2c758",
+      "bytes": 5171904
+    },
+    {
+      "model": "C",
+      "group_id": "95b1ca604dab33a1953ff4344a0129d9f4e9de19254bb5b965d04a21a0db5e28",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/C_Calibration/scores/Calibration/S2A_MSIL1C_20180818T061631_N0206_R034_T43VFG_20180818T074215.npz",
+      "sha256": "e2fc4fc934914bfa17771734107eabf6b105c3ce1ed9035cea220bc3e5793276",
+      "bytes": 4641094
+    },
+    {
+      "model": "C",
+      "group_id": "961fc36543f2aee6cadf2e9b99970dd78dc8303f83243171d3cef22aed79c78f",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/C_Calibration/scores/Calibration/S2A_MSIL1C_20181112T070221_N0207_R120_T38KRD_20181112T102254.npz",
+      "sha256": "9b409c5f02c190b5adc9ed78eb5a64f02d8292306d4ee69f06f10172ebfaff52",
+      "bytes": 4956227
+    },
+    {
+      "model": "C",
+      "group_id": "a18d45433f5efcad1918f98b1012b012c8a06541e6f8a2d2612336733a663044",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/C_Calibration/scores/Calibration/S2A_MSIL1C_20180209T112221_N0206_R037_T29RKM_20180209T164004.npz",
+      "sha256": "57e0c8acf51a3e5330f00d68f8fb7cc587dc2595720f06d010a821c5d8c6fc5d",
+      "bytes": 5250583
+    },
+    {
+      "model": "C",
+      "group_id": "ab8efe1599f53b1e49f2e743bf22a3e8e4b54f7582fe1674dd4a6a3c4819aaf5",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/C_Calibration/scores/Calibration/S2B_MSIL1C_20180615T205019_N0206_R057_T08WPC_20180615T223116.npz",
+      "sha256": "30839682c28915c74896943b028660aaddbbcb03349d20ec0aed2dd91a705d46",
+      "bytes": 4857690
+    },
+    {
+      "model": "C",
+      "group_id": "b4cd53594d1a77a4c6b342d13c3b8c1e6d03871f91d35937aa13e3da601b22f9",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/C_Calibration/scores/Calibration/S2A_MSIL1C_20181214T090351_N0207_R007_T34QGM_20181214T102932.npz",
+      "sha256": "cd5c7f4d63b12b149d2d529f26706178164abba41e13f69348d1bb058efac791",
+      "bytes": 4441823
+    },
+    {
+      "model": "C",
+      "group_id": "b980986dd002ed671e2e8a4061fe6564b2e7a96de69d7c0276bfa1a5ab08a71a",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/C_Calibration/scores/Calibration/S2A_MSIL1C_20181102T015621_N0206_R117_T51LYE_20181102T061209.npz",
+      "sha256": "a011b9fbcf44b29cac0cba33499aee0128bf5e51b498c4475bc48241defed643",
+      "bytes": 4464074
+    },
+    {
+      "model": "C",
+      "group_id": "c21b41ed1837aa7ae3f10d8623dacdc65d5e9d1b85ef2707a55a25c3a6ac1aa8",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/C_Calibration/scores/Calibration/S2A_MSIL1C_20180327T163911_N0206_R126_T17VNF_20180327T215534.npz",
+      "sha256": "4beea31b590ea2efadbdafd91d24403026b04c37ca3ca503cbac50c707a15c0a",
+      "bytes": 4318989
+    },
+    {
+      "model": "C",
+      "group_id": "c22fc88309c49b926de5498f89a92e5b33fc7df5ebda48b126ff77b606836ca7",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/C_Calibration/scores/Calibration/S2B_MSIL1C_20180808T022319_N0206_R103_T50MRV_20180808T054332.npz",
+      "sha256": "1e5ae51e65dfe418d8c837fcd3e03a3ac12055a8022827fa7ddb5b875a80c0a6",
+      "bytes": 4905046
+    },
+    {
+      "model": "C",
+      "group_id": "c67f100fedbc51645ba49545fc5c8b2316becaf226bfeedd24f41d404bbf6b05",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/C_Calibration/scores/Calibration/S2B_MSIL1C_20180816T162829_N0206_R083_T18VUM_20180816T213305.npz",
+      "sha256": "6613c68dbf24e1454466f752c712e584b04231ce34ebc9926a24045f86ae50da",
+      "bytes": 4887852
+    },
+    {
+      "model": "C",
+      "group_id": "dafd2f0e178ebc18d71541cc0509c2fcd3301f28f09134650e92170af12abbea",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/C_Calibration/scores/Calibration/S2A_MSIL1C_20180613T141951_N0206_R096_T23VNK_20180613T162358.npz",
+      "sha256": "a8acd9005f96a284b0a8ce5cdd95e36a0c133b64c48c51dad2a9337fa91d194f",
+      "bytes": 5342775
+    },
+    {
+      "model": "C",
+      "group_id": "eb235dc51d3294bea3f8c7c41c3a20b791bf7c7373da26efb5d360215972ee0b",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/C_Calibration/scores/Calibration/S2B_MSIL1C_20180827T174039_N0206_R098_T12RYN_20180827T214315.npz",
+      "sha256": "b811ff8441d5fe01780520c3420aeb757a8a4e204b521c9a641f464389384da8",
+      "bytes": 5274876
+    },
+    {
+      "model": "C",
+      "group_id": "eb8b3a67a4a788375333c72e30f424235e306414e3c08b39d0b3e02613da01cf",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/C_Calibration/scores/Calibration/S2B_MSIL1C_20180630T002059_N0206_R116_T55HCC_20180630T014728.npz",
+      "sha256": "801e192c82a56bff8412315dfb95431f8524994771abd81f4aacbbba1acf4e97",
+      "bytes": 4609477
+    },
+    {
+      "model": "C",
+      "group_id": "ee243f2eb72e6ff5310faf10c8cbd310c8f87e69835cda784f731d6ccd325aa0",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/C_Calibration/scores/Calibration/S2A_MSIL1C_20180108T104421_N0206_R008_T31TEF_20180108T124506.npz",
+      "sha256": "a0d6504f14c7781c92b79c76837ec411ffe19e76897065c69299762e00aecf6c",
+      "bytes": 4539041
+    },
+    {
+      "model": "C",
+      "group_id": "eef079ec280eeeb05b3f12a94134f41f8a3ba210f979a1b3c8710a23c478eb84",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/C_Calibration/scores/Calibration/S2B_MSIL1C_20180315T032529_N0206_R018_T49SCC_20180315T070512.npz",
+      "sha256": "239d9def9353efd9ca4e18dc7a63e426a72b0eba00b73f0f6f7bbdc9a803b7fd",
+      "bytes": 4686440
+    },
+    {
+      "model": "C",
+      "group_id": "f2138d7dbee6fc93ba7a4712d669a09234d526aa71fbd7182f491f0013837cab",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/C_Calibration/scores/Calibration/S2A_MSIL1C_20180621T083651_N0206_R064_T34KBG_20180621T123155.npz",
+      "sha256": "b6448cfd5c4d4bebfa9d736488ee63186ee9e2f57297ddd2c9c06ee950c42d41",
+      "bytes": 4911792
+    },
+    {
+      "model": "C",
+      "group_id": "f3cc667ba54723ffcdce064e8d82a75173140023e3c830b63cc878b97c32cdb4",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/C_Calibration/scores/Calibration/S2A_MSIL1C_20181114T040011_N0207_R004_T48UXA_20181114T084110.npz",
+      "sha256": "2edf8ed73d6ab1473e126f442ecefe009d94e5f2f18f794e0e1cefdbb95e1a3e",
+      "bytes": 5007725
+    },
+    {
+      "model": "C",
+      "group_id": "f5e4907d7bb75199ac9d1caad4df407783996cfc178964e0b7a6a568418044f2",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/C_Calibration/scores/Calibration/S2A_MSIL1C_20180904T160901_N0206_R140_T27XWJ_20180904T192941.npz",
+      "sha256": "951c18df7bb337f8c1ff556bc369d44d843213c7762656e0002632a1984ef82c",
+      "bytes": 5169603
+    },
+    {
+      "model": "C",
+      "group_id": "fc02608e82c1a5855735f626492136061649142fbe2891d5456a9803682699ca",
+      "controlled_shared_path": "/home/scv/shared/phase122_20261015/C_Calibration/scores/Calibration/S2B_MSIL1C_20180826T062619_N0206_R077_T40QHL_20180826T092057.npz",
+      "sha256": "5828469c50b9a177e78d436929f92f22d5b4eaee54494ee736095ab7f492aafd",
+      "bytes": 5325908
+    }
+  ],
+  "complete_full_arrays_retained_in_shared": true,
+  "not_transferred_with_evaluation": "avoid redundant calibration arrays; complete independent direct CPU boundary proof included"
+}

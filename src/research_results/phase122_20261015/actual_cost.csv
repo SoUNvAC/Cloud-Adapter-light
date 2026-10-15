@@ -1,0 +1,6 @@
+stage,status,calls,construction_calls,training_calls,gate_calls,main_calls,warmup_calls,elapsed_seconds,CPU_peak_bytes,GPU_reserved_peak_bytes,host_min_free_bytes,intermediate_peak_bytes
+train_C,completed_training_sealed,1010,7,1000,3,0,0,86.46326184272766,3391913984,1279262720,13343952896,57135751
+R_Calibration,completed_scores_sealed,220,7,0,0,212,1,100.76055701800215,1913851904,3363831808,13343952896,336174259
+C_Calibration,completed_scores_sealed,220,7,0,0,212,1,101.90962792800565,1915219968,3422552064,13343952896,628136035
+C_Catalogue,completed_scores_sealed,136,7,0,0,128,1,66.49100119099603,1902788608,3422552064,13343952896,752957101
+C_PixBox,completed_scores_sealed,1026,7,0,0,1018,1,951.4928095459909,3963998208,3407872000,13343952896,795268508

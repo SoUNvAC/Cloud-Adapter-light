@@ -1,0 +1,9 @@
+{
+  "units": "summary and differences ending pp are percentage points; per_group AP/recall/FPR are fractions",
+  "bootstrap": "10000 related-group resamples seed122015; percentile two-sided2.5/97.5 and one-sided95th percentile upper; descriptive",
+  "AP": "one value per model regardless of threshold, no-positive groups NA",
+  "strata": "Surface label0 and Cloud label1, no-denominator groups NA; group means within stratum-supported groups",
+  "comparison_json_minimum_fields": "generic *_worst_delta_pp fields store numerical minimum; for FPR harm use max_FPR_increase_pp in worst_group_damage.csv",
+  "thresholds": "float32 confidence exactly promoted to float64; comparison and stored nextafter boundary float64",
+  "no_guarantee": "1% calibration target is not an evaluation-side constraint or per-group guarantee"
+}

@@ -1,0 +1,14 @@
+{
+  "phase": 122,
+  "status": "local_delivery_verified",
+  "utc": "2026-10-15T12:50:19.719279+00:00",
+  "pre_and_post_source_hashes_verified": true,
+  "decoder_sha256": "59f88f462b85c6a2eb8725781085efbc474962e862dd0a2401f4b344d88b5b9e",
+  "delivery_zip_sha256": "1e406948e081a9dcd5061a996589b765f5550f881ad24a7611713afcdeb7b41f",
+  "model_calls": 2612,
+  "model_retries": 0,
+  "baseline_support_loss": 0,
+  "other_recursive_receiver": "preserved; not started or stopped by this execution",
+  "work_dirs_transfers": 0,
+  "new_phase_started": false
+}

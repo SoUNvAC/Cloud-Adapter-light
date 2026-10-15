@@ -1,0 +1,8 @@
+{
+  "original_R_eval_max_error": 0.0,
+  "original_state_tensorwise_equal": true,
+  "decoder_gradients_finite_nonzero": true,
+  "encoder_gradients_none": true,
+  "encoder_buffers_unchanged": true,
+  "calls": 10
+}

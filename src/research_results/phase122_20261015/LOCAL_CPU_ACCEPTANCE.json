@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "elapsed_seconds": 31.997528076171875,
+  "model_calls": 0,
+  "labels_uploaded": 0,
+  "thresholds_sha256": "f2040e4213288bbd1109faaa60c0c50eb3ee2957bf0e4f62bca1b1ae1b5f4724",
+  "no_evaluation_threshold_search": true,
+  "AP_threshold_invariance": true,
+  "calibration_full_boundary_replay": "separate shared CPU process with exact source/score/threshold SHA verification"
+}

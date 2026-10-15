@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "support_loss": 0,
+  "groups": 32,
+  "label_uploads": 0,
+  "model_calls": 0,
+  "AP_same_for_both_thresholds": true,
+  "independent_AP_ties_and_scalar_bootstrap": true
+}

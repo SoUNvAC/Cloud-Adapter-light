@@ -1,0 +1,13 @@
+{
+  "training": "374acf0440285579242e1bafdad39a00671f081ffcb06b6bde46685efa4f140e",
+  "thresholds": "f2040e4213288bbd1109faaa60c0c50eb3ee2957bf0e4f62bca1b1ae1b5f4724",
+  "settings": {
+    "R_Calibration": "817e1dff26954285124caed2bf5bf168f873fa126fe5e48fbaba5ae0a02d5cf1",
+    "C_Calibration": "370a3b09311ac2d6730099f9678a48936aa0a24a46e510a75dfcba0dc4fdb46f",
+    "C_Catalogue": "4d900cc5056148284ae3cc70b743dd8a52b20810e94fcc2a612033c70fca9793",
+    "C_PixBox": "062ffff918830db96bbbd149fb7b935cb18a02290138802c3ffb3e810005158d",
+    "R_Catalogue_reuse": "f229762a96ff323a028b3a4350acd78237460c0e0f77e06567c2e2ebdb356389"
+  },
+  "Catalogue_support": "9f8b867c24916a9117bf47808b7ee44ef2e6aed5635cf1ff1f8d2a999639b05d",
+  "evaluation_labels_joined": false
+}

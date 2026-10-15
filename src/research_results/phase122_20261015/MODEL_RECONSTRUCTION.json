@@ -1,0 +1,30 @@
+{
+  "policy": "C100",
+  "seed": 12201,
+  "filename": "C_decoder_final.safetensors",
+  "local_path": "outputs/phase122/phase122_20261015/C_decoder_final.safetensors",
+  "remote_path": "/home/scv/shared/phase122_20261015/C_decoder_final.safetensors",
+  "sha256": "59f88f462b85c6a2eb8725781085efbc474962e862dd0a2401f4b344d88b5b9e",
+  "bytes": 56556112,
+  "finite_tensors": 61,
+  "original_asset_lock": "src/research_results/phase111_20261014/PRE_EXECUTION_LOCK.json",
+  "restore": "original official RegNet with original author loader; overlay decoder only, strict=False, missing keys frozen encoder only",
+  "inputs": [
+    "B04",
+    "B03",
+    "B8A"
+  ],
+  "normalization": "original per-band nonzero author channel_norm",
+  "inference": {
+    "patch_size": 1000,
+    "overlap": 300,
+    "temperature": 1,
+    "confidence": "softmax + float32(.001), clipped [.001,.999]"
+  },
+  "frozen_thresholds": {
+    "R": 0.7693686485290528,
+    "C": 0.36361625790596014
+  },
+  "comparison_domain": "float64",
+  "Git_weights_uploaded": false
+}
