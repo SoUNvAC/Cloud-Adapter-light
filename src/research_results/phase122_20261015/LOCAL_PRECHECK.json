@@ -1,0 +1,8 @@
+{
+  "AST_all_passed": true,
+  "split_exactly_matches_Phase94": true,
+  "fit_groups": 100,
+  "calibration_groups": 53,
+  "tests": "test_phase122 + test_phase122_inference: independent AP ties, float64 adjacent threshold, strata NA, AP invariance, group bootstrap, original callback/raw mosaic",
+  "model_calls": 0
+}

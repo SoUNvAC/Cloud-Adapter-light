@@ -40,3 +40,6 @@ src/research_plans/PHASE120_ENSEMBLE_TO_REGNET_DISTILLATION_20261015.md -text
 
 src/tools/*phase121*.py -text
 src/research_plans/PHASE121_PAIRED_SEED_AND_OPERATING_TRADEOFF_20261015.md -text
+
+src/tools/*phase122*.py -text
+src/research_plans/PHASE122_REGNET_HELDOUT_CALIBRATION_20261015.md -text
