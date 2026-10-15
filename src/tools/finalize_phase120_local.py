@@ -37,6 +37,8 @@ def main():
         'gpu_observed_peak_bytes':None,'host_min_free_bytes':failed.get('host_min_free_bytes'),'intermediate_peak_bytes':failed.get('intermediate_peak_bytes')})
     assert all_calls==controller['calls_completed']==load(delivery/'ALL_SCORES_SEALED.json')['actual_calls']
     assert all_calls<=8000 and controller['elapsed_seconds']<=14400
+    cpu=load(delivery/'Catalogue_CPU_REPLAY_RESOURCE.json');assert cpu['status']=='passed' and cpu['all_five_pool_and_group_metrics_reproduced'] and cpu['model_calls']==0
+    records.append({'stage':'Catalogue_CPU_guarded_replay','status':'passed','calls':0,'construction_calls':0,'training_calls':0,'gate_calls':0,'main_inference_calls':0,'warmup_calls':0,'elapsed_seconds':cpu['elapsed_seconds'],'rss_peak_bytes':cpu['rss_peak_bytes'],'gpu_reserved_peak_bytes':0,'gpu_observed_peak_bytes':None,'host_min_free_bytes':cpu['host_free_after'],'intermediate_peak_bytes':None})
     table(O/'actual_cost.csv',records)
     bench=load(O/'PRE_EXECUTION_LOCK.json')['benchmark_used'];br=[];checks=[]
     for p in ('C','D','R'):
@@ -73,6 +75,7 @@ def main():
             shutil.copyfile(delivery/('train_'+p)/n,O/(p+'_'+n))
     completion={'phase':120,'status':'completed_exploratory','calls':all_calls,'elapsed_wall_seconds_including_engineering_pause':controller['elapsed_seconds'],
         'engineering_incidents':[{'reason':'JSON tuple/list graph equality','extra_construction_calls':18,'extra_training_steps':0},{'reason':'inference helper import missing','extra_calls':0,'extra_training_steps':0}],
+        'post_model_CPU_replay_seconds':cpu['elapsed_seconds'],'first_CPU_pass_resource_peak_instrumented':False,
         'training_steps':{'C':1000,'D':1000},'failed_attempt_steps':0,'failed_construction_calls':18,'new_downloads':0,
         'CPU_peak_bytes':max(r['rss_peak_bytes'] for r in records),'GPU_reserved_peak_bytes':max(r['gpu_reserved_peak_bytes'] for r in records),
         'minimum_host_free_bytes':min(r['host_min_free_bytes'] for r in records if r['host_min_free_bytes'] is not None),
@@ -81,6 +84,20 @@ def main():
             'bytes':(U/(p+'_decoder_final.safetensors')).stat().st_size} for p in ('C','D')},
         'work_dirs_transfers':0,'original_split_preserved':True,'new_confirmation_claim':False}
     save(O/'COMPLETION.json',completion)
+    for p in ('C','D'):
+        white=load(O/(p+'_PARAMETER_WHITELIST.json'))
+        assert all(b['name'] in white['encoder_names'] for b in white['buffers'] if b['frozen'])
+    friendly={};supports=[]
+    for pool in ('Catalogue','PixBox'):
+        per=rows(O/(pool+'_per_group.csv'));friendly[pool]=[]
+        for r in per:
+            if r['E_AP']=='':continue
+            tile=','.join(sorted({v.split('_T')[1][:5] for v in r['products'].split(',')}))
+            friendly[pool].append({'tile':tile,'group_id':r['group_id'],'positive':r['positive'],'negative':r['negative'],**{p+'_AP_pp':float(r[p+'_AP'])*100 for p in ('E','R','N','C','D')},**{k:float(r[k]) for k in ('D_minus_R_AP_pp','D_minus_C_AP_pp','C_minus_R_AP_pp')}})
+        table(O/(pool+'_AP_groups_readable.csv'),friendly[pool])
+        summary=rows(O/(pool+'_summary.csv'))[0]
+        supports.append({'pool':pool,'all_groups':int(summary['all_groups']),'AP_groups':int(summary['AP_groups']),'positive':int(summary['pooled_positive']),'negative':int(summary['pooled_negative']),'effective_binary_pixels_or_points':int(summary['pooled_positive'])+int(summary['pooled_negative'])})
+    save(O/'SUPPORT_SUMMARY.json',{'pools':supports,'Catalogue_support_loss':load(O/'Catalogue_CPU_ACCEPTANCE.json')['support_loss'],'PixBox_support_loss':load(O/'PixBox_CPU_ACCEPTANCE.json')['support_loss'],'PixBox_coordinate_support':9500,'PixBox_original_ignore_points':931})
     # Tables and raw comparisons are the data; editorial interpretation is supplied separately.
     text=['# Phase120 数据结果','',f'C／D各1000步，seed12001，原153 fit代表；固定末步后依次评价32 Catalogue development代表与16 PixBox产品／10相关组。仅训练原RegNet decoder，未新增输入或模块。',
           'E为原双模型教师；R为原RegNet；N为原ConvNeXt；C为纯监督；D为监督＋固定蒸馏。',
@@ -103,8 +120,10 @@ def main():
     table(O/'worst_group_damage.csv',damage)
     text += ['', 'Catalogue为7个有参考云影相关组、全部32组参加误报评价；PixBox为8个有参考云影相关组、全部10组参加误报评价。无正类AP=NA；改善/稳定/下降沿用±1pp。10000次配对组bootstrap，seed120015，仅描述，不以区间跨零自动关闭方向。',
              '', '完整逐组差、逐组运行指标见 Catalogue_per_group.csv、PixBox_per_group.csv；最差AP与召回损伤见 worst_group_damage.csv。',
+             '', '训练512裁剪／作者逐块归一化，评价1000/300完整滑窗，上下文差异保留。两个decoder各14,135,988可训练参数（总18,039,132的约78.4%），不称极少参数适配。可读逐组AP表另见 Catalogue_AP_groups_readable.csv 与 PixBox_AP_groups_readable.csv。',
              '', '## 成本与验收', '',f"实际模型调用{all_calls}，含D首次失败的18次构建；失败发生于JSON图签名比较，D当时0训练／0 gate前向，已保留记录，C完整复用。另一次评价入口导入失败产生0次模型调用，C/D均未重训。总墙钟（包括工程暂停）{controller['elapsed_seconds']:.1f}秒。训练损失、起末参数哈希、编码器／教师不变回执与参数白名单均已保存。",
              f"CPU进程峰值{completion['CPU_peak_bytes']/1e9:.3f}GB，GPU allocator预留峰值{completion['GPU_reserved_peak_bytes']/1e9:.3f}GB，宿主可用最小{completion['minimum_host_free_bytes']/1e9:.3f}GB，中间文件采样峰值{completion['peak_intermediate_bytes']/1e9:.3f}GB。",
+             '首次Catalogue CPU指标通过未单独记录内存峰值；另对全部五模型及逐组/池化/区间做了受16GiB限制的完整缓存复算，结果复现，其峰值计入资源表，0模型调用。CPU-only复算辅助程序曾有一次入口语法错误（0模型调用），原日志保留；未改任何模型或指标定义。',
              '', '部署仅单RegNet，18,039,132参数，教师不加载。single_scene_deployment.csv保留同一冻结首景的R/C/D各两次完整推理计时／逐模型CUDA event；仅为结构验收，固定顺序与缓存状态未消除，不能替代Phase119完整速度基准。read-to-point计时扣除额外CPU核验，属于带仪器分段估计，非无仪器端到端保证。',
              f"所有完整推理的独立CPU confidence重建最大误差{max(checks):.9g}；新R基准景对原Phase119 R最大点分数误差{difference:.9g}，均≤1e-5。",
              '', '最终decoder权重留本地outputs和远端shared，未把大数组、逐点参考或work_dirs传入Git。复原时从PRE_EXECUTION_LOCK引用的原RegNet官方safetensors按原作者加载器构建，再仅load对应decoder文件（strict=False，缺项只能为冻结encoder）；PARAMETER_WHITELIST给出允许键。',

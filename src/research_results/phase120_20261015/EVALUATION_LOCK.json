@@ -4,7 +4,8 @@
     "src/tools/phase120_metrics.py": "c11f38d833648ae6c00082736ac29477643212b9387561f491d14800ea69886c",
     "src/tools/collect_phase120.py": "e2a5afbd1d55fae90cdeccf6ff3dd00fd3ea6b747a3a94e5f721fff943cba19f",
     "src/tools/evaluate_phase120_pixbox_local.py": "40cc91d33f75662d3b1d51a27fdd968c6dce967f5ea0387ea37d15fb0464a77e",
-    "src/tools/finalize_phase120_local.py": "1a3e50df63f03121100349a9b1a186bcc3840b019b4ac14ad3928560712bf7f2"
+    "src/tools/finalize_phase120_local.py": "4b1916236c79838ef699c76f7f88176681062ed8e2f4e29acffae4b774f286f2",
+    "src/tools/verify_phase120_cpu.py": "50c01ff41675c8c698dca25f3e4821d03a757cf1c98dc1a56f79053a0df5392d"
   },
   "no_training_configuration_changed": true
 }
