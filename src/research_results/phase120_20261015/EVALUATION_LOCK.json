@@ -3,7 +3,7 @@
   "sources": {
     "src/tools/phase120_metrics.py": "c11f38d833648ae6c00082736ac29477643212b9387561f491d14800ea69886c",
     "src/tools/collect_phase120.py": "e2a5afbd1d55fae90cdeccf6ff3dd00fd3ea6b747a3a94e5f721fff943cba19f",
-    "src/tools/evaluate_phase120_pixbox_local.py": "ca512342e99cdec2ffb916a03c96cda323cdf16d9212ba01b1b9bad0ab9d950f"
+    "src/tools/evaluate_phase120_pixbox_local.py": "7125eb461a7ab1427bd6406780586d037796c9716af811c7add11825b6967d9c"
   },
   "no_training_configuration_changed": true
 }

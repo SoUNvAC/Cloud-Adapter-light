@@ -24,6 +24,7 @@ def unpack():
     return rec
 
 def main():
+    for n,h in load(O/'EVALUATION_LOCK.json')['sources'].items():assert sha(R/n)==h,n
     rec=unpack();seal=load(U/'delivery/ALL_SCORES_SEALED.json')
     assert not seal['PixBox_labels_joined'] and seal['training']==sha(U/'delivery/TRAINING_SEAL.json')
     models=load(U/'delivery/TRAINING_SEAL.json')['models']
