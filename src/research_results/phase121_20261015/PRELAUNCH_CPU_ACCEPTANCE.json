@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "remote_HEAD": "2c8711e",
+  "objective": "teacher||student KL,T2 and T squared, parent CE, ignored pixel gradient, detached teacher",
+  "numpy": "exact oracle ties/unequal groups/100 exhaustive cases/within-group seed average, raw mosaic, AP independent ties, scalar bootstrap",
+  "source_setup_sha": "passed",
+  "host_free_prelaunch_bytes": 13343952896,
+  "Omni_model_calls": 0,
+  "command_incident": "one extra import command used wrong module search path; corrected tools path; no neural models constructed"
+}

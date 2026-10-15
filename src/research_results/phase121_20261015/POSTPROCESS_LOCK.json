@@ -1,0 +1,6 @@
+{
+  "source_sha256": {
+    "src/tools/finalize_phase121_local.py": "a4914380205df0ac3128313f93136ce13db021d575d0566dad79f72ab3bd05a2"
+  },
+  "purpose": "post-seal receipt and report finalization only; zero model calls; no change to training/inference/metrics lock"
+}
