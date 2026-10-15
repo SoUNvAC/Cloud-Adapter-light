@@ -16,7 +16,8 @@ def save(p,b):
     p.parent.mkdir(parents=True,exist_ok=True)
     with p.open('xb') as f:f.write(b)
 def safe(name):
-    p=PurePosixPath(name);assert not p.is_absolute() and '..' not in p.parts and '\\' not in name
+    p=PurePosixPath(name)
+    assert not p.is_absolute() and '..' not in p.parts and '\\' not in name and ':' not in name
 
 
 def main():
