@@ -1,0 +1,11 @@
+{
+  "training": "d69076965f15dbcf4b19405f6f5d0e6bdf229ee8cdab8263dca5b871d50f964d",
+  "settings": {
+    "C_Catalogue": "7d1599ffc513193200f7cf5d2a3965b2d5cecc7c7f5165e6be9d49044cc71099",
+    "C_PixBox": "3653913732569b22d05128d33753bbb1f4fc1265298f39a7ece510493c56b8b7",
+    "D_Catalogue": "2cdb0c2b1269a007cf784741050c87257bdb0433ee43928c2b2daff14b8e2547",
+    "D_PixBox": "0d97f8f445a58667938547140818f6126aee3bd046b9b5d9c26b0107efaba840"
+  },
+  "PixBox_labels_joined": false,
+  "actual_calls": 6637
+}

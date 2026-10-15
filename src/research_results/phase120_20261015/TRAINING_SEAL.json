@@ -1,0 +1,15 @@
+{
+  "models": {
+    "C": "e642302e66239870f7af4b01d1fa784b1266d701913298d30f92401bfdcf32e7",
+    "D": "618edcb4915ce766fc3d1e797547f8f602890ab516d1a561ebe01a24c900bad9"
+  },
+  "receipts": {
+    "C": "17f7c4613e205a7533bfab47c19205f27e642a87bc813d85e2b4ff426a2cec19",
+    "D": "3e12c012b0f391df198e3cc0c9283362fc98b1340b4098d432e382c599dd96b1"
+  },
+  "source_lock_sha256": "d9c8e59bac9e6c137c1810c0b1243b0398d4233e21a94f4645fb547bc3f0bb74",
+  "engineering_recovery_lock_sha256": "8528566d3d836431f01c354b951f61b58e313d168277c67cf157f5975d076b90",
+  "both_fixed1000_endpoints_before_evaluation": true,
+  "no_checkpoint_selection": true,
+  "C_reused_without_retraining": true
+}

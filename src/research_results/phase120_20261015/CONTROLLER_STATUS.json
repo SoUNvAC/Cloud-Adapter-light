@@ -1,0 +1,19 @@
+{
+  "status": "completed_pending_local_PixBox_reference_join",
+  "calls_completed": 6637,
+  "started_epoch": 1792038544.4759066,
+  "completed": [
+    "train_C",
+    "train_D_recovery_001",
+    "C_Catalogue",
+    "D_Catalogue",
+    "C_PixBox",
+    "D_PixBox",
+    "R_PixBox"
+  ],
+  "elapsed_seconds": 3148.1628987789154,
+  "failed_construction_calls": 18,
+  "recovery_lock_sha256": "8528566d3d836431f01c354b951f61b58e313d168277c67cf157f5975d076b90",
+  "evaluation_recovery_002_calls": 0,
+  "Catalogue_evaluation_complete_before_PixBox": "6afde20e85a7ba9d64c93edd596831b4c230a3100bf38af0e6b4a94186f23add"
+}

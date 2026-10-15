@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "model_calls": 0,
+  "rss_peak_bytes": 2890346496,
+  "elapsed_seconds": 74.24101328849792,
+  "combined_CPU_replay_and_live_inference_RSS_sampled_peak_bytes": 5869264896,
+  "all_five_pool_and_group_metrics_reproduced": true,
+  "all_three_bootstrap_comparisons_exact": true,
+  "first_CPU_pass_resource_peak_not_instrumented": true,
+  "this_complete_cache_replay_resource_guarded": true,
+  "after_D_single_benchmark_both_passes": true,
+  "host_free_after": 13343952896
+}

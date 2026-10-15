@@ -1,0 +1,59 @@
+{
+  "phase": 120,
+  "status": "completed_exploratory",
+  "calls": 6637,
+  "elapsed_wall_seconds_including_engineering_pause": 3148.1628987789154,
+  "engineering_incidents": [
+    {
+      "reason": "JSON tuple/list graph equality",
+      "extra_construction_calls": 18,
+      "extra_training_steps": 0
+    },
+    {
+      "reason": "inference helper import missing",
+      "extra_calls": 0,
+      "extra_training_steps": 0
+    }
+  ],
+  "guarded_CPU_replay_seconds": 74.24101328849792,
+  "first_CPU_pass_resource_peak_instrumented": false,
+  "training_steps": {
+    "C": 1000,
+    "D": 1000
+  },
+  "failed_attempt_steps": 0,
+  "failed_construction_calls": 18,
+  "new_downloads": 0,
+  "CPU_peak_bytes": 4421128192,
+  "GPU_reserved_peak_bytes": 3422552064,
+  "minimum_host_free_bytes": 13343952896,
+  "peak_intermediate_bytes": 1545169419,
+  "decoder_files": {
+    "C": {
+      "local_path": "D:\\Cloud-Adapter-light\\outputs\\phase120\\phase120_20261015\\C_decoder_final.safetensors",
+      "sha256": "e642302e66239870f7af4b01d1fa784b1266d701913298d30f92401bfdcf32e7",
+      "bytes": 56556112
+    },
+    "D": {
+      "local_path": "D:\\Cloud-Adapter-light\\outputs\\phase120\\phase120_20261015\\D_decoder_final.safetensors",
+      "sha256": "618edcb4915ce766fc3d1e797547f8f602890ab516d1a561ebe01a24c900bad9",
+      "bytes": 56556112
+    }
+  },
+  "work_dirs_transfers": 0,
+  "original_split_preserved": true,
+  "new_confirmation_claim": false,
+  "combined_CPU_replay_and_live_inference_RSS_sampled_peak_bytes": 5869264896,
+  "local_necessary_models_pending_external_approval": {
+    "C": {
+      "path": "src/research_results/phase120_20261015/models/C_decoder_final.safetensors",
+      "sha256": "e642302e66239870f7af4b01d1fa784b1266d701913298d30f92401bfdcf32e7"
+    },
+    "D": {
+      "path": "src/research_results/phase120_20261015/models/D_decoder_final.safetensors",
+      "sha256": "618edcb4915ce766fc3d1e797547f8f602890ab516d1a561ebe01a24c900bad9"
+    }
+  },
+  "Git_model_weights_uploaded": false,
+  "model_external_delivery": "blocked_by_auto_review_pending_explicit_user_approval"
+}

@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "groups": 32,
+  "AP_groups": 7,
+  "support_loss": 0,
+  "original_E_R_N_reproduced": true,
+  "independent_AP_tie_implementation_and_scalar_bootstrap": true,
+  "seed": 120015,
+  "resamples": 10000,
+  "model_calls": 0,
+  "threshold": 0.5,
+  "before_any_PixBox_new_inference": true
+}

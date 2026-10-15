@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "initial_C_D_encoder_and_decoder_equal": true,
+  "initial_C_D_author_graph_equal": true,
+  "all_endpoint_state_keys_match_whitelist": true,
+  "all_original_and_recovery_source_hashes_passed": true,
+  "all_evaluation_source_hashes_passed": true,
+  "two_teacher_state_hashes_sealed": true,
+  "support_loss_both_pools": 0,
+  "Omni_model_calls": 0,
+  "binary_weights_excluded_from_Git": true
+}

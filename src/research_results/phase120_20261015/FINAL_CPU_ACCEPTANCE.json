@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "failed_D_attempt_preserved": true,
+  "failed_training_steps": 0,
+  "failed_construction_calls": 18,
+  "C_training_steps": 1000,
+  "D_training_steps": 1000,
+  "no_C_retraining": true,
+  "no_checkpoint_or_threshold_selection": true,
+  "fresh_R_benchmark_vs_Phase119_max_score_error": 0.0,
+  "all_new_full_scene_receipts": 100,
+  "max_independent_CPU_confidence_error": 2.384185791015625e-07,
+  "three_benchmark_repeat_pairs": true,
+  "common_support_before_label_join": true,
+  "both_CPU_AP_and_bootstrap_verified": true,
+  "inference_temperature": 1,
+  "single_deployed_RegNet_graph_unchanged": true,
+  "Omni_calls_in_this_finalizer": 0,
+  "actual_model_calls": 6637
+}

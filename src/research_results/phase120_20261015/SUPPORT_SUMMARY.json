@@ -1,0 +1,24 @@
+{
+  "pools": [
+    {
+      "pool": "Catalogue",
+      "all_groups": 32,
+      "AP_groups": 7,
+      "positive": 655961,
+      "negative": 32767527,
+      "effective_binary_pixels_or_points": 33423488
+    },
+    {
+      "pool": "PixBox",
+      "all_groups": 10,
+      "AP_groups": 8,
+      "positive": 379,
+      "negative": 8190,
+      "effective_binary_pixels_or_points": 8569
+    }
+  ],
+  "Catalogue_support_loss": 0,
+  "PixBox_support_loss": 0,
+  "PixBox_coordinate_support": 9500,
+  "PixBox_original_ignore_points": 931
+}

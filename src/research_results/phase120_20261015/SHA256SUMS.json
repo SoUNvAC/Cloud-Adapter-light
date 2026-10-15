@@ -1,0 +1,248 @@
+{
+  "phase": 120,
+  "files": {
+    "src/research_results/phase120_20261015/.gitattributes": {
+      "sha256": "f06202a408fef9b9ea69bb6b1cb8160dbb0378c5bb67a444d510d231813824c8",
+      "bytes": 30
+    },
+    "src/research_results/phase120_20261015/PRE_EXECUTION_LOCK.json": {
+      "sha256": "d9c8e59bac9e6c137c1810c0b1243b0398d4233e21a94f4645fb547bc3f0bb74",
+      "bytes": 3431
+    },
+    "src/research_results/phase120_20261015/EVALUATION_LOCK.json": {
+      "sha256": "6658c55b6107681dfd88780da02d2f5dff272c37aaec67a048cd5e79b82c48f9",
+      "bytes": 667
+    },
+    "src/research_results/phase120_20261015/ENGINEERING_RECOVERY_LOCK.json": {
+      "sha256": "8528566d3d836431f01c354b951f61b58e313d168277c67cf157f5975d076b90",
+      "bytes": 936
+    },
+    "src/research_results/phase120_20261015/ENGINEERING_RECOVERY_002_LOCK.json": {
+      "sha256": "d7a8f43a8a8a0cc22b78d5d49a937187c7f586b0232de3d607465ea377ec8e74",
+      "bytes": 619
+    },
+    "src/research_results/phase120_20261015/LOCAL_CPU_TESTS.json": {
+      "sha256": "8d7e0c22337045b0bdf5ed3b5599c7313c1c4273904b128eaf9ce214afaa1e42",
+      "bytes": 719
+    },
+    "src/research_results/phase120_20261015/LOCAL_MODEL_TENSOR_ACCEPTANCE.json": {
+      "sha256": "4d995f19f05d366333020a2c8216c8ed610792c2befe3873ecef8585cdf4251c",
+      "bytes": 527
+    },
+    "src/research_results/phase120_20261015/.gitignore": {
+      "sha256": "ebb6e1d0296c4fdc11e5bed118bf4f4421b87702225e40f4956c699c378685cf",
+      "bytes": 36
+    },
+    "src/research_results/phase120_20261015/MODEL_EXTERNAL_DELIVERY_STATUS.json": {
+      "sha256": "0dc36bdfa00b542397c3276c139da167d78ba5a9da8966ea1433bb1eac39b346",
+      "bytes": 581
+    },
+    "src/research_results/phase120_20261015/PixBox_COMMON_SUPPORT_LOCK.json": {
+      "sha256": "3964e2c5df52d134db6042a8af3ef76d30455e236423880f3f83db4d3d5e1c76",
+      "bytes": 1615
+    },
+    "src/research_results/phase120_20261015/PixBox_per_group.csv": {
+      "sha256": "f5e7c8090217b5d9e83bcd4670a596cbf4d0ea12d616a61b8493b8cf26e344f9",
+      "bytes": 6233
+    },
+    "src/research_results/phase120_20261015/PixBox_summary.csv": {
+      "sha256": "c6efa8cd84e7a7a6642ab671bdbb21f988e39418efec0e53e81e9f859cec748c",
+      "bytes": 1139
+    },
+    "src/research_results/phase120_20261015/PixBox_comparisons.json": {
+      "sha256": "6315e4669ca892f0a6206d91b935897497290b1a494aa3af56336b0fc9dc98ca",
+      "bytes": 1385
+    },
+    "src/research_results/phase120_20261015/PixBox_CPU_ACCEPTANCE.json": {
+      "sha256": "def5186c3355f21ca592828d2aecec063f950f224c90e2d3d8a298bbfc0c9c68",
+      "bytes": 250
+    },
+    "src/research_results/phase120_20261015/Catalogue_comparisons.json": {
+      "sha256": "29a9dcf9fcd07af7ade788944a1930dcec89eff6aadc2542ce180c3b59b42b98",
+      "bytes": 1343
+    },
+    "src/research_results/phase120_20261015/Catalogue_summary.csv": {
+      "sha256": "fdd533723636c140a33acde2675f738e730790e01aea4ffe2082920656029ff6",
+      "bytes": 1229
+    },
+    "src/research_results/phase120_20261015/Catalogue_per_group.csv": {
+      "sha256": "7d73cb20532e49c35a1b38202e62f82e4358c8972593c9d0639a4f773a882d51",
+      "bytes": 14115
+    },
+    "src/research_results/phase120_20261015/actual_cost.csv": {
+      "sha256": "3117c3875920e5e18d3221bc895acdf534cf99ca1eb6472df3ee7b4a8b24eeda",
+      "bytes": 1295
+    },
+    "src/research_results/phase120_20261015/single_scene_deployment.csv": {
+      "sha256": "34af4bab557b673e84ab22adcdb8cae0f2a8cb3aacc49bdbe79c72ba439c4f7b",
+      "bytes": 1285
+    },
+    "src/research_results/phase120_20261015/FINAL_CPU_ACCEPTANCE.json": {
+      "sha256": "0bee74992a6acaea518f09b8eafdf6912546fc15ce6fea61702b01c9d1feb848",
+      "bytes": 715
+    },
+    "src/research_results/phase120_20261015/TRAINING_SEAL.json": {
+      "sha256": "d69076965f15dbcf4b19405f6f5d0e6bdf229ee8cdab8263dca5b871d50f964d",
+      "bytes": 675
+    },
+    "src/research_results/phase120_20261015/PAIRED_CROP_SCHEDULE.json": {
+      "sha256": "100d192b1220cb849954ded6af9d11ef89521796c9fb6ae63f5add6641c398ec",
+      "bytes": 113805
+    },
+    "src/research_results/phase120_20261015/FIT_INPUT_LOCK.json": {
+      "sha256": "6fab49d989985da16a61986cea940d9b0ce7ee032639760f17d4e69a86d2a3ef",
+      "bytes": 81537
+    },
+    "src/research_results/phase120_20261015/Catalogue_COMMON_SUPPORT_LOCK.json": {
+      "sha256": "01782b5e88d23690eb765e6e32cd9aa62bd944239b253bfd08c2d71b82627801",
+      "bytes": 25311
+    },
+    "src/research_results/phase120_20261015/Catalogue_CPU_ACCEPTANCE.json": {
+      "sha256": "6afde20e85a7ba9d64c93edd596831b4c230a3100bf38af0e6b4a94186f23add",
+      "bytes": 306
+    },
+    "src/research_results/phase120_20261015/CONTROLLER_STATUS.json": {
+      "sha256": "c6dbf6d9cd23a7c7f041f546be6757973c54c6b40cd4b0a12606d8baac4ef11a",
+      "bytes": 605
+    },
+    "src/research_results/phase120_20261015/ALL_SCORES_SEALED.json": {
+      "sha256": "ab4ae31b8d9b31e1932c4c1e9502912a17f8ebc5444df50fef6ea475c60a9ff1",
+      "bytes": 504
+    },
+    "src/research_results/phase120_20261015/C_PARAMETER_WHITELIST.json": {
+      "sha256": "26e16b3f61247ded2c641c70b36de63fe2647562d1060b6666f1719525706bc2",
+      "bytes": 162336
+    },
+    "src/research_results/phase120_20261015/C_TRAINING_RECEIPT.json": {
+      "sha256": "17f7c4613e205a7533bfab47c19205f27e642a87bc813d85e2b4ff426a2cec19",
+      "bytes": 127697
+    },
+    "src/research_results/phase120_20261015/C_INITIAL_GRADIENT_GATE.json": {
+      "sha256": "594e31b780872c0d249fd3c7b819a901d12dd05e6ff739396a6e4dc9da4ba345",
+      "bytes": 212
+    },
+    "src/research_results/phase120_20261015/D_PARAMETER_WHITELIST.json": {
+      "sha256": "26e16b3f61247ded2c641c70b36de63fe2647562d1060b6666f1719525706bc2",
+      "bytes": 162336
+    },
+    "src/research_results/phase120_20261015/D_TRAINING_RECEIPT.json": {
+      "sha256": "3e12c012b0f391df198e3cc0c9283362fc98b1340b4098d432e382c599dd96b1",
+      "bytes": 141345
+    },
+    "src/research_results/phase120_20261015/D_INITIAL_GRADIENT_GATE.json": {
+      "sha256": "d2fa758a4eb5f1431225c78a5b1541ba6b7467c23ffe9d62ed5367ee04b1994b",
+      "bytes": 212
+    },
+    "src/research_results/phase120_20261015/COMPLETION.json": {
+      "sha256": "dafbba43d609807c273d969e9a5c9011331b8f9b95d91e1665bd728632bbbd71",
+      "bytes": 2147
+    },
+    "src/research_results/phase120_20261015/Catalogue_AP_groups_readable.csv": {
+      "sha256": "7462f7df8b2d31a756e4987d0935a98e879c3805b8c9578616aedeb51cf864b1",
+      "bytes": 1750
+    },
+    "src/research_results/phase120_20261015/PixBox_AP_groups_readable.csv": {
+      "sha256": "90368521b9adc1563ffe03c8f8c49c64ce4717b0c5e66b87edcfaca549292627",
+      "bytes": 1918
+    },
+    "src/research_results/phase120_20261015/SUPPORT_SUMMARY.json": {
+      "sha256": "ca93d57ff116e477be71fdc276a67b4660336e5af63e83041492a58bdf4554a5",
+      "bytes": 550
+    },
+    "src/research_results/phase120_20261015/Catalogue_CPU_REPLAY_RESOURCE.json": {
+      "sha256": "47c00d32a602b4a32e7d5fe2d5fd4bf6a0d2f03a68c8f522e175b737fdbebbb8",
+      "bytes": 493
+    },
+    "src/research_results/phase120_20261015/worst_group_damage.csv": {
+      "sha256": "954fff0e49430084c536e31c4c1de452953fc28b19ae3ac7294bb94808f996a2",
+      "bytes": 1186
+    },
+    "src/research_results/phase120_20261015/README.md": {
+      "sha256": "bf5be0aeb5156d048fc89a3ea7b7e5fb437279380ceb719262caf410dafdb83d",
+      "bytes": 4804
+    },
+    "src/research_results/phase120_20261015/ANALYSIS.md": {
+      "sha256": "7b0aee0325512f6d54f862f7f770d977b9d6b5d4ba6037872827663ea518548c",
+      "bytes": 3859
+    },
+    "src/research_results/phase120_20261015/NEXT_STEP.md": {
+      "sha256": "91cf0a074496e42c9a3de57465f10fbb9ba65136db06d918e2df1269d920fd1b",
+      "bytes": 307
+    },
+    "src/research_results/phase120_20261015/operating_auxiliary.csv": {
+      "sha256": "3244e76ff7608d3c6aa8fe3a0c33595df87faeb7b8e3e3f7e50c936f326e2fdc",
+      "bytes": 703
+    },
+    "src/research_results/phase120_20261015/FINAL_DELIVERY_AUDIT.json": {
+      "sha256": "95a2b96d7e46ba406bf27c3a176842ab55e3b836f528fb8e99fa6458c040e77b",
+      "bytes": 416
+    },
+    "src/tools/phase120_metrics.py": {
+      "sha256": "c11f38d833648ae6c00082736ac29477643212b9387561f491d14800ea69886c",
+      "bytes": 4456
+    },
+    "src/tools/infer_phase120.py": {
+      "sha256": "3c803a44710dfb29273d42f7a3aea64c73e73b6e0cdb42e498e2a96b61f73cb9",
+      "bytes": 16409
+    },
+    "src/tools/phase120_common.py": {
+      "sha256": "88e17045d1388b47dbadfccaf9e080a7484c9a46358ebda0b7ab920a2e170126",
+      "bytes": 2465
+    },
+    "src/tools/train_phase120.py": {
+      "sha256": "371f45861233f8528a02128b7ce60750863ad0e5049a71d93784ec3525f726d9",
+      "bytes": 11790
+    },
+    "src/tools/evaluate_phase120_catalogue.py": {
+      "sha256": "0d9d4cd750ebf2ab0b2f6100e074cb0ffba78fcdd440ba77b987ba6e32162d4d",
+      "bytes": 3805
+    },
+    "src/tools/run_phase120.py": {
+      "sha256": "fd2a776e0b4a9d8ea5cf0e0ff33c1343c4e8ecce9b2c6e28976f4cd9d3798302",
+      "bytes": 3914
+    },
+    "src/tools/test_phase120.py": {
+      "sha256": "39955da97dde7a908244b6ac75f096fb15768d8a45d4b5065373cfd781206ebb",
+      "bytes": 1229
+    },
+    "src/tools/test_phase120_numpy.py": {
+      "sha256": "c59fecdd8b149e44049b6c0b93a168736dc8e58babb5473608dae0707535f64c",
+      "bytes": 1782
+    },
+    "src/tools/collect_phase120.py": {
+      "sha256": "e2a5afbd1d55fae90cdeccf6ff3dd00fd3ea6b747a3a94e5f721fff943cba19f",
+      "bytes": 1398
+    },
+    "src/tools/evaluate_phase120_pixbox_local.py": {
+      "sha256": "40cc91d33f75662d3b1d51a27fdd968c6dce967f5ea0387ea37d15fb0464a77e",
+      "bytes": 5798
+    },
+    "src/tools/resume_phase120.py": {
+      "sha256": "8a2ad5521ddd4b6f7cf18b446aea5ce2a8b12b8d73209458c23241794a56149f",
+      "bytes": 3919
+    },
+    "src/tools/finalize_phase120_local.py": {
+      "sha256": "81c893269c4964afa55c3eda0ba03618e573dd853442abb8405fcec817bce83f",
+      "bytes": 16058
+    },
+    "src/tools/resume_phase120_evaluation.py": {
+      "sha256": "ec739518859fe625e52514b3877899f25bb00f6afa04af39fddf16a7e95d9499",
+      "bytes": 2967
+    },
+    "src/tools/verify_phase120_cpu.py": {
+      "sha256": "350e1b38f058052569a52116293e090a67c081fddcdba00cbfc3f84d36ad3978",
+      "bytes": 4182
+    },
+    "src/research_plans/PHASE120_ENSEMBLE_TO_REGNET_DISTILLATION_20261015.md": {
+      "sha256": "c3ea187411d0b0c2e10216a9f6c24c132d892711de7dff7ff0bc840ff921197a",
+      "bytes": 5354
+    }
+  },
+  "count": 59,
+  "excluded": [
+    "src/phase65.md: text normalization across hosts",
+    "ignored model endpoints and reconstruction file: external approval pending",
+    "private point scores, original references, dense pixel caches and all work_dirs"
+  ],
+  "models_verified_in_local_outputs_and_shared": true
+}
