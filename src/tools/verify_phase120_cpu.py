@@ -6,12 +6,24 @@ from phase120_common import *
 def main():
     setup();start=time.time();finished=threading.Event();state={'status':'replaying','model_calls':0}
     path=ROOT/'Catalogue_CPU_REPLAY_RESOURCE.json'
+    receipts=load(ROOT/'D_PixBox/SCENE_RECEIPTS.json')
+    bench=load(LOCK)['benchmark_used']
+    assert sum(r['product_id']==bench for r in receipts)==2,'wait for both D benchmark passes before concurrent CPU replay'
     from install_phase111_runtime import host_free
     assert host_free()>=4000000000
     def guard():
         rss=resource.getrusage(resource.RUSAGE_SELF).ru_maxrss*1024
         state.update(rss_peak_bytes=rss,elapsed_seconds=time.time()-start)
-        assert rss<=16*1024**3
+        combined=rss
+        for name in ('C_PixBox','D_PixBox','R_PixBox'):
+            pidfile=ROOT/name/'PID';statusfile=ROOT/name/'RUN_STATUS.json'
+            if not pidfile.exists() or load(statusfile).get('status')=='completed_scores_sealed':continue
+            proc=Path('/proc')/pidfile.read_text().strip()/'status'
+            if proc.exists():
+                fields=dict(line.split(':',1) for line in proc.read_text().splitlines() if ':' in line)
+                combined+=int(fields.get('VmRSS','0 kB').split()[0])*1024
+        state['combined_CPU_replay_and_live_inference_RSS_sampled_peak_bytes']=max(state.get('combined_CPU_replay_and_live_inference_RSS_sampled_peak_bytes',0),combined)
+        assert rss<=16*1024**3 and combined<=16*1024**3
         assert time.time()-load(ROOT/'CONTROLLER_STATUS.json')['started_epoch']<=14400
     def monitor():
         try:
@@ -50,6 +62,6 @@ def main():
             else:assert str(v)==b[key]
     guard();finished.set();state.update(status='passed',all_five_pool_and_group_metrics_reproduced=True,
         all_three_bootstrap_comparisons_exact=True,first_CPU_pass_resource_peak_not_instrumented=True,
-        this_complete_cache_replay_resource_guarded=True,host_free_after=host_free())
+        this_complete_cache_replay_resource_guarded=True,after_D_single_benchmark_both_passes=True,host_free_after=host_free())
     write(path,state);print(state,flush=True)
 if __name__=='__main__':main()

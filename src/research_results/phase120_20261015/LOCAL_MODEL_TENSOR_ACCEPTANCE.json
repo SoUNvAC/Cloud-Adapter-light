@@ -1,0 +1,19 @@
+{
+  "C": {
+    "sha256": "e642302e66239870f7af4b01d1fa784b1266d701913298d30f92401bfdcf32e7",
+    "bytes": 56556112,
+    "tensors": 61,
+    "all_tensors_finite": true,
+    "float32_and_int64_only": true,
+    "valid_shapes_and_offsets": true
+  },
+  "D": {
+    "sha256": "618edcb4915ce766fc3d1e797547f8f602890ab516d1a561ebe01a24c900bad9",
+    "bytes": 56556112,
+    "tensors": 61,
+    "all_tensors_finite": true,
+    "float32_and_int64_only": true,
+    "valid_shapes_and_offsets": true
+  },
+  "Omni_calls": 0
+}
