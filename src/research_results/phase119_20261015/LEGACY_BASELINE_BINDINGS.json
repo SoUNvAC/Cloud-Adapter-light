@@ -1,0 +1,8 @@
+{
+  "status": "legacy_manifest_sha256_verified_before_new_metrics",
+  "source_sha256": {
+    "src/research_results/phase117_20261014/FIVE_POLICY_SUMMARY.json": "84733970ce8f7a78b941383505fc6fc9b88858d05ba7a4a506f42896c78aa6b1",
+    "src/research_results/phase118_20261014/three_setting_summary.csv": "d0f2890eb45de3dc94a88a034397b2557eae4a343de5f5b2b6d5ea6143a9f120"
+  },
+  "Omni_calls": 0
+}

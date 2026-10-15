@@ -1,0 +1,178 @@
+{
+  "status": "passed",
+  "baseline_E_macro_AP_pp": 92.37159847180119,
+  "baseline_E_pooled_AP_pp": 77.59518215442652,
+  "old_baseline_reproduced": true,
+  "all_single_mosaics_independently_checked": true,
+  "E_reconstruction": [
+    {
+      "product": "S2A_MSIL1C_20180310T165111_N0206_R026_T17VNJ_20180310T220933",
+      "E_from_real_single_raw_logits_max_error": 9.313225746154785e-10,
+      "no_confidence_inversion": true
+    },
+    {
+      "product": "S2B_MSIL1C_20180822T014649_N0206_R017_T56WNB_20180822T032508",
+      "E_from_real_single_raw_logits_max_error": 1.7881393432617188e-07,
+      "no_confidence_inversion": true
+    },
+    {
+      "product": "S2A_MSIL1C_20180321T075621_N0206_R035_T34HGK_20180321T101406",
+      "E_from_real_single_raw_logits_max_error": 4.6566128730773926e-09,
+      "no_confidence_inversion": true
+    },
+    {
+      "product": "S2B_MSIL1C_20180612T171859_N0206_R012_T15UVU_20180612T204912",
+      "E_from_real_single_raw_logits_max_error": 1.7881393432617188e-07,
+      "no_confidence_inversion": true
+    },
+    {
+      "product": "S2B_MSIL1C_20180824T111239_N0206_R051_T28LGP_20180824T164334",
+      "E_from_real_single_raw_logits_max_error": 1.7881393432617188e-07,
+      "no_confidence_inversion": true
+    },
+    {
+      "product": "S2A_MSIL1C_20180410T214911_N0206_R043_T02LKH_20180410T231102",
+      "E_from_real_single_raw_logits_max_error": 1.7881393432617188e-07,
+      "no_confidence_inversion": true
+    },
+    {
+      "product": "S2B_MSIL1C_20180701T074609_N0206_R135_T38TNN_20180701T100320",
+      "E_from_real_single_raw_logits_max_error": 1.7881393432617188e-07,
+      "no_confidence_inversion": true
+    },
+    {
+      "product": "S2B_MSIL1C_20181218T043159_N0207_R133_T46RDT_20181218T072156",
+      "E_from_real_single_raw_logits_max_error": 1.7881393432617188e-07,
+      "no_confidence_inversion": true
+    },
+    {
+      "product": "S2A_MSIL1C_20180710T090601_N0206_R050_T34QBG_20180710T112311",
+      "E_from_real_single_raw_logits_max_error": 1.862645149230957e-09,
+      "no_confidence_inversion": true
+    },
+    {
+      "product": "S2B_MSIL1C_20180131T082149_N0206_R121_T34JDL_20180131T120726",
+      "E_from_real_single_raw_logits_max_error": 1.7881393432617188e-07,
+      "no_confidence_inversion": true
+    },
+    {
+      "product": "S2B_MSIL1C_20180214T025819_N0206_R032_T51TUM_20180214T072411",
+      "E_from_real_single_raw_logits_max_error": 2.60770320892334e-08,
+      "no_confidence_inversion": true
+    },
+    {
+      "product": "S2A_MSIL1C_20181118T084231_N0207_R064_T35RPM_20181118T101007",
+      "E_from_real_single_raw_logits_max_error": 1.7881393432617188e-07,
+      "no_confidence_inversion": true
+    },
+    {
+      "product": "S2A_MSIL1C_20180703T023551_N0206_R089_T50PLR_20180703T053714",
+      "E_from_real_single_raw_logits_max_error": 1.7881393432617188e-07,
+      "no_confidence_inversion": true
+    },
+    {
+      "product": "S2A_MSIL1C_20180805T024551_N0206_R132_T52UDG_20180805T054920",
+      "E_from_real_single_raw_logits_max_error": 1.7881393432617188e-07,
+      "no_confidence_inversion": true
+    },
+    {
+      "product": "S2A_MSIL1C_20180211T234711_N0206_R073_T60WWT_20180212T011403",
+      "E_from_real_single_raw_logits_max_error": 1.7881393432617188e-07,
+      "no_confidence_inversion": true
+    },
+    {
+      "product": "S2A_MSIL1C_20180804T045701_N0206_R119_T45RTH_20180804T075337",
+      "E_from_real_single_raw_logits_max_error": 1.7881393432617188e-07,
+      "no_confidence_inversion": true
+    },
+    {
+      "product": "S2B_MSIL1C_20181004T102019_N0206_R065_T32TML_20181004T141056",
+      "E_from_real_single_raw_logits_max_error": 1.7881393432617188e-07,
+      "no_confidence_inversion": true
+    },
+    {
+      "product": "S2A_MSIL1C_20180602T081011_N0206_R078_T36PWC_20180602T115947",
+      "E_from_real_single_raw_logits_max_error": 1.043081283569336e-07,
+      "no_confidence_inversion": true
+    },
+    {
+      "product": "S2B_MSIL1C_20180508T150719_N0206_R082_T18MYV_20180508T202621",
+      "E_from_real_single_raw_logits_max_error": 1.7881393432617188e-07,
+      "no_confidence_inversion": true
+    },
+    {
+      "product": "S2B_MSIL1C_20180420T103019_N0206_R108_T31TGF_20180420T114307",
+      "E_from_real_single_raw_logits_max_error": 1.4901161193847656e-08,
+      "no_confidence_inversion": true
+    },
+    {
+      "product": "S2A_MSIL1C_20180430T111621_N0206_R037_T40XDR_20180430T132750",
+      "E_from_real_single_raw_logits_max_error": 1.7881393432617188e-07,
+      "no_confidence_inversion": true
+    },
+    {
+      "product": "S2A_MSIL1C_20180909T151911_N0206_R068_T25XEG_20180909T205122",
+      "E_from_real_single_raw_logits_max_error": 1.7881393432617188e-07,
+      "no_confidence_inversion": true
+    },
+    {
+      "product": "S2A_MSIL1C_20180707T021601_N0206_R003_T51SXR_20180707T041118",
+      "E_from_real_single_raw_logits_max_error": 1.7881393432617188e-07,
+      "no_confidence_inversion": true
+    },
+    {
+      "product": "S2A_MSIL1C_20180522T183921_N0206_R070_T12VVH_20180522T233949",
+      "E_from_real_single_raw_logits_max_error": 2.3283064365386963e-09,
+      "no_confidence_inversion": true
+    },
+    {
+      "product": "S2A_MSIL1C_20180317T045651_N0206_R119_T50XMG_20180317T075452",
+      "E_from_real_single_raw_logits_max_error": 1.4901161193847656e-08,
+      "no_confidence_inversion": true
+    },
+    {
+      "product": "S2B_MSIL1C_20181001T165109_N0206_R026_T16UDV_20181001T221311",
+      "E_from_real_single_raw_logits_max_error": 1.7881393432617188e-07,
+      "no_confidence_inversion": true
+    },
+    {
+      "product": "S2A_MSIL1C_20180608T152641_N0206_R025_T18MUA_20180608T202221",
+      "E_from_real_single_raw_logits_max_error": 1.7881393432617188e-07,
+      "no_confidence_inversion": true
+    },
+    {
+      "product": "S2A_MSIL1C_20181114T054101_N0207_R005_T44UNA_20181114T093234",
+      "E_from_real_single_raw_logits_max_error": 7.450580596923828e-08,
+      "no_confidence_inversion": true
+    },
+    {
+      "product": "S2A_MSIL1C_20181118T152621_N0207_R068_T20VPK_20181118T172424",
+      "E_from_real_single_raw_logits_max_error": 1.7881393432617188e-07,
+      "no_confidence_inversion": true
+    },
+    {
+      "product": "S2A_MSIL1C_20180922T185101_N0206_R113_T10SEE_20180922T225409",
+      "E_from_real_single_raw_logits_max_error": 1.7881393432617188e-07,
+      "no_confidence_inversion": true
+    },
+    {
+      "product": "S2B_MSIL1C_20181111T094229_N0207_R036_T32NKF_20181111T131623",
+      "E_from_real_single_raw_logits_max_error": 1.7881393432617188e-07,
+      "no_confidence_inversion": true
+    },
+    {
+      "product": "S2A_MSIL1C_20181021T160311_N0206_R097_T20WNV_20181021T192258",
+      "E_from_real_single_raw_logits_max_error": 1.7881393432617188e-07,
+      "no_confidence_inversion": true
+    }
+  ],
+  "independent_tied_AP_groups_and_pool": true,
+  "group_bootstrap_scalar_replay": true,
+  "common_support_locked_before_reference_semantics_join": true,
+  "evaluated_fit_groups": 0,
+  "AP_groups": 7,
+  "all_groups": 32,
+  "support_loss": 0,
+  "threshold": 0.5,
+  "negative_FP_definition": "dense released-reference nonshadow pixels, not PixBox selected points"
+}

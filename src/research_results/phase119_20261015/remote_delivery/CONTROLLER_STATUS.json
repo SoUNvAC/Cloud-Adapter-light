@@ -1,0 +1,12 @@
+{
+  "status": "all_three_settings_scores_sealed_before_reference_join",
+  "calls_completed": 3470,
+  "started_epoch": 1792033139.1568632,
+  "order": [
+    "E",
+    "R",
+    "N"
+  ],
+  "last_completed": "N",
+  "elapsed_seconds": 2871.3009412288666
+}

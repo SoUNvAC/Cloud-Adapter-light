@@ -1,0 +1,16 @@
+{
+  "policy": "R",
+  "models": 1,
+  "architectures": [
+    "regnety_004"
+  ],
+  "weight_bytes": 72314968,
+  "total_parameters": 18039132,
+  "trainable_parameters_when_loaded": 18039132,
+  "load_seconds": 1.823312188993441,
+  "construction_calls": 7,
+  "separate_process": true,
+  "PID": 99780,
+  "no_other_member_loaded": true,
+  "trainable_parameters_during_inference": 0
+}

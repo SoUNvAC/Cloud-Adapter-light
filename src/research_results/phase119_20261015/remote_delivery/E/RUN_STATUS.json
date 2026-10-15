@@ -1,0 +1,18 @@
+{
+  "status": "completed_scores_sealed",
+  "construction_calls": 11,
+  "main_calls": 768,
+  "warmup_calls": 2,
+  "policy": "E",
+  "elapsed_seconds": 433.88859782098734,
+  "rss_peak_bytes": 4441006080,
+  "gpu_reserved_peak_bytes": 9200205824,
+  "all_calls": 781,
+  "gpu_observed_peak_bytes": 10195304448,
+  "host_min_free_bytes": 13343952896,
+  "intermediate_peak_bytes": 818111,
+  "pool": "PixBox",
+  "product_id": "S2A_MSIL1C_20180222T012651_N0206_R074_T54TWN_20180222T031349",
+  "repetition": 2,
+  "patch_completed": 64
+}

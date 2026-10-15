@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "old_E_baseline_reproduced": true,
+  "old_E_macro_AP_pp": 73.87108333934356,
+  "old_E_pooled_AP_pp": 83.64482189047366,
+  "independent_tied_AP_and_scalar_group_bootstrap": true,
+  "all10_original_groups_retained": true,
+  "actual_AP_groups": 8,
+  "common_valid": 9500,
+  "threshold": 0.5,
+  "negative_FP_definition": "selected negative reference points; not full-scene FPR",
+  "support_sealed_before_original_reference_join": true,
+  "Omni_calls": 0
+}

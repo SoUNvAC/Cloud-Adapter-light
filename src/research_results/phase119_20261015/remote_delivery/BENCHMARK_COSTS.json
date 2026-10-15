@@ -1,0 +1,214 @@
+{
+  "rows": [
+    {
+      "policy": "E",
+      "product": "S2A_MSIL1C_20170726T102021_N0205_R065_T33VVE_20170726T102259",
+      "repetition": 1,
+      "GPU_model_seconds": 6.950523002624512,
+      "whole_scene_read_to_point_seconds": 56.630055604997324,
+      "model_calls": 128
+    },
+    {
+      "policy": "E",
+      "product": "S2A_MSIL1C_20170726T102021_N0205_R065_T33VVE_20170726T102259",
+      "repetition": 2,
+      "GPU_model_seconds": 6.9059932594299305,
+      "whole_scene_read_to_point_seconds": 56.34462679999706,
+      "model_calls": 128
+    },
+    {
+      "policy": "E",
+      "product": "S2A_MSIL1C_20171107T150421_N0206_R125_T22WES_20171107T165127",
+      "repetition": 1,
+      "GPU_model_seconds": 6.934904846191405,
+      "whole_scene_read_to_point_seconds": 61.331241880048765,
+      "model_calls": 128
+    },
+    {
+      "policy": "E",
+      "product": "S2A_MSIL1C_20171107T150421_N0206_R125_T22WES_20171107T165127",
+      "repetition": 2,
+      "GPU_model_seconds": 6.916408115386961,
+      "whole_scene_read_to_point_seconds": 61.210503570051515,
+      "model_calls": 128
+    },
+    {
+      "policy": "E",
+      "product": "S2A_MSIL1C_20180222T012651_N0206_R074_T54TWN_20180222T031349",
+      "repetition": 1,
+      "GPU_model_seconds": 6.937043819427491,
+      "whole_scene_read_to_point_seconds": 61.57449302203895,
+      "model_calls": 128
+    },
+    {
+      "policy": "E",
+      "product": "S2A_MSIL1C_20180222T012651_N0206_R074_T54TWN_20180222T031349",
+      "repetition": 2,
+      "GPU_model_seconds": 6.924539600372314,
+      "whole_scene_read_to_point_seconds": 61.42283148494607,
+      "model_calls": 128
+    },
+    {
+      "policy": "R",
+      "product": "S2A_MSIL1C_20170726T102021_N0205_R065_T33VVE_20170726T102259",
+      "repetition": 1,
+      "GPU_model_seconds": 2.5088377914428714,
+      "whole_scene_read_to_point_seconds": 52.41386146598961,
+      "model_calls": 64
+    },
+    {
+      "policy": "R",
+      "product": "S2A_MSIL1C_20170726T102021_N0205_R065_T33VVE_20170726T102259",
+      "repetition": 2,
+      "GPU_model_seconds": 2.538523735046386,
+      "whole_scene_read_to_point_seconds": 52.40326468307467,
+      "model_calls": 64
+    },
+    {
+      "policy": "R",
+      "product": "S2A_MSIL1C_20171107T150421_N0206_R125_T22WES_20171107T165127",
+      "repetition": 1,
+      "GPU_model_seconds": 2.5501990394592284,
+      "whole_scene_read_to_point_seconds": 57.39496130698535,
+      "model_calls": 64
+    },
+    {
+      "policy": "R",
+      "product": "S2A_MSIL1C_20171107T150421_N0206_R125_T22WES_20171107T165127",
+      "repetition": 2,
+      "GPU_model_seconds": 2.588494312286377,
+      "whole_scene_read_to_point_seconds": 57.16911757807247,
+      "model_calls": 64
+    },
+    {
+      "policy": "R",
+      "product": "S2A_MSIL1C_20180222T012651_N0206_R074_T54TWN_20180222T031349",
+      "repetition": 1,
+      "GPU_model_seconds": 2.4741103363037116,
+      "whole_scene_read_to_point_seconds": 57.35685616898991,
+      "model_calls": 64
+    },
+    {
+      "policy": "R",
+      "product": "S2A_MSIL1C_20180222T012651_N0206_R074_T54TWN_20180222T031349",
+      "repetition": 2,
+      "GPU_model_seconds": 2.4615704307556157,
+      "whole_scene_read_to_point_seconds": 57.36806957203953,
+      "model_calls": 64
+    },
+    {
+      "policy": "N",
+      "product": "S2A_MSIL1C_20170726T102021_N0205_R065_T33VVE_20170726T102259",
+      "repetition": 1,
+      "GPU_model_seconds": 4.637626106262207,
+      "whole_scene_read_to_point_seconds": 54.34093373497308,
+      "model_calls": 64
+    },
+    {
+      "policy": "N",
+      "product": "S2A_MSIL1C_20170726T102021_N0205_R065_T33VVE_20170726T102259",
+      "repetition": 2,
+      "GPU_model_seconds": 4.664789047241211,
+      "whole_scene_read_to_point_seconds": 54.16499992502213,
+      "model_calls": 64
+    },
+    {
+      "policy": "N",
+      "product": "S2A_MSIL1C_20171107T150421_N0206_R125_T22WES_20171107T165127",
+      "repetition": 1,
+      "GPU_model_seconds": 4.723314941406252,
+      "whole_scene_read_to_point_seconds": 59.14671673902194,
+      "model_calls": 64
+    },
+    {
+      "policy": "N",
+      "product": "S2A_MSIL1C_20171107T150421_N0206_R125_T22WES_20171107T165127",
+      "repetition": 2,
+      "GPU_model_seconds": 4.636667594909669,
+      "whole_scene_read_to_point_seconds": 58.96447043403168,
+      "model_calls": 64
+    },
+    {
+      "policy": "N",
+      "product": "S2A_MSIL1C_20180222T012651_N0206_R074_T54TWN_20180222T031349",
+      "repetition": 1,
+      "GPU_model_seconds": 4.664292015075683,
+      "whole_scene_read_to_point_seconds": 59.27824852388585,
+      "model_calls": 64
+    },
+    {
+      "policy": "N",
+      "product": "S2A_MSIL1C_20180222T012651_N0206_R074_T54TWN_20180222T031349",
+      "repetition": 2,
+      "GPU_model_seconds": 4.653844528198243,
+      "whole_scene_read_to_point_seconds": 59.204982453011326,
+      "model_calls": 64
+    }
+  ],
+  "model_info": [
+    {
+      "policy": "E",
+      "models": 2,
+      "architectures": [
+        "regnety_004",
+        "convnextv2_nano"
+      ],
+      "weight_bytes": 202479912,
+      "total_parameters": 50574276,
+      "trainable_parameters_when_loaded": 50574276,
+      "load_seconds": 3.2775729739951203,
+      "construction_calls": 11,
+      "separate_process": true,
+      "PID": 95190,
+      "no_other_member_loaded": true,
+      "trainable_parameters_during_inference": 0
+    },
+    {
+      "policy": "R",
+      "models": 1,
+      "architectures": [
+        "regnety_004"
+      ],
+      "weight_bytes": 72314968,
+      "total_parameters": 18039132,
+      "trainable_parameters_when_loaded": 18039132,
+      "load_seconds": 1.823312188993441,
+      "construction_calls": 7,
+      "separate_process": true,
+      "PID": 99780,
+      "no_other_member_loaded": true,
+      "trainable_parameters_during_inference": 0
+    },
+    {
+      "policy": "N",
+      "models": 1,
+      "architectures": [
+        "convnextv2_nano"
+      ],
+      "weight_bytes": 130164944,
+      "total_parameters": 32535144,
+      "trainable_parameters_when_loaded": 32535144,
+      "load_seconds": 1.990079412003979,
+      "construction_calls": 4,
+      "separate_process": true,
+      "PID": 112705,
+      "no_other_member_loaded": true,
+      "trainable_parameters_during_inference": 0
+    }
+  ],
+  "all18_results_reported": true,
+  "three_separate_processes": true,
+  "fresh_E_forward_not_cache_timing": true,
+  "SHA_CPU_independent_validation_and_packaging_excluded": true,
+  "OS_cache_order_effect_not_eliminated": true,
+  "fixed_process_order": [
+    "E",
+    "R",
+    "N"
+  ],
+  "fixed_scene_order": [
+    "S2A_MSIL1C_20170726T102021_N0205_R065_T33VVE_20170726T102259",
+    "S2A_MSIL1C_20171107T150421_N0206_R125_T22WES_20171107T165127",
+    "S2A_MSIL1C_20180222T012651_N0206_R074_T54TWN_20180222T031349"
+  ]
+}

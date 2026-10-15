@@ -1,0 +1,16 @@
+{
+  "policy": "N",
+  "models": 1,
+  "architectures": [
+    "convnextv2_nano"
+  ],
+  "weight_bytes": 130164944,
+  "total_parameters": 32535144,
+  "trainable_parameters_when_loaded": 32535144,
+  "load_seconds": 1.990079412003979,
+  "construction_calls": 4,
+  "separate_process": true,
+  "PID": 112705,
+  "no_other_member_loaded": true,
+  "trainable_parameters_during_inference": 0
+}

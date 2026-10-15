@@ -1,0 +1,17 @@
+{
+  "policy": "E",
+  "models": 2,
+  "architectures": [
+    "regnety_004",
+    "convnextv2_nano"
+  ],
+  "weight_bytes": 202479912,
+  "total_parameters": 50574276,
+  "trainable_parameters_when_loaded": 50574276,
+  "load_seconds": 3.2775729739951203,
+  "construction_calls": 11,
+  "separate_process": true,
+  "PID": 95190,
+  "no_other_member_loaded": true,
+  "trainable_parameters_during_inference": 0
+}

@@ -1,0 +1,10 @@
+{
+  "private_archive_bytes": 624496,
+  "private_archive_sha256": "fa4103fba90d1abb9c0b9e222aee26d34a12b91ecfd8ca1b604c71545b36baf7",
+  "small_archive_bytes": 47789,
+  "small_archive_sha256": "5c1219d349a66ec3f088050317a59d57aa45c4a7e40ef199ba1f6576d9ea3cdd",
+  "labels_transferred": false,
+  "dense_arrays_transferred": false,
+  "Catalogue_private_cache_transferred": false,
+  "work_dirs_transferred": false
+}

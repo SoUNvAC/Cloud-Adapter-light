@@ -1,0 +1,18 @@
+{
+  "status": "completed_scores_sealed",
+  "construction_calls": 7,
+  "main_calls": 1338,
+  "warmup_calls": 1,
+  "policy": "R",
+  "elapsed_seconds": 1195.384238101993,
+  "rss_peak_bytes": 4371116032,
+  "gpu_reserved_peak_bytes": 3349151744,
+  "all_calls": 1346,
+  "gpu_observed_peak_bytes": 4325376000,
+  "host_min_free_bytes": 13343952896,
+  "intermediate_peak_bytes": 611420391,
+  "pool": "Catalogue",
+  "product_id": "S2A_MSIL1C_20181021T160311_N0206_R097_T20WNV_20181021T192258",
+  "repetition": 1,
+  "patch_completed": 4
+}

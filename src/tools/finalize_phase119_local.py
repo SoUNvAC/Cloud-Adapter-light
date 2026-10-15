@@ -84,14 +84,14 @@ def main():
         text += ['', '| 设置 | 池化召回 (%) | 池化精确率 (%) | 池化负类误报 (%) | TP／FP |','|---|---:|---:|---:|---|']
         for v in ss:text.append(f"| {v['setting']} | {percent(v['pooled_recall'])} | {percent(v['pooled_precision'])} | {percent(v['pooled_negative_FP_fraction'])} | {v['pooled_TP']}/{v['pooled_FP']} |")
         text += ['',f'全部逐组AP、召回、精确率、误报、样本量与三项原始差值见{pool}_per_group.csv；稀疏支持保留标注，未补样或挑选场景。','']
-    text += ['PixBox误报是所选有效负类点比例；Catalogue误报是密集发布参考下有效非云影像元比例。两池分别计算，不能混作同一总体或同一全景FPR。阈值固定0.5，没有扫描。Catalogue沿用Phase117原共同有效掩膜，包括既有观测／发布参考有效规则；PixBox没有额外套用Source六波段筛选。','',
+    text += ['PixBox误报是所选有效负类点比例；Catalogue误报是密集发布参考下有效非云影像元比例。两池分别计算，不能混作同一总体或同一全景FPR。阈值固定0.5，没有扫描。Catalogue沿用Phase117原共同有效掩膜，包括既有观测／发布参考有效规则；PixBox没有额外套用Source六波段筛选。旧E的复现指AP、输入支持和数值；本轮运行点按0.5重新计算，没有拼接Phase117原三类argmax召回。','',
              '相关组等权；PixBox同组产品先合并计算AP。每项差值固定10000次配对组bootstrap、seed119015，区间仅作描述。方向按>1pp／±1pp以内／<−1pp划分，未另设显著性或最小增益通过门，未将像元、产品或重复计时当新独立组。','',
              '### 部署成本：三景各两次完整新前向','',
              '基准按SHA256(PHASE119_BENCH|product_id)排序先锁定：'+', '.join(costs['fixed_scene_order'])+'。三个独立进程按E／R／N顺序；各自只加载所需模型，每个成员一次预热。E重新完整推理，缓存读取不充作推理时间。','',
              '| 设置 | 总参数 (M) | 推理可训练参数 | 权重 (MB) | 加载 (秒) | CPU RSS峰 (GiB) | GPU reserved峰 (GiB) | GPU观测峰 (GiB) |',
              '|---|---:|---:|---:|---:|---:|---:|---:|']
     for v in resources:text.append(f"| {v['policy']} | {number(v['total_parameters']/1e6)} | 0 | {number(v['weight_bytes']/1e6)} | {number(v['load_seconds'])} | {number(v['CPU_RSS_peak_bytes']/1024**3)} | {number(v['GPU_reserved_peak_bytes']/1024**3)} | {number(v['GPU_observed_sampled_peak_bytes']/1024**3)} |")
-    text += ['', '权重字节不含环境和缓存；加载时间另计。参数加载时的requires_grad数量在model_resources.csv中，推理时全部冻结。RSS和GPU reserved为整个独立worker峰值；GPU外部观测为定期采样，不冒充连续精确峰值。','',
+    text += ['', '总参数含作者分割解码器，不仅是骨干。权重字节不含环境和缓存；加载时间另计。参数加载时的requires_grad数量在model_resources.csv中，推理时全部冻结。RSS和GPU reserved为整个独立worker峰值；GPU外部观测为定期采样，不冒充连续精确峰值。','',
              '| 设置 | 三景两遍GPU模型计算和 (秒) | 相对E | 读入至取点整景时间和 (秒) | 相对E |','|---|---:|---:|---:|---:|']
     for p,v in totals.items():text.append(f"| {p} | {number(v['GPU_seconds'])} | {number(v['GPU_ratio_to_E'])} | {number(v['whole_seconds'])} | {number(v['whole_ratio_to_E'])} |")
     text += ['', '| 设置 | 产品（日期／tile） | 第几遍 | GPU模型计算 (秒) | 整景读入至取点 (秒) | 整景相对匹配E |','|---|---|---:|---:|---:|']
