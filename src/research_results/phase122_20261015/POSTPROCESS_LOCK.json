@@ -1,0 +1,9 @@
+{
+  "source_sha256": {
+    "src/tools/finalize_phase122_local.py": "8f777c4251c349fbb5241151243215a07d8a4f8c43022e457fcbf5e466fbd2ae",
+    "src/tools/collect_phase122_delivery.py": "962a32fd38761498f3aa9bcc76f3a8961a272bdb6815a305c843b1ab6ed42df8",
+    "src/tools/evaluate_phase122_delivered_local.py": "c5df332ba81dc943285246f7b611c6bc2760fff05e5230663b0535986684f1a4"
+  },
+  "purpose": "post-seal full calibration direct CPU replay and shared-only reduced delivery; same frozen local evaluation functions; no fit/score/threshold change; zero added model calls",
+  "calibration_scores": "all full arrays kept in controlled shared with exact SHA locations; only redundant calibration transfer omitted"
+}
