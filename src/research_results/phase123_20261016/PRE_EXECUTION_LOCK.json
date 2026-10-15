@@ -1,0 +1,148 @@
+{
+  "phase": 123,
+  "status": "frozen_before_any_model_construction",
+  "source_sha256": {
+    "src/tools/phase123_common.py": "aef8a12043e3dee2c8b50338fc5e24cf7bdca26600217b31f2b3de55b4f517cb",
+    "src/tools/accepted_phase123_worker.py": "72ffebdc6201a6de2972715cd0150aa1cfad8a67dfccefbb2d7ba9a3372266db",
+    "src/tools/calibrate_phase123.py": "318f94100f85109a39c3bfaaa5b6f2502ca484098692e8c42dd10e1fb7864e71",
+    "src/tools/seal_phase123.py": "1b7af9307c5a2f644161c764dec96988797b4d8574db7b74a40019eeaddc6ad0",
+    "src/tools/run_phase123.py": "5bd5a09d484ef0a7aa15e6719ed017d4313bfd4c457b2907d873d09332e56371",
+    "src/tools/phase123_metrics.py": "1da7728a52bce748834e21c08a3a3d544994d0d3473a5790285b7b4ac4c8d2f1",
+    "src/tools/evaluate_phase123_local.py": "45278329fbb1e0e211f59954d12830c2f785a8b7deb674f70681f387b2122a7c",
+    "src/tools/test_phase123.py": "a4aa351416a8654f8420df5383557ae2011114514d3cacb0ce62420f170bab78",
+    "src/tools/finalize_phase123_local.py": "e21ecadd89f5d466c3f105f2731e6088df64975344d6a1dd43a84a4828ace601",
+    "src/tools/collect_phase123_delivery.py": "ff0a7aa3903a92197ec1ec2e6a1dfba0475df40e31f5f348cf708daaf450a9b1",
+    "src/research_plans/PHASE123_C100_SEED_REPLICATION_20261016.md": "3f99386175df1ce009fd3b3b1149c59c7ce2832afa4becb34999fe43515bc24d",
+    "src/research_results/phase122_20261015/MEMBER_INPUT_LOCK.json": "4b67b3c2f4d6c9502ad08614016821deb805bb64cc5c67d851e2fb48635efa24",
+    "src/research_results/phase122_20261015/PRE_EXECUTION_LOCK.json": "58adf87df16dd4a0097d9cecb73c208c58e03532f8cbe56da4e95d43ec23d459",
+    "src/research_results/phase122_20261015/POSTPROCESS_LOCK.json": "dc709c14f7c4d058c4de28f347af0766d57556a9dfbf48b9931186f3d3e17d5b",
+    "src/tools/train_phase122.py": "e88f85c7ff14a414a631aa74f1a9b06163817369f08111e6316e8c83c896bc24",
+    "src/tools/infer_phase122.py": "3729a98f10ab08cb05500e8c90c7a2d59a86881d1bb4e55af303d98ff0b44c6c",
+    "src/tools/phase122_metrics.py": "3115546d99d5bc3c98f7db7276b518d9bca5f6172c1f7b041063f6dba5933e18",
+    "src/tools/collect_phase122_delivery.py": "7d822b3ee753c54fcd62f4410fd04570b43a95270725f5ae2396a5b78408b396",
+    "src/tools/check_phase123.py": "1d2be180615a02e17a674e83636c1f8534d609d7418cbfd535953aeec01b84a8",
+    "src/tools/receive_phase123.ps1": "d9a811d09513378e6daae1bcf4fc6cd11590ba4d1342a84283ca979f7e291acb",
+    "src/tools/launch_phase123.py": "3c821ba463f871b81fd24d71ce119dbacd683a33f5782710ca12cdc0a04a98e8"
+  },
+  "original_split_sha256": "a431745e7a17bbd4a7b9e12ef3bf76767d4eb827911bd5cb5e632683c2177f7b",
+  "phase119_plan_sha256": "f1e74f385db5f81a25792169713237a8bafec36b2fb6ded9641ee0b1695abdf6",
+  "benchmark_products": [
+    "S2A_MSIL1C_20170726T102021_N0205_R065_T33VVE_20170726T102259",
+    "S2A_MSIL1C_20171107T150421_N0206_R125_T22WES_20171107T165127",
+    "S2A_MSIL1C_20180222T012651_N0206_R074_T54TWN_20180222T031349"
+  ],
+  "benchmark_used": "S2A_MSIL1C_20170726T102021_N0205_R065_T33VVE_20170726T102259",
+  "fit": 100,
+  "development": 32,
+  "seed": 12301,
+  "steps_per_arm": 1000,
+  "arms": [
+    "C"
+  ],
+  "checkpoint_selection": "fixed endpoint only",
+  "optimizer": {
+    "name": "AdamW",
+    "lr": 0.0001,
+    "weight_decay": 0.01,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08
+  },
+  "loss_C": "unweighted parent CE valid only",
+  "loss_D": null,
+  "teacher": null,
+  "student": "original RegNet; exact author encoder frozen incl buffers; decoder only",
+  "crop": 512,
+  "normalization": "author channel_norm independently per B04/B03/B8A nonzero crop",
+  "augmentation": "fixed paired horizontal flip only",
+  "evaluation_order": [
+    "train C100 seed12301 endpoint",
+    "new C full53 calibration; old R/C122 thresholds reused",
+    "freeze only new C threshold",
+    "new C Catalogue32 then PixBox16; old R/C122 caches reused",
+    "local triple support first/reference joins"
+  ],
+  "bootstrap_seed": 123015,
+  "bootstrap_resamples": 10000,
+  "operating_confidence": 0.5,
+  "planned_calls_cap": 3000,
+  "recovery_calls_cap": 3750,
+  "planned_seconds": 7200,
+  "recovery_seconds": 9000,
+  "CPU_GiB": 16,
+  "GPU_GiB": 20,
+  "host_min_free_bytes": 4000000000,
+  "intermediate_bytes_cap": 4000000000,
+  "new_downloads": 0,
+  "PixBox_for_fitting_or_selection": false,
+  "original_failed_split_unchanged": true,
+  "work_dirs_sync": false,
+  "models_not_uploaded_to_GitHub": true,
+  "policies": [
+    "R_05",
+    "R_cal",
+    "C122_05",
+    "C122_cal",
+    "C123_05",
+    "C123_cal"
+  ],
+  "principal_question": "Catalogue mean within-group C122cal/C123cal recall minus fixed Rcal; same group bootstrap indices; not score ensemble",
+  "calibration": 53,
+  "expected_calls": 2392,
+  "evaluation_reference_join": "both pools local only, score/support seal first",
+  "threshold_rule": "one global per model from all53 calibration groups; negative-group equal-weight mean FP<=1%; exact float32 ties + float64 nextafter; all comparisons float64",
+  "FPR_U95": "95th percentile of 10000 related-group bootstrap means, seed123015; descriptive, never threshold selection",
+  "no_teacher_or_distillation": true,
+  "old_C153_not_loaded": true,
+  "old_oracle_thresholds_not_loaded": true,
+  "inherited_accepted_phase121_HEAD": "6c6cfabfd3976b7d99390f59a961599bced545d9",
+  "calibration_groups": 53,
+  "planned_model_calls": 2392,
+  "planned_call_limit": 3000,
+  "recovery_call_limit": 3750,
+  "planned_seconds_limit": 7200,
+  "recovery_seconds_limit": 9000,
+  "main_comparison": "Catalogue mean within-group C122cal/C123cal recall minus fixed Rcal; same group bootstrap indices; not score ensemble",
+  "monitor_interval_hours": 1,
+  "previous_shared_sha256": {
+    "TRAINING_SEAL.json": "374acf0440285579242e1bafdad39a00671f081ffcb06b6bde46685efa4f140e",
+    "THRESHOLD_LOCK.json": "f2040e4213288bbd1109faaa60c0c50eb3ee2957bf0e4f62bca1b1ae1b5f4724",
+    "ALL_SCORES_SEALED.json": "3cd59ff62eb4c82310a505fb5280cd61e982df54272f5a3ad60cf827299811a5",
+    "FIT_INPUT_LOCK.json": "723fb69ceccb669c66e2885de1a12e48b4a0d5a448133534144dc5dfd62a1d19",
+    "INPUT_PATCH_PLAN.json": "66cd7fc978f8a2a7c7a840a06238be666496ae4aa7b616a208523a004be9fd94",
+    "R_Calibration/SCORES_SEALED.json": "817e1dff26954285124caed2bf5bf168f873fa126fe5e48fbaba5ae0a02d5cf1",
+    "C_Calibration/SCORES_SEALED.json": "370a3b09311ac2d6730099f9678a48936aa0a24a46e510a75dfcba0dc4fdb46f",
+    "C_Catalogue/SCORES_SEALED.json": "4d900cc5056148284ae3cc70b743dd8a52b20810e94fcc2a612033c70fca9793",
+    "C_PixBox/SCORES_SEALED.json": "062ffff918830db96bbbd149fb7b935cb18a02290138802c3ffb3e810005158d",
+    "R_Catalogue_reuse/SCORES_SEALED.json": "f229762a96ff323a028b3a4350acd78237460c0e0f77e06567c2e2ebdb356389",
+    "C_decoder_final.safetensors": "59f88f462b85c6a2eb8725781085efbc474962e862dd0a2401f4b344d88b5b9e"
+  },
+  "accepted_worker_transforms": {
+    "train": {
+      "source": "src/tools/train_phase122.py",
+      "replacements": [
+        [
+          "12201",
+          "12301"
+        ],
+        [
+          "3500",
+          "3000"
+        ]
+      ],
+      "transformed_sha256": "06a06313a117f8b8929106e099905694c8223548b93a9b4e3ea8ab3c03a28460"
+    },
+    "infer": {
+      "source": "src/tools/infer_phase122.py",
+      "replacements": [
+        [
+          "3500",
+          "3000"
+        ]
+      ],
+      "transformed_sha256": "0969a6dcc27fe92ac6f530cba95cbb5aaaa3a7cabda15b064d1933816fd5f00b"
+    }
+  }
+}
