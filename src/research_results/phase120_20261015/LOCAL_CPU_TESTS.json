@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "AST_all_phase120_sources": true,
+  "synthetic_KL_direction_teacher_to_student": true,
+  "temperature_squared": 4,
+  "ignore_gradient_zero": true,
+  "teacher_gradient_none": true,
+  "equal_teacher_student_KL_zero": true,
+  "five_policy_summary": true,
+  "primary_comparison_order": [
+    "D-R",
+    "D-C",
+    "C-R"
+  ],
+  "bootstrap_seed": 120015,
+  "resamples": 10000,
+  "raw_mosaic_point_index_callback_hand_checks": true,
+  "tied_AP_hand_cases": 3,
+  "threshold_bruteforce_cases": 60,
+  "Omni_model_calls": 0,
+  "torch_objective_test_location": "existing frozen remote runtime CPU, no model constructed",
+  "numpy_statistics_test_location": "local bundled Python NumPy; no installation"
+}
