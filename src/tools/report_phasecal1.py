@@ -2,7 +2,11 @@
 import csv
 import json
 import hashlib
+import time
+import struct
+import sys
 from pathlib import Path
+import numpy as np
 
 R = Path(__file__).resolve().parents[2]
 U = R / 'outputs/phase122/phase122_20261015'
@@ -30,7 +34,28 @@ def fmt(x):
     return 'NA' if x is None or x == '' else f'{float(x):.4f}'
 
 
+def write_table(text):
+    target = U / 'phasecal-1-result.md'
+    temporary = target.with_suffix('.md.tmp')
+    temporary.write_text('\n'.join(text) + '\n', encoding='utf-8')
+    temporary.replace(target)
+    print(target)
+
+
 def main():
+    headings = ['|数据池|模型／工作点|阈值|AP有效组／误报有效组|宏AP %|宏召回 %|平均负类误报 %|误报U95 %|最坏组及误报 %|备注|',
+                '|---|---|---|---|---|---|---|---|---|---|']
+    if not (O / 'LOCAL_CPU_ACCEPTANCE.json').exists():
+        thresholds = load(U / 'THRESHOLD_LOCK.json')['thresholds']
+        text = headings.copy()
+        for pool in ('Catalogue', 'PixBox'):
+            for arm in ('R', 'C100'):
+                for cal in (False, True):
+                    t = thresholds['R' if arm == 'R' else 'C'] if cal else .5
+                    text.append(f"|{pool}|{arm}/{'T_cal' if cal else '0.5'}|{t!r}|NA|NA|NA|NA|NA|NA|等待分数传回本地及固定参考连接；未报告效果|" )
+        text.append('|运行状态|部分完成|—|—|—|—|—|—|—|原控制器正常结束：2612调用、1361.1s；全量校准边界独立CPU复核通过；评价及完整备份传输中；执行端 /home/scv/shared/phase122_20261015；未重复训练，未新增模型调用|')
+        write_table(text)
+        return
     d = U / 'delivery'
     controller = load(d / 'CONTROLLER_STATUS.json')
     assert controller['status'] == 'completed_pending_local_reference_join'
@@ -39,7 +64,24 @@ def main():
     assert train['encoder_unchanged'] and train['decoder_updated']
     assert train['trainable_parameters'] == 14135988
     assert not train['teacher_state_sha256']
-    assert sha(U / 'C_decoder_final.safetensors') == train['final_model_sha256']
+    model = U / 'C_decoder_final.safetensors'
+    assert sha(model) == train['final_model_sha256'] == load(d / 'TRAINING_SEAL.json')['models']['C']
+    raw = model.read_bytes()
+    size = struct.unpack('<Q', raw[:8])[0]
+    header = json.loads(raw[8:8+size])
+    tensors = {k: v for k, v in header.items() if k != '__metadata__'}
+    assert set(tensors) == set(load(d / 'train_C/PARAMETER_WHITELIST.json')['decoder_state_names'])
+    end = 0
+    for name, item in sorted(tensors.items(), key=lambda x: x[1]['data_offsets'][0]):
+        a, b = item['data_offsets']
+        assert a == end
+        end = b
+        tensor = np.frombuffer(raw[8+size+a:8+size+b], dtype={'F32': '<f4', 'I64': '<i8'}[item['dtype']])
+        assert tensor.size == int(np.prod(item['shape'])) and np.isfinite(tensor).all(), name
+    assert len(tensors) == 61 and end == len(raw)-8-size
+    backup_verified = '--backup-verified' in sys.argv
+    if backup_verified:
+        assert (U / 'remote_backup/phase122_20261015/EXIT_CODE').read_text().strip() == '0'
     assert load(O / 'LOCAL_CPU_ACCEPTANCE.json')['status'] == 'passed'
     assert load(O / 'CALIBRATION_INDEPENDENT_CPU_ACCEPTANCE.json')['status'] == 'passed'
     costs = [load(d / stage / 'RUN_STATUS.json') for stage in
@@ -52,8 +94,7 @@ def main():
                s['host_min_free_bytes'] >= 4000000000 and
                s['intermediate_peak_bytes'] <= 4000000000 for s in costs)
     thresholds = load(d / 'THRESHOLD_LOCK.json')['thresholds']
-    text = ['|数据池|模型／工作点|阈值|AP有效组／误报有效组|宏AP %|宏召回 %|平均负类误报 %|误报U95 %|最坏组及误报 %|备注|',
-            '|---|---|---|---|---|---|---|---|---|---|']
+    text = headings.copy()
     for pool in ('Catalogue', 'PixBox'):
         summary = rows(O / (pool + '_four_workpoints.csv'))
         per = rows(O / (pool + '_per_group.csv'))
@@ -61,7 +102,7 @@ def main():
         acceptance = load(O / (pool + '_CPU_ACCEPTANCE.json'))
         assert acceptance['status'] == 'passed'
         assert len(summary) == 4 and len(cmp) == 3
-        assert {x['group_id'] for x in per}.__len__() == (32 if pool == 'Catalogue' else 10)
+        assert len({x['group_id'] for x in per}) == (32 if pool == 'Catalogue' else 10)
         for arm in ('R', 'C100'):
             a, b = [v for v in summary if v['setting'].startswith(arm + '_')]
             assert a['macro_AP_pp'] == b['macro_AP_pp'] and a['pooled_AP_pp'] == b['pooled_AP_pp']
@@ -86,13 +127,13 @@ def main():
                       v['AP_groups'] + '/' + v['negative_groups'], fmt(v['macro_AP_pp']), fmt(v['macro_recall_pp']),
                       fmt(v['macro_FPR_pp']), fmt(v['FPR_U95_pp']), tiles + ' / ' + fmt(v['max_group_FPR_pp']), '；'.join(note)]
             text.append('|' + '|'.join(values) + '|')
-    elapsed = controller['elapsed_seconds'] + load(O / 'LOCAL_CPU_ACCEPTANCE.json')['elapsed_seconds']
-    text.append('|运行状态|完成|—|—|—|—|—|—|—|' +
-                f"控制器 {controller['elapsed_seconds']:.1f}s；本地评价后合计 {elapsed:.1f}s（不含传输／接手等待）；{calls}次调用；锁、全量校准边界、支持与CPU检查通过；原作业接续，无新增训练；执行端 /home/scv/shared/phase122_20261015；完整结果本地备份见 remote_backup|" )
-    target = U / 'phasecal-1-result.md'
-    with target.open('x', encoding='utf-8') as f:
-        f.write('\n'.join(text) + '\n')
-    print(target)
+    elapsed = time.time() - controller['started_epoch']
+    stage_seconds = sum(s['elapsed_seconds'] for s in costs)
+    status = '完成' if backup_verified else '部分完成'
+    backup_note = '完整结果本地备份SHA已核对：remote_backup' if backup_verified else '评价完成；完整备份仍在传输，尚未验收'
+    text.append(f'|运行状态|{status}|—|—|—|—|—|—|—|' +
+                f"自原控制器启动至交付表生成共 {elapsed:.1f}s（含传输／接手等待）；控制器 {controller['elapsed_seconds']:.1f}s；模型阶段墙钟合计 {stage_seconds:.1f}s；{calls}次调用；锁、全量校准边界、支持与CPU检查通过；原作业接续，无新增训练；执行端 /home/scv/shared/phase122_20261015；{backup_note}|" )
+    write_table(text)
 
 
 if __name__ == '__main__':
