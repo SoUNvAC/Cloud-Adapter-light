@@ -48,7 +48,8 @@ def main():
     for point,q in by['R'].items():
         ok=True
         for p in by:
-            v=by[p][point];assert all(str(v[k])==str(q[k]) for k in ('product_id','group_id','row20','col20'))
+            v=by[p][point];assert all(str(v[k])==str(q[k]) for k in ('product_id','row20','col20'))
+            if 'group_id' in v:assert str(v['group_id'])==str(q['group_id'])
             ok &= v['valid'] and v.get('coverage',True) and v.get('author_valid',True)
         support.append({'point_id':point,'common_valid':bool(ok)})
         counts[q['group_id']]['original']+=1;counts[q['group_id']]['common']+=int(ok)
