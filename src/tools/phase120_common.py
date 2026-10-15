@@ -3,7 +3,7 @@ import hashlib
 import inspect
 from pathlib import Path
 from phase119_common import (BASE,REPO,OLD,load,write,sha,ram,coordinates,image,
-    catalog_image,verify_native_and_cache,setup as setup119)
+    catalog_image,verify_native_and_cache,original_pix_score,setup as setup119)
 ROOT=Path('/home/scv/shared/phase120_20261015')
 LOCK=REPO/'src/research_results/phase120_20261015/PRE_EXECUTION_LOCK.json'
 
@@ -12,6 +12,8 @@ def setup():
     cfg=load(LOCK)
     amendment=REPO/'src/research_results/phase120_20261015/ENGINEERING_RECOVERY_LOCK.json'
     revised=load(amendment)['revised_source_sha256'] if amendment.exists() else {}
+    amendment2=REPO/'src/research_results/phase120_20261015/ENGINEERING_RECOVERY_002_LOCK.json'
+    if amendment2.exists():revised.update(load(amendment2)['revised_source_sha256'])
     for p,h in cfg['source_sha256'].items():assert sha(REPO/p)==revised.get(p,h),p
     return cfg
 

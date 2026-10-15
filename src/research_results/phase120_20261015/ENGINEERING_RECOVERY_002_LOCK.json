@@ -1,0 +1,12 @@
+{
+  "reason": "missing re-export original_pix_score on inference module import",
+  "failed_model_calls": 0,
+  "failed_training_steps": 0,
+  "reuse_C_and_D_endpoints": true,
+  "change": "restore existing Phase119 identity helper export; no inference arithmetic or model/data changes",
+  "revised_source_sha256": {
+    "src/tools/phase120_common.py": "88e17045d1388b47dbadfccaf9e080a7484c9a46358ebda0b7ab920a2e170126"
+  },
+  "resume_source_sha256": "ec739518859fe625e52514b3877899f25bb00f6afa04af39fddf16a7e95d9499",
+  "previous_recovery_lock_sha256": "8528566d3d836431f01c354b951f61b58e313d168277c67cf157f5975d076b90"
+}
