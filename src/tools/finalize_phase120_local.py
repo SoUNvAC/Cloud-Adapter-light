@@ -103,9 +103,9 @@ def main():
     text += ['', 'Catalogue为7个有参考云影相关组、全部32组参加误报评价；PixBox为8个有参考云影相关组、全部10组参加误报评价。无正类AP=NA；改善/稳定/下降沿用±1pp。10000次配对组bootstrap，seed120015，仅描述，不以区间跨零自动关闭方向。',
              '', '完整逐组差、逐组运行指标见 Catalogue_per_group.csv、PixBox_per_group.csv；最差AP与召回损伤见 worst_group_damage.csv。',
              '', '## 成本与验收', '',f"实际模型调用{all_calls}，含D首次失败的18次构建；失败发生于JSON图签名比较，D当时0训练／0 gate前向，已保留记录，C完整复用。总墙钟（包括工程暂停）{controller['elapsed_seconds']:.1f}秒。训练损失、起末参数哈希、编码器／教师不变回执与参数白名单均已保存。",
-             f"CPU进程峰值{completion['CPU_peak_bytes']/1e9:.3f}GB，GPU allocator预留峰值{completion['GPU_reserved_peak_bytes']/1e9:.3f}GB，宿主可用最小{completion['minimum_host_free_bytes']/1e9:.3f}GB，中间文件采样峰值{completion['peak_intermediate_bytes']/1e9:.3f}GB。", 
+             f"CPU进程峰值{completion['CPU_peak_bytes']/1e9:.3f}GB，GPU allocator预留峰值{completion['GPU_reserved_peak_bytes']/1e9:.3f}GB，宿主可用最小{completion['minimum_host_free_bytes']/1e9:.3f}GB，中间文件采样峰值{completion['peak_intermediate_bytes']/1e9:.3f}GB。",
              '', '部署仅单RegNet，18,039,132参数，教师不加载。single_scene_deployment.csv保留同一冻结首景的R/C/D各两次完整推理计时／逐模型CUDA event；仅为结构验收，固定顺序与缓存状态未消除，不能替代Phase119完整速度基准。read-to-point计时扣除额外CPU核验，属于带仪器分段估计，非无仪器端到端保证。',
-             f"所有完整推理的独立CPU confidence重建最大误差{max(checks):.9g}；新R基准景对原Phase119 R最大点分数误差{difference:.9g}，均≤1e-5。", 
+             f"所有完整推理的独立CPU confidence重建最大误差{max(checks):.9g}；新R基准景对原Phase119 R最大点分数误差{difference:.9g}，均≤1e-5。",
              '', '最终decoder权重留本地outputs和远端shared，未把大数组、逐点参考或work_dirs传入Git。复原时从PRE_EXECUTION_LOCK引用的原RegNet官方safetensors按原作者加载器构建，再仅load对应decoder文件（strict=False，缺项只能为冻结encoder）；PARAMETER_WHITELIST给出允许键。',
              '', '## 2．结论探讨', '', '见同目录 ANALYSIS.md；与上述原始数据分开。',
              '', '仍属已暴露池上的单seed探索；训练地点交集未知、参考语义局限与旧独立审查不足保留。不得改写旧主检验失败，也不构成新增独立确认。']
