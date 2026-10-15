@@ -1,0 +1,19 @@
+{
+  "phase": 120,
+  "reason": "JSON lists vs in-memory tuple pairs in graph-signature equality before any D gate/train forward",
+  "failed_attempt": {
+    "D_training_steps": 0,
+    "D_gate_calls": 0,
+    "D_construction_calls": 18
+  },
+  "retain_C_final": true,
+  "change": "serialize signature module pairs consistently as lists; no loss/optimizer/data/schedule changes",
+  "revised_source_sha256": {
+    "src/tools/train_phase120.py": "371f45861233f8528a02128b7ce60750863ad0e5049a71d93784ec3525f726d9",
+    "src/tools/phase120_common.py": "98dc454dffe71ce6123a9bd3c0a99e253a33668f1b7751ba0f68f819d714cdc1"
+  },
+  "original_lock_sha256": "d9c8e59bac9e6c137c1810c0b1243b0398d4233e21a94f4645fb547bc3f0bb74",
+  "calls_budget_unchanged": 8000,
+  "recovery_authorization": "Phase120 protocol section4 permits engineering repair within budget",
+  "resume_source_sha256": "8a2ad5521ddd4b6f7cf18b446aea5ce2a8b12b8d73209458c23241794a56149f"
+}

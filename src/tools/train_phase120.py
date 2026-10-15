@@ -74,7 +74,7 @@ def main(mode):
         return {n:v for n,v in student.state_dict().items() if n not in dec}
     initial_encoder=digest_state(enc_state());initial_decoder=digest_state({n:v for n,v in student.state_dict().items() if n in dec})
     teacher_hash=[digest_state(t.state_dict()) for t in teachers]
-    signature={'modules':[(n,type(v).__module__+'.'+type(v).__qualname__) for n,v in student.named_modules()],
+    signature={'modules':[[n,type(v).__module__+'.'+type(v).__qualname__] for n,v in student.named_modules()],
                'state':{n:list(v.shape) for n,v in student.state_dict().items()}}
     from fastai.vision.models.unet import DynamicUnet
     from fastai.vision.learner import create_unet_model

@@ -10,7 +10,9 @@ LOCK=REPO/'src/research_results/phase120_20261015/PRE_EXECUTION_LOCK.json'
 def setup():
     setup119()
     cfg=load(LOCK)
-    for p,h in cfg['source_sha256'].items():assert sha(REPO/p)==h,p
+    amendment=REPO/'src/research_results/phase120_20261015/ENGINEERING_RECOVERY_LOCK.json'
+    revised=load(amendment)['revised_source_sha256'] if amendment.exists() else {}
+    for p,h in cfg['source_sha256'].items():assert sha(REPO/p)==revised.get(p,h),p
     return cfg
 
 def decoder_names(model):
