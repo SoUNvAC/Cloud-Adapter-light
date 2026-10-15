@@ -1,0 +1,26 @@
+[
+  {
+    "pool": "Catalogue",
+    "comparison": "C12001-R",
+    "oracle_delta_macro_recall_pp": 25.260815499275736,
+    "not_deployable": true
+  },
+  {
+    "pool": "Catalogue",
+    "comparison": "D12001-C12001",
+    "oracle_delta_macro_recall_pp": -18.87858015839963,
+    "not_deployable": true
+  },
+  {
+    "pool": "Catalogue",
+    "comparison": "C12002-R",
+    "oracle_delta_macro_recall_pp": 25.143356235561384,
+    "not_deployable": true
+  },
+  {
+    "pool": "Catalogue",
+    "comparison": "D12002-C12002",
+    "oracle_delta_macro_recall_pp": -14.397277942397096,
+    "not_deployable": true
+  }
+]

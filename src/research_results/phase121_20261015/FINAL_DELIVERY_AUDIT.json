@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "models_only_local_outputs_and_remote_shared": true,
+  "no_binary_weights_in_git_result_directory": true,
+  "all_pre_execution_evaluation_postprocess_source_hashes_unchanged": true,
+  "work_dirs_transfers": 0,
+  "no_extra_fits_or_model_calls_during_finalization": true,
+  "local_PixBox_CPU_model_calls": 0,
+  "seven_policy_common_support_loss": {
+    "Catalogue": 0,
+    "PixBox": 0
+  },
+  "data_and_analysis_separate": true
+}

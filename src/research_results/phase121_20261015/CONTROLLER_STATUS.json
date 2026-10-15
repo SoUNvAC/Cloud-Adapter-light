@@ -1,0 +1,15 @@
+{
+  "status": "completed_pending_local_PixBox_reference_join",
+  "calls_completed": 6483,
+  "started_epoch": 1792047792.0129979,
+  "completed": [
+    "train_C",
+    "train_D",
+    "C_Catalogue",
+    "D_Catalogue",
+    "C_PixBox",
+    "D_PixBox"
+  ],
+  "elapsed_seconds": 2554.308452129364,
+  "Catalogue_evaluation_complete_before_PixBox": "70ace01d9fc30d0e2af728d0c3024f57cf672f8ff1c61bd93c20c514f7bd8bdd"
+}

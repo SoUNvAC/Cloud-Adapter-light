@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "groups": 10,
+  "AP_groups": 8,
+  "all_five_Phase120_baselines_reproduced": true,
+  "support_loss": 0,
+  "independent_tied_AP_and_scalar_bootstrap": true,
+  "model_calls": 0,
+  "threshold": 0.5,
+  "not_full_scene_FPR": true
+}

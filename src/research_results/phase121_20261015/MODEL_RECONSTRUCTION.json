@@ -1,0 +1,44 @@
+{
+  "original_asset_lock": "src/research_results/phase111_20261014/PRE_EXECUTION_LOCK.json",
+  "architecture": "original author fastai DynamicUnet regnety_004, 3 inputs and 4 outputs",
+  "input_order": [
+    "B04",
+    "B03",
+    "B8A"
+  ],
+  "normalization": "original per-band nonzero author channel_norm",
+  "decoder_overlays": [
+    {
+      "arm": "C",
+      "policy": "C12002",
+      "filename": "C_decoder_final.safetensors",
+      "local_path": "outputs/phase121/phase121_20261015/C_decoder_final.safetensors",
+      "remote_path": "/home/scv/shared/phase121_20261015/C_decoder_final.safetensors",
+      "tensors": 61,
+      "all_finite": true,
+      "bytes": 56556112,
+      "sha256": "445d34e4d240281abfdf48c5a42df528c27880133f93b836ae69ad11e88fe1e4"
+    },
+    {
+      "arm": "D",
+      "policy": "D12002",
+      "filename": "D_decoder_final.safetensors",
+      "local_path": "outputs/phase121/phase121_20261015/D_decoder_final.safetensors",
+      "remote_path": "/home/scv/shared/phase121_20261015/D_decoder_final.safetensors",
+      "tensors": 61,
+      "all_finite": true,
+      "bytes": 56556112,
+      "sha256": "7871b7df353a154dde116e1214ea623b0b24d26cc68924e63f59712a6f84c8bf"
+    }
+  ],
+  "allowed_state_keys": "C_PARAMETER_WHITELIST.json / D_PARAMETER_WHITELIST.json",
+  "reconstruction": "load original RegNet official safetensors with original author loader; load only decoder overlay strict=False; missing keys must be frozen encoder only",
+  "inference": {
+    "patch_size": 1000,
+    "overlap": 300,
+    "temperature": 1,
+    "confidence": "author softmax + float32(.001), clipped [0.001,0.999]",
+    "threshold": 0.5
+  },
+  "model_storage": "local outputs/phase121/phase121_20261015 and remote shared/phase121_20261015; no GitHub model weights"
+}

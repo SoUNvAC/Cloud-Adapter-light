@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "two_fixed_fits": true,
+  "within_group_seed_averaging": true,
+  "support_first": true,
+  "old_five_baselines_reproduced": true,
+  "oracle_direct_boundary_acceptance": true,
+  "AP_ties_independent": true,
+  "bootstrap_scalar_independent": true,
+  "max_independent_confidence_error": 2.384185791015625e-07,
+  "full_scene_receipts": 98,
+  "model_calls_in_finalizer": 0
+}

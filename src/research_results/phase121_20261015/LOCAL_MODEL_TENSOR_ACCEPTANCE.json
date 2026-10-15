@@ -1,0 +1,28 @@
+{
+  "status": "passed",
+  "models": [
+    {
+      "arm": "C",
+      "policy": "C12002",
+      "filename": "C_decoder_final.safetensors",
+      "local_path": "outputs/phase121/phase121_20261015/C_decoder_final.safetensors",
+      "remote_path": "/home/scv/shared/phase121_20261015/C_decoder_final.safetensors",
+      "tensors": 61,
+      "all_finite": true,
+      "bytes": 56556112,
+      "sha256": "445d34e4d240281abfdf48c5a42df528c27880133f93b836ae69ad11e88fe1e4"
+    },
+    {
+      "arm": "D",
+      "policy": "D12002",
+      "filename": "D_decoder_final.safetensors",
+      "local_path": "outputs/phase121/phase121_20261015/D_decoder_final.safetensors",
+      "remote_path": "/home/scv/shared/phase121_20261015/D_decoder_final.safetensors",
+      "tensors": 61,
+      "all_finite": true,
+      "bytes": 56556112,
+      "sha256": "7871b7df353a154dde116e1214ea623b0b24d26cc68924e63f59712a6f84c8bf"
+    }
+  ],
+  "Omni_model_calls": 0
+}

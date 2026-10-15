@@ -1,0 +1,20 @@
+{
+  "pools": [
+    {
+      "pool": "Catalogue",
+      "all_groups": 32,
+      "AP_groups": 7,
+      "positive": 655961,
+      "negative": 32767527,
+      "support_loss": 0
+    },
+    {
+      "pool": "PixBox",
+      "all_groups": 10,
+      "AP_groups": 8,
+      "positive": 379,
+      "negative": 8190,
+      "support_loss": 0
+    }
+  ]
+}

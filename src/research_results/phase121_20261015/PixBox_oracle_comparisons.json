@@ -1,0 +1,26 @@
+[
+  {
+    "pool": "PixBox",
+    "comparison": "C12001-R",
+    "oracle_delta_macro_recall_pp": -3.8656862785799717,
+    "not_deployable": true
+  },
+  {
+    "pool": "PixBox",
+    "comparison": "D12001-C12001",
+    "oracle_delta_macro_recall_pp": -0.7440241844769417,
+    "not_deployable": true
+  },
+  {
+    "pool": "PixBox",
+    "comparison": "C12002-R",
+    "oracle_delta_macro_recall_pp": -0.8090401687842643,
+    "not_deployable": true
+  },
+  {
+    "pool": "PixBox",
+    "comparison": "D12002-C12002",
+    "oracle_delta_macro_recall_pp": 0.9055901447633801,
+    "not_deployable": true
+  }
+]
