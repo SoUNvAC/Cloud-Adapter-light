@@ -21,6 +21,8 @@ def table(path,rows):
 def rows(p):
     with p.open(encoding='utf-8',newline='') as f:return list(csv.DictReader(f))
 def number(v,n=3):return f'{float(v):.{n}f}' if v not in ('',None) else 'NA'
+def percent(v):return number(float(v)*100) if v not in ('',None) else 'NA'
+def interval(v):return '['+number(v[0])+', '+number(v[1])+']' if v is not None else 'NA'
 
 
 def main():
@@ -35,10 +37,15 @@ def main():
     assert costs['all18_results_reported'] and len(costs['rows'])==18
     assert job['actual_model_calls']<=4000 and job['inference_wall_seconds']<=7200
     e={(r['product'],r['repetition']):r for r in costs['rows'] if r['policy']=='E'}
+    receipts={(p,r['product_id'],r['repetition']):r for p in ('E','R','N')
+              for r in load(U/'delivery'/p/'SCENE_RECEIPTS.json') if r['pool']=='PixBox'}
     benchmark=[]
     for r in costs['rows']:
         base=e[(r['product'],r['repetition'])]
-        benchmark.append(dict(r,GPU_time_ratio_to_matched_E=r['GPU_model_seconds']/base['GPU_model_seconds'],
+        extra=receipts[(r['policy'],r['product'],r['repetition'])]['excluded_inference_CPU_validation_seconds']
+        benchmark.append(dict(r,extra_CPU_validation_seconds=extra,
+                              instrumented_raw_wall_seconds=r['whole_scene_read_to_point_seconds']+extra,
+                              GPU_time_ratio_to_matched_E=r['GPU_model_seconds']/base['GPU_model_seconds'],
                               whole_time_ratio_to_matched_E=r['whole_scene_read_to_point_seconds']/base['whole_scene_read_to_point_seconds']))
     table(O/'benchmark_all18.csv',benchmark)
     resources=[]
@@ -57,14 +64,15 @@ def main():
           'measurement_scope':'same three fixed PixBox scenes, both full repetitions; resource peaks are entire isolated worker',
           'OS_cache_and_order_not_eliminated':True})
     text=['# Phase119：Omni单模型精度／部署成本对照','','## 1．数据结果','',
-          '本轮固定E＝原V1 RegNetY-004＋ConvNeXtV2-Nano集成；R＝仅RegNetY-004；N＝仅ConvNeXtV2-Nano。R与Phase117输入补丁R不是同一设置。本轮未加载任何输入补丁，零训练、拟合、新下载、校准或阈值搜索。均为原B04／B03／B8A、20m、patch1000／overlap300、batch1、float32、CPU拼接、compile=False和作者confidence规则。','']
+          '本轮固定E＝原V1 RegNetY-004＋ConvNeXtV2-Nano集成；R＝仅RegNetY-004；N＝仅ConvNeXtV2-Nano。R与Phase117输入补丁R不是同一设置。本轮未加载任何输入补丁，零训练、拟合、新下载、校准或阈值搜索。均为原B04／B03／B8A、20m、patch1000／overlap300、batch1、float32、CPU拼接、compile=False和作者confidence规则。','',
+          '两池为PixBox／CMIX（Zenodo5036991，原16产品／10相关组／9500固定位置）及Sentinel-2 Cloud Mask Catalogue（Zenodo4172871，原32个development代表）。ALCD及153个fit组不进入本轮评价。','']
     for pool in ('PixBox','Catalogue'):
         ss=rows(O/(pool+'_summary.csv'));pg=rows(O/(pool+'_per_group.csv'));cc=load(O/(pool+'_comparisons.json'))['rows']
         assert len(ss)==3
         for p in ('E','R','N'):
             row=next(s for s in ss if s['setting']==p)
             av=[float(g[p+'_AP']) for g in pg if g[p+'_AP']]
-            assert abs(statistics.mean(av)*100-float(row['macro_AP_pp']))<1e-9
+            assert (abs(statistics.mean(av)*100-float(row['macro_AP_pp']))<1e-9) if av else row['macro_AP_pp']==''
             assert sum(int(g[p+'_TP']) for g in pg)==int(row['pooled_TP'])
             assert sum(int(g[p+'_FP']) for g in pg)==int(row['pooled_FP'])
         text += [f'### {pool}','',f"原{ss[0]['all_groups']}相关组，实际{ss[0]['AP_groups']}组有正负类可计算AP；共同支持下参考云影{ss[0]['pooled_positive']}、非云影{ss[0]['pooled_negative']}。原无影组为NA，继续参与误报描述。",'',
@@ -72,9 +80,9 @@ def main():
                  '|---|---:|---:|---:|---:|---:|']
         for v in ss:text.append('| '+v['setting']+' | '+' | '.join(number(v[k]) for k in ('macro_AP_pp','pooled_AP_pp','macro_recall_pp','macro_negative_FP_pp','worst_group_negative_FP_pp'))+' |')
         text += ['', '| 固定比较 | 平均ΔAP (pp) | 组配对bootstrap95%区间 | 改善／稳定／下降组 |','|---|---:|---|---|']
-        for v in cc:text.append(f"| {v['comparison']} | {number(v['mean_delta_AP_pp'])} | [{number(v['CI95_pp'][0])}, {number(v['CI95_pp'][1])}] | {v['improved_gt1pp']}/{v['stable_within1pp']}/{v['declined_lt_minus1pp']} |")
+        for v in cc:text.append(f"| {v['comparison']} | {number(v['mean_delta_AP_pp'])} | {interval(v['CI95_pp'])} | {v['improved_gt1pp']}/{v['stable_within1pp']}/{v['declined_lt_minus1pp']} |")
         text += ['', '| 设置 | 池化召回 (%) | 池化精确率 (%) | 池化负类误报 (%) | TP／FP |','|---|---:|---:|---:|---|']
-        for v in ss:text.append(f"| {v['setting']} | {number(float(v['pooled_recall'])*100)} | {number(float(v['pooled_precision'])*100)} | {number(float(v['pooled_negative_FP_fraction'])*100)} | {v['pooled_TP']}/{v['pooled_FP']} |")
+        for v in ss:text.append(f"| {v['setting']} | {percent(v['pooled_recall'])} | {percent(v['pooled_precision'])} | {percent(v['pooled_negative_FP_fraction'])} | {v['pooled_TP']}/{v['pooled_FP']} |")
         text += ['',f'全部逐组AP、召回、精确率、误报、样本量与三项原始差值见{pool}_per_group.csv；稀疏支持保留标注，未补样或挑选场景。','']
     text += ['PixBox误报是所选有效负类点比例；Catalogue误报是密集发布参考下有效非云影像元比例。两池分别计算，不能混作同一总体或同一全景FPR。阈值固定0.5，没有扫描。Catalogue沿用Phase117原共同有效掩膜，包括既有观测／发布参考有效规则；PixBox没有额外套用Source六波段筛选。','',
              '相关组等权；PixBox同组产品先合并计算AP。每项差值固定10000次配对组bootstrap、seed119015，区间仅作描述。方向按>1pp／±1pp以内／<−1pp划分，未另设显著性或最小增益通过门，未将像元、产品或重复计时当新独立组。','',
@@ -90,7 +98,7 @@ def main():
     for v in benchmark:
         pid=v['product'];label=pid.split('_')[2][:8]+'/'+pid.split('_T')[1][:5]
         text.append(f"| {v['policy']} | {label} | {v['repetition']} | {number(v['GPU_model_seconds'])} | {number(v['whole_scene_read_to_point_seconds'])} | {number(v['whole_time_ratio_to_matched_E'])} |")
-    text += ['', 'GPU计算用CUDA事件同步计量模型段，整景为同一读入／取点实现；SHA内容核验、额外独立CPU验收、压缩与模型加载均另计，正常作者归一化／CPU拼接仍在整景时间内。18次值全部列出，没有只报最快一次；进程顺序、系统缓存与共享硬件影响没有消除，不据此声称普适加速倍数。','',
+    text += ['', 'GPU计算用CUDA事件同步计量模型段，整景为同一读入／取点实现；SHA内容核验、额外独立CPU验收、压缩与模型加载均另计，正常作者归一化／CPU拼接仍在整景时间内。benchmark_all18.csv另列带验收钩子的原始wall及扣除的CPU检查时间。检查可能与作者CPU预取重叠，因此扣除后的整景值是分段估计，不冒充完全无插桩部署测试。18次值全部列出，没有只报最快一次；进程顺序、系统缓存与共享硬件影响没有消除，不据此声称普适加速倍数。','',
              '## 2．结论探讨','',(O/'ANALYSIS.md').read_text(encoding='utf-8').strip(),'',
              '## 3．下一小步','',(O/'NEXT_STEP.md').read_text(encoding='utf-8').strip(),'',
              '## 4．验收与边界','',
