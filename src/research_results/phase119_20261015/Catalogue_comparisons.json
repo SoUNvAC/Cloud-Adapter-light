@@ -1,0 +1,53 @@
+{
+  "rows": [
+    {
+      "pool": "Catalogue",
+      "comparison": "R-E",
+      "n_related_groups": 7,
+      "mean_delta_AP_pp": -3.3777916710445406,
+      "CI95_pp": [
+        -5.536358000639992,
+        -1.4208171689621258
+      ],
+      "improved_gt1pp": 0,
+      "stable_within1pp": 1,
+      "declined_lt_minus1pp": 6,
+      "resamples": 10000,
+      "seed": 119015,
+      "no_significance_or_minimum_effect_pass_gate": true
+    },
+    {
+      "pool": "Catalogue",
+      "comparison": "N-E",
+      "n_related_groups": 7,
+      "mean_delta_AP_pp": -0.6147200909213851,
+      "CI95_pp": [
+        -1.8858493528208817,
+        0.7963185221621384
+      ],
+      "improved_gt1pp": 1,
+      "stable_within1pp": 4,
+      "declined_lt_minus1pp": 2,
+      "resamples": 10000,
+      "seed": 119015,
+      "no_significance_or_minimum_effect_pass_gate": true
+    },
+    {
+      "pool": "Catalogue",
+      "comparison": "N-R",
+      "n_related_groups": 7,
+      "mean_delta_AP_pp": 2.763071580123156,
+      "CI95_pp": [
+        0.4251325633729303,
+        5.90755279346996
+      ],
+      "improved_gt1pp": 3,
+      "stable_within1pp": 4,
+      "declined_lt_minus1pp": 0,
+      "resamples": 10000,
+      "seed": 119015,
+      "no_significance_or_minimum_effect_pass_gate": true
+    }
+  ],
+  "AP_group_unit": "related group; products combined first"
+}

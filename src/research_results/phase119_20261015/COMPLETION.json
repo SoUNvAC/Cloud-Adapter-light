@@ -1,0 +1,11 @@
+{
+  "phase": 119,
+  "status": "completed_exploratory_accuracy_cost_tradeoff",
+  "two_pools_reported_separately": true,
+  "all18_benchmarks_reported": true,
+  "CPU_acceptance_passed": true,
+  "actual_model_calls": 3470,
+  "no_new_training_fitting_download_or_threshold_search": true,
+  "no_followup_started": true,
+  "work_dirs_transferred": false
+}

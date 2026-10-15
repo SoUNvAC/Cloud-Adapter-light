@@ -83,6 +83,12 @@ def main():
         for v in cc:text.append(f"| {v['comparison']} | {number(v['mean_delta_AP_pp'])} | {interval(v['CI95_pp'])} | {v['improved_gt1pp']}/{v['stable_within1pp']}/{v['declined_lt_minus1pp']} |")
         text += ['', '| 设置 | 池化召回 (%) | 池化精确率 (%) | 池化负类误报 (%) | TP／FP |','|---|---:|---:|---:|---|']
         for v in ss:text.append(f"| {v['setting']} | {percent(v['pooled_recall'])} | {percent(v['pooled_precision'])} | {percent(v['pooled_negative_FP_fraction'])} | {v['pooled_TP']}/{v['pooled_FP']} |")
+        if pool=='PixBox':
+            s=load(O/'PixBox_COMMON_SUPPORT_LOCK.json');ignored=s['common_valid']-int(ss[0]['pooled_positive'])-int(ss[0]['pooled_negative'])
+            text += ['',f"共同有效{s['common_valid']}/{s['original']}点，支持损失{s['original']-s['common_valid']}；其中原ignore {ignored}点不参与AP或运行点统计。"]
+        else:
+            s=load(U/'delivery/Catalogue_COMMON_SUPPORT_LOCK.json')['groups']
+            text += ['',f"原有效{sum(g['original_valid'] for g in s)}像元，共同有效{sum(g['common_valid'] for g in s)}，支持损失{sum(g['loss'] for g in s)}；未补样或更换代表。"]
         text += ['',f'全部逐组AP、召回、精确率、误报、样本量与三项原始差值见{pool}_per_group.csv；稀疏支持保留标注，未补样或挑选场景。','']
     text += ['PixBox误报是所选有效负类点比例；Catalogue误报是密集发布参考下有效非云影像元比例。两池分别计算，不能混作同一总体或同一全景FPR。阈值固定0.5，没有扫描。Catalogue沿用Phase117原共同有效掩膜，包括既有观测／发布参考有效规则；PixBox没有额外套用Source六波段筛选。旧E的复现指AP、输入支持和数值；本轮运行点按0.5重新计算，没有拼接Phase117原三类argmax召回。','',
              '相关组等权；PixBox同组产品先合并计算AP。每项差值固定10000次配对组bootstrap、seed119015，区间仅作描述。方向按>1pp／±1pp以内／<−1pp划分，未另设显著性或最小增益通过门，未将像元、产品或重复计时当新独立组。','',

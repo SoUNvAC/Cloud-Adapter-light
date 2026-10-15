@@ -1,0 +1,21 @@
+{
+  "PixBox": {
+    "original": 9500,
+    "common_valid": 9500,
+    "support_loss": 0,
+    "ignore_on_common_support": 931,
+    "evaluated_shadow": 379,
+    "evaluated_nonshadow": 8190,
+    "all_groups": 10,
+    "AP_groups": 8
+  },
+  "Catalogue": {
+    "original_valid": 33423488,
+    "common_valid": 33423488,
+    "support_loss": 0,
+    "all_groups": 32,
+    "AP_groups": 7
+  },
+  "zero_model_calls": true,
+  "no_cross_pool_combination": true
+}

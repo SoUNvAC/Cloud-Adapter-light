@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "poolwise_group_and_pooled_counts_replayed": true,
+  "all_three_fixed_comparisons_replayed": true,
+  "all18_matched_benchmarks_present": true,
+  "calls": {
+    "main": 3444,
+    "construction": 22,
+    "warmup": 4,
+    "total": 3470
+  },
+  "scene_run_receipts": 108,
+  "maximum_errors": {
+    "max_confidence_error": 2.384185791015625e-07,
+    "max_raw_mean_error": 0.0,
+    "repeat_full_array_max_error": 0.0,
+    "old_E_max_error": 0.0,
+    "warm_error": 0.0
+  },
+  "no_additional_model_calls": true,
+  "audit_helper_note": "Absent warmup checks are null on later scenes; excluded from max, no score or model changes"
+}

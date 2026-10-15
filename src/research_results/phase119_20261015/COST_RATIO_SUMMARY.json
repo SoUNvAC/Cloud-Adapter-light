@@ -1,0 +1,25 @@
+{
+  "matched_six_scene_runs_per_policy": {
+    "E": {
+      "GPU_seconds": 41.569412643432614,
+      "whole_seconds": 358.5137523620797,
+      "GPU_ratio_to_E": 1.0,
+      "whole_ratio_to_E": 1.0
+    },
+    "R": {
+      "GPU_seconds": 15.12173564529419,
+      "whole_seconds": 334.10613077515154,
+      "GPU_ratio_to_E": 0.3637707314992148,
+      "whole_ratio_to_E": 0.9319199851438955
+    },
+    "N": {
+      "GPU_seconds": 27.980534233093266,
+      "whole_seconds": 345.100351809946,
+      "GPU_ratio_to_E": 0.6731039111160931,
+      "whole_ratio_to_E": 0.9625860919873811
+    }
+  },
+  "no_fastest_run_selection": true,
+  "measurement_scope": "same three fixed PixBox scenes, both full repetitions; resource peaks are entire isolated worker",
+  "OS_cache_and_order_not_eliminated": true
+}

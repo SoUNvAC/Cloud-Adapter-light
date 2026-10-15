@@ -1,0 +1,4 @@
+policy,models,architectures,weight_bytes,total_parameters,trainable_parameters_when_loaded,load_seconds,construction_calls,separate_process,PID,no_other_member_loaded,trainable_parameters_during_inference,CPU_RSS_peak_bytes,GPU_reserved_peak_bytes,GPU_observed_sampled_peak_bytes,actual_total_calls,main_calls,warmup_calls
+E,2,"['regnety_004', 'convnextv2_nano']",202479912,50574276,50574276,3.2775729739951203,11,True,95190,True,0,4441006080,9200205824,10195304448,781,768,2
+R,1,['regnety_004'],72314968,18039132,18039132,1.823312188993441,7,True,99780,True,0,4371116032,3349151744,4325376000,1346,1338,1
+N,1,['convnextv2_nano'],130164944,32535144,32535144,1.990079412003979,4,True,112705,True,0,4451278848,6947864576,7903117312,1343,1338,1
