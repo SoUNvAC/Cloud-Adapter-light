@@ -75,7 +75,7 @@ def main():
             shutil.copyfile(delivery/('train_'+p)/n,O/(p+'_'+n))
     completion={'phase':120,'status':'completed_exploratory','calls':all_calls,'elapsed_wall_seconds_including_engineering_pause':controller['elapsed_seconds'],
         'engineering_incidents':[{'reason':'JSON tuple/list graph equality','extra_construction_calls':18,'extra_training_steps':0},{'reason':'inference helper import missing','extra_calls':0,'extra_training_steps':0}],
-        'post_model_CPU_replay_seconds':cpu['elapsed_seconds'],'first_CPU_pass_resource_peak_instrumented':False,
+        'guarded_CPU_replay_seconds':cpu['elapsed_seconds'],'first_CPU_pass_resource_peak_instrumented':False,
         'training_steps':{'C':1000,'D':1000},'failed_attempt_steps':0,'failed_construction_calls':18,'new_downloads':0,
         'CPU_peak_bytes':max(r['rss_peak_bytes'] for r in records),'GPU_reserved_peak_bytes':max(r['gpu_reserved_peak_bytes'] for r in records),
         'minimum_host_free_bytes':min(r['host_min_free_bytes'] for r in records if r['host_min_free_bytes'] is not None),
@@ -104,7 +104,9 @@ def main():
         shutil.copyfile(source,dest);assert sha(dest)==sha(source)
     shutil.copyfile(delivery/'Catalogue_CPU_REPLAY_RESOURCE.json',O/'Catalogue_CPU_REPLAY_RESOURCE.json')
     completion['combined_CPU_replay_and_live_inference_RSS_sampled_peak_bytes']=cpu['combined_CPU_replay_and_live_inference_RSS_sampled_peak_bytes']
-    completion['necessary_models_in_Git']={p:{'path':str((modeldir/(p+'_decoder_final.safetensors')).relative_to(R)).replace('\\','/'),'sha256':sha(modeldir/(p+'_decoder_final.safetensors'))} for p in ('C','D')}
+    completion['local_necessary_models_pending_external_approval']={p:{'path':str((modeldir/(p+'_decoder_final.safetensors')).relative_to(R)).replace('\\','/'),'sha256':sha(modeldir/(p+'_decoder_final.safetensors'))} for p in ('C','D')}
+    completion['Git_model_weights_uploaded']=False
+    completion['model_external_delivery']='blocked_by_auto_review_pending_explicit_user_approval'
     save(O/'COMPLETION.json',completion)
     # Tables and raw comparisons are the data; editorial interpretation is supplied separately.
     text=['# Phase120 数据结果','',f'C／D各1000步，seed12001，原153 fit代表；固定末步后依次评价32 Catalogue development代表与16 PixBox产品／10相关组。仅训练原RegNet decoder，未新增输入或模块。',
@@ -134,7 +136,7 @@ def main():
              '首次Catalogue CPU指标通过未单独记录内存峰值；另对全部五模型及逐组/池化/区间做了受16GiB限制的完整缓存复算，结果复现，其峰值计入资源表，另记录并行推理＋CPU复算RSS采样峰值，合计也受16GiB约束；复算0模型调用。CPU-only复算辅助程序曾有一次入口语法错误（0模型调用），原日志保留；未改任何模型或指标定义。',
              '', '部署仅单RegNet，18,039,132参数，教师不加载。single_scene_deployment.csv保留同一冻结首景的R/C/D各两次完整推理计时／逐模型CUDA event；仅为结构验收，固定顺序与缓存状态未消除，不能替代Phase119完整速度基准。read-to-point计时扣除额外CPU核验，属于带仪器分段估计，非无仪器端到端保证。',
              f"所有完整推理的独立CPU confidence重建最大误差{max(checks):.9g}；新R基准景对原Phase119 R最大点分数误差{difference:.9g}，均≤1e-5。",
-             '', '最终decoder权重留本地outputs和远端shared，Git另外交付必要的C/D两个decoder末步（各56.56MB），不含逐点参考、大像元缓存或work_dirs。复原时从PRE_EXECUTION_LOCK引用的原RegNet官方safetensors按原作者加载器构建，再仅load对应decoder文件（strict=False，缺项只能为冻结encoder）；PARAMETER_WHITELIST给出允许键。',
+             '', '最终decoder权重留本地outputs和远端shared，两份各56.56MB的必要C/D decoder末步已在本地outputs和shared核SHA保存；向GitHub发送模型的动作被自动审批拦截，等待用户明确授权，Git暂不含模型权重，不含逐点参考、大像元缓存或work_dirs。复原时从PRE_EXECUTION_LOCK引用的原RegNet官方safetensors按原作者加载器构建，再仅load对应decoder文件（strict=False，缺项只能为冻结encoder）；PARAMETER_WHITELIST给出允许键。',
              '', '## 2．结论探讨', '', '见同目录 ANALYSIS.md；与上述原始数据分开。',
              '', '仍属已暴露池上的单seed探索；训练地点交集未知、参考语义局限与旧独立审查不足保留。不得改写旧主检验失败，也不构成新增独立确认。']
     (O/'README.md').write_text('\n'.join(text)+'\n',encoding='utf-8')

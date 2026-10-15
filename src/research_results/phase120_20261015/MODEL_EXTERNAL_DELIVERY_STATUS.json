@@ -1,0 +1,11 @@
+{
+  "action": "push two C/D decoder checkpoints to existing GitHub repository",
+  "bytes": 113112224,
+  "status": "blocked_auto_review_requires_direct_user_approval",
+  "reason": "reviewer did not treat execute-phase request and protocol necessary-model push/pull clause as explicit authorization for model-weight external transmission",
+  "attempts": 2,
+  "code_and_small_results_continue": true,
+  "models_retained_locally_and_shared": true,
+  "unpublished_model_commit": "60f4030 retained in local reflog; removed from outbound main ancestry",
+  "no_model_weights_sent": true
+}
