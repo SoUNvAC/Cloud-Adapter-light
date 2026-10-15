@@ -49,7 +49,7 @@ def main():
             elif v is None:assert b[key]==''
             else:assert str(v)==b[key]
     guard();finished.set();state.update(status='passed',all_five_pool_and_group_metrics_reproduced=True,
-        'all_three_bootstrap_comparisons_exact':True,'first_CPU_pass_resource_peak_not_instrumented':True,
-        'this_complete_cache_replay_resource_guarded':True,'host_free_after':host_free())
+        all_three_bootstrap_comparisons_exact=True,first_CPU_pass_resource_peak_not_instrumented=True,
+        this_complete_cache_replay_resource_guarded=True,host_free_after=host_free())
     write(path,state);print(state,flush=True)
 if __name__=='__main__':main()
