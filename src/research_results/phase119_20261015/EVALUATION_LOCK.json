@@ -1,0 +1,26 @@
+{
+  "phase": 119,
+  "status": "fixed_before_new_score_evaluation",
+  "source_sha256": {
+    "src/tools/phase119_metrics.py": "e3733561f60272f425f82b459d37b0638fdf65290753eab3270d2e74e86b2b2d",
+    "src/tools/evaluate_phase119_catalogue.py": "d6826b52975af276fa8bca9f0a92e821c3ceac169e70c837d37212418bdfa5d1",
+    "src/tools/evaluate_phase119_pixbox_local.py": "9c7673b8919d1086e9f9295346d7127f31d8cce39614fdfcfd4b3e382e6bd7fc",
+    "src/tools/collect_phase119.py": "d2938b7c85961faa214e03761eedbca39bc99faa71454413cffa8ab5cc77c671",
+    "src/tools/phase89_cpu_ap.py": "9bedbc46503916362564a0f34b1748d75d095edce436f70f533372895a42062e",
+    "src/research_results/phase119_20261015/PRE_EXECUTION_LOCK.json": "7292b900da9a2ecf64b339ac151d6d1603b0742e6d3226d0ae60ff3dc6a79d5f",
+    "src/research_plans/PHASE119_SINGLE_MODEL_EFFICIENCY_20261015.md": "52ef6bc5659b92c4aa6c846406c909406e960b0e0946d639a733badf2bf942f5"
+  },
+  "original_reference_sha256": "b1448f3fbd05c9e77af7ed0ea50dbde4be7480a35a4c532a2fec45789af25f96",
+  "comparisons": [
+    "R-E",
+    "N-E",
+    "N-R"
+  ],
+  "bootstrap_seed": 119015,
+  "bootstrap_resamples": 10000,
+  "direction_boundary_pp": 1,
+  "fixed_shadow_confidence": 0.5,
+  "no_statistical_pass_gate": true,
+  "separate_pools_never_pooled_together": true,
+  "common_support_before_reference_semantics": true
+}
