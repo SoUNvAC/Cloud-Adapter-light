@@ -84,10 +84,11 @@ def main():
     cpu=load(O/'LOCAL_CPU_RESOURCE_RECEIPT.json');calres=load(de/'calibration_CPU_RESOURCE_RECEIPT.json')
     complete=dict(phase=122,status='completed_exploratory',model_calls=calls,training_steps=1000,training_groups=100,calibration_groups=53,
         seed=12201,thresholds=cal['thresholds'],controller_wall_seconds=controller['elapsed_seconds'],new_downloads=0,model_retries=0,
-        CPU_peak_bytes=max(cpu['CPU_peak_bytes'],calres['rss_peak_bytes'],max(v['CPU_peak_bytes'] for v in cost)),
+        CPU_peak_bytes=max(cpu['CPU_peak_bytes'],calres['rss_peak_bytes'],load(O/'CALIBRATION_INDEPENDENT_CPU_ACCEPTANCE.json')['CPU_peak_bytes'],max(v['CPU_peak_bytes'] for v in cost)),
         GPU_reserved_peak_bytes=max(v['GPU_reserved_peak_bytes'] for v in cost),
         minimum_remote_host_free_bytes=min(v['host_min_free_bytes'] for v in cost if v['host_min_free_bytes'] is not None),
-        intermediate_peak_bytes=max(v['intermediate_peak_bytes'] for v in cost),
+        intermediate_peak_bytes=max(load(U/'DELIVERY_RECEIPT.json')['intermediate_bytes_after_package'],max(v['intermediate_peak_bytes'] for v in cost)),
+        local_intermediate_peak_bytes=cpu['intermediate_peak_bytes'],
         labels_uploaded=0,work_dirs_transfers=0,Git_weights_uploaded=False,original_failed_split_preserved=True,
         new_independent_confirmation_claim=False)
     save(O/'COMPLETION.json',complete)

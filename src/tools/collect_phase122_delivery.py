@@ -52,6 +52,7 @@ def main():
         for p in files+[ROOT/'DELIVERY_MANIFEST.json']:z.write(p,p.relative_to(ROOT).as_posix())
     assert sum(p.stat().st_size for p in ROOT.rglob('*') if p.is_file())<=4000000000
     write(ROOT/'DELIVERY_RECEIPT.json',dict(bytes=path.stat().st_size,sha256=sha(path),files=len(files)+1,
+        intermediate_bytes_after_package=sum(p.stat().st_size for p in ROOT.rglob('*') if p.is_file()),
         decoder=dict(bytes=(ROOT/'C_decoder_final.safetensors').stat().st_size,sha256=sha(ROOT/'C_decoder_final.safetensors'))))
     assert host_free()>=4000000000
     print(load(ROOT/'DELIVERY_RECEIPT.json'))
