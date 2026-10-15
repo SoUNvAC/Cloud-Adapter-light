@@ -1287,3 +1287,7 @@ E原V1双模型/R单RegNet/N单ConvNeXt；固定三通道20m1000/300、batch1 fl
 
 ### Phase120 启动准备（2026-10-15）
 用户授权执行固定C/D各1000步、seed12001的原RegNet decoder-only恢复。固定153 fit和32 development，末步封存后先Catalogue再PixBox；不以PixBox选择参数。实际作者构建确认DynamicUnet.layers[0]为encoder，白名单运行时逐项封存，教师独立对象且冻结。已修正加载器缓存复用风险（每次构建清cache），不共享学生与教师。计划≤8000调用/4小时，预留10000/5小时；显存20GiB、CPU16GiB、宿主余4GB、中间4GB。SSH已连通，宿主实余13,343,952,896 bytes；零下载、零work_dirs同步。源代码AST及本地NumPy数值/回调/AP/组bootstrap验收通过，尚未训练；远端同步后先做纯CPU KL/ignore/梯度测试，再执行。原失败split不变；不启封新确认池。
+
+
+### Phase120 训练封存与工程恢复（2026-10-15）
+C、D已各完成1000步，原153 fit、seed12001、同一已封存裁剪/翻转序列；teacher与encoder参数及buffer不变，decoder有限非零梯度且确有更新，两个末步固定后才启动Catalogue评价。C总1010调用，D成功3021调用。D第一次在0训练/0 gate前向时因内存tuple与JSON list比较失败，仅18构建调用；已确认两初始权重及序列化图签名相等，保留失败目录并修复，不重训C。随后评价入口缺辅助函数导出，0模型调用，修复导出后仅恢复评价，不动C/D。两次工程恢复均在原8000/4h计划内，已本地验证push、远端pull后运行，无需新增科研授权。C/D decoder末步各56,556,112 bytes已从shared保存至本地outputs并核SHA；未同步work_dirs。Catalogue C已18/32景，数值/资源正常，尚未形成科学结论，PixBox原参考未为本轮加入评价。

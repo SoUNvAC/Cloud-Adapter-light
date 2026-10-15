@@ -72,6 +72,7 @@ def main():
         for n in ['PARAMETER_WHITELIST.json','TRAINING_RECEIPT.json','INITIAL_GRADIENT_GATE.json']:
             shutil.copyfile(delivery/('train_'+p)/n,O/(p+'_'+n))
     completion={'phase':120,'status':'completed_exploratory','calls':all_calls,'elapsed_wall_seconds_including_engineering_pause':controller['elapsed_seconds'],
+        'engineering_incidents':[{'reason':'JSON tuple/list graph equality','extra_construction_calls':18,'extra_training_steps':0},{'reason':'inference helper import missing','extra_calls':0,'extra_training_steps':0}],
         'training_steps':{'C':1000,'D':1000},'failed_attempt_steps':0,'failed_construction_calls':18,'new_downloads':0,
         'CPU_peak_bytes':max(r['rss_peak_bytes'] for r in records),'GPU_reserved_peak_bytes':max(r['gpu_reserved_peak_bytes'] for r in records),
         'minimum_host_free_bytes':min(r['host_min_free_bytes'] for r in records if r['host_min_free_bytes'] is not None),
@@ -102,7 +103,7 @@ def main():
     table(O/'worst_group_damage.csv',damage)
     text += ['', 'Catalogue为7个有参考云影相关组、全部32组参加误报评价；PixBox为8个有参考云影相关组、全部10组参加误报评价。无正类AP=NA；改善/稳定/下降沿用±1pp。10000次配对组bootstrap，seed120015，仅描述，不以区间跨零自动关闭方向。',
              '', '完整逐组差、逐组运行指标见 Catalogue_per_group.csv、PixBox_per_group.csv；最差AP与召回损伤见 worst_group_damage.csv。',
-             '', '## 成本与验收', '',f"实际模型调用{all_calls}，含D首次失败的18次构建；失败发生于JSON图签名比较，D当时0训练／0 gate前向，已保留记录，C完整复用。总墙钟（包括工程暂停）{controller['elapsed_seconds']:.1f}秒。训练损失、起末参数哈希、编码器／教师不变回执与参数白名单均已保存。",
+             '', '## 成本与验收', '',f"实际模型调用{all_calls}，含D首次失败的18次构建；失败发生于JSON图签名比较，D当时0训练／0 gate前向，已保留记录，C完整复用。另一次评价入口导入失败产生0次模型调用，C/D均未重训。总墙钟（包括工程暂停）{controller['elapsed_seconds']:.1f}秒。训练损失、起末参数哈希、编码器／教师不变回执与参数白名单均已保存。",
              f"CPU进程峰值{completion['CPU_peak_bytes']/1e9:.3f}GB，GPU allocator预留峰值{completion['GPU_reserved_peak_bytes']/1e9:.3f}GB，宿主可用最小{completion['minimum_host_free_bytes']/1e9:.3f}GB，中间文件采样峰值{completion['peak_intermediate_bytes']/1e9:.3f}GB。",
              '', '部署仅单RegNet，18,039,132参数，教师不加载。single_scene_deployment.csv保留同一冻结首景的R/C/D各两次完整推理计时／逐模型CUDA event；仅为结构验收，固定顺序与缓存状态未消除，不能替代Phase119完整速度基准。read-to-point计时扣除额外CPU核验，属于带仪器分段估计，非无仪器端到端保证。',
              f"所有完整推理的独立CPU confidence重建最大误差{max(checks):.9g}；新R基准景对原Phase119 R最大点分数误差{difference:.9g}，均≤1e-5。",
