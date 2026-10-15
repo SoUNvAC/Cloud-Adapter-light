@@ -98,6 +98,14 @@ def main():
         summary=rows(O/(pool+'_summary.csv'))[0]
         supports.append({'pool':pool,'all_groups':int(summary['all_groups']),'AP_groups':int(summary['AP_groups']),'positive':int(summary['pooled_positive']),'negative':int(summary['pooled_negative']),'effective_binary_pixels_or_points':int(summary['pooled_positive'])+int(summary['pooled_negative'])})
     save(O/'SUPPORT_SUMMARY.json',{'pools':supports,'Catalogue_support_loss':load(O/'Catalogue_CPU_ACCEPTANCE.json')['support_loss'],'PixBox_support_loss':load(O/'PixBox_CPU_ACCEPTANCE.json')['support_loss'],'PixBox_coordinate_support':9500,'PixBox_original_ignore_points':931})
+    modeldir=O/'models';modeldir.mkdir(exist_ok=True)
+    for p in ('C','D'):
+        source=U/(p+'_decoder_final.safetensors');dest=modeldir/source.name
+        shutil.copyfile(source,dest);assert sha(dest)==sha(source)
+    shutil.copyfile(delivery/'Catalogue_CPU_REPLAY_RESOURCE.json',O/'Catalogue_CPU_REPLAY_RESOURCE.json')
+    completion['combined_CPU_replay_and_live_inference_RSS_sampled_peak_bytes']=cpu['combined_CPU_replay_and_live_inference_RSS_sampled_peak_bytes']
+    completion['necessary_models_in_Git']={p:{'path':str((modeldir/(p+'_decoder_final.safetensors')).relative_to(R)).replace('\\','/'),'sha256':sha(modeldir/(p+'_decoder_final.safetensors'))} for p in ('C','D')}
+    save(O/'COMPLETION.json',completion)
     # Tables and raw comparisons are the data; editorial interpretation is supplied separately.
     text=['# Phase120 数据结果','',f'C／D各1000步，seed12001，原153 fit代表；固定末步后依次评价32 Catalogue development代表与16 PixBox产品／10相关组。仅训练原RegNet decoder，未新增输入或模块。',
           'E为原双模型教师；R为原RegNet；N为原ConvNeXt；C为纯监督；D为监督＋固定蒸馏。',
@@ -123,10 +131,10 @@ def main():
              '', '训练512裁剪／作者逐块归一化，评价1000/300完整滑窗，上下文差异保留。两个decoder各14,135,988可训练参数（总18,039,132的约78.4%），不称极少参数适配。可读逐组AP表另见 Catalogue_AP_groups_readable.csv 与 PixBox_AP_groups_readable.csv。',
              '', '## 成本与验收', '',f"实际模型调用{all_calls}，含D首次失败的18次构建；失败发生于JSON图签名比较，D当时0训练／0 gate前向，已保留记录，C完整复用。另一次评价入口导入失败产生0次模型调用，C/D均未重训。总墙钟（包括工程暂停）{controller['elapsed_seconds']:.1f}秒。训练损失、起末参数哈希、编码器／教师不变回执与参数白名单均已保存。",
              f"CPU进程峰值{completion['CPU_peak_bytes']/1e9:.3f}GB，GPU allocator预留峰值{completion['GPU_reserved_peak_bytes']/1e9:.3f}GB，宿主可用最小{completion['minimum_host_free_bytes']/1e9:.3f}GB，中间文件采样峰值{completion['peak_intermediate_bytes']/1e9:.3f}GB。",
-             '首次Catalogue CPU指标通过未单独记录内存峰值；另对全部五模型及逐组/池化/区间做了受16GiB限制的完整缓存复算，结果复现，其峰值计入资源表，0模型调用。CPU-only复算辅助程序曾有一次入口语法错误（0模型调用），原日志保留；未改任何模型或指标定义。',
+             '首次Catalogue CPU指标通过未单独记录内存峰值；另对全部五模型及逐组/池化/区间做了受16GiB限制的完整缓存复算，结果复现，其峰值计入资源表，另记录并行推理＋CPU复算RSS采样峰值，合计也受16GiB约束；复算0模型调用。CPU-only复算辅助程序曾有一次入口语法错误（0模型调用），原日志保留；未改任何模型或指标定义。',
              '', '部署仅单RegNet，18,039,132参数，教师不加载。single_scene_deployment.csv保留同一冻结首景的R/C/D各两次完整推理计时／逐模型CUDA event；仅为结构验收，固定顺序与缓存状态未消除，不能替代Phase119完整速度基准。read-to-point计时扣除额外CPU核验，属于带仪器分段估计，非无仪器端到端保证。',
              f"所有完整推理的独立CPU confidence重建最大误差{max(checks):.9g}；新R基准景对原Phase119 R最大点分数误差{difference:.9g}，均≤1e-5。",
-             '', '最终decoder权重留本地outputs和远端shared，未把大数组、逐点参考或work_dirs传入Git。复原时从PRE_EXECUTION_LOCK引用的原RegNet官方safetensors按原作者加载器构建，再仅load对应decoder文件（strict=False，缺项只能为冻结encoder）；PARAMETER_WHITELIST给出允许键。',
+             '', '最终decoder权重留本地outputs和远端shared，Git另外交付必要的C/D两个decoder末步（各56.56MB），不含逐点参考、大像元缓存或work_dirs。复原时从PRE_EXECUTION_LOCK引用的原RegNet官方safetensors按原作者加载器构建，再仅load对应decoder文件（strict=False，缺项只能为冻结encoder）；PARAMETER_WHITELIST给出允许键。',
              '', '## 2．结论探讨', '', '见同目录 ANALYSIS.md；与上述原始数据分开。',
              '', '仍属已暴露池上的单seed探索；训练地点交集未知、参考语义局限与旧独立审查不足保留。不得改写旧主检验失败，也不构成新增独立确认。']
     (O/'README.md').write_text('\n'.join(text)+'\n',encoding='utf-8')
