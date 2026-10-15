@@ -1,0 +1,94 @@
+{
+  "phase": 121,
+  "status": "frozen_before_any_model_construction",
+  "source_sha256": {
+    "src/tools/train_phase121.py": "3b24c2e5cdff2a47ac50208a04e60535f8424523f66111e07602a7a69a0564f9",
+    "src/tools/infer_phase121.py": "140dde75268d8d1a867da8a04794c79c25c7251ce147a8d7d98cfe6027db2116",
+    "src/tools/run_phase121.py": "2059a419e5ebc7f701babe07a4f8ed236a6638cbcbd61a86a9b5eba80bd53120",
+    "src/tools/collect_phase121.py": "8360d7d7a87cace5244ee446962cd9acca70155e54c4afd89316ff9f1aded14a",
+    "src/tools/test_phase121.py": "16c69da4e8e4bc690b660dd0606203c9414b8e80682b8529f4dae88b0f1c2e1a",
+    "src/tools/test_phase121_numpy.py": "32a326e1de2351fb67837ee62135abebffefc15580b2226418e32e52cf05cd88",
+    "src/tools/phase121_common.py": "cb5e92d850d831e596cf57cf5d1542ac5e4e7dd9b914836bc8a4cd44bcbf68f1",
+    "src/tools/phase121_metrics.py": "cf469a7cc85795ab51e4b01f704a168187b1d3d50f1986548af77554e0481c63",
+    "src/tools/evaluate_phase121_catalogue.py": "cf0781d5c1e90a03578761ecbb44ef7878c9febaea38db95ab9801af14fbb846",
+    "src/tools/evaluate_phase121_pixbox_local.py": "d0804793b330a0c23b3605e544f4055ef16087862584f17eccbf60046ed1afb3",
+    "src/tools/phase121_cpu_guard.py": "e7071f2b89252098043e185b7d51daeebc13d531dcd4f2f04ef45cad1fcfffd6",
+    "src/tools/test_phase121_metrics.py": "49a328b222b07c8de6ce478f1a83e16bde7bfe6cf6daa58b723543feacce17c0",
+    "src/research_plans/PHASE121_PAIRED_SEED_AND_OPERATING_TRADEOFF_20261015.md": "a6249d1df33ae5d1a14b3a2330af8222230bdc9e2dcfafba90291d3af6e5aadf",
+    "src/research_results/phase120_20261015/C_PARAMETER_WHITELIST.json": "26e16b3f61247ded2c641c70b36de63fe2647562d1060b6666f1719525706bc2"
+  },
+  "original_split_sha256": "a431745e7a17bbd4a7b9e12ef3bf76767d4eb827911bd5cb5e632683c2177f7b",
+  "phase119_plan_sha256": "f1e74f385db5f81a25792169713237a8bafec36b2fb6ded9641ee0b1695abdf6",
+  "benchmark_products": [
+    "S2A_MSIL1C_20170726T102021_N0205_R065_T33VVE_20170726T102259",
+    "S2A_MSIL1C_20171107T150421_N0206_R125_T22WES_20171107T165127",
+    "S2A_MSIL1C_20180222T012651_N0206_R074_T54TWN_20180222T031349"
+  ],
+  "benchmark_used": "S2A_MSIL1C_20170726T102021_N0205_R065_T33VVE_20170726T102259",
+  "fit": 153,
+  "development": 32,
+  "seed": 12002,
+  "steps_per_arm": 1000,
+  "arms": [
+    "C",
+    "D"
+  ],
+  "checkpoint_selection": "fixed endpoint only",
+  "optimizer": {
+    "name": "AdamW",
+    "lr": 0.0001,
+    "weight_decay": 0.01,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08
+  },
+  "loss_C": "unweighted parent CE valid only",
+  "loss_D": "CE + 4*mean_valid sum_class KL(teacher softmax(lE/2) || student softmax(lS/2))",
+  "teacher": "independent frozen original RegNet+ConvNeXt raw output average",
+  "student": "original RegNet; exact author encoder frozen incl buffers; decoder only",
+  "crop": 512,
+  "normalization": "author channel_norm independently per B04/B03/B8A nonzero crop",
+  "augmentation": "fixed paired horizontal flip only",
+  "evaluation_order": [
+    "seal C and D",
+    "Catalogue32 common support then original reference",
+    "PixBox16/10groups common support then local original reference"
+  ],
+  "bootstrap_seed": 121015,
+  "bootstrap_resamples": 10000,
+  "operating_confidence": 0.5,
+  "planned_calls_cap": 8000,
+  "recovery_calls_cap": 10000,
+  "planned_seconds": 14400,
+  "recovery_seconds": 18000,
+  "CPU_GiB": 16,
+  "GPU_GiB": 20,
+  "host_min_free_bytes": 4000000000,
+  "intermediate_bytes_cap": 4000000000,
+  "new_downloads": 0,
+  "PixBox_for_fitting_or_selection": false,
+  "original_failed_split_unchanged": true,
+  "work_dirs_sync": false,
+  "old_seeds": [
+    12001
+  ],
+  "new_seeds": [
+    12002
+  ],
+  "models_not_uploaded_to_GitHub": true,
+  "policies": [
+    "E",
+    "R",
+    "N",
+    "C12001",
+    "D12001",
+    "C12002",
+    "D12002"
+  ],
+  "principal_question": "Catalogue C-R cross-seed macro AP stability; not a rewrite of Phase120",
+  "paired_seed_unit": "average two AP differences within each related group before group bootstrap; no model ensemble",
+  "oracle": "one global threshold per policy and pool; equal-negative-group mean FP<=1%; float64 nextafter first unsafe negative tie; not deployment",
+  "inherited_accepted_phase120_HEAD": "5fc3973c415e0a9765f0ea71e64dd998d6dac886"
+}

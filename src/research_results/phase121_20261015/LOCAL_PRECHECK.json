@@ -1,0 +1,6 @@
+{
+  "AST_all_passed": true,
+  "numpy_tests": "test_phase121_metrics.py:100 exhaustive oracle cases, unequal group support and within-group seed averaging; test_phase121_numpy.py: author callback, raw mosaic, ties AP/scalar bootstrap",
+  "Omni_model_calls": 0,
+  "seed_only_recipe_change_from_accepted_phase120": true
+}

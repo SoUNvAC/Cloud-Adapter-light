@@ -1,0 +1,18 @@
+{
+  "sources": {
+    "src/tools/train_phase121.py": "3b24c2e5cdff2a47ac50208a04e60535f8424523f66111e07602a7a69a0564f9",
+    "src/tools/infer_phase121.py": "140dde75268d8d1a867da8a04794c79c25c7251ce147a8d7d98cfe6027db2116",
+    "src/tools/run_phase121.py": "2059a419e5ebc7f701babe07a4f8ed236a6638cbcbd61a86a9b5eba80bd53120",
+    "src/tools/collect_phase121.py": "8360d7d7a87cace5244ee446962cd9acca70155e54c4afd89316ff9f1aded14a",
+    "src/tools/test_phase121.py": "16c69da4e8e4bc690b660dd0606203c9414b8e80682b8529f4dae88b0f1c2e1a",
+    "src/tools/test_phase121_numpy.py": "32a326e1de2351fb67837ee62135abebffefc15580b2226418e32e52cf05cd88",
+    "src/tools/phase121_common.py": "cb5e92d850d831e596cf57cf5d1542ac5e4e7dd9b914836bc8a4cd44bcbf68f1",
+    "src/tools/phase121_metrics.py": "cf469a7cc85795ab51e4b01f704a168187b1d3d50f1986548af77554e0481c63",
+    "src/tools/evaluate_phase121_catalogue.py": "cf0781d5c1e90a03578761ecbb44ef7878c9febaea38db95ab9801af14fbb846",
+    "src/tools/evaluate_phase121_pixbox_local.py": "d0804793b330a0c23b3605e544f4055ef16087862584f17eccbf60046ed1afb3",
+    "src/tools/phase121_cpu_guard.py": "e7071f2b89252098043e185b7d51daeebc13d531dcd4f2f04ef45cad1fcfffd6",
+    "src/tools/test_phase121_metrics.py": "49a328b222b07c8de6ce478f1a83e16bde7bfe6cf6daa58b723543feacce17c0"
+  },
+  "pool_support_frozen_before_reference_join": true,
+  "no_new_model_selection": true
+}
