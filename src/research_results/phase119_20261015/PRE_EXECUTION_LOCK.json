@@ -1,0 +1,123 @@
+{
+  "phase": 119,
+  "status": "locked_before_any_new_scores_or_forward",
+  "source_sha256": {
+    "src/tools/phase119_common.py": "142a6c3f01798321a2b11607502909908bdec1d39a5c79fc992307e32d2f6745",
+    "src/tools/run_phase119.py": "6e929fd0fed7e36d4585b7d489683821b70a089288e3d42688769542334ffcaa",
+    "src/tools/test_phase119.py": "35f6e69beea95a942cd80eb44de28edbf0738e5fcb2fb56a16eaf761f7873ac2",
+    "src/tools/phase118_common.py": "123e8d09ed478f9572dae5be29d9b41793a8faa612bcb6290ab4a48025300751",
+    "src/tools/phase89_cpu_ap.py": "9bedbc46503916362564a0f34b1748d75d095edce436f70f533372895a42062e",
+    "src/research_plans/PHASE119_SINGLE_MODEL_EFFICIENCY_20261015.md": "52ef6bc5659b92c4aa6c846406c909406e960b0e0946d639a733badf2bf942f5",
+    "src/research_plans/EXPLORATION_POLICY_20261014.md": "f38bf963cbfab243149ca425bbb3e2b9624ea0e97c159779507484c443c8bba5",
+    "src/research_results/phase111_20261014/PRE_EXECUTION_LOCK.json": "b0f9081bf1e74ec80cbd1ff54776c4989a3505564fc87028fcd0be2c3ae6f723",
+    "src/research_results/phase112_20261014/SCORES_SEALED.json": "6cfd95b720f81ebd780e3e81909000cbb51cd83b2f0aa608a3693d731ee76a58",
+    "src/research_results/phase117_20261014/INPUT_GATE.json": "1a4fcee3a794f79f2e3ea6b44c5973b3ce4e747b50b64d58d97b535803f3c0d5",
+    "src/research_results/phase118_20261014/NATIVE_ASSET_SHA_LOCK.json": "ea086e558eabe6d7a39ba3d094a40998ccb6f553001b8961fd233cc9d4e1aba9"
+  },
+  "original_split_sha256": "a431745e7a17bbd4a7b9e12ef3bf76767d4eb827911bd5cb5e632683c2177f7b",
+  "benchmark_rule": "SHA256(PHASE119_BENCH|product_id) ascending first3",
+  "benchmark_ranking": [
+    {
+      "product_id": "S2A_MSIL1C_20170726T102021_N0205_R065_T33VVE_20170726T102259",
+      "selection_sha256": "128c44a1cae05c670f0f17d3b43504e68f00d8d6fcd8cdc7f7c26637a89c4734"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20171107T150421_N0206_R125_T22WES_20171107T165127",
+      "selection_sha256": "1d2eac899ab01c9a291ef3903af3bacafe24292f96aa85514ebc80fe63cd3909"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20180222T012651_N0206_R074_T54TWN_20180222T031349",
+      "selection_sha256": "2365516d8d63e1094cf73e196f4f2fa6adf31d7e7491c4aebda1cd1fee521ab0"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20170725T142751_N0205_R053_T19GBQ_20170725T143854",
+      "selection_sha256": "37fb5b430c0a5801bc32e58ed5886516caf390809e6092b71d8008a08b9a69bb"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20180217T053911_N0206_R005_T44SKJ_20180217T082149",
+      "selection_sha256": "3ad8c90893e95d29cb317cb5f2f7d4c93dd1a034fc3620ce43a95d3691d74d3e"
+    },
+    {
+      "product_id": "S2B_MSIL1C_20170916T101019_N0205_R022_T32SPJ_20170916T101354",
+      "selection_sha256": "436f6f76470a47297ddb88992686e775ee7e9364ba5a696c3ec624e1232aa302"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20180303T140051_N0206_R067_T19FDV_20180303T202004",
+      "selection_sha256": "51aaac0e1744d1a19c413e6623302b6eb8361e2361e3ba62e0e5c030a0635573"
+    },
+    {
+      "product_id": "S2B_MSIL1C_20170731T102019_N0205_R065_T33VVE_20170731T102348",
+      "selection_sha256": "544d936325fae7eac80482ef510cc3f1e53edbc555ed4ae81031183512eefd43"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20170917T052641_N0205_R105_T48XWG_20170917T052642",
+      "selection_sha256": "552f937f9a04bff9fd4088c03167f9f2cab4259e0431bf576a8810bdc7527716"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20170712T071621_N0205_R006_T40UEE_20170712T071617",
+      "selection_sha256": "6cff1716f5bf22f1a3ede3499bc27f422ba6129608b66659e5b3ef175d1cdc78"
+    },
+    {
+      "product_id": "S2B_MSIL1C_20180302T150259_N0206_R125_T22WES_20180302T183800",
+      "selection_sha256": "78b8130dff6083e90b6b05a84b3033b99f401f8e9598c7a26802ed7f4390be19"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20170113T072241_N0204_R006_T40UEE_20170113T072238",
+      "selection_sha256": "9b89494dc3acac257c2eee4bcb5ed3a952a09987e3d82596567117a5b89b8d53"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20180302T142851_N0206_R053_T19GBQ_20180302T192732",
+      "selection_sha256": "b71beff06559e18309bcd49d7b795663c5c9f1e422718df1ee45528c550e51d4"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20180106T032121_N0206_R118_T48NUG_20180106T083912",
+      "selection_sha256": "d9dbc8954028f25df59685fc2dada745ce3b66b3ea40c05b03ef53321f4df584"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20170706T051651_N0205_R062_T48XWG_20170706T051649",
+      "selection_sha256": "e6124370b948a20084fc8fcafd41a04e1e407991278c55b6d7092f3d9d3097dc"
+    },
+    {
+      "product_id": "S2A_MSIL1C_20170908T100031_N0205_R122_T32SPJ_20170908T100655",
+      "selection_sha256": "fe2518065d2913aceee7a186725b34686fa84da6cd1fe24f75240587cc5cde25"
+    }
+  ],
+  "benchmark_products": [
+    "S2A_MSIL1C_20170726T102021_N0205_R065_T33VVE_20170726T102259",
+    "S2A_MSIL1C_20171107T150421_N0206_R125_T22WES_20171107T165127",
+    "S2A_MSIL1C_20180222T012651_N0206_R074_T54TWN_20180222T031349"
+  ],
+  "process_order": [
+    "E",
+    "R",
+    "N"
+  ],
+  "all_settings_fixed": {
+    "resolution_m": 20,
+    "patch": 1000,
+    "overlap": 300,
+    "batch": 1,
+    "dtype": "float32",
+    "mosaic": "cpu",
+    "compile": false
+  },
+  "planned_calls_cap": 4000,
+  "engineering_reserve_cap": 5000,
+  "wall_seconds_cap": 7200,
+  "recovery_wall_seconds_cap": 9000,
+  "CPU_peak_bytes": 17179869184,
+  "GPU_peak_bytes": 21474836480,
+  "intermediate_cap_bytes": 4000000000,
+  "physical_free_min_bytes": 4000000000,
+  "comparisons": [
+    "R-E",
+    "N-E",
+    "N-R"
+  ],
+  "bootstrap_seed": 119015,
+  "resamples": 10000,
+  "direction_boundary_pp": 1,
+  "threshold": 0.5,
+  "no_fit_read_no_training_no_new_downloads": true,
+  "utc": "2026-10-15T02:43:41.968272+00:00"
+}
