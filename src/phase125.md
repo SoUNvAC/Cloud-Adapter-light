@@ -35,3 +35,12 @@
 
 - 按用户要求，本任务工作区统一为 `outputs/phaseCal`；本轮唯一结果表现为 `outputs/phaseCal/phasecal-1-result.md`，完整备份移至 `outputs/phaseCal/remote_backup/phase122_20261015`，276文件／1,221,024,726 bytes。备份内的phase122名称保留执行端原件身份。
 - 已移动本聊天的备份帮助脚本和检查日志，并在 `outputs/phaseCal/evaluation` 保留结果生成所需的既有评价证据。生成脚本改用该工作区内的备份及证据，不再依赖旧outputs工作区。既有Phase122其他任务产物保留原位；未重新执行实验或改变结果。
+
+## 2026-10-16 · phasemet-1 / 场景mIoU分母敏感性审计
+
+- 目标：仅复用Phase81/84既有三类混淆矩阵，固定六比较，核对两种类别纳入规则、错分计数、参考1/2/3类分层和宏排序；不改旧指标及历史判定。
+- 改动：新增独立CPU入口 `run_met1_audit.py`、小文件准备入口和合成测试；分别适配groups/rows；原执行Git blob确认真值行／预测列、Surface/Cloud/Shadow顺序。17份输入／原代码证据按原artifact清单和代码锁核SHA，显式manifest绑定，不读影像或特征缓存。
+- 验证：8项CPU合成测试通过（含转置错误检测、union=0、无预测参考类、双参考类符号翻转及逐组/pooled区别）。本地实数据复现256个逐组旧指标和pooled，精确有理数第二实现复算通过，跨phase LL完全相同，不计新样本。
+- 网络：gzs最初两次SSH握手被远端关闭，第三次恢复；确认远端MET未启动且缺小聚合输入，拟仅复制SHA相同的小文件。准备按本地验证代码推送后，在cloud-lite-pt210中执行CPU任务。
+- 止损：CPU≤4线程、RSS≤2GiB、≤1800秒、新增≤128MiB；宿主物理盘≥4e9 bytes；最迟2026-10-20 00:00上海时间；GPU/影像/训练/下载=0，异常保留现场不重跑81/84。
+- 当前状态：本地验证通过，远端执行待完成，最终只交付 `outputs/phasemet/phasemet_1_20261015/phasemet-1-result.md` 的一张表。完整内部矩阵／分层／排序／回执留执行端并备份本地；本轮无L8数据。
