@@ -12,6 +12,9 @@ import struct
 import time
 import zipfile
 
+for _thread_key in ('OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS','NUMEXPR_NUM_THREADS','VECLIB_MAXIMUM_THREADS'):
+    os.environ[_thread_key]='4'
+
 SETTINGS = ('O20','C20','H10')
 LAYERS = ('all','subcell 00','subcell 01','subcell 10','subcell 11',
           'C20 coverage=1','C20 coverage=2','C20 coverage>=3','C20 margin<300m','C20 margin>=300m')
