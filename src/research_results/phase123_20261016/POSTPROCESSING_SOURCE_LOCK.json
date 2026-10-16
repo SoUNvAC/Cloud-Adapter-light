@@ -1,0 +1,6 @@
+{
+  "purpose": "read-only post-completion remote verification; zero new model calls",
+  "source_sha256": {
+    "src/tools/verify_phase123_completion.py": "7946a655a1bf6aa98e31dd0b44096ff1a00d755c6f3e1a5bf20425972ad2dc4d"
+  }
+}

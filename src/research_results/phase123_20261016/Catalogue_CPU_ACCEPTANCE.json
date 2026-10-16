@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "groups": 32,
+  "positive_groups": 7,
+  "support_loss": 0,
+  "valid": 33423488,
+  "labels_uploaded": 0,
+  "model_calls": 0
+}

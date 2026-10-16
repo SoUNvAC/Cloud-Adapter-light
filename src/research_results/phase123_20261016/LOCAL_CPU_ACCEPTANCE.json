@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "model_calls": 0,
+  "labels_uploaded": 0,
+  "elapsed_seconds": 74.09428000450134,
+  "AP_threshold_invariance": true,
+  "bootstrap_seed": 123015
+}

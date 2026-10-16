@@ -1,0 +1,1104 @@
+{
+  "thresholds": {
+    "R": 0.7693686485290528,
+    "C122": 0.36361625790596014,
+    "C": 0.2778868973255158
+  },
+  "calibration": {
+    "C": {
+      "pool": "Calibration",
+      "setting": "C",
+      "status": "heldout_calibration_frozen_before_evaluation",
+      "budget": 0.01,
+      "threshold": 0.2778868973255158,
+      "unsafe_negative_boundary": 0.27788689732551575,
+      "macro_recall_pp": 82.81267451614606,
+      "macro_negative_FP_pp": 0.9999986589462326,
+      "max_group_negative_FP_pp": 10.43570801193137,
+      "zero_recall_positive_groups": 0,
+      "negative_groups": 53,
+      "AP_groups": 13,
+      "lower_boundary_macro_negative_FP_pp": 1.0000007535390496,
+      "atomic_negative_tie_counts": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "rule": "nextafter(first unsafe negative tie,+inf); float64 score >= threshold",
+      "independent_direct_counts_passed": true,
+      "mean_constraint_is_not_per_group_safety": true,
+      "not_evaluation_pool_oracle": true
+    }
+  },
+  "boundary_details": {
+    "C": [
+      {
+        "pool": "Calibration",
+        "setting": "C",
+        "group_id": "03d78b176919677764f2e5502dba04548b895fe21bc4ad59834cd899e66bfd77",
+        "positive": 0,
+        "negative": 1044484,
+        "TP": 0,
+        "FP": 0,
+        "recall": null,
+        "negative_FP_fraction": 0.0
+      },
+      {
+        "pool": "Calibration",
+        "setting": "C",
+        "group_id": "05866d12c622c49931f3fe35aabab1c84b2d957744421b676c9b831f37bb1a69",
+        "positive": 0,
+        "negative": 1044484,
+        "TP": 0,
+        "FP": 3912,
+        "recall": null,
+        "negative_FP_fraction": 0.0037453900682059274
+      },
+      {
+        "pool": "Calibration",
+        "setting": "C",
+        "group_id": "076f2e3603e90803ba4fcf0955aa4e4bf5a54f1abe416d2f648770953e2d2727",
+        "positive": 93367,
+        "negative": 951117,
+        "TP": 89436,
+        "FP": 21132,
+        "recall": 0.9578973298917176,
+        "negative_FP_fraction": 0.022218086733808776
+      },
+      {
+        "pool": "Calibration",
+        "setting": "C",
+        "group_id": "0a148b939ef9e3ea5182557896cba6a8bbd8572bc60765ad520716128284aec9",
+        "positive": 72967,
+        "negative": 971517,
+        "TP": 67611,
+        "FP": 23414,
+        "recall": 0.9265969547877808,
+        "negative_FP_fraction": 0.024100453208744675
+      },
+      {
+        "pool": "Calibration",
+        "setting": "C",
+        "group_id": "0dff11d4f6b3f336ca29408c81266ab5228e50520de2fb2cc5d0e5ee3ba2bd12",
+        "positive": 58194,
+        "negative": 986290,
+        "TP": 45455,
+        "FP": 6030,
+        "recall": 0.781094270887033,
+        "negative_FP_fraction": 0.006113820478763852
+      },
+      {
+        "pool": "Calibration",
+        "setting": "C",
+        "group_id": "19f46ffc7d93ba7ccf50cc13def2a1b60e823e332628cff77972e45f5bddafdd",
+        "positive": 0,
+        "negative": 1044484,
+        "TP": 0,
+        "FP": 0,
+        "recall": null,
+        "negative_FP_fraction": 0.0
+      },
+      {
+        "pool": "Calibration",
+        "setting": "C",
+        "group_id": "1bc068c333e3254d407c67b8e60debb9c4c47365b3ceeba9179c359cba64eccb",
+        "positive": 0,
+        "negative": 1044484,
+        "TP": 0,
+        "FP": 14,
+        "recall": null,
+        "negative_FP_fraction": 1.3403747687853524e-05
+      },
+      {
+        "pool": "Calibration",
+        "setting": "C",
+        "group_id": "1c688b6525582d8dd0de00c7bb9df44da9f03fa41d3bedbb496224ae8f9115f7",
+        "positive": 0,
+        "negative": 1044484,
+        "TP": 0,
+        "FP": 0,
+        "recall": null,
+        "negative_FP_fraction": 0.0
+      },
+      {
+        "pool": "Calibration",
+        "setting": "C",
+        "group_id": "1d469d48462297892e18c21ede5f3d5442baedcf47af1cd873fd48102f3f19bd",
+        "positive": 0,
+        "negative": 1044484,
+        "TP": 0,
+        "FP": 0,
+        "recall": null,
+        "negative_FP_fraction": 0.0
+      },
+      {
+        "pool": "Calibration",
+        "setting": "C",
+        "group_id": "2803dfd39d29814756df3cdfd37e0bb670afbf98dd12bf78304322db08749312",
+        "positive": 0,
+        "negative": 1044484,
+        "TP": 0,
+        "FP": 8,
+        "recall": null,
+        "negative_FP_fraction": 7.659284393059157e-06
+      },
+      {
+        "pool": "Calibration",
+        "setting": "C",
+        "group_id": "296404c2ec660dfdfb2491a14af4cd0e99cbc28aa8ea9565acbd4a20376006be",
+        "positive": 0,
+        "negative": 1044484,
+        "TP": 0,
+        "FP": 0,
+        "recall": null,
+        "negative_FP_fraction": 0.0
+      },
+      {
+        "pool": "Calibration",
+        "setting": "C",
+        "group_id": "29d9ba1a53bbc74d4c34e155c5c657b3f385a21fd6dc9a3e9010490fdd848e12",
+        "positive": 0,
+        "negative": 1044484,
+        "TP": 0,
+        "FP": 0,
+        "recall": null,
+        "negative_FP_fraction": 0.0
+      },
+      {
+        "pool": "Calibration",
+        "setting": "C",
+        "group_id": "2a8f8c28dbec378627355cd5acaad8b20d09afd14d32d278cc52c10427864709",
+        "positive": 0,
+        "negative": 1044415,
+        "TP": 0,
+        "FP": 0,
+        "recall": null,
+        "negative_FP_fraction": 0.0
+      },
+      {
+        "pool": "Calibration",
+        "setting": "C",
+        "group_id": "37bbe9df272ed8a6c50e430e148d3a7abecf77eb974e6985b39c477948cdd942",
+        "positive": 77869,
+        "negative": 966615,
+        "TP": 76131,
+        "FP": 94613,
+        "recall": 0.97768046334228,
+        "negative_FP_fraction": 0.09788074879864268
+      },
+      {
+        "pool": "Calibration",
+        "setting": "C",
+        "group_id": "37ff39543d248a3bb646c6b5543d9307a90a62b8a1e935b3838d1ea7e3fdf68e",
+        "positive": 0,
+        "negative": 1044484,
+        "TP": 0,
+        "FP": 5,
+        "recall": null,
+        "negative_FP_fraction": 4.787052745661973e-06
+      },
+      {
+        "pool": "Calibration",
+        "setting": "C",
+        "group_id": "43618af6b01bdcb3f2a9ddaea6771c1b8abc889a0d578753e766158a09e5fa78",
+        "positive": 0,
+        "negative": 1044484,
+        "TP": 0,
+        "FP": 26501,
+        "recall": null,
+        "negative_FP_fraction": 0.025372336962557588
+      },
+      {
+        "pool": "Calibration",
+        "setting": "C",
+        "group_id": "466103525fc1d6b9b172319d36d14b972764cc7699d41bedef4529959358a545",
+        "positive": 0,
+        "negative": 1044484,
+        "TP": 0,
+        "FP": 1910,
+        "recall": null,
+        "negative_FP_fraction": 0.0018286541488428737
+      },
+      {
+        "pool": "Calibration",
+        "setting": "C",
+        "group_id": "4ccbdb66dad51a8fdad216ea687140ed14d35eec7fff414990f2dcb0b5790643",
+        "positive": 0,
+        "negative": 1044484,
+        "TP": 0,
+        "FP": 213,
+        "recall": null,
+        "negative_FP_fraction": 0.00020392844696520004
+      },
+      {
+        "pool": "Calibration",
+        "setting": "C",
+        "group_id": "53482a05815bb2ed88a146c80425e14af6384fbf12fc574fb57c1c4d4b9e652f",
+        "positive": 0,
+        "negative": 1044484,
+        "TP": 0,
+        "FP": 0,
+        "recall": null,
+        "negative_FP_fraction": 0.0
+      },
+      {
+        "pool": "Calibration",
+        "setting": "C",
+        "group_id": "55b01ca2cb939ad9732bb0c1c2b4186bc7316a47639f137cc041ad741ab02cf5",
+        "positive": 99969,
+        "negative": 944512,
+        "TP": 77493,
+        "FP": 20591,
+        "recall": 0.7751703027938661,
+        "negative_FP_fraction": 0.021800675904594117
+      },
+      {
+        "pool": "Calibration",
+        "setting": "C",
+        "group_id": "5955951adb0636a28a90c96c08b4d0cdbd5c88cb512e1e9683da188485130b0c",
+        "positive": 0,
+        "negative": 1044484,
+        "TP": 0,
+        "FP": 0,
+        "recall": null,
+        "negative_FP_fraction": 0.0
+      },
+      {
+        "pool": "Calibration",
+        "setting": "C",
+        "group_id": "5b33c9b05b691e7619fc032c182bbfbbad64c7c1bf6b11b032dad252cfcacbdf",
+        "positive": 0,
+        "negative": 1044484,
+        "TP": 0,
+        "FP": 0,
+        "recall": null,
+        "negative_FP_fraction": 0.0
+      },
+      {
+        "pool": "Calibration",
+        "setting": "C",
+        "group_id": "5fd2a7bb69959c894af74a06cca629a8b98a8fbbf5a77df856f9412fd61cf38d",
+        "positive": 0,
+        "negative": 1044484,
+        "TP": 0,
+        "FP": 0,
+        "recall": null,
+        "negative_FP_fraction": 0.0
+      },
+      {
+        "pool": "Calibration",
+        "setting": "C",
+        "group_id": "68670de47ebe611d5669a3e02618516e34fb700bec0082d945a5905e91639e85",
+        "positive": 0,
+        "negative": 1044484,
+        "TP": 0,
+        "FP": 1065,
+        "recall": null,
+        "negative_FP_fraction": 0.0010196422348260003
+      },
+      {
+        "pool": "Calibration",
+        "setting": "C",
+        "group_id": "701f720b8813d6c9e687c3016aa0243c5feb4d5aa3ea026d313114d196674b23",
+        "positive": 0,
+        "negative": 1044484,
+        "TP": 0,
+        "FP": 0,
+        "recall": null,
+        "negative_FP_fraction": 0.0
+      },
+      {
+        "pool": "Calibration",
+        "setting": "C",
+        "group_id": "751f4e9db721c4de70de35877bb5b4c233ae9598fe12954ada42a9b4ec83b47f",
+        "positive": 17368,
+        "negative": 1027116,
+        "TP": 12916,
+        "FP": 2091,
+        "recall": 0.743666513127591,
+        "negative_FP_fraction": 0.0020357973198742887
+      },
+      {
+        "pool": "Calibration",
+        "setting": "C",
+        "group_id": "762ed1681e71575f3aeb50dfc53ee61bace6cdeae4565adc8dd78a7f3fb7088c",
+        "positive": 0,
+        "negative": 1044484,
+        "TP": 0,
+        "FP": 0,
+        "recall": null,
+        "negative_FP_fraction": 0.0
+      },
+      {
+        "pool": "Calibration",
+        "setting": "C",
+        "group_id": "7ab5b903dd033295ae1873d82995fa9bac54ccc910327bccea8ae8f39a4b12f6",
+        "positive": 0,
+        "negative": 1044484,
+        "TP": 0,
+        "FP": 0,
+        "recall": null,
+        "negative_FP_fraction": 0.0
+      },
+      {
+        "pool": "Calibration",
+        "setting": "C",
+        "group_id": "7c24e4c98a7327b6b9e84cb89f1d8c24a1b21d49f4b089d00b8f811f8fcf3573",
+        "positive": 0,
+        "negative": 1044484,
+        "TP": 0,
+        "FP": 0,
+        "recall": null,
+        "negative_FP_fraction": 0.0
+      },
+      {
+        "pool": "Calibration",
+        "setting": "C",
+        "group_id": "80709e721d2b44ed9fa67c705d0c4318e6864678a8340aae01f6fbc146329546",
+        "positive": 151239,
+        "negative": 893245,
+        "TP": 89828,
+        "FP": 9203,
+        "recall": 0.5939473284007432,
+        "negative_FP_fraction": 0.010302884427004909
+      },
+      {
+        "pool": "Calibration",
+        "setting": "C",
+        "group_id": "8644c7cf71ce5c827ae39e44070ea12137940d432d125285eff23a04a44f3b29",
+        "positive": 0,
+        "negative": 1044484,
+        "TP": 0,
+        "FP": 20160,
+        "recall": null,
+        "negative_FP_fraction": 0.019301396670509074
+      },
+      {
+        "pool": "Calibration",
+        "setting": "C",
+        "group_id": "86c9c25c3a8bdbabb45152325c6e5c573f72029e5f8b060cb53bf60e7cce50aa",
+        "positive": 124556,
+        "negative": 919928,
+        "TP": 118155,
+        "FP": 96001,
+        "recall": 0.9486094608047786,
+        "negative_FP_fraction": 0.10435708011931369
+      },
+      {
+        "pool": "Calibration",
+        "setting": "C",
+        "group_id": "87c69a30946a5550e3e982bce4740ebba46a780d18a73afe65480d666613598b",
+        "positive": 0,
+        "negative": 1044484,
+        "TP": 0,
+        "FP": 677,
+        "recall": null,
+        "negative_FP_fraction": 0.0006481669417626311
+      },
+      {
+        "pool": "Calibration",
+        "setting": "C",
+        "group_id": "8cb6b7742f39a379ee744e8463dcc629031e9960e1ee44dfea719ea36df8d999",
+        "positive": 0,
+        "negative": 1044484,
+        "TP": 0,
+        "FP": 507,
+        "recall": null,
+        "negative_FP_fraction": 0.000485407148410124
+      },
+      {
+        "pool": "Calibration",
+        "setting": "C",
+        "group_id": "8f67b5ebbaaebb0484037637fac81c9370ea8d5c9cf40ab810a203caabb10e43",
+        "positive": 176296,
+        "negative": 868188,
+        "TP": 159470,
+        "FP": 24169,
+        "recall": 0.9045582429550302,
+        "negative_FP_fraction": 0.0278384405220989
+      },
+      {
+        "pool": "Calibration",
+        "setting": "C",
+        "group_id": "95b1ca604dab33a1953ff4344a0129d9f4e9de19254bb5b965d04a21a0db5e28",
+        "positive": 0,
+        "negative": 1044484,
+        "TP": 0,
+        "FP": 245,
+        "recall": null,
+        "negative_FP_fraction": 0.00023456558453743666
+      },
+      {
+        "pool": "Calibration",
+        "setting": "C",
+        "group_id": "961fc36543f2aee6cadf2e9b99970dd78dc8303f83243171d3cef22aed79c78f",
+        "positive": 34537,
+        "negative": 1009947,
+        "TP": 31544,
+        "FP": 35531,
+        "recall": 0.9133393172539596,
+        "negative_FP_fraction": 0.035181054055311814
+      },
+      {
+        "pool": "Calibration",
+        "setting": "C",
+        "group_id": "a18d45433f5efcad1918f98b1012b012c8a06541e6f8a2d2612336733a663044",
+        "positive": 143692,
+        "negative": 900792,
+        "TP": 129818,
+        "FP": 64366,
+        "recall": 0.9034462600562314,
+        "negative_FP_fraction": 0.07145489746800593
+      },
+      {
+        "pool": "Calibration",
+        "setting": "C",
+        "group_id": "ab8efe1599f53b1e49f2e743bf22a3e8e4b54f7582fe1674dd4a6a3c4819aaf5",
+        "positive": 0,
+        "negative": 1044484,
+        "TP": 0,
+        "FP": 264,
+        "recall": null,
+        "negative_FP_fraction": 0.0002527563849709522
+      },
+      {
+        "pool": "Calibration",
+        "setting": "C",
+        "group_id": "b4cd53594d1a77a4c6b342d13c3b8c1e6d03871f91d35937aa13e3da601b22f9",
+        "positive": 0,
+        "negative": 1044484,
+        "TP": 0,
+        "FP": 10,
+        "recall": null,
+        "negative_FP_fraction": 9.574105491323945e-06
+      },
+      {
+        "pool": "Calibration",
+        "setting": "C",
+        "group_id": "b980986dd002ed671e2e8a4061fe6564b2e7a96de69d7c0276bfa1a5ab08a71a",
+        "positive": 0,
+        "negative": 1044484,
+        "TP": 0,
+        "FP": 2,
+        "recall": null,
+        "negative_FP_fraction": 1.9148210982647892e-06
+      },
+      {
+        "pool": "Calibration",
+        "setting": "C",
+        "group_id": "c21b41ed1837aa7ae3f10d8623dacdc65d5e9d1b85ef2707a55a25c3a6ac1aa8",
+        "positive": 0,
+        "negative": 1044484,
+        "TP": 0,
+        "FP": 0,
+        "recall": null,
+        "negative_FP_fraction": 0.0
+      },
+      {
+        "pool": "Calibration",
+        "setting": "C",
+        "group_id": "c22fc88309c49b926de5498f89a92e5b33fc7df5ebda48b126ff77b606836ca7",
+        "positive": 0,
+        "negative": 1044484,
+        "TP": 0,
+        "FP": 43,
+        "recall": null,
+        "negative_FP_fraction": 4.1168653612692964e-05
+      },
+      {
+        "pool": "Calibration",
+        "setting": "C",
+        "group_id": "c67f100fedbc51645ba49545fc5c8b2316becaf226bfeedd24f41d404bbf6b05",
+        "positive": 0,
+        "negative": 1044484,
+        "TP": 0,
+        "FP": 132,
+        "recall": null,
+        "negative_FP_fraction": 0.0001263781924854761
+      },
+      {
+        "pool": "Calibration",
+        "setting": "C",
+        "group_id": "dafd2f0e178ebc18d71541cc0509c2fcd3301f28f09134650e92170af12abbea",
+        "positive": 101691,
+        "negative": 942793,
+        "TP": 50099,
+        "FP": 15607,
+        "recall": 0.49265913404332734,
+        "negative_FP_fraction": 0.01655400496185271
+      },
+      {
+        "pool": "Calibration",
+        "setting": "C",
+        "group_id": "eb235dc51d3294bea3f8c7c41c3a20b791bf7c7373da26efb5d360215972ee0b",
+        "positive": 0,
+        "negative": 1044484,
+        "TP": 0,
+        "FP": 0,
+        "recall": null,
+        "negative_FP_fraction": 0.0
+      },
+      {
+        "pool": "Calibration",
+        "setting": "C",
+        "group_id": "eb8b3a67a4a788375333c72e30f424235e306414e3c08b39d0b3e02613da01cf",
+        "positive": 0,
+        "negative": 1044484,
+        "TP": 0,
+        "FP": 0,
+        "recall": null,
+        "negative_FP_fraction": 0.0
+      },
+      {
+        "pool": "Calibration",
+        "setting": "C",
+        "group_id": "ee243f2eb72e6ff5310faf10c8cbd310c8f87e69835cda784f731d6ccd325aa0",
+        "positive": 0,
+        "negative": 1044484,
+        "TP": 0,
+        "FP": 1966,
+        "recall": null,
+        "negative_FP_fraction": 0.0018822691395942877
+      },
+      {
+        "pool": "Calibration",
+        "setting": "C",
+        "group_id": "eef079ec280eeeb05b3f12a94134f41f8a3ba210f979a1b3c8710a23c478eb84",
+        "positive": 0,
+        "negative": 1044484,
+        "TP": 0,
+        "FP": 2,
+        "recall": null,
+        "negative_FP_fraction": 1.9148210982647892e-06
+      },
+      {
+        "pool": "Calibration",
+        "setting": "C",
+        "group_id": "f2138d7dbee6fc93ba7a4712d669a09234d526aa71fbd7182f491f0013837cab",
+        "positive": 0,
+        "negative": 1044484,
+        "TP": 0,
+        "FP": 0,
+        "recall": null,
+        "negative_FP_fraction": 0.0
+      },
+      {
+        "pool": "Calibration",
+        "setting": "C",
+        "group_id": "f3cc667ba54723ffcdce064e8d82a75173140023e3c830b63cc878b97c32cdb4",
+        "positive": 0,
+        "negative": 1044483,
+        "TP": 0,
+        "FP": 0,
+        "recall": null,
+        "negative_FP_fraction": 0.0
+      },
+      {
+        "pool": "Calibration",
+        "setting": "C",
+        "group_id": "f5e4907d7bb75199ac9d1caad4df407783996cfc178964e0b7a6a568418044f2",
+        "positive": 0,
+        "negative": 1044484,
+        "TP": 0,
+        "FP": 40,
+        "recall": null,
+        "negative_FP_fraction": 3.829642196529578e-05
+      },
+      {
+        "pool": "Calibration",
+        "setting": "C",
+        "group_id": "fc02608e82c1a5855735f626492136061649142fbe2891d5456a9803682699ca",
+        "positive": 79592,
+        "negative": 964892,
+        "TP": 67413,
+        "FP": 33715,
+        "recall": 0.8469821087546487,
+        "negative_FP_fraction": 0.03494173441172691
+      }
+    ]
+  },
+  "bindings": [
+    {
+      "group_id": "701f720b8813d6c9e687c3016aa0243c5feb4d5aa3ea026d313114d196674b23",
+      "product": "S2B_MSIL1C_20180422T042659_N0206_R133_T48VUK_20180422T074056",
+      "negative": 1044484,
+      "valid": 1044484,
+      "C_sha256": "e11b1a252f6776e54cd91617fd83f915ca500c40eb04128048c46368926be742",
+      "R_reused_sha256": "2d7fe0614bcf99c8cd48983344d5e7fb5a1233bff6822509c15e542b39ffa7a4"
+    },
+    {
+      "group_id": "b980986dd002ed671e2e8a4061fe6564b2e7a96de69d7c0276bfa1a5ab08a71a",
+      "product": "S2A_MSIL1C_20181102T015621_N0206_R117_T51LYE_20181102T061209",
+      "negative": 1044484,
+      "valid": 1044484,
+      "C_sha256": "6ba3feabe02bf3e2643e96a383b905fa950727297eaf8ccd649e47dbab6058f8",
+      "R_reused_sha256": "ec7e78ab5fb3757ddb823f3a0bfb4643945b35292fef4cbeed790e40dda461b8"
+    },
+    {
+      "group_id": "f2138d7dbee6fc93ba7a4712d669a09234d526aa71fbd7182f491f0013837cab",
+      "product": "S2A_MSIL1C_20180621T083651_N0206_R064_T34KBG_20180621T123155",
+      "negative": 1044484,
+      "valid": 1044484,
+      "C_sha256": "2a1642b6ea2ae94b099f03d1a0d243bb0a1c7f44f37fc4f0c7421d8447a6beef",
+      "R_reused_sha256": "59dade5f940ab322264f8b6ee13153e67ec0b9d51a72e9a10c9f5d0959ced722"
+    },
+    {
+      "group_id": "55b01ca2cb939ad9732bb0c1c2b4186bc7316a47639f137cc041ad741ab02cf5",
+      "product": "S2A_MSIL1C_20181030T044921_N0206_R076_T45RXQ_20181030T065311",
+      "negative": 944512,
+      "valid": 1044481,
+      "C_sha256": "45bf25fccff67f1eac4b84d3906a5e619c2361ea34cbd7b7aa17ccd193ec84b8",
+      "R_reused_sha256": "08fe066ef718441aada74a28f72ca17570c561ef595736ef4d16d9d53613aeb6"
+    },
+    {
+      "group_id": "c67f100fedbc51645ba49545fc5c8b2316becaf226bfeedd24f41d404bbf6b05",
+      "product": "S2B_MSIL1C_20180816T162829_N0206_R083_T18VUM_20180816T213305",
+      "negative": 1044484,
+      "valid": 1044484,
+      "C_sha256": "31fe26fd1e9a01ff3f1564abfa2ceb70d7ff982e3eb6fff9d44d0fbdd89dee48",
+      "R_reused_sha256": "1a49e3f1faf860898504130c1c0bbdc0cd82ac0e1c213ca89a6d7169322991d9"
+    },
+    {
+      "group_id": "7ab5b903dd033295ae1873d82995fa9bac54ccc910327bccea8ae8f39a4b12f6",
+      "product": "S2A_MSIL1C_20180521T054641_N0206_R048_T42QXL_20180521T085815",
+      "negative": 1044484,
+      "valid": 1044484,
+      "C_sha256": "28f4e8b75e8bfdeee63ab23e0de7048a60611dcbc87e2e921ef47b4c0a15c297",
+      "R_reused_sha256": "20c650f4543cb91197585ce164a16eef68bbd7ac5a57a204a534eb97c5a40244"
+    },
+    {
+      "group_id": "80709e721d2b44ed9fa67c705d0c4318e6864678a8340aae01f6fbc146329546",
+      "product": "S2B_MSIL1C_20180120T004659_N0206_R102_T54KUV_20180120T020340",
+      "negative": 893245,
+      "valid": 1044484,
+      "C_sha256": "7da45f0df9ca8e2e1db3dbc659fe6587daa6b7a752de7128512a685f0b5c754e",
+      "R_reused_sha256": "40acca06093dcb564ba25136a2464646bad4658bedf2605b2c52b01a2fd7839e"
+    },
+    {
+      "group_id": "2803dfd39d29814756df3cdfd37e0bb670afbf98dd12bf78304322db08749312",
+      "product": "S2B_MSIL1C_20180922T075619_N0206_R035_T35KMQ_20180922T114414",
+      "negative": 1044484,
+      "valid": 1044484,
+      "C_sha256": "e492ee68b8325861a2d14c165be0bd38c2b8cf9c392561387bb41ed9b0530539",
+      "R_reused_sha256": "fcec9ce475a278236dfafa47cf60d7e8e29bac6e2196fecc7b529045b79cd592"
+    },
+    {
+      "group_id": "ab8efe1599f53b1e49f2e743bf22a3e8e4b54f7582fe1674dd4a6a3c4819aaf5",
+      "product": "S2B_MSIL1C_20180615T205019_N0206_R057_T08WPC_20180615T223116",
+      "negative": 1044484,
+      "valid": 1044484,
+      "C_sha256": "fc778e01c855621329d658ba687e3b65d2e7c2b754ca66ee8e834d286f7430f6",
+      "R_reused_sha256": "1b3c6404567fab81ef160572395625a8310c52ad46fbc3781609ac79a611241f"
+    },
+    {
+      "group_id": "5fd2a7bb69959c894af74a06cca629a8b98a8fbbf5a77df856f9412fd61cf38d",
+      "product": "S2A_MSIL1C_20180824T150721_N0206_R125_T21UUP_20180824T185559",
+      "negative": 1044484,
+      "valid": 1044484,
+      "C_sha256": "ced9b0c9ce355ba84af97e0c8a62964ff32deffbb2cbd64e99e13e7312d3b6aa",
+      "R_reused_sha256": "3f3821b7828ba79cdd48002994d11e8df2aa6eb5d267f4209a2d02c78685d085"
+    },
+    {
+      "group_id": "86c9c25c3a8bdbabb45152325c6e5c573f72029e5f8b060cb53bf60e7cce50aa",
+      "product": "S2B_MSIL1C_20180625T230019_N0206_R058_T58KHC_20180626T001009",
+      "negative": 919928,
+      "valid": 1044484,
+      "C_sha256": "e3979bd0569d0866844686547bcbaac29028ca36106525e788cd609331fd1502",
+      "R_reused_sha256": "4d9b0e7c9a153e3853251dba42436f2def4aac96c358bfd4b0a8a2d1dd0f22b8"
+    },
+    {
+      "group_id": "961fc36543f2aee6cadf2e9b99970dd78dc8303f83243171d3cef22aed79c78f",
+      "product": "S2A_MSIL1C_20181112T070221_N0207_R120_T38KRD_20181112T102254",
+      "negative": 1009947,
+      "valid": 1044484,
+      "C_sha256": "701bd1d60152050abda9c8bef800bf919a14e8215d41a13f9a0d23ba607ca3db",
+      "R_reused_sha256": "bf4666b0adce0fff853bb18019d6584d5f7c13fe290395acbb4bab8b9403cbf0"
+    },
+    {
+      "group_id": "19f46ffc7d93ba7ccf50cc13def2a1b60e823e332628cff77972e45f5bddafdd",
+      "product": "S2A_MSIL1C_20180910T150721_N0206_R082_T19PFN_20180910T201336",
+      "negative": 1044484,
+      "valid": 1044484,
+      "C_sha256": "baa2bf780099df15175165876c48f8cc026ebdc6d912f8eca37e2a9b2a7e33d9",
+      "R_reused_sha256": "de47ccb5d133411753e7723dac3a9fe9e7277972300b30e74ea97dd304ef6f12"
+    },
+    {
+      "group_id": "7c24e4c98a7327b6b9e84cb89f1d8c24a1b21d49f4b089d00b8f811f8fcf3573",
+      "product": "S2B_MSIL1C_20180208T224659_N0206_R101_T02WPS_20180209T001736",
+      "negative": 1044484,
+      "valid": 1044484,
+      "C_sha256": "700d7e6e8c5fa5bafb8d95d2c099d1625841421521abaeb5e5e72194bf10a9d3",
+      "R_reused_sha256": "c3e82d697b0510a4fa2a0d895e50bfe8db1470f6617ee0f6ed505ef8712e73e5"
+    },
+    {
+      "group_id": "466103525fc1d6b9b172319d36d14b972764cc7699d41bedef4529959358a545",
+      "product": "S2A_MSIL1C_20180919T101701_N0206_R065_T39XWH_20180919T122556",
+      "negative": 1044484,
+      "valid": 1044484,
+      "C_sha256": "2b055e6779ff742ce5f2b8256b6cce4a4fe67a702551c7def4856cdf64d924eb",
+      "R_reused_sha256": "553da0c209de5e5a4b24b7287913c7bfcb320466dfc197565444f5194e49cf11"
+    },
+    {
+      "group_id": "0dff11d4f6b3f336ca29408c81266ab5228e50520de2fb2cc5d0e5ee3ba2bd12",
+      "product": "S2B_MSIL1C_20180417T021339_N0206_R060_T50LRQ_20180417T052932",
+      "negative": 986290,
+      "valid": 1044484,
+      "C_sha256": "794d2443054b231dd0c6bde61e2724580837f971168074049d5584ea6880c145",
+      "R_reused_sha256": "269005692fb5bd20bf7c495c07007e725b3d3380aa811d80cf27a18a5f059370"
+    },
+    {
+      "group_id": "1d469d48462297892e18c21ede5f3d5442baedcf47af1cd873fd48102f3f19bd",
+      "product": "S2B_MSIL1C_20180327T022549_N0206_R046_T50QQH_20180327T060147",
+      "negative": 1044484,
+      "valid": 1044484,
+      "C_sha256": "3b110da60e394f6f3b4807da89e491b667bd07293cefc0685cfb53eeb6f2854d",
+      "R_reused_sha256": "da519f050b14d2aec091fb2fffb337e26bb8c69b60cbf818b388a523f88f7d07"
+    },
+    {
+      "group_id": "87c69a30946a5550e3e982bce4740ebba46a780d18a73afe65480d666613598b",
+      "product": "S2B_MSIL1C_20181004T210519_N0206_R071_T56CNU_20181004T234310",
+      "negative": 1044484,
+      "valid": 1044484,
+      "C_sha256": "522e37742ce159c3c25b59b616e35b0776458ed839b0677071422e25817e69e3",
+      "R_reused_sha256": "f4c76daefac003276a820bff45fc0376828d58f87a7463b1aa908e2c46d5b3b9"
+    },
+    {
+      "group_id": "8644c7cf71ce5c827ae39e44070ea12137940d432d125285eff23a04a44f3b29",
+      "product": "S2B_MSIL1C_20180125T232159_N0206_R044_T58PHU_20180126T003547",
+      "negative": 1044484,
+      "valid": 1044484,
+      "C_sha256": "0912813885dfd48a5a647e31ec8174f492de4756f288f89e162d79c268e0087e",
+      "R_reused_sha256": "2108a68b3163e27788cd073482e6812929e91ff1400bf381a84a084472d52f99"
+    },
+    {
+      "group_id": "fc02608e82c1a5855735f626492136061649142fbe2891d5456a9803682699ca",
+      "product": "S2B_MSIL1C_20180826T062619_N0206_R077_T40QHL_20180826T092057",
+      "negative": 964892,
+      "valid": 1044484,
+      "C_sha256": "f53c83da0c8e469d437a0a2de134ca3b42d2a6f4f3b18fe2d672601177d8307f",
+      "R_reused_sha256": "4e289cb06cddaec364d6e9f3d5631a692d21bc914e9c9d3ba6ea8f7a3b76e71b"
+    },
+    {
+      "group_id": "29d9ba1a53bbc74d4c34e155c5c657b3f385a21fd6dc9a3e9010490fdd848e12",
+      "product": "S2B_MSIL1C_20180810T160819_N0206_R140_T16QDD_20180810T211922",
+      "negative": 1044484,
+      "valid": 1044484,
+      "C_sha256": "5980c0df0ec99e8ce231c42cc6c7cc980bfbc7a3c9f079c69c5e3092e6dbceb1",
+      "R_reused_sha256": "5167a57de40f298cb947fb6f4698bcd12b24c7fe7099e0c6e6a805eed305f190"
+    },
+    {
+      "group_id": "c21b41ed1837aa7ae3f10d8623dacdc65d5e9d1b85ef2707a55a25c3a6ac1aa8",
+      "product": "S2A_MSIL1C_20180327T163911_N0206_R126_T17VNF_20180327T215534",
+      "negative": 1044484,
+      "valid": 1044484,
+      "C_sha256": "229d6e5c73a280e6aaab15fc01bdbb3c358ae094ab9794200e5c83e4b85d1301",
+      "R_reused_sha256": "6c8540dac99cdd8fb3cd47909749619c9966686dd532f95426b235e551bee095"
+    },
+    {
+      "group_id": "37ff39543d248a3bb646c6b5543d9307a90a62b8a1e935b3838d1ea7e3fdf68e",
+      "product": "S2B_MSIL1C_20180505T025549_N0206_R032_T56XMJ_20180505T044859",
+      "negative": 1044484,
+      "valid": 1044484,
+      "C_sha256": "90d86ec0e0dae1f85b134ba2541ab4e5c770f04e6c909ac827c453237593a300",
+      "R_reused_sha256": "4faa168ecd79f862a752f3a492580d47e4c2a0b3138845db7553e240c45133bd"
+    },
+    {
+      "group_id": "dafd2f0e178ebc18d71541cc0509c2fcd3301f28f09134650e92170af12abbea",
+      "product": "S2A_MSIL1C_20180613T141951_N0206_R096_T23VNK_20180613T162358",
+      "negative": 942793,
+      "valid": 1044484,
+      "C_sha256": "7d34a508c71ed3b10b72bd0930aec10c60f0b6e6af6b66e77ee4d4f1bd6e8c0b",
+      "R_reused_sha256": "8396a96575835ac66ad1b984e31efe72c3e0ff6a3db4f5174a65aaa89695387f"
+    },
+    {
+      "group_id": "03d78b176919677764f2e5502dba04548b895fe21bc4ad59834cd899e66bfd77",
+      "product": "S2B_MSIL1C_20180125T080209_N0206_R035_T36NXN_20180125T100104",
+      "negative": 1044484,
+      "valid": 1044484,
+      "C_sha256": "129c979626ce63d021eda8378602e0eb66609b2b59cd928de4ab568eaf3052b9",
+      "R_reused_sha256": "16932a9e38165bbe055273e111bb48b677abc5ff8509e5696252714fea905dbd"
+    },
+    {
+      "group_id": "37bbe9df272ed8a6c50e430e148d3a7abecf77eb974e6985b39c477948cdd942",
+      "product": "S2A_MSIL1C_20181030T095121_N0206_R079_T33TWK_20181030T130454",
+      "negative": 966615,
+      "valid": 1044484,
+      "C_sha256": "20ab15ecc1b4a6005d09f244f6bdbab069be662ab96b5cd78a553b68a1ba4efa",
+      "R_reused_sha256": "4217d87d2ea46163010294020490de106527da40bcdd108dc1307333381ca134"
+    },
+    {
+      "group_id": "c22fc88309c49b926de5498f89a92e5b33fc7df5ebda48b126ff77b606836ca7",
+      "product": "S2B_MSIL1C_20180808T022319_N0206_R103_T50MRV_20180808T054332",
+      "negative": 1044484,
+      "valid": 1044484,
+      "C_sha256": "c63d0725433d618112e53849aca8eea8bddcd768de20311bfd39ea76d366219d",
+      "R_reused_sha256": "ea55f786678c68a48afb48bc21631aa78c1f8c6a42c3ec247ff1c6d155974a0e"
+    },
+    {
+      "group_id": "5955951adb0636a28a90c96c08b4d0cdbd5c88cb512e1e9683da188485130b0c",
+      "product": "S2B_MSIL1C_20180624T075609_N0206_R035_T37QBE_20180624T101209",
+      "negative": 1044484,
+      "valid": 1044484,
+      "C_sha256": "b870740750b86ae8dc821de28ba1afb0d71bb89c72504241a177f5ee202d4287",
+      "R_reused_sha256": "1b972024ce42436a61d3d8da6ce3089ef76d5c1a50f2afeb29cf6c70fa2c8886"
+    },
+    {
+      "group_id": "a18d45433f5efcad1918f98b1012b012c8a06541e6f8a2d2612336733a663044",
+      "product": "S2A_MSIL1C_20180209T112221_N0206_R037_T29RKM_20180209T164004",
+      "negative": 900792,
+      "valid": 1044484,
+      "C_sha256": "a1f9e8abc1f589aff245a4fb9fb2a519dddee2111b7ed51b3d33ade5de8c09c1",
+      "R_reused_sha256": "0ab1749575a56593ec6dc73bcc968b8e434e3245ea05c7d31b4a3ea5c98329cb"
+    },
+    {
+      "group_id": "f5e4907d7bb75199ac9d1caad4df407783996cfc178964e0b7a6a568418044f2",
+      "product": "S2A_MSIL1C_20180904T160901_N0206_R140_T27XWJ_20180904T192941",
+      "negative": 1044484,
+      "valid": 1044484,
+      "C_sha256": "6d60fbeab0db871dc7fc95c367a517a7947c44ac5b5e5eff1485b298b7078d7c",
+      "R_reused_sha256": "6e8cd57eab1b9d2b5b72e4db83e9ea22a15bd49bb97e4e4188227b1664bbde1d"
+    },
+    {
+      "group_id": "296404c2ec660dfdfb2491a14af4cd0e99cbc28aa8ea9565acbd4a20376006be",
+      "product": "S2B_MSIL1C_20180401T181919_N0206_R127_T11SQU_20180401T215241",
+      "negative": 1044484,
+      "valid": 1044484,
+      "C_sha256": "76ff1ea5fe759cd439dec9c7c832243da01e580a2a57d28a926f9cb285740c23",
+      "R_reused_sha256": "655e2ffeaa7ff83a46b7c49d9e79f6ce7aa9c32ec78b88abf6bae107396afcc5"
+    },
+    {
+      "group_id": "53482a05815bb2ed88a146c80425e14af6384fbf12fc574fb57c1c4d4b9e652f",
+      "product": "S2B_MSIL1C_20181007T103019_N0206_R108_T31RCK_20181007T160704",
+      "negative": 1044484,
+      "valid": 1044484,
+      "C_sha256": "49423692255dc6bbefeae406daa9641fbe8428692fc1ac6ee88dd2893fece60e",
+      "R_reused_sha256": "e42162263ab495c2140a47d23d03b6e4cacf891195c432e246918a04c0e41c53"
+    },
+    {
+      "group_id": "8cb6b7742f39a379ee744e8463dcc629031e9960e1ee44dfea719ea36df8d999",
+      "product": "S2B_MSIL1C_20181025T081009_N0206_R078_T37TGL_20181025T102247",
+      "negative": 1044484,
+      "valid": 1044484,
+      "C_sha256": "5da2d4f3e05e6ad22ba20bd8407ca448d19cf0496e4aee5d43a6fa9c80f32317",
+      "R_reused_sha256": "581d93824cfa239f75fe235f3b6d17c84b8b709088d3662e9be44584db0ebf46"
+    },
+    {
+      "group_id": "b4cd53594d1a77a4c6b342d13c3b8c1e6d03871f91d35937aa13e3da601b22f9",
+      "product": "S2A_MSIL1C_20181214T090351_N0207_R007_T34QGM_20181214T102932",
+      "negative": 1044484,
+      "valid": 1044484,
+      "C_sha256": "e491f61b8a46bf12c342a80d8bef2e044a3bc71fed7b6ea846c323be33063109",
+      "R_reused_sha256": "799a49736f9f5ade7ddb34c66d8cacc2a66e38434355672e7cd0151550018dad"
+    },
+    {
+      "group_id": "0a148b939ef9e3ea5182557896cba6a8bbd8572bc60765ad520716128284aec9",
+      "product": "S2A_MSIL1C_20180309T071721_N0206_R006_T37LFE_20180309T110254",
+      "negative": 971517,
+      "valid": 1044484,
+      "C_sha256": "14d3da78847d4d880cd40d4ec06ebfd3a78f6a672ccfac5416429d094ccf2198",
+      "R_reused_sha256": "1e24863ba70c8685e4c048c99efac8a0aca53d42dda8c03d7488672ae8c34446"
+    },
+    {
+      "group_id": "762ed1681e71575f3aeb50dfc53ee61bace6cdeae4565adc8dd78a7f3fb7088c",
+      "product": "S2A_MSIL1C_20180422T033541_N0206_R061_T49UFV_20180422T062036",
+      "negative": 1044484,
+      "valid": 1044484,
+      "C_sha256": "4942ef617ace86297db51aaa7a59a27b8a40bad4f1d74585ea9ded5f308a3de8",
+      "R_reused_sha256": "19e8203ebe64ef9d13e49a4b6f0527f01ce09a2a94e9175a7dd5ce091efa5099"
+    },
+    {
+      "group_id": "076f2e3603e90803ba4fcf0955aa4e4bf5a54f1abe416d2f648770953e2d2727",
+      "product": "S2B_MSIL1C_20180517T220529_N0206_R072_T04WES_20180517T234440",
+      "negative": 951117,
+      "valid": 1044484,
+      "C_sha256": "f87e28cced33fca17289080143763e7d64174c751d106e318ea53f45b98f249b",
+      "R_reused_sha256": "36e8d9679e91dda3214040bcdd8edcbaf44bd9732c17e81463d5326d3352575d"
+    },
+    {
+      "group_id": "8f67b5ebbaaebb0484037637fac81c9370ea8d5c9cf40ab810a203caabb10e43",
+      "product": "S2A_MSIL1C_20180718T135111_N0206_R024_T22MEB_20180718T185303",
+      "negative": 868188,
+      "valid": 1044484,
+      "C_sha256": "2df3c4603328651bf3de0876b9349762a72ebbe8a2bf5d9b64820e09100e7031",
+      "R_reused_sha256": "c7e3e5981154f775fd59da01ec84396182482adf687f2eb47cc4517e9aa756b5"
+    },
+    {
+      "group_id": "2a8f8c28dbec378627355cd5acaad8b20d09afd14d32d278cc52c10427864709",
+      "product": "S2A_MSIL1C_20180817T215051_N0206_R029_T14XMQ_20180818T001725",
+      "negative": 1044415,
+      "valid": 1044415,
+      "C_sha256": "491d43b9a5f3bc42f42363746012cadf526c9cd9ed112318779564414a0586e2",
+      "R_reused_sha256": "fc84a9c86183172e09c3531c402e032e3bd5f0a7ff2f56ad613da636fea99531"
+    },
+    {
+      "group_id": "f3cc667ba54723ffcdce064e8d82a75173140023e3c830b63cc878b97c32cdb4",
+      "product": "S2A_MSIL1C_20181114T040011_N0207_R004_T48UXA_20181114T084110",
+      "negative": 1044483,
+      "valid": 1044483,
+      "C_sha256": "c52e7192af0df8beb26cfea3cf9753d1ad251eb51d7d4ebcb53d366d144c539e",
+      "R_reused_sha256": "d2f684f30c019828c35decbbe11a9283b7ff69c6b5b11207ba72dcc171afa821"
+    },
+    {
+      "group_id": "43618af6b01bdcb3f2a9ddaea6771c1b8abc889a0d578753e766158a09e5fa78",
+      "product": "S2B_MSIL1C_20181220T033139_N0207_R018_T48SYC_20181220T060651",
+      "negative": 1044484,
+      "valid": 1044484,
+      "C_sha256": "f5be1c96c4ccfc1a92fd7139e806aa28b64fbac583a14d8a0e5d32c314338050",
+      "R_reused_sha256": "e08e2844eb8ce491fcba566f5286f6f5f0f3dd86dabda05ccb06b5e44eb97f19"
+    },
+    {
+      "group_id": "05866d12c622c49931f3fe35aabab1c84b2d957744421b676c9b831f37bb1a69",
+      "product": "S2B_MSIL1C_20180201T012709_N0206_R131_T53LKK_20180201T025415",
+      "negative": 1044484,
+      "valid": 1044484,
+      "C_sha256": "6bc4e3c2aa466af66ec8abdf9e7ca65e9504fada6e92126cb104cd3321408957",
+      "R_reused_sha256": "f2442e53877f79e264ec7edf5ed36a0dd8cee99c2789d463cd52868331754be1"
+    },
+    {
+      "group_id": "4ccbdb66dad51a8fdad216ea687140ed14d35eec7fff414990f2dcb0b5790643",
+      "product": "S2B_MSIL1C_20180605T140729_N0206_R053_T24WWU_20180605T160557",
+      "negative": 1044484,
+      "valid": 1044484,
+      "C_sha256": "471e1b28dbdeaae15bf92be9f7d84462b2ee10da9973940fd9bd637637aefab8",
+      "R_reused_sha256": "2efc865e9c9fd51e9ece67f27b5c9991e663583ad03685924b2894658205af64"
+    },
+    {
+      "group_id": "ee243f2eb72e6ff5310faf10c8cbd310c8f87e69835cda784f731d6ccd325aa0",
+      "product": "S2A_MSIL1C_20180108T104421_N0206_R008_T31TEF_20180108T124506",
+      "negative": 1044484,
+      "valid": 1044484,
+      "C_sha256": "d0e7703bd91ab9e7775ed0adb0f8ecd3dec374be0ec5cceb74d86dfbccfee972",
+      "R_reused_sha256": "bf6043bc5ba5a1b9dfbdb704577d1ac407435f27523338c101cea2dbc95e9b9c"
+    },
+    {
+      "group_id": "eef079ec280eeeb05b3f12a94134f41f8a3ba210f979a1b3c8710a23c478eb84",
+      "product": "S2B_MSIL1C_20180315T032529_N0206_R018_T49SCC_20180315T070512",
+      "negative": 1044484,
+      "valid": 1044484,
+      "C_sha256": "1f3c691325b1d0f9c52f6bdd85a5fee613e3e10a8c20277c571c5c0f372aea55",
+      "R_reused_sha256": "243acd11973ece1aa5c6eefa356a5edd3ca04a0e3480f57b465b56c66f1b5c73"
+    },
+    {
+      "group_id": "95b1ca604dab33a1953ff4344a0129d9f4e9de19254bb5b965d04a21a0db5e28",
+      "product": "S2A_MSIL1C_20180818T061631_N0206_R034_T43VFG_20180818T074215",
+      "negative": 1044484,
+      "valid": 1044484,
+      "C_sha256": "f3d49cfbd1ebee208f5b216755ea7e42a66f26ddb9e6a17d3412b05f3a0c04fa",
+      "R_reused_sha256": "8b2e3b40fc8499ce5950ac5a3434c49640d41400e5668b9863a526085fc5f4b8"
+    },
+    {
+      "group_id": "eb235dc51d3294bea3f8c7c41c3a20b791bf7c7373da26efb5d360215972ee0b",
+      "product": "S2B_MSIL1C_20180827T174039_N0206_R098_T12RYN_20180827T214315",
+      "negative": 1044484,
+      "valid": 1044484,
+      "C_sha256": "dddb4dde23a63d3a7cf5ee00731c2283f2f82d460c168e09f9fa4dc6d089688a",
+      "R_reused_sha256": "534126b8db7009418eb5e7ddea2301b405cf4a464d26544d9d6f1e4604d3f49d"
+    },
+    {
+      "group_id": "eb8b3a67a4a788375333c72e30f424235e306414e3c08b39d0b3e02613da01cf",
+      "product": "S2B_MSIL1C_20180630T002059_N0206_R116_T55HCC_20180630T014728",
+      "negative": 1044484,
+      "valid": 1044484,
+      "C_sha256": "2e08cae281d37f52f28ea7b59661a0b9d588b6a9cdd7af7733e36ab2d406ddf4",
+      "R_reused_sha256": "57e70408ffa2452069c924bc952a28ddfcf6d446202d8b72a89fe91569dc75f9"
+    },
+    {
+      "group_id": "1c688b6525582d8dd0de00c7bb9df44da9f03fa41d3bedbb496224ae8f9115f7",
+      "product": "S2B_MSIL1C_20181218T061249_N0207_R134_T41RQK_20181218T080326",
+      "negative": 1044484,
+      "valid": 1044484,
+      "C_sha256": "28f1a79de3fd9b755aa0f80b743017de65eccb92769ffe1f72935357695bf422",
+      "R_reused_sha256": "34768eb15d2a4fc09869fa789caff874b440177812d31f151d2b4a0ad81b3f3f"
+    },
+    {
+      "group_id": "1bc068c333e3254d407c67b8e60debb9c4c47365b3ceeba9179c359cba64eccb",
+      "product": "S2B_MSIL1C_20180518T030539_N0206_R075_T54XWH_20180518T055019",
+      "negative": 1044484,
+      "valid": 1044484,
+      "C_sha256": "5d7fe13ec1df7844a233bf4eae7fbee65356a45017167c7e53c2df6664604bdb",
+      "R_reused_sha256": "fb645d225e2b019c57e98ff68b126a575ddbd6cc87416664a09f502fd364a1b7"
+    },
+    {
+      "group_id": "751f4e9db721c4de70de35877bb5b4c233ae9598fe12954ada42a9b4ec83b47f",
+      "product": "S2B_MSIL1C_20180325T064629_N0206_R020_T39PWK_20180325T120625",
+      "negative": 1027116,
+      "valid": 1044484,
+      "C_sha256": "c0c0592cf19092ff1d7a3d78974f219b60d8dc34d12a2ada02653d4d868a88a4",
+      "R_reused_sha256": "7fb6ed14d6b4f57aea61d15e335692848ddc2e815e36aba8ea345d5ec72d552a"
+    },
+    {
+      "group_id": "68670de47ebe611d5669a3e02618516e34fb700bec0082d945a5905e91639e85",
+      "product": "S2A_MSIL1C_20180723T124301_N0206_R095_T28WDU_20180723T144245",
+      "negative": 1044484,
+      "valid": 1044484,
+      "C_sha256": "cb04c965c10aa452df72f455c97e1c8885b8ec19ba4f5da722d18dbc1cfd3b81",
+      "R_reused_sha256": "575032ecef717b09713ef03f3b0ae5280c76a88796e6dc2146b15a7e22c5e018"
+    },
+    {
+      "group_id": "5b33c9b05b691e7619fc032c182bbfbbad64c7c1bf6b11b032dad252cfcacbdf",
+      "product": "S2A_MSIL1C_20180913T081601_N0206_R121_T35LKE_20180913T103649",
+      "negative": 1044484,
+      "valid": 1044484,
+      "C_sha256": "e27b482be421b480c8246a55818a8e8b57ba533fc95eaf4c03399a171611b3e5",
+      "R_reused_sha256": "8392762f7bd46c2dc797aaf0f13d8aa0c20691f4ceb52a9da4899270cec4df99"
+    }
+  ],
+  "previous_threshold_lock_sha256": "f2040e4213288bbd1109faaa60c0c50eb3ee2957bf0e4f62bca1b1ae1b5f4724",
+  "training_seal_sha256": "c8543d0ca3e814ffa9444833d8b765bd5d8436b56133c29ac2f47558b65f0023",
+  "member_lock_sha256": "4b67b3c2f4d6c9502ad08614016821deb805bb64cc5c67d851e2fb48635efa24",
+  "models_and_thresholds_before_evaluation": true,
+  "no_evaluation_reference_used": true,
+  "CPU_model_calls": 0,
+  "CPU_seconds": 21.56044340133667,
+  "CPU_peak_bytes": 655790080
+}

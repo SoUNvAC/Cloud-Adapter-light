@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "groups": 10,
+  "positive_groups": 8,
+  "support_loss": 0,
+  "valid": 8569,
+  "labels_uploaded": 0,
+  "model_calls": 0,
+  "not_full_scene_FPR": true
+}

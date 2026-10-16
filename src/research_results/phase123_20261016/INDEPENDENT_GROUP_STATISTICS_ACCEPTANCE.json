@@ -1,0 +1,60 @@
+{
+  "status": "passed",
+  "model_calls": 0,
+  "seed": 123015,
+  "scalar_fsum_replay": true,
+  "pools": {
+    "Catalogue": {
+      "AP": {
+        "groups": 7,
+        "scalar_group_mean_and_bootstrap_passed": true
+      },
+      "recall": {
+        "groups": 7,
+        "scalar_group_mean_and_bootstrap_passed": true
+      },
+      "precision": {
+        "groups": 22,
+        "scalar_group_mean_and_bootstrap_passed": true
+      },
+      "FPR": {
+        "groups": 32,
+        "scalar_group_mean_and_bootstrap_passed": true
+      },
+      "Surface_FPR": {
+        "groups": 17,
+        "scalar_group_mean_and_bootstrap_passed": true
+      },
+      "Cloud_FPR": {
+        "groups": 22,
+        "scalar_group_mean_and_bootstrap_passed": true
+      }
+    },
+    "PixBox": {
+      "AP": {
+        "groups": 8,
+        "scalar_group_mean_and_bootstrap_passed": true
+      },
+      "recall": {
+        "groups": 8,
+        "scalar_group_mean_and_bootstrap_passed": true
+      },
+      "precision": {
+        "groups": 9,
+        "scalar_group_mean_and_bootstrap_passed": true
+      },
+      "FPR": {
+        "groups": 10,
+        "scalar_group_mean_and_bootstrap_passed": true
+      },
+      "Surface_FPR": {
+        "groups": 10,
+        "scalar_group_mean_and_bootstrap_passed": true
+      },
+      "Cloud_FPR": {
+        "groups": 10,
+        "scalar_group_mean_and_bootstrap_passed": true
+      }
+    }
+  }
+}

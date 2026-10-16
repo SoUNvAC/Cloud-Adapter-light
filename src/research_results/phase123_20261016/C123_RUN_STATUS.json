@@ -1,0 +1,15 @@
+{
+  "status": "completed_training_sealed",
+  "calls": 1010,
+  "construction_calls": 7,
+  "gate_calls": 3,
+  "training_calls": 1000,
+  "step": 1000,
+  "elapsed_seconds": 87.43514728546143,
+  "rss_peak_bytes": 3387383808,
+  "gpu_reserved_peak_bytes": 1279262720,
+  "host_min_free_bytes": 13343952896,
+  "intermediate_peak_bytes": 57135682,
+  "call_kind": "training",
+  "all_calls": 1010
+}

@@ -1,0 +1,7651 @@
+{
+  "encoder_boundary": "author build_fastai_model -> create_unet_model -> DynamicUnet.layers[0]=encoder",
+  "DynamicUnet_init_source": "    def __init__(self, encoder, n_out, img_size, blur=False, blur_final=True, self_attention=False,\n                 y_range=None, last_cross=True, bottle=False, act_cls=defaults.activation,\n                 init=nn.init.kaiming_normal_, norm_type=None, **kwargs):\n        imsize = img_size\n        sizes = model_sizes(encoder, size=imsize)\n        sz_chg_idxs = list(reversed(_get_sz_change_idxs(sizes)))\n        self.sfs = hook_outputs([encoder[i] for i in sz_chg_idxs], detach=False)\n        x = dummy_eval(encoder, imsize).detach()\n\n        ni = sizes[-1][1]\n        middle_conv = nn.Sequential(ConvLayer(ni, ni*2, act_cls=act_cls, norm_type=norm_type, **kwargs),\n                                    ConvLayer(ni*2, ni, act_cls=act_cls, norm_type=norm_type, **kwargs)).eval()\n        x = middle_conv(x)\n        layers = [encoder, BatchNorm(ni), nn.ReLU(), middle_conv]\n\n        for i,idx in enumerate(sz_chg_idxs):\n            not_final = i!=len(sz_chg_idxs)-1\n            up_in_c, x_in_c = int(x.shape[1]), int(sizes[idx][1])\n            do_blur = blur and (not_final or blur_final)\n            sa = self_attention and (i==len(sz_chg_idxs)-3)\n            unet_block = UnetBlock(up_in_c, x_in_c, self.sfs[i], final_div=not_final, blur=do_blur, self_attention=sa,\n                                   act_cls=act_cls, init=init, norm_type=norm_type, **kwargs).eval()\n            layers.append(unet_block)\n            x = unet_block(x)\n\n        ni = x.shape[1]\n        if imsize != sizes[0][-2:]: layers.append(PixelShuffle_ICNR(ni, act_cls=act_cls, norm_type=norm_type))\n        layers.append(ResizeToOrig())\n        if last_cross:\n            layers.append(MergeLayer(dense=True))\n            ni += in_channels(encoder)\n            layers.append(ResBlock(1, ni, ni//2 if bottle else ni, act_cls=act_cls, norm_type=norm_type, **kwargs))\n        layers += [ConvLayer(ni, n_out, ks=1, act_cls=None, norm_type=norm_type, **kwargs)]\n        apply_init(nn.Sequential(layers[3], layers[-2]), init)\n        #apply_init(nn.Sequential(layers[2]), init)\n        if y_range is not None: layers.append(SigmoidRange(*y_range))\n        layers.append(ToTensorBase())\n        super().__init__(*layers)\n",
+  "create_unet_model_source": "@delegates(models.unet.DynamicUnet.__init__)\ndef create_unet_model(arch, n_out, img_size, pretrained=True, weights=None, cut=None, n_in=3, **kwargs):\n    \"Create custom unet architecture\"\n    meta = model_meta.get(arch, _default_meta)\n    if parse(torchvision.__version__) >= parse('0.13') and 'weights' in meta:\n        if weights is not None and not pretrained:\n            warn(f'{pretrained=} but `weights` are set {weights=}. To randomly initialize set `pretrained=False` & `weights=None`')\n        model = arch(weights=meta['weights'] if (weights is None and pretrained) else weights)\n    else:\n        model = arch(pretrained=pretrained)\n    body = create_body(model, n_in, pretrained, ifnone(cut, meta['cut']))\n    model = models.unet.DynamicUnet(body, n_out, img_size, **kwargs)\n    return model\n",
+  "encoder_names": [
+    "layers.0.0.conv.weight",
+    "layers.0.0.bn.weight",
+    "layers.0.0.bn.bias",
+    "layers.0.0.bn.running_mean",
+    "layers.0.0.bn.running_var",
+    "layers.0.0.bn.num_batches_tracked",
+    "layers.0.1.b1.conv1.conv.weight",
+    "layers.0.1.b1.conv1.bn.weight",
+    "layers.0.1.b1.conv1.bn.bias",
+    "layers.0.1.b1.conv1.bn.running_mean",
+    "layers.0.1.b1.conv1.bn.running_var",
+    "layers.0.1.b1.conv1.bn.num_batches_tracked",
+    "layers.0.1.b1.conv2.conv.weight",
+    "layers.0.1.b1.conv2.bn.weight",
+    "layers.0.1.b1.conv2.bn.bias",
+    "layers.0.1.b1.conv2.bn.running_mean",
+    "layers.0.1.b1.conv2.bn.running_var",
+    "layers.0.1.b1.conv2.bn.num_batches_tracked",
+    "layers.0.1.b1.se.fc1.weight",
+    "layers.0.1.b1.se.fc1.bias",
+    "layers.0.1.b1.se.fc2.weight",
+    "layers.0.1.b1.se.fc2.bias",
+    "layers.0.1.b1.conv3.conv.weight",
+    "layers.0.1.b1.conv3.bn.weight",
+    "layers.0.1.b1.conv3.bn.bias",
+    "layers.0.1.b1.conv3.bn.running_mean",
+    "layers.0.1.b1.conv3.bn.running_var",
+    "layers.0.1.b1.conv3.bn.num_batches_tracked",
+    "layers.0.1.b1.downsample.conv.weight",
+    "layers.0.1.b1.downsample.bn.weight",
+    "layers.0.1.b1.downsample.bn.bias",
+    "layers.0.1.b1.downsample.bn.running_mean",
+    "layers.0.1.b1.downsample.bn.running_var",
+    "layers.0.1.b1.downsample.bn.num_batches_tracked",
+    "layers.0.2.b1.conv1.conv.weight",
+    "layers.0.2.b1.conv1.bn.weight",
+    "layers.0.2.b1.conv1.bn.bias",
+    "layers.0.2.b1.conv1.bn.running_mean",
+    "layers.0.2.b1.conv1.bn.running_var",
+    "layers.0.2.b1.conv1.bn.num_batches_tracked",
+    "layers.0.2.b1.conv2.conv.weight",
+    "layers.0.2.b1.conv2.bn.weight",
+    "layers.0.2.b1.conv2.bn.bias",
+    "layers.0.2.b1.conv2.bn.running_mean",
+    "layers.0.2.b1.conv2.bn.running_var",
+    "layers.0.2.b1.conv2.bn.num_batches_tracked",
+    "layers.0.2.b1.se.fc1.weight",
+    "layers.0.2.b1.se.fc1.bias",
+    "layers.0.2.b1.se.fc2.weight",
+    "layers.0.2.b1.se.fc2.bias",
+    "layers.0.2.b1.conv3.conv.weight",
+    "layers.0.2.b1.conv3.bn.weight",
+    "layers.0.2.b1.conv3.bn.bias",
+    "layers.0.2.b1.conv3.bn.running_mean",
+    "layers.0.2.b1.conv3.bn.running_var",
+    "layers.0.2.b1.conv3.bn.num_batches_tracked",
+    "layers.0.2.b1.downsample.conv.weight",
+    "layers.0.2.b1.downsample.bn.weight",
+    "layers.0.2.b1.downsample.bn.bias",
+    "layers.0.2.b1.downsample.bn.running_mean",
+    "layers.0.2.b1.downsample.bn.running_var",
+    "layers.0.2.b1.downsample.bn.num_batches_tracked",
+    "layers.0.2.b2.conv1.conv.weight",
+    "layers.0.2.b2.conv1.bn.weight",
+    "layers.0.2.b2.conv1.bn.bias",
+    "layers.0.2.b2.conv1.bn.running_mean",
+    "layers.0.2.b2.conv1.bn.running_var",
+    "layers.0.2.b2.conv1.bn.num_batches_tracked",
+    "layers.0.2.b2.conv2.conv.weight",
+    "layers.0.2.b2.conv2.bn.weight",
+    "layers.0.2.b2.conv2.bn.bias",
+    "layers.0.2.b2.conv2.bn.running_mean",
+    "layers.0.2.b2.conv2.bn.running_var",
+    "layers.0.2.b2.conv2.bn.num_batches_tracked",
+    "layers.0.2.b2.se.fc1.weight",
+    "layers.0.2.b2.se.fc1.bias",
+    "layers.0.2.b2.se.fc2.weight",
+    "layers.0.2.b2.se.fc2.bias",
+    "layers.0.2.b2.conv3.conv.weight",
+    "layers.0.2.b2.conv3.bn.weight",
+    "layers.0.2.b2.conv3.bn.bias",
+    "layers.0.2.b2.conv3.bn.running_mean",
+    "layers.0.2.b2.conv3.bn.running_var",
+    "layers.0.2.b2.conv3.bn.num_batches_tracked",
+    "layers.0.2.b3.conv1.conv.weight",
+    "layers.0.2.b3.conv1.bn.weight",
+    "layers.0.2.b3.conv1.bn.bias",
+    "layers.0.2.b3.conv1.bn.running_mean",
+    "layers.0.2.b3.conv1.bn.running_var",
+    "layers.0.2.b3.conv1.bn.num_batches_tracked",
+    "layers.0.2.b3.conv2.conv.weight",
+    "layers.0.2.b3.conv2.bn.weight",
+    "layers.0.2.b3.conv2.bn.bias",
+    "layers.0.2.b3.conv2.bn.running_mean",
+    "layers.0.2.b3.conv2.bn.running_var",
+    "layers.0.2.b3.conv2.bn.num_batches_tracked",
+    "layers.0.2.b3.se.fc1.weight",
+    "layers.0.2.b3.se.fc1.bias",
+    "layers.0.2.b3.se.fc2.weight",
+    "layers.0.2.b3.se.fc2.bias",
+    "layers.0.2.b3.conv3.conv.weight",
+    "layers.0.2.b3.conv3.bn.weight",
+    "layers.0.2.b3.conv3.bn.bias",
+    "layers.0.2.b3.conv3.bn.running_mean",
+    "layers.0.2.b3.conv3.bn.running_var",
+    "layers.0.2.b3.conv3.bn.num_batches_tracked",
+    "layers.0.3.b1.conv1.conv.weight",
+    "layers.0.3.b1.conv1.bn.weight",
+    "layers.0.3.b1.conv1.bn.bias",
+    "layers.0.3.b1.conv1.bn.running_mean",
+    "layers.0.3.b1.conv1.bn.running_var",
+    "layers.0.3.b1.conv1.bn.num_batches_tracked",
+    "layers.0.3.b1.conv2.conv.weight",
+    "layers.0.3.b1.conv2.bn.weight",
+    "layers.0.3.b1.conv2.bn.bias",
+    "layers.0.3.b1.conv2.bn.running_mean",
+    "layers.0.3.b1.conv2.bn.running_var",
+    "layers.0.3.b1.conv2.bn.num_batches_tracked",
+    "layers.0.3.b1.se.fc1.weight",
+    "layers.0.3.b1.se.fc1.bias",
+    "layers.0.3.b1.se.fc2.weight",
+    "layers.0.3.b1.se.fc2.bias",
+    "layers.0.3.b1.conv3.conv.weight",
+    "layers.0.3.b1.conv3.bn.weight",
+    "layers.0.3.b1.conv3.bn.bias",
+    "layers.0.3.b1.conv3.bn.running_mean",
+    "layers.0.3.b1.conv3.bn.running_var",
+    "layers.0.3.b1.conv3.bn.num_batches_tracked",
+    "layers.0.3.b1.downsample.conv.weight",
+    "layers.0.3.b1.downsample.bn.weight",
+    "layers.0.3.b1.downsample.bn.bias",
+    "layers.0.3.b1.downsample.bn.running_mean",
+    "layers.0.3.b1.downsample.bn.running_var",
+    "layers.0.3.b1.downsample.bn.num_batches_tracked",
+    "layers.0.3.b2.conv1.conv.weight",
+    "layers.0.3.b2.conv1.bn.weight",
+    "layers.0.3.b2.conv1.bn.bias",
+    "layers.0.3.b2.conv1.bn.running_mean",
+    "layers.0.3.b2.conv1.bn.running_var",
+    "layers.0.3.b2.conv1.bn.num_batches_tracked",
+    "layers.0.3.b2.conv2.conv.weight",
+    "layers.0.3.b2.conv2.bn.weight",
+    "layers.0.3.b2.conv2.bn.bias",
+    "layers.0.3.b2.conv2.bn.running_mean",
+    "layers.0.3.b2.conv2.bn.running_var",
+    "layers.0.3.b2.conv2.bn.num_batches_tracked",
+    "layers.0.3.b2.se.fc1.weight",
+    "layers.0.3.b2.se.fc1.bias",
+    "layers.0.3.b2.se.fc2.weight",
+    "layers.0.3.b2.se.fc2.bias",
+    "layers.0.3.b2.conv3.conv.weight",
+    "layers.0.3.b2.conv3.bn.weight",
+    "layers.0.3.b2.conv3.bn.bias",
+    "layers.0.3.b2.conv3.bn.running_mean",
+    "layers.0.3.b2.conv3.bn.running_var",
+    "layers.0.3.b2.conv3.bn.num_batches_tracked",
+    "layers.0.3.b3.conv1.conv.weight",
+    "layers.0.3.b3.conv1.bn.weight",
+    "layers.0.3.b3.conv1.bn.bias",
+    "layers.0.3.b3.conv1.bn.running_mean",
+    "layers.0.3.b3.conv1.bn.running_var",
+    "layers.0.3.b3.conv1.bn.num_batches_tracked",
+    "layers.0.3.b3.conv2.conv.weight",
+    "layers.0.3.b3.conv2.bn.weight",
+    "layers.0.3.b3.conv2.bn.bias",
+    "layers.0.3.b3.conv2.bn.running_mean",
+    "layers.0.3.b3.conv2.bn.running_var",
+    "layers.0.3.b3.conv2.bn.num_batches_tracked",
+    "layers.0.3.b3.se.fc1.weight",
+    "layers.0.3.b3.se.fc1.bias",
+    "layers.0.3.b3.se.fc2.weight",
+    "layers.0.3.b3.se.fc2.bias",
+    "layers.0.3.b3.conv3.conv.weight",
+    "layers.0.3.b3.conv3.bn.weight",
+    "layers.0.3.b3.conv3.bn.bias",
+    "layers.0.3.b3.conv3.bn.running_mean",
+    "layers.0.3.b3.conv3.bn.running_var",
+    "layers.0.3.b3.conv3.bn.num_batches_tracked",
+    "layers.0.3.b4.conv1.conv.weight",
+    "layers.0.3.b4.conv1.bn.weight",
+    "layers.0.3.b4.conv1.bn.bias",
+    "layers.0.3.b4.conv1.bn.running_mean",
+    "layers.0.3.b4.conv1.bn.running_var",
+    "layers.0.3.b4.conv1.bn.num_batches_tracked",
+    "layers.0.3.b4.conv2.conv.weight",
+    "layers.0.3.b4.conv2.bn.weight",
+    "layers.0.3.b4.conv2.bn.bias",
+    "layers.0.3.b4.conv2.bn.running_mean",
+    "layers.0.3.b4.conv2.bn.running_var",
+    "layers.0.3.b4.conv2.bn.num_batches_tracked",
+    "layers.0.3.b4.se.fc1.weight",
+    "layers.0.3.b4.se.fc1.bias",
+    "layers.0.3.b4.se.fc2.weight",
+    "layers.0.3.b4.se.fc2.bias",
+    "layers.0.3.b4.conv3.conv.weight",
+    "layers.0.3.b4.conv3.bn.weight",
+    "layers.0.3.b4.conv3.bn.bias",
+    "layers.0.3.b4.conv3.bn.running_mean",
+    "layers.0.3.b4.conv3.bn.running_var",
+    "layers.0.3.b4.conv3.bn.num_batches_tracked",
+    "layers.0.3.b5.conv1.conv.weight",
+    "layers.0.3.b5.conv1.bn.weight",
+    "layers.0.3.b5.conv1.bn.bias",
+    "layers.0.3.b5.conv1.bn.running_mean",
+    "layers.0.3.b5.conv1.bn.running_var",
+    "layers.0.3.b5.conv1.bn.num_batches_tracked",
+    "layers.0.3.b5.conv2.conv.weight",
+    "layers.0.3.b5.conv2.bn.weight",
+    "layers.0.3.b5.conv2.bn.bias",
+    "layers.0.3.b5.conv2.bn.running_mean",
+    "layers.0.3.b5.conv2.bn.running_var",
+    "layers.0.3.b5.conv2.bn.num_batches_tracked",
+    "layers.0.3.b5.se.fc1.weight",
+    "layers.0.3.b5.se.fc1.bias",
+    "layers.0.3.b5.se.fc2.weight",
+    "layers.0.3.b5.se.fc2.bias",
+    "layers.0.3.b5.conv3.conv.weight",
+    "layers.0.3.b5.conv3.bn.weight",
+    "layers.0.3.b5.conv3.bn.bias",
+    "layers.0.3.b5.conv3.bn.running_mean",
+    "layers.0.3.b5.conv3.bn.running_var",
+    "layers.0.3.b5.conv3.bn.num_batches_tracked",
+    "layers.0.3.b6.conv1.conv.weight",
+    "layers.0.3.b6.conv1.bn.weight",
+    "layers.0.3.b6.conv1.bn.bias",
+    "layers.0.3.b6.conv1.bn.running_mean",
+    "layers.0.3.b6.conv1.bn.running_var",
+    "layers.0.3.b6.conv1.bn.num_batches_tracked",
+    "layers.0.3.b6.conv2.conv.weight",
+    "layers.0.3.b6.conv2.bn.weight",
+    "layers.0.3.b6.conv2.bn.bias",
+    "layers.0.3.b6.conv2.bn.running_mean",
+    "layers.0.3.b6.conv2.bn.running_var",
+    "layers.0.3.b6.conv2.bn.num_batches_tracked",
+    "layers.0.3.b6.se.fc1.weight",
+    "layers.0.3.b6.se.fc1.bias",
+    "layers.0.3.b6.se.fc2.weight",
+    "layers.0.3.b6.se.fc2.bias",
+    "layers.0.3.b6.conv3.conv.weight",
+    "layers.0.3.b6.conv3.bn.weight",
+    "layers.0.3.b6.conv3.bn.bias",
+    "layers.0.3.b6.conv3.bn.running_mean",
+    "layers.0.3.b6.conv3.bn.running_var",
+    "layers.0.3.b6.conv3.bn.num_batches_tracked",
+    "layers.0.4.b1.conv1.conv.weight",
+    "layers.0.4.b1.conv1.bn.weight",
+    "layers.0.4.b1.conv1.bn.bias",
+    "layers.0.4.b1.conv1.bn.running_mean",
+    "layers.0.4.b1.conv1.bn.running_var",
+    "layers.0.4.b1.conv1.bn.num_batches_tracked",
+    "layers.0.4.b1.conv2.conv.weight",
+    "layers.0.4.b1.conv2.bn.weight",
+    "layers.0.4.b1.conv2.bn.bias",
+    "layers.0.4.b1.conv2.bn.running_mean",
+    "layers.0.4.b1.conv2.bn.running_var",
+    "layers.0.4.b1.conv2.bn.num_batches_tracked",
+    "layers.0.4.b1.se.fc1.weight",
+    "layers.0.4.b1.se.fc1.bias",
+    "layers.0.4.b1.se.fc2.weight",
+    "layers.0.4.b1.se.fc2.bias",
+    "layers.0.4.b1.conv3.conv.weight",
+    "layers.0.4.b1.conv3.bn.weight",
+    "layers.0.4.b1.conv3.bn.bias",
+    "layers.0.4.b1.conv3.bn.running_mean",
+    "layers.0.4.b1.conv3.bn.running_var",
+    "layers.0.4.b1.conv3.bn.num_batches_tracked",
+    "layers.0.4.b1.downsample.conv.weight",
+    "layers.0.4.b1.downsample.bn.weight",
+    "layers.0.4.b1.downsample.bn.bias",
+    "layers.0.4.b1.downsample.bn.running_mean",
+    "layers.0.4.b1.downsample.bn.running_var",
+    "layers.0.4.b1.downsample.bn.num_batches_tracked",
+    "layers.0.4.b2.conv1.conv.weight",
+    "layers.0.4.b2.conv1.bn.weight",
+    "layers.0.4.b2.conv1.bn.bias",
+    "layers.0.4.b2.conv1.bn.running_mean",
+    "layers.0.4.b2.conv1.bn.running_var",
+    "layers.0.4.b2.conv1.bn.num_batches_tracked",
+    "layers.0.4.b2.conv2.conv.weight",
+    "layers.0.4.b2.conv2.bn.weight",
+    "layers.0.4.b2.conv2.bn.bias",
+    "layers.0.4.b2.conv2.bn.running_mean",
+    "layers.0.4.b2.conv2.bn.running_var",
+    "layers.0.4.b2.conv2.bn.num_batches_tracked",
+    "layers.0.4.b2.se.fc1.weight",
+    "layers.0.4.b2.se.fc1.bias",
+    "layers.0.4.b2.se.fc2.weight",
+    "layers.0.4.b2.se.fc2.bias",
+    "layers.0.4.b2.conv3.conv.weight",
+    "layers.0.4.b2.conv3.bn.weight",
+    "layers.0.4.b2.conv3.bn.bias",
+    "layers.0.4.b2.conv3.bn.running_mean",
+    "layers.0.4.b2.conv3.bn.running_var",
+    "layers.0.4.b2.conv3.bn.num_batches_tracked",
+    "layers.0.4.b3.conv1.conv.weight",
+    "layers.0.4.b3.conv1.bn.weight",
+    "layers.0.4.b3.conv1.bn.bias",
+    "layers.0.4.b3.conv1.bn.running_mean",
+    "layers.0.4.b3.conv1.bn.running_var",
+    "layers.0.4.b3.conv1.bn.num_batches_tracked",
+    "layers.0.4.b3.conv2.conv.weight",
+    "layers.0.4.b3.conv2.bn.weight",
+    "layers.0.4.b3.conv2.bn.bias",
+    "layers.0.4.b3.conv2.bn.running_mean",
+    "layers.0.4.b3.conv2.bn.running_var",
+    "layers.0.4.b3.conv2.bn.num_batches_tracked",
+    "layers.0.4.b3.se.fc1.weight",
+    "layers.0.4.b3.se.fc1.bias",
+    "layers.0.4.b3.se.fc2.weight",
+    "layers.0.4.b3.se.fc2.bias",
+    "layers.0.4.b3.conv3.conv.weight",
+    "layers.0.4.b3.conv3.bn.weight",
+    "layers.0.4.b3.conv3.bn.bias",
+    "layers.0.4.b3.conv3.bn.running_mean",
+    "layers.0.4.b3.conv3.bn.running_var",
+    "layers.0.4.b3.conv3.bn.num_batches_tracked",
+    "layers.0.4.b4.conv1.conv.weight",
+    "layers.0.4.b4.conv1.bn.weight",
+    "layers.0.4.b4.conv1.bn.bias",
+    "layers.0.4.b4.conv1.bn.running_mean",
+    "layers.0.4.b4.conv1.bn.running_var",
+    "layers.0.4.b4.conv1.bn.num_batches_tracked",
+    "layers.0.4.b4.conv2.conv.weight",
+    "layers.0.4.b4.conv2.bn.weight",
+    "layers.0.4.b4.conv2.bn.bias",
+    "layers.0.4.b4.conv2.bn.running_mean",
+    "layers.0.4.b4.conv2.bn.running_var",
+    "layers.0.4.b4.conv2.bn.num_batches_tracked",
+    "layers.0.4.b4.se.fc1.weight",
+    "layers.0.4.b4.se.fc1.bias",
+    "layers.0.4.b4.se.fc2.weight",
+    "layers.0.4.b4.se.fc2.bias",
+    "layers.0.4.b4.conv3.conv.weight",
+    "layers.0.4.b4.conv3.bn.weight",
+    "layers.0.4.b4.conv3.bn.bias",
+    "layers.0.4.b4.conv3.bn.running_mean",
+    "layers.0.4.b4.conv3.bn.running_var",
+    "layers.0.4.b4.conv3.bn.num_batches_tracked",
+    "layers.0.4.b5.conv1.conv.weight",
+    "layers.0.4.b5.conv1.bn.weight",
+    "layers.0.4.b5.conv1.bn.bias",
+    "layers.0.4.b5.conv1.bn.running_mean",
+    "layers.0.4.b5.conv1.bn.running_var",
+    "layers.0.4.b5.conv1.bn.num_batches_tracked",
+    "layers.0.4.b5.conv2.conv.weight",
+    "layers.0.4.b5.conv2.bn.weight",
+    "layers.0.4.b5.conv2.bn.bias",
+    "layers.0.4.b5.conv2.bn.running_mean",
+    "layers.0.4.b5.conv2.bn.running_var",
+    "layers.0.4.b5.conv2.bn.num_batches_tracked",
+    "layers.0.4.b5.se.fc1.weight",
+    "layers.0.4.b5.se.fc1.bias",
+    "layers.0.4.b5.se.fc2.weight",
+    "layers.0.4.b5.se.fc2.bias",
+    "layers.0.4.b5.conv3.conv.weight",
+    "layers.0.4.b5.conv3.bn.weight",
+    "layers.0.4.b5.conv3.bn.bias",
+    "layers.0.4.b5.conv3.bn.running_mean",
+    "layers.0.4.b5.conv3.bn.running_var",
+    "layers.0.4.b5.conv3.bn.num_batches_tracked",
+    "layers.0.4.b6.conv1.conv.weight",
+    "layers.0.4.b6.conv1.bn.weight",
+    "layers.0.4.b6.conv1.bn.bias",
+    "layers.0.4.b6.conv1.bn.running_mean",
+    "layers.0.4.b6.conv1.bn.running_var",
+    "layers.0.4.b6.conv1.bn.num_batches_tracked",
+    "layers.0.4.b6.conv2.conv.weight",
+    "layers.0.4.b6.conv2.bn.weight",
+    "layers.0.4.b6.conv2.bn.bias",
+    "layers.0.4.b6.conv2.bn.running_mean",
+    "layers.0.4.b6.conv2.bn.running_var",
+    "layers.0.4.b6.conv2.bn.num_batches_tracked",
+    "layers.0.4.b6.se.fc1.weight",
+    "layers.0.4.b6.se.fc1.bias",
+    "layers.0.4.b6.se.fc2.weight",
+    "layers.0.4.b6.se.fc2.bias",
+    "layers.0.4.b6.conv3.conv.weight",
+    "layers.0.4.b6.conv3.bn.weight",
+    "layers.0.4.b6.conv3.bn.bias",
+    "layers.0.4.b6.conv3.bn.running_mean",
+    "layers.0.4.b6.conv3.bn.running_var",
+    "layers.0.4.b6.conv3.bn.num_batches_tracked"
+  ],
+  "trainable_names": [
+    "layers.1.weight",
+    "layers.1.bias",
+    "layers.3.0.0.weight",
+    "layers.3.0.0.bias",
+    "layers.3.1.0.weight",
+    "layers.3.1.0.bias",
+    "layers.4.shuf.0.0.weight",
+    "layers.4.shuf.0.0.bias",
+    "layers.4.bn.weight",
+    "layers.4.bn.bias",
+    "layers.4.conv1.0.weight",
+    "layers.4.conv1.0.bias",
+    "layers.4.conv2.0.weight",
+    "layers.4.conv2.0.bias",
+    "layers.5.shuf.0.0.weight",
+    "layers.5.shuf.0.0.bias",
+    "layers.5.bn.weight",
+    "layers.5.bn.bias",
+    "layers.5.conv1.0.weight",
+    "layers.5.conv1.0.bias",
+    "layers.5.conv2.0.weight",
+    "layers.5.conv2.0.bias",
+    "layers.6.shuf.0.0.weight",
+    "layers.6.shuf.0.0.bias",
+    "layers.6.bn.weight",
+    "layers.6.bn.bias",
+    "layers.6.conv1.0.weight",
+    "layers.6.conv1.0.bias",
+    "layers.6.conv2.0.weight",
+    "layers.6.conv2.0.bias",
+    "layers.7.shuf.0.0.weight",
+    "layers.7.shuf.0.0.bias",
+    "layers.7.bn.weight",
+    "layers.7.bn.bias",
+    "layers.7.conv1.0.weight",
+    "layers.7.conv1.0.bias",
+    "layers.7.conv2.0.weight",
+    "layers.7.conv2.0.bias",
+    "layers.8.0.0.weight",
+    "layers.8.0.0.bias",
+    "layers.11.convpath.0.0.weight",
+    "layers.11.convpath.0.0.bias",
+    "layers.11.convpath.1.0.weight",
+    "layers.11.convpath.1.0.bias",
+    "layers.12.0.weight",
+    "layers.12.0.bias"
+  ],
+  "decoder_state_names": [
+    "layers.1.weight",
+    "layers.1.bias",
+    "layers.1.running_mean",
+    "layers.1.running_var",
+    "layers.1.num_batches_tracked",
+    "layers.3.0.0.weight",
+    "layers.3.0.0.bias",
+    "layers.3.1.0.weight",
+    "layers.3.1.0.bias",
+    "layers.4.shuf.0.0.weight",
+    "layers.4.shuf.0.0.bias",
+    "layers.4.bn.weight",
+    "layers.4.bn.bias",
+    "layers.4.bn.running_mean",
+    "layers.4.bn.running_var",
+    "layers.4.bn.num_batches_tracked",
+    "layers.4.conv1.0.weight",
+    "layers.4.conv1.0.bias",
+    "layers.4.conv2.0.weight",
+    "layers.4.conv2.0.bias",
+    "layers.5.shuf.0.0.weight",
+    "layers.5.shuf.0.0.bias",
+    "layers.5.bn.weight",
+    "layers.5.bn.bias",
+    "layers.5.bn.running_mean",
+    "layers.5.bn.running_var",
+    "layers.5.bn.num_batches_tracked",
+    "layers.5.conv1.0.weight",
+    "layers.5.conv1.0.bias",
+    "layers.5.conv2.0.weight",
+    "layers.5.conv2.0.bias",
+    "layers.6.shuf.0.0.weight",
+    "layers.6.shuf.0.0.bias",
+    "layers.6.bn.weight",
+    "layers.6.bn.bias",
+    "layers.6.bn.running_mean",
+    "layers.6.bn.running_var",
+    "layers.6.bn.num_batches_tracked",
+    "layers.6.conv1.0.weight",
+    "layers.6.conv1.0.bias",
+    "layers.6.conv2.0.weight",
+    "layers.6.conv2.0.bias",
+    "layers.7.shuf.0.0.weight",
+    "layers.7.shuf.0.0.bias",
+    "layers.7.bn.weight",
+    "layers.7.bn.bias",
+    "layers.7.bn.running_mean",
+    "layers.7.bn.running_var",
+    "layers.7.bn.num_batches_tracked",
+    "layers.7.conv1.0.weight",
+    "layers.7.conv1.0.bias",
+    "layers.7.conv2.0.weight",
+    "layers.7.conv2.0.bias",
+    "layers.8.0.0.weight",
+    "layers.8.0.0.bias",
+    "layers.11.convpath.0.0.weight",
+    "layers.11.convpath.0.0.bias",
+    "layers.11.convpath.1.0.weight",
+    "layers.11.convpath.1.0.bias",
+    "layers.12.0.weight",
+    "layers.12.0.bias"
+  ],
+  "parameters": [
+    {
+      "name": "layers.0.0.conv.weight",
+      "shape": [
+        32,
+        3,
+        3,
+        3
+      ],
+      "numel": 864,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.0.bn.weight",
+      "shape": [
+        32
+      ],
+      "numel": 32,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.0.bn.bias",
+      "shape": [
+        32
+      ],
+      "numel": 32,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.1.b1.conv1.conv.weight",
+      "shape": [
+        48,
+        32,
+        1,
+        1
+      ],
+      "numel": 1536,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.1.b1.conv1.bn.weight",
+      "shape": [
+        48
+      ],
+      "numel": 48,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.1.b1.conv1.bn.bias",
+      "shape": [
+        48
+      ],
+      "numel": 48,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.1.b1.conv2.conv.weight",
+      "shape": [
+        48,
+        8,
+        3,
+        3
+      ],
+      "numel": 3456,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.1.b1.conv2.bn.weight",
+      "shape": [
+        48
+      ],
+      "numel": 48,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.1.b1.conv2.bn.bias",
+      "shape": [
+        48
+      ],
+      "numel": 48,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.1.b1.se.fc1.weight",
+      "shape": [
+        8,
+        48,
+        1,
+        1
+      ],
+      "numel": 384,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.1.b1.se.fc1.bias",
+      "shape": [
+        8
+      ],
+      "numel": 8,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.1.b1.se.fc2.weight",
+      "shape": [
+        48,
+        8,
+        1,
+        1
+      ],
+      "numel": 384,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.1.b1.se.fc2.bias",
+      "shape": [
+        48
+      ],
+      "numel": 48,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.1.b1.conv3.conv.weight",
+      "shape": [
+        48,
+        48,
+        1,
+        1
+      ],
+      "numel": 2304,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.1.b1.conv3.bn.weight",
+      "shape": [
+        48
+      ],
+      "numel": 48,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.1.b1.conv3.bn.bias",
+      "shape": [
+        48
+      ],
+      "numel": 48,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.1.b1.downsample.conv.weight",
+      "shape": [
+        48,
+        32,
+        1,
+        1
+      ],
+      "numel": 1536,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.1.b1.downsample.bn.weight",
+      "shape": [
+        48
+      ],
+      "numel": 48,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.1.b1.downsample.bn.bias",
+      "shape": [
+        48
+      ],
+      "numel": 48,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.2.b1.conv1.conv.weight",
+      "shape": [
+        104,
+        48,
+        1,
+        1
+      ],
+      "numel": 4992,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.2.b1.conv1.bn.weight",
+      "shape": [
+        104
+      ],
+      "numel": 104,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.2.b1.conv1.bn.bias",
+      "shape": [
+        104
+      ],
+      "numel": 104,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.2.b1.conv2.conv.weight",
+      "shape": [
+        104,
+        8,
+        3,
+        3
+      ],
+      "numel": 7488,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.2.b1.conv2.bn.weight",
+      "shape": [
+        104
+      ],
+      "numel": 104,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.2.b1.conv2.bn.bias",
+      "shape": [
+        104
+      ],
+      "numel": 104,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.2.b1.se.fc1.weight",
+      "shape": [
+        12,
+        104,
+        1,
+        1
+      ],
+      "numel": 1248,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.2.b1.se.fc1.bias",
+      "shape": [
+        12
+      ],
+      "numel": 12,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.2.b1.se.fc2.weight",
+      "shape": [
+        104,
+        12,
+        1,
+        1
+      ],
+      "numel": 1248,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.2.b1.se.fc2.bias",
+      "shape": [
+        104
+      ],
+      "numel": 104,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.2.b1.conv3.conv.weight",
+      "shape": [
+        104,
+        104,
+        1,
+        1
+      ],
+      "numel": 10816,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.2.b1.conv3.bn.weight",
+      "shape": [
+        104
+      ],
+      "numel": 104,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.2.b1.conv3.bn.bias",
+      "shape": [
+        104
+      ],
+      "numel": 104,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.2.b1.downsample.conv.weight",
+      "shape": [
+        104,
+        48,
+        1,
+        1
+      ],
+      "numel": 4992,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.2.b1.downsample.bn.weight",
+      "shape": [
+        104
+      ],
+      "numel": 104,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.2.b1.downsample.bn.bias",
+      "shape": [
+        104
+      ],
+      "numel": 104,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.2.b2.conv1.conv.weight",
+      "shape": [
+        104,
+        104,
+        1,
+        1
+      ],
+      "numel": 10816,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.2.b2.conv1.bn.weight",
+      "shape": [
+        104
+      ],
+      "numel": 104,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.2.b2.conv1.bn.bias",
+      "shape": [
+        104
+      ],
+      "numel": 104,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.2.b2.conv2.conv.weight",
+      "shape": [
+        104,
+        8,
+        3,
+        3
+      ],
+      "numel": 7488,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.2.b2.conv2.bn.weight",
+      "shape": [
+        104
+      ],
+      "numel": 104,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.2.b2.conv2.bn.bias",
+      "shape": [
+        104
+      ],
+      "numel": 104,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.2.b2.se.fc1.weight",
+      "shape": [
+        26,
+        104,
+        1,
+        1
+      ],
+      "numel": 2704,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.2.b2.se.fc1.bias",
+      "shape": [
+        26
+      ],
+      "numel": 26,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.2.b2.se.fc2.weight",
+      "shape": [
+        104,
+        26,
+        1,
+        1
+      ],
+      "numel": 2704,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.2.b2.se.fc2.bias",
+      "shape": [
+        104
+      ],
+      "numel": 104,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.2.b2.conv3.conv.weight",
+      "shape": [
+        104,
+        104,
+        1,
+        1
+      ],
+      "numel": 10816,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.2.b2.conv3.bn.weight",
+      "shape": [
+        104
+      ],
+      "numel": 104,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.2.b2.conv3.bn.bias",
+      "shape": [
+        104
+      ],
+      "numel": 104,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.2.b3.conv1.conv.weight",
+      "shape": [
+        104,
+        104,
+        1,
+        1
+      ],
+      "numel": 10816,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.2.b3.conv1.bn.weight",
+      "shape": [
+        104
+      ],
+      "numel": 104,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.2.b3.conv1.bn.bias",
+      "shape": [
+        104
+      ],
+      "numel": 104,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.2.b3.conv2.conv.weight",
+      "shape": [
+        104,
+        8,
+        3,
+        3
+      ],
+      "numel": 7488,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.2.b3.conv2.bn.weight",
+      "shape": [
+        104
+      ],
+      "numel": 104,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.2.b3.conv2.bn.bias",
+      "shape": [
+        104
+      ],
+      "numel": 104,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.2.b3.se.fc1.weight",
+      "shape": [
+        26,
+        104,
+        1,
+        1
+      ],
+      "numel": 2704,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.2.b3.se.fc1.bias",
+      "shape": [
+        26
+      ],
+      "numel": 26,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.2.b3.se.fc2.weight",
+      "shape": [
+        104,
+        26,
+        1,
+        1
+      ],
+      "numel": 2704,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.2.b3.se.fc2.bias",
+      "shape": [
+        104
+      ],
+      "numel": 104,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.2.b3.conv3.conv.weight",
+      "shape": [
+        104,
+        104,
+        1,
+        1
+      ],
+      "numel": 10816,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.2.b3.conv3.bn.weight",
+      "shape": [
+        104
+      ],
+      "numel": 104,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.2.b3.conv3.bn.bias",
+      "shape": [
+        104
+      ],
+      "numel": 104,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b1.conv1.conv.weight",
+      "shape": [
+        208,
+        104,
+        1,
+        1
+      ],
+      "numel": 21632,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b1.conv1.bn.weight",
+      "shape": [
+        208
+      ],
+      "numel": 208,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b1.conv1.bn.bias",
+      "shape": [
+        208
+      ],
+      "numel": 208,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b1.conv2.conv.weight",
+      "shape": [
+        208,
+        8,
+        3,
+        3
+      ],
+      "numel": 14976,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b1.conv2.bn.weight",
+      "shape": [
+        208
+      ],
+      "numel": 208,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b1.conv2.bn.bias",
+      "shape": [
+        208
+      ],
+      "numel": 208,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b1.se.fc1.weight",
+      "shape": [
+        26,
+        208,
+        1,
+        1
+      ],
+      "numel": 5408,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b1.se.fc1.bias",
+      "shape": [
+        26
+      ],
+      "numel": 26,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b1.se.fc2.weight",
+      "shape": [
+        208,
+        26,
+        1,
+        1
+      ],
+      "numel": 5408,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b1.se.fc2.bias",
+      "shape": [
+        208
+      ],
+      "numel": 208,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b1.conv3.conv.weight",
+      "shape": [
+        208,
+        208,
+        1,
+        1
+      ],
+      "numel": 43264,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b1.conv3.bn.weight",
+      "shape": [
+        208
+      ],
+      "numel": 208,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b1.conv3.bn.bias",
+      "shape": [
+        208
+      ],
+      "numel": 208,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b1.downsample.conv.weight",
+      "shape": [
+        208,
+        104,
+        1,
+        1
+      ],
+      "numel": 21632,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b1.downsample.bn.weight",
+      "shape": [
+        208
+      ],
+      "numel": 208,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b1.downsample.bn.bias",
+      "shape": [
+        208
+      ],
+      "numel": 208,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b2.conv1.conv.weight",
+      "shape": [
+        208,
+        208,
+        1,
+        1
+      ],
+      "numel": 43264,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b2.conv1.bn.weight",
+      "shape": [
+        208
+      ],
+      "numel": 208,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b2.conv1.bn.bias",
+      "shape": [
+        208
+      ],
+      "numel": 208,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b2.conv2.conv.weight",
+      "shape": [
+        208,
+        8,
+        3,
+        3
+      ],
+      "numel": 14976,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b2.conv2.bn.weight",
+      "shape": [
+        208
+      ],
+      "numel": 208,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b2.conv2.bn.bias",
+      "shape": [
+        208
+      ],
+      "numel": 208,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b2.se.fc1.weight",
+      "shape": [
+        52,
+        208,
+        1,
+        1
+      ],
+      "numel": 10816,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b2.se.fc1.bias",
+      "shape": [
+        52
+      ],
+      "numel": 52,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b2.se.fc2.weight",
+      "shape": [
+        208,
+        52,
+        1,
+        1
+      ],
+      "numel": 10816,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b2.se.fc2.bias",
+      "shape": [
+        208
+      ],
+      "numel": 208,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b2.conv3.conv.weight",
+      "shape": [
+        208,
+        208,
+        1,
+        1
+      ],
+      "numel": 43264,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b2.conv3.bn.weight",
+      "shape": [
+        208
+      ],
+      "numel": 208,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b2.conv3.bn.bias",
+      "shape": [
+        208
+      ],
+      "numel": 208,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b3.conv1.conv.weight",
+      "shape": [
+        208,
+        208,
+        1,
+        1
+      ],
+      "numel": 43264,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b3.conv1.bn.weight",
+      "shape": [
+        208
+      ],
+      "numel": 208,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b3.conv1.bn.bias",
+      "shape": [
+        208
+      ],
+      "numel": 208,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b3.conv2.conv.weight",
+      "shape": [
+        208,
+        8,
+        3,
+        3
+      ],
+      "numel": 14976,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b3.conv2.bn.weight",
+      "shape": [
+        208
+      ],
+      "numel": 208,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b3.conv2.bn.bias",
+      "shape": [
+        208
+      ],
+      "numel": 208,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b3.se.fc1.weight",
+      "shape": [
+        52,
+        208,
+        1,
+        1
+      ],
+      "numel": 10816,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b3.se.fc1.bias",
+      "shape": [
+        52
+      ],
+      "numel": 52,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b3.se.fc2.weight",
+      "shape": [
+        208,
+        52,
+        1,
+        1
+      ],
+      "numel": 10816,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b3.se.fc2.bias",
+      "shape": [
+        208
+      ],
+      "numel": 208,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b3.conv3.conv.weight",
+      "shape": [
+        208,
+        208,
+        1,
+        1
+      ],
+      "numel": 43264,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b3.conv3.bn.weight",
+      "shape": [
+        208
+      ],
+      "numel": 208,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b3.conv3.bn.bias",
+      "shape": [
+        208
+      ],
+      "numel": 208,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b4.conv1.conv.weight",
+      "shape": [
+        208,
+        208,
+        1,
+        1
+      ],
+      "numel": 43264,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b4.conv1.bn.weight",
+      "shape": [
+        208
+      ],
+      "numel": 208,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b4.conv1.bn.bias",
+      "shape": [
+        208
+      ],
+      "numel": 208,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b4.conv2.conv.weight",
+      "shape": [
+        208,
+        8,
+        3,
+        3
+      ],
+      "numel": 14976,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b4.conv2.bn.weight",
+      "shape": [
+        208
+      ],
+      "numel": 208,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b4.conv2.bn.bias",
+      "shape": [
+        208
+      ],
+      "numel": 208,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b4.se.fc1.weight",
+      "shape": [
+        52,
+        208,
+        1,
+        1
+      ],
+      "numel": 10816,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b4.se.fc1.bias",
+      "shape": [
+        52
+      ],
+      "numel": 52,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b4.se.fc2.weight",
+      "shape": [
+        208,
+        52,
+        1,
+        1
+      ],
+      "numel": 10816,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b4.se.fc2.bias",
+      "shape": [
+        208
+      ],
+      "numel": 208,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b4.conv3.conv.weight",
+      "shape": [
+        208,
+        208,
+        1,
+        1
+      ],
+      "numel": 43264,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b4.conv3.bn.weight",
+      "shape": [
+        208
+      ],
+      "numel": 208,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b4.conv3.bn.bias",
+      "shape": [
+        208
+      ],
+      "numel": 208,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b5.conv1.conv.weight",
+      "shape": [
+        208,
+        208,
+        1,
+        1
+      ],
+      "numel": 43264,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b5.conv1.bn.weight",
+      "shape": [
+        208
+      ],
+      "numel": 208,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b5.conv1.bn.bias",
+      "shape": [
+        208
+      ],
+      "numel": 208,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b5.conv2.conv.weight",
+      "shape": [
+        208,
+        8,
+        3,
+        3
+      ],
+      "numel": 14976,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b5.conv2.bn.weight",
+      "shape": [
+        208
+      ],
+      "numel": 208,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b5.conv2.bn.bias",
+      "shape": [
+        208
+      ],
+      "numel": 208,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b5.se.fc1.weight",
+      "shape": [
+        52,
+        208,
+        1,
+        1
+      ],
+      "numel": 10816,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b5.se.fc1.bias",
+      "shape": [
+        52
+      ],
+      "numel": 52,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b5.se.fc2.weight",
+      "shape": [
+        208,
+        52,
+        1,
+        1
+      ],
+      "numel": 10816,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b5.se.fc2.bias",
+      "shape": [
+        208
+      ],
+      "numel": 208,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b5.conv3.conv.weight",
+      "shape": [
+        208,
+        208,
+        1,
+        1
+      ],
+      "numel": 43264,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b5.conv3.bn.weight",
+      "shape": [
+        208
+      ],
+      "numel": 208,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b5.conv3.bn.bias",
+      "shape": [
+        208
+      ],
+      "numel": 208,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b6.conv1.conv.weight",
+      "shape": [
+        208,
+        208,
+        1,
+        1
+      ],
+      "numel": 43264,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b6.conv1.bn.weight",
+      "shape": [
+        208
+      ],
+      "numel": 208,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b6.conv1.bn.bias",
+      "shape": [
+        208
+      ],
+      "numel": 208,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b6.conv2.conv.weight",
+      "shape": [
+        208,
+        8,
+        3,
+        3
+      ],
+      "numel": 14976,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b6.conv2.bn.weight",
+      "shape": [
+        208
+      ],
+      "numel": 208,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b6.conv2.bn.bias",
+      "shape": [
+        208
+      ],
+      "numel": 208,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b6.se.fc1.weight",
+      "shape": [
+        52,
+        208,
+        1,
+        1
+      ],
+      "numel": 10816,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b6.se.fc1.bias",
+      "shape": [
+        52
+      ],
+      "numel": 52,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b6.se.fc2.weight",
+      "shape": [
+        208,
+        52,
+        1,
+        1
+      ],
+      "numel": 10816,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b6.se.fc2.bias",
+      "shape": [
+        208
+      ],
+      "numel": 208,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b6.conv3.conv.weight",
+      "shape": [
+        208,
+        208,
+        1,
+        1
+      ],
+      "numel": 43264,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b6.conv3.bn.weight",
+      "shape": [
+        208
+      ],
+      "numel": 208,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.3.b6.conv3.bn.bias",
+      "shape": [
+        208
+      ],
+      "numel": 208,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b1.conv1.conv.weight",
+      "shape": [
+        440,
+        208,
+        1,
+        1
+      ],
+      "numel": 91520,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b1.conv1.bn.weight",
+      "shape": [
+        440
+      ],
+      "numel": 440,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b1.conv1.bn.bias",
+      "shape": [
+        440
+      ],
+      "numel": 440,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b1.conv2.conv.weight",
+      "shape": [
+        440,
+        8,
+        3,
+        3
+      ],
+      "numel": 31680,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b1.conv2.bn.weight",
+      "shape": [
+        440
+      ],
+      "numel": 440,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b1.conv2.bn.bias",
+      "shape": [
+        440
+      ],
+      "numel": 440,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b1.se.fc1.weight",
+      "shape": [
+        52,
+        440,
+        1,
+        1
+      ],
+      "numel": 22880,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b1.se.fc1.bias",
+      "shape": [
+        52
+      ],
+      "numel": 52,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b1.se.fc2.weight",
+      "shape": [
+        440,
+        52,
+        1,
+        1
+      ],
+      "numel": 22880,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b1.se.fc2.bias",
+      "shape": [
+        440
+      ],
+      "numel": 440,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b1.conv3.conv.weight",
+      "shape": [
+        440,
+        440,
+        1,
+        1
+      ],
+      "numel": 193600,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b1.conv3.bn.weight",
+      "shape": [
+        440
+      ],
+      "numel": 440,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b1.conv3.bn.bias",
+      "shape": [
+        440
+      ],
+      "numel": 440,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b1.downsample.conv.weight",
+      "shape": [
+        440,
+        208,
+        1,
+        1
+      ],
+      "numel": 91520,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b1.downsample.bn.weight",
+      "shape": [
+        440
+      ],
+      "numel": 440,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b1.downsample.bn.bias",
+      "shape": [
+        440
+      ],
+      "numel": 440,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b2.conv1.conv.weight",
+      "shape": [
+        440,
+        440,
+        1,
+        1
+      ],
+      "numel": 193600,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b2.conv1.bn.weight",
+      "shape": [
+        440
+      ],
+      "numel": 440,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b2.conv1.bn.bias",
+      "shape": [
+        440
+      ],
+      "numel": 440,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b2.conv2.conv.weight",
+      "shape": [
+        440,
+        8,
+        3,
+        3
+      ],
+      "numel": 31680,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b2.conv2.bn.weight",
+      "shape": [
+        440
+      ],
+      "numel": 440,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b2.conv2.bn.bias",
+      "shape": [
+        440
+      ],
+      "numel": 440,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b2.se.fc1.weight",
+      "shape": [
+        110,
+        440,
+        1,
+        1
+      ],
+      "numel": 48400,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b2.se.fc1.bias",
+      "shape": [
+        110
+      ],
+      "numel": 110,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b2.se.fc2.weight",
+      "shape": [
+        440,
+        110,
+        1,
+        1
+      ],
+      "numel": 48400,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b2.se.fc2.bias",
+      "shape": [
+        440
+      ],
+      "numel": 440,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b2.conv3.conv.weight",
+      "shape": [
+        440,
+        440,
+        1,
+        1
+      ],
+      "numel": 193600,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b2.conv3.bn.weight",
+      "shape": [
+        440
+      ],
+      "numel": 440,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b2.conv3.bn.bias",
+      "shape": [
+        440
+      ],
+      "numel": 440,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b3.conv1.conv.weight",
+      "shape": [
+        440,
+        440,
+        1,
+        1
+      ],
+      "numel": 193600,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b3.conv1.bn.weight",
+      "shape": [
+        440
+      ],
+      "numel": 440,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b3.conv1.bn.bias",
+      "shape": [
+        440
+      ],
+      "numel": 440,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b3.conv2.conv.weight",
+      "shape": [
+        440,
+        8,
+        3,
+        3
+      ],
+      "numel": 31680,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b3.conv2.bn.weight",
+      "shape": [
+        440
+      ],
+      "numel": 440,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b3.conv2.bn.bias",
+      "shape": [
+        440
+      ],
+      "numel": 440,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b3.se.fc1.weight",
+      "shape": [
+        110,
+        440,
+        1,
+        1
+      ],
+      "numel": 48400,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b3.se.fc1.bias",
+      "shape": [
+        110
+      ],
+      "numel": 110,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b3.se.fc2.weight",
+      "shape": [
+        440,
+        110,
+        1,
+        1
+      ],
+      "numel": 48400,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b3.se.fc2.bias",
+      "shape": [
+        440
+      ],
+      "numel": 440,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b3.conv3.conv.weight",
+      "shape": [
+        440,
+        440,
+        1,
+        1
+      ],
+      "numel": 193600,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b3.conv3.bn.weight",
+      "shape": [
+        440
+      ],
+      "numel": 440,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b3.conv3.bn.bias",
+      "shape": [
+        440
+      ],
+      "numel": 440,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b4.conv1.conv.weight",
+      "shape": [
+        440,
+        440,
+        1,
+        1
+      ],
+      "numel": 193600,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b4.conv1.bn.weight",
+      "shape": [
+        440
+      ],
+      "numel": 440,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b4.conv1.bn.bias",
+      "shape": [
+        440
+      ],
+      "numel": 440,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b4.conv2.conv.weight",
+      "shape": [
+        440,
+        8,
+        3,
+        3
+      ],
+      "numel": 31680,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b4.conv2.bn.weight",
+      "shape": [
+        440
+      ],
+      "numel": 440,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b4.conv2.bn.bias",
+      "shape": [
+        440
+      ],
+      "numel": 440,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b4.se.fc1.weight",
+      "shape": [
+        110,
+        440,
+        1,
+        1
+      ],
+      "numel": 48400,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b4.se.fc1.bias",
+      "shape": [
+        110
+      ],
+      "numel": 110,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b4.se.fc2.weight",
+      "shape": [
+        440,
+        110,
+        1,
+        1
+      ],
+      "numel": 48400,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b4.se.fc2.bias",
+      "shape": [
+        440
+      ],
+      "numel": 440,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b4.conv3.conv.weight",
+      "shape": [
+        440,
+        440,
+        1,
+        1
+      ],
+      "numel": 193600,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b4.conv3.bn.weight",
+      "shape": [
+        440
+      ],
+      "numel": 440,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b4.conv3.bn.bias",
+      "shape": [
+        440
+      ],
+      "numel": 440,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b5.conv1.conv.weight",
+      "shape": [
+        440,
+        440,
+        1,
+        1
+      ],
+      "numel": 193600,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b5.conv1.bn.weight",
+      "shape": [
+        440
+      ],
+      "numel": 440,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b5.conv1.bn.bias",
+      "shape": [
+        440
+      ],
+      "numel": 440,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b5.conv2.conv.weight",
+      "shape": [
+        440,
+        8,
+        3,
+        3
+      ],
+      "numel": 31680,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b5.conv2.bn.weight",
+      "shape": [
+        440
+      ],
+      "numel": 440,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b5.conv2.bn.bias",
+      "shape": [
+        440
+      ],
+      "numel": 440,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b5.se.fc1.weight",
+      "shape": [
+        110,
+        440,
+        1,
+        1
+      ],
+      "numel": 48400,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b5.se.fc1.bias",
+      "shape": [
+        110
+      ],
+      "numel": 110,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b5.se.fc2.weight",
+      "shape": [
+        440,
+        110,
+        1,
+        1
+      ],
+      "numel": 48400,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b5.se.fc2.bias",
+      "shape": [
+        440
+      ],
+      "numel": 440,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b5.conv3.conv.weight",
+      "shape": [
+        440,
+        440,
+        1,
+        1
+      ],
+      "numel": 193600,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b5.conv3.bn.weight",
+      "shape": [
+        440
+      ],
+      "numel": 440,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b5.conv3.bn.bias",
+      "shape": [
+        440
+      ],
+      "numel": 440,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b6.conv1.conv.weight",
+      "shape": [
+        440,
+        440,
+        1,
+        1
+      ],
+      "numel": 193600,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b6.conv1.bn.weight",
+      "shape": [
+        440
+      ],
+      "numel": 440,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b6.conv1.bn.bias",
+      "shape": [
+        440
+      ],
+      "numel": 440,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b6.conv2.conv.weight",
+      "shape": [
+        440,
+        8,
+        3,
+        3
+      ],
+      "numel": 31680,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b6.conv2.bn.weight",
+      "shape": [
+        440
+      ],
+      "numel": 440,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b6.conv2.bn.bias",
+      "shape": [
+        440
+      ],
+      "numel": 440,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b6.se.fc1.weight",
+      "shape": [
+        110,
+        440,
+        1,
+        1
+      ],
+      "numel": 48400,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b6.se.fc1.bias",
+      "shape": [
+        110
+      ],
+      "numel": 110,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b6.se.fc2.weight",
+      "shape": [
+        440,
+        110,
+        1,
+        1
+      ],
+      "numel": 48400,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b6.se.fc2.bias",
+      "shape": [
+        440
+      ],
+      "numel": 440,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b6.conv3.conv.weight",
+      "shape": [
+        440,
+        440,
+        1,
+        1
+      ],
+      "numel": 193600,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b6.conv3.bn.weight",
+      "shape": [
+        440
+      ],
+      "numel": 440,
+      "trainable": false
+    },
+    {
+      "name": "layers.0.4.b6.conv3.bn.bias",
+      "shape": [
+        440
+      ],
+      "numel": 440,
+      "trainable": false
+    },
+    {
+      "name": "layers.1.weight",
+      "shape": [
+        440
+      ],
+      "numel": 440,
+      "trainable": true
+    },
+    {
+      "name": "layers.1.bias",
+      "shape": [
+        440
+      ],
+      "numel": 440,
+      "trainable": true
+    },
+    {
+      "name": "layers.3.0.0.weight",
+      "shape": [
+        880,
+        440,
+        3,
+        3
+      ],
+      "numel": 3484800,
+      "trainable": true
+    },
+    {
+      "name": "layers.3.0.0.bias",
+      "shape": [
+        880
+      ],
+      "numel": 880,
+      "trainable": true
+    },
+    {
+      "name": "layers.3.1.0.weight",
+      "shape": [
+        440,
+        880,
+        3,
+        3
+      ],
+      "numel": 3484800,
+      "trainable": true
+    },
+    {
+      "name": "layers.3.1.0.bias",
+      "shape": [
+        440
+      ],
+      "numel": 440,
+      "trainable": true
+    },
+    {
+      "name": "layers.4.shuf.0.0.weight",
+      "shape": [
+        880,
+        440,
+        1,
+        1
+      ],
+      "numel": 387200,
+      "trainable": true
+    },
+    {
+      "name": "layers.4.shuf.0.0.bias",
+      "shape": [
+        880
+      ],
+      "numel": 880,
+      "trainable": true
+    },
+    {
+      "name": "layers.4.bn.weight",
+      "shape": [
+        208
+      ],
+      "numel": 208,
+      "trainable": true
+    },
+    {
+      "name": "layers.4.bn.bias",
+      "shape": [
+        208
+      ],
+      "numel": 208,
+      "trainable": true
+    },
+    {
+      "name": "layers.4.conv1.0.weight",
+      "shape": [
+        428,
+        428,
+        3,
+        3
+      ],
+      "numel": 1648656,
+      "trainable": true
+    },
+    {
+      "name": "layers.4.conv1.0.bias",
+      "shape": [
+        428
+      ],
+      "numel": 428,
+      "trainable": true
+    },
+    {
+      "name": "layers.4.conv2.0.weight",
+      "shape": [
+        428,
+        428,
+        3,
+        3
+      ],
+      "numel": 1648656,
+      "trainable": true
+    },
+    {
+      "name": "layers.4.conv2.0.bias",
+      "shape": [
+        428
+      ],
+      "numel": 428,
+      "trainable": true
+    },
+    {
+      "name": "layers.5.shuf.0.0.weight",
+      "shape": [
+        856,
+        428,
+        1,
+        1
+      ],
+      "numel": 366368,
+      "trainable": true
+    },
+    {
+      "name": "layers.5.shuf.0.0.bias",
+      "shape": [
+        856
+      ],
+      "numel": 856,
+      "trainable": true
+    },
+    {
+      "name": "layers.5.bn.weight",
+      "shape": [
+        104
+      ],
+      "numel": 104,
+      "trainable": true
+    },
+    {
+      "name": "layers.5.bn.bias",
+      "shape": [
+        104
+      ],
+      "numel": 104,
+      "trainable": true
+    },
+    {
+      "name": "layers.5.conv1.0.weight",
+      "shape": [
+        318,
+        318,
+        3,
+        3
+      ],
+      "numel": 910116,
+      "trainable": true
+    },
+    {
+      "name": "layers.5.conv1.0.bias",
+      "shape": [
+        318
+      ],
+      "numel": 318,
+      "trainable": true
+    },
+    {
+      "name": "layers.5.conv2.0.weight",
+      "shape": [
+        318,
+        318,
+        3,
+        3
+      ],
+      "numel": 910116,
+      "trainable": true
+    },
+    {
+      "name": "layers.5.conv2.0.bias",
+      "shape": [
+        318
+      ],
+      "numel": 318,
+      "trainable": true
+    },
+    {
+      "name": "layers.6.shuf.0.0.weight",
+      "shape": [
+        636,
+        318,
+        1,
+        1
+      ],
+      "numel": 202248,
+      "trainable": true
+    },
+    {
+      "name": "layers.6.shuf.0.0.bias",
+      "shape": [
+        636
+      ],
+      "numel": 636,
+      "trainable": true
+    },
+    {
+      "name": "layers.6.bn.weight",
+      "shape": [
+        48
+      ],
+      "numel": 48,
+      "trainable": true
+    },
+    {
+      "name": "layers.6.bn.bias",
+      "shape": [
+        48
+      ],
+      "numel": 48,
+      "trainable": true
+    },
+    {
+      "name": "layers.6.conv1.0.weight",
+      "shape": [
+        207,
+        207,
+        3,
+        3
+      ],
+      "numel": 385641,
+      "trainable": true
+    },
+    {
+      "name": "layers.6.conv1.0.bias",
+      "shape": [
+        207
+      ],
+      "numel": 207,
+      "trainable": true
+    },
+    {
+      "name": "layers.6.conv2.0.weight",
+      "shape": [
+        207,
+        207,
+        3,
+        3
+      ],
+      "numel": 385641,
+      "trainable": true
+    },
+    {
+      "name": "layers.6.conv2.0.bias",
+      "shape": [
+        207
+      ],
+      "numel": 207,
+      "trainable": true
+    },
+    {
+      "name": "layers.7.shuf.0.0.weight",
+      "shape": [
+        412,
+        207,
+        1,
+        1
+      ],
+      "numel": 85284,
+      "trainable": true
+    },
+    {
+      "name": "layers.7.shuf.0.0.bias",
+      "shape": [
+        412
+      ],
+      "numel": 412,
+      "trainable": true
+    },
+    {
+      "name": "layers.7.bn.weight",
+      "shape": [
+        32
+      ],
+      "numel": 32,
+      "trainable": true
+    },
+    {
+      "name": "layers.7.bn.bias",
+      "shape": [
+        32
+      ],
+      "numel": 32,
+      "trainable": true
+    },
+    {
+      "name": "layers.7.conv1.0.weight",
+      "shape": [
+        67,
+        135,
+        3,
+        3
+      ],
+      "numel": 81405,
+      "trainable": true
+    },
+    {
+      "name": "layers.7.conv1.0.bias",
+      "shape": [
+        67
+      ],
+      "numel": 67,
+      "trainable": true
+    },
+    {
+      "name": "layers.7.conv2.0.weight",
+      "shape": [
+        67,
+        67,
+        3,
+        3
+      ],
+      "numel": 40401,
+      "trainable": true
+    },
+    {
+      "name": "layers.7.conv2.0.bias",
+      "shape": [
+        67
+      ],
+      "numel": 67,
+      "trainable": true
+    },
+    {
+      "name": "layers.8.0.0.weight",
+      "shape": [
+        268,
+        67,
+        1,
+        1
+      ],
+      "numel": 17956,
+      "trainable": true
+    },
+    {
+      "name": "layers.8.0.0.bias",
+      "shape": [
+        268
+      ],
+      "numel": 268,
+      "trainable": true
+    },
+    {
+      "name": "layers.11.convpath.0.0.weight",
+      "shape": [
+        70,
+        70,
+        3,
+        3
+      ],
+      "numel": 44100,
+      "trainable": true
+    },
+    {
+      "name": "layers.11.convpath.0.0.bias",
+      "shape": [
+        70
+      ],
+      "numel": 70,
+      "trainable": true
+    },
+    {
+      "name": "layers.11.convpath.1.0.weight",
+      "shape": [
+        70,
+        70,
+        3,
+        3
+      ],
+      "numel": 44100,
+      "trainable": true
+    },
+    {
+      "name": "layers.11.convpath.1.0.bias",
+      "shape": [
+        70
+      ],
+      "numel": 70,
+      "trainable": true
+    },
+    {
+      "name": "layers.12.0.weight",
+      "shape": [
+        4,
+        70,
+        1,
+        1
+      ],
+      "numel": 280,
+      "trainable": true
+    },
+    {
+      "name": "layers.12.0.bias",
+      "shape": [
+        4
+      ],
+      "numel": 4,
+      "trainable": true
+    }
+  ],
+  "buffers": [
+    {
+      "name": "layers.0.0.bn.running_mean",
+      "shape": [
+        32
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.0.bn.running_var",
+      "shape": [
+        32
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.0.bn.num_batches_tracked",
+      "shape": [],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.1.b1.conv1.bn.running_mean",
+      "shape": [
+        48
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.1.b1.conv1.bn.running_var",
+      "shape": [
+        48
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.1.b1.conv1.bn.num_batches_tracked",
+      "shape": [],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.1.b1.conv2.bn.running_mean",
+      "shape": [
+        48
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.1.b1.conv2.bn.running_var",
+      "shape": [
+        48
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.1.b1.conv2.bn.num_batches_tracked",
+      "shape": [],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.1.b1.conv3.bn.running_mean",
+      "shape": [
+        48
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.1.b1.conv3.bn.running_var",
+      "shape": [
+        48
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.1.b1.conv3.bn.num_batches_tracked",
+      "shape": [],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.1.b1.downsample.bn.running_mean",
+      "shape": [
+        48
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.1.b1.downsample.bn.running_var",
+      "shape": [
+        48
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.1.b1.downsample.bn.num_batches_tracked",
+      "shape": [],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.2.b1.conv1.bn.running_mean",
+      "shape": [
+        104
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.2.b1.conv1.bn.running_var",
+      "shape": [
+        104
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.2.b1.conv1.bn.num_batches_tracked",
+      "shape": [],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.2.b1.conv2.bn.running_mean",
+      "shape": [
+        104
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.2.b1.conv2.bn.running_var",
+      "shape": [
+        104
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.2.b1.conv2.bn.num_batches_tracked",
+      "shape": [],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.2.b1.conv3.bn.running_mean",
+      "shape": [
+        104
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.2.b1.conv3.bn.running_var",
+      "shape": [
+        104
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.2.b1.conv3.bn.num_batches_tracked",
+      "shape": [],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.2.b1.downsample.bn.running_mean",
+      "shape": [
+        104
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.2.b1.downsample.bn.running_var",
+      "shape": [
+        104
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.2.b1.downsample.bn.num_batches_tracked",
+      "shape": [],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.2.b2.conv1.bn.running_mean",
+      "shape": [
+        104
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.2.b2.conv1.bn.running_var",
+      "shape": [
+        104
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.2.b2.conv1.bn.num_batches_tracked",
+      "shape": [],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.2.b2.conv2.bn.running_mean",
+      "shape": [
+        104
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.2.b2.conv2.bn.running_var",
+      "shape": [
+        104
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.2.b2.conv2.bn.num_batches_tracked",
+      "shape": [],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.2.b2.conv3.bn.running_mean",
+      "shape": [
+        104
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.2.b2.conv3.bn.running_var",
+      "shape": [
+        104
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.2.b2.conv3.bn.num_batches_tracked",
+      "shape": [],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.2.b3.conv1.bn.running_mean",
+      "shape": [
+        104
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.2.b3.conv1.bn.running_var",
+      "shape": [
+        104
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.2.b3.conv1.bn.num_batches_tracked",
+      "shape": [],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.2.b3.conv2.bn.running_mean",
+      "shape": [
+        104
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.2.b3.conv2.bn.running_var",
+      "shape": [
+        104
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.2.b3.conv2.bn.num_batches_tracked",
+      "shape": [],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.2.b3.conv3.bn.running_mean",
+      "shape": [
+        104
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.2.b3.conv3.bn.running_var",
+      "shape": [
+        104
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.2.b3.conv3.bn.num_batches_tracked",
+      "shape": [],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.3.b1.conv1.bn.running_mean",
+      "shape": [
+        208
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.3.b1.conv1.bn.running_var",
+      "shape": [
+        208
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.3.b1.conv1.bn.num_batches_tracked",
+      "shape": [],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.3.b1.conv2.bn.running_mean",
+      "shape": [
+        208
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.3.b1.conv2.bn.running_var",
+      "shape": [
+        208
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.3.b1.conv2.bn.num_batches_tracked",
+      "shape": [],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.3.b1.conv3.bn.running_mean",
+      "shape": [
+        208
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.3.b1.conv3.bn.running_var",
+      "shape": [
+        208
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.3.b1.conv3.bn.num_batches_tracked",
+      "shape": [],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.3.b1.downsample.bn.running_mean",
+      "shape": [
+        208
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.3.b1.downsample.bn.running_var",
+      "shape": [
+        208
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.3.b1.downsample.bn.num_batches_tracked",
+      "shape": [],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.3.b2.conv1.bn.running_mean",
+      "shape": [
+        208
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.3.b2.conv1.bn.running_var",
+      "shape": [
+        208
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.3.b2.conv1.bn.num_batches_tracked",
+      "shape": [],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.3.b2.conv2.bn.running_mean",
+      "shape": [
+        208
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.3.b2.conv2.bn.running_var",
+      "shape": [
+        208
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.3.b2.conv2.bn.num_batches_tracked",
+      "shape": [],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.3.b2.conv3.bn.running_mean",
+      "shape": [
+        208
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.3.b2.conv3.bn.running_var",
+      "shape": [
+        208
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.3.b2.conv3.bn.num_batches_tracked",
+      "shape": [],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.3.b3.conv1.bn.running_mean",
+      "shape": [
+        208
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.3.b3.conv1.bn.running_var",
+      "shape": [
+        208
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.3.b3.conv1.bn.num_batches_tracked",
+      "shape": [],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.3.b3.conv2.bn.running_mean",
+      "shape": [
+        208
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.3.b3.conv2.bn.running_var",
+      "shape": [
+        208
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.3.b3.conv2.bn.num_batches_tracked",
+      "shape": [],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.3.b3.conv3.bn.running_mean",
+      "shape": [
+        208
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.3.b3.conv3.bn.running_var",
+      "shape": [
+        208
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.3.b3.conv3.bn.num_batches_tracked",
+      "shape": [],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.3.b4.conv1.bn.running_mean",
+      "shape": [
+        208
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.3.b4.conv1.bn.running_var",
+      "shape": [
+        208
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.3.b4.conv1.bn.num_batches_tracked",
+      "shape": [],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.3.b4.conv2.bn.running_mean",
+      "shape": [
+        208
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.3.b4.conv2.bn.running_var",
+      "shape": [
+        208
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.3.b4.conv2.bn.num_batches_tracked",
+      "shape": [],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.3.b4.conv3.bn.running_mean",
+      "shape": [
+        208
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.3.b4.conv3.bn.running_var",
+      "shape": [
+        208
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.3.b4.conv3.bn.num_batches_tracked",
+      "shape": [],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.3.b5.conv1.bn.running_mean",
+      "shape": [
+        208
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.3.b5.conv1.bn.running_var",
+      "shape": [
+        208
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.3.b5.conv1.bn.num_batches_tracked",
+      "shape": [],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.3.b5.conv2.bn.running_mean",
+      "shape": [
+        208
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.3.b5.conv2.bn.running_var",
+      "shape": [
+        208
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.3.b5.conv2.bn.num_batches_tracked",
+      "shape": [],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.3.b5.conv3.bn.running_mean",
+      "shape": [
+        208
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.3.b5.conv3.bn.running_var",
+      "shape": [
+        208
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.3.b5.conv3.bn.num_batches_tracked",
+      "shape": [],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.3.b6.conv1.bn.running_mean",
+      "shape": [
+        208
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.3.b6.conv1.bn.running_var",
+      "shape": [
+        208
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.3.b6.conv1.bn.num_batches_tracked",
+      "shape": [],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.3.b6.conv2.bn.running_mean",
+      "shape": [
+        208
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.3.b6.conv2.bn.running_var",
+      "shape": [
+        208
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.3.b6.conv2.bn.num_batches_tracked",
+      "shape": [],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.3.b6.conv3.bn.running_mean",
+      "shape": [
+        208
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.3.b6.conv3.bn.running_var",
+      "shape": [
+        208
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.3.b6.conv3.bn.num_batches_tracked",
+      "shape": [],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.4.b1.conv1.bn.running_mean",
+      "shape": [
+        440
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.4.b1.conv1.bn.running_var",
+      "shape": [
+        440
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.4.b1.conv1.bn.num_batches_tracked",
+      "shape": [],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.4.b1.conv2.bn.running_mean",
+      "shape": [
+        440
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.4.b1.conv2.bn.running_var",
+      "shape": [
+        440
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.4.b1.conv2.bn.num_batches_tracked",
+      "shape": [],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.4.b1.conv3.bn.running_mean",
+      "shape": [
+        440
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.4.b1.conv3.bn.running_var",
+      "shape": [
+        440
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.4.b1.conv3.bn.num_batches_tracked",
+      "shape": [],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.4.b1.downsample.bn.running_mean",
+      "shape": [
+        440
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.4.b1.downsample.bn.running_var",
+      "shape": [
+        440
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.4.b1.downsample.bn.num_batches_tracked",
+      "shape": [],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.4.b2.conv1.bn.running_mean",
+      "shape": [
+        440
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.4.b2.conv1.bn.running_var",
+      "shape": [
+        440
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.4.b2.conv1.bn.num_batches_tracked",
+      "shape": [],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.4.b2.conv2.bn.running_mean",
+      "shape": [
+        440
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.4.b2.conv2.bn.running_var",
+      "shape": [
+        440
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.4.b2.conv2.bn.num_batches_tracked",
+      "shape": [],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.4.b2.conv3.bn.running_mean",
+      "shape": [
+        440
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.4.b2.conv3.bn.running_var",
+      "shape": [
+        440
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.4.b2.conv3.bn.num_batches_tracked",
+      "shape": [],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.4.b3.conv1.bn.running_mean",
+      "shape": [
+        440
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.4.b3.conv1.bn.running_var",
+      "shape": [
+        440
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.4.b3.conv1.bn.num_batches_tracked",
+      "shape": [],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.4.b3.conv2.bn.running_mean",
+      "shape": [
+        440
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.4.b3.conv2.bn.running_var",
+      "shape": [
+        440
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.4.b3.conv2.bn.num_batches_tracked",
+      "shape": [],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.4.b3.conv3.bn.running_mean",
+      "shape": [
+        440
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.4.b3.conv3.bn.running_var",
+      "shape": [
+        440
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.4.b3.conv3.bn.num_batches_tracked",
+      "shape": [],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.4.b4.conv1.bn.running_mean",
+      "shape": [
+        440
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.4.b4.conv1.bn.running_var",
+      "shape": [
+        440
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.4.b4.conv1.bn.num_batches_tracked",
+      "shape": [],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.4.b4.conv2.bn.running_mean",
+      "shape": [
+        440
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.4.b4.conv2.bn.running_var",
+      "shape": [
+        440
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.4.b4.conv2.bn.num_batches_tracked",
+      "shape": [],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.4.b4.conv3.bn.running_mean",
+      "shape": [
+        440
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.4.b4.conv3.bn.running_var",
+      "shape": [
+        440
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.4.b4.conv3.bn.num_batches_tracked",
+      "shape": [],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.4.b5.conv1.bn.running_mean",
+      "shape": [
+        440
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.4.b5.conv1.bn.running_var",
+      "shape": [
+        440
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.4.b5.conv1.bn.num_batches_tracked",
+      "shape": [],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.4.b5.conv2.bn.running_mean",
+      "shape": [
+        440
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.4.b5.conv2.bn.running_var",
+      "shape": [
+        440
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.4.b5.conv2.bn.num_batches_tracked",
+      "shape": [],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.4.b5.conv3.bn.running_mean",
+      "shape": [
+        440
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.4.b5.conv3.bn.running_var",
+      "shape": [
+        440
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.4.b5.conv3.bn.num_batches_tracked",
+      "shape": [],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.4.b6.conv1.bn.running_mean",
+      "shape": [
+        440
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.4.b6.conv1.bn.running_var",
+      "shape": [
+        440
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.4.b6.conv1.bn.num_batches_tracked",
+      "shape": [],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.4.b6.conv2.bn.running_mean",
+      "shape": [
+        440
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.4.b6.conv2.bn.running_var",
+      "shape": [
+        440
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.4.b6.conv2.bn.num_batches_tracked",
+      "shape": [],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.4.b6.conv3.bn.running_mean",
+      "shape": [
+        440
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.4.b6.conv3.bn.running_var",
+      "shape": [
+        440
+      ],
+      "frozen": true
+    },
+    {
+      "name": "layers.0.4.b6.conv3.bn.num_batches_tracked",
+      "shape": [],
+      "frozen": true
+    },
+    {
+      "name": "layers.1.running_mean",
+      "shape": [
+        440
+      ],
+      "frozen": false
+    },
+    {
+      "name": "layers.1.running_var",
+      "shape": [
+        440
+      ],
+      "frozen": false
+    },
+    {
+      "name": "layers.1.num_batches_tracked",
+      "shape": [],
+      "frozen": false
+    },
+    {
+      "name": "layers.4.bn.running_mean",
+      "shape": [
+        208
+      ],
+      "frozen": false
+    },
+    {
+      "name": "layers.4.bn.running_var",
+      "shape": [
+        208
+      ],
+      "frozen": false
+    },
+    {
+      "name": "layers.4.bn.num_batches_tracked",
+      "shape": [],
+      "frozen": false
+    },
+    {
+      "name": "layers.5.bn.running_mean",
+      "shape": [
+        104
+      ],
+      "frozen": false
+    },
+    {
+      "name": "layers.5.bn.running_var",
+      "shape": [
+        104
+      ],
+      "frozen": false
+    },
+    {
+      "name": "layers.5.bn.num_batches_tracked",
+      "shape": [],
+      "frozen": false
+    },
+    {
+      "name": "layers.6.bn.running_mean",
+      "shape": [
+        48
+      ],
+      "frozen": false
+    },
+    {
+      "name": "layers.6.bn.running_var",
+      "shape": [
+        48
+      ],
+      "frozen": false
+    },
+    {
+      "name": "layers.6.bn.num_batches_tracked",
+      "shape": [],
+      "frozen": false
+    },
+    {
+      "name": "layers.7.bn.running_mean",
+      "shape": [
+        32
+      ],
+      "frozen": false
+    },
+    {
+      "name": "layers.7.bn.running_var",
+      "shape": [
+        32
+      ],
+      "frozen": false
+    },
+    {
+      "name": "layers.7.bn.num_batches_tracked",
+      "shape": [],
+      "frozen": false
+    }
+  ],
+  "total_parameters": 18039132,
+  "trainable_parameters": 14135988,
+  "graph_signature": {
+    "modules": [
+      [
+        "",
+        "fastai.vision.models.unet.DynamicUnet"
+      ],
+      [
+        "layers",
+        "torch.nn.modules.container.ModuleList"
+      ],
+      [
+        "layers.0",
+        "torch.nn.modules.container.Sequential"
+      ],
+      [
+        "layers.0.0",
+        "timm.layers.conv_bn_act.ConvNormAct"
+      ],
+      [
+        "layers.0.0.conv",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.0.bn",
+        "timm.layers.norm_act.BatchNormAct2d"
+      ],
+      [
+        "layers.0.0.bn.drop",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.0.bn.act",
+        "torch.nn.modules.activation.ReLU"
+      ],
+      [
+        "layers.0.1",
+        "timm.models.regnet.RegStage"
+      ],
+      [
+        "layers.0.1.b1",
+        "timm.models.regnet.Bottleneck"
+      ],
+      [
+        "layers.0.1.b1.conv1",
+        "timm.layers.conv_bn_act.ConvNormAct"
+      ],
+      [
+        "layers.0.1.b1.conv1.conv",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.1.b1.conv1.bn",
+        "timm.layers.norm_act.BatchNormAct2d"
+      ],
+      [
+        "layers.0.1.b1.conv1.bn.drop",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.1.b1.conv1.bn.act",
+        "torch.nn.modules.activation.ReLU"
+      ],
+      [
+        "layers.0.1.b1.conv2",
+        "timm.layers.conv_bn_act.ConvNormAct"
+      ],
+      [
+        "layers.0.1.b1.conv2.conv",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.1.b1.conv2.bn",
+        "timm.layers.norm_act.BatchNormAct2d"
+      ],
+      [
+        "layers.0.1.b1.conv2.bn.drop",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.1.b1.conv2.bn.act",
+        "torch.nn.modules.activation.ReLU"
+      ],
+      [
+        "layers.0.1.b1.se",
+        "timm.layers.squeeze_excite.SEModule"
+      ],
+      [
+        "layers.0.1.b1.se.fc1",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.1.b1.se.bn",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.1.b1.se.act",
+        "torch.nn.modules.activation.ReLU"
+      ],
+      [
+        "layers.0.1.b1.se.fc2",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.1.b1.se.gate",
+        "timm.layers.activations.Sigmoid"
+      ],
+      [
+        "layers.0.1.b1.conv3",
+        "timm.layers.conv_bn_act.ConvNormAct"
+      ],
+      [
+        "layers.0.1.b1.conv3.conv",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.1.b1.conv3.bn",
+        "timm.layers.norm_act.BatchNormAct2d"
+      ],
+      [
+        "layers.0.1.b1.conv3.bn.drop",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.1.b1.conv3.bn.act",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.1.b1.act3",
+        "torch.nn.modules.activation.ReLU"
+      ],
+      [
+        "layers.0.1.b1.downsample",
+        "timm.layers.conv_bn_act.ConvNormAct"
+      ],
+      [
+        "layers.0.1.b1.downsample.conv",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.1.b1.downsample.bn",
+        "timm.layers.norm_act.BatchNormAct2d"
+      ],
+      [
+        "layers.0.1.b1.downsample.bn.drop",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.1.b1.downsample.bn.act",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.1.b1.drop_path",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.2",
+        "timm.models.regnet.RegStage"
+      ],
+      [
+        "layers.0.2.b1",
+        "timm.models.regnet.Bottleneck"
+      ],
+      [
+        "layers.0.2.b1.conv1",
+        "timm.layers.conv_bn_act.ConvNormAct"
+      ],
+      [
+        "layers.0.2.b1.conv1.conv",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.2.b1.conv1.bn",
+        "timm.layers.norm_act.BatchNormAct2d"
+      ],
+      [
+        "layers.0.2.b1.conv1.bn.drop",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.2.b1.conv1.bn.act",
+        "torch.nn.modules.activation.ReLU"
+      ],
+      [
+        "layers.0.2.b1.conv2",
+        "timm.layers.conv_bn_act.ConvNormAct"
+      ],
+      [
+        "layers.0.2.b1.conv2.conv",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.2.b1.conv2.bn",
+        "timm.layers.norm_act.BatchNormAct2d"
+      ],
+      [
+        "layers.0.2.b1.conv2.bn.drop",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.2.b1.conv2.bn.act",
+        "torch.nn.modules.activation.ReLU"
+      ],
+      [
+        "layers.0.2.b1.se",
+        "timm.layers.squeeze_excite.SEModule"
+      ],
+      [
+        "layers.0.2.b1.se.fc1",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.2.b1.se.bn",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.2.b1.se.act",
+        "torch.nn.modules.activation.ReLU"
+      ],
+      [
+        "layers.0.2.b1.se.fc2",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.2.b1.se.gate",
+        "timm.layers.activations.Sigmoid"
+      ],
+      [
+        "layers.0.2.b1.conv3",
+        "timm.layers.conv_bn_act.ConvNormAct"
+      ],
+      [
+        "layers.0.2.b1.conv3.conv",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.2.b1.conv3.bn",
+        "timm.layers.norm_act.BatchNormAct2d"
+      ],
+      [
+        "layers.0.2.b1.conv3.bn.drop",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.2.b1.conv3.bn.act",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.2.b1.act3",
+        "torch.nn.modules.activation.ReLU"
+      ],
+      [
+        "layers.0.2.b1.downsample",
+        "timm.layers.conv_bn_act.ConvNormAct"
+      ],
+      [
+        "layers.0.2.b1.downsample.conv",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.2.b1.downsample.bn",
+        "timm.layers.norm_act.BatchNormAct2d"
+      ],
+      [
+        "layers.0.2.b1.downsample.bn.drop",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.2.b1.downsample.bn.act",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.2.b1.drop_path",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.2.b2",
+        "timm.models.regnet.Bottleneck"
+      ],
+      [
+        "layers.0.2.b2.conv1",
+        "timm.layers.conv_bn_act.ConvNormAct"
+      ],
+      [
+        "layers.0.2.b2.conv1.conv",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.2.b2.conv1.bn",
+        "timm.layers.norm_act.BatchNormAct2d"
+      ],
+      [
+        "layers.0.2.b2.conv1.bn.drop",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.2.b2.conv1.bn.act",
+        "torch.nn.modules.activation.ReLU"
+      ],
+      [
+        "layers.0.2.b2.conv2",
+        "timm.layers.conv_bn_act.ConvNormAct"
+      ],
+      [
+        "layers.0.2.b2.conv2.conv",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.2.b2.conv2.bn",
+        "timm.layers.norm_act.BatchNormAct2d"
+      ],
+      [
+        "layers.0.2.b2.conv2.bn.drop",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.2.b2.conv2.bn.act",
+        "torch.nn.modules.activation.ReLU"
+      ],
+      [
+        "layers.0.2.b2.se",
+        "timm.layers.squeeze_excite.SEModule"
+      ],
+      [
+        "layers.0.2.b2.se.fc1",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.2.b2.se.bn",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.2.b2.se.act",
+        "torch.nn.modules.activation.ReLU"
+      ],
+      [
+        "layers.0.2.b2.se.fc2",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.2.b2.se.gate",
+        "timm.layers.activations.Sigmoid"
+      ],
+      [
+        "layers.0.2.b2.conv3",
+        "timm.layers.conv_bn_act.ConvNormAct"
+      ],
+      [
+        "layers.0.2.b2.conv3.conv",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.2.b2.conv3.bn",
+        "timm.layers.norm_act.BatchNormAct2d"
+      ],
+      [
+        "layers.0.2.b2.conv3.bn.drop",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.2.b2.conv3.bn.act",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.2.b2.act3",
+        "torch.nn.modules.activation.ReLU"
+      ],
+      [
+        "layers.0.2.b2.downsample",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.2.b2.drop_path",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.2.b3",
+        "timm.models.regnet.Bottleneck"
+      ],
+      [
+        "layers.0.2.b3.conv1",
+        "timm.layers.conv_bn_act.ConvNormAct"
+      ],
+      [
+        "layers.0.2.b3.conv1.conv",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.2.b3.conv1.bn",
+        "timm.layers.norm_act.BatchNormAct2d"
+      ],
+      [
+        "layers.0.2.b3.conv1.bn.drop",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.2.b3.conv1.bn.act",
+        "torch.nn.modules.activation.ReLU"
+      ],
+      [
+        "layers.0.2.b3.conv2",
+        "timm.layers.conv_bn_act.ConvNormAct"
+      ],
+      [
+        "layers.0.2.b3.conv2.conv",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.2.b3.conv2.bn",
+        "timm.layers.norm_act.BatchNormAct2d"
+      ],
+      [
+        "layers.0.2.b3.conv2.bn.drop",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.2.b3.conv2.bn.act",
+        "torch.nn.modules.activation.ReLU"
+      ],
+      [
+        "layers.0.2.b3.se",
+        "timm.layers.squeeze_excite.SEModule"
+      ],
+      [
+        "layers.0.2.b3.se.fc1",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.2.b3.se.bn",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.2.b3.se.act",
+        "torch.nn.modules.activation.ReLU"
+      ],
+      [
+        "layers.0.2.b3.se.fc2",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.2.b3.se.gate",
+        "timm.layers.activations.Sigmoid"
+      ],
+      [
+        "layers.0.2.b3.conv3",
+        "timm.layers.conv_bn_act.ConvNormAct"
+      ],
+      [
+        "layers.0.2.b3.conv3.conv",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.2.b3.conv3.bn",
+        "timm.layers.norm_act.BatchNormAct2d"
+      ],
+      [
+        "layers.0.2.b3.conv3.bn.drop",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.2.b3.conv3.bn.act",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.2.b3.act3",
+        "torch.nn.modules.activation.ReLU"
+      ],
+      [
+        "layers.0.2.b3.downsample",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.2.b3.drop_path",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.3",
+        "timm.models.regnet.RegStage"
+      ],
+      [
+        "layers.0.3.b1",
+        "timm.models.regnet.Bottleneck"
+      ],
+      [
+        "layers.0.3.b1.conv1",
+        "timm.layers.conv_bn_act.ConvNormAct"
+      ],
+      [
+        "layers.0.3.b1.conv1.conv",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.3.b1.conv1.bn",
+        "timm.layers.norm_act.BatchNormAct2d"
+      ],
+      [
+        "layers.0.3.b1.conv1.bn.drop",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.3.b1.conv1.bn.act",
+        "torch.nn.modules.activation.ReLU"
+      ],
+      [
+        "layers.0.3.b1.conv2",
+        "timm.layers.conv_bn_act.ConvNormAct"
+      ],
+      [
+        "layers.0.3.b1.conv2.conv",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.3.b1.conv2.bn",
+        "timm.layers.norm_act.BatchNormAct2d"
+      ],
+      [
+        "layers.0.3.b1.conv2.bn.drop",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.3.b1.conv2.bn.act",
+        "torch.nn.modules.activation.ReLU"
+      ],
+      [
+        "layers.0.3.b1.se",
+        "timm.layers.squeeze_excite.SEModule"
+      ],
+      [
+        "layers.0.3.b1.se.fc1",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.3.b1.se.bn",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.3.b1.se.act",
+        "torch.nn.modules.activation.ReLU"
+      ],
+      [
+        "layers.0.3.b1.se.fc2",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.3.b1.se.gate",
+        "timm.layers.activations.Sigmoid"
+      ],
+      [
+        "layers.0.3.b1.conv3",
+        "timm.layers.conv_bn_act.ConvNormAct"
+      ],
+      [
+        "layers.0.3.b1.conv3.conv",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.3.b1.conv3.bn",
+        "timm.layers.norm_act.BatchNormAct2d"
+      ],
+      [
+        "layers.0.3.b1.conv3.bn.drop",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.3.b1.conv3.bn.act",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.3.b1.act3",
+        "torch.nn.modules.activation.ReLU"
+      ],
+      [
+        "layers.0.3.b1.downsample",
+        "timm.layers.conv_bn_act.ConvNormAct"
+      ],
+      [
+        "layers.0.3.b1.downsample.conv",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.3.b1.downsample.bn",
+        "timm.layers.norm_act.BatchNormAct2d"
+      ],
+      [
+        "layers.0.3.b1.downsample.bn.drop",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.3.b1.downsample.bn.act",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.3.b1.drop_path",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.3.b2",
+        "timm.models.regnet.Bottleneck"
+      ],
+      [
+        "layers.0.3.b2.conv1",
+        "timm.layers.conv_bn_act.ConvNormAct"
+      ],
+      [
+        "layers.0.3.b2.conv1.conv",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.3.b2.conv1.bn",
+        "timm.layers.norm_act.BatchNormAct2d"
+      ],
+      [
+        "layers.0.3.b2.conv1.bn.drop",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.3.b2.conv1.bn.act",
+        "torch.nn.modules.activation.ReLU"
+      ],
+      [
+        "layers.0.3.b2.conv2",
+        "timm.layers.conv_bn_act.ConvNormAct"
+      ],
+      [
+        "layers.0.3.b2.conv2.conv",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.3.b2.conv2.bn",
+        "timm.layers.norm_act.BatchNormAct2d"
+      ],
+      [
+        "layers.0.3.b2.conv2.bn.drop",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.3.b2.conv2.bn.act",
+        "torch.nn.modules.activation.ReLU"
+      ],
+      [
+        "layers.0.3.b2.se",
+        "timm.layers.squeeze_excite.SEModule"
+      ],
+      [
+        "layers.0.3.b2.se.fc1",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.3.b2.se.bn",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.3.b2.se.act",
+        "torch.nn.modules.activation.ReLU"
+      ],
+      [
+        "layers.0.3.b2.se.fc2",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.3.b2.se.gate",
+        "timm.layers.activations.Sigmoid"
+      ],
+      [
+        "layers.0.3.b2.conv3",
+        "timm.layers.conv_bn_act.ConvNormAct"
+      ],
+      [
+        "layers.0.3.b2.conv3.conv",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.3.b2.conv3.bn",
+        "timm.layers.norm_act.BatchNormAct2d"
+      ],
+      [
+        "layers.0.3.b2.conv3.bn.drop",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.3.b2.conv3.bn.act",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.3.b2.act3",
+        "torch.nn.modules.activation.ReLU"
+      ],
+      [
+        "layers.0.3.b2.downsample",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.3.b2.drop_path",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.3.b3",
+        "timm.models.regnet.Bottleneck"
+      ],
+      [
+        "layers.0.3.b3.conv1",
+        "timm.layers.conv_bn_act.ConvNormAct"
+      ],
+      [
+        "layers.0.3.b3.conv1.conv",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.3.b3.conv1.bn",
+        "timm.layers.norm_act.BatchNormAct2d"
+      ],
+      [
+        "layers.0.3.b3.conv1.bn.drop",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.3.b3.conv1.bn.act",
+        "torch.nn.modules.activation.ReLU"
+      ],
+      [
+        "layers.0.3.b3.conv2",
+        "timm.layers.conv_bn_act.ConvNormAct"
+      ],
+      [
+        "layers.0.3.b3.conv2.conv",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.3.b3.conv2.bn",
+        "timm.layers.norm_act.BatchNormAct2d"
+      ],
+      [
+        "layers.0.3.b3.conv2.bn.drop",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.3.b3.conv2.bn.act",
+        "torch.nn.modules.activation.ReLU"
+      ],
+      [
+        "layers.0.3.b3.se",
+        "timm.layers.squeeze_excite.SEModule"
+      ],
+      [
+        "layers.0.3.b3.se.fc1",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.3.b3.se.bn",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.3.b3.se.act",
+        "torch.nn.modules.activation.ReLU"
+      ],
+      [
+        "layers.0.3.b3.se.fc2",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.3.b3.se.gate",
+        "timm.layers.activations.Sigmoid"
+      ],
+      [
+        "layers.0.3.b3.conv3",
+        "timm.layers.conv_bn_act.ConvNormAct"
+      ],
+      [
+        "layers.0.3.b3.conv3.conv",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.3.b3.conv3.bn",
+        "timm.layers.norm_act.BatchNormAct2d"
+      ],
+      [
+        "layers.0.3.b3.conv3.bn.drop",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.3.b3.conv3.bn.act",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.3.b3.act3",
+        "torch.nn.modules.activation.ReLU"
+      ],
+      [
+        "layers.0.3.b3.downsample",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.3.b3.drop_path",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.3.b4",
+        "timm.models.regnet.Bottleneck"
+      ],
+      [
+        "layers.0.3.b4.conv1",
+        "timm.layers.conv_bn_act.ConvNormAct"
+      ],
+      [
+        "layers.0.3.b4.conv1.conv",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.3.b4.conv1.bn",
+        "timm.layers.norm_act.BatchNormAct2d"
+      ],
+      [
+        "layers.0.3.b4.conv1.bn.drop",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.3.b4.conv1.bn.act",
+        "torch.nn.modules.activation.ReLU"
+      ],
+      [
+        "layers.0.3.b4.conv2",
+        "timm.layers.conv_bn_act.ConvNormAct"
+      ],
+      [
+        "layers.0.3.b4.conv2.conv",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.3.b4.conv2.bn",
+        "timm.layers.norm_act.BatchNormAct2d"
+      ],
+      [
+        "layers.0.3.b4.conv2.bn.drop",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.3.b4.conv2.bn.act",
+        "torch.nn.modules.activation.ReLU"
+      ],
+      [
+        "layers.0.3.b4.se",
+        "timm.layers.squeeze_excite.SEModule"
+      ],
+      [
+        "layers.0.3.b4.se.fc1",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.3.b4.se.bn",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.3.b4.se.act",
+        "torch.nn.modules.activation.ReLU"
+      ],
+      [
+        "layers.0.3.b4.se.fc2",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.3.b4.se.gate",
+        "timm.layers.activations.Sigmoid"
+      ],
+      [
+        "layers.0.3.b4.conv3",
+        "timm.layers.conv_bn_act.ConvNormAct"
+      ],
+      [
+        "layers.0.3.b4.conv3.conv",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.3.b4.conv3.bn",
+        "timm.layers.norm_act.BatchNormAct2d"
+      ],
+      [
+        "layers.0.3.b4.conv3.bn.drop",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.3.b4.conv3.bn.act",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.3.b4.act3",
+        "torch.nn.modules.activation.ReLU"
+      ],
+      [
+        "layers.0.3.b4.downsample",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.3.b4.drop_path",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.3.b5",
+        "timm.models.regnet.Bottleneck"
+      ],
+      [
+        "layers.0.3.b5.conv1",
+        "timm.layers.conv_bn_act.ConvNormAct"
+      ],
+      [
+        "layers.0.3.b5.conv1.conv",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.3.b5.conv1.bn",
+        "timm.layers.norm_act.BatchNormAct2d"
+      ],
+      [
+        "layers.0.3.b5.conv1.bn.drop",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.3.b5.conv1.bn.act",
+        "torch.nn.modules.activation.ReLU"
+      ],
+      [
+        "layers.0.3.b5.conv2",
+        "timm.layers.conv_bn_act.ConvNormAct"
+      ],
+      [
+        "layers.0.3.b5.conv2.conv",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.3.b5.conv2.bn",
+        "timm.layers.norm_act.BatchNormAct2d"
+      ],
+      [
+        "layers.0.3.b5.conv2.bn.drop",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.3.b5.conv2.bn.act",
+        "torch.nn.modules.activation.ReLU"
+      ],
+      [
+        "layers.0.3.b5.se",
+        "timm.layers.squeeze_excite.SEModule"
+      ],
+      [
+        "layers.0.3.b5.se.fc1",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.3.b5.se.bn",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.3.b5.se.act",
+        "torch.nn.modules.activation.ReLU"
+      ],
+      [
+        "layers.0.3.b5.se.fc2",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.3.b5.se.gate",
+        "timm.layers.activations.Sigmoid"
+      ],
+      [
+        "layers.0.3.b5.conv3",
+        "timm.layers.conv_bn_act.ConvNormAct"
+      ],
+      [
+        "layers.0.3.b5.conv3.conv",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.3.b5.conv3.bn",
+        "timm.layers.norm_act.BatchNormAct2d"
+      ],
+      [
+        "layers.0.3.b5.conv3.bn.drop",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.3.b5.conv3.bn.act",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.3.b5.act3",
+        "torch.nn.modules.activation.ReLU"
+      ],
+      [
+        "layers.0.3.b5.downsample",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.3.b5.drop_path",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.3.b6",
+        "timm.models.regnet.Bottleneck"
+      ],
+      [
+        "layers.0.3.b6.conv1",
+        "timm.layers.conv_bn_act.ConvNormAct"
+      ],
+      [
+        "layers.0.3.b6.conv1.conv",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.3.b6.conv1.bn",
+        "timm.layers.norm_act.BatchNormAct2d"
+      ],
+      [
+        "layers.0.3.b6.conv1.bn.drop",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.3.b6.conv1.bn.act",
+        "torch.nn.modules.activation.ReLU"
+      ],
+      [
+        "layers.0.3.b6.conv2",
+        "timm.layers.conv_bn_act.ConvNormAct"
+      ],
+      [
+        "layers.0.3.b6.conv2.conv",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.3.b6.conv2.bn",
+        "timm.layers.norm_act.BatchNormAct2d"
+      ],
+      [
+        "layers.0.3.b6.conv2.bn.drop",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.3.b6.conv2.bn.act",
+        "torch.nn.modules.activation.ReLU"
+      ],
+      [
+        "layers.0.3.b6.se",
+        "timm.layers.squeeze_excite.SEModule"
+      ],
+      [
+        "layers.0.3.b6.se.fc1",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.3.b6.se.bn",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.3.b6.se.act",
+        "torch.nn.modules.activation.ReLU"
+      ],
+      [
+        "layers.0.3.b6.se.fc2",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.3.b6.se.gate",
+        "timm.layers.activations.Sigmoid"
+      ],
+      [
+        "layers.0.3.b6.conv3",
+        "timm.layers.conv_bn_act.ConvNormAct"
+      ],
+      [
+        "layers.0.3.b6.conv3.conv",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.3.b6.conv3.bn",
+        "timm.layers.norm_act.BatchNormAct2d"
+      ],
+      [
+        "layers.0.3.b6.conv3.bn.drop",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.3.b6.conv3.bn.act",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.3.b6.act3",
+        "torch.nn.modules.activation.ReLU"
+      ],
+      [
+        "layers.0.3.b6.downsample",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.3.b6.drop_path",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.4",
+        "timm.models.regnet.RegStage"
+      ],
+      [
+        "layers.0.4.b1",
+        "timm.models.regnet.Bottleneck"
+      ],
+      [
+        "layers.0.4.b1.conv1",
+        "timm.layers.conv_bn_act.ConvNormAct"
+      ],
+      [
+        "layers.0.4.b1.conv1.conv",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.4.b1.conv1.bn",
+        "timm.layers.norm_act.BatchNormAct2d"
+      ],
+      [
+        "layers.0.4.b1.conv1.bn.drop",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.4.b1.conv1.bn.act",
+        "torch.nn.modules.activation.ReLU"
+      ],
+      [
+        "layers.0.4.b1.conv2",
+        "timm.layers.conv_bn_act.ConvNormAct"
+      ],
+      [
+        "layers.0.4.b1.conv2.conv",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.4.b1.conv2.bn",
+        "timm.layers.norm_act.BatchNormAct2d"
+      ],
+      [
+        "layers.0.4.b1.conv2.bn.drop",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.4.b1.conv2.bn.act",
+        "torch.nn.modules.activation.ReLU"
+      ],
+      [
+        "layers.0.4.b1.se",
+        "timm.layers.squeeze_excite.SEModule"
+      ],
+      [
+        "layers.0.4.b1.se.fc1",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.4.b1.se.bn",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.4.b1.se.act",
+        "torch.nn.modules.activation.ReLU"
+      ],
+      [
+        "layers.0.4.b1.se.fc2",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.4.b1.se.gate",
+        "timm.layers.activations.Sigmoid"
+      ],
+      [
+        "layers.0.4.b1.conv3",
+        "timm.layers.conv_bn_act.ConvNormAct"
+      ],
+      [
+        "layers.0.4.b1.conv3.conv",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.4.b1.conv3.bn",
+        "timm.layers.norm_act.BatchNormAct2d"
+      ],
+      [
+        "layers.0.4.b1.conv3.bn.drop",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.4.b1.conv3.bn.act",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.4.b1.act3",
+        "torch.nn.modules.activation.ReLU"
+      ],
+      [
+        "layers.0.4.b1.downsample",
+        "timm.layers.conv_bn_act.ConvNormAct"
+      ],
+      [
+        "layers.0.4.b1.downsample.conv",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.4.b1.downsample.bn",
+        "timm.layers.norm_act.BatchNormAct2d"
+      ],
+      [
+        "layers.0.4.b1.downsample.bn.drop",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.4.b1.downsample.bn.act",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.4.b1.drop_path",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.4.b2",
+        "timm.models.regnet.Bottleneck"
+      ],
+      [
+        "layers.0.4.b2.conv1",
+        "timm.layers.conv_bn_act.ConvNormAct"
+      ],
+      [
+        "layers.0.4.b2.conv1.conv",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.4.b2.conv1.bn",
+        "timm.layers.norm_act.BatchNormAct2d"
+      ],
+      [
+        "layers.0.4.b2.conv1.bn.drop",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.4.b2.conv1.bn.act",
+        "torch.nn.modules.activation.ReLU"
+      ],
+      [
+        "layers.0.4.b2.conv2",
+        "timm.layers.conv_bn_act.ConvNormAct"
+      ],
+      [
+        "layers.0.4.b2.conv2.conv",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.4.b2.conv2.bn",
+        "timm.layers.norm_act.BatchNormAct2d"
+      ],
+      [
+        "layers.0.4.b2.conv2.bn.drop",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.4.b2.conv2.bn.act",
+        "torch.nn.modules.activation.ReLU"
+      ],
+      [
+        "layers.0.4.b2.se",
+        "timm.layers.squeeze_excite.SEModule"
+      ],
+      [
+        "layers.0.4.b2.se.fc1",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.4.b2.se.bn",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.4.b2.se.act",
+        "torch.nn.modules.activation.ReLU"
+      ],
+      [
+        "layers.0.4.b2.se.fc2",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.4.b2.se.gate",
+        "timm.layers.activations.Sigmoid"
+      ],
+      [
+        "layers.0.4.b2.conv3",
+        "timm.layers.conv_bn_act.ConvNormAct"
+      ],
+      [
+        "layers.0.4.b2.conv3.conv",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.4.b2.conv3.bn",
+        "timm.layers.norm_act.BatchNormAct2d"
+      ],
+      [
+        "layers.0.4.b2.conv3.bn.drop",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.4.b2.conv3.bn.act",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.4.b2.act3",
+        "torch.nn.modules.activation.ReLU"
+      ],
+      [
+        "layers.0.4.b2.downsample",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.4.b2.drop_path",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.4.b3",
+        "timm.models.regnet.Bottleneck"
+      ],
+      [
+        "layers.0.4.b3.conv1",
+        "timm.layers.conv_bn_act.ConvNormAct"
+      ],
+      [
+        "layers.0.4.b3.conv1.conv",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.4.b3.conv1.bn",
+        "timm.layers.norm_act.BatchNormAct2d"
+      ],
+      [
+        "layers.0.4.b3.conv1.bn.drop",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.4.b3.conv1.bn.act",
+        "torch.nn.modules.activation.ReLU"
+      ],
+      [
+        "layers.0.4.b3.conv2",
+        "timm.layers.conv_bn_act.ConvNormAct"
+      ],
+      [
+        "layers.0.4.b3.conv2.conv",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.4.b3.conv2.bn",
+        "timm.layers.norm_act.BatchNormAct2d"
+      ],
+      [
+        "layers.0.4.b3.conv2.bn.drop",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.4.b3.conv2.bn.act",
+        "torch.nn.modules.activation.ReLU"
+      ],
+      [
+        "layers.0.4.b3.se",
+        "timm.layers.squeeze_excite.SEModule"
+      ],
+      [
+        "layers.0.4.b3.se.fc1",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.4.b3.se.bn",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.4.b3.se.act",
+        "torch.nn.modules.activation.ReLU"
+      ],
+      [
+        "layers.0.4.b3.se.fc2",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.4.b3.se.gate",
+        "timm.layers.activations.Sigmoid"
+      ],
+      [
+        "layers.0.4.b3.conv3",
+        "timm.layers.conv_bn_act.ConvNormAct"
+      ],
+      [
+        "layers.0.4.b3.conv3.conv",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.4.b3.conv3.bn",
+        "timm.layers.norm_act.BatchNormAct2d"
+      ],
+      [
+        "layers.0.4.b3.conv3.bn.drop",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.4.b3.conv3.bn.act",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.4.b3.act3",
+        "torch.nn.modules.activation.ReLU"
+      ],
+      [
+        "layers.0.4.b3.downsample",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.4.b3.drop_path",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.4.b4",
+        "timm.models.regnet.Bottleneck"
+      ],
+      [
+        "layers.0.4.b4.conv1",
+        "timm.layers.conv_bn_act.ConvNormAct"
+      ],
+      [
+        "layers.0.4.b4.conv1.conv",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.4.b4.conv1.bn",
+        "timm.layers.norm_act.BatchNormAct2d"
+      ],
+      [
+        "layers.0.4.b4.conv1.bn.drop",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.4.b4.conv1.bn.act",
+        "torch.nn.modules.activation.ReLU"
+      ],
+      [
+        "layers.0.4.b4.conv2",
+        "timm.layers.conv_bn_act.ConvNormAct"
+      ],
+      [
+        "layers.0.4.b4.conv2.conv",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.4.b4.conv2.bn",
+        "timm.layers.norm_act.BatchNormAct2d"
+      ],
+      [
+        "layers.0.4.b4.conv2.bn.drop",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.4.b4.conv2.bn.act",
+        "torch.nn.modules.activation.ReLU"
+      ],
+      [
+        "layers.0.4.b4.se",
+        "timm.layers.squeeze_excite.SEModule"
+      ],
+      [
+        "layers.0.4.b4.se.fc1",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.4.b4.se.bn",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.4.b4.se.act",
+        "torch.nn.modules.activation.ReLU"
+      ],
+      [
+        "layers.0.4.b4.se.fc2",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.4.b4.se.gate",
+        "timm.layers.activations.Sigmoid"
+      ],
+      [
+        "layers.0.4.b4.conv3",
+        "timm.layers.conv_bn_act.ConvNormAct"
+      ],
+      [
+        "layers.0.4.b4.conv3.conv",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.4.b4.conv3.bn",
+        "timm.layers.norm_act.BatchNormAct2d"
+      ],
+      [
+        "layers.0.4.b4.conv3.bn.drop",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.4.b4.conv3.bn.act",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.4.b4.act3",
+        "torch.nn.modules.activation.ReLU"
+      ],
+      [
+        "layers.0.4.b4.downsample",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.4.b4.drop_path",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.4.b5",
+        "timm.models.regnet.Bottleneck"
+      ],
+      [
+        "layers.0.4.b5.conv1",
+        "timm.layers.conv_bn_act.ConvNormAct"
+      ],
+      [
+        "layers.0.4.b5.conv1.conv",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.4.b5.conv1.bn",
+        "timm.layers.norm_act.BatchNormAct2d"
+      ],
+      [
+        "layers.0.4.b5.conv1.bn.drop",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.4.b5.conv1.bn.act",
+        "torch.nn.modules.activation.ReLU"
+      ],
+      [
+        "layers.0.4.b5.conv2",
+        "timm.layers.conv_bn_act.ConvNormAct"
+      ],
+      [
+        "layers.0.4.b5.conv2.conv",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.4.b5.conv2.bn",
+        "timm.layers.norm_act.BatchNormAct2d"
+      ],
+      [
+        "layers.0.4.b5.conv2.bn.drop",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.4.b5.conv2.bn.act",
+        "torch.nn.modules.activation.ReLU"
+      ],
+      [
+        "layers.0.4.b5.se",
+        "timm.layers.squeeze_excite.SEModule"
+      ],
+      [
+        "layers.0.4.b5.se.fc1",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.4.b5.se.bn",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.4.b5.se.act",
+        "torch.nn.modules.activation.ReLU"
+      ],
+      [
+        "layers.0.4.b5.se.fc2",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.4.b5.se.gate",
+        "timm.layers.activations.Sigmoid"
+      ],
+      [
+        "layers.0.4.b5.conv3",
+        "timm.layers.conv_bn_act.ConvNormAct"
+      ],
+      [
+        "layers.0.4.b5.conv3.conv",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.4.b5.conv3.bn",
+        "timm.layers.norm_act.BatchNormAct2d"
+      ],
+      [
+        "layers.0.4.b5.conv3.bn.drop",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.4.b5.conv3.bn.act",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.4.b5.act3",
+        "torch.nn.modules.activation.ReLU"
+      ],
+      [
+        "layers.0.4.b5.downsample",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.4.b5.drop_path",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.4.b6",
+        "timm.models.regnet.Bottleneck"
+      ],
+      [
+        "layers.0.4.b6.conv1",
+        "timm.layers.conv_bn_act.ConvNormAct"
+      ],
+      [
+        "layers.0.4.b6.conv1.conv",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.4.b6.conv1.bn",
+        "timm.layers.norm_act.BatchNormAct2d"
+      ],
+      [
+        "layers.0.4.b6.conv1.bn.drop",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.4.b6.conv1.bn.act",
+        "torch.nn.modules.activation.ReLU"
+      ],
+      [
+        "layers.0.4.b6.conv2",
+        "timm.layers.conv_bn_act.ConvNormAct"
+      ],
+      [
+        "layers.0.4.b6.conv2.conv",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.4.b6.conv2.bn",
+        "timm.layers.norm_act.BatchNormAct2d"
+      ],
+      [
+        "layers.0.4.b6.conv2.bn.drop",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.4.b6.conv2.bn.act",
+        "torch.nn.modules.activation.ReLU"
+      ],
+      [
+        "layers.0.4.b6.se",
+        "timm.layers.squeeze_excite.SEModule"
+      ],
+      [
+        "layers.0.4.b6.se.fc1",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.4.b6.se.bn",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.4.b6.se.act",
+        "torch.nn.modules.activation.ReLU"
+      ],
+      [
+        "layers.0.4.b6.se.fc2",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.4.b6.se.gate",
+        "timm.layers.activations.Sigmoid"
+      ],
+      [
+        "layers.0.4.b6.conv3",
+        "timm.layers.conv_bn_act.ConvNormAct"
+      ],
+      [
+        "layers.0.4.b6.conv3.conv",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.0.4.b6.conv3.bn",
+        "timm.layers.norm_act.BatchNormAct2d"
+      ],
+      [
+        "layers.0.4.b6.conv3.bn.drop",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.4.b6.conv3.bn.act",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.4.b6.act3",
+        "torch.nn.modules.activation.ReLU"
+      ],
+      [
+        "layers.0.4.b6.downsample",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.4.b6.drop_path",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.0.5",
+        "torch.nn.modules.linear.Identity"
+      ],
+      [
+        "layers.1",
+        "torch.nn.modules.batchnorm.BatchNorm2d"
+      ],
+      [
+        "layers.2",
+        "torch.nn.modules.activation.ReLU"
+      ],
+      [
+        "layers.3",
+        "torch.nn.modules.container.Sequential"
+      ],
+      [
+        "layers.3.0",
+        "fastai.layers.ConvLayer"
+      ],
+      [
+        "layers.3.0.0",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.3.0.1",
+        "torch.nn.modules.activation.Mish"
+      ],
+      [
+        "layers.3.1",
+        "fastai.layers.ConvLayer"
+      ],
+      [
+        "layers.3.1.0",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.3.1.1",
+        "torch.nn.modules.activation.Mish"
+      ],
+      [
+        "layers.4",
+        "fastai.vision.models.unet.UnetBlock"
+      ],
+      [
+        "layers.4.shuf",
+        "fastai.layers.PixelShuffle_ICNR"
+      ],
+      [
+        "layers.4.shuf.0",
+        "fastai.layers.ConvLayer"
+      ],
+      [
+        "layers.4.shuf.0.0",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.4.shuf.0.1",
+        "torch.nn.modules.activation.Mish"
+      ],
+      [
+        "layers.4.shuf.1",
+        "torch.nn.modules.pixelshuffle.PixelShuffle"
+      ],
+      [
+        "layers.4.bn",
+        "torch.nn.modules.batchnorm.BatchNorm2d"
+      ],
+      [
+        "layers.4.conv1",
+        "fastai.layers.ConvLayer"
+      ],
+      [
+        "layers.4.conv1.0",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.4.conv1.1",
+        "torch.nn.modules.activation.Mish"
+      ],
+      [
+        "layers.4.conv2",
+        "fastai.layers.ConvLayer"
+      ],
+      [
+        "layers.4.conv2.0",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.4.conv2.1",
+        "torch.nn.modules.activation.Mish"
+      ],
+      [
+        "layers.4.relu",
+        "torch.nn.modules.activation.Mish"
+      ],
+      [
+        "layers.5",
+        "fastai.vision.models.unet.UnetBlock"
+      ],
+      [
+        "layers.5.shuf",
+        "fastai.layers.PixelShuffle_ICNR"
+      ],
+      [
+        "layers.5.shuf.0",
+        "fastai.layers.ConvLayer"
+      ],
+      [
+        "layers.5.shuf.0.0",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.5.shuf.0.1",
+        "torch.nn.modules.activation.Mish"
+      ],
+      [
+        "layers.5.shuf.1",
+        "torch.nn.modules.pixelshuffle.PixelShuffle"
+      ],
+      [
+        "layers.5.bn",
+        "torch.nn.modules.batchnorm.BatchNorm2d"
+      ],
+      [
+        "layers.5.conv1",
+        "fastai.layers.ConvLayer"
+      ],
+      [
+        "layers.5.conv1.0",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.5.conv1.1",
+        "torch.nn.modules.activation.Mish"
+      ],
+      [
+        "layers.5.conv2",
+        "fastai.layers.ConvLayer"
+      ],
+      [
+        "layers.5.conv2.0",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.5.conv2.1",
+        "torch.nn.modules.activation.Mish"
+      ],
+      [
+        "layers.5.relu",
+        "torch.nn.modules.activation.Mish"
+      ],
+      [
+        "layers.6",
+        "fastai.vision.models.unet.UnetBlock"
+      ],
+      [
+        "layers.6.shuf",
+        "fastai.layers.PixelShuffle_ICNR"
+      ],
+      [
+        "layers.6.shuf.0",
+        "fastai.layers.ConvLayer"
+      ],
+      [
+        "layers.6.shuf.0.0",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.6.shuf.0.1",
+        "torch.nn.modules.activation.Mish"
+      ],
+      [
+        "layers.6.shuf.1",
+        "torch.nn.modules.pixelshuffle.PixelShuffle"
+      ],
+      [
+        "layers.6.bn",
+        "torch.nn.modules.batchnorm.BatchNorm2d"
+      ],
+      [
+        "layers.6.conv1",
+        "fastai.layers.ConvLayer"
+      ],
+      [
+        "layers.6.conv1.0",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.6.conv1.1",
+        "torch.nn.modules.activation.Mish"
+      ],
+      [
+        "layers.6.conv2",
+        "fastai.layers.ConvLayer"
+      ],
+      [
+        "layers.6.conv2.0",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.6.conv2.1",
+        "torch.nn.modules.activation.Mish"
+      ],
+      [
+        "layers.6.relu",
+        "torch.nn.modules.activation.Mish"
+      ],
+      [
+        "layers.7",
+        "fastai.vision.models.unet.UnetBlock"
+      ],
+      [
+        "layers.7.shuf",
+        "fastai.layers.PixelShuffle_ICNR"
+      ],
+      [
+        "layers.7.shuf.0",
+        "fastai.layers.ConvLayer"
+      ],
+      [
+        "layers.7.shuf.0.0",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.7.shuf.0.1",
+        "torch.nn.modules.activation.Mish"
+      ],
+      [
+        "layers.7.shuf.1",
+        "torch.nn.modules.pixelshuffle.PixelShuffle"
+      ],
+      [
+        "layers.7.bn",
+        "torch.nn.modules.batchnorm.BatchNorm2d"
+      ],
+      [
+        "layers.7.conv1",
+        "fastai.layers.ConvLayer"
+      ],
+      [
+        "layers.7.conv1.0",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.7.conv1.1",
+        "torch.nn.modules.activation.Mish"
+      ],
+      [
+        "layers.7.conv2",
+        "fastai.layers.ConvLayer"
+      ],
+      [
+        "layers.7.conv2.0",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.7.conv2.1",
+        "torch.nn.modules.activation.Mish"
+      ],
+      [
+        "layers.7.relu",
+        "torch.nn.modules.activation.Mish"
+      ],
+      [
+        "layers.8",
+        "fastai.layers.PixelShuffle_ICNR"
+      ],
+      [
+        "layers.8.0",
+        "fastai.layers.ConvLayer"
+      ],
+      [
+        "layers.8.0.0",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.8.0.1",
+        "torch.nn.modules.activation.Mish"
+      ],
+      [
+        "layers.8.1",
+        "torch.nn.modules.pixelshuffle.PixelShuffle"
+      ],
+      [
+        "layers.9",
+        "fastai.vision.models.unet.ResizeToOrig"
+      ],
+      [
+        "layers.10",
+        "fastai.layers.MergeLayer"
+      ],
+      [
+        "layers.11",
+        "fastai.layers.ResBlock"
+      ],
+      [
+        "layers.11.convpath",
+        "torch.nn.modules.container.Sequential"
+      ],
+      [
+        "layers.11.convpath.0",
+        "fastai.layers.ConvLayer"
+      ],
+      [
+        "layers.11.convpath.0.0",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.11.convpath.0.1",
+        "torch.nn.modules.activation.Mish"
+      ],
+      [
+        "layers.11.convpath.1",
+        "fastai.layers.ConvLayer"
+      ],
+      [
+        "layers.11.convpath.1.0",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.11.idpath",
+        "torch.nn.modules.container.Sequential"
+      ],
+      [
+        "layers.11.act",
+        "torch.nn.modules.activation.Mish"
+      ],
+      [
+        "layers.12",
+        "fastai.layers.ConvLayer"
+      ],
+      [
+        "layers.12.0",
+        "torch.nn.modules.conv.Conv2d"
+      ],
+      [
+        "layers.13",
+        "fastai.layers.ToTensorBase"
+      ]
+    ],
+    "state": {
+      "layers.0.0.conv.weight": [
+        32,
+        3,
+        3,
+        3
+      ],
+      "layers.0.0.bn.weight": [
+        32
+      ],
+      "layers.0.0.bn.bias": [
+        32
+      ],
+      "layers.0.0.bn.running_mean": [
+        32
+      ],
+      "layers.0.0.bn.running_var": [
+        32
+      ],
+      "layers.0.0.bn.num_batches_tracked": [],
+      "layers.0.1.b1.conv1.conv.weight": [
+        48,
+        32,
+        1,
+        1
+      ],
+      "layers.0.1.b1.conv1.bn.weight": [
+        48
+      ],
+      "layers.0.1.b1.conv1.bn.bias": [
+        48
+      ],
+      "layers.0.1.b1.conv1.bn.running_mean": [
+        48
+      ],
+      "layers.0.1.b1.conv1.bn.running_var": [
+        48
+      ],
+      "layers.0.1.b1.conv1.bn.num_batches_tracked": [],
+      "layers.0.1.b1.conv2.conv.weight": [
+        48,
+        8,
+        3,
+        3
+      ],
+      "layers.0.1.b1.conv2.bn.weight": [
+        48
+      ],
+      "layers.0.1.b1.conv2.bn.bias": [
+        48
+      ],
+      "layers.0.1.b1.conv2.bn.running_mean": [
+        48
+      ],
+      "layers.0.1.b1.conv2.bn.running_var": [
+        48
+      ],
+      "layers.0.1.b1.conv2.bn.num_batches_tracked": [],
+      "layers.0.1.b1.se.fc1.weight": [
+        8,
+        48,
+        1,
+        1
+      ],
+      "layers.0.1.b1.se.fc1.bias": [
+        8
+      ],
+      "layers.0.1.b1.se.fc2.weight": [
+        48,
+        8,
+        1,
+        1
+      ],
+      "layers.0.1.b1.se.fc2.bias": [
+        48
+      ],
+      "layers.0.1.b1.conv3.conv.weight": [
+        48,
+        48,
+        1,
+        1
+      ],
+      "layers.0.1.b1.conv3.bn.weight": [
+        48
+      ],
+      "layers.0.1.b1.conv3.bn.bias": [
+        48
+      ],
+      "layers.0.1.b1.conv3.bn.running_mean": [
+        48
+      ],
+      "layers.0.1.b1.conv3.bn.running_var": [
+        48
+      ],
+      "layers.0.1.b1.conv3.bn.num_batches_tracked": [],
+      "layers.0.1.b1.downsample.conv.weight": [
+        48,
+        32,
+        1,
+        1
+      ],
+      "layers.0.1.b1.downsample.bn.weight": [
+        48
+      ],
+      "layers.0.1.b1.downsample.bn.bias": [
+        48
+      ],
+      "layers.0.1.b1.downsample.bn.running_mean": [
+        48
+      ],
+      "layers.0.1.b1.downsample.bn.running_var": [
+        48
+      ],
+      "layers.0.1.b1.downsample.bn.num_batches_tracked": [],
+      "layers.0.2.b1.conv1.conv.weight": [
+        104,
+        48,
+        1,
+        1
+      ],
+      "layers.0.2.b1.conv1.bn.weight": [
+        104
+      ],
+      "layers.0.2.b1.conv1.bn.bias": [
+        104
+      ],
+      "layers.0.2.b1.conv1.bn.running_mean": [
+        104
+      ],
+      "layers.0.2.b1.conv1.bn.running_var": [
+        104
+      ],
+      "layers.0.2.b1.conv1.bn.num_batches_tracked": [],
+      "layers.0.2.b1.conv2.conv.weight": [
+        104,
+        8,
+        3,
+        3
+      ],
+      "layers.0.2.b1.conv2.bn.weight": [
+        104
+      ],
+      "layers.0.2.b1.conv2.bn.bias": [
+        104
+      ],
+      "layers.0.2.b1.conv2.bn.running_mean": [
+        104
+      ],
+      "layers.0.2.b1.conv2.bn.running_var": [
+        104
+      ],
+      "layers.0.2.b1.conv2.bn.num_batches_tracked": [],
+      "layers.0.2.b1.se.fc1.weight": [
+        12,
+        104,
+        1,
+        1
+      ],
+      "layers.0.2.b1.se.fc1.bias": [
+        12
+      ],
+      "layers.0.2.b1.se.fc2.weight": [
+        104,
+        12,
+        1,
+        1
+      ],
+      "layers.0.2.b1.se.fc2.bias": [
+        104
+      ],
+      "layers.0.2.b1.conv3.conv.weight": [
+        104,
+        104,
+        1,
+        1
+      ],
+      "layers.0.2.b1.conv3.bn.weight": [
+        104
+      ],
+      "layers.0.2.b1.conv3.bn.bias": [
+        104
+      ],
+      "layers.0.2.b1.conv3.bn.running_mean": [
+        104
+      ],
+      "layers.0.2.b1.conv3.bn.running_var": [
+        104
+      ],
+      "layers.0.2.b1.conv3.bn.num_batches_tracked": [],
+      "layers.0.2.b1.downsample.conv.weight": [
+        104,
+        48,
+        1,
+        1
+      ],
+      "layers.0.2.b1.downsample.bn.weight": [
+        104
+      ],
+      "layers.0.2.b1.downsample.bn.bias": [
+        104
+      ],
+      "layers.0.2.b1.downsample.bn.running_mean": [
+        104
+      ],
+      "layers.0.2.b1.downsample.bn.running_var": [
+        104
+      ],
+      "layers.0.2.b1.downsample.bn.num_batches_tracked": [],
+      "layers.0.2.b2.conv1.conv.weight": [
+        104,
+        104,
+        1,
+        1
+      ],
+      "layers.0.2.b2.conv1.bn.weight": [
+        104
+      ],
+      "layers.0.2.b2.conv1.bn.bias": [
+        104
+      ],
+      "layers.0.2.b2.conv1.bn.running_mean": [
+        104
+      ],
+      "layers.0.2.b2.conv1.bn.running_var": [
+        104
+      ],
+      "layers.0.2.b2.conv1.bn.num_batches_tracked": [],
+      "layers.0.2.b2.conv2.conv.weight": [
+        104,
+        8,
+        3,
+        3
+      ],
+      "layers.0.2.b2.conv2.bn.weight": [
+        104
+      ],
+      "layers.0.2.b2.conv2.bn.bias": [
+        104
+      ],
+      "layers.0.2.b2.conv2.bn.running_mean": [
+        104
+      ],
+      "layers.0.2.b2.conv2.bn.running_var": [
+        104
+      ],
+      "layers.0.2.b2.conv2.bn.num_batches_tracked": [],
+      "layers.0.2.b2.se.fc1.weight": [
+        26,
+        104,
+        1,
+        1
+      ],
+      "layers.0.2.b2.se.fc1.bias": [
+        26
+      ],
+      "layers.0.2.b2.se.fc2.weight": [
+        104,
+        26,
+        1,
+        1
+      ],
+      "layers.0.2.b2.se.fc2.bias": [
+        104
+      ],
+      "layers.0.2.b2.conv3.conv.weight": [
+        104,
+        104,
+        1,
+        1
+      ],
+      "layers.0.2.b2.conv3.bn.weight": [
+        104
+      ],
+      "layers.0.2.b2.conv3.bn.bias": [
+        104
+      ],
+      "layers.0.2.b2.conv3.bn.running_mean": [
+        104
+      ],
+      "layers.0.2.b2.conv3.bn.running_var": [
+        104
+      ],
+      "layers.0.2.b2.conv3.bn.num_batches_tracked": [],
+      "layers.0.2.b3.conv1.conv.weight": [
+        104,
+        104,
+        1,
+        1
+      ],
+      "layers.0.2.b3.conv1.bn.weight": [
+        104
+      ],
+      "layers.0.2.b3.conv1.bn.bias": [
+        104
+      ],
+      "layers.0.2.b3.conv1.bn.running_mean": [
+        104
+      ],
+      "layers.0.2.b3.conv1.bn.running_var": [
+        104
+      ],
+      "layers.0.2.b3.conv1.bn.num_batches_tracked": [],
+      "layers.0.2.b3.conv2.conv.weight": [
+        104,
+        8,
+        3,
+        3
+      ],
+      "layers.0.2.b3.conv2.bn.weight": [
+        104
+      ],
+      "layers.0.2.b3.conv2.bn.bias": [
+        104
+      ],
+      "layers.0.2.b3.conv2.bn.running_mean": [
+        104
+      ],
+      "layers.0.2.b3.conv2.bn.running_var": [
+        104
+      ],
+      "layers.0.2.b3.conv2.bn.num_batches_tracked": [],
+      "layers.0.2.b3.se.fc1.weight": [
+        26,
+        104,
+        1,
+        1
+      ],
+      "layers.0.2.b3.se.fc1.bias": [
+        26
+      ],
+      "layers.0.2.b3.se.fc2.weight": [
+        104,
+        26,
+        1,
+        1
+      ],
+      "layers.0.2.b3.se.fc2.bias": [
+        104
+      ],
+      "layers.0.2.b3.conv3.conv.weight": [
+        104,
+        104,
+        1,
+        1
+      ],
+      "layers.0.2.b3.conv3.bn.weight": [
+        104
+      ],
+      "layers.0.2.b3.conv3.bn.bias": [
+        104
+      ],
+      "layers.0.2.b3.conv3.bn.running_mean": [
+        104
+      ],
+      "layers.0.2.b3.conv3.bn.running_var": [
+        104
+      ],
+      "layers.0.2.b3.conv3.bn.num_batches_tracked": [],
+      "layers.0.3.b1.conv1.conv.weight": [
+        208,
+        104,
+        1,
+        1
+      ],
+      "layers.0.3.b1.conv1.bn.weight": [
+        208
+      ],
+      "layers.0.3.b1.conv1.bn.bias": [
+        208
+      ],
+      "layers.0.3.b1.conv1.bn.running_mean": [
+        208
+      ],
+      "layers.0.3.b1.conv1.bn.running_var": [
+        208
+      ],
+      "layers.0.3.b1.conv1.bn.num_batches_tracked": [],
+      "layers.0.3.b1.conv2.conv.weight": [
+        208,
+        8,
+        3,
+        3
+      ],
+      "layers.0.3.b1.conv2.bn.weight": [
+        208
+      ],
+      "layers.0.3.b1.conv2.bn.bias": [
+        208
+      ],
+      "layers.0.3.b1.conv2.bn.running_mean": [
+        208
+      ],
+      "layers.0.3.b1.conv2.bn.running_var": [
+        208
+      ],
+      "layers.0.3.b1.conv2.bn.num_batches_tracked": [],
+      "layers.0.3.b1.se.fc1.weight": [
+        26,
+        208,
+        1,
+        1
+      ],
+      "layers.0.3.b1.se.fc1.bias": [
+        26
+      ],
+      "layers.0.3.b1.se.fc2.weight": [
+        208,
+        26,
+        1,
+        1
+      ],
+      "layers.0.3.b1.se.fc2.bias": [
+        208
+      ],
+      "layers.0.3.b1.conv3.conv.weight": [
+        208,
+        208,
+        1,
+        1
+      ],
+      "layers.0.3.b1.conv3.bn.weight": [
+        208
+      ],
+      "layers.0.3.b1.conv3.bn.bias": [
+        208
+      ],
+      "layers.0.3.b1.conv3.bn.running_mean": [
+        208
+      ],
+      "layers.0.3.b1.conv3.bn.running_var": [
+        208
+      ],
+      "layers.0.3.b1.conv3.bn.num_batches_tracked": [],
+      "layers.0.3.b1.downsample.conv.weight": [
+        208,
+        104,
+        1,
+        1
+      ],
+      "layers.0.3.b1.downsample.bn.weight": [
+        208
+      ],
+      "layers.0.3.b1.downsample.bn.bias": [
+        208
+      ],
+      "layers.0.3.b1.downsample.bn.running_mean": [
+        208
+      ],
+      "layers.0.3.b1.downsample.bn.running_var": [
+        208
+      ],
+      "layers.0.3.b1.downsample.bn.num_batches_tracked": [],
+      "layers.0.3.b2.conv1.conv.weight": [
+        208,
+        208,
+        1,
+        1
+      ],
+      "layers.0.3.b2.conv1.bn.weight": [
+        208
+      ],
+      "layers.0.3.b2.conv1.bn.bias": [
+        208
+      ],
+      "layers.0.3.b2.conv1.bn.running_mean": [
+        208
+      ],
+      "layers.0.3.b2.conv1.bn.running_var": [
+        208
+      ],
+      "layers.0.3.b2.conv1.bn.num_batches_tracked": [],
+      "layers.0.3.b2.conv2.conv.weight": [
+        208,
+        8,
+        3,
+        3
+      ],
+      "layers.0.3.b2.conv2.bn.weight": [
+        208
+      ],
+      "layers.0.3.b2.conv2.bn.bias": [
+        208
+      ],
+      "layers.0.3.b2.conv2.bn.running_mean": [
+        208
+      ],
+      "layers.0.3.b2.conv2.bn.running_var": [
+        208
+      ],
+      "layers.0.3.b2.conv2.bn.num_batches_tracked": [],
+      "layers.0.3.b2.se.fc1.weight": [
+        52,
+        208,
+        1,
+        1
+      ],
+      "layers.0.3.b2.se.fc1.bias": [
+        52
+      ],
+      "layers.0.3.b2.se.fc2.weight": [
+        208,
+        52,
+        1,
+        1
+      ],
+      "layers.0.3.b2.se.fc2.bias": [
+        208
+      ],
+      "layers.0.3.b2.conv3.conv.weight": [
+        208,
+        208,
+        1,
+        1
+      ],
+      "layers.0.3.b2.conv3.bn.weight": [
+        208
+      ],
+      "layers.0.3.b2.conv3.bn.bias": [
+        208
+      ],
+      "layers.0.3.b2.conv3.bn.running_mean": [
+        208
+      ],
+      "layers.0.3.b2.conv3.bn.running_var": [
+        208
+      ],
+      "layers.0.3.b2.conv3.bn.num_batches_tracked": [],
+      "layers.0.3.b3.conv1.conv.weight": [
+        208,
+        208,
+        1,
+        1
+      ],
+      "layers.0.3.b3.conv1.bn.weight": [
+        208
+      ],
+      "layers.0.3.b3.conv1.bn.bias": [
+        208
+      ],
+      "layers.0.3.b3.conv1.bn.running_mean": [
+        208
+      ],
+      "layers.0.3.b3.conv1.bn.running_var": [
+        208
+      ],
+      "layers.0.3.b3.conv1.bn.num_batches_tracked": [],
+      "layers.0.3.b3.conv2.conv.weight": [
+        208,
+        8,
+        3,
+        3
+      ],
+      "layers.0.3.b3.conv2.bn.weight": [
+        208
+      ],
+      "layers.0.3.b3.conv2.bn.bias": [
+        208
+      ],
+      "layers.0.3.b3.conv2.bn.running_mean": [
+        208
+      ],
+      "layers.0.3.b3.conv2.bn.running_var": [
+        208
+      ],
+      "layers.0.3.b3.conv2.bn.num_batches_tracked": [],
+      "layers.0.3.b3.se.fc1.weight": [
+        52,
+        208,
+        1,
+        1
+      ],
+      "layers.0.3.b3.se.fc1.bias": [
+        52
+      ],
+      "layers.0.3.b3.se.fc2.weight": [
+        208,
+        52,
+        1,
+        1
+      ],
+      "layers.0.3.b3.se.fc2.bias": [
+        208
+      ],
+      "layers.0.3.b3.conv3.conv.weight": [
+        208,
+        208,
+        1,
+        1
+      ],
+      "layers.0.3.b3.conv3.bn.weight": [
+        208
+      ],
+      "layers.0.3.b3.conv3.bn.bias": [
+        208
+      ],
+      "layers.0.3.b3.conv3.bn.running_mean": [
+        208
+      ],
+      "layers.0.3.b3.conv3.bn.running_var": [
+        208
+      ],
+      "layers.0.3.b3.conv3.bn.num_batches_tracked": [],
+      "layers.0.3.b4.conv1.conv.weight": [
+        208,
+        208,
+        1,
+        1
+      ],
+      "layers.0.3.b4.conv1.bn.weight": [
+        208
+      ],
+      "layers.0.3.b4.conv1.bn.bias": [
+        208
+      ],
+      "layers.0.3.b4.conv1.bn.running_mean": [
+        208
+      ],
+      "layers.0.3.b4.conv1.bn.running_var": [
+        208
+      ],
+      "layers.0.3.b4.conv1.bn.num_batches_tracked": [],
+      "layers.0.3.b4.conv2.conv.weight": [
+        208,
+        8,
+        3,
+        3
+      ],
+      "layers.0.3.b4.conv2.bn.weight": [
+        208
+      ],
+      "layers.0.3.b4.conv2.bn.bias": [
+        208
+      ],
+      "layers.0.3.b4.conv2.bn.running_mean": [
+        208
+      ],
+      "layers.0.3.b4.conv2.bn.running_var": [
+        208
+      ],
+      "layers.0.3.b4.conv2.bn.num_batches_tracked": [],
+      "layers.0.3.b4.se.fc1.weight": [
+        52,
+        208,
+        1,
+        1
+      ],
+      "layers.0.3.b4.se.fc1.bias": [
+        52
+      ],
+      "layers.0.3.b4.se.fc2.weight": [
+        208,
+        52,
+        1,
+        1
+      ],
+      "layers.0.3.b4.se.fc2.bias": [
+        208
+      ],
+      "layers.0.3.b4.conv3.conv.weight": [
+        208,
+        208,
+        1,
+        1
+      ],
+      "layers.0.3.b4.conv3.bn.weight": [
+        208
+      ],
+      "layers.0.3.b4.conv3.bn.bias": [
+        208
+      ],
+      "layers.0.3.b4.conv3.bn.running_mean": [
+        208
+      ],
+      "layers.0.3.b4.conv3.bn.running_var": [
+        208
+      ],
+      "layers.0.3.b4.conv3.bn.num_batches_tracked": [],
+      "layers.0.3.b5.conv1.conv.weight": [
+        208,
+        208,
+        1,
+        1
+      ],
+      "layers.0.3.b5.conv1.bn.weight": [
+        208
+      ],
+      "layers.0.3.b5.conv1.bn.bias": [
+        208
+      ],
+      "layers.0.3.b5.conv1.bn.running_mean": [
+        208
+      ],
+      "layers.0.3.b5.conv1.bn.running_var": [
+        208
+      ],
+      "layers.0.3.b5.conv1.bn.num_batches_tracked": [],
+      "layers.0.3.b5.conv2.conv.weight": [
+        208,
+        8,
+        3,
+        3
+      ],
+      "layers.0.3.b5.conv2.bn.weight": [
+        208
+      ],
+      "layers.0.3.b5.conv2.bn.bias": [
+        208
+      ],
+      "layers.0.3.b5.conv2.bn.running_mean": [
+        208
+      ],
+      "layers.0.3.b5.conv2.bn.running_var": [
+        208
+      ],
+      "layers.0.3.b5.conv2.bn.num_batches_tracked": [],
+      "layers.0.3.b5.se.fc1.weight": [
+        52,
+        208,
+        1,
+        1
+      ],
+      "layers.0.3.b5.se.fc1.bias": [
+        52
+      ],
+      "layers.0.3.b5.se.fc2.weight": [
+        208,
+        52,
+        1,
+        1
+      ],
+      "layers.0.3.b5.se.fc2.bias": [
+        208
+      ],
+      "layers.0.3.b5.conv3.conv.weight": [
+        208,
+        208,
+        1,
+        1
+      ],
+      "layers.0.3.b5.conv3.bn.weight": [
+        208
+      ],
+      "layers.0.3.b5.conv3.bn.bias": [
+        208
+      ],
+      "layers.0.3.b5.conv3.bn.running_mean": [
+        208
+      ],
+      "layers.0.3.b5.conv3.bn.running_var": [
+        208
+      ],
+      "layers.0.3.b5.conv3.bn.num_batches_tracked": [],
+      "layers.0.3.b6.conv1.conv.weight": [
+        208,
+        208,
+        1,
+        1
+      ],
+      "layers.0.3.b6.conv1.bn.weight": [
+        208
+      ],
+      "layers.0.3.b6.conv1.bn.bias": [
+        208
+      ],
+      "layers.0.3.b6.conv1.bn.running_mean": [
+        208
+      ],
+      "layers.0.3.b6.conv1.bn.running_var": [
+        208
+      ],
+      "layers.0.3.b6.conv1.bn.num_batches_tracked": [],
+      "layers.0.3.b6.conv2.conv.weight": [
+        208,
+        8,
+        3,
+        3
+      ],
+      "layers.0.3.b6.conv2.bn.weight": [
+        208
+      ],
+      "layers.0.3.b6.conv2.bn.bias": [
+        208
+      ],
+      "layers.0.3.b6.conv2.bn.running_mean": [
+        208
+      ],
+      "layers.0.3.b6.conv2.bn.running_var": [
+        208
+      ],
+      "layers.0.3.b6.conv2.bn.num_batches_tracked": [],
+      "layers.0.3.b6.se.fc1.weight": [
+        52,
+        208,
+        1,
+        1
+      ],
+      "layers.0.3.b6.se.fc1.bias": [
+        52
+      ],
+      "layers.0.3.b6.se.fc2.weight": [
+        208,
+        52,
+        1,
+        1
+      ],
+      "layers.0.3.b6.se.fc2.bias": [
+        208
+      ],
+      "layers.0.3.b6.conv3.conv.weight": [
+        208,
+        208,
+        1,
+        1
+      ],
+      "layers.0.3.b6.conv3.bn.weight": [
+        208
+      ],
+      "layers.0.3.b6.conv3.bn.bias": [
+        208
+      ],
+      "layers.0.3.b6.conv3.bn.running_mean": [
+        208
+      ],
+      "layers.0.3.b6.conv3.bn.running_var": [
+        208
+      ],
+      "layers.0.3.b6.conv3.bn.num_batches_tracked": [],
+      "layers.0.4.b1.conv1.conv.weight": [
+        440,
+        208,
+        1,
+        1
+      ],
+      "layers.0.4.b1.conv1.bn.weight": [
+        440
+      ],
+      "layers.0.4.b1.conv1.bn.bias": [
+        440
+      ],
+      "layers.0.4.b1.conv1.bn.running_mean": [
+        440
+      ],
+      "layers.0.4.b1.conv1.bn.running_var": [
+        440
+      ],
+      "layers.0.4.b1.conv1.bn.num_batches_tracked": [],
+      "layers.0.4.b1.conv2.conv.weight": [
+        440,
+        8,
+        3,
+        3
+      ],
+      "layers.0.4.b1.conv2.bn.weight": [
+        440
+      ],
+      "layers.0.4.b1.conv2.bn.bias": [
+        440
+      ],
+      "layers.0.4.b1.conv2.bn.running_mean": [
+        440
+      ],
+      "layers.0.4.b1.conv2.bn.running_var": [
+        440
+      ],
+      "layers.0.4.b1.conv2.bn.num_batches_tracked": [],
+      "layers.0.4.b1.se.fc1.weight": [
+        52,
+        440,
+        1,
+        1
+      ],
+      "layers.0.4.b1.se.fc1.bias": [
+        52
+      ],
+      "layers.0.4.b1.se.fc2.weight": [
+        440,
+        52,
+        1,
+        1
+      ],
+      "layers.0.4.b1.se.fc2.bias": [
+        440
+      ],
+      "layers.0.4.b1.conv3.conv.weight": [
+        440,
+        440,
+        1,
+        1
+      ],
+      "layers.0.4.b1.conv3.bn.weight": [
+        440
+      ],
+      "layers.0.4.b1.conv3.bn.bias": [
+        440
+      ],
+      "layers.0.4.b1.conv3.bn.running_mean": [
+        440
+      ],
+      "layers.0.4.b1.conv3.bn.running_var": [
+        440
+      ],
+      "layers.0.4.b1.conv3.bn.num_batches_tracked": [],
+      "layers.0.4.b1.downsample.conv.weight": [
+        440,
+        208,
+        1,
+        1
+      ],
+      "layers.0.4.b1.downsample.bn.weight": [
+        440
+      ],
+      "layers.0.4.b1.downsample.bn.bias": [
+        440
+      ],
+      "layers.0.4.b1.downsample.bn.running_mean": [
+        440
+      ],
+      "layers.0.4.b1.downsample.bn.running_var": [
+        440
+      ],
+      "layers.0.4.b1.downsample.bn.num_batches_tracked": [],
+      "layers.0.4.b2.conv1.conv.weight": [
+        440,
+        440,
+        1,
+        1
+      ],
+      "layers.0.4.b2.conv1.bn.weight": [
+        440
+      ],
+      "layers.0.4.b2.conv1.bn.bias": [
+        440
+      ],
+      "layers.0.4.b2.conv1.bn.running_mean": [
+        440
+      ],
+      "layers.0.4.b2.conv1.bn.running_var": [
+        440
+      ],
+      "layers.0.4.b2.conv1.bn.num_batches_tracked": [],
+      "layers.0.4.b2.conv2.conv.weight": [
+        440,
+        8,
+        3,
+        3
+      ],
+      "layers.0.4.b2.conv2.bn.weight": [
+        440
+      ],
+      "layers.0.4.b2.conv2.bn.bias": [
+        440
+      ],
+      "layers.0.4.b2.conv2.bn.running_mean": [
+        440
+      ],
+      "layers.0.4.b2.conv2.bn.running_var": [
+        440
+      ],
+      "layers.0.4.b2.conv2.bn.num_batches_tracked": [],
+      "layers.0.4.b2.se.fc1.weight": [
+        110,
+        440,
+        1,
+        1
+      ],
+      "layers.0.4.b2.se.fc1.bias": [
+        110
+      ],
+      "layers.0.4.b2.se.fc2.weight": [
+        440,
+        110,
+        1,
+        1
+      ],
+      "layers.0.4.b2.se.fc2.bias": [
+        440
+      ],
+      "layers.0.4.b2.conv3.conv.weight": [
+        440,
+        440,
+        1,
+        1
+      ],
+      "layers.0.4.b2.conv3.bn.weight": [
+        440
+      ],
+      "layers.0.4.b2.conv3.bn.bias": [
+        440
+      ],
+      "layers.0.4.b2.conv3.bn.running_mean": [
+        440
+      ],
+      "layers.0.4.b2.conv3.bn.running_var": [
+        440
+      ],
+      "layers.0.4.b2.conv3.bn.num_batches_tracked": [],
+      "layers.0.4.b3.conv1.conv.weight": [
+        440,
+        440,
+        1,
+        1
+      ],
+      "layers.0.4.b3.conv1.bn.weight": [
+        440
+      ],
+      "layers.0.4.b3.conv1.bn.bias": [
+        440
+      ],
+      "layers.0.4.b3.conv1.bn.running_mean": [
+        440
+      ],
+      "layers.0.4.b3.conv1.bn.running_var": [
+        440
+      ],
+      "layers.0.4.b3.conv1.bn.num_batches_tracked": [],
+      "layers.0.4.b3.conv2.conv.weight": [
+        440,
+        8,
+        3,
+        3
+      ],
+      "layers.0.4.b3.conv2.bn.weight": [
+        440
+      ],
+      "layers.0.4.b3.conv2.bn.bias": [
+        440
+      ],
+      "layers.0.4.b3.conv2.bn.running_mean": [
+        440
+      ],
+      "layers.0.4.b3.conv2.bn.running_var": [
+        440
+      ],
+      "layers.0.4.b3.conv2.bn.num_batches_tracked": [],
+      "layers.0.4.b3.se.fc1.weight": [
+        110,
+        440,
+        1,
+        1
+      ],
+      "layers.0.4.b3.se.fc1.bias": [
+        110
+      ],
+      "layers.0.4.b3.se.fc2.weight": [
+        440,
+        110,
+        1,
+        1
+      ],
+      "layers.0.4.b3.se.fc2.bias": [
+        440
+      ],
+      "layers.0.4.b3.conv3.conv.weight": [
+        440,
+        440,
+        1,
+        1
+      ],
+      "layers.0.4.b3.conv3.bn.weight": [
+        440
+      ],
+      "layers.0.4.b3.conv3.bn.bias": [
+        440
+      ],
+      "layers.0.4.b3.conv3.bn.running_mean": [
+        440
+      ],
+      "layers.0.4.b3.conv3.bn.running_var": [
+        440
+      ],
+      "layers.0.4.b3.conv3.bn.num_batches_tracked": [],
+      "layers.0.4.b4.conv1.conv.weight": [
+        440,
+        440,
+        1,
+        1
+      ],
+      "layers.0.4.b4.conv1.bn.weight": [
+        440
+      ],
+      "layers.0.4.b4.conv1.bn.bias": [
+        440
+      ],
+      "layers.0.4.b4.conv1.bn.running_mean": [
+        440
+      ],
+      "layers.0.4.b4.conv1.bn.running_var": [
+        440
+      ],
+      "layers.0.4.b4.conv1.bn.num_batches_tracked": [],
+      "layers.0.4.b4.conv2.conv.weight": [
+        440,
+        8,
+        3,
+        3
+      ],
+      "layers.0.4.b4.conv2.bn.weight": [
+        440
+      ],
+      "layers.0.4.b4.conv2.bn.bias": [
+        440
+      ],
+      "layers.0.4.b4.conv2.bn.running_mean": [
+        440
+      ],
+      "layers.0.4.b4.conv2.bn.running_var": [
+        440
+      ],
+      "layers.0.4.b4.conv2.bn.num_batches_tracked": [],
+      "layers.0.4.b4.se.fc1.weight": [
+        110,
+        440,
+        1,
+        1
+      ],
+      "layers.0.4.b4.se.fc1.bias": [
+        110
+      ],
+      "layers.0.4.b4.se.fc2.weight": [
+        440,
+        110,
+        1,
+        1
+      ],
+      "layers.0.4.b4.se.fc2.bias": [
+        440
+      ],
+      "layers.0.4.b4.conv3.conv.weight": [
+        440,
+        440,
+        1,
+        1
+      ],
+      "layers.0.4.b4.conv3.bn.weight": [
+        440
+      ],
+      "layers.0.4.b4.conv3.bn.bias": [
+        440
+      ],
+      "layers.0.4.b4.conv3.bn.running_mean": [
+        440
+      ],
+      "layers.0.4.b4.conv3.bn.running_var": [
+        440
+      ],
+      "layers.0.4.b4.conv3.bn.num_batches_tracked": [],
+      "layers.0.4.b5.conv1.conv.weight": [
+        440,
+        440,
+        1,
+        1
+      ],
+      "layers.0.4.b5.conv1.bn.weight": [
+        440
+      ],
+      "layers.0.4.b5.conv1.bn.bias": [
+        440
+      ],
+      "layers.0.4.b5.conv1.bn.running_mean": [
+        440
+      ],
+      "layers.0.4.b5.conv1.bn.running_var": [
+        440
+      ],
+      "layers.0.4.b5.conv1.bn.num_batches_tracked": [],
+      "layers.0.4.b5.conv2.conv.weight": [
+        440,
+        8,
+        3,
+        3
+      ],
+      "layers.0.4.b5.conv2.bn.weight": [
+        440
+      ],
+      "layers.0.4.b5.conv2.bn.bias": [
+        440
+      ],
+      "layers.0.4.b5.conv2.bn.running_mean": [
+        440
+      ],
+      "layers.0.4.b5.conv2.bn.running_var": [
+        440
+      ],
+      "layers.0.4.b5.conv2.bn.num_batches_tracked": [],
+      "layers.0.4.b5.se.fc1.weight": [
+        110,
+        440,
+        1,
+        1
+      ],
+      "layers.0.4.b5.se.fc1.bias": [
+        110
+      ],
+      "layers.0.4.b5.se.fc2.weight": [
+        440,
+        110,
+        1,
+        1
+      ],
+      "layers.0.4.b5.se.fc2.bias": [
+        440
+      ],
+      "layers.0.4.b5.conv3.conv.weight": [
+        440,
+        440,
+        1,
+        1
+      ],
+      "layers.0.4.b5.conv3.bn.weight": [
+        440
+      ],
+      "layers.0.4.b5.conv3.bn.bias": [
+        440
+      ],
+      "layers.0.4.b5.conv3.bn.running_mean": [
+        440
+      ],
+      "layers.0.4.b5.conv3.bn.running_var": [
+        440
+      ],
+      "layers.0.4.b5.conv3.bn.num_batches_tracked": [],
+      "layers.0.4.b6.conv1.conv.weight": [
+        440,
+        440,
+        1,
+        1
+      ],
+      "layers.0.4.b6.conv1.bn.weight": [
+        440
+      ],
+      "layers.0.4.b6.conv1.bn.bias": [
+        440
+      ],
+      "layers.0.4.b6.conv1.bn.running_mean": [
+        440
+      ],
+      "layers.0.4.b6.conv1.bn.running_var": [
+        440
+      ],
+      "layers.0.4.b6.conv1.bn.num_batches_tracked": [],
+      "layers.0.4.b6.conv2.conv.weight": [
+        440,
+        8,
+        3,
+        3
+      ],
+      "layers.0.4.b6.conv2.bn.weight": [
+        440
+      ],
+      "layers.0.4.b6.conv2.bn.bias": [
+        440
+      ],
+      "layers.0.4.b6.conv2.bn.running_mean": [
+        440
+      ],
+      "layers.0.4.b6.conv2.bn.running_var": [
+        440
+      ],
+      "layers.0.4.b6.conv2.bn.num_batches_tracked": [],
+      "layers.0.4.b6.se.fc1.weight": [
+        110,
+        440,
+        1,
+        1
+      ],
+      "layers.0.4.b6.se.fc1.bias": [
+        110
+      ],
+      "layers.0.4.b6.se.fc2.weight": [
+        440,
+        110,
+        1,
+        1
+      ],
+      "layers.0.4.b6.se.fc2.bias": [
+        440
+      ],
+      "layers.0.4.b6.conv3.conv.weight": [
+        440,
+        440,
+        1,
+        1
+      ],
+      "layers.0.4.b6.conv3.bn.weight": [
+        440
+      ],
+      "layers.0.4.b6.conv3.bn.bias": [
+        440
+      ],
+      "layers.0.4.b6.conv3.bn.running_mean": [
+        440
+      ],
+      "layers.0.4.b6.conv3.bn.running_var": [
+        440
+      ],
+      "layers.0.4.b6.conv3.bn.num_batches_tracked": [],
+      "layers.1.weight": [
+        440
+      ],
+      "layers.1.bias": [
+        440
+      ],
+      "layers.1.running_mean": [
+        440
+      ],
+      "layers.1.running_var": [
+        440
+      ],
+      "layers.1.num_batches_tracked": [],
+      "layers.3.0.0.weight": [
+        880,
+        440,
+        3,
+        3
+      ],
+      "layers.3.0.0.bias": [
+        880
+      ],
+      "layers.3.1.0.weight": [
+        440,
+        880,
+        3,
+        3
+      ],
+      "layers.3.1.0.bias": [
+        440
+      ],
+      "layers.4.shuf.0.0.weight": [
+        880,
+        440,
+        1,
+        1
+      ],
+      "layers.4.shuf.0.0.bias": [
+        880
+      ],
+      "layers.4.bn.weight": [
+        208
+      ],
+      "layers.4.bn.bias": [
+        208
+      ],
+      "layers.4.bn.running_mean": [
+        208
+      ],
+      "layers.4.bn.running_var": [
+        208
+      ],
+      "layers.4.bn.num_batches_tracked": [],
+      "layers.4.conv1.0.weight": [
+        428,
+        428,
+        3,
+        3
+      ],
+      "layers.4.conv1.0.bias": [
+        428
+      ],
+      "layers.4.conv2.0.weight": [
+        428,
+        428,
+        3,
+        3
+      ],
+      "layers.4.conv2.0.bias": [
+        428
+      ],
+      "layers.5.shuf.0.0.weight": [
+        856,
+        428,
+        1,
+        1
+      ],
+      "layers.5.shuf.0.0.bias": [
+        856
+      ],
+      "layers.5.bn.weight": [
+        104
+      ],
+      "layers.5.bn.bias": [
+        104
+      ],
+      "layers.5.bn.running_mean": [
+        104
+      ],
+      "layers.5.bn.running_var": [
+        104
+      ],
+      "layers.5.bn.num_batches_tracked": [],
+      "layers.5.conv1.0.weight": [
+        318,
+        318,
+        3,
+        3
+      ],
+      "layers.5.conv1.0.bias": [
+        318
+      ],
+      "layers.5.conv2.0.weight": [
+        318,
+        318,
+        3,
+        3
+      ],
+      "layers.5.conv2.0.bias": [
+        318
+      ],
+      "layers.6.shuf.0.0.weight": [
+        636,
+        318,
+        1,
+        1
+      ],
+      "layers.6.shuf.0.0.bias": [
+        636
+      ],
+      "layers.6.bn.weight": [
+        48
+      ],
+      "layers.6.bn.bias": [
+        48
+      ],
+      "layers.6.bn.running_mean": [
+        48
+      ],
+      "layers.6.bn.running_var": [
+        48
+      ],
+      "layers.6.bn.num_batches_tracked": [],
+      "layers.6.conv1.0.weight": [
+        207,
+        207,
+        3,
+        3
+      ],
+      "layers.6.conv1.0.bias": [
+        207
+      ],
+      "layers.6.conv2.0.weight": [
+        207,
+        207,
+        3,
+        3
+      ],
+      "layers.6.conv2.0.bias": [
+        207
+      ],
+      "layers.7.shuf.0.0.weight": [
+        412,
+        207,
+        1,
+        1
+      ],
+      "layers.7.shuf.0.0.bias": [
+        412
+      ],
+      "layers.7.bn.weight": [
+        32
+      ],
+      "layers.7.bn.bias": [
+        32
+      ],
+      "layers.7.bn.running_mean": [
+        32
+      ],
+      "layers.7.bn.running_var": [
+        32
+      ],
+      "layers.7.bn.num_batches_tracked": [],
+      "layers.7.conv1.0.weight": [
+        67,
+        135,
+        3,
+        3
+      ],
+      "layers.7.conv1.0.bias": [
+        67
+      ],
+      "layers.7.conv2.0.weight": [
+        67,
+        67,
+        3,
+        3
+      ],
+      "layers.7.conv2.0.bias": [
+        67
+      ],
+      "layers.8.0.0.weight": [
+        268,
+        67,
+        1,
+        1
+      ],
+      "layers.8.0.0.bias": [
+        268
+      ],
+      "layers.11.convpath.0.0.weight": [
+        70,
+        70,
+        3,
+        3
+      ],
+      "layers.11.convpath.0.0.bias": [
+        70
+      ],
+      "layers.11.convpath.1.0.weight": [
+        70,
+        70,
+        3,
+        3
+      ],
+      "layers.11.convpath.1.0.bias": [
+        70
+      ],
+      "layers.12.0.weight": [
+        4,
+        70,
+        1,
+        1
+      ],
+      "layers.12.0.bias": [
+        4
+      ]
+    }
+  },
+  "initial_encoder_sha256": "9dfb2f8b98ef35f5f31832bc9e92cdf8a66028658ab505bec62781bf5a53fade",
+  "initial_decoder_sha256": "26ffea0fbdb14be611b0faf777a9a7017c3cb68781960afaba7ba72f85cd66ca"
+}

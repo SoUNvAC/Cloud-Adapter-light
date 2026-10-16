@@ -1,0 +1,448 @@
+{
+  "status": "passed",
+  "execution": "separate controlled-shared CPU process",
+  "models": {
+    "C": {
+      "negative_groups": 53,
+      "negative_pixels": 54126242,
+      "macro_FP_pp": 0.9999986589462326,
+      "adjacent_lower_macro_FP_pp": 1.0000007535390496,
+      "atomic_ties": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "rows": [
+        {
+          "group_id": "03d78b176919677764f2e5502dba04548b895fe21bc4ad59834cd899e66bfd77",
+          "negative": 1044484,
+          "FP": 0,
+          "lower_FP": 0,
+          "tie": 0
+        },
+        {
+          "group_id": "05866d12c622c49931f3fe35aabab1c84b2d957744421b676c9b831f37bb1a69",
+          "negative": 1044484,
+          "FP": 3912,
+          "lower_FP": 3912,
+          "tie": 0
+        },
+        {
+          "group_id": "076f2e3603e90803ba4fcf0955aa4e4bf5a54f1abe416d2f648770953e2d2727",
+          "negative": 951117,
+          "FP": 21132,
+          "lower_FP": 21132,
+          "tie": 0
+        },
+        {
+          "group_id": "0a148b939ef9e3ea5182557896cba6a8bbd8572bc60765ad520716128284aec9",
+          "negative": 971517,
+          "FP": 23414,
+          "lower_FP": 23414,
+          "tie": 0
+        },
+        {
+          "group_id": "0dff11d4f6b3f336ca29408c81266ab5228e50520de2fb2cc5d0e5ee3ba2bd12",
+          "negative": 986290,
+          "FP": 6030,
+          "lower_FP": 6030,
+          "tie": 0
+        },
+        {
+          "group_id": "19f46ffc7d93ba7ccf50cc13def2a1b60e823e332628cff77972e45f5bddafdd",
+          "negative": 1044484,
+          "FP": 0,
+          "lower_FP": 0,
+          "tie": 0
+        },
+        {
+          "group_id": "1bc068c333e3254d407c67b8e60debb9c4c47365b3ceeba9179c359cba64eccb",
+          "negative": 1044484,
+          "FP": 14,
+          "lower_FP": 14,
+          "tie": 0
+        },
+        {
+          "group_id": "1c688b6525582d8dd0de00c7bb9df44da9f03fa41d3bedbb496224ae8f9115f7",
+          "negative": 1044484,
+          "FP": 0,
+          "lower_FP": 0,
+          "tie": 0
+        },
+        {
+          "group_id": "1d469d48462297892e18c21ede5f3d5442baedcf47af1cd873fd48102f3f19bd",
+          "negative": 1044484,
+          "FP": 0,
+          "lower_FP": 0,
+          "tie": 0
+        },
+        {
+          "group_id": "2803dfd39d29814756df3cdfd37e0bb670afbf98dd12bf78304322db08749312",
+          "negative": 1044484,
+          "FP": 8,
+          "lower_FP": 8,
+          "tie": 0
+        },
+        {
+          "group_id": "296404c2ec660dfdfb2491a14af4cd0e99cbc28aa8ea9565acbd4a20376006be",
+          "negative": 1044484,
+          "FP": 0,
+          "lower_FP": 0,
+          "tie": 0
+        },
+        {
+          "group_id": "29d9ba1a53bbc74d4c34e155c5c657b3f385a21fd6dc9a3e9010490fdd848e12",
+          "negative": 1044484,
+          "FP": 0,
+          "lower_FP": 0,
+          "tie": 0
+        },
+        {
+          "group_id": "2a8f8c28dbec378627355cd5acaad8b20d09afd14d32d278cc52c10427864709",
+          "negative": 1044415,
+          "FP": 0,
+          "lower_FP": 0,
+          "tie": 0
+        },
+        {
+          "group_id": "37bbe9df272ed8a6c50e430e148d3a7abecf77eb974e6985b39c477948cdd942",
+          "negative": 966615,
+          "FP": 94613,
+          "lower_FP": 94613,
+          "tie": 0
+        },
+        {
+          "group_id": "37ff39543d248a3bb646c6b5543d9307a90a62b8a1e935b3838d1ea7e3fdf68e",
+          "negative": 1044484,
+          "FP": 5,
+          "lower_FP": 5,
+          "tie": 0
+        },
+        {
+          "group_id": "43618af6b01bdcb3f2a9ddaea6771c1b8abc889a0d578753e766158a09e5fa78",
+          "negative": 1044484,
+          "FP": 26501,
+          "lower_FP": 26501,
+          "tie": 0
+        },
+        {
+          "group_id": "466103525fc1d6b9b172319d36d14b972764cc7699d41bedef4529959358a545",
+          "negative": 1044484,
+          "FP": 1910,
+          "lower_FP": 1910,
+          "tie": 0
+        },
+        {
+          "group_id": "4ccbdb66dad51a8fdad216ea687140ed14d35eec7fff414990f2dcb0b5790643",
+          "negative": 1044484,
+          "FP": 213,
+          "lower_FP": 213,
+          "tie": 0
+        },
+        {
+          "group_id": "53482a05815bb2ed88a146c80425e14af6384fbf12fc574fb57c1c4d4b9e652f",
+          "negative": 1044484,
+          "FP": 0,
+          "lower_FP": 0,
+          "tie": 0
+        },
+        {
+          "group_id": "55b01ca2cb939ad9732bb0c1c2b4186bc7316a47639f137cc041ad741ab02cf5",
+          "negative": 944512,
+          "FP": 20591,
+          "lower_FP": 20591,
+          "tie": 0
+        },
+        {
+          "group_id": "5955951adb0636a28a90c96c08b4d0cdbd5c88cb512e1e9683da188485130b0c",
+          "negative": 1044484,
+          "FP": 0,
+          "lower_FP": 0,
+          "tie": 0
+        },
+        {
+          "group_id": "5b33c9b05b691e7619fc032c182bbfbbad64c7c1bf6b11b032dad252cfcacbdf",
+          "negative": 1044484,
+          "FP": 0,
+          "lower_FP": 0,
+          "tie": 0
+        },
+        {
+          "group_id": "5fd2a7bb69959c894af74a06cca629a8b98a8fbbf5a77df856f9412fd61cf38d",
+          "negative": 1044484,
+          "FP": 0,
+          "lower_FP": 0,
+          "tie": 0
+        },
+        {
+          "group_id": "68670de47ebe611d5669a3e02618516e34fb700bec0082d945a5905e91639e85",
+          "negative": 1044484,
+          "FP": 1065,
+          "lower_FP": 1065,
+          "tie": 0
+        },
+        {
+          "group_id": "701f720b8813d6c9e687c3016aa0243c5feb4d5aa3ea026d313114d196674b23",
+          "negative": 1044484,
+          "FP": 0,
+          "lower_FP": 0,
+          "tie": 0
+        },
+        {
+          "group_id": "751f4e9db721c4de70de35877bb5b4c233ae9598fe12954ada42a9b4ec83b47f",
+          "negative": 1027116,
+          "FP": 2091,
+          "lower_FP": 2091,
+          "tie": 0
+        },
+        {
+          "group_id": "762ed1681e71575f3aeb50dfc53ee61bace6cdeae4565adc8dd78a7f3fb7088c",
+          "negative": 1044484,
+          "FP": 0,
+          "lower_FP": 0,
+          "tie": 0
+        },
+        {
+          "group_id": "7ab5b903dd033295ae1873d82995fa9bac54ccc910327bccea8ae8f39a4b12f6",
+          "negative": 1044484,
+          "FP": 0,
+          "lower_FP": 0,
+          "tie": 0
+        },
+        {
+          "group_id": "7c24e4c98a7327b6b9e84cb89f1d8c24a1b21d49f4b089d00b8f811f8fcf3573",
+          "negative": 1044484,
+          "FP": 0,
+          "lower_FP": 0,
+          "tie": 0
+        },
+        {
+          "group_id": "80709e721d2b44ed9fa67c705d0c4318e6864678a8340aae01f6fbc146329546",
+          "negative": 893245,
+          "FP": 9203,
+          "lower_FP": 9203,
+          "tie": 0
+        },
+        {
+          "group_id": "8644c7cf71ce5c827ae39e44070ea12137940d432d125285eff23a04a44f3b29",
+          "negative": 1044484,
+          "FP": 20160,
+          "lower_FP": 20160,
+          "tie": 0
+        },
+        {
+          "group_id": "86c9c25c3a8bdbabb45152325c6e5c573f72029e5f8b060cb53bf60e7cce50aa",
+          "negative": 919928,
+          "FP": 96001,
+          "lower_FP": 96001,
+          "tie": 0
+        },
+        {
+          "group_id": "87c69a30946a5550e3e982bce4740ebba46a780d18a73afe65480d666613598b",
+          "negative": 1044484,
+          "FP": 677,
+          "lower_FP": 677,
+          "tie": 0
+        },
+        {
+          "group_id": "8cb6b7742f39a379ee744e8463dcc629031e9960e1ee44dfea719ea36df8d999",
+          "negative": 1044484,
+          "FP": 507,
+          "lower_FP": 507,
+          "tie": 0
+        },
+        {
+          "group_id": "8f67b5ebbaaebb0484037637fac81c9370ea8d5c9cf40ab810a203caabb10e43",
+          "negative": 868188,
+          "FP": 24169,
+          "lower_FP": 24169,
+          "tie": 0
+        },
+        {
+          "group_id": "95b1ca604dab33a1953ff4344a0129d9f4e9de19254bb5b965d04a21a0db5e28",
+          "negative": 1044484,
+          "FP": 245,
+          "lower_FP": 245,
+          "tie": 0
+        },
+        {
+          "group_id": "961fc36543f2aee6cadf2e9b99970dd78dc8303f83243171d3cef22aed79c78f",
+          "negative": 1009947,
+          "FP": 35531,
+          "lower_FP": 35531,
+          "tie": 0
+        },
+        {
+          "group_id": "a18d45433f5efcad1918f98b1012b012c8a06541e6f8a2d2612336733a663044",
+          "negative": 900792,
+          "FP": 64366,
+          "lower_FP": 64367,
+          "tie": 1
+        },
+        {
+          "group_id": "ab8efe1599f53b1e49f2e743bf22a3e8e4b54f7582fe1674dd4a6a3c4819aaf5",
+          "negative": 1044484,
+          "FP": 264,
+          "lower_FP": 264,
+          "tie": 0
+        },
+        {
+          "group_id": "b4cd53594d1a77a4c6b342d13c3b8c1e6d03871f91d35937aa13e3da601b22f9",
+          "negative": 1044484,
+          "FP": 10,
+          "lower_FP": 10,
+          "tie": 0
+        },
+        {
+          "group_id": "b980986dd002ed671e2e8a4061fe6564b2e7a96de69d7c0276bfa1a5ab08a71a",
+          "negative": 1044484,
+          "FP": 2,
+          "lower_FP": 2,
+          "tie": 0
+        },
+        {
+          "group_id": "c21b41ed1837aa7ae3f10d8623dacdc65d5e9d1b85ef2707a55a25c3a6ac1aa8",
+          "negative": 1044484,
+          "FP": 0,
+          "lower_FP": 0,
+          "tie": 0
+        },
+        {
+          "group_id": "c22fc88309c49b926de5498f89a92e5b33fc7df5ebda48b126ff77b606836ca7",
+          "negative": 1044484,
+          "FP": 43,
+          "lower_FP": 43,
+          "tie": 0
+        },
+        {
+          "group_id": "c67f100fedbc51645ba49545fc5c8b2316becaf226bfeedd24f41d404bbf6b05",
+          "negative": 1044484,
+          "FP": 132,
+          "lower_FP": 132,
+          "tie": 0
+        },
+        {
+          "group_id": "dafd2f0e178ebc18d71541cc0509c2fcd3301f28f09134650e92170af12abbea",
+          "negative": 942793,
+          "FP": 15607,
+          "lower_FP": 15607,
+          "tie": 0
+        },
+        {
+          "group_id": "eb235dc51d3294bea3f8c7c41c3a20b791bf7c7373da26efb5d360215972ee0b",
+          "negative": 1044484,
+          "FP": 0,
+          "lower_FP": 0,
+          "tie": 0
+        },
+        {
+          "group_id": "eb8b3a67a4a788375333c72e30f424235e306414e3c08b39d0b3e02613da01cf",
+          "negative": 1044484,
+          "FP": 0,
+          "lower_FP": 0,
+          "tie": 0
+        },
+        {
+          "group_id": "ee243f2eb72e6ff5310faf10c8cbd310c8f87e69835cda784f731d6ccd325aa0",
+          "negative": 1044484,
+          "FP": 1966,
+          "lower_FP": 1966,
+          "tie": 0
+        },
+        {
+          "group_id": "eef079ec280eeeb05b3f12a94134f41f8a3ba210f979a1b3c8710a23c478eb84",
+          "negative": 1044484,
+          "FP": 2,
+          "lower_FP": 2,
+          "tie": 0
+        },
+        {
+          "group_id": "f2138d7dbee6fc93ba7a4712d669a09234d526aa71fbd7182f491f0013837cab",
+          "negative": 1044484,
+          "FP": 0,
+          "lower_FP": 0,
+          "tie": 0
+        },
+        {
+          "group_id": "f3cc667ba54723ffcdce064e8d82a75173140023e3c830b63cc878b97c32cdb4",
+          "negative": 1044483,
+          "FP": 0,
+          "lower_FP": 0,
+          "tie": 0
+        },
+        {
+          "group_id": "f5e4907d7bb75199ac9d1caad4df407783996cfc178964e0b7a6a568418044f2",
+          "negative": 1044484,
+          "FP": 40,
+          "lower_FP": 40,
+          "tie": 0
+        },
+        {
+          "group_id": "fc02608e82c1a5855735f626492136061649142fbe2891d5456a9803682699ca",
+          "negative": 964892,
+          "FP": 33715,
+          "lower_FP": 33715,
+          "tie": 0
+        }
+      ],
+      "float64_domain": true
+    }
+  },
+  "source_sha256": "ff0a7aa3903a92197ec1ec2e6a1dfba0475df40e31f5f348cf708daaf450a9b1",
+  "threshold_lock_sha256": "d29111f81a0e68d1ca945cd72263c2d49aef9d5d11a27c0106fc55c120f379af",
+  "full53_groups_no_sampling": true,
+  "uses_no_binary_threshold_search": true,
+  "model_calls": 0,
+  "seconds": 4.279449701309204,
+  "CPU_peak_bytes": 141103104
+}

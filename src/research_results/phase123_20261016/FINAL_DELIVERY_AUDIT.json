@@ -1,0 +1,18 @@
+{
+  "phase": 123,
+  "status": "local_result_and_statistics_verified",
+  "model_calls": 2392,
+  "extra_model_calls": 0,
+  "model_retries": 0,
+  "source_lock_sha256": "92b82e685e83066380058dd31681ab728b6c0ea711f67050254f959024d51e57",
+  "model_sha256": "2ad9b8dea32e8cb06e33656fc0a4518a412a85722432bcc21abf604d463238dd",
+  "ZIP_sha256": "759a89a4c41bcb468cd2030fa6621e99d7d7bfd4728b37184195b31caa00f1a9",
+  "transfer_attempts": 2,
+  "first_transfer_failure": "SSH closed before ZIP; logs retained; receiver confirmed exited; no ZIP partial; second attempt reused verified receipt/model",
+  "baseline_reproduction": "R and C122 AP, pooledAP, recall, FPR exact; confidence intervals recomputed using frozen123015 bootstrap seed",
+  "independent_group_statistics": "actual per-group scalar fsum bootstrap replay passed",
+  "references_uploaded": 0,
+  "work_dirs_transfers": 0,
+  "Git_weights_uploaded": false,
+  "subsequent_phase_started": false
+}

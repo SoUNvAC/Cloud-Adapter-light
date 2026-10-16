@@ -1,0 +1,35 @@
+{
+  "boundary": "strict >+1pp improvement; inclusive [-1,+1] stable; strict <-1pp decline; descriptive only",
+  "rows": {
+    "Catalogue_C122": {
+      "improved_gt1pp": 3,
+      "stable_within1pp": 2,
+      "declined_ltminus1pp": 2
+    },
+    "Catalogue_C123": {
+      "improved_gt1pp": 3,
+      "stable_within1pp": 2,
+      "declined_ltminus1pp": 2
+    },
+    "Catalogue_C_two_seed_metric_mean": {
+      "improved_gt1pp": 2,
+      "stable_within1pp": 3,
+      "declined_ltminus1pp": 2
+    },
+    "PixBox_C122": {
+      "improved_gt1pp": 3,
+      "stable_within1pp": 1,
+      "declined_ltminus1pp": 4
+    },
+    "PixBox_C123": {
+      "improved_gt1pp": 3,
+      "stable_within1pp": 3,
+      "declined_ltminus1pp": 2
+    },
+    "PixBox_C_two_seed_metric_mean": {
+      "improved_gt1pp": 3,
+      "stable_within1pp": 2,
+      "declined_ltminus1pp": 3
+    }
+  }
+}

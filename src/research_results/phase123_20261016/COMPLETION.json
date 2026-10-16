@@ -1,0 +1,16 @@
+{
+  "status": "completed_exploratory",
+  "phase": 123,
+  "seed": 12301,
+  "training_steps": 1000,
+  "training_groups": 100,
+  "calibration_groups": 53,
+  "model_calls": 2392,
+  "model_retries": 0,
+  "decoder_sha256": "2ad9b8dea32e8cb06e33656fc0a4518a412a85722432bcc21abf604d463238dd",
+  "new_data_downloads": 0,
+  "reference_uploads": 0,
+  "work_dirs_transfers": 0,
+  "baseline_reproduction": "both R and seed12201, four workpoints, AP/pooledAP/recall/FPR exact",
+  "new_independent_confirmation": false
+}
