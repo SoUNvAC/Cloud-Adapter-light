@@ -9,8 +9,9 @@ from pathlib import Path
 import numpy as np
 
 R = Path(__file__).resolve().parents[2]
-U = R / 'outputs/phase122/phase122_20261015'
-O = R / 'src/research_results/phase122_20261015'
+U = R / 'outputs/phaseCal'
+SOURCE = U / 'remote_backup/phase122_20261015'
+O = U / 'evaluation'
 
 
 def load(p):
@@ -46,7 +47,7 @@ def main():
     headings = ['|数据池|模型／工作点|阈值|AP有效组／误报有效组|宏AP %|宏召回 %|平均负类误报 %|误报U95 %|最坏组及误报 %|备注|',
                 '|---|---|---|---|---|---|---|---|---|---|']
     if not (O / 'LOCAL_CPU_ACCEPTANCE.json').exists():
-        thresholds = load(U / 'THRESHOLD_LOCK.json')['thresholds']
+        thresholds = load(SOURCE / 'THRESHOLD_LOCK.json')['thresholds']
         text = headings.copy()
         for pool in ('Catalogue', 'PixBox'):
             for arm in ('R', 'C100'):
@@ -56,7 +57,7 @@ def main():
         text.append('|运行状态|部分完成|—|—|—|—|—|—|—|原控制器正常结束：2612调用、1361.1s；全量校准边界独立CPU复核通过；评价及完整备份传输中；执行端 /home/scv/shared/phase122_20261015；未重复训练，未新增模型调用|')
         write_table(text)
         return
-    d = U / 'delivery'
+    d = SOURCE
     controller = load(d / 'CONTROLLER_STATUS.json')
     assert controller['status'] == 'completed_pending_local_reference_join'
     train = load(d / 'train_C/TRAINING_RECEIPT.json')
@@ -64,7 +65,7 @@ def main():
     assert train['encoder_unchanged'] and train['decoder_updated']
     assert train['trainable_parameters'] == 14135988
     assert not train['teacher_state_sha256']
-    model = U / 'C_decoder_final.safetensors'
+    model = SOURCE / 'C_decoder_final.safetensors'
     assert sha(model) == train['final_model_sha256'] == load(d / 'TRAINING_SEAL.json')['models']['C']
     raw = model.read_bytes()
     size = struct.unpack('<Q', raw[:8])[0]
