@@ -1,0 +1,95 @@
+{
+  "phase": 125,
+  "status": "RegNet_branch_closed",
+  "covered_phases": [
+    119,
+    120,
+    121,
+    122,
+    123,
+    124,
+    125
+  ],
+  "completed_time": "2026-10-17T14:13:26.628077+08:00",
+  "output_files": [
+    "README.md",
+    "BRANCH_SUMMARY.md",
+    "RESULT_TABLES.md",
+    "EVIDENCE_INDEX.md",
+    "CLAIMS_AND_LIMITATIONS.md",
+    "CLOSEOUT.json"
+  ],
+  "additional_receipts": [
+    "PRE_EXECUTION_LOCK.json",
+    "INPUT_SHA_LOCK.json",
+    "DOCUMENT_CONSISTENCY.json"
+  ],
+  "model_calls": 0,
+  "training": 0,
+  "fitting": 0,
+  "downloads": 0,
+  "pixels_read": 0,
+  "model_binary_reads": 0,
+  "threshold_searches": 0,
+  "new_bootstrap": 0,
+  "new_seed": 0,
+  "full_historical_reaudit": false,
+  "unmeasured_items_retained": [
+    {
+      "item": "C100_matched_latency_and_peak",
+      "status": "unmeasured",
+      "detail": "no C100 x3scene x2repeat matched119 benchmark",
+      "impact": "cannot copy R latency/worker peak or claim C100 timing measured"
+    },
+    {
+      "item": "C100_merged_standalone_weight_size",
+      "status": "unmeasured",
+      "detail": "existing56.56MB file is decoder overlay; base required",
+      "impact": "base+overlay reconstruction128.87MB is not merged deployment file size"
+    },
+    {
+      "item": "pretraining_geographic_overlap",
+      "status": "unknown",
+      "detail": "unknown overlap with pretrained model data",
+      "impact": "no independent confirmation claim"
+    },
+    {
+      "item": "original_Google_drive_tensor_equivalence",
+      "status": "unknown",
+      "detail": "historical model reconstruction metadata says not verified",
+      "impact": "HF identity/accepted receipts do not prove original Google Drive equivalence"
+    },
+    {
+      "item": "PixBox_full_scene_FPR_and_three_class_mIoU",
+      "status": "unmeasured",
+      "detail": "only chosen negative reference point FPR",
+      "impact": "cannot extrapolate full-scene FPR or three-class mIoU"
+    },
+    {
+      "item": "seed_population_variation",
+      "status": "unmeasured",
+      "detail": "only two fixed seeds; conditional related-group intervals reused",
+      "impact": "cannot claim cross-seed population stability"
+    },
+    {
+      "item": "training_group_count_causal_effect",
+      "status": "unmeasured",
+      "detail": "C100 vs C153 changes data membership and seed",
+      "impact": "cannot identify data-size effect alone"
+    },
+    {
+      "item": "original_E_R_N_binary_reverification",
+      "status": "unknown_this_audit",
+      "detail": "original author binaries not delivered in119-123 local model overlays;119 asset/resource identity receipts reused",
+      "impact": "do not call metadata identity a new original-weight byte verification"
+    }
+  ],
+  "elapsed_seconds": 0.1121206283569336,
+  "CPU_peak_bytes": 22831104,
+  "subsequent_phase_started": false,
+  "new_direction_numbering_starts_at": 126,
+  "hash_receipts": [
+    "SHA256SUMS.json",
+    "GIT_CONTENT_SHA256SUMS.json"
+  ]
+}

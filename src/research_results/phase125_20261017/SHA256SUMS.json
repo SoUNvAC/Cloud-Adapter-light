@@ -1,0 +1,14 @@
+{
+  "domain": "original local document bytes; Git blob manifest is portable across line endings",
+  "files": {
+    "BRANCH_SUMMARY.md": "b02161f9c677b156af670cb497c54654a743e58543cdb7da549ba31f3b19444e",
+    "CLAIMS_AND_LIMITATIONS.md": "e6abfcc6cd90c44d73ef0b759b1cc603cd9e17c1793d8ca66cf6a56640133bbc",
+    "CLOSEOUT.json": "4cbec40c9bfb3c3aece6dacf16803c85fd44d14d436aa1953a5a48af2d243da9",
+    "DOCUMENT_CONSISTENCY.json": "e89acbc034ac4c808780dd6a94577d4e9e92780a846e9297f71c0977cb5648cc",
+    "EVIDENCE_INDEX.md": "882179d603549317970f511759be539b09bbbc126081e9ebd0f574a8a5abe5b4",
+    "INPUT_SHA_LOCK.json": "93b184ca1a996689426553840a1e086e126f09dd5f5b53cf4061e2e279739b85",
+    "PRE_EXECUTION_LOCK.json": "7c73e685ade383407238057ce2a5dc42b239777bf55af9acb73722dbf5215300",
+    "README.md": "9300adeea81146e5c7ac0c2e163553c38ab698a14ef039b6026683a7cb2430b2",
+    "RESULT_TABLES.md": "190a72a030d2d397e019989ba202dd5d250578ad0b0c2e022f69ca09e5d2b192"
+  }
+}

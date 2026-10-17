@@ -49,3 +49,6 @@ src/research_plans/PHASE123_C100_SEED_REPLICATION_20261016.md -text
 
 src/tools/*phase124*.py -text
 src/research_plans/PHASE124_REGNET_EVIDENCE_COST_AUDIT_20261017.md -text
+
+src/tools/*phase125*.py -text
+src/research_plans/PHASE125_REGNET_BRANCH_CLOSEOUT_20261017.md -text

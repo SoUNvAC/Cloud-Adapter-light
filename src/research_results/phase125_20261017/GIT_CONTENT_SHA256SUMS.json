@@ -1,0 +1,15 @@
+{
+  "domain": "Git blob/index bytes; portable CRLF/LF checkout verification",
+  "files": {
+    "BRANCH_SUMMARY.md": "2e941597aeb2bcd5f5b3902972428d6ca59e30a5567f658e1f09dca8393fd9d0",
+    "CLAIMS_AND_LIMITATIONS.md": "df1984ab96d9487d119f4beec03e42bff6a946905555176c3e30c8ba8cedeb9f",
+    "CLOSEOUT.json": "0bbcaee4eed0e4f89ca11deb3009b237fe5f1e2b4d4becf0615a028c7d637256",
+    "DOCUMENT_CONSISTENCY.json": "6eb3b79026cc4cbfae482bdbcbe0e91cf7bfb9270f7a8e1cbedfeca4f247effa",
+    "EVIDENCE_INDEX.md": "8b7e3dfde908733e3b76166cc0d3cbbea3fc19d3c0656ce8887af706e0461b32",
+    "INPUT_SHA_LOCK.json": "f3c3bf590699051adba0a4122d6b18e78ce346a84d226b653bb1433c21edcac1",
+    "PRE_EXECUTION_LOCK.json": "95e97797fc5fb5dd80889e38180979de2c937ecab413a9dca7de483b7af1336e",
+    "README.md": "8ce620ef7640d9e6de0bbe1751baf944f8e95ae30fb2b11f7d5930e6b2fa4af2",
+    "RESULT_TABLES.md": "0810729da671456216b73d9f7275ec4659e846da65ff7db8a2cea15d3cc89218",
+    "SHA256SUMS.json": "7e1535d77eb477e976042eabc2574f0c87e90b66087ea65074f8a7636dda7adc"
+  }
+}

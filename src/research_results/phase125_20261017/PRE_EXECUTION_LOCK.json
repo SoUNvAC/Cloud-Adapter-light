@@ -1,0 +1,12 @@
+{
+  "phase": 125,
+  "source_sha256": {
+    "src/tools/closeout_phase125.py": "54e2ce6ec6e9c940ed144b05341188e84651d689b1ac410dd4a8ad1c1d7a9d55",
+    "src/tools/verify_phase125.py": "ee3887425e5ad90cab97cc0eb1c5c3fce5340ea0625397e8a7352a123f4e813e",
+    "src/research_plans/PHASE125_REGNET_BRANCH_CLOSEOUT_20261017.md": "af8b792cbfaf64acffe2f967435a757890930326f39ba658d6462184699dfd2f"
+  },
+  "scope": "document consistency and selected124 accepted materials only; no full audit/statistics/model/pixel execution",
+  "summary_length_CJK": 1592,
+  "CPU_GiB": 8,
+  "seconds": 3600
+}

@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "summary_Chinese_character_count": 1592,
+  "range": [
+    1500,
+    2500
+  ],
+  "performance_rows": 12,
+  "complete_own_threshold_and05": true,
+  "exact_existing_intervals_reused": true,
+  "links_exist": true,
+  "workpoint_and_cost_scopes_explicit": true,
+  "model_files_opened": 0,
+  "bootstrap_recomputed": 0
+}
