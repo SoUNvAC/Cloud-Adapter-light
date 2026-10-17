@@ -1,0 +1,157 @@
+{
+  "phase": 200,
+  "product_id": "S2B_MSIL1C_20230908T183919_N0509_R070_T11TNK_20230908T221618",
+  "objects": [
+    {
+      "band": "B02",
+      "name": "tiles/11/T/NK/S2B_MSIL1C_20230908T183919_N0509_R070_T11TNK_20230908T221618.SAFE/GRANULE/L1C_T11TNK_A033987_20230908T184153/IMG_DATA/T11TNK_20230908T183919_B02.jp2",
+      "bytes": 108352145,
+      "generation": "1694243356071878",
+      "md5_base64": "o+AGyFvNW5UROuWYv+tacA==",
+      "url": "https://storage.googleapis.com/gcp-public-data-sentinel-2/tiles/11/T/NK/S2B_MSIL1C_20230908T183919_N0509_R070_T11TNK_20230908T221618.SAFE/GRANULE/L1C_T11TNK_A033987_20230908T184153/IMG_DATA/T11TNK_20230908T183919_B02.jp2?generation=1694243356071878"
+    },
+    {
+      "band": "B03",
+      "name": "tiles/11/T/NK/S2B_MSIL1C_20230908T183919_N0509_R070_T11TNK_20230908T221618.SAFE/GRANULE/L1C_T11TNK_A033987_20230908T184153/IMG_DATA/T11TNK_20230908T183919_B03.jp2",
+      "bytes": 112924715,
+      "generation": "1694243357675733",
+      "md5_base64": "LrWtLg7l47bhcvCtUyJ2Zg==",
+      "url": "https://storage.googleapis.com/gcp-public-data-sentinel-2/tiles/11/T/NK/S2B_MSIL1C_20230908T183919_N0509_R070_T11TNK_20230908T221618.SAFE/GRANULE/L1C_T11TNK_A033987_20230908T184153/IMG_DATA/T11TNK_20230908T183919_B03.jp2?generation=1694243357675733"
+    },
+    {
+      "band": "B04",
+      "name": "tiles/11/T/NK/S2B_MSIL1C_20230908T183919_N0509_R070_T11TNK_20230908T221618.SAFE/GRANULE/L1C_T11TNK_A033987_20230908T184153/IMG_DATA/T11TNK_20230908T183919_B04.jp2",
+      "bytes": 117326836,
+      "generation": "1694243378834604",
+      "md5_base64": "P+ij689vipaA6atIacj2DQ==",
+      "url": "https://storage.googleapis.com/gcp-public-data-sentinel-2/tiles/11/T/NK/S2B_MSIL1C_20230908T183919_N0509_R070_T11TNK_20230908T221618.SAFE/GRANULE/L1C_T11TNK_A033987_20230908T184153/IMG_DATA/T11TNK_20230908T183919_B04.jp2?generation=1694243378834604"
+    },
+    {
+      "band": "B8A",
+      "name": "tiles/11/T/NK/S2B_MSIL1C_20230908T183919_N0509_R070_T11TNK_20230908T221618.SAFE/GRANULE/L1C_T11TNK_A033987_20230908T184153/IMG_DATA/T11TNK_20230908T183919_B8A.jp2",
+      "bytes": 33850240,
+      "generation": "1694243386181992",
+      "md5_base64": "NarVyXj0HODTDPHDtGOx9w==",
+      "url": "https://storage.googleapis.com/gcp-public-data-sentinel-2/tiles/11/T/NK/S2B_MSIL1C_20230908T183919_N0509_R070_T11TNK_20230908T221618.SAFE/GRANULE/L1C_T11TNK_A033987_20230908T184153/IMG_DATA/T11TNK_20230908T183919_B8A.jp2?generation=1694243386181992"
+    },
+    {
+      "band": "MTD_MSIL1C",
+      "name": "tiles/11/T/NK/S2B_MSIL1C_20230908T183919_N0509_R070_T11TNK_20230908T221618.SAFE/MTD_MSIL1C.xml",
+      "bytes": 45633,
+      "generation": "1694243410361334",
+      "md5_base64": "2+NZ5RzpOdvTW5+V64XcFg==",
+      "url": "https://storage.googleapis.com/gcp-public-data-sentinel-2/tiles/11/T/NK/S2B_MSIL1C_20230908T183919_N0509_R070_T11TNK_20230908T221618.SAFE/MTD_MSIL1C.xml?generation=1694243410361334"
+    },
+    {
+      "band": "MTD_TL",
+      "name": "tiles/11/T/NK/S2B_MSIL1C_20230908T183919_N0509_R070_T11TNK_20230908T221618.SAFE/GRANULE/L1C_T11TNK_A033987_20230908T184153/MTD_TL.xml",
+      "bytes": 546026,
+      "generation": "1694243398866369",
+      "md5_base64": "zeeyGRB7wCc/Mmfrs6+CRg==",
+      "url": "https://storage.googleapis.com/gcp-public-data-sentinel-2/tiles/11/T/NK/S2B_MSIL1C_20230908T183919_N0509_R070_T11TNK_20230908T221618.SAFE/GRANULE/L1C_T11TNK_A033987_20230908T184153/MTD_TL.xml?generation=1694243398866369"
+    }
+  ],
+  "weights_V4": [
+    {
+      "filename": "PM_model_OCM_7.97_R_G_NIR_3_smp_edgenext_small.usi_in1k_PT_state.safetensors",
+      "bytes": 30711472,
+      "sha256": "d5fe67ad00f6fdb73eb8382ad925849e97fb82cedb46225344afff1a734a9c1d",
+      "url": "https://huggingface.co/NickWright/OmniCloudMask/resolve/c9a4fb88188709127aa25cfe51ae7fd41b0132f8/PM_model_OCM_7.97_R_G_NIR_3_smp_edgenext_small.usi_in1k_PT_state.safetensors"
+    },
+    {
+      "filename": "PM_model_OCM_7.97_R_G_NIR_3_smp_regnety_004.pycls_in1k_PT_state.safetensors",
+      "bytes": 27094520,
+      "sha256": "7f6e4202e17ee73efa4aba7abb5c34f4f90a9f7eb42480820714994dff2db660",
+      "url": "https://huggingface.co/NickWright/OmniCloudMask/resolve/c9a4fb88188709127aa25cfe51ae7fd41b0132f8/PM_model_OCM_7.97_R_G_NIR_3_smp_regnety_004.pycls_in1k_PT_state.safetensors"
+    }
+  ],
+  "weights_V1": [
+    {
+      "version": 1,
+      "required": true,
+      "architecture": "regnety_004",
+      "google_drive_file_id": "1tGJh9nnrH-apjmV70AcK8VtXnbBtRb67",
+      "google_drive_filename": "PM_model_2.2.10_RG_NIR_509_regnety_004.pycls_in1k_PT_state.pth",
+      "google_drive_length": "unknown",
+      "google_drive_checksum": "unknown",
+      "hf_filename": "PM_model_2.2.10_RG_NIR_509_regnety_004.pycls_in1k_PT_state.safetensors",
+      "hf_revision": "c9a4fb88188709127aa25cfe51ae7fd41b0132f8",
+      "declared_length_bytes": 72314968,
+      "declared_sha256": "044f2d6a3b4b59817f19d4ca080485f01c4bf9a6fddd053df184ee98144b46a2",
+      "checksum_content_verified": false,
+      "license_declaration": "MIT in author HF model card; no separate LICENSE in model repository",
+      "code_license": "MIT",
+      "format": "safetensors; author loader converts V1 to .pth",
+      "state_tensor_equivalence_to_original_google_drive": "not verified; author mapping in download_models.py:40-63"
+    },
+    {
+      "version": 1,
+      "required": true,
+      "architecture": "convnextv2_nano",
+      "google_drive_file_id": "1QXQ_oPhLKEowC9fxlZGLOACt8gCNMbWP",
+      "google_drive_filename": "PM_model_2.2.10_RG_NIR_509_convnextv2_nano.fcmae_ft_in1k_PT_state.pth",
+      "google_drive_length": "unknown",
+      "google_drive_checksum": "unknown",
+      "hf_filename": "PM_model_2.2.10_RG_NIR_509_convnextv2_nano.fcmae_ft_in1k_PT_state.safetensors",
+      "hf_revision": "c9a4fb88188709127aa25cfe51ae7fd41b0132f8",
+      "declared_length_bytes": 130164944,
+      "declared_sha256": "221c7393fe17c1a22791e43ae98a5daeee6c7a01bf2d68f1a319770d217041c1",
+      "checksum_content_verified": false,
+      "license_declaration": "MIT in author HF model card; no separate LICENSE in model repository",
+      "code_license": "MIT",
+      "format": "safetensors; author loader converts V1 to .pth",
+      "state_tensor_equivalence_to_original_google_drive": "not verified; author mapping in download_models.py:40-63"
+    }
+  ],
+  "code_commit": "f68cf49b4cecc93ec5cb71e80110d76f61df073c",
+  "hf_revision": "c9a4fb88188709127aa25cfe51ae7fd41b0132f8",
+  "planned_download_bytes": 430851587,
+  "download_cap_bytes": 3000000000,
+  "planned_main_calls_max": 256,
+  "planned_all_calls_cap": 500,
+  "recovery_all_calls_cap": 625,
+  "wall_seconds_cap": 7200,
+  "recovery_wall_seconds_cap": 9000,
+  "cpu_cap_bytes": 17179869184,
+  "gpu_cap_bytes": 21474836480,
+  "host_min_free_bytes": 4000000000,
+  "settings": {
+    "bands": [
+      "B04",
+      "B03",
+      "B8A"
+    ],
+    "resolution_m": 20,
+    "patch_size": 1000,
+    "patch_overlap": 300,
+    "batch_size": 1,
+    "dtype": "float32",
+    "compile": false,
+    "decision": "official raw-class argmax; confidence not used to threshold"
+  },
+  "display_bbox_utm11N": [
+    567500,
+    4926000,
+    577500,
+    4941500
+  ],
+  "display_bbox_basis": "Ducar Fig3 axes rounded outward; fixed before model output",
+  "paper": {
+    "path": "C:\\Users\\Administrator\\Desktop\\paper\\Limnol Oceanogr Letters - 2026 - Ducar - Aquatic reflectance derived from Sentinel‐2 Multispectral Imager data for inland.pdf",
+    "sha256": "2d374668753f236d988ef61490213a7f67f3311c34360f92fa8bc70dde3ee5f9",
+    "pages": [
+      8,
+      9
+    ],
+    "historical_input_weights_settings": "unknown; not exact reproduction"
+  },
+  "readme": "Only this case, no training/fitting/threshold search. AI candidate points are not independent truth. Same 20m native DN input for both versions, author loader no radiometric offset correction; XML radiometry recorded separately. Full tile inference with lake-only evidence view.",
+  "source_sha256": {
+    "src/tools/discover_phase200.py": "ffa89b387f74b4c9de10e2851193c591bfc1de8faf4bc7944022c77e9636e664",
+    "src/tools/launch_phase200.py": "48eac8d4762901365afc7bea9597e300f9ad1ef23960b40a49e5bfb26ce90171",
+    "src/tools/phase200_common.py": "68ff5dc808db83d6ced8b24538580941dee81262d7eeca95d56b1f184916959d",
+    "src/tools/prepare_phase200.py": "b34c84c1a3781bafce834c4f24586e3425ed68d7c5bab5ddd0c0375bc1013464",
+    "src/tools/run_phase200.py": "1def8ef347541e2d02cf519be010d63b60cac7ab5b01b6e16e895027ea50d81c",
+    "src/tools/test_phase200.py": "a3e912a3e48e0cd1b8e8aedea1cc036f1f35371f23bb6f0f49a303c49998aa4e"
+  }
+}
