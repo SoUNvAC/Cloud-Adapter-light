@@ -1,0 +1,11 @@
+# 2026-10-17 storage reclamation after switch to Omni
+
+User requested WSL space reclamation. Script `tools/reclaim_legacy_inputs.py` was locally boundary-tested, committed/pushed as `09afb91`, then pulled ff-only and tested remotely before use. No model training or evaluation was started.
+
+Deleted 635 deterministic legacy input cache files under the shared Catalogue data directory: 7,959,048,976 logical bytes (7.96 GB / 7.4124 GiB), 7,961,538,560 allocated bytes. Exact paths, headers and original file stats were frozen before deletion. Selected only large product-specific `_rgb.npy`, `_RGB.npy`, `_spectral.npy` and `_B.npy` inputs from old phases; actual selected phases were 65a, 65b, 66 and 72. NPY headers, original product membership and single-link/canonical-path checks passed. Full SHA256 of retained `subscenes.zip` and `masks.zip` passed before deleting any cache. Original archive snapshots were unchanged after deletion. No active Python/training/download/transfer job was observed by the cleanup guard.
+
+Preserved original datasets, models/weights, prediction scores, masks, small metadata/logs, all work_dirs and all Omni-era artifacts/runtime. No system settings, credentials, historical result arrays or local data were removed. Reusing deleted inputs requires deterministic reconstruction from retained originals; no automatic restoration was started.
+
+Cleanup receipt: `/home/scv/shared/storage_cleanup_20261017/INPUT_CACHE_COMPLETED.json`. Plan SHA256: `b32175daf5a685fcaecdd5d0f3c071f069a56a92ba674243df64e85fc789b0b2`. Small shared cleanup evidence copied to local `outputs/storage_cleanup/20261017/`; this is not work_dirs synchronization.
+
+Available ext4 bytes immediately before/after deletion: 779,318,497,280 / 787,279,855,616, increase 7,961,358,336 bytes. A later `df -h` reported 223G used / 734G available; this total is a later filesystem snapshot, not all attributable to this deletion. Existing host monitor reported Windows I: free bytes 13,343,952,896 both before and after. Thus this cleanup reclaimed WSL-reusable blocks but did not demonstrate Windows physical-space recovery. VHD compaction/WSL shutdown was not performed; exact VHD host path and downtime arrangements have not been established.
