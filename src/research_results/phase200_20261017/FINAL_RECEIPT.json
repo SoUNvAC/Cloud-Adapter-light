@@ -1,0 +1,68 @@
+{
+  "status": "completed",
+  "phase": 200,
+  "local_output": "D:\\Cloud-Adapter-light\\outputs\\phase200\\phase200_20261017",
+  "remote_large_outputs": "/home/scv/shared/phase200_20261017",
+  "actual_download_bytes": 430851587,
+  "model_calls": 267,
+  "main_calls": 256,
+  "construction_calls": 11,
+  "inference_phase_wall_seconds": 24.97931066199999,
+  "worker_wall_seconds": 29.863824553000086,
+  "cpu_peak_bytes": 3887579136,
+  "gpu_peak_bytes": 9151971328,
+  "counts": {
+    "shadow": {
+      "V1": "6/6",
+      "V4": "6/6"
+    },
+    "shore": {
+      "V1": "0/3",
+      "V4": "0/3"
+    },
+    "water": {
+      "V1": "0/6",
+      "V4": "0/6"
+    },
+    "cloud": {
+      "V1": "0/4",
+      "V4": "0/4"
+    }
+  },
+  "all24_default_classes_identical": true,
+  "candidate_certainty": {
+    "clear": 19,
+    "mixed": 4,
+    "uncertain": 1
+  },
+  "point_sha256": "792e100c2a18ee2b98c3e9251d8d046def8e5752582f9be834313cf73b832045",
+  "main_conclusion": "Post-hoc O1 north-eastern shore-adjacent V4 difference is a lead for further checking; not an adjudicated false positive.",
+  "common_disagreement": "H6 AI clear-shore candidate -> ThickCloud in both versions",
+  "posthoc_regions_not_frozen_points": true,
+  "independent_truth": false,
+  "no_formal_error_metrics": true,
+  "final_manifest_sha256": "06cabe03b848a168bd1e0216f8cdf410e77203662794c35e7d47bb68ded8aff3",
+  "result_sha256": "aff13d011c5b4dfef79e497e26b3d9b9a8e108a7f0cd75ab618c4716e38d1493",
+  "validation": {
+    "status": "passed",
+    "original_delivery_sha_checked": 9,
+    "point_identities_checked": 24,
+    "default_classes_identical": 24,
+    "clear_mixed_uncertain": [
+      19,
+      4,
+      1
+    ],
+    "visual_review": "RGB,V1,V4 inspected; O1/O2 qualitative regions flagged; H6 common disagreement retained",
+    "changed_model_calls": 0,
+    "changed_thresholds": 0,
+    "changed_candidates": 0,
+    "independent_ground_truth": false,
+    "formal_error_metrics_computed": false
+  },
+  "large_files_or_reference_pixels_in_git": false,
+  "work_dirs_sync": false,
+  "new_training": false,
+  "new_fitting": false,
+  "new_threshold_search": false
+}
