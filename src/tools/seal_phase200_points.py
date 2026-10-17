@@ -4,7 +4,7 @@ from phase200_common import *
 def main():
     assert not (ROOT/'infer').exists() and not (ROOT/'POINTS_SEALED.json').exists()
     assert load(ROOT/'acquire/STATUS.json')['status']=='prepared'
-    with (ROOT/'candidate_points.csv').open(encoding='utf8-sig',newline='') as f:rows=list(csv.DictReader(f))
+    with (ROOT/'candidate_points.csv').open(encoding='utf-8-sig',newline='') as f:rows=list(csv.DictReader(f))
     assert len(rows)<=24 and len({x['point_id'] for x in rows})==len(rows)
     import numpy as np
     valid=np.load(ROOT/'valid20.npy',mmap_mode='r');a=load(ROOT/'INPUT_RECEIPT.json');t=a['transform'];w=a['display_window']

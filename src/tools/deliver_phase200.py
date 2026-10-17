@@ -7,7 +7,7 @@ def main():
     state=load(ROOT/'infer/STATUS.json');assert state['status']=='completed'
     sealed=load(ROOT/'POINTS_SEALED.json');assert sha(ROOT/'candidate_points.csv')==sealed['points_sha256']
     plan=load(LOCK);inp=load(ROOT/'INPUT_RECEIPT.json');assets=load(ROOT/'ASSET_VERIFICATION.json')
-    with (ROOT/'candidate_points.csv').open(encoding='utf8-sig',newline='') as f:points=list(csv.DictReader(f))
+    with (ROOT/'candidate_points.csv').open(encoding='utf-8-sig',newline='') as f:points=list(csv.DictReader(f))
     out=ROOT/'delivery';out.mkdir(exist_ok=False)
     win=inp['display_window'];r,c,h,w=[win[k] for k in ['row','col','height','width']]
     rgb=Image.open(ROOT/'true_color.png').convert('RGB');palette=np.array([[0,0,0],[255,50,50],[0,200,255],[255,230,0]],dtype='uint8')
@@ -27,7 +27,7 @@ def main():
         for x in points:
             px,py=int(x['col20'])-c,int(x['row20'])-r;draw.ellipse((px-4,py-4,px+4,py+4),outline='white',width=1);draw.text((px+5,py-6),x['point_id'],fill='white',stroke_width=1,stroke_fill='black')
         image.save(out/(name+'.png'))
-    with (out/'points.csv').open('w',newline='',encoding='utf8-sig') as f:
+    with (out/'points.csv').open('w',newline='',encoding='utf-8-sig') as f:
         writer=csv.DictWriter(f,fieldnames=list(points[0]));writer.writeheader();writer.writerows(points)
     def count(group,version):
         p=[x for x in points if x['candidate']==group and x['certainty']=='clear'];return f"{sum(x[version+'_class']=='Shadow' for x in p)}/{len(p)}"
