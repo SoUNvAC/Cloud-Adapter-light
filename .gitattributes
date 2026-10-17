@@ -46,3 +46,6 @@ src/research_plans/PHASE122_REGNET_HELDOUT_CALIBRATION_20261015.md -text
 
 src/tools/*phase123*.py -text
 src/research_plans/PHASE123_C100_SEED_REPLICATION_20261016.md -text
+
+src/tools/*phase124*.py -text
+src/research_plans/PHASE124_REGNET_EVIDENCE_COST_AUDIT_20261017.md -text

@@ -1,0 +1,43 @@
+[
+  {
+    "pool": "Catalogue",
+    "all_groups": 32,
+    "positive_groups": 7,
+    "both_improved_groups": [
+      "52UDG",
+      "35RPM"
+    ],
+    "both_declined_groups": [
+      "32TML",
+      "40XDR"
+    ],
+    "remaining_positive_groups": [
+      "34JDL",
+      "38TNN",
+      "32NKF"
+    ],
+    "no_positive_groups": 25,
+    "boundary": "strict +/-1 AP pp; descriptive"
+  },
+  {
+    "pool": "PixBox",
+    "all_groups": 10,
+    "positive_groups": 8,
+    "both_improved_groups": [
+      "33VVE",
+      "44SKJ"
+    ],
+    "both_declined_groups": [
+      "19FDV",
+      "54TWN"
+    ],
+    "remaining_positive_groups": [
+      "22WES",
+      "32SPJ",
+      "40UEE",
+      "48XWG"
+    ],
+    "no_positive_groups": 2,
+    "boundary": "strict +/-1 AP pp; descriptive"
+  }
+]

@@ -1,0 +1,15 @@
+pool,phase,setting,adapt_training_groups,operating_threshold,calibration_scheme,macro_AP_pp,pooled_AP_pp,macro_recall_pp,macro_FPR_pp,source_file
+Catalogue,119,E,0,0.5,none; not budget matched to C100 Tcal,92.37159847180118,77.59518215442652,83.20712801741533,2.3356385075863844,src/research_results/phase119_20261015/Catalogue_summary.csv
+Catalogue,119,R,0,0.5,none; not budget matched to C100 Tcal,88.99380680075664,73.51181740010243,79.60066909235314,2.8903545799045314,src/research_results/phase119_20261015/Catalogue_summary.csv
+Catalogue,119,N,0,0.5,none; not budget matched to C100 Tcal,91.75687838087978,76.90794924518673,83.57230939670431,2.097560244178518,src/research_results/phase119_20261015/Catalogue_summary.csv
+Catalogue,120,C,153,0.5,none; not budget matched to C100 Tcal,90.50470013085626,83.98363804187699,65.78286504677372,0.20890740148010162,src/research_results/phase120_20261015/Catalogue_summary.csv
+Catalogue,120,D,153,0.5,none; not budget matched to C100 Tcal,89.99392984324895,75.94715942370287,71.30819479620712,1.3467564337596272,src/research_results/phase120_20261015/Catalogue_summary.csv
+Catalogue,121,C12002,153,0.5,none; not budget matched to C100 Tcal,89.45020655821999,83.68034761456695,74.13367954500549,0.3524981592765688,src/research_results/phase121_20261015/Catalogue_summary.csv
+Catalogue,121,D12002,153,0.5,none; not budget matched to C100 Tcal,90.01417054425133,78.18035406260076,76.01064800956756,1.3119606709760965,src/research_results/phase121_20261015/Catalogue_summary.csv
+PixBox,119,E,0,0.5,none; not budget matched to C100 Tcal,73.87108333934356,83.64482189047366,71.9686348392057,1.1246099451580371,src/research_results/phase119_20261015/PixBox_summary.csv
+PixBox,119,R,0,0.5,none; not budget matched to C100 Tcal,77.0687334911253,83.6151388808023,77.31659154493799,1.8832344912123262,src/research_results/phase119_20261015/PixBox_summary.csv
+PixBox,119,N,0,0.5,none; not budget matched to C100 Tcal,70.01830182698869,79.08989743039665,66.91361898891427,1.286845399403408,src/research_results/phase119_20261015/PixBox_summary.csv
+PixBox,120,C,153,0.5,none; not budget matched to C100 Tcal,80.77417668890172,85.28082545368699,63.724794562392994,0.9336867428433503,src/research_results/phase120_20261015/PixBox_summary.csv
+PixBox,120,D,153,0.5,none; not budget matched to C100 Tcal,77.59487251513842,85.65489477811245,68.12991437696162,1.233985522605342,src/research_results/phase120_20261015/PixBox_summary.csv
+PixBox,121,C12002,153,0.5,none; not budget matched to C100 Tcal,80.18445866844262,82.4645672633228,67.42514145959028,1.3722544034839597,src/research_results/phase121_20261015/PixBox_summary.csv
+PixBox,121,D12002,153,0.5,none; not budget matched to C100 Tcal,80.7173574352327,84.27762560710461,73.23884301394143,1.5140048765763718,src/research_results/phase121_20261015/PixBox_summary.csv

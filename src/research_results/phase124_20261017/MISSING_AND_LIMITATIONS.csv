@@ -1,0 +1,9 @@
+item,status,detail,impact
+C100_matched_latency_and_peak,unmeasured,no C100 x3scene x2repeat matched119 benchmark,cannot copy R latency/worker peak or claim C100 timing measured
+C100_merged_standalone_weight_size,unmeasured,existing56.56MB file is decoder overlay; base required,base+overlay reconstruction128.87MB is not merged deployment file size
+pretraining_geographic_overlap,unknown,unknown overlap with pretrained model data,no independent confirmation claim
+original_Google_drive_tensor_equivalence,unknown,historical model reconstruction metadata says not verified,HF identity/accepted receipts do not prove original Google Drive equivalence
+PixBox_full_scene_FPR_and_three_class_mIoU,unmeasured,only chosen negative reference point FPR,cannot extrapolate full-scene FPR or three-class mIoU
+seed_population_variation,unmeasured,only two fixed seeds; conditional related-group intervals reused,cannot claim cross-seed population stability
+training_group_count_causal_effect,unmeasured,C100 vs C153 changes data membership and seed,cannot identify data-size effect alone
+original_E_R_N_binary_reverification,unknown_this_audit,original author binaries not delivered in119-123 local model overlays;119 asset/resource identity receipts reused,do not call metadata identity a new original-weight byte verification

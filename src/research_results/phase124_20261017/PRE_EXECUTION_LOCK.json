@@ -1,0 +1,12 @@
+{
+  "phase": 124,
+  "rule": "existing aggregate evidence and receipts only; no neural calls/fitting/download/pixels/bootstrap/threshold search",
+  "source_sha256": {
+    "src/tools/audit_phase124.py": "a5d34cfe4fe0e0848b5866c2c54faf475a1541135742acfd7947dc840b49e4dc",
+    "src/tools/test_phase124.py": "602a08b8e51a2bcb781803ef7bd6bf25434ae7279488a30f362bc2a6a934187c",
+    "src/research_plans/PHASE124_REGNET_EVIDENCE_COST_AUDIT_20261017.md": "0f56b8d4a8807f58364e2f1685e2cbc1687bb000518e6c81152c87618c92eb83"
+  },
+  "CPU_limit_GiB": 8,
+  "seconds_limit": 3600,
+  "engineering_recovery": "one CPU schema adapter correction; prior partial files preserved in local outputs/engineering_attempt1; no model or bootstrap calls"
+}

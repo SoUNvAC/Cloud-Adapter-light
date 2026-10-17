@@ -1,0 +1,51 @@
+{
+  "status": "passed",
+  "decoder_white_lists": [
+    {
+      "phase": 120,
+      "source": "src/research_results/phase120_20261015/C_PARAMETER_WHITELIST.json",
+      "sha256": "26e16b3f61247ded2c641c70b36de63fe2647562d1060b6666f1719525706bc2",
+      "total_parameters": 18039132,
+      "trainable_parameters": 14135988
+    },
+    {
+      "phase": 120,
+      "source": "src/research_results/phase120_20261015/D_PARAMETER_WHITELIST.json",
+      "sha256": "26e16b3f61247ded2c641c70b36de63fe2647562d1060b6666f1719525706bc2",
+      "total_parameters": 18039132,
+      "trainable_parameters": 14135988
+    },
+    {
+      "phase": 121,
+      "source": "src/research_results/phase121_20261015/C_PARAMETER_WHITELIST.json",
+      "sha256": "26e16b3f61247ded2c641c70b36de63fe2647562d1060b6666f1719525706bc2",
+      "total_parameters": 18039132,
+      "trainable_parameters": 14135988
+    },
+    {
+      "phase": 121,
+      "source": "src/research_results/phase121_20261015/D_PARAMETER_WHITELIST.json",
+      "sha256": "26e16b3f61247ded2c641c70b36de63fe2647562d1060b6666f1719525706bc2",
+      "total_parameters": 18039132,
+      "trainable_parameters": 14135988
+    },
+    {
+      "phase": 122,
+      "source": "src/research_results/phase122_20261015/C100_PARAMETER_WHITELIST.json",
+      "sha256": "26e16b3f61247ded2c641c70b36de63fe2647562d1060b6666f1719525706bc2",
+      "total_parameters": 18039132,
+      "trainable_parameters": 14135988
+    },
+    {
+      "phase": 123,
+      "source": "src/research_results/phase123_20261016/C123_PARAMETER_WHITELIST.json",
+      "sha256": "fe3f6d6ec15d526ad3159a49c478eaccc5b9cbc98ae2af294ec3193070e232e6",
+      "total_parameters": 18039132,
+      "trainable_parameters": 14135988
+    }
+  ],
+  "trainable_fraction": 0.7836290570965387,
+  "original_RegNet_declared_SHA": "044f2d6a3b4b59817f19d4ca080485f01c4bf9a6fddd053df184ee98144b46a2",
+  "original_author_binaries_scope": "119 historical resource/asset identity receipts reused; no new local original R/N byte verification; Google Drive equivalence remains unknown",
+  "model_calls": 0
+}

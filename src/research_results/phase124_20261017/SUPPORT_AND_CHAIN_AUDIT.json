@@ -1,0 +1,52 @@
+{
+  "rows": [
+    {
+      "pool": "Catalogue",
+      "status": "passed",
+      "groups": 32,
+      "positive_groups": 7,
+      "support_loss": 0,
+      "valid": 33423488,
+      "labels_uploaded": 0,
+      "model_calls": 0,
+      "historical119_121_R_group_denominators_match": true
+    },
+    {
+      "pool": "PixBox",
+      "status": "passed",
+      "groups": 10,
+      "positive_groups": 8,
+      "support_loss": 0,
+      "valid": 8569,
+      "labels_uploaded": 0,
+      "model_calls": 0,
+      "not_full_scene_FPR": true,
+      "historical119_121_R_group_denominators_match": true
+    }
+  ],
+  "input_channels": [
+    "B04",
+    "B03",
+    "B8A"
+  ],
+  "normalization": "accepted original author per-band nonzero channel_norm",
+  "patch": 1000,
+  "overlap": 300,
+  "temperature": 1,
+  "inference_source_bindings": {
+    "source": "src/tools/infer_phase122.py",
+    "replacements": [
+      [
+        "3500",
+        "3000"
+      ]
+    ],
+    "transformed_sha256": "0969a6dcc27fe92ac6f530cba95cbb5aaaa3a7cabda15b064d1933816fd5f00b"
+  },
+  "semantic_scope": "identity/receipts only; no new pixel reads, postprocessing execution or model calls",
+  "thresholds": {
+    "R": 0.7693686485290528,
+    "C122": 0.36361625790596014,
+    "C": 0.2778868973255158
+  }
+}

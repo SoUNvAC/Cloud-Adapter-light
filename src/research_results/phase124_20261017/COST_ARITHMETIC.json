@@ -1,0 +1,9 @@
+{
+  "R_to_E_GPU_ratio": 0.3637707314992148,
+  "R_to_E_read_to_point_ratio": 0.9319199851438955,
+  "C100_trainable_fraction": 0.7836290570965387,
+  "matched_runs": 6,
+  "scenes": 3,
+  "original_intervals_reused": true,
+  "no_new_timing": true
+}

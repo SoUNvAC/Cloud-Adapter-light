@@ -1,0 +1,4 @@
+policy,total_parameters,adapt_trainable_parameters,deployed_models,official_weights_bytes,decoder_overlay_bytes,required_reconstruction_assets_bytes,matched_GPU_seconds_six_runs,matched_read_to_point_seconds_six_runs,GPU_reserved_worker_peak_bytes,source
+E,50574276,0,2,202479912,0,202479912,41.569412643432614,358.5137523620797,9200205824,"Phase119 fixed3 scenes x2 repeats; entire isolated worker peak; measured sums, not fastest-run selection"
+R,18039132,0,1,72314968,0,72314968,15.12173564529419,334.10613077515154,3349151744,"Phase119 fixed3 scenes x2 repeats; entire isolated worker peak; measured sums, not fastest-run selection"
+C100,18039132,14135988,1,72314968,56556112,128871080,unmeasured,unmeasured,unmeasured_in_matched119_protocol,"architecture/decoder whitelist from122/123; reconstruction storage is base+overlay, not merged standalone export; do not substitute R timing/peak"

@@ -1,0 +1,15 @@
+{
+  "phase": 124,
+  "status": "completed_CPU_evidence_cost_audit",
+  "model_calls": 0,
+  "training": 0,
+  "fitting": 0,
+  "new_downloads": 0,
+  "bootstrap_recomputations": 0,
+  "threshold_searches": 0,
+  "pixels_read": 0,
+  "work_dirs_transfers": 0,
+  "elapsed_seconds": 2.205688714981079,
+  "CPU_peak_bytes": 25837568,
+  "subsequent_phase_started": false
+}

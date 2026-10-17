@@ -1,0 +1,12 @@
+phase,stage,model_calls,wall_seconds,scope
+122,train_C,1010,86.46326184272766,"stage includes load, checks, input and inference/training; not paired deployment timing"
+122,R_Calibration,220,100.76055701800215,"stage includes load, checks, input and inference/training; not paired deployment timing"
+122,C_Calibration,220,101.90962792800565,"stage includes load, checks, input and inference/training; not paired deployment timing"
+122,C_Catalogue,136,66.49100119099603,"stage includes load, checks, input and inference/training; not paired deployment timing"
+122,C_PixBox,1026,951.4928095459909,"stage includes load, checks, input and inference/training; not paired deployment timing"
+122,independent_full53_boundary_CPU_check,0,8.243611812591553,"zero-forward CPU boundary proof, not neural calibration scoring cost"
+123,train_C,1010,87.43514728546143,"stage includes load, checks, input and inference/training; not paired deployment timing"
+123,C_Calibration,220,105.79311961701023,"stage includes load, checks, input and inference/training; not paired deployment timing"
+123,C_Catalogue,136,66.57152040599613,"stage includes load, checks, input and inference/training; not paired deployment timing"
+123,C_PixBox,1026,950.2401933259971,"stage includes load, checks, input and inference/training; not paired deployment timing"
+123,independent_full53_boundary_CPU_check,0,4.279449701309204,"zero-forward CPU boundary proof, not neural calibration scoring cost"

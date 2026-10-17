@@ -1,0 +1,6 @@
+{
+  "source_sha256": {
+    "src/tools/verify_phase124.py": "6399b0fdfaed2ca9d6aadf493e981cf5e44082de67554f33e20ff41cfc4859ac"
+  },
+  "purpose": "read-only Git delivery verification; do not rerun audit remotely"
+}
