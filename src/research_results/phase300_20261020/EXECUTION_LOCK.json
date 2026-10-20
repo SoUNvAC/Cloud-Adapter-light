@@ -1,0 +1,30 @@
+{
+  "code": {
+    "src/tools/execute_phase300.py": "1240241f218f4e6bd1c9495026a271d4bd16a3f64b4d8075d3a02dc013d4d9fd",
+    "src/tools/deploy_phase300.py": "eb5375a6663c93ac0d2d8c648590982b1af1a33548b58503d8c5c3900d788093",
+    "src/tools/phase300_images.py": "2101d7e289d0df2d5fd711233bfed08c513ee0046ad22e18f609911cc7186fe0"
+  },
+  "commit": "7459471a62fefc153210a3fddadc97af7344b777",
+  "protocol_sha256": "cb0032075bdffcd63ee647065c53c29cbfb15b1d46b43c1a65f5843b842a86a0",
+  "crop_sha256": "444064f80e526acdfbd30eec4e63a557cf3015e9d2c2a0825f1b189cd515555f",
+  "manifest_sha256": "123b5a862730260aaec845efa3094b11bbfa9d389ff493147a87654bde1a8592",
+  "user_runtime_override": "Explicit user reply permits historical fixed runtime",
+  "model_source": "immutable Phase208 code snapshot; no trained adapters loaded",
+  "teacher_calls": 400,
+  "training_max": 2000,
+  "evaluation": 2292,
+  "probes": 32,
+  "planned_main_calls": 4724,
+  "acceptance_calls": 5,
+  "constructor_recovery_margin": 2271,
+  "cap_calls": 7000,
+  "cap_seconds": 14400,
+  "historical_stage_seconds": {
+    "gate": 167.99626027900376,
+    "train_B": 91.74169952402008,
+    "train_M": 109.75350947500556,
+    "infer": 1039.7609908189916
+  },
+  "conservative_time_projection_seconds": 4618.504920194042,
+  "projection_is_not_measurement": true
+}

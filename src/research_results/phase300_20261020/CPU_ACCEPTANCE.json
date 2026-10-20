@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "seconds": 57.30420756340027,
+  "neural_calls": 0,
+  "numpy_version": "2.3.5",
+  "independent_AP_confusion_checks": 680,
+  "independent_group_IoUs": true,
+  "paired_group_bootstrap_pooled_scalar_checks": 600,
+  "bootstrap_seed": 300020,
+  "missing_class_rule": "IoU union=0 -> NA; mIoU mean over nonempty unions; AP requires positive and negative; recall needs positives; FPR needs negatives; all groups retained",
+  "PixBox_mIoU_and_IoUs": "NA",
+  "single_training_seed": 30001
+}

@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "mapping_sha256": "e91fd06be37aff6c22a27241cd59e1b6c6c833815ded36b997420f42d07191e2",
+  "all_original_codes": 71,
+  "rows": 75,
+  "fixed_reference_points": 8569,
+  "no_phenotype_inferred_from_scores": true,
+  "overlapping_strata_not_additive": true
+}

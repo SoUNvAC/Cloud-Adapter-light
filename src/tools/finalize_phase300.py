@@ -30,12 +30,29 @@ def main():
         probe = list(csv.DictReader(stream))
     lines = ['# Phase300：固定伪标签适配','', '## 数据结果','',
       '固定100个fit组生成一次R4伪标签；单训练seed30001，初始化seed20801。每臂1000尝试步，只评价末步。无源样本适配（SFDA）；使用用户明确允许的历史PyTorch 2.11固定runtime。', '',
-      '下表mIoU/AP/召回/误报均为%；误报为逐组等权负类云影判定比例。完整八行及各类IoU、最大组误报见 TABLE1_FIXED_RESULTS.csv。','',
+      'Catalogue32组（AP有效7）；PixBox16产品/10组（AP有效8）。下表mIoU/AP/召回/误报均为%；误报为逐组等权负类云影判定比例。完整各类IoU、最大组误报见 TABLE1_FIXED_RESULTS.csv。','',
       '|池|策略|组均mIoU|池化mIoU|Shadow宏AP|宏召回|宏误报|',
       '|---|---|---:|---:|---:|---:|---:|']
     for row in data['summary']:
         lines.append('|'+ '|'.join([row['pool'],row['strategy']]+[fmt(row[k]) for k in
            ('group_mean_mIoU_pp','pooled_mIoU_pp','macro_Shadow_AP_pp','macro_Shadow_recall_pp','macro_negative_FPR_pp')])+'|')
+    diagnostics = []
+    with (ROOT/'Catalogue_PER_GROUP.csv').open(encoding='utf-8-sig') as stream:
+        for row in csv.DictReader(stream):
+            matrix = json.loads(row['confusion'])
+            truth_counts = [sum(v) for v in matrix]
+            pred_counts = [sum(matrix[i][j] for i in range(3)) for j in range(3)]
+            diagnostics.append(dict(group_id=row['group_id'],product=row['products'],strategy=row['strategy'],
+                truth_class_counts=truth_counts,prediction_class_counts=pred_counts,
+                empty_truth_classes=[i for i,n in enumerate(truth_counts) if not n],
+                predictions_in_empty_truth_classes=[pred_counts[i] if not truth_counts[i] else 0 for i in range(3)],
+                nonzero_union_classes=sum(truth_counts[i]+pred_counts[i]-matrix[i][i]>0 for i in range(3)),
+                original_group_mIoU_pct=float(row['mIoU_pct'])))
+    with (ROOT/'CLASS_ABSENCE_DIAGNOSTIC.csv').open('w',encoding='utf-8-sig',newline='') as stream:
+        writer = csv.DictWriter(stream,fieldnames=list(diagnostics[0]))
+        writer.writeheader()
+        for row in diagnostics:
+            writer.writerow({k:json.dumps(v) if isinstance(v,list) else v for k,v in row.items()})
     lines += ['', 'Catalogue三项固定比较（差值为百分点；括号为32相关组配对bootstrap10000次、seed300020的95%描述区间）：','']
     for name in ('M-PL−R4','B-PL−R4','M-PL−B-PL'):
         row = contrasts['Catalogue',name]
@@ -51,16 +68,19 @@ def main():
             phrase = '存在漏影与低误报的代价交换' if row['delta_macro_Shadow_recall_pp']<0 and row['delta_macro_negative_FPR_pp']<0 else '不能概括为用漏影换低误报'
             lines.append(f"- {pool} {arm}：宏AP/召回/误报变化 {fmt(row['delta_macro_Shadow_AP_pp'])}/{fmt(row['delta_macro_Shadow_recall_pp'])}/{fmt(row['delta_macro_negative_FPR_pp'])} pp；{phrase}。")
     for row in data['oracle']:
-        statement = '变化主要与工作点移动相容' if row['student_minus_R4_macro_AP_pp']<=0 and row['student_minus_R4_oracle_recall_pp']<=0 else '尚有排序或匹配误报召回的点估计变化，稳定性与机制未证实'
-        lines.append(f"- {row['pool']} {row['student']}：匹配误报预算的R4 oracle召回差 {fmt(row['student_minus_R4_oracle_recall_pp'])} pp，实际预算差 {fmt(row['actual_minus_budget_pp'])} pp；{statement}。oracle使用评价标签，仅作CPU诊断，不产生部署阈值。")
+        statement = '变化主要与工作点移动相容' if row['student_minus_R4_macro_AP_pp']<=0 and row['student_minus_R4_oracle_recall_pp']<=0 else '匹配误报召回有点估计收益，但AP下降；机制与稳定性未证实'
+        lines.append(f"- {row['pool']} {row['student']}：匹配误报预算的R4 oracle召回差 {fmt(row['student_minus_R4_oracle_recall_pp'])} pp，实际预算差 {row['actual_minus_budget_pp']:.6g} pp；{statement}。oracle使用评价标签，仅作CPU诊断，不产生部署阈值。")
     difference = contrasts['Catalogue','M-PL−B-PL']
-    lines += [f"- M比B多25728参数；组均mIoU增量 {fmt(difference['delta_group_mean_mIoU_pp'])} pp，区间 [{fmt(difference['group_mean_CI95_low_pp'])}, {fmt(difference['group_mean_CI95_high_pp'])}]。不能仅凭该单seed差值认定模块机制。"]
+    lines += [f"- M比B多25728参数；组均mIoU增量 {fmt(difference['delta_group_mean_mIoU_pp'])} pp，区间 [{fmt(difference['group_mean_CI95_low_pp'])}, {fmt(difference['group_mean_CI95_high_pp'])}]，未显示整体增益。B/M相对R4的组均区间均跨零，不能认定稳健改善，也不据此判整个方向失败。"]
+    worst = next(r for r in diagnostics if r['group_id']==difference['worst_group'] and r['strategy']=='M-PL')
+    counterpart = next(r for r in diagnostics if r['group_id']==difference['worst_group'] and r['strategy']=='B-PL')
+    lines += [f"- 缺类敏感性：{worst['product'].split('_T')[-1][:5]}全Surface组，M在原本缺失的Shadow类预测 {worst['predictions_in_empty_truth_classes'][2]} 像元；计分有效类从 {counterpart['nonzero_union_classes']} 变 {worst['nonzero_union_classes']}，mIoU {counterpart['original_group_mIoU_pct']:.6f}→{worst['original_group_mIoU_pct']:.6f}%。该组与规则保留，未删组或重选指标；全部组结构诊断另交。"]
     for arm in ('B-PL','M-PL'):
         selected = [r for r in probe if r['strategy']==arm]
         corrected = sum(int(r['teacher_wrong_student_correct']) for r in selected)
         harmed = sum(int(r['teacher_correct_student_wrong']) for r in selected)
         lines.append(f"- 四个固定中心裁剪最终审计：{arm} 教师错→学生对 {corrected:,}、教师对→学生错 {harmed:,} 像元。教师使用完整上下文、学生用512裁剪；该计数含上下文差异，不单独证明训练纠错。")
-    lines += ['', '云/影与地表混淆的方向计数及全部原始地表子类见表五附件；亮/暗水体按原始字段定义，雪/盐湖/沙地名称不等于测得亮度。两池均为Sentinel-2，本轮没有跨传感器验证，也没有B08替换实验。标签共同父类映射可比范围有限，不能将池间差异直接归因于标注偏移。',
+    lines += ['', '地表混淆未获修复证据：PixBox原始雪冰地表1062点的Surface→Cloud为R4/B/M=38/58/56；地形/树/建筑影331点的Surface→Shadow均为5。原始Dark water子类零支持，不能推断暗水体改善。两池均Sentinel-2，没有跨传感器验证或B08替换实验；池间差异不能直接归因于标注偏移。完整定义及全部分层见表五。',
       '', '局限：单训练seed；历史development/PixBox已用于开发；V4完整训练覆盖未知；不作为新盲测或严格源域保持证据。正式末步封存前曾人工预览少量本地PixBox参考记录，属于阶段读取隔离偏差，未连接学生结果或改变已锁训练。训练进程的Python文件审计通过，但不等于原生系统调用审计。',
       'PixBox全部指标仅来自固定参考点；mIoU/各类IoU为NA，不报告全景FPR。',
       '', '下一项具体实验：在VFM骨干上实施B/M固定伪标签、相同预算和裁剪序列的三seed配对验证，并另行准入独立评价支持；本轮Omni机制预实验不替代VFM验证。本次不启动下一phase。',

@@ -1,0 +1,82 @@
+{
+  "status": "passed",
+  "calls": 4707,
+  "by_kind": {
+    "fixed_teacher_full_mosaic": 400,
+    "gate_reference": 1,
+    "gate_disabled_B": 1,
+    "gate_backward_B": 1,
+    "gate_disabled_M": 1,
+    "gate_backward_M": 1,
+    "probe_B": 16,
+    "training_B": 989,
+    "probe_M": 16,
+    "training_M": 989,
+    "inference": 2292
+  },
+  "GPU_stage_seconds": 1428.5579241269152,
+  "GPU_peak_bytes": 1327497216,
+  "CPU_peak_bytes": 3914334208,
+  "host_min_free_bytes": 145038807040,
+  "current_remote_root_bytes": 481263885,
+  "combined_backup_upper_bytes": 1925055540,
+  "baseline_caches_SHA_verified": 96,
+  "teacher_members_SHA_verified": 100,
+  "fixed_source_weights": [
+    {
+      "filename": "PM_model_OCM_7.97_R_G_NIR_3_smp_edgenext_small.usi_in1k_PT_state.safetensors",
+      "bytes": 30711472,
+      "sha256": "d5fe67ad00f6fdb73eb8382ad925849e97fb82cedb46225344afff1a734a9c1d",
+      "url": "https://huggingface.co/NickWright/OmniCloudMask/resolve/c9a4fb88188709127aa25cfe51ae7fd41b0132f8/PM_model_OCM_7.97_R_G_NIR_3_smp_edgenext_small.usi_in1k_PT_state.safetensors"
+    },
+    {
+      "filename": "PM_model_OCM_7.97_R_G_NIR_3_smp_regnety_004.pycls_in1k_PT_state.safetensors",
+      "bytes": 27094520,
+      "sha256": "7f6e4202e17ee73efa4aba7abb5c34f4f90a9f7eb42480820714994dff2db660",
+      "url": "https://huggingface.co/NickWright/OmniCloudMask/resolve/c9a4fb88188709127aa25cfe51ae7fd41b0132f8/PM_model_OCM_7.97_R_G_NIR_3_smp_regnety_004.pycls_in1k_PT_state.safetensors"
+    }
+  ],
+  "locked_code_sha256": {
+    "src/tools/execute_phase300.py": "1240241f218f4e6bd1c9495026a271d4bd16a3f64b4d8075d3a02dc013d4d9fd",
+    "src/tools/deploy_phase300.py": "eb5375a6663c93ac0d2d8c648590982b1af1a33548b58503d8c5c3900d788093",
+    "src/tools/phase300_images.py": "2101d7e289d0df2d5fd711233bfed08c513ee0046ad22e18f609911cc7186fe0"
+  },
+  "historical_source_sha256": {
+    "src/tools/phase119_common.py": "142a6c3f01798321a2b11607502909908bdec1d39a5c79fc992307e32d2f6745",
+    "src/tools/phase118_common.py": "123e8d09ed478f9572dae5be29d9b41793a8faa612bcb6290ab4a48025300751",
+    "src/tools/phase200_common.py": "68ff5dc808db83d6ced8b24538580941dee81262d7eeca95d56b1f184916959d",
+    "src/tools/install_phase111_runtime.py": "1de6b3cf2c15983555507429d9b0b113aebeb8c55f2dc97a536eba67620c6c05",
+    "src/cloud_adapter/models/backbones/target_msre_dinov2.py": "c2bd4b82d80e1e18fe109eaa6c3ee3385f600fb604e2e8d70ab3a4d938939c16"
+  },
+  "image_only_access": {
+    "teacher": {
+      "recorded_python_opens": 1017,
+      "forbidden_label_opens": 0,
+      "limitation": "Python audit only, not native syscall tracing"
+    },
+    "gate": {
+      "recorded_python_opens": 1876,
+      "forbidden_label_opens": 0,
+      "limitation": "Python audit only, not native syscall tracing"
+    },
+    "train_B": {
+      "recorded_python_opens": 2562,
+      "forbidden_label_opens": 0,
+      "limitation": "Python audit only, not native syscall tracing"
+    },
+    "train_M": {
+      "recorded_python_opens": 2563,
+      "forbidden_label_opens": 0,
+      "limitation": "Python audit only, not native syscall tracing"
+    }
+  },
+  "both_endpoints_and_pseudo_crop_hashes_verified": true,
+  "reference_metrics_evaluated": false,
+  "runtime_distributions": {
+    "torch": "2.11.0+cu128",
+    "segmentation-models-pytorch": "0.5.0",
+    "timm": "1.0.30",
+    "numpy": "2.2.6",
+    "safetensors": "0.8.0"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "events": [
+    {
+      "sequence": 1,
+      "stage": "connection_preflight",
+      "event": "Sandbox SSH initially closed/failed hostname resolution; allowed network execution connected successfully",
+      "neural_calls": 0
+    },
+    {
+      "sequence": 2,
+      "stage": "environment_preflight",
+      "event": "cloud-lite-pt210 torch2.1 CUDA available but segmentation_models_pytorch missing; no upgrade attempted",
+      "neural_calls": 0
+    },
+    {
+      "sequence": 3,
+      "stage": "authorization",
+      "event": "User explicitly allowed the existing historical torch2.11 runtime",
+      "neural_calls": 0
+    },
+    {
+      "sequence": 4,
+      "stage": "local_manual_schema_inspection_before_endpoint_seal",
+      "event": "Previewed start of PixBox deduplicated reference JSON and existing mapping/support metadata before dual endpoint seal; no student prediction join or training/selection changes",
+      "protocol_deviation": true,
+      "neural_calls": 0
+    },
+    {
+      "sequence": 5,
+      "stage": "after_endpoint_seal",
+      "event": "All 71 original metadata codes plus missing strata locked before joining student scores; no outcome-based subgroup choice",
+      "neural_calls": 0
+    }
+  ],
+  "timestamps": "Ordering only; exact unrecorded event times are not invented"
+}

@@ -1,0 +1,11 @@
+{
+  "status": "passed_preflight_receipts_only",
+  "image_members": 100,
+  "teacher_actual_T": 400,
+  "schedule_attempts": 1000,
+  "denied_label_open_attempts": 1,
+  "successful_label_opens": 0,
+  "backup_file_count": 288,
+  "neural_forward_calls": 0,
+  "note": "No teacher, training, probe, model-freeze or metric acceptance claimed"
+}

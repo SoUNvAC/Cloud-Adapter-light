@@ -1,0 +1,20 @@
+{
+  "after_both_endpoints_sealed": true,
+  "training_seal": {
+    "B": "17ece33e8803856c4d13ee82df79982eda00510b44853549df6f05c77fd9e68b",
+    "M": "a7048e329dea52fd8a7c9e3d4551455035ee95a45b937a06a69bd5f826227c12"
+  },
+  "local_git_commit": "20440b37c1b62ecdafe1f7fcf9d890cef349f000",
+  "analysis_code_sha256": "beb8c4fdede21ad3209e7fffce94aa9f3d655ab86761358377c104acf7ddf56d",
+  "reference_join_helper_sha256": "24ec8368d7ddb70dd220e5968557c4ca4772a762267bcdac133d2499fbdb0362",
+  "original_helper_provenance": {
+    "analyze_phase208_local.py": "89ac0e6b76ade694f44959bbdd1d5bdfb18d65e6dacff9d5239fdefe8f8caa9a",
+    "analyze_phase203_local.py": "39e1fc15f8fe46c788c1e5d1d52701a5cf327c01d756639c4b0f1d92c0217344"
+  },
+  "subgroup_code_sha256": "5ccc00990bcf1fcc70236b19291e87ddd907d120003768dc8ae59a4ab77ae336",
+  "subgroup_mapping_sha256": "e91fd06be37aff6c22a27241cd59e1b6c6c833815ded36b997420f42d07191e2",
+  "bootstrap_draws": 10000,
+  "bootstrap_seed": 300020,
+  "selection": "fixed endpoints only",
+  "prior_manual_metadata_access": "Local head preview of PixBox reference records and metadata fields occurred before endpoint seals; no prediction join, training feedback or selection followed; see phase300.md"
+}

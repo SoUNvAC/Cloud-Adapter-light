@@ -1,0 +1,122 @@
+{
+  "source_archive": "data\\pixbox_s2_cmix_5036991\\phase103_20261013\\original_PixBox-S2-CMIX.zip",
+  "source_member": "PixBox-S2-CMIX/pixbox_sentinel2_cmix_20180425_definitions.txt",
+  "source_definition_sha256": "f238a5962f55a402b915e0a90f37f07773857f6cd3ad0c2317b816ac3a43a142",
+  "fields": {
+    "SURFACE_ID": {
+      "0": "None of the classes",
+      "1": "Forest Winter",
+      "2": "Forest",
+      "3": "Urban snow covered",
+      "4": "Mine",
+      "5": "Coast line",
+      "6": "Water on ice",
+      "7": "Ship canal",
+      "8": "Lagoon",
+      "9": "Spatially mixed cloud/snow-ice",
+      "10": "Road",
+      "11": "Burnt area",
+      "12": "Wind turbine",
+      "13": "Wadden mud/silty sand",
+      "14": "Vessel, offshore platform",
+      "15": "Spatially mixed water/cloud",
+      "16": "Spatially mixed land/cloud",
+      "17": "Wetland",
+      "18": "Spatially mixed land/snow-ice",
+      "19": "Spatially mixed water/snow-ice",
+      "20": "Open ocean",
+      "21": "Coastal",
+      "22": "River",
+      "23": "Lake",
+      "24": "Water",
+      "25": "Spatially mixed land/water",
+      "26": "Inter-tidal area",
+      "27": "Dry/Salt lake",
+      "28": "Desert, sandy soil",
+      "29": "Agriculture",
+      "30": "Urban",
+      "31": "Mountain",
+      "32": "Land",
+      "33": "None",
+      "34": "Land Snow-ice",
+      "35": "Ravine"
+    },
+    "WATER BODY CHARACTERISTICS_ID": {
+      "0": "None of the classes",
+      "1": "None",
+      "2": "Bright turbid water (blue or brown)",
+      "3": "Cocolithophorides",
+      "4": "Floating Cyanobacteria bloom",
+      "5": "Floating vegetation",
+      "6": "Dark water",
+      "7": "Wave breaking",
+      "8": "Algae",
+      "9": "Sediment",
+      "10": "Ship trail on water",
+      "11": "Water front"
+    },
+    "SHADOW_ID": {
+      "0": "None of the classes",
+      "1": "None",
+      "2": "Topographic shadow (incl tree & buildings)",
+      "3": "Cloud shadow",
+      "4": "Shadow above cloud"
+    },
+    "SURFACE_TYPE_ID": {
+      "0": "Evergreen Needleleaf Forest",
+      "1": "Barren/Desert",
+      "2": "Permanent Snow/Ice",
+      "3": "Crop/Natural Veg, Mosaic",
+      "4": "Urban",
+      "5": "Cropland",
+      "6": "Permenant Wetland",
+      "7": "Grassland",
+      "8": "Water Bodies",
+      "9": "Savanna",
+      "10": "Open Shrubland",
+      "11": "Closed Shrubland",
+      "12": "Mixed Deciduous Forest",
+      "13": "Deciduous Broadleaf Forest",
+      "14": "Deciduous Needleleaf Forest",
+      "15": "Evergreen Broadleaf Forest",
+      "16": "Woody Savanna",
+      "17": "Tundra"
+    }
+  },
+  "source_type": {
+    "SURFACE_ID": "manual",
+    "SHADOW_ID": "manual",
+    "SURFACE_TYPE_ID": "auxiliary",
+    "WATER BODY CHARACTERISTICS_ID": "manual where applicable"
+  },
+  "explicit_bright_dark": {
+    "bright_turbid_water": {
+      "field": "WATER BODY CHARACTERISTICS_ID",
+      "code": 2
+    },
+    "dark_water": {
+      "field": "WATER BODY CHARACTERISTICS_ID",
+      "code": 6
+    }
+  },
+  "other_bright_surface_candidates": {
+    "field": "SURFACE_ID",
+    "codes": [
+      3,
+      27,
+      28,
+      34
+    ],
+    "limitation": "Original snow/salt/desert classes, not measured brightness and not assumed uniformly bright"
+  },
+  "all_original_codes_retained": true,
+  "empty_subtypes_retained": true,
+  "student_results_consulted": false,
+  "overlapping_dimensions_not_additive": true,
+  "not_collected_fields": [
+    "CLOUD_TYPE_ID",
+    "CLOUD HEIGHT_ID",
+    "OVERSATURATION_ID",
+    "SHALLOWNESS_ID"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "status": "completed_pending_local_evaluation",
+  "completed": [
+    "teacher",
+    "gate",
+    "train_B",
+    "train_M",
+    "infer"
+  ],
+  "stage_seconds_total": 1428.5579241269152,
+  "current": "infer",
+  "worker_PID": 1612496,
+  "total_calls": 4707
+}
