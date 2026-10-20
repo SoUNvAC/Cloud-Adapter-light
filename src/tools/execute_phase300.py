@@ -189,9 +189,9 @@ def teacher(out, guard, old):
         actual = []
         raw_store = mu.store_results
 
-        def store(pred,indexes,tracker,gradient,grad_tracker=None):
-            actual.extend([list(v) for v in indexes])
-            return raw_store(pred,indexes,tracker,gradient,grad_tracker)
+        def store(pred_batch,index_batch,pred_tracker,gradient,grad_tracker=None):
+            actual.extend([list(v) for v in index_batch])
+            return raw_store(pred_batch,index_batch,pred_tracker,gradient,grad_tracker)
 
         mu.store_results = store
         before = STATE['calls']
