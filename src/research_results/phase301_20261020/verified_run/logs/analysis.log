@@ -1,0 +1,3 @@
+Catalogue flow identities passed
+PixBox flow identities passed
+{"seconds": 19.342992067337036, "peak_bytes": 955944960, "same512": [{"student": "B", "repaired": 17033, "damaged": 22119, "net": -5086}, {"student": "M", "repaired": 16942, "damaged": 22923, "net": -5981}]}

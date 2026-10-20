@@ -1,0 +1,12 @@
+{
+  "status": "complete",
+  "sha256": "89884f8527b38b43a819ec84a8a58a76fff35231d13155f8466f078277755152",
+  "bytes": 7277819,
+  "archived_files": 50,
+  "raw_bytes": 23950451,
+  "combined_persistent_upper_bytes": 95801804,
+  "neural_calls": 0,
+  "coverage": "Entire Phase301 root: references, source snapshot, all tables, logs and metadata",
+  "local_backup": "D:\\Cloud-Adapter-light\\outputs\\phase301\\phase301_20261020\\remote_backup",
+  "all_archive_members_verified": true
+}

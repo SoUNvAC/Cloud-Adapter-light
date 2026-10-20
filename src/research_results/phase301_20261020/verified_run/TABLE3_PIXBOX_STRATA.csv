@@ -1,0 +1,901 @@
+﻿pool,field,code,definition,products,groups,reference_points,student,error,class_support,R4_errors,student_errors,removed,added,net_reduction,corrected_among_removed,changed_to_other_error,error_rate_change_pp
+PixBox,SURFACE_ID,0,None of the classes,1,1,22,B,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,0,None of the classes,1,1,22,B,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,0,None of the classes,1,1,22,B,Cloud->Surface,22,22,22,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,0,None of the classes,1,1,22,B,Cloud->Shadow,22,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,0,None of the classes,1,1,22,B,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,0,None of the classes,1,1,22,B,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,0,None of the classes,1,1,22,M,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,0,None of the classes,1,1,22,M,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,0,None of the classes,1,1,22,M,Cloud->Surface,22,22,22,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,0,None of the classes,1,1,22,M,Cloud->Shadow,22,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,0,None of the classes,1,1,22,M,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,0,None of the classes,1,1,22,M,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,1,Forest Winter,0,0,0,B,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,1,Forest Winter,0,0,0,B,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,1,Forest Winter,0,0,0,B,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,1,Forest Winter,0,0,0,B,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,1,Forest Winter,0,0,0,B,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,1,Forest Winter,0,0,0,B,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,1,Forest Winter,0,0,0,M,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,1,Forest Winter,0,0,0,M,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,1,Forest Winter,0,0,0,M,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,1,Forest Winter,0,0,0,M,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,1,Forest Winter,0,0,0,M,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,1,Forest Winter,0,0,0,M,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,2,Forest,0,0,0,B,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,2,Forest,0,0,0,B,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,2,Forest,0,0,0,B,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,2,Forest,0,0,0,B,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,2,Forest,0,0,0,B,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,2,Forest,0,0,0,B,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,2,Forest,0,0,0,M,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,2,Forest,0,0,0,M,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,2,Forest,0,0,0,M,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,2,Forest,0,0,0,M,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,2,Forest,0,0,0,M,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,2,Forest,0,0,0,M,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,3,Urban snow covered,1,1,91,B,Surface->Cloud,91,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,3,Urban snow covered,1,1,91,B,Surface->Shadow,91,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,3,Urban snow covered,1,1,91,B,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,3,Urban snow covered,1,1,91,B,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,3,Urban snow covered,1,1,91,B,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,3,Urban snow covered,1,1,91,B,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,3,Urban snow covered,1,1,91,M,Surface->Cloud,91,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,3,Urban snow covered,1,1,91,M,Surface->Shadow,91,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,3,Urban snow covered,1,1,91,M,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,3,Urban snow covered,1,1,91,M,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,3,Urban snow covered,1,1,91,M,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,3,Urban snow covered,1,1,91,M,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,4,Mine,0,0,0,B,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,4,Mine,0,0,0,B,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,4,Mine,0,0,0,B,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,4,Mine,0,0,0,B,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,4,Mine,0,0,0,B,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,4,Mine,0,0,0,B,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,4,Mine,0,0,0,M,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,4,Mine,0,0,0,M,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,4,Mine,0,0,0,M,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,4,Mine,0,0,0,M,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,4,Mine,0,0,0,M,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,4,Mine,0,0,0,M,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,5,Coast line,0,0,0,B,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,5,Coast line,0,0,0,B,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,5,Coast line,0,0,0,B,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,5,Coast line,0,0,0,B,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,5,Coast line,0,0,0,B,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,5,Coast line,0,0,0,B,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,5,Coast line,0,0,0,M,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,5,Coast line,0,0,0,M,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,5,Coast line,0,0,0,M,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,5,Coast line,0,0,0,M,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,5,Coast line,0,0,0,M,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,5,Coast line,0,0,0,M,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,6,Water on ice,0,0,0,B,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,6,Water on ice,0,0,0,B,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,6,Water on ice,0,0,0,B,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,6,Water on ice,0,0,0,B,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,6,Water on ice,0,0,0,B,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,6,Water on ice,0,0,0,B,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,6,Water on ice,0,0,0,M,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,6,Water on ice,0,0,0,M,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,6,Water on ice,0,0,0,M,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,6,Water on ice,0,0,0,M,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,6,Water on ice,0,0,0,M,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,6,Water on ice,0,0,0,M,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,7,Ship canal,1,1,1,B,Surface->Cloud,1,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,7,Ship canal,1,1,1,B,Surface->Shadow,1,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,7,Ship canal,1,1,1,B,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,7,Ship canal,1,1,1,B,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,7,Ship canal,1,1,1,B,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,7,Ship canal,1,1,1,B,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,7,Ship canal,1,1,1,M,Surface->Cloud,1,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,7,Ship canal,1,1,1,M,Surface->Shadow,1,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,7,Ship canal,1,1,1,M,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,7,Ship canal,1,1,1,M,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,7,Ship canal,1,1,1,M,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,7,Ship canal,1,1,1,M,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,8,Lagoon,0,0,0,B,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,8,Lagoon,0,0,0,B,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,8,Lagoon,0,0,0,B,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,8,Lagoon,0,0,0,B,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,8,Lagoon,0,0,0,B,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,8,Lagoon,0,0,0,B,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,8,Lagoon,0,0,0,M,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,8,Lagoon,0,0,0,M,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,8,Lagoon,0,0,0,M,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,8,Lagoon,0,0,0,M,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,8,Lagoon,0,0,0,M,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,8,Lagoon,0,0,0,M,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,9,Spatially mixed cloud/snow-ice,0,0,0,B,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,9,Spatially mixed cloud/snow-ice,0,0,0,B,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,9,Spatially mixed cloud/snow-ice,0,0,0,B,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,9,Spatially mixed cloud/snow-ice,0,0,0,B,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,9,Spatially mixed cloud/snow-ice,0,0,0,B,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,9,Spatially mixed cloud/snow-ice,0,0,0,B,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,9,Spatially mixed cloud/snow-ice,0,0,0,M,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,9,Spatially mixed cloud/snow-ice,0,0,0,M,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,9,Spatially mixed cloud/snow-ice,0,0,0,M,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,9,Spatially mixed cloud/snow-ice,0,0,0,M,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,9,Spatially mixed cloud/snow-ice,0,0,0,M,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,9,Spatially mixed cloud/snow-ice,0,0,0,M,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,10,Road,3,3,73,B,Surface->Cloud,58,1,1,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,10,Road,3,3,73,B,Surface->Shadow,58,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,10,Road,3,3,73,B,Cloud->Surface,10,10,10,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,10,Road,3,3,73,B,Cloud->Shadow,10,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,10,Road,3,3,73,B,Shadow->Surface,5,2,2,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,10,Road,3,3,73,B,Shadow->Cloud,5,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,10,Road,3,3,73,M,Surface->Cloud,58,1,1,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,10,Road,3,3,73,M,Surface->Shadow,58,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,10,Road,3,3,73,M,Cloud->Surface,10,10,10,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,10,Road,3,3,73,M,Cloud->Shadow,10,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,10,Road,3,3,73,M,Shadow->Surface,5,2,2,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,10,Road,3,3,73,M,Shadow->Cloud,5,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,11,Burnt area,0,0,0,B,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,11,Burnt area,0,0,0,B,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,11,Burnt area,0,0,0,B,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,11,Burnt area,0,0,0,B,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,11,Burnt area,0,0,0,B,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,11,Burnt area,0,0,0,B,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,11,Burnt area,0,0,0,M,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,11,Burnt area,0,0,0,M,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,11,Burnt area,0,0,0,M,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,11,Burnt area,0,0,0,M,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,11,Burnt area,0,0,0,M,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,11,Burnt area,0,0,0,M,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,12,Wind turbine,0,0,0,B,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,12,Wind turbine,0,0,0,B,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,12,Wind turbine,0,0,0,B,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,12,Wind turbine,0,0,0,B,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,12,Wind turbine,0,0,0,B,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,12,Wind turbine,0,0,0,B,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,12,Wind turbine,0,0,0,M,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,12,Wind turbine,0,0,0,M,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,12,Wind turbine,0,0,0,M,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,12,Wind turbine,0,0,0,M,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,12,Wind turbine,0,0,0,M,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,12,Wind turbine,0,0,0,M,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,13,Wadden mud/silty sand,0,0,0,B,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,13,Wadden mud/silty sand,0,0,0,B,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,13,Wadden mud/silty sand,0,0,0,B,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,13,Wadden mud/silty sand,0,0,0,B,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,13,Wadden mud/silty sand,0,0,0,B,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,13,Wadden mud/silty sand,0,0,0,B,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,13,Wadden mud/silty sand,0,0,0,M,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,13,Wadden mud/silty sand,0,0,0,M,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,13,Wadden mud/silty sand,0,0,0,M,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,13,Wadden mud/silty sand,0,0,0,M,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,13,Wadden mud/silty sand,0,0,0,M,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,13,Wadden mud/silty sand,0,0,0,M,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,14,"Vessel, offshore platform",2,2,5,B,Surface->Cloud,4,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,14,"Vessel, offshore platform",2,2,5,B,Surface->Shadow,4,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,14,"Vessel, offshore platform",2,2,5,B,Cloud->Surface,1,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,14,"Vessel, offshore platform",2,2,5,B,Cloud->Shadow,1,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,14,"Vessel, offshore platform",2,2,5,B,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,14,"Vessel, offshore platform",2,2,5,B,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,14,"Vessel, offshore platform",2,2,5,M,Surface->Cloud,4,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,14,"Vessel, offshore platform",2,2,5,M,Surface->Shadow,4,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,14,"Vessel, offshore platform",2,2,5,M,Cloud->Surface,1,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,14,"Vessel, offshore platform",2,2,5,M,Cloud->Shadow,1,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,14,"Vessel, offshore platform",2,2,5,M,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,14,"Vessel, offshore platform",2,2,5,M,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,15,Spatially mixed water/cloud,0,0,0,B,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,15,Spatially mixed water/cloud,0,0,0,B,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,15,Spatially mixed water/cloud,0,0,0,B,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,15,Spatially mixed water/cloud,0,0,0,B,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,15,Spatially mixed water/cloud,0,0,0,B,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,15,Spatially mixed water/cloud,0,0,0,B,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,15,Spatially mixed water/cloud,0,0,0,M,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,15,Spatially mixed water/cloud,0,0,0,M,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,15,Spatially mixed water/cloud,0,0,0,M,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,15,Spatially mixed water/cloud,0,0,0,M,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,15,Spatially mixed water/cloud,0,0,0,M,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,15,Spatially mixed water/cloud,0,0,0,M,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,16,Spatially mixed land/cloud,0,0,0,B,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,16,Spatially mixed land/cloud,0,0,0,B,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,16,Spatially mixed land/cloud,0,0,0,B,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,16,Spatially mixed land/cloud,0,0,0,B,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,16,Spatially mixed land/cloud,0,0,0,B,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,16,Spatially mixed land/cloud,0,0,0,B,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,16,Spatially mixed land/cloud,0,0,0,M,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,16,Spatially mixed land/cloud,0,0,0,M,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,16,Spatially mixed land/cloud,0,0,0,M,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,16,Spatially mixed land/cloud,0,0,0,M,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,16,Spatially mixed land/cloud,0,0,0,M,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,16,Spatially mixed land/cloud,0,0,0,M,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,17,Wetland,0,0,0,B,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,17,Wetland,0,0,0,B,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,17,Wetland,0,0,0,B,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,17,Wetland,0,0,0,B,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,17,Wetland,0,0,0,B,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,17,Wetland,0,0,0,B,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,17,Wetland,0,0,0,M,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,17,Wetland,0,0,0,M,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,17,Wetland,0,0,0,M,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,17,Wetland,0,0,0,M,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,17,Wetland,0,0,0,M,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,17,Wetland,0,0,0,M,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,18,Spatially mixed land/snow-ice,3,2,225,B,Surface->Cloud,126,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,18,Spatially mixed land/snow-ice,3,2,225,B,Surface->Shadow,126,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,18,Spatially mixed land/snow-ice,3,2,225,B,Cloud->Surface,99,34,28,6,0,6,6,0,-6.0606060606060606
+PixBox,SURFACE_ID,18,Spatially mixed land/snow-ice,3,2,225,B,Cloud->Shadow,99,1,1,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,18,Spatially mixed land/snow-ice,3,2,225,B,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,18,Spatially mixed land/snow-ice,3,2,225,B,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,18,Spatially mixed land/snow-ice,3,2,225,M,Surface->Cloud,126,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,18,Spatially mixed land/snow-ice,3,2,225,M,Surface->Shadow,126,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,18,Spatially mixed land/snow-ice,3,2,225,M,Cloud->Surface,99,34,28,6,0,6,6,0,-6.0606060606060606
+PixBox,SURFACE_ID,18,Spatially mixed land/snow-ice,3,2,225,M,Cloud->Shadow,99,1,1,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,18,Spatially mixed land/snow-ice,3,2,225,M,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,18,Spatially mixed land/snow-ice,3,2,225,M,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,19,Spatially mixed water/snow-ice,3,2,418,B,Surface->Cloud,207,1,8,0,7,-7,0,0,3.3816425120772946
+PixBox,SURFACE_ID,19,Spatially mixed water/snow-ice,3,2,418,B,Surface->Shadow,207,1,4,0,3,-3,0,0,1.4492753623188406
+PixBox,SURFACE_ID,19,Spatially mixed water/snow-ice,3,2,418,B,Cloud->Surface,211,123,95,28,0,28,28,0,-13.270142180094787
+PixBox,SURFACE_ID,19,Spatially mixed water/snow-ice,3,2,418,B,Cloud->Shadow,211,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,19,Spatially mixed water/snow-ice,3,2,418,B,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,19,Spatially mixed water/snow-ice,3,2,418,B,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,19,Spatially mixed water/snow-ice,3,2,418,M,Surface->Cloud,207,1,3,0,2,-2,0,0,0.966183574879227
+PixBox,SURFACE_ID,19,Spatially mixed water/snow-ice,3,2,418,M,Surface->Shadow,207,1,4,0,3,-3,0,0,1.4492753623188406
+PixBox,SURFACE_ID,19,Spatially mixed water/snow-ice,3,2,418,M,Cloud->Surface,211,123,103,20,0,20,20,0,-9.47867298578199
+PixBox,SURFACE_ID,19,Spatially mixed water/snow-ice,3,2,418,M,Cloud->Shadow,211,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,19,Spatially mixed water/snow-ice,3,2,418,M,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,19,Spatially mixed water/snow-ice,3,2,418,M,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,20,Open ocean,2,1,1050,B,Surface->Cloud,181,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,20,Open ocean,2,1,1050,B,Surface->Shadow,181,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,20,Open ocean,2,1,1050,B,Cloud->Surface,742,34,30,13,9,4,13,0,-0.5390835579514824
+PixBox,SURFACE_ID,20,Open ocean,2,1,1050,B,Cloud->Shadow,742,1,0,1,0,1,1,0,-0.1347708894878706
+PixBox,SURFACE_ID,20,Open ocean,2,1,1050,B,Shadow->Surface,127,19,21,3,5,-2,3,0,1.5748031496062993
+PixBox,SURFACE_ID,20,Open ocean,2,1,1050,B,Shadow->Cloud,127,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,20,Open ocean,2,1,1050,M,Surface->Cloud,181,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,20,Open ocean,2,1,1050,M,Surface->Shadow,181,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,20,Open ocean,2,1,1050,M,Cloud->Surface,742,34,39,9,14,-5,9,0,0.6738544474393531
+PixBox,SURFACE_ID,20,Open ocean,2,1,1050,M,Cloud->Shadow,742,1,0,1,0,1,1,0,-0.1347708894878706
+PixBox,SURFACE_ID,20,Open ocean,2,1,1050,M,Shadow->Surface,127,19,20,4,5,-1,4,0,0.7874015748031497
+PixBox,SURFACE_ID,20,Open ocean,2,1,1050,M,Shadow->Cloud,127,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,21,Coastal,7,5,1299,B,Surface->Cloud,436,11,43,0,32,-32,0,0,7.339449541284404
+PixBox,SURFACE_ID,21,Coastal,7,5,1299,B,Surface->Shadow,436,1,1,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,21,Coastal,7,5,1299,B,Cloud->Surface,824,63,31,35,3,32,35,0,-3.883495145631068
+PixBox,SURFACE_ID,21,Coastal,7,5,1299,B,Cloud->Shadow,824,22,4,18,0,18,16,2,-2.1844660194174756
+PixBox,SURFACE_ID,21,Coastal,7,5,1299,B,Shadow->Surface,39,21,22,0,1,-1,0,0,2.5641025641025643
+PixBox,SURFACE_ID,21,Coastal,7,5,1299,B,Shadow->Cloud,39,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,21,Coastal,7,5,1299,M,Surface->Cloud,436,11,36,0,25,-25,0,0,5.73394495412844
+PixBox,SURFACE_ID,21,Coastal,7,5,1299,M,Surface->Shadow,436,1,1,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,21,Coastal,7,5,1299,M,Cloud->Surface,824,63,36,32,5,27,32,0,-3.2766990291262137
+PixBox,SURFACE_ID,21,Coastal,7,5,1299,M,Cloud->Shadow,824,22,5,17,0,17,13,4,-2.063106796116505
+PixBox,SURFACE_ID,21,Coastal,7,5,1299,M,Shadow->Surface,39,21,22,0,1,-1,0,0,2.5641025641025643
+PixBox,SURFACE_ID,21,Coastal,7,5,1299,M,Shadow->Cloud,39,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,22,River,3,3,96,B,Surface->Cloud,60,0,1,0,1,-1,0,0,1.6666666666666667
+PixBox,SURFACE_ID,22,River,3,3,96,B,Surface->Shadow,60,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,22,River,3,3,96,B,Cloud->Surface,36,14,11,3,0,3,3,0,-8.333333333333334
+PixBox,SURFACE_ID,22,River,3,3,96,B,Cloud->Shadow,36,1,1,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,22,River,3,3,96,B,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,22,River,3,3,96,B,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,22,River,3,3,96,M,Surface->Cloud,60,0,1,0,1,-1,0,0,1.6666666666666667
+PixBox,SURFACE_ID,22,River,3,3,96,M,Surface->Shadow,60,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,22,River,3,3,96,M,Cloud->Surface,36,14,11,3,0,3,3,0,-8.333333333333334
+PixBox,SURFACE_ID,22,River,3,3,96,M,Cloud->Shadow,36,1,1,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,22,River,3,3,96,M,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,22,River,3,3,96,M,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,23,Lake,13,8,977,B,Surface->Cloud,718,8,25,0,17,-17,0,0,2.367688022284123
+PixBox,SURFACE_ID,23,Lake,13,8,977,B,Surface->Shadow,718,9,8,2,1,1,2,0,-0.1392757660167131
+PixBox,SURFACE_ID,23,Lake,13,8,977,B,Cloud->Surface,246,51,33,18,0,18,16,2,-7.317073170731708
+PixBox,SURFACE_ID,23,Lake,13,8,977,B,Cloud->Shadow,246,12,9,5,2,3,5,0,-1.2195121951219512
+PixBox,SURFACE_ID,23,Lake,13,8,977,B,Shadow->Surface,13,1,1,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,23,Lake,13,8,977,B,Shadow->Cloud,13,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,23,Lake,13,8,977,M,Surface->Cloud,718,8,24,0,16,-16,0,0,2.2284122562674096
+PixBox,SURFACE_ID,23,Lake,13,8,977,M,Surface->Shadow,718,9,8,2,1,1,2,0,-0.1392757660167131
+PixBox,SURFACE_ID,23,Lake,13,8,977,M,Cloud->Surface,246,51,34,17,0,17,14,3,-6.9105691056910565
+PixBox,SURFACE_ID,23,Lake,13,8,977,M,Cloud->Shadow,246,12,11,4,3,1,4,0,-0.4065040650406504
+PixBox,SURFACE_ID,23,Lake,13,8,977,M,Shadow->Surface,13,1,1,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,23,Lake,13,8,977,M,Shadow->Cloud,13,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,24,Water,0,0,0,B,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,24,Water,0,0,0,B,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,24,Water,0,0,0,B,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,24,Water,0,0,0,B,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,24,Water,0,0,0,B,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,24,Water,0,0,0,B,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,24,Water,0,0,0,M,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,24,Water,0,0,0,M,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,24,Water,0,0,0,M,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,24,Water,0,0,0,M,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,24,Water,0,0,0,M,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,24,Water,0,0,0,M,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,25,Spatially mixed land/water,1,1,6,B,Surface->Cloud,6,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,25,Spatially mixed land/water,1,1,6,B,Surface->Shadow,6,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,25,Spatially mixed land/water,1,1,6,B,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,25,Spatially mixed land/water,1,1,6,B,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,25,Spatially mixed land/water,1,1,6,B,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,25,Spatially mixed land/water,1,1,6,B,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,25,Spatially mixed land/water,1,1,6,M,Surface->Cloud,6,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,25,Spatially mixed land/water,1,1,6,M,Surface->Shadow,6,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,25,Spatially mixed land/water,1,1,6,M,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,25,Spatially mixed land/water,1,1,6,M,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,25,Spatially mixed land/water,1,1,6,M,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,25,Spatially mixed land/water,1,1,6,M,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,26,Inter-tidal area,0,0,0,B,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,26,Inter-tidal area,0,0,0,B,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,26,Inter-tidal area,0,0,0,B,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,26,Inter-tidal area,0,0,0,B,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,26,Inter-tidal area,0,0,0,B,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,26,Inter-tidal area,0,0,0,B,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,26,Inter-tidal area,0,0,0,M,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,26,Inter-tidal area,0,0,0,M,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,26,Inter-tidal area,0,0,0,M,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,26,Inter-tidal area,0,0,0,M,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,26,Inter-tidal area,0,0,0,M,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,26,Inter-tidal area,0,0,0,M,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,27,Dry/Salt lake,2,2,27,B,Surface->Cloud,16,1,4,0,3,-3,0,0,18.75
+PixBox,SURFACE_ID,27,Dry/Salt lake,2,2,27,B,Surface->Shadow,16,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,27,Dry/Salt lake,2,2,27,B,Cloud->Surface,11,7,5,2,0,2,2,0,-18.181818181818183
+PixBox,SURFACE_ID,27,Dry/Salt lake,2,2,27,B,Cloud->Shadow,11,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,27,Dry/Salt lake,2,2,27,B,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,27,Dry/Salt lake,2,2,27,B,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,27,Dry/Salt lake,2,2,27,M,Surface->Cloud,16,1,4,0,3,-3,0,0,18.75
+PixBox,SURFACE_ID,27,Dry/Salt lake,2,2,27,M,Surface->Shadow,16,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,27,Dry/Salt lake,2,2,27,M,Cloud->Surface,11,7,5,2,0,2,2,0,-18.181818181818183
+PixBox,SURFACE_ID,27,Dry/Salt lake,2,2,27,M,Cloud->Shadow,11,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,27,Dry/Salt lake,2,2,27,M,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,27,Dry/Salt lake,2,2,27,M,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,28,"Desert, sandy soil",2,2,271,B,Surface->Cloud,61,2,3,0,1,-1,0,0,1.639344262295082
+PixBox,SURFACE_ID,28,"Desert, sandy soil",2,2,271,B,Surface->Shadow,61,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,28,"Desert, sandy soil",2,2,271,B,Cloud->Surface,202,17,5,12,0,12,12,0,-5.9405940594059405
+PixBox,SURFACE_ID,28,"Desert, sandy soil",2,2,271,B,Cloud->Shadow,202,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,28,"Desert, sandy soil",2,2,271,B,Shadow->Surface,8,8,8,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,28,"Desert, sandy soil",2,2,271,B,Shadow->Cloud,8,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,28,"Desert, sandy soil",2,2,271,M,Surface->Cloud,61,2,2,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,28,"Desert, sandy soil",2,2,271,M,Surface->Shadow,61,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,28,"Desert, sandy soil",2,2,271,M,Cloud->Surface,202,17,5,12,0,12,12,0,-5.9405940594059405
+PixBox,SURFACE_ID,28,"Desert, sandy soil",2,2,271,M,Cloud->Shadow,202,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,28,"Desert, sandy soil",2,2,271,M,Shadow->Surface,8,8,8,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,28,"Desert, sandy soil",2,2,271,M,Shadow->Cloud,8,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,29,Agriculture,0,0,0,B,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,29,Agriculture,0,0,0,B,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,29,Agriculture,0,0,0,B,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,29,Agriculture,0,0,0,B,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,29,Agriculture,0,0,0,B,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,29,Agriculture,0,0,0,B,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,29,Agriculture,0,0,0,M,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,29,Agriculture,0,0,0,M,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,29,Agriculture,0,0,0,M,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,29,Agriculture,0,0,0,M,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,29,Agriculture,0,0,0,M,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,29,Agriculture,0,0,0,M,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,30,Urban,5,4,235,B,Surface->Cloud,153,3,11,0,8,-8,0,0,5.228758169934641
+PixBox,SURFACE_ID,30,Urban,5,4,235,B,Surface->Shadow,153,7,1,6,0,6,0,6,-3.9215686274509802
+PixBox,SURFACE_ID,30,Urban,5,4,235,B,Cloud->Surface,46,2,1,1,0,1,1,0,-2.1739130434782608
+PixBox,SURFACE_ID,30,Urban,5,4,235,B,Cloud->Shadow,46,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,30,Urban,5,4,235,B,Shadow->Surface,36,1,1,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,30,Urban,5,4,235,B,Shadow->Cloud,36,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,30,Urban,5,4,235,M,Surface->Cloud,153,3,11,0,8,-8,0,0,5.228758169934641
+PixBox,SURFACE_ID,30,Urban,5,4,235,M,Surface->Shadow,153,7,1,6,0,6,0,6,-3.9215686274509802
+PixBox,SURFACE_ID,30,Urban,5,4,235,M,Cloud->Surface,46,2,1,1,0,1,1,0,-2.1739130434782608
+PixBox,SURFACE_ID,30,Urban,5,4,235,M,Cloud->Shadow,46,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,30,Urban,5,4,235,M,Shadow->Surface,36,1,1,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,30,Urban,5,4,235,M,Shadow->Cloud,36,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,31,Mountain,0,0,0,B,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,31,Mountain,0,0,0,B,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,31,Mountain,0,0,0,B,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,31,Mountain,0,0,0,B,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,31,Mountain,0,0,0,B,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,31,Mountain,0,0,0,B,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,31,Mountain,0,0,0,M,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,31,Mountain,0,0,0,M,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,31,Mountain,0,0,0,M,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,31,Mountain,0,0,0,M,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,31,Mountain,0,0,0,M,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,31,Mountain,0,0,0,M,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,32,Land,12,8,2380,B,Surface->Cloud,1004,3,5,1,3,-2,1,0,0.199203187250996
+PixBox,SURFACE_ID,32,Land,12,8,2380,B,Surface->Shadow,1004,5,5,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,32,Land,12,8,2380,B,Cloud->Surface,1270,40,30,10,0,10,10,0,-0.7874015748031497
+PixBox,SURFACE_ID,32,Land,12,8,2380,B,Cloud->Shadow,1270,24,11,13,0,13,13,0,-1.0236220472440944
+PixBox,SURFACE_ID,32,Land,12,8,2380,B,Shadow->Surface,106,4,4,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,32,Land,12,8,2380,B,Shadow->Cloud,106,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,32,Land,12,8,2380,M,Surface->Cloud,1004,3,4,1,2,-1,1,0,0.099601593625498
+PixBox,SURFACE_ID,32,Land,12,8,2380,M,Surface->Shadow,1004,5,5,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,32,Land,12,8,2380,M,Cloud->Surface,1270,40,34,7,1,6,7,0,-0.47244094488188976
+PixBox,SURFACE_ID,32,Land,12,8,2380,M,Cloud->Shadow,1270,24,12,12,0,12,11,1,-0.9448818897637795
+PixBox,SURFACE_ID,32,Land,12,8,2380,M,Shadow->Surface,106,4,4,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,32,Land,12,8,2380,M,Shadow->Cloud,106,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,33,None,0,0,0,B,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,33,None,0,0,0,B,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,33,None,0,0,0,B,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,33,None,0,0,0,B,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,33,None,0,0,0,B,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,33,None,0,0,0,B,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,33,None,0,0,0,M,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,33,None,0,0,0,M,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,33,None,0,0,0,M,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,33,None,0,0,0,M,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,33,None,0,0,0,M,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,33,None,0,0,0,M,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,34,Land Snow-ice,8,6,1393,B,Surface->Cloud,1062,38,58,0,20,-20,0,0,1.8832391713747645
+PixBox,SURFACE_ID,34,Land Snow-ice,8,6,1393,B,Surface->Shadow,1062,1,1,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,34,Land Snow-ice,8,6,1393,B,Cloud->Surface,286,32,17,15,0,15,15,0,-5.244755244755245
+PixBox,SURFACE_ID,34,Land Snow-ice,8,6,1393,B,Cloud->Shadow,286,3,3,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,34,Land Snow-ice,8,6,1393,B,Shadow->Surface,45,22,25,1,4,-3,0,1,6.666666666666667
+PixBox,SURFACE_ID,34,Land Snow-ice,8,6,1393,B,Shadow->Cloud,45,0,2,0,2,-2,0,0,4.444444444444445
+PixBox,SURFACE_ID,34,Land Snow-ice,8,6,1393,M,Surface->Cloud,1062,38,56,0,18,-18,0,0,1.694915254237288
+PixBox,SURFACE_ID,34,Land Snow-ice,8,6,1393,M,Surface->Shadow,1062,1,1,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,34,Land Snow-ice,8,6,1393,M,Cloud->Surface,286,32,21,12,1,11,12,0,-3.8461538461538463
+PixBox,SURFACE_ID,34,Land Snow-ice,8,6,1393,M,Cloud->Shadow,286,3,3,0,0,0,0,0,0.0
+PixBox,SURFACE_ID,34,Land Snow-ice,8,6,1393,M,Shadow->Surface,45,22,25,1,4,-3,0,1,6.666666666666667
+PixBox,SURFACE_ID,34,Land Snow-ice,8,6,1393,M,Shadow->Cloud,45,0,2,0,2,-2,0,0,4.444444444444445
+PixBox,SURFACE_ID,35,Ravine,0,0,0,B,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,35,Ravine,0,0,0,B,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,35,Ravine,0,0,0,B,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,35,Ravine,0,0,0,B,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,35,Ravine,0,0,0,B,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,35,Ravine,0,0,0,B,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,35,Ravine,0,0,0,M,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,35,Ravine,0,0,0,M,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,35,Ravine,0,0,0,M,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,35,Ravine,0,0,0,M,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,35,Ravine,0,0,0,M,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,35,Ravine,0,0,0,M,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,NA,missing/conflicting/unmapped,0,0,0,B,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,NA,missing/conflicting/unmapped,0,0,0,B,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,NA,missing/conflicting/unmapped,0,0,0,B,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,NA,missing/conflicting/unmapped,0,0,0,B,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,NA,missing/conflicting/unmapped,0,0,0,B,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,NA,missing/conflicting/unmapped,0,0,0,B,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,NA,missing/conflicting/unmapped,0,0,0,M,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,NA,missing/conflicting/unmapped,0,0,0,M,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,NA,missing/conflicting/unmapped,0,0,0,M,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,NA,missing/conflicting/unmapped,0,0,0,M,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,NA,missing/conflicting/unmapped,0,0,0,M,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_ID,NA,missing/conflicting/unmapped,0,0,0,M,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,0,None of the classes,0,0,0,B,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,0,None of the classes,0,0,0,B,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,0,None of the classes,0,0,0,B,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,0,None of the classes,0,0,0,B,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,0,None of the classes,0,0,0,B,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,0,None of the classes,0,0,0,B,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,0,None of the classes,0,0,0,M,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,0,None of the classes,0,0,0,M,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,0,None of the classes,0,0,0,M,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,0,None of the classes,0,0,0,M,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,0,None of the classes,0,0,0,M,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,0,None of the classes,0,0,0,M,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,1,None,16,10,8395,B,Surface->Cloud,4079,66,151,1,86,-85,1,0,2.083844079431233
+PixBox,WATER BODY CHARACTERISTICS_ID,1,None,16,10,8395,B,Surface->Shadow,4079,23,19,8,4,4,2,6,-0.09806325079676391
+PixBox,WATER BODY CHARACTERISTICS_ID,1,None,16,10,8395,B,Cloud->Surface,3937,431,315,128,12,116,126,2,-2.9464058928117858
+PixBox,WATER BODY CHARACTERISTICS_ID,1,None,16,10,8395,B,Cloud->Shadow,3937,63,29,36,2,34,34,2,-0.8636017272034544
+PixBox,WATER BODY CHARACTERISTICS_ID,1,None,16,10,8395,B,Shadow->Surface,379,78,84,4,10,-6,3,1,1.5831134564643798
+PixBox,WATER BODY CHARACTERISTICS_ID,1,None,16,10,8395,B,Shadow->Cloud,379,0,2,0,2,-2,0,0,0.5277044854881267
+PixBox,WATER BODY CHARACTERISTICS_ID,1,None,16,10,8395,M,Surface->Cloud,4079,66,134,1,69,-68,1,0,1.6670752635449866
+PixBox,WATER BODY CHARACTERISTICS_ID,1,None,16,10,8395,M,Surface->Shadow,4079,23,19,8,4,4,2,6,-0.09806325079676391
+PixBox,WATER BODY CHARACTERISTICS_ID,1,None,16,10,8395,M,Cloud->Surface,3937,431,346,106,21,85,103,3,-2.1590043180086362
+PixBox,WATER BODY CHARACTERISTICS_ID,1,None,16,10,8395,M,Cloud->Shadow,3937,63,33,33,3,30,28,5,-0.762001524003048
+PixBox,WATER BODY CHARACTERISTICS_ID,1,None,16,10,8395,M,Shadow->Surface,379,78,83,5,10,-5,4,1,1.3192612137203166
+PixBox,WATER BODY CHARACTERISTICS_ID,1,None,16,10,8395,M,Shadow->Cloud,379,0,2,0,2,-2,0,0,0.5277044854881267
+PixBox,WATER BODY CHARACTERISTICS_ID,2,Bright turbid water (blue or brown),5,5,129,B,Surface->Cloud,75,1,3,0,2,-2,0,0,2.6666666666666665
+PixBox,WATER BODY CHARACTERISTICS_ID,2,Bright turbid water (blue or brown),5,5,129,B,Surface->Shadow,75,0,0,0,0,0,0,0,0.0
+PixBox,WATER BODY CHARACTERISTICS_ID,2,Bright turbid water (blue or brown),5,5,129,B,Cloud->Surface,54,13,3,10,0,10,10,0,-18.51851851851852
+PixBox,WATER BODY CHARACTERISTICS_ID,2,Bright turbid water (blue or brown),5,5,129,B,Cloud->Shadow,54,0,0,0,0,0,0,0,0.0
+PixBox,WATER BODY CHARACTERISTICS_ID,2,Bright turbid water (blue or brown),5,5,129,B,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,2,Bright turbid water (blue or brown),5,5,129,B,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,2,Bright turbid water (blue or brown),5,5,129,M,Surface->Cloud,75,1,3,0,2,-2,0,0,2.6666666666666665
+PixBox,WATER BODY CHARACTERISTICS_ID,2,Bright turbid water (blue or brown),5,5,129,M,Surface->Shadow,75,0,0,0,0,0,0,0,0.0
+PixBox,WATER BODY CHARACTERISTICS_ID,2,Bright turbid water (blue or brown),5,5,129,M,Cloud->Surface,54,13,3,10,0,10,10,0,-18.51851851851852
+PixBox,WATER BODY CHARACTERISTICS_ID,2,Bright turbid water (blue or brown),5,5,129,M,Cloud->Shadow,54,0,0,0,0,0,0,0,0.0
+PixBox,WATER BODY CHARACTERISTICS_ID,2,Bright turbid water (blue or brown),5,5,129,M,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,2,Bright turbid water (blue or brown),5,5,129,M,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,3,Cocolithophorides,0,0,0,B,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,3,Cocolithophorides,0,0,0,B,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,3,Cocolithophorides,0,0,0,B,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,3,Cocolithophorides,0,0,0,B,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,3,Cocolithophorides,0,0,0,B,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,3,Cocolithophorides,0,0,0,B,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,3,Cocolithophorides,0,0,0,M,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,3,Cocolithophorides,0,0,0,M,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,3,Cocolithophorides,0,0,0,M,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,3,Cocolithophorides,0,0,0,M,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,3,Cocolithophorides,0,0,0,M,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,3,Cocolithophorides,0,0,0,M,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,4,Floating Cyanobacteria bloom,0,0,0,B,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,4,Floating Cyanobacteria bloom,0,0,0,B,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,4,Floating Cyanobacteria bloom,0,0,0,B,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,4,Floating Cyanobacteria bloom,0,0,0,B,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,4,Floating Cyanobacteria bloom,0,0,0,B,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,4,Floating Cyanobacteria bloom,0,0,0,B,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,4,Floating Cyanobacteria bloom,0,0,0,M,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,4,Floating Cyanobacteria bloom,0,0,0,M,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,4,Floating Cyanobacteria bloom,0,0,0,M,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,4,Floating Cyanobacteria bloom,0,0,0,M,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,4,Floating Cyanobacteria bloom,0,0,0,M,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,4,Floating Cyanobacteria bloom,0,0,0,M,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,5,Floating vegetation,0,0,0,B,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,5,Floating vegetation,0,0,0,B,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,5,Floating vegetation,0,0,0,B,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,5,Floating vegetation,0,0,0,B,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,5,Floating vegetation,0,0,0,B,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,5,Floating vegetation,0,0,0,B,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,5,Floating vegetation,0,0,0,M,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,5,Floating vegetation,0,0,0,M,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,5,Floating vegetation,0,0,0,M,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,5,Floating vegetation,0,0,0,M,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,5,Floating vegetation,0,0,0,M,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,5,Floating vegetation,0,0,0,M,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,6,Dark water,0,0,0,B,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,6,Dark water,0,0,0,B,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,6,Dark water,0,0,0,B,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,6,Dark water,0,0,0,B,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,6,Dark water,0,0,0,B,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,6,Dark water,0,0,0,B,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,6,Dark water,0,0,0,M,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,6,Dark water,0,0,0,M,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,6,Dark water,0,0,0,M,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,6,Dark water,0,0,0,M,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,6,Dark water,0,0,0,M,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,6,Dark water,0,0,0,M,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,7,Wave breaking,0,0,0,B,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,7,Wave breaking,0,0,0,B,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,7,Wave breaking,0,0,0,B,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,7,Wave breaking,0,0,0,B,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,7,Wave breaking,0,0,0,B,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,7,Wave breaking,0,0,0,B,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,7,Wave breaking,0,0,0,M,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,7,Wave breaking,0,0,0,M,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,7,Wave breaking,0,0,0,M,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,7,Wave breaking,0,0,0,M,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,7,Wave breaking,0,0,0,M,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,7,Wave breaking,0,0,0,M,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,8,Algae,0,0,0,B,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,8,Algae,0,0,0,B,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,8,Algae,0,0,0,B,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,8,Algae,0,0,0,B,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,8,Algae,0,0,0,B,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,8,Algae,0,0,0,B,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,8,Algae,0,0,0,M,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,8,Algae,0,0,0,M,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,8,Algae,0,0,0,M,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,8,Algae,0,0,0,M,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,8,Algae,0,0,0,M,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,8,Algae,0,0,0,M,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,9,Sediment,1,1,12,B,Surface->Cloud,12,0,0,0,0,0,0,0,0.0
+PixBox,WATER BODY CHARACTERISTICS_ID,9,Sediment,1,1,12,B,Surface->Shadow,12,0,0,0,0,0,0,0,0.0
+PixBox,WATER BODY CHARACTERISTICS_ID,9,Sediment,1,1,12,B,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,9,Sediment,1,1,12,B,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,9,Sediment,1,1,12,B,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,9,Sediment,1,1,12,B,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,9,Sediment,1,1,12,M,Surface->Cloud,12,0,0,0,0,0,0,0,0.0
+PixBox,WATER BODY CHARACTERISTICS_ID,9,Sediment,1,1,12,M,Surface->Shadow,12,0,0,0,0,0,0,0,0.0
+PixBox,WATER BODY CHARACTERISTICS_ID,9,Sediment,1,1,12,M,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,9,Sediment,1,1,12,M,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,9,Sediment,1,1,12,M,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,9,Sediment,1,1,12,M,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,10,Ship trail on water,2,2,33,B,Surface->Cloud,18,1,5,0,4,-4,0,0,22.22222222222222
+PixBox,WATER BODY CHARACTERISTICS_ID,10,Ship trail on water,2,2,33,B,Surface->Shadow,18,1,1,0,0,0,0,0,0.0
+PixBox,WATER BODY CHARACTERISTICS_ID,10,Ship trail on water,2,2,33,B,Cloud->Surface,15,5,0,5,0,5,5,0,-33.333333333333336
+PixBox,WATER BODY CHARACTERISTICS_ID,10,Ship trail on water,2,2,33,B,Cloud->Shadow,15,1,0,1,0,1,1,0,-6.666666666666667
+PixBox,WATER BODY CHARACTERISTICS_ID,10,Ship trail on water,2,2,33,B,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,10,Ship trail on water,2,2,33,B,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,10,Ship trail on water,2,2,33,M,Surface->Cloud,18,1,5,0,4,-4,0,0,22.22222222222222
+PixBox,WATER BODY CHARACTERISTICS_ID,10,Ship trail on water,2,2,33,M,Surface->Shadow,18,1,1,0,0,0,0,0,0.0
+PixBox,WATER BODY CHARACTERISTICS_ID,10,Ship trail on water,2,2,33,M,Cloud->Surface,15,5,0,5,0,5,5,0,-33.333333333333336
+PixBox,WATER BODY CHARACTERISTICS_ID,10,Ship trail on water,2,2,33,M,Cloud->Shadow,15,1,0,1,0,1,1,0,-6.666666666666667
+PixBox,WATER BODY CHARACTERISTICS_ID,10,Ship trail on water,2,2,33,M,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,10,Ship trail on water,2,2,33,M,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,11,Water front,0,0,0,B,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,11,Water front,0,0,0,B,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,11,Water front,0,0,0,B,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,11,Water front,0,0,0,B,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,11,Water front,0,0,0,B,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,11,Water front,0,0,0,B,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,11,Water front,0,0,0,M,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,11,Water front,0,0,0,M,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,11,Water front,0,0,0,M,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,11,Water front,0,0,0,M,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,11,Water front,0,0,0,M,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,11,Water front,0,0,0,M,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,NA,missing/conflicting/unmapped,0,0,0,B,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,NA,missing/conflicting/unmapped,0,0,0,B,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,NA,missing/conflicting/unmapped,0,0,0,B,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,NA,missing/conflicting/unmapped,0,0,0,B,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,NA,missing/conflicting/unmapped,0,0,0,B,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,NA,missing/conflicting/unmapped,0,0,0,B,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,NA,missing/conflicting/unmapped,0,0,0,M,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,NA,missing/conflicting/unmapped,0,0,0,M,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,NA,missing/conflicting/unmapped,0,0,0,M,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,NA,missing/conflicting/unmapped,0,0,0,M,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,NA,missing/conflicting/unmapped,0,0,0,M,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,WATER BODY CHARACTERISTICS_ID,NA,missing/conflicting/unmapped,0,0,0,M,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SHADOW_ID,0,None of the classes,0,0,0,B,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SHADOW_ID,0,None of the classes,0,0,0,B,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SHADOW_ID,0,None of the classes,0,0,0,B,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SHADOW_ID,0,None of the classes,0,0,0,B,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SHADOW_ID,0,None of the classes,0,0,0,B,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SHADOW_ID,0,None of the classes,0,0,0,B,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SHADOW_ID,0,None of the classes,0,0,0,M,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SHADOW_ID,0,None of the classes,0,0,0,M,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SHADOW_ID,0,None of the classes,0,0,0,M,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SHADOW_ID,0,None of the classes,0,0,0,M,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SHADOW_ID,0,None of the classes,0,0,0,M,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SHADOW_ID,0,None of the classes,0,0,0,M,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SHADOW_ID,1,None,16,10,7859,B,Surface->Cloud,3853,37,123,1,87,-86,1,0,2.232026991954321
+PixBox,SHADOW_ID,1,None,16,10,7859,B,Surface->Shadow,3853,19,15,8,4,4,2,6,-0.10381520892810797
+PixBox,SHADOW_ID,1,None,16,10,7859,B,Cloud->Surface,4006,449,318,143,12,131,141,2,-3.27009485771343
+PixBox,SHADOW_ID,1,None,16,10,7859,B,Cloud->Shadow,4006,64,29,37,2,35,35,2,-0.873689465801298
+PixBox,SHADOW_ID,1,None,16,10,7859,B,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SHADOW_ID,1,None,16,10,7859,B,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SHADOW_ID,1,None,16,10,7859,M,Surface->Cloud,3853,37,106,1,70,-69,1,0,1.7908123540098624
+PixBox,SHADOW_ID,1,None,16,10,7859,M,Surface->Shadow,3853,19,15,8,4,4,2,6,-0.10381520892810797
+PixBox,SHADOW_ID,1,None,16,10,7859,M,Cloud->Surface,4006,449,349,121,21,100,118,3,-2.4962556165751373
+PixBox,SHADOW_ID,1,None,16,10,7859,M,Cloud->Shadow,4006,64,33,34,3,31,29,5,-0.7738392411382926
+PixBox,SHADOW_ID,1,None,16,10,7859,M,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SHADOW_ID,1,None,16,10,7859,M,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SHADOW_ID,2,Topographic shadow (incl tree & buildings),6,5,331,B,Surface->Cloud,331,31,36,0,5,-5,0,0,1.5105740181268883
+PixBox,SHADOW_ID,2,Topographic shadow (incl tree & buildings),6,5,331,B,Surface->Shadow,331,5,5,0,0,0,0,0,0.0
+PixBox,SHADOW_ID,2,Topographic shadow (incl tree & buildings),6,5,331,B,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SHADOW_ID,2,Topographic shadow (incl tree & buildings),6,5,331,B,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SHADOW_ID,2,Topographic shadow (incl tree & buildings),6,5,331,B,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SHADOW_ID,2,Topographic shadow (incl tree & buildings),6,5,331,B,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SHADOW_ID,2,Topographic shadow (incl tree & buildings),6,5,331,M,Surface->Cloud,331,31,36,0,5,-5,0,0,1.5105740181268883
+PixBox,SHADOW_ID,2,Topographic shadow (incl tree & buildings),6,5,331,M,Surface->Shadow,331,5,5,0,0,0,0,0,0.0
+PixBox,SHADOW_ID,2,Topographic shadow (incl tree & buildings),6,5,331,M,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SHADOW_ID,2,Topographic shadow (incl tree & buildings),6,5,331,M,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SHADOW_ID,2,Topographic shadow (incl tree & buildings),6,5,331,M,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SHADOW_ID,2,Topographic shadow (incl tree & buildings),6,5,331,M,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SHADOW_ID,3,Cloud shadow,11,8,379,B,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SHADOW_ID,3,Cloud shadow,11,8,379,B,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SHADOW_ID,3,Cloud shadow,11,8,379,B,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SHADOW_ID,3,Cloud shadow,11,8,379,B,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SHADOW_ID,3,Cloud shadow,11,8,379,B,Shadow->Surface,379,78,84,4,10,-6,3,1,1.5831134564643798
+PixBox,SHADOW_ID,3,Cloud shadow,11,8,379,B,Shadow->Cloud,379,0,2,0,2,-2,0,0,0.5277044854881267
+PixBox,SHADOW_ID,3,Cloud shadow,11,8,379,M,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SHADOW_ID,3,Cloud shadow,11,8,379,M,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SHADOW_ID,3,Cloud shadow,11,8,379,M,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SHADOW_ID,3,Cloud shadow,11,8,379,M,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SHADOW_ID,3,Cloud shadow,11,8,379,M,Shadow->Surface,379,78,83,5,10,-5,4,1,1.3192612137203166
+PixBox,SHADOW_ID,3,Cloud shadow,11,8,379,M,Shadow->Cloud,379,0,2,0,2,-2,0,0,0.5277044854881267
+PixBox,SHADOW_ID,4,Shadow above cloud,0,0,0,B,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SHADOW_ID,4,Shadow above cloud,0,0,0,B,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SHADOW_ID,4,Shadow above cloud,0,0,0,B,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SHADOW_ID,4,Shadow above cloud,0,0,0,B,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SHADOW_ID,4,Shadow above cloud,0,0,0,B,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SHADOW_ID,4,Shadow above cloud,0,0,0,B,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SHADOW_ID,4,Shadow above cloud,0,0,0,M,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SHADOW_ID,4,Shadow above cloud,0,0,0,M,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SHADOW_ID,4,Shadow above cloud,0,0,0,M,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SHADOW_ID,4,Shadow above cloud,0,0,0,M,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SHADOW_ID,4,Shadow above cloud,0,0,0,M,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SHADOW_ID,4,Shadow above cloud,0,0,0,M,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SHADOW_ID,NA,missing/conflicting/unmapped,0,0,0,B,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SHADOW_ID,NA,missing/conflicting/unmapped,0,0,0,B,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SHADOW_ID,NA,missing/conflicting/unmapped,0,0,0,B,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SHADOW_ID,NA,missing/conflicting/unmapped,0,0,0,B,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SHADOW_ID,NA,missing/conflicting/unmapped,0,0,0,B,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SHADOW_ID,NA,missing/conflicting/unmapped,0,0,0,B,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SHADOW_ID,NA,missing/conflicting/unmapped,0,0,0,M,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SHADOW_ID,NA,missing/conflicting/unmapped,0,0,0,M,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SHADOW_ID,NA,missing/conflicting/unmapped,0,0,0,M,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SHADOW_ID,NA,missing/conflicting/unmapped,0,0,0,M,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SHADOW_ID,NA,missing/conflicting/unmapped,0,0,0,M,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SHADOW_ID,NA,missing/conflicting/unmapped,0,0,0,M,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,0,Evergreen Needleleaf Forest,2,1,865,B,Surface->Cloud,347,11,30,1,20,-19,1,0,5.475504322766571
+PixBox,SURFACE_TYPE_ID,0,Evergreen Needleleaf Forest,2,1,865,B,Surface->Shadow,347,11,5,7,1,6,1,6,-1.7291066282420748
+PixBox,SURFACE_TYPE_ID,0,Evergreen Needleleaf Forest,2,1,865,B,Cloud->Surface,447,6,3,3,0,3,3,0,-0.6711409395973155
+PixBox,SURFACE_TYPE_ID,0,Evergreen Needleleaf Forest,2,1,865,B,Cloud->Shadow,447,20,8,12,0,12,12,0,-2.684563758389262
+PixBox,SURFACE_TYPE_ID,0,Evergreen Needleleaf Forest,2,1,865,B,Shadow->Surface,71,4,4,0,0,0,0,0,0.0
+PixBox,SURFACE_TYPE_ID,0,Evergreen Needleleaf Forest,2,1,865,B,Shadow->Cloud,71,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_TYPE_ID,0,Evergreen Needleleaf Forest,2,1,865,M,Surface->Cloud,347,11,28,1,18,-17,1,0,4.899135446685879
+PixBox,SURFACE_TYPE_ID,0,Evergreen Needleleaf Forest,2,1,865,M,Surface->Shadow,347,11,5,7,1,6,1,6,-1.7291066282420748
+PixBox,SURFACE_TYPE_ID,0,Evergreen Needleleaf Forest,2,1,865,M,Cloud->Surface,447,6,4,2,0,2,2,0,-0.44742729306487694
+PixBox,SURFACE_TYPE_ID,0,Evergreen Needleleaf Forest,2,1,865,M,Cloud->Shadow,447,20,10,10,0,10,10,0,-2.237136465324385
+PixBox,SURFACE_TYPE_ID,0,Evergreen Needleleaf Forest,2,1,865,M,Shadow->Surface,71,4,4,0,0,0,0,0,0.0
+PixBox,SURFACE_TYPE_ID,0,Evergreen Needleleaf Forest,2,1,865,M,Shadow->Cloud,71,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_TYPE_ID,1,Barren/Desert,1,1,9,B,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,1,Barren/Desert,1,1,9,B,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,1,Barren/Desert,1,1,9,B,Cloud->Surface,9,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_TYPE_ID,1,Barren/Desert,1,1,9,B,Cloud->Shadow,9,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_TYPE_ID,1,Barren/Desert,1,1,9,B,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,1,Barren/Desert,1,1,9,B,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,1,Barren/Desert,1,1,9,M,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,1,Barren/Desert,1,1,9,M,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,1,Barren/Desert,1,1,9,M,Cloud->Surface,9,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_TYPE_ID,1,Barren/Desert,1,1,9,M,Cloud->Shadow,9,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_TYPE_ID,1,Barren/Desert,1,1,9,M,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,1,Barren/Desert,1,1,9,M,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,2,Permanent Snow/Ice,0,0,0,B,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,2,Permanent Snow/Ice,0,0,0,B,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,2,Permanent Snow/Ice,0,0,0,B,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,2,Permanent Snow/Ice,0,0,0,B,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,2,Permanent Snow/Ice,0,0,0,B,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,2,Permanent Snow/Ice,0,0,0,B,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,2,Permanent Snow/Ice,0,0,0,M,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,2,Permanent Snow/Ice,0,0,0,M,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,2,Permanent Snow/Ice,0,0,0,M,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,2,Permanent Snow/Ice,0,0,0,M,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,2,Permanent Snow/Ice,0,0,0,M,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,2,Permanent Snow/Ice,0,0,0,M,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,3,"Crop/Natural Veg, Mosaic",4,2,131,B,Surface->Cloud,125,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_TYPE_ID,3,"Crop/Natural Veg, Mosaic",4,2,131,B,Surface->Shadow,125,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_TYPE_ID,3,"Crop/Natural Veg, Mosaic",4,2,131,B,Cloud->Surface,6,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_TYPE_ID,3,"Crop/Natural Veg, Mosaic",4,2,131,B,Cloud->Shadow,6,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_TYPE_ID,3,"Crop/Natural Veg, Mosaic",4,2,131,B,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,3,"Crop/Natural Veg, Mosaic",4,2,131,B,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,3,"Crop/Natural Veg, Mosaic",4,2,131,M,Surface->Cloud,125,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_TYPE_ID,3,"Crop/Natural Veg, Mosaic",4,2,131,M,Surface->Shadow,125,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_TYPE_ID,3,"Crop/Natural Veg, Mosaic",4,2,131,M,Cloud->Surface,6,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_TYPE_ID,3,"Crop/Natural Veg, Mosaic",4,2,131,M,Cloud->Shadow,6,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_TYPE_ID,3,"Crop/Natural Veg, Mosaic",4,2,131,M,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,3,"Crop/Natural Veg, Mosaic",4,2,131,M,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,4,Urban,6,4,546,B,Surface->Cloud,458,0,7,0,7,-7,0,0,1.5283842794759825
+PixBox,SURFACE_TYPE_ID,4,Urban,6,4,546,B,Surface->Shadow,458,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_TYPE_ID,4,Urban,6,4,546,B,Cloud->Surface,79,15,9,6,0,6,6,0,-7.594936708860759
+PixBox,SURFACE_TYPE_ID,4,Urban,6,4,546,B,Cloud->Shadow,79,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_TYPE_ID,4,Urban,6,4,546,B,Shadow->Surface,9,2,2,0,0,0,0,0,0.0
+PixBox,SURFACE_TYPE_ID,4,Urban,6,4,546,B,Shadow->Cloud,9,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_TYPE_ID,4,Urban,6,4,546,M,Surface->Cloud,458,0,7,0,7,-7,0,0,1.5283842794759825
+PixBox,SURFACE_TYPE_ID,4,Urban,6,4,546,M,Surface->Shadow,458,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_TYPE_ID,4,Urban,6,4,546,M,Cloud->Surface,79,15,11,4,0,4,4,0,-5.063291139240507
+PixBox,SURFACE_TYPE_ID,4,Urban,6,4,546,M,Cloud->Shadow,79,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_TYPE_ID,4,Urban,6,4,546,M,Shadow->Surface,9,2,2,0,0,0,0,0,0.0
+PixBox,SURFACE_TYPE_ID,4,Urban,6,4,546,M,Shadow->Cloud,9,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_TYPE_ID,5,Cropland,0,0,0,B,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,5,Cropland,0,0,0,B,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,5,Cropland,0,0,0,B,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,5,Cropland,0,0,0,B,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,5,Cropland,0,0,0,B,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,5,Cropland,0,0,0,B,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,5,Cropland,0,0,0,M,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,5,Cropland,0,0,0,M,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,5,Cropland,0,0,0,M,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,5,Cropland,0,0,0,M,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,5,Cropland,0,0,0,M,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,5,Cropland,0,0,0,M,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,6,Permenant Wetland,4,3,1473,B,Surface->Cloud,697,10,22,0,12,-12,0,0,1.721664275466284
+PixBox,SURFACE_TYPE_ID,6,Permenant Wetland,4,3,1473,B,Surface->Shadow,697,3,3,0,0,0,0,0,0.0
+PixBox,SURFACE_TYPE_ID,6,Permenant Wetland,4,3,1473,B,Cloud->Surface,714,121,91,30,0,30,28,2,-4.201680672268908
+PixBox,SURFACE_TYPE_ID,6,Permenant Wetland,4,3,1473,B,Cloud->Shadow,714,15,13,4,2,2,4,0,-0.2801120448179272
+PixBox,SURFACE_TYPE_ID,6,Permenant Wetland,4,3,1473,B,Shadow->Surface,62,14,17,1,4,-3,0,1,4.838709677419355
+PixBox,SURFACE_TYPE_ID,6,Permenant Wetland,4,3,1473,B,Shadow->Cloud,62,0,2,0,2,-2,0,0,3.225806451612903
+PixBox,SURFACE_TYPE_ID,6,Permenant Wetland,4,3,1473,M,Surface->Cloud,697,10,19,0,9,-9,0,0,1.291248206599713
+PixBox,SURFACE_TYPE_ID,6,Permenant Wetland,4,3,1473,M,Surface->Shadow,697,3,3,0,0,0,0,0,0.0
+PixBox,SURFACE_TYPE_ID,6,Permenant Wetland,4,3,1473,M,Cloud->Surface,714,121,95,27,1,26,25,2,-3.641456582633053
+PixBox,SURFACE_TYPE_ID,6,Permenant Wetland,4,3,1473,M,Cloud->Shadow,714,15,13,4,2,2,3,1,-0.2801120448179272
+PixBox,SURFACE_TYPE_ID,6,Permenant Wetland,4,3,1473,M,Shadow->Surface,62,14,17,1,4,-3,0,1,4.838709677419355
+PixBox,SURFACE_TYPE_ID,6,Permenant Wetland,4,3,1473,M,Shadow->Cloud,62,0,2,0,2,-2,0,0,3.225806451612903
+PixBox,SURFACE_TYPE_ID,7,Grassland,4,3,140,B,Surface->Cloud,68,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_TYPE_ID,7,Grassland,4,3,140,B,Surface->Shadow,68,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_TYPE_ID,7,Grassland,4,3,140,B,Cloud->Surface,72,7,5,2,0,2,2,0,-2.7777777777777777
+PixBox,SURFACE_TYPE_ID,7,Grassland,4,3,140,B,Cloud->Shadow,72,3,1,2,0,2,2,0,-2.7777777777777777
+PixBox,SURFACE_TYPE_ID,7,Grassland,4,3,140,B,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,7,Grassland,4,3,140,B,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,7,Grassland,4,3,140,M,Surface->Cloud,68,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_TYPE_ID,7,Grassland,4,3,140,M,Surface->Shadow,68,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_TYPE_ID,7,Grassland,4,3,140,M,Cloud->Surface,72,7,5,2,0,2,2,0,-2.7777777777777777
+PixBox,SURFACE_TYPE_ID,7,Grassland,4,3,140,M,Cloud->Shadow,72,3,1,2,0,2,2,0,-2.7777777777777777
+PixBox,SURFACE_TYPE_ID,7,Grassland,4,3,140,M,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,7,Grassland,4,3,140,M,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,8,Water Bodies,0,0,0,B,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,8,Water Bodies,0,0,0,B,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,8,Water Bodies,0,0,0,B,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,8,Water Bodies,0,0,0,B,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,8,Water Bodies,0,0,0,B,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,8,Water Bodies,0,0,0,B,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,8,Water Bodies,0,0,0,M,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,8,Water Bodies,0,0,0,M,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,8,Water Bodies,0,0,0,M,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,8,Water Bodies,0,0,0,M,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,8,Water Bodies,0,0,0,M,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,8,Water Bodies,0,0,0,M,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,9,Savanna,2,2,195,B,Surface->Cloud,81,0,3,0,3,-3,0,0,3.7037037037037037
+PixBox,SURFACE_TYPE_ID,9,Savanna,2,2,195,B,Surface->Shadow,81,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_TYPE_ID,9,Savanna,2,2,195,B,Cloud->Surface,114,18,15,4,1,3,4,0,-2.6315789473684212
+PixBox,SURFACE_TYPE_ID,9,Savanna,2,2,195,B,Cloud->Shadow,114,4,1,3,0,3,3,0,-2.6315789473684212
+PixBox,SURFACE_TYPE_ID,9,Savanna,2,2,195,B,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,9,Savanna,2,2,195,B,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,9,Savanna,2,2,195,M,Surface->Cloud,81,0,2,0,2,-2,0,0,2.4691358024691357
+PixBox,SURFACE_TYPE_ID,9,Savanna,2,2,195,M,Surface->Shadow,81,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_TYPE_ID,9,Savanna,2,2,195,M,Cloud->Surface,114,18,16,3,1,2,2,1,-1.7543859649122806
+PixBox,SURFACE_TYPE_ID,9,Savanna,2,2,195,M,Cloud->Shadow,114,4,3,2,1,1,2,0,-0.8771929824561403
+PixBox,SURFACE_TYPE_ID,9,Savanna,2,2,195,M,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,9,Savanna,2,2,195,M,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,10,Open Shrubland,0,0,0,B,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,10,Open Shrubland,0,0,0,B,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,10,Open Shrubland,0,0,0,B,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,10,Open Shrubland,0,0,0,B,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,10,Open Shrubland,0,0,0,B,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,10,Open Shrubland,0,0,0,B,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,10,Open Shrubland,0,0,0,M,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,10,Open Shrubland,0,0,0,M,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,10,Open Shrubland,0,0,0,M,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,10,Open Shrubland,0,0,0,M,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,10,Open Shrubland,0,0,0,M,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,10,Open Shrubland,0,0,0,M,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,11,Closed Shrubland,6,4,642,B,Surface->Cloud,379,0,1,0,1,-1,0,0,0.2638522427440633
+PixBox,SURFACE_TYPE_ID,11,Closed Shrubland,6,4,642,B,Surface->Shadow,379,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_TYPE_ID,11,Closed Shrubland,6,4,642,B,Cloud->Surface,216,21,20,1,0,1,1,0,-0.46296296296296297
+PixBox,SURFACE_TYPE_ID,11,Closed Shrubland,6,4,642,B,Cloud->Shadow,216,2,1,1,0,1,1,0,-0.46296296296296297
+PixBox,SURFACE_TYPE_ID,11,Closed Shrubland,6,4,642,B,Shadow->Surface,47,1,1,0,0,0,0,0,0.0
+PixBox,SURFACE_TYPE_ID,11,Closed Shrubland,6,4,642,B,Shadow->Cloud,47,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_TYPE_ID,11,Closed Shrubland,6,4,642,M,Surface->Cloud,379,0,1,0,1,-1,0,0,0.2638522427440633
+PixBox,SURFACE_TYPE_ID,11,Closed Shrubland,6,4,642,M,Surface->Shadow,379,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_TYPE_ID,11,Closed Shrubland,6,4,642,M,Cloud->Surface,216,21,20,1,0,1,1,0,-0.46296296296296297
+PixBox,SURFACE_TYPE_ID,11,Closed Shrubland,6,4,642,M,Cloud->Shadow,216,2,1,1,0,1,1,0,-0.46296296296296297
+PixBox,SURFACE_TYPE_ID,11,Closed Shrubland,6,4,642,M,Shadow->Surface,47,1,1,0,0,0,0,0,0.0
+PixBox,SURFACE_TYPE_ID,11,Closed Shrubland,6,4,642,M,Shadow->Cloud,47,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_TYPE_ID,12,Mixed Deciduous Forest,1,1,13,B,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,12,Mixed Deciduous Forest,1,1,13,B,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,12,Mixed Deciduous Forest,1,1,13,B,Cloud->Surface,13,1,1,0,0,0,0,0,0.0
+PixBox,SURFACE_TYPE_ID,12,Mixed Deciduous Forest,1,1,13,B,Cloud->Shadow,13,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_TYPE_ID,12,Mixed Deciduous Forest,1,1,13,B,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,12,Mixed Deciduous Forest,1,1,13,B,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,12,Mixed Deciduous Forest,1,1,13,M,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,12,Mixed Deciduous Forest,1,1,13,M,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,12,Mixed Deciduous Forest,1,1,13,M,Cloud->Surface,13,1,1,0,0,0,0,0,0.0
+PixBox,SURFACE_TYPE_ID,12,Mixed Deciduous Forest,1,1,13,M,Cloud->Shadow,13,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_TYPE_ID,12,Mixed Deciduous Forest,1,1,13,M,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,12,Mixed Deciduous Forest,1,1,13,M,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,13,Deciduous Broadleaf Forest,8,5,1445,B,Surface->Cloud,923,1,2,0,1,-1,0,0,0.10834236186348863
+PixBox,SURFACE_TYPE_ID,13,Deciduous Broadleaf Forest,8,5,1445,B,Surface->Shadow,923,5,4,1,0,1,1,0,-0.10834236186348863
+PixBox,SURFACE_TYPE_ID,13,Deciduous Broadleaf Forest,8,5,1445,B,Cloud->Surface,511,23,11,12,0,12,12,0,-2.3483365949119372
+PixBox,SURFACE_TYPE_ID,13,Deciduous Broadleaf Forest,8,5,1445,B,Cloud->Shadow,511,3,2,1,0,1,1,0,-0.19569471624266144
+PixBox,SURFACE_TYPE_ID,13,Deciduous Broadleaf Forest,8,5,1445,B,Shadow->Surface,11,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_TYPE_ID,13,Deciduous Broadleaf Forest,8,5,1445,B,Shadow->Cloud,11,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_TYPE_ID,13,Deciduous Broadleaf Forest,8,5,1445,M,Surface->Cloud,923,1,1,0,0,0,0,0,0.0
+PixBox,SURFACE_TYPE_ID,13,Deciduous Broadleaf Forest,8,5,1445,M,Surface->Shadow,923,5,4,1,0,1,1,0,-0.10834236186348863
+PixBox,SURFACE_TYPE_ID,13,Deciduous Broadleaf Forest,8,5,1445,M,Cloud->Surface,511,23,15,9,1,8,9,0,-1.5655577299412915
+PixBox,SURFACE_TYPE_ID,13,Deciduous Broadleaf Forest,8,5,1445,M,Cloud->Shadow,511,3,2,1,0,1,1,0,-0.19569471624266144
+PixBox,SURFACE_TYPE_ID,13,Deciduous Broadleaf Forest,8,5,1445,M,Shadow->Surface,11,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_TYPE_ID,13,Deciduous Broadleaf Forest,8,5,1445,M,Shadow->Cloud,11,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_TYPE_ID,14,Deciduous Needleleaf Forest,3,2,349,B,Surface->Cloud,256,10,15,0,5,-5,0,0,1.953125
+PixBox,SURFACE_TYPE_ID,14,Deciduous Needleleaf Forest,3,2,349,B,Surface->Shadow,256,2,2,0,0,0,0,0,0.0
+PixBox,SURFACE_TYPE_ID,14,Deciduous Needleleaf Forest,3,2,349,B,Cloud->Surface,77,8,3,5,0,5,5,0,-6.4935064935064934
+PixBox,SURFACE_TYPE_ID,14,Deciduous Needleleaf Forest,3,2,349,B,Cloud->Shadow,77,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_TYPE_ID,14,Deciduous Needleleaf Forest,3,2,349,B,Shadow->Surface,16,7,8,0,1,-1,0,0,6.25
+PixBox,SURFACE_TYPE_ID,14,Deciduous Needleleaf Forest,3,2,349,B,Shadow->Cloud,16,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_TYPE_ID,14,Deciduous Needleleaf Forest,3,2,349,M,Surface->Cloud,256,10,15,0,5,-5,0,0,1.953125
+PixBox,SURFACE_TYPE_ID,14,Deciduous Needleleaf Forest,3,2,349,M,Surface->Shadow,256,2,2,0,0,0,0,0,0.0
+PixBox,SURFACE_TYPE_ID,14,Deciduous Needleleaf Forest,3,2,349,M,Cloud->Surface,77,8,4,4,0,4,4,0,-5.194805194805195
+PixBox,SURFACE_TYPE_ID,14,Deciduous Needleleaf Forest,3,2,349,M,Cloud->Shadow,77,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_TYPE_ID,14,Deciduous Needleleaf Forest,3,2,349,M,Shadow->Surface,16,7,8,0,1,-1,0,0,6.25
+PixBox,SURFACE_TYPE_ID,14,Deciduous Needleleaf Forest,3,2,349,M,Shadow->Cloud,16,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_TYPE_ID,15,Evergreen Broadleaf Forest,5,3,979,B,Surface->Cloud,540,32,59,0,27,-27,0,0,5.0
+PixBox,SURFACE_TYPE_ID,15,Evergreen Broadleaf Forest,5,3,979,B,Surface->Shadow,540,1,4,0,3,-3,0,0,0.5555555555555556
+PixBox,SURFACE_TYPE_ID,15,Evergreen Broadleaf Forest,5,3,979,B,Cloud->Surface,405,91,64,27,0,27,27,0,-6.666666666666667
+PixBox,SURFACE_TYPE_ID,15,Evergreen Broadleaf Forest,5,3,979,B,Cloud->Shadow,405,8,2,6,0,6,6,0,-1.4814814814814814
+PixBox,SURFACE_TYPE_ID,15,Evergreen Broadleaf Forest,5,3,979,B,Shadow->Surface,34,31,31,0,0,0,0,0,0.0
+PixBox,SURFACE_TYPE_ID,15,Evergreen Broadleaf Forest,5,3,979,B,Shadow->Cloud,34,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_TYPE_ID,15,Evergreen Broadleaf Forest,5,3,979,M,Surface->Cloud,540,32,53,0,21,-21,0,0,3.888888888888889
+PixBox,SURFACE_TYPE_ID,15,Evergreen Broadleaf Forest,5,3,979,M,Surface->Shadow,540,1,4,0,3,-3,0,0,0.5555555555555556
+PixBox,SURFACE_TYPE_ID,15,Evergreen Broadleaf Forest,5,3,979,M,Cloud->Surface,405,91,71,21,1,20,21,0,-4.938271604938271
+PixBox,SURFACE_TYPE_ID,15,Evergreen Broadleaf Forest,5,3,979,M,Cloud->Shadow,405,8,2,6,0,6,5,1,-1.4814814814814814
+PixBox,SURFACE_TYPE_ID,15,Evergreen Broadleaf Forest,5,3,979,M,Shadow->Surface,34,31,31,0,0,0,0,0,0.0
+PixBox,SURFACE_TYPE_ID,15,Evergreen Broadleaf Forest,5,3,979,M,Shadow->Cloud,34,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_TYPE_ID,16,Woody Savanna,8,5,1541,B,Surface->Cloud,248,3,13,0,10,-10,0,0,4.032258064516129
+PixBox,SURFACE_TYPE_ID,16,Woody Savanna,8,5,1541,B,Surface->Shadow,248,2,2,0,0,0,0,0,0.0
+PixBox,SURFACE_TYPE_ID,16,Woody Savanna,8,5,1541,B,Cloud->Surface,1166,112,78,45,11,34,45,0,-2.9159519725557463
+PixBox,SURFACE_TYPE_ID,16,Woody Savanna,8,5,1541,B,Cloud->Shadow,1166,8,1,7,0,7,5,2,-0.6003430531732419
+PixBox,SURFACE_TYPE_ID,16,Woody Savanna,8,5,1541,B,Shadow->Surface,127,19,21,3,5,-2,3,0,1.5748031496062993
+PixBox,SURFACE_TYPE_ID,16,Woody Savanna,8,5,1541,B,Shadow->Cloud,127,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_TYPE_ID,16,Woody Savanna,8,5,1541,M,Surface->Cloud,248,3,13,0,10,-10,0,0,4.032258064516129
+PixBox,SURFACE_TYPE_ID,16,Woody Savanna,8,5,1541,M,Surface->Shadow,248,2,2,0,0,0,0,0,0.0
+PixBox,SURFACE_TYPE_ID,16,Woody Savanna,8,5,1541,M,Cloud->Surface,1166,112,89,40,17,23,40,0,-1.9725557461406518
+PixBox,SURFACE_TYPE_ID,16,Woody Savanna,8,5,1541,M,Cloud->Shadow,1166,8,1,7,0,7,4,3,-0.6003430531732419
+PixBox,SURFACE_TYPE_ID,16,Woody Savanna,8,5,1541,M,Shadow->Surface,127,19,20,4,5,-1,4,0,0.7874015748031497
+PixBox,SURFACE_TYPE_ID,16,Woody Savanna,8,5,1541,M,Shadow->Cloud,127,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_TYPE_ID,17,Tundra,4,2,241,B,Surface->Cloud,62,1,7,0,6,-6,0,0,9.67741935483871
+PixBox,SURFACE_TYPE_ID,17,Tundra,4,2,241,B,Surface->Shadow,62,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_TYPE_ID,17,Tundra,4,2,241,B,Cloud->Surface,177,26,18,8,0,8,8,0,-4.519774011299435
+PixBox,SURFACE_TYPE_ID,17,Tundra,4,2,241,B,Cloud->Shadow,177,1,0,1,0,1,1,0,-0.5649717514124294
+PixBox,SURFACE_TYPE_ID,17,Tundra,4,2,241,B,Shadow->Surface,2,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_TYPE_ID,17,Tundra,4,2,241,B,Shadow->Cloud,2,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_TYPE_ID,17,Tundra,4,2,241,M,Surface->Cloud,62,1,3,0,2,-2,0,0,3.225806451612903
+PixBox,SURFACE_TYPE_ID,17,Tundra,4,2,241,M,Surface->Shadow,62,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_TYPE_ID,17,Tundra,4,2,241,M,Cloud->Surface,177,26,18,8,0,8,8,0,-4.519774011299435
+PixBox,SURFACE_TYPE_ID,17,Tundra,4,2,241,M,Cloud->Shadow,177,1,0,1,0,1,1,0,-0.5649717514124294
+PixBox,SURFACE_TYPE_ID,17,Tundra,4,2,241,M,Shadow->Surface,2,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_TYPE_ID,17,Tundra,4,2,241,M,Shadow->Cloud,2,0,0,0,0,0,0,0,0.0
+PixBox,SURFACE_TYPE_ID,NA,missing/conflicting/unmapped,0,0,0,B,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,NA,missing/conflicting/unmapped,0,0,0,B,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,NA,missing/conflicting/unmapped,0,0,0,B,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,NA,missing/conflicting/unmapped,0,0,0,B,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,NA,missing/conflicting/unmapped,0,0,0,B,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,NA,missing/conflicting/unmapped,0,0,0,B,Shadow->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,NA,missing/conflicting/unmapped,0,0,0,M,Surface->Cloud,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,NA,missing/conflicting/unmapped,0,0,0,M,Surface->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,NA,missing/conflicting/unmapped,0,0,0,M,Cloud->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,NA,missing/conflicting/unmapped,0,0,0,M,Cloud->Shadow,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,NA,missing/conflicting/unmapped,0,0,0,M,Shadow->Surface,0,0,0,0,0,0,0,0,NA
+PixBox,SURFACE_TYPE_ID,NA,missing/conflicting/unmapped,0,0,0,M,Shadow->Cloud,0,0,0,0,0,0,0,0,NA

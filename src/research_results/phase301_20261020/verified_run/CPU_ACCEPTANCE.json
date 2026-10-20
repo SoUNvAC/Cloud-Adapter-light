@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "neural_calls": 0,
+  "seconds": 19.342992067337036,
+  "peak_bytes": 955944960,
+  "independent_boolean_cell_checks": 52488,
+  "transition_marginals_match_phase300": true,
+  "all_original_groups_retained": true,
+  "boundary_definition": "cloud/noncloud adjacent valid labels; Chebyshev radius2 dilation; exclude invalid/image edge radius2",
+  "independent_scipy_boundary_checks": 32,
+  "field_tensor_sum_checks": 8,
+  "input_sha_count": 291,
+  "torch_imported": false,
+  "probe_baseline": "own initialized adapter at attempt0 with identical512 context; not originalR4"
+}

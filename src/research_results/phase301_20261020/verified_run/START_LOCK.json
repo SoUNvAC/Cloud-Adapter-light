@@ -1,0 +1,10 @@
+{
+  "start_beijing": "2026-10-20T21:00:21.682758+08:00",
+  "date": "20261020",
+  "neural_calls": 0,
+  "training": 0,
+  "downloads": 0,
+  "protocol_sha256": "09ab60f58f28d60ca460cf41b5312e09289cbb3fa018d9c4691cf47948db5e78",
+  "git_commit": "82e5f37d992bcbadbd601cb7393ffde09bee9580",
+  "prior_output": "outputs/phase301/phase301_20261020; preserved without overwrite"
+}

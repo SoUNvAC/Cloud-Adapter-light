@@ -1,0 +1,14 @@
+{
+  "status": "verified",
+  "host": "ssh gzs",
+  "execution": "CPU only",
+  "runtime": "/home/scv/shared/phase111_ocm_runtime/runtime_cuda128/bin/python",
+  "network": "Local git push, remote git pull; SCP of existing PixBox reference fixture; SCP of full delivery back to local workspace.",
+  "inputs": "Sealed Phase300 scores and probes in /home/scv/shared; existing reference and mask fixtures; no new dataset or weight downloads.",
+  "clarification": "Supersedes the generic local-backup/network sentence in EXECUTION_NOTES.json. That sealed file is retained byte for byte.",
+  "training": 0,
+  "neural_calls": 0,
+  "external_downloads": 0,
+  "source_sha256": "795c1d4e6c2202ec929ca80eed16702814bf13d435ea95046d94e97f360923ea",
+  "sealed_delivery_manifest_sha256": "bc31c19d0f308d4a632a03b67dac90b74774dd7ba9640290fc790e0885ec69c5"
+}

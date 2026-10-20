@@ -1,0 +1,10 @@
+{
+  "status": "completed",
+  "peak_bytes": 955944960,
+  "minimum_available_memory": 31796580352,
+  "minimum_disk_free": 755706699776,
+  "PID": 1626065,
+  "seconds": 21.046901094028726,
+  "new_bytes": 23613507,
+  "neural_calls": 0
+}

@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "checks": 1188,
+  "complete_108_cells": true,
+  "all_product_group_sums_exact": true,
+  "phase300_both_confusions_reconstructed": true,
+  "boundary_partition_exact": true,
+  "metadata_field_supports_exact": true,
+  "zero_step_identity_verified": true,
+  "input_hashes_rechecked": 291,
+  "seconds": 0.9451800980023108,
+  "peak_bytes": 33468416,
+  "finalizer_sha256": "c8fde6d76b8d0037dd91e786a65c434e43dbdbf72635f41c3e72c1c6e9d10477",
+  "neural_calls": 0
+}

@@ -1,0 +1,76 @@
+﻿field,code,definition,reference_points,Surface,Cloud,Shadow
+SURFACE_ID,0,None of the classes,22,0,22,0
+SURFACE_ID,1,Forest Winter,0,0,0,0
+SURFACE_ID,2,Forest,0,0,0,0
+SURFACE_ID,3,Urban snow covered,91,91,0,0
+SURFACE_ID,4,Mine,0,0,0,0
+SURFACE_ID,5,Coast line,0,0,0,0
+SURFACE_ID,6,Water on ice,0,0,0,0
+SURFACE_ID,7,Ship canal,1,1,0,0
+SURFACE_ID,8,Lagoon,0,0,0,0
+SURFACE_ID,9,Spatially mixed cloud/snow-ice,0,0,0,0
+SURFACE_ID,10,Road,73,58,10,5
+SURFACE_ID,11,Burnt area,0,0,0,0
+SURFACE_ID,12,Wind turbine,0,0,0,0
+SURFACE_ID,13,Wadden mud/silty sand,0,0,0,0
+SURFACE_ID,14,"Vessel, offshore platform",5,4,1,0
+SURFACE_ID,15,Spatially mixed water/cloud,0,0,0,0
+SURFACE_ID,16,Spatially mixed land/cloud,0,0,0,0
+SURFACE_ID,17,Wetland,0,0,0,0
+SURFACE_ID,18,Spatially mixed land/snow-ice,225,126,99,0
+SURFACE_ID,19,Spatially mixed water/snow-ice,418,207,211,0
+SURFACE_ID,20,Open ocean,1050,181,742,127
+SURFACE_ID,21,Coastal,1299,436,824,39
+SURFACE_ID,22,River,96,60,36,0
+SURFACE_ID,23,Lake,977,718,246,13
+SURFACE_ID,24,Water,0,0,0,0
+SURFACE_ID,25,Spatially mixed land/water,6,6,0,0
+SURFACE_ID,26,Inter-tidal area,0,0,0,0
+SURFACE_ID,27,Dry/Salt lake,27,16,11,0
+SURFACE_ID,28,"Desert, sandy soil",271,61,202,8
+SURFACE_ID,29,Agriculture,0,0,0,0
+SURFACE_ID,30,Urban,235,153,46,36
+SURFACE_ID,31,Mountain,0,0,0,0
+SURFACE_ID,32,Land,2380,1004,1270,106
+SURFACE_ID,33,None,0,0,0,0
+SURFACE_ID,34,Land Snow-ice,1393,1062,286,45
+SURFACE_ID,35,Ravine,0,0,0,0
+SURFACE_ID,NA,missing/conflicting/unmapped,0,0,0,0
+WATER BODY CHARACTERISTICS_ID,0,None of the classes,0,0,0,0
+WATER BODY CHARACTERISTICS_ID,1,None,8395,4079,3937,379
+WATER BODY CHARACTERISTICS_ID,2,Bright turbid water (blue or brown),129,75,54,0
+WATER BODY CHARACTERISTICS_ID,3,Cocolithophorides,0,0,0,0
+WATER BODY CHARACTERISTICS_ID,4,Floating Cyanobacteria bloom,0,0,0,0
+WATER BODY CHARACTERISTICS_ID,5,Floating vegetation,0,0,0,0
+WATER BODY CHARACTERISTICS_ID,6,Dark water,0,0,0,0
+WATER BODY CHARACTERISTICS_ID,7,Wave breaking,0,0,0,0
+WATER BODY CHARACTERISTICS_ID,8,Algae,0,0,0,0
+WATER BODY CHARACTERISTICS_ID,9,Sediment,12,12,0,0
+WATER BODY CHARACTERISTICS_ID,10,Ship trail on water,33,18,15,0
+WATER BODY CHARACTERISTICS_ID,11,Water front,0,0,0,0
+WATER BODY CHARACTERISTICS_ID,NA,missing/conflicting/unmapped,0,0,0,0
+SHADOW_ID,0,None of the classes,0,0,0,0
+SHADOW_ID,1,None,7859,3853,4006,0
+SHADOW_ID,2,Topographic shadow (incl tree & buildings),331,331,0,0
+SHADOW_ID,3,Cloud shadow,379,0,0,379
+SHADOW_ID,4,Shadow above cloud,0,0,0,0
+SHADOW_ID,NA,missing/conflicting/unmapped,0,0,0,0
+SURFACE_TYPE_ID,0,Evergreen Needleleaf Forest,865,347,447,71
+SURFACE_TYPE_ID,1,Barren/Desert,9,0,9,0
+SURFACE_TYPE_ID,2,Permanent Snow/Ice,0,0,0,0
+SURFACE_TYPE_ID,3,"Crop/Natural Veg, Mosaic",131,125,6,0
+SURFACE_TYPE_ID,4,Urban,546,458,79,9
+SURFACE_TYPE_ID,5,Cropland,0,0,0,0
+SURFACE_TYPE_ID,6,Permenant Wetland,1473,697,714,62
+SURFACE_TYPE_ID,7,Grassland,140,68,72,0
+SURFACE_TYPE_ID,8,Water Bodies,0,0,0,0
+SURFACE_TYPE_ID,9,Savanna,195,81,114,0
+SURFACE_TYPE_ID,10,Open Shrubland,0,0,0,0
+SURFACE_TYPE_ID,11,Closed Shrubland,642,379,216,47
+SURFACE_TYPE_ID,12,Mixed Deciduous Forest,13,0,13,0
+SURFACE_TYPE_ID,13,Deciduous Broadleaf Forest,1445,923,511,11
+SURFACE_TYPE_ID,14,Deciduous Needleleaf Forest,349,256,77,16
+SURFACE_TYPE_ID,15,Evergreen Broadleaf Forest,979,540,405,34
+SURFACE_TYPE_ID,16,Woody Savanna,1541,248,1166,127
+SURFACE_TYPE_ID,17,Tundra,241,62,177,2
+SURFACE_TYPE_ID,NA,missing/conflicting/unmapped,0,0,0,0

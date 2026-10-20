@@ -1,0 +1,9 @@
+{
+  "analysis": "fresh verified_run; original Phase301 output and source snapshots retained",
+  "network": "git synchronization only; CPU analysis reads existing local backups",
+  "training": 0,
+  "neural_calls": 0,
+  "downloads": 0,
+  "old_phase300_unchanged": true,
+  "resource": "16GiB / one hour / new1GB / free4GB; see resource receipt"
+}
