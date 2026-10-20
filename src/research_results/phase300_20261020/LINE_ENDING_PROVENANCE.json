@@ -1,0 +1,8 @@
+{
+  "initial_local_file": "INITIAL_LOCAL_FIT_IMAGES.json",
+  "initial_local_sha256": "f439bd9d3b7a83942e43a3fd06f53318f994613a1b42d7281c7a514f5a994a51",
+  "runtime_file": "FIT_IMAGES.json",
+  "runtime_sha256": "123b5a862730260aaec845efa3094b11bbfa9d389ff493147a87654bde1a8592",
+  "semantic_content_equal": true,
+  "explanation": "Git normalized CRLF to LF before remote preflight and training. Retain exact initial local bytes for START_LOCK and exact runtime bytes for EXECUTION_LOCK; no rows or fields changed."
+}

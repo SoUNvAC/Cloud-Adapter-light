@@ -15,8 +15,16 @@ def main():
     execution = json.loads((root/'EXECUTION_LOCK.json').read_text(encoding='utf-8-sig'))
     for name,expected in execution['code'].items():
         assert hashlib.sha256((repo/name).read_bytes()).hexdigest()==expected,name
+    assert hashlib.sha256((root/'FIT_IMAGES.json').read_bytes()).hexdigest()==execution['manifest_sha256']
+    start = json.loads((root/'START_LOCK.json').read_text(encoding='utf-8-sig'))
+    assert hashlib.sha256((root/'INITIAL_LOCAL_FIT_IMAGES.json').read_bytes()).hexdigest()==start['manifest_sha256']
+    assert json.loads((root/'FIT_IMAGES.json').read_text())==json.loads((root/'INITIAL_LOCAL_FIT_IMAGES.json').read_text())
+    evaluation = json.loads((root/'LOCAL_EVALUATION_LOCK.json').read_text(encoding='utf-8-sig'))
+    for name,key in [('analyze_phase300.py','analysis_code_sha256'),('phase300_reference.py','reference_join_helper_sha256'),('phase300_subgroups.py','subgroup_code_sha256')]:
+        assert hashlib.sha256((repo/'src/tools'/name).read_bytes()).hexdigest()==evaluation[key],name
     print(json.dumps(dict(status='passed',summary_files=len(lock['files']),
-           locked_training_sources=len(execution['code']),archive_sha256=lock['full_backup_archive_sha256'])))
+           locked_training_sources=len(execution['code']),manifest_identities_verified=True,
+           locked_evaluation_sources=3,archive_sha256=lock['full_backup_archive_sha256'])))
 
 
 if __name__=='__main__': main()

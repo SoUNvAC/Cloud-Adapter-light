@@ -1,7 +1,7 @@
 {
   "status": "completed",
   "files": {
-    "FIT_IMAGES.json": "f439bd9d3b7a83942e43a3fd06f53318f994613a1b42d7281c7a514f5a994a51",
+    "FIT_IMAGES.json": "123b5a862730260aaec845efa3094b11bbfa9d389ff493147a87654bde1a8592",
     "START_LOCK.json": "ef558da90ba00a11d9ad36a9ae9f99327f920435dfed52dde554257bfc62744d",
     "PRELIMINARY_BUDGET.json": "1c4ef1c01c068542ba67450cd4737e0860ba460cf72368d25288754fa7d8a85a",
     "CPU_RULE_TESTS.log": "351f929ed84aacafade91b6fd67dc7be9217ffaea2ca9d1c9d59bd385ba30fb6",
@@ -41,7 +41,9 @@
     "CONTROLLER_STATUS.json": "f9fc1a5e36d3cef51e1effdbfded607f1b38754537a7e48ad54adefaa9c6fcad",
     "TRAINING_SEAL.json": "ede3164983fb5bb704799fdf44b50de16bf2d3aa1ca49818b7acc31b1afd005b",
     "V4_WEIGHT_LOCK.json": "61635dbdcd801ea74ca27b9a0bed395e6e327d3975675e0fa78eefe757ab3c1b",
-    "phase300.md": "bcaf2dec8641c59e18f9017617064487ac551f83b4ca9bc20a6a082d9a7c3043"
+    "phase300.md": "ce1fa3ddb086e2fd5b189fe0c0f1c23d1b63a8f337bef77b7c3d872e28c74e61",
+    "INITIAL_LOCAL_FIT_IMAGES.json": "f439bd9d3b7a83942e43a3fd06f53318f994613a1b42d7281c7a514f5a994a51",
+    "LINE_ENDING_PROVENANCE.json": "d5034d3c63116438fcd99c09ea8387b5534ba0f7da9db5c908258b460a83ebb2"
   },
   "full_backup_archive_sha256": "4ec6fc33bf542a5acecd082be16d93bcbf3da18a70d2ee4b4b04b103f82296bd"
 }
