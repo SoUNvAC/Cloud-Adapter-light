@@ -86,7 +86,8 @@ def main():
     (ROOT/'TABLE_NOTES.md').write_text(notes,encoding='utf-8')
     SUMMARY.mkdir(parents=True,exist_ok=True)
     for path in list(ROOT.glob('*.csv'))+[ROOT/n for n in ('RESULT.md','TABLE_NOTES.md','CPU_ACCEPTANCE.json','COMMON_SUPPORT_ACCEPTANCE.json',
-                 'FIXED_RESULTS.json','LOCAL_EVALUATION_LOCK.json','SUBGROUP_MAPPING_LOCK.json','SUBGROUP_ACCEPTANCE.json','LOCAL_STATUS.json','BACKUP_RECEIPT.json')]:
+                 'FIXED_RESULTS.json','LOCAL_EVALUATION_LOCK.json','SUBGROUP_MAPPING_LOCK.json','SUBGROUP_ACCEPTANCE.json','LOCAL_STATUS.json','BACKUP_RECEIPT.json',
+                 'EXPERIMENT_EVENT_LEDGER.json','LOCAL_PREFLIGHT_ACCEPTANCE.json')]:
         shutil.copyfile(path,SUMMARY/path.name)
     for name in ('FINAL_REMOTE_ACCEPTANCE.json','EXECUTION_LOCK.json','CONTROLLER_STATUS.json','TRAINING_SEAL.json','V4_WEIGHT_LOCK.json'):
         shutil.copyfile(D/name,SUMMARY/name)

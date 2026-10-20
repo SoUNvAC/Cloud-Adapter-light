@@ -7,6 +7,7 @@ import json
 import os
 from pathlib import Path
 import sys
+import subprocess
 import time
 import zipfile
 
@@ -95,10 +96,17 @@ def metrics(pool,groups):
         iou = ious(pooled)
         y = np.concatenate([g['y'] for g in groups.values()])
         scores = np.concatenate([g['scores'][name] for g in groups.values()])
+        predicted = np.concatenate([g['pred'][name] for g in groups.values()])
+        pooled_check = np.bincount((3*y+predicted).astype(np.int64),minlength=9).reshape(3,3)
+        assert np.array_equal(pooled,pooled_check)
         pooled_ap = reference.ap(y==2,scores)
+        group_mean = average(p['mIoU_pp'] for p in parts)
+        if group_mean is not None:
+            independent_mean = sum(p['mIoU_pp'] for p in parts)/len(parts)
+            assert abs(group_mean-independent_mean)<1e-10
         summaries.append(dict(pool=pool,strategy=DISPLAY[name],groups=len(groups),
           AP_groups=sum(p['AP_pp'] is not None for p in parts),new_parameters=PARAMS[name],trainable_parameters=PARAMS[name],
-          group_mean_mIoU_pp=average(p['mIoU_pp'] for p in parts),
+          group_mean_mIoU_pp=group_mean,
           pooled_mIoU_pp=100*float(np.nanmean(iou)) if pool=='Catalogue' else None,
           pooled_Surface_IoU_pp=100*float(iou[0]) if pool=='Catalogue' and np.isfinite(iou[0]) else None,
           pooled_Cloud_IoU_pp=100*float(iou[1]) if pool=='Catalogue' and np.isfinite(iou[1]) else None,
@@ -109,7 +117,7 @@ def metrics(pool,groups):
           macro_negative_FPR_pp=average(p['negative_shadow_fraction_pp'] for p in parts),
           max_group_negative_FPR_pp=max(p['negative_shadow_fraction_pp'] for p in parts if p['negative_shadow_fraction_pp'] is not None),
           positive=int((y==2).sum()),negative=int((y!=2).sum()),confusion=pooled.tolist()))
-        del y,scores
+        del y,scores,predicted,pooled_check
         gc.collect()
     table(pool+'_PER_GROUP.csv',per)
     return summaries,lookup
@@ -306,6 +314,7 @@ def main():
     seals = load(D/'TRAINING_SEAL.json')
     for name in ('B','M'): assert sha(D/('train_'+name)/'module_final.safetensors')==seals[name]
     save('LOCAL_EVALUATION_LOCK.json',dict(after_both_endpoints_sealed=True,training_seal=seals,
+       local_git_commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=REPO,text=True).strip(),
        analysis_code_sha256=sha(Path(__file__)),reference_join_helper_sha256=sha(Path(reference.__file__)),
        original_helper_provenance=reference.ORIGINAL_SOURCE_SHA256,
        subgroup_code_sha256=sha(REPO/'src/tools/phase300_subgroups.py'),
@@ -344,6 +353,7 @@ def main():
     save('COMMON_SUPPORT_ACCEPTANCE.json',dict(rows=supports,all_four_same_support=True))
     save('FIXED_RESULTS.json',dict(summary=summaries,comparisons=contrasts,oracle=oracles,training=train_summary))
     save('CPU_ACCEPTANCE.json',dict(status='passed',seconds=time.time()-start,neural_calls=0,
+           numpy_version=np.__version__,
            independent_AP_confusion_checks=reference.CHECKS,independent_group_IoUs=True,
            paired_group_bootstrap_pooled_scalar_checks=600,bootstrap_seed=300020,
            missing_class_rule='IoU union=0 -> NA; mIoU mean over nonempty unions; AP requires positive and negative; recall needs positives; FPR needs negatives; all groups retained',
