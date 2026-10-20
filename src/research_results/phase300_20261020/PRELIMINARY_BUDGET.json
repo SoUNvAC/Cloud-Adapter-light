@@ -1,0 +1,17 @@
+{
+  "teacher_actual_T": null,
+  "teacher_shape_upper_bound": 400,
+  "training_max": 2000,
+  "evaluation": 2292,
+  "probes": 32,
+  "subtotal_upper": 4724,
+  "construction_acceptance_recovery_available": 2276,
+  "cap": 7000,
+  "GPU_seconds_cap": 14400,
+  "GPU_bytes_cap": 21474836480,
+  "CPU_bytes_cap": 17179869184,
+  "persistent_bytes_cap": 6000000000,
+  "host_free_bytes_floor": 4000000000,
+  "execution_authorized_by_budget": false,
+  "pending": "Actual author windows T, runtime compatibility, measured time and memory"
+}

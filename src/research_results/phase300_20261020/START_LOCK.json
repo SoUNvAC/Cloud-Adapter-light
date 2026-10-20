@@ -1,0 +1,9 @@
+{
+  "date_beijing": "20261020",
+  "started_at": "2026-10-20T17:07:52.648100+08:00",
+  "protocol_sha256": "8b4bf59e4fa4985de6b3847f4c7cc43104cd7298b8d070cfb20daddc64dd843d",
+  "manifest_sha256": "f439bd9d3b7a83942e43a3fd06f53318f994613a1b42d7281c7a514f5a994a51",
+  "neural_forward_calls": 0,
+  "status": "preflight_pending",
+  "local_headers_only": true
+}
