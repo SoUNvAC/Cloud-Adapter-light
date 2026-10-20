@@ -17,10 +17,11 @@ from scipy.ndimage import binary_dilation,binary_erosion
 from transfer_phase302 import sha,load,write
 
 R=Path(__file__).resolve().parents[2]
-ROOT=R/'outputs/phase302/phase302_20261020'
-D=ROOT/'remote_backup'
-OLD=R/'outputs/phase300/phase300_20261020/remote_backup/phase300_20261020'
-SUPPORT=R/'outputs/phase205/phase205_20261019/delivery'
+REMOTE=os.environ.get('PHASE302_REMOTE')=='1'
+ROOT=Path('/home/scv/shared/phase302_20261020') if REMOTE else R/'outputs/phase302/phase302_20261020'
+D=ROOT if REMOTE else ROOT/'remote_backup'
+OLD=Path('/home/scv/shared/phase300_20261020') if REMOTE else R/'outputs/phase300/phase300_20261020/remote_backup/phase300_20261020'
+SUPPORT=Path('/home/scv/shared/phase205_20261019') if REMOTE else R/'outputs/phase205/phase205_20261019/delivery'
 O=ROOT/'analysis'
 S=R/'src/research_results/phase302_20261020'
 C=('Surface','Cloud','Shadow')
@@ -121,7 +122,7 @@ def average(v):
 def main():
     started=time.monotonic();assert 'torch' not in sys.modules
     assert not O.exists();O.mkdir()
-    assert pin(ROOT/'BACKUP_RECEIPT.json')['all_archive_members_verified']
+    if not REMOTE:assert pin(ROOT/'BACKUP_RECEIPT.json')['all_archive_members_verified']
     assert (D/'EXIT_CODE').read_text().strip()=='0'
     endpoint=pin(D/'ENDPOINT_LOCK.json');assert endpoint['all_base_tensors_unchanged']
     assert sha(D/'final_lora.pth')==endpoint['final_sha256']
@@ -197,7 +198,8 @@ def main():
     write(O/'RESULT_DIFFERENCES_PP.json',delta)
     table('RESULT_DIFFERENCES_PP.csv',[dict(strategy='LoRA minus Source',**delta)])
     probes=[];probe_cells=[];full_cells=[]
-    fit_masks={r['product']:r for r in pin(R/'outputs/phase208/phase208_20261020/12201_FIT_INPUT_LOCK.json')['bindings']}
+    fit_source=Path('/home/scv/shared/phase208_20261020/12201_FIT_INPUT_LOCK.json') if REMOTE else R/'outputs/phase208/phase208_20261020/12201_FIT_INPUT_LOCK.json'
+    fit_masks={r['product']:r for r in pin(fit_source)['bindings']}
     with zipfile.ZipFile(masks_path) as masks:
         for pid in sorted(r['product'] for r in pin(D/'FIT_IMAGES.json')['rows'])[:4]:
             raw=masks.read('masks/'+pid+'.npy');assert hashlib.sha256(raw).hexdigest()==fit_masks[pid]['mask_member_sha256']
@@ -231,12 +233,13 @@ def main():
         groups=32,source_student_marginals_exact=True,boundary_partition_exact=True,all_probe_zero_lora_matches_source=True,
         all_common_reference_support_retained=True,AP_independent_sklearn_checked=True,neural_calls=0))
     report(summaries,delta,event_rows,boundary_events,group_events,probes,endpoint)
-    S.mkdir(parents=True,exist_ok=True)
-    import shutil
-    for p in O.iterdir():shutil.copyfile(p,S/p.name)
-    for name in ('SOURCE_ADMISSION.json','MODEL_ACCEPTANCE.json','PREPROCESS_ACCEPTANCE.json','ENDPOINT_LOCK.json','EXECUTION_LOCK.json','EVALUATION_LOCK.json','train_RECEIPT.json','evaluate_RECEIPT.json'):
-        shutil.copyfile(D/name,S/name)
-    shutil.copyfile(ROOT/'BACKUP_RECEIPT.json',S/'BACKUP_RECEIPT.json')
+    if not REMOTE:
+        S.mkdir(parents=True,exist_ok=True)
+        import shutil
+        for p in O.iterdir():shutil.copyfile(p,S/p.name)
+        for name in ('SOURCE_ADMISSION.json','MODEL_ACCEPTANCE.json','PREPROCESS_ACCEPTANCE.json','ENDPOINT_LOCK.json','EXECUTION_LOCK.json','EVALUATION_LOCK.json','train_RECEIPT.json','evaluate_RECEIPT.json'):
+            shutil.copyfile(D/name,S/name)
+        shutil.copyfile(ROOT/'BACKUP_RECEIPT.json',S/'BACKUP_RECEIPT.json')
     print(json.dumps(load(O/'CPU_ACCEPTANCE.json')))
 
 
