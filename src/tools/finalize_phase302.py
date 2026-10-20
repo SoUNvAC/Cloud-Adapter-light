@@ -60,7 +60,7 @@ def main():
         lines+=[f"- 当前结果状态：远程训练和固定评价已完成，等待本地CPU统计。本地最近可用物理内存{wait['available_physical_bytes']}字节，未满足4GB最低空闲要求；另为预计2.5GB统计工作集预留空间（估算不是测量）。用户明确要求保留本地分析，未在远程连接真值。当前不报告mIoU、AP或错误流结论。",
             '- 定时检查：每5分钟观察本地可用内存；满足预计工作集加4GB空闲后才启动本地CPU统计，运行时继续检查最低空闲。检查状态不变时保持安静，不重训、不扩预算。']
     (S/'phase302.md').write_text('\n'.join(lines)+'\n',encoding='utf-8')
-    code={str(p.relative_to(R)):sha(p) for p in (R/'src/tools').glob('*phase302*.py') if p.is_file()}
+    code={p.relative_to(R).as_posix():sha(p) for p in (R/'src/tools').glob('*phase302*.py') if p.is_file()}
     write(S/'SUMMARY_SHA256.json',dict(status=metrics['status'],code=code,
         files={p.name:sha(p) for p in S.iterdir() if p.is_file() and p.name!='SUMMARY_SHA256.json'}))
     print(json.dumps(metrics))
