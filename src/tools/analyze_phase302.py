@@ -12,7 +12,6 @@ import zipfile
 
 for k in ('OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS'):os.environ[k]='1'
 import numpy as np
-from sklearn.metrics import average_precision_score, confusion_matrix
 from scipy.ndimage import binary_dilation,binary_erosion
 from transfer_phase302 import sha,load,write
 
@@ -22,7 +21,9 @@ ROOT=Path('/home/scv/shared/phase302_20261020') if REMOTE else R/'outputs/phase3
 D=ROOT if REMOTE else ROOT/'remote_backup'
 OLD=Path('/home/scv/shared/phase300_20261020') if REMOTE else R/'outputs/phase300/phase300_20261020/remote_backup/phase300_20261020'
 SUPPORT=Path('/home/scv/shared/phase205_20261019') if REMOTE else R/'outputs/phase205/phase205_20261019/delivery'
-O=ROOT/'analysis'
+ANALYSIS_SUBDIR=os.environ.get('PHASE302_ANALYSIS_SUBDIR','analysis')
+assert ANALYSIS_SUBDIR.startswith('analysis') and Path(ANALYSIS_SUBDIR).name==ANALYSIS_SUBDIR
+O=ROOT/ANALYSIS_SUBDIR
 S=R/'src/research_results/phase302_20261020'
 C=('Surface','Cloud','Shadow')
 INPUTS={}
@@ -30,6 +31,9 @@ CHECKS=0
 
 
 def pin(p): INPUTS[str(p)]=sha(p);return load(p)
+def confusion_matrix(y,p,labels):
+    assert labels==[0,1,2]
+    return np.histogram2d(y,p,bins=(np.arange(4)-.5,np.arange(4)-.5))[0].astype(np.int64)
 def table(name,rows):
     with (O/name).open('w',encoding='utf-8-sig',newline='') as f:
         w=csv.DictWriter(f,fieldnames=list(rows[0]));w.writeheader()
@@ -75,7 +79,13 @@ def ap(y,s):
     ends=np.r_[np.flatnonzero(values[:-1]!=values[1:]),len(y)-1]
     tp=np.cumsum(yy,dtype=np.int64)[ends]
     result=float(np.dot(np.diff(np.r_[0,tp]),tp/(ends+1))/tp[-1])
-    other=float(average_precision_score(y,s));assert abs(result-other)<1e-12;CHECKS+=1
+    # Independent threshold-group path: no sorting positive labels by sample rank.
+    unique,inverse=np.unique(s,return_inverse=True)
+    totals=np.bincount(inverse,minlength=len(unique))[::-1]
+    positives=np.bincount(inverse,weights=y.astype(np.int64),minlength=len(unique))[::-1]
+    grouped_tp=np.cumsum(positives);grouped_n=np.cumsum(totals)
+    other=float(np.sum((positives/grouped_tp[-1])*(grouped_tp/grouped_n)))
+    assert abs(result-other)<1e-12;CHECKS+=1
     return result
 
 
@@ -231,7 +241,7 @@ def main():
     write(O/'INPUT_SHA256.json',INPUTS)
     write(O/'CPU_ACCEPTANCE.json',dict(status='passed',seconds=time.monotonic()-started,independent_checks=CHECKS,
         groups=32,source_student_marginals_exact=True,boundary_partition_exact=True,all_probe_zero_lora_matches_source=True,
-        all_common_reference_support_retained=True,AP_independent_sklearn_checked=True,neural_calls=0))
+        all_common_reference_support_retained=True,AP_independent_threshold_group_checked=True,neural_calls=0))
     report(summaries,delta,event_rows,boundary_events,group_events,probes,endpoint)
     if not REMOTE:
         S.mkdir(parents=True,exist_ok=True)
