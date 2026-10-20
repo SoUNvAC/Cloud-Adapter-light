@@ -34,6 +34,16 @@ def collect():
         shutil.copyfile(R/n,code/Path(n).name)
     for p in (R/'src/tools').glob('*phase302*.py'):
         if p.is_file():shutil.copyfile(p,code/p.name)
+    # Preserve committed model/config implementation at the actual GPU launch commit.
+    initial=load(REMOTE/'EXECUTION_LOCK.json')['git_commit']
+    paths=['src/cloud_adapter/models','src/configs']
+    subprocess.run(['git','diff','--exit-code',initial,'--']+paths,cwd=R,check=True,capture_output=True)
+    snapshot=code/'source_model_config.tar'
+    with snapshot.open('wb') as f:
+        subprocess.run(['git','archive',initial]+paths,cwd=R,stdout=f,check=True)
+    write(REMOTE/'BASE_CODE_PROVENANCE.json',dict(gpu_launch_commit=initial,
+        model_config_tree_unchanged=True,snapshot='code/source_model_config.tar',snapshot_sha256=sha(snapshot),
+        provenance_acquired='After GPU termination, compared working model/config tree against GPU launch commit'))
     shutil.copyfile(R/'src/research_plans/phase302.md',code/'phase302.md')
     excluded={'delivery.tar.gz','BACKUP_MANIFEST.json','DELIVERY_RECEIPT.json'}
     files=sorted(p for p in REMOTE.rglob('*') if p.is_file() and p.relative_to(REMOTE).parts[0] not in excluded)
