@@ -1,0 +1,12 @@
+{
+  "stage": "evaluate",
+  "status": "completed",
+  "calls": 576,
+  "step": 31,
+  "kind": "LoRA_eval",
+  "seconds": 131.25587322202045,
+  "cpu_peak_bytes": 1789280256,
+  "gpu_peak_allocated": 387318784,
+  "gpu_peak_reserved": 553648128,
+  "PID": 1626900
+}

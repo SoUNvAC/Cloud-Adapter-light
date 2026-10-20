@@ -1,0 +1,11 @@
+{
+  "status": "waiting_for_local_memory",
+  "available_physical_bytes": 3365498880,
+  "required_host_free_bytes": 4000000000,
+  "estimated_analysis_working_bytes": 2500000000,
+  "estimate_is_not_measurement": true,
+  "launch_admission_bytes": 6500000000,
+  "reason": "Reserve estimated CPU working memory while maintaining protocol host-free minimum",
+  "neural_calls": 0,
+  "remote_analysis_allowed": false
+}

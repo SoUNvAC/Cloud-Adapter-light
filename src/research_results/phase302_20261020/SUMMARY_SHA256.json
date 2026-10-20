@@ -1,0 +1,33 @@
+{
+  "status": "gpu_completed_local_cpu_waiting",
+  "code": {
+    "src\\tools\\prepare_phase302.py": "a02c8a642929287d5bf4278f71da44f7bca7965cc595cfd59254ef1cecb00828",
+    "src\\tools\\phase302_images.py": "aecaccb41f592141eb17f1b63044626ee5b957eab8e05425e53bf5a7cc8897f8",
+    "src\\tools\\execute_phase302.py": "5856b9f15211174453a7ee84b2fcda0ad8b58efef938968a9ae4aa9496245e93",
+    "src\\tools\\deploy_phase302.py": "3e217e8dbb263b0912ce5bf683cb83f5712e1092d1980c3e7d910e765f475c1b",
+    "src\\tools\\transfer_phase302.py": "560c214062938b24b1b84061d49ca7c5755d56c569eee46a0eedcff97033682a",
+    "src\\tools\\analyze_phase302.py": "cee8420ca5e07a200d086838837d23c9b20149784051e02a621381ea201cda7b",
+    "src\\tools\\run_phase302_analysis.py": "80618e33b127bad40f7a27fdcc656dd314f415bc86b6def1cd183a1c74a642e9",
+    "src\\tools\\finalize_phase302.py": "b5690ef61812c344202649e584509e73853c570bf9692c8dc6e3bcc1f2abd6ea",
+    "src\\tools\\verify_phase302_summary.py": "6a9a1058324f13625867f03d502d0e3904436b850ab2469f25f3b74574baa582"
+  },
+  "files": {
+    "phase302.md": "bf80de1c40a6e96b46ee3e8de5eef4b49bf9a1df73c57b03351047f7a257f327",
+    "SOURCE_ADMISSION.json": "b97fda545d9639f4088c0309ce687798260ca95c402734b8a4375f6137052897",
+    "MODEL_ACCEPTANCE.json": "92061693e3c3371a80cc85b770178b39f0480c297d9fdeb118a037540f38973a",
+    "PREPROCESS_ACCEPTANCE.json": "c4bd2654f58ee087609720c271142933dd02902a2827d996fe95407c241a40e9",
+    "ENDPOINT_LOCK.json": "3be62bd217e5f552d774000a4987b99e214b1a9bea14b4a866ff44b80ac75ed9",
+    "EXECUTION_LOCK.json": "3fdcbd62553a94dd9781af3bffc14b3b7c9fff71a3f4543ae92d7fd1a36f3b3b",
+    "EVALUATION_LOCK.json": "d8a47819421bd51b4dcdd351dc7dd35f7cc9806fba711966e898a270ff89c59e",
+    "train_RECEIPT.json": "396fb7eb3d343e320b3b44307e658f3ae9feae5fd60dbcbb53877f1e3a2ce4da",
+    "evaluate_RECEIPT.json": "30217eb370f550b6d420362a6dffd352a4e82bcb41f62f660c883bf849e1a4c0",
+    "PSEUDO_LOCK.json": "d6f2081e1ff879e4eeab2467e15e4830a63229622761a6669f9824d3e5aa3fbb",
+    "PROTOCOL_LOCK.json": "a01b159eb0398b9025e326873ac3e13cf90ea7a35d5f82b25413962b51ee95e9",
+    "CONTROLLER.json": "f94dada9ee72a3fef8e1904af398e59520ccf28c6d634bcc6023a6591d69a068",
+    "CALLS.jsonl": "20901a0104d7f00614e446525ff71de5ecd5c736c3b856706b834ffd57085573",
+    "STAGE_LEDGER.jsonl": "a18f26fcf3ed1275417b2fb080eaf805792e6fcd3c5d97beba2354a0090b9db2",
+    "BACKUP_RECEIPT.json": "4b91621fefe8272ecf588caf0c324c7075f2aa437a4c4d93fb9dccd472065622",
+    "LOCAL_ANALYSIS_WAIT.json": "12c003ff55df64fc87703e15c84102f4adb0476a8688ed695eb950d52d5b95c7",
+    "EXECUTION_SUMMARY.json": "0a066128d3644d0f88176f5c452f5afd9bb4222608f5f0f87622a48c93ffda00"
+  }
+}

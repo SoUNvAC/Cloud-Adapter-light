@@ -1,0 +1,25 @@
+{
+  "status": "admitted",
+  "fit_count": 100,
+  "evaluation_count": 32,
+  "source_sha256": "64dd9a20288c35ab3362b8b1c1dafc216d9c44d60868475177e139d6be859dc9",
+  "input_files": {
+    "FIT_IMAGES.json": "1a328d6e5b7d88fea3aa3dda89205d79ab1562c4fac76361fcc4e31219e26ea5",
+    "EVAL_IMAGES.json": "7bc7fd23b684f9ab8e7072cab119b1412a56971a2592ac791f580375f6e696a4",
+    "CROP_SCHEDULE.json": "444064f80e526acdfbd30eec4e63a557cf3015e9d2c2a0825f1b189cd515555f"
+  },
+  "protocol_sha256": "2869e66320222b638afe2a3e2762045e0954c4c3d156f013682d6b1c912b4ba4",
+  "code": {
+    "src/tools/prepare_phase302.py": "a02c8a642929287d5bf4278f71da44f7bca7965cc595cfd59254ef1cecb00828"
+  },
+  "git_commit": "271d87a7532071261de40a9bdfcf7f47b3460beb",
+  "source_audit_sha256": "b97fda545d9639f4088c0309ce687798260ca95c402734b8a4375f6137052897",
+  "seed": 30201,
+  "cap_calls": 4000,
+  "cap_seconds": 14400,
+  "cap_gpu_bytes": 21474836480,
+  "cap_cpu_bytes": 17179869184,
+  "cap_new_bytes": 6000000000,
+  "min_available_bytes": 4000000000,
+  "neural_calls": 0
+}

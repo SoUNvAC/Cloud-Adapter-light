@@ -1,0 +1,33 @@
+{
+  "status": "gpu_completed_local_cpu_waiting",
+  "calls": 1506,
+  "call_kinds": {
+    "LoRA_evaluation_window": 288,
+    "Source_evaluation_window": 288,
+    "acceptance_gradient": 1,
+    "acceptance_lora_False": 1,
+    "acceptance_lora_True": 1,
+    "acceptance_source_original": 1,
+    "acceptance_source_probe": 3,
+    "acceptance_source_semantic": 1,
+    "probe_0": 4,
+    "probe_100": 4,
+    "probe_1000": 4,
+    "probe_500": 4,
+    "teacher_window": 900,
+    "train": 6
+  },
+  "updates": 6,
+  "skipped": 994,
+  "accepted_pseudo_pixels": 101857,
+  "total_valid_fit_pixels": 104448397,
+  "coverage_fraction": 0.0009751896910394901,
+  "gpu_pipeline_seconds": 553.6528776910272,
+  "peak_gpu_allocated": 1284547072,
+  "peak_gpu_reserved": 1547698176,
+  "peak_cpu_bytes": 2058125312,
+  "initial_lora_sha256": "b1c85c6f7a62eb465a994a5a2803c0c7ee1ebde097b624aae36abcf2a01aee3e",
+  "final_lora_sha256": "01ed686d11e250b596c340dab4f7c28fad5050bc0a33bcce5ee17e4384288ec2",
+  "frozen_base_identical": true,
+  "backup_sha256": "6f7ca4aefb80a35d7667ab325faf00463407206916496a6622bd8bc591e9c2c7"
+}

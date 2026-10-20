@@ -1,0 +1,12 @@
+{
+  "stage": "train",
+  "status": "completed",
+  "calls": 930,
+  "step": 1000,
+  "kind": "training",
+  "seconds": 420.6296562749776,
+  "cpu_peak_bytes": 2058125312,
+  "gpu_peak_allocated": 1284547072,
+  "gpu_peak_reserved": 1547698176,
+  "PID": 1626765
+}
