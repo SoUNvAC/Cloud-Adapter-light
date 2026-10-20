@@ -32,6 +32,8 @@ def collect():
     for n,h in load(REMOTE/'EXECUTION_LOCK.json')['code'].items():
         assert sha(R/n)==h,n
         shutil.copyfile(R/n,code/Path(n).name)
+    for p in (R/'src/tools').glob('*phase302*.py'):
+        if p.is_file():shutil.copyfile(p,code/p.name)
     shutil.copyfile(R/'src/research_plans/phase302.md',code/'phase302.md')
     excluded={'delivery.tar.gz','BACKUP_MANIFEST.json','DELIVERY_RECEIPT.json'}
     files=sorted(p for p in REMOTE.rglob('*') if p.is_file() and p.relative_to(REMOTE).parts[0] not in excluded)
