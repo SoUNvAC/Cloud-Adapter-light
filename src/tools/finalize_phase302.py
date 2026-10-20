@@ -1,5 +1,6 @@
 """Publish only backed-up measurements; keep pending local analysis explicit."""
 import json
+import csv
 from pathlib import Path
 import shutil
 from transfer_phase302 import R,load,sha,write
@@ -27,6 +28,9 @@ def main():
     for name in names:shutil.copyfile(D/name,S/name)
     for name in ('BACKUP_RECEIPT.json','LOCAL_ANALYSIS_WAIT.json','LOCAL_ANALYSIS_RESOURCE.json','CPU_ANALYSIS_RESOURCE.json','CPU_BACKUP_RECEIPT.json'):
         if (ROOT/name).exists():shutil.copyfile(ROOT/name,S/name)
+    if (ROOT/'CPU_BACKUP_RECEIPT_attempt1.json').exists():
+        shutil.copyfile(ROOT/'CPU_BACKUP_RECEIPT_attempt1.json',S/'CPU_BACKUP_RECEIPT_attempt1.json')
+        shutil.copyfile(ROOT/'host_cpu_backup/cpu_completion/console.log',S/'CPU_ATTEMPT1_FAILURE.log')
     complete=(ROOT/'analysis/CPU_ACCEPTANCE.json').exists()
     if complete:
         assert load(ROOT/'analysis/CPU_ACCEPTANCE.json')['status']=='passed'
@@ -55,7 +59,21 @@ def main():
         f"- 封存与备份：末步SHA={endpoint['final_sha256']}；{receipt['archived_files']}个归档成员、{receipt['bytes']}字节压缩包，SHA256={receipt['sha256']}。全部新结果（输入锁、初末增量、教师缓存、32组双策略得分、16探针、日志及代码）位于outputs/phase302/phase302_20261020/remote_backup，已逐文件SHA验收。",
         '- 随机性限制：CUDA日志记录了部分算子的非确定性警告，固定seed不等于位级确定性；不抹去警告，不据此追加seed。']
     if complete:
+        rows=list(csv.DictReader((S/'PER_GROUP_METRICS.csv').open(encoding='utf-8-sig')))
+        baseline={r['product']:r for r in rows if r['strategy']=='Source'}
+        changes=sorted([(float(r['mIoU_pct'])-float(baseline[r['product']]['mIoU_pct']),r) for r in rows if r['strategy']=='LoRA'],key=lambda x:x[0])
+        change,most=changes[0];before=baseline[most['product']]
+        old_matrix=json.loads(before['confusion']);new_matrix=json.loads(most['confusion'])
+        note=(f"补充逐组核对：{sum(d>0 for d,_ in changes)}组改善、{sum(d<0 for d,_ in changes)}组下降、{sum(d==0 for d,_ in changes)}组不变；最大组均损失来自{most['product']}，"
+            f"mIoU {float(before['mIoU_pct']):.3f}%→{float(most['mIoU_pct']):.3f}%（{change:+.3f}pp）。"
+            f"该组真值支持={list(map(sum,old_matrix))}，学生混淆={new_matrix}；"
+            '原全Surface组新增Cloud/Shadow预测使有union类别从1增至3，仍保留原缺类规则，不能把组均下降解释为全域普遍恶化。'
+            f"伪标签覆盖仅{100*accepted/valid:.6f}%，1000次尝试仅6次更新，不等于1000次梯度训练。")
+        result=(S/'RESULT.md').read_text(encoding='utf-8')
+        (S/'RESULT.md').write_text(result.replace('## 结论分析',note+'\n\n## 结论分析'),encoding='utf-8')
         lines += [f"- CPU执行变更：用户因本机硬件/内存不足，明确同意改在gzs宿主机执行独立CPU统计；此前本地等待记录作为历史保留。实际位置={cpu_resource['execution']}，耗时{cpu_resource['seconds']:.3f}秒、峰值工作集{cpu_resource['peak_working_set_bytes']}字节、最低可用内存{cpu_resource['minimum_available_physical_bytes']}字节；零新增模型前向。",
+            '- CPU失败账本：首次尝试在导入时因缺少sklearn停止，未计算指标；失败日志及完整增量包已回传保留。第二次以现有NumPy的独立排序/阈值分组两路径复核AP、bincount/二维直方图复核混淆，不安装依赖、不更换环境。',
+            '- 主要结果：Cloud→Shadow净减少40,643像元，Surface→Cloud净增加100,374像元；新增Surface→Cloud有88.4%位于参考非边界区，87.9%集中于40XDR组。组均mIoU−2.149pp、池化+0.093pp，前者主要受25XEG缺类规则下的组损失影响；17组改善、6组下降、9组不变。同512四探针净正确+1,840（Surface−284/Cloud+2232/Shadow−108）。单seed、低覆盖描述性结果，不作为全域或因果结论。',
             '- 结果：独立CPU验收通过；全部评价指标、27格错误流、边界与逐组支持及四探针全部时点见RESULT.md与CSV。统计新增文件另包回传并逐文件验SHA，见CPU_BACKUP_RECEIPT.json。最终文件由SUMMARY_SHA256.json锁定。定时检查完成后暂停，不启动下一phase。']
     else:
         wait=load(ROOT/'LOCAL_ANALYSIS_WAIT.json')

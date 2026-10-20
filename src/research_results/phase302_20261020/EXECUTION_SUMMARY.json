@@ -1,5 +1,5 @@
 {
-  "status": "gpu_completed_local_cpu_waiting",
+  "status": "completed",
   "calls": 1506,
   "call_kinds": {
     "LoRA_evaluation_window": 288,

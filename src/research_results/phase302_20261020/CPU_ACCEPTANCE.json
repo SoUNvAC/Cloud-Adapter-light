@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "seconds": 47.517174264998175,
+  "independent_checks": 4174,
+  "groups": 32,
+  "source_student_marginals_exact": true,
+  "boundary_partition_exact": true,
+  "all_probe_zero_lora_matches_source": true,
+  "all_common_reference_support_retained": true,
+  "AP_independent_threshold_group_checked": true,
+  "neural_calls": 0
+}

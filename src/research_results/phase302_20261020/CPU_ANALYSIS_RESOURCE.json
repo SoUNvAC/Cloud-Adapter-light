@@ -1,0 +1,10 @@
+{
+  "status": "completed",
+  "exit_code": 0,
+  "failure": null,
+  "seconds": 47.754112163966056,
+  "peak_working_set_bytes": 2559569920,
+  "minimum_available_physical_bytes": 27867770880,
+  "execution": "gzs host CPU, cloud-lite-pt210",
+  "neural_calls": 0
+}
