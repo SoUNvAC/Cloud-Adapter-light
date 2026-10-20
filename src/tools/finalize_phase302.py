@@ -25,12 +25,13 @@ def main():
         'EXECUTION_LOCK.json','EVALUATION_LOCK.json','train_RECEIPT.json','evaluate_RECEIPT.json','PSEUDO_LOCK.json',
         'PROTOCOL_LOCK.json','CONTROLLER.json','CALLS.jsonl','STAGE_LEDGER.jsonl')
     for name in names:shutil.copyfile(D/name,S/name)
-    for name in ('BACKUP_RECEIPT.json','LOCAL_ANALYSIS_WAIT.json','LOCAL_ANALYSIS_RESOURCE.json'):
+    for name in ('BACKUP_RECEIPT.json','LOCAL_ANALYSIS_WAIT.json','LOCAL_ANALYSIS_RESOURCE.json','CPU_ANALYSIS_RESOURCE.json','CPU_BACKUP_RECEIPT.json'):
         if (ROOT/name).exists():shutil.copyfile(ROOT/name,S/name)
     complete=(ROOT/'analysis/CPU_ACCEPTANCE.json').exists()
     if complete:
         assert load(ROOT/'analysis/CPU_ACCEPTANCE.json')['status']=='passed'
-        assert load(ROOT/'LOCAL_ANALYSIS_RESOURCE.json')['status']=='completed'
+        cpu_resource=load(ROOT/('CPU_ANALYSIS_RESOURCE.json' if (ROOT/'CPU_ANALYSIS_RESOURCE.json').exists() else 'LOCAL_ANALYSIS_RESOURCE.json'))
+        assert cpu_resource['status']=='completed'
         for p in (ROOT/'analysis').iterdir():
             if p.is_file():shutil.copyfile(p,S/p.name)
     pseudo=load(D/'PSEUDO_LOCK.json')['rows'];accepted=sum(r['accepted'] for r in pseudo);valid=sum(r['valid'] for r in pseudo)
@@ -54,7 +55,8 @@ def main():
         f"- 封存与备份：末步SHA={endpoint['final_sha256']}；{receipt['archived_files']}个归档成员、{receipt['bytes']}字节压缩包，SHA256={receipt['sha256']}。全部新结果（输入锁、初末增量、教师缓存、32组双策略得分、16探针、日志及代码）位于outputs/phase302/phase302_20261020/remote_backup，已逐文件SHA验收。",
         '- 随机性限制：CUDA日志记录了部分算子的非确定性警告，固定seed不等于位级确定性；不抹去警告，不据此追加seed。']
     if complete:
-        lines+=['- 结果：本地独立CPU验收通过；全部评价指标、27格错误流、边界与逐组支持及四探针全部时点见RESULT.md与CSV。最终文件由SUMMARY_SHA256.json锁定。定时检查完成后暂停，不启动下一phase。']
+        lines += [f"- CPU执行变更：用户因本机硬件/内存不足，明确同意改在gzs宿主机执行独立CPU统计；此前本地等待记录作为历史保留。实际位置={cpu_resource['execution']}，耗时{cpu_resource['seconds']:.3f}秒、峰值工作集{cpu_resource['peak_working_set_bytes']}字节、最低可用内存{cpu_resource['minimum_available_physical_bytes']}字节；零新增模型前向。",
+            '- 结果：独立CPU验收通过；全部评价指标、27格错误流、边界与逐组支持及四探针全部时点见RESULT.md与CSV。统计新增文件另包回传并逐文件验SHA，见CPU_BACKUP_RECEIPT.json。最终文件由SUMMARY_SHA256.json锁定。定时检查完成后暂停，不启动下一phase。']
     else:
         wait=load(ROOT/'LOCAL_ANALYSIS_WAIT.json')
         lines+=[f"- 当前结果状态：远程训练和固定评价已完成，等待本地CPU统计。本地最近可用物理内存{wait['available_physical_bytes']}字节，未满足4GB最低空闲要求；另为预计2.5GB统计工作集预留空间（估算不是测量）。用户明确要求保留本地分析，未在远程连接真值。当前不报告mIoU、AP或错误流结论。",

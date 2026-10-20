@@ -24,14 +24,16 @@ def main():
     assert load(root/'BACKUP_RECEIPT.json')['all_archive_members_verified']
     if lock['status']=='completed':
         assert load(root/'CPU_ACCEPTANCE.json')['status']=='passed'
-        assert load(root/'LOCAL_ANALYSIS_RESOURCE.json')['minimum_available_physical_bytes']>=4000000000
+        resource=load(root/('CPU_ANALYSIS_RESOURCE.json' if (root/'CPU_ANALYSIS_RESOURCE.json').exists() else 'LOCAL_ANALYSIS_RESOURCE.json'))
+        assert resource['status']=='completed' and resource['minimum_available_physical_bytes']>=4000000000
+        if (root/'CPU_BACKUP_RECEIPT.json').exists():assert load(root/'CPU_BACKUP_RECEIPT.json')['all_archive_members_verified']
     else:
         assert lock['status']=='gpu_completed_local_cpu_waiting'
         assert load(root/'LOCAL_ANALYSIS_WAIT.json')['remote_analysis_allowed'] is False
         assert not (root/'RESULT.md').exists(), 'No final statistics before local CPU analysis'
     print(json.dumps(dict(status='passed',experiment_status=lock['status'],summary_files=len(lock['files']),
         code_files=len(lock['code']),neural_calls=len(calls),actual_updates=end['updates'],
-        local_cpu_analysis_complete=lock['status']=='completed')))
+        independent_cpu_analysis_complete=lock['status']=='completed')))
 
 
 if __name__=='__main__':main()
