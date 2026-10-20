@@ -193,8 +193,9 @@ def main():
             confusion=pooled_metric['confusion']))
         del p,s;gc.collect()
     table('FIXED_RESULTS.csv',summaries)
-    delta={k:summaries[1][k]-summaries[0][k] for k in summaries[0] if k.endswith('_pct') and summaries[0][k] is not None and summaries[1][k] is not None}
+    delta={k[:-4]+'_pp':summaries[1][k]-summaries[0][k] for k in summaries[0] if k.endswith('_pct') and summaries[0][k] is not None and summaries[1][k] is not None}
     write(O/'RESULT_DIFFERENCES_PP.json',delta)
+    table('RESULT_DIFFERENCES_PP.csv',[dict(strategy='LoRA minus Source',**delta)])
     probes=[];probe_cells=[];full_cells=[]
     fit_masks={r['product']:r for r in pin(R/'outputs/phase208/phase208_20261020/12201_FIT_INPUT_LOCK.json')['bindings']}
     with zipfile.ZipFile(masks_path) as masks:
@@ -251,7 +252,12 @@ def report(summaries,delta,events,boundaries,groups,probes,endpoint):
             '/'.join(fmt(r[k]) for k in ('Surface_IoU_pct','Cloud_IoU_pct','Shadow_IoU_pct')),
             f"{fmt(r['macro_AP_pct'])}/{fmt(r['AP_pct'])}",fmt(r['macro_recall_pct']),f"{fmt(r['macro_FPR_pct'])}/{fmt(r['max_group_FPR_pct'])}"]
         lines.append('|'+ '|'.join(values)+'|')
-    lines+=['',f"两策略均保留32组；AP有效组{summaries[0]['AP_groups']}/{summaries[1]['AP_groups']}。差值LoRA−Source：组均mIoU {delta['group_mean_mIoU_pct']:+.3f}pp，池化mIoU {delta['pooled_mIoU_pct']:+.3f}pp；其余差值见RESULT_DIFFERENCES_PP.json。IoU对union=0类取NA，组mIoU仅平均有union的类；AP要求正负均存在，宏召回仅正支持组，宏误报仅负支持组。保留所有原组与缺类惩罚。",'',
+    lines.append('|'+ '|'.join(['Δ (pp)',
+        f"{fmt(delta.get('group_mean_mIoU_pp'))}/{fmt(delta.get('pooled_mIoU_pp'))}",
+        '/'.join(fmt(delta.get(k)) for k in ('Surface_IoU_pp','Cloud_IoU_pp','Shadow_IoU_pp')),
+        f"{fmt(delta.get('macro_AP_pp'))}/{fmt(delta.get('AP_pp'))}",fmt(delta.get('macro_recall_pp')),
+        f"{fmt(delta.get('macro_FPR_pp'))}/{fmt(delta.get('max_group_FPR_pp'))}"])+'|')
+    lines+=['',f"两策略绝对值单位%，Δ行单位pp；均保留32组；AP有效组{summaries[0]['AP_groups']}/{summaries[1]['AP_groups']}。全部差值见RESULT_DIFFERENCES_PP.json。IoU对union=0类取NA，组mIoU仅平均有union的类；AP要求正负均存在，宏召回仅正支持组，宏误报仅负支持组。保留所有原组与缺类惩罚。",'',
         '|错误|Source/学生|消除/新增|净减少|消除中改正/另一错误|错误率差pp|','|---|---|---|---:|---|---:|']
     for e in events:lines.append(f"|{e['error']}|{e['Source_errors']}/{e['student_errors']}|{e['removed']}/{e['added']}|{e['net_reduction']}|{e['corrected']}/{e['changed_to_other_error']}|{fmt(e['rate_change_pp'])}|")
     for error in ('Cloud->Shadow','Surface->Cloud'):
