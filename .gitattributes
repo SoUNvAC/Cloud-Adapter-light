@@ -56,3 +56,7 @@ src/research_plans/PHASE125_REGNET_BRANCH_CLOSEOUT_20261017.md -text
 src/tools/*phase300* -text whitespace=cr-at-eol
 src/research_plans/phase300.md -text whitespace=cr-at-eol
 src/research_results/phase300_20261020/** -text whitespace=cr-at-eol
+
+src/tools/*phase301* -text whitespace=cr-at-eol
+src/research_plans/phase301.md -text whitespace=cr-at-eol
+src/research_results/phase301_20261020/** -text whitespace=cr-at-eol
