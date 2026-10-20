@@ -10,6 +10,23 @@ class FixedRules(unittest.TestCase):
         self.assertTrue(np.isnan(result[1]))
         self.assertEqual(float(np.nanmean(result)),1.)
 
+    def test_group_mean_not_pixel_weighted(self):
+        large = np.array([[1000,0,0],[0,0,0],[0,0,0]])
+        small = np.array([[0,1,0],[0,0,0],[0,0,0]])
+        group_mean = np.mean([np.nanmean(analysis.ious(m)) for m in (large,small)])
+        pooled = np.nanmean(analysis.ious(large+small))
+        self.assertEqual(group_mean,.5)
+        self.assertNotEqual(group_mean,pooled)
+
+    def test_ap_ties_and_missing_positives(self):
+        result,_ = analysis.reference.metric(np.array([2,0,0],np.uint8),
+             np.array([2,2,0],np.uint8),np.array([.8,.8,.1],np.float32))
+        self.assertEqual(result['AP'],.5)
+        missing,_ = analysis.reference.metric(np.array([0,1],np.uint8),
+             np.array([0,1],np.uint8),np.array([.1,.2],np.float32))
+        self.assertIsNone(missing['AP'])
+        self.assertIsNone(missing['recall'])
+
     def test_oracle_ties_and_global_budget(self):
         groups = {
             'a':dict(y=np.array([2,0,0]),scores={'R4':np.array([.8,.8,.2])}),
