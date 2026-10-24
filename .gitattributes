@@ -63,3 +63,6 @@ src/research_results/phase301_20261020/** -text whitespace=cr-at-eol
 src/tools/*phase302* -text whitespace=cr-at-eol
 src/research_plans/phase302.md -text whitespace=cr-at-eol
 src/research_results/phase302_20261020/** -text whitespace=cr-at-eol
+src/tools/*phase303* -text whitespace=cr-at-eol
+src/research_plans/phase303.md -text whitespace=cr-at-eol
+src/research_results/phase303_20261024/** -text whitespace=cr-at-eol
