@@ -1,0 +1,20 @@
+{
+  "events": [
+    {
+      "event": "Initial diagnostic used unavailable remote rg",
+      "resolution": "Read ps output instead; no experiment calls"
+    },
+    {
+      "event": "Local SSH Python status command quoting failed",
+      "resolution": "Replaced with cat/tail; no worker launched"
+    },
+    {
+      "event": "One SSH kex connection closed during status check",
+      "resolution": "Single read-only retry succeeded"
+    },
+    {
+      "event": "scp multi-source filename protocol mismatch",
+      "resolution": "Single-file EXECUTION_LOCK backup succeeded; no final backup started"
+    }
+  ]
+}
