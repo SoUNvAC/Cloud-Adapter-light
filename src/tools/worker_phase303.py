@@ -65,6 +65,7 @@ def recover():
     rows,schedule,locked=inputs();guard(rows)
     assert sys.executable=='/home/scv/miniconda3/envs/cloud-lite-pt210/bin/python'
     assert torch.__version__=='2.1.0+cu121' and torch.cuda.is_available()
+    torch.cuda.reset_peak_memory_stats()
     torch.set_num_threads(4);torch.backends.cuda.matmul.allow_tf32=False;torch.backends.cudnn.allow_tf32=False
     torch.backends.cudnn.benchmark=False;torch.use_deterministic_algorithms(True,warn_only=True)
     sys.path.insert(0,str(R/'src'))
@@ -106,7 +107,9 @@ def recover():
     assert all(torch.equal(model.state_dict()[n].cpu(),v) for n,v in base.items())
     table('RECONSTRUCTION_RECEIPTS.csv',results)
     write(ROOT/'RECOVERY_ACCEPTANCE.json',dict(status='passed',new_products=96,reconstruction_products=1,
-        calls=sum(1 for _ in (ROOT/'CALLS.jsonl').open()),frozen_source_unchanged=True,maximum_tolerance=1e-6))
+        calls=sum(1 for _ in (ROOT/'CALLS.jsonl').open()),frozen_source_unchanged=True,maximum_tolerance=1e-6,
+        peak_gpu_allocated_bytes=torch.cuda.max_memory_allocated(),peak_gpu_reserved_bytes=torch.cuda.max_memory_reserved(),
+        torch_version=torch.__version__,numpy_version=np.__version__,gpu=torch.cuda.get_device_name()))
 
 
 def diagnose():
