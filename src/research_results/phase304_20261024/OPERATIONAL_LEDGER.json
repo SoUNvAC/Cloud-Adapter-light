@@ -26,6 +26,12 @@
     {
       "event": "Additional read-only SSH kex failures at heartbeat15:28UTC and16:13UTC",
       "resolution": "Single status-read retries succeeded; no duplicate model calls"
+    },
+    {
+      "event": "First final backup returned empty stream, 0 members received",
+      "diagnosis": "Python3.10 tarfile.open(w|gz) rejects compresslevel; confirmed with in-memory empty-stream reproduction, remote BACKUP_FILES exists, no stream receipt or active exporter",
+      "recovery": "New transfer_phase304_recovery01.py wraps tar w| in gzip.GzipFile; preserve failed manifest and empty receive directory before controlled recovery",
+      "experiment_repeated": false
     }
   ]
 }
