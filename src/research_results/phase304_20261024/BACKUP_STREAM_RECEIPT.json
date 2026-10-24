@@ -1,0 +1,11 @@
+{
+  "stream_sha256": "c55167244774c945a755225ea0c9f3af8d56b7dd194ea406c436aee3f5655c26",
+  "stream_bytes": 1810744045,
+  "files": 354,
+  "raw_bytes": 2070839865,
+  "manifest_sha256": "32d649e09babd02d02c522864aee9bdc16ad4b72415aa0190df23c5e90672d7c",
+  "archive_persisted": false,
+  "two_copy_bytes": 4141679730,
+  "all_archive_members_verified": true,
+  "all_stream_members_verified": true
+}

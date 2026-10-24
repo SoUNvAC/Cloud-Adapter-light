@@ -1,0 +1,10 @@
+{
+  "status": "completed",
+  "PID": 1737534,
+  "seconds": 102.4734487120295,
+  "runtime": "/home/scv/miniconda3/envs/cloud-lite-pt210/bin/python",
+  "torch": "2.1.0+cu121",
+  "gpu": "NVIDIA GeForce RTX 4090 D",
+  "gpu_peak_allocated": 383910912,
+  "gpu_peak_reserved": 553648128
+}

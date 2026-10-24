@@ -1,0 +1,1607 @@
+{
+  "status": "passed",
+  "rows": [
+    {
+      "product": "S2A_MSIL1C_20180310T165111_N0206_R026_T17VNJ_20180310T220933",
+      "file": "/home/scv/shared/phase302_20261020/evaluation/Source_S2A_MSIL1C_20180310T165111_N0206_R026_T17VNJ_20180310T220933.npz",
+      "sha256": "99559720312bcc26259370b553555717b3b696b97bb2f0efd34cfc083c3bff83",
+      "input_sha256": "b52d48cc573234ba74a561d386798fb136374636a8104f71568ba8660aebbdd8",
+      "valid": 1044484,
+      "support_sha256": "c43ab6edfefba005a30392eefefd7f46938ed42adbefe87cceda6da0f0853797",
+      "source_sha256": "64dd9a20288c35ab3362b8b1c1dafc216d9c44d60868475177e139d6be859dc9",
+      "windows": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          256
+        ],
+        [
+          0,
+          510
+        ],
+        [
+          256,
+          0
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          510
+        ],
+        [
+          510,
+          0
+        ],
+        [
+          510,
+          256
+        ],
+        [
+          510,
+          510
+        ]
+      ],
+      "source_same512_gate": true,
+      "source_full_score_raw_hashes_reproduced": true,
+      "score": "mean semantic s then softmax(s)[2]"
+    },
+    {
+      "product": "S2B_MSIL1C_20180822T014649_N0206_R017_T56WNB_20180822T032508",
+      "file": "/home/scv/shared/phase302_20261020/evaluation/Source_S2B_MSIL1C_20180822T014649_N0206_R017_T56WNB_20180822T032508.npz",
+      "sha256": "bdb459de7ba2c9ec12b616ad427c1190aea80dbcaadcf95d4b5b3b779f0ed89e",
+      "input_sha256": "5929a0936b9978e05874487b7e74f6e2924042bc062ebe41162240ee42fab791",
+      "valid": 1044484,
+      "support_sha256": "c43ab6edfefba005a30392eefefd7f46938ed42adbefe87cceda6da0f0853797",
+      "source_sha256": "64dd9a20288c35ab3362b8b1c1dafc216d9c44d60868475177e139d6be859dc9",
+      "windows": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          256
+        ],
+        [
+          0,
+          510
+        ],
+        [
+          256,
+          0
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          510
+        ],
+        [
+          510,
+          0
+        ],
+        [
+          510,
+          256
+        ],
+        [
+          510,
+          510
+        ]
+      ],
+      "source_same512_gate": true,
+      "source_full_score_raw_hashes_reproduced": true,
+      "score": "mean semantic s then softmax(s)[2]"
+    },
+    {
+      "product": "S2A_MSIL1C_20180321T075621_N0206_R035_T34HGK_20180321T101406",
+      "file": "/home/scv/shared/phase302_20261020/evaluation/Source_S2A_MSIL1C_20180321T075621_N0206_R035_T34HGK_20180321T101406.npz",
+      "sha256": "aabb43b9a2934552b256c4329ce187b78d3a1d2abe28f9eb70117699c280c48e",
+      "input_sha256": "dfea13b63e7053b3cfb00e17652a0426ef2d6cfc0630847b7d7a8425531e71ac",
+      "valid": 1044484,
+      "support_sha256": "c43ab6edfefba005a30392eefefd7f46938ed42adbefe87cceda6da0f0853797",
+      "source_sha256": "64dd9a20288c35ab3362b8b1c1dafc216d9c44d60868475177e139d6be859dc9",
+      "windows": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          256
+        ],
+        [
+          0,
+          510
+        ],
+        [
+          256,
+          0
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          510
+        ],
+        [
+          510,
+          0
+        ],
+        [
+          510,
+          256
+        ],
+        [
+          510,
+          510
+        ]
+      ],
+      "source_same512_gate": true,
+      "source_full_score_raw_hashes_reproduced": true,
+      "score": "mean semantic s then softmax(s)[2]"
+    },
+    {
+      "product": "S2B_MSIL1C_20180612T171859_N0206_R012_T15UVU_20180612T204912",
+      "file": "/home/scv/shared/phase302_20261020/evaluation/Source_S2B_MSIL1C_20180612T171859_N0206_R012_T15UVU_20180612T204912.npz",
+      "sha256": "e1727a331ec7874db0e8374e548c9da555e5dd0694327f41a772cfdce27bc437",
+      "input_sha256": "c96d2be57515a77b65712c33840b7225b32c640867ff6f6e96f61fc785e4bf8d",
+      "valid": 1044484,
+      "support_sha256": "c43ab6edfefba005a30392eefefd7f46938ed42adbefe87cceda6da0f0853797",
+      "source_sha256": "64dd9a20288c35ab3362b8b1c1dafc216d9c44d60868475177e139d6be859dc9",
+      "windows": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          256
+        ],
+        [
+          0,
+          510
+        ],
+        [
+          256,
+          0
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          510
+        ],
+        [
+          510,
+          0
+        ],
+        [
+          510,
+          256
+        ],
+        [
+          510,
+          510
+        ]
+      ],
+      "source_same512_gate": true,
+      "source_full_score_raw_hashes_reproduced": true,
+      "score": "mean semantic s then softmax(s)[2]"
+    },
+    {
+      "product": "S2B_MSIL1C_20180824T111239_N0206_R051_T28LGP_20180824T164334",
+      "file": "/home/scv/shared/phase302_20261020/evaluation/Source_S2B_MSIL1C_20180824T111239_N0206_R051_T28LGP_20180824T164334.npz",
+      "sha256": "15d369aa0b96b24f57bd67f2015c764e26084b7d1802c4fd283fc0048b65c6bd",
+      "input_sha256": "12a50a94661d7c9415195b011c9eeffe2f06d3737bd74aed1bd57ced2b6f6324",
+      "valid": 1044484,
+      "support_sha256": "c43ab6edfefba005a30392eefefd7f46938ed42adbefe87cceda6da0f0853797",
+      "source_sha256": "64dd9a20288c35ab3362b8b1c1dafc216d9c44d60868475177e139d6be859dc9",
+      "windows": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          256
+        ],
+        [
+          0,
+          510
+        ],
+        [
+          256,
+          0
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          510
+        ],
+        [
+          510,
+          0
+        ],
+        [
+          510,
+          256
+        ],
+        [
+          510,
+          510
+        ]
+      ],
+      "source_same512_gate": true,
+      "source_full_score_raw_hashes_reproduced": true,
+      "score": "mean semantic s then softmax(s)[2]"
+    },
+    {
+      "product": "S2A_MSIL1C_20180410T214911_N0206_R043_T02LKH_20180410T231102",
+      "file": "/home/scv/shared/phase302_20261020/evaluation/Source_S2A_MSIL1C_20180410T214911_N0206_R043_T02LKH_20180410T231102.npz",
+      "sha256": "0ed58310ca674417ed2657b85a1d3aee5fb7d50b7d3cc02475551447177e24b2",
+      "input_sha256": "4e5adb74956e82dd9ffbdbb94479fb0954da9110673607c225e554e802d59233",
+      "valid": 1044484,
+      "support_sha256": "c43ab6edfefba005a30392eefefd7f46938ed42adbefe87cceda6da0f0853797",
+      "source_sha256": "64dd9a20288c35ab3362b8b1c1dafc216d9c44d60868475177e139d6be859dc9",
+      "windows": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          256
+        ],
+        [
+          0,
+          510
+        ],
+        [
+          256,
+          0
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          510
+        ],
+        [
+          510,
+          0
+        ],
+        [
+          510,
+          256
+        ],
+        [
+          510,
+          510
+        ]
+      ],
+      "source_same512_gate": true,
+      "source_full_score_raw_hashes_reproduced": true,
+      "score": "mean semantic s then softmax(s)[2]"
+    },
+    {
+      "product": "S2B_MSIL1C_20180701T074609_N0206_R135_T38TNN_20180701T100320",
+      "file": "/home/scv/shared/phase302_20261020/evaluation/Source_S2B_MSIL1C_20180701T074609_N0206_R135_T38TNN_20180701T100320.npz",
+      "sha256": "4eecc571b7232ed05e086534f6e4d01244658c0813d425bff512b258c60b142b",
+      "input_sha256": "c0a11fa695a613f6cce3bcd43cfd14b75be7914d7704a9ffd1fbd91db697a949",
+      "valid": 1044484,
+      "support_sha256": "c43ab6edfefba005a30392eefefd7f46938ed42adbefe87cceda6da0f0853797",
+      "source_sha256": "64dd9a20288c35ab3362b8b1c1dafc216d9c44d60868475177e139d6be859dc9",
+      "windows": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          256
+        ],
+        [
+          0,
+          510
+        ],
+        [
+          256,
+          0
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          510
+        ],
+        [
+          510,
+          0
+        ],
+        [
+          510,
+          256
+        ],
+        [
+          510,
+          510
+        ]
+      ],
+      "source_same512_gate": true,
+      "source_full_score_raw_hashes_reproduced": true,
+      "score": "mean semantic s then softmax(s)[2]"
+    },
+    {
+      "product": "S2B_MSIL1C_20181218T043159_N0207_R133_T46RDT_20181218T072156",
+      "file": "/home/scv/shared/phase302_20261020/evaluation/Source_S2B_MSIL1C_20181218T043159_N0207_R133_T46RDT_20181218T072156.npz",
+      "sha256": "d42bf7744121dd750070078034850e550fbc753197c0d6f765713cc1c644e829",
+      "input_sha256": "61fff0b5589705b154f91f996906cbd0489c7019b6ef388cedb5bac7d342b777",
+      "valid": 1044484,
+      "support_sha256": "c43ab6edfefba005a30392eefefd7f46938ed42adbefe87cceda6da0f0853797",
+      "source_sha256": "64dd9a20288c35ab3362b8b1c1dafc216d9c44d60868475177e139d6be859dc9",
+      "windows": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          256
+        ],
+        [
+          0,
+          510
+        ],
+        [
+          256,
+          0
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          510
+        ],
+        [
+          510,
+          0
+        ],
+        [
+          510,
+          256
+        ],
+        [
+          510,
+          510
+        ]
+      ],
+      "source_same512_gate": true,
+      "source_full_score_raw_hashes_reproduced": true,
+      "score": "mean semantic s then softmax(s)[2]"
+    },
+    {
+      "product": "S2A_MSIL1C_20180710T090601_N0206_R050_T34QBG_20180710T112311",
+      "file": "/home/scv/shared/phase302_20261020/evaluation/Source_S2A_MSIL1C_20180710T090601_N0206_R050_T34QBG_20180710T112311.npz",
+      "sha256": "9bb22b3b0a9a426619abd35dfe52d4ed7760401182456fbf8ded49cc63ca3b95",
+      "input_sha256": "c03afb0bc7c7c7308ada841e8f8bb57bee7d17ff3f46dd8c3bee8e99dc524133",
+      "valid": 1044484,
+      "support_sha256": "c43ab6edfefba005a30392eefefd7f46938ed42adbefe87cceda6da0f0853797",
+      "source_sha256": "64dd9a20288c35ab3362b8b1c1dafc216d9c44d60868475177e139d6be859dc9",
+      "windows": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          256
+        ],
+        [
+          0,
+          510
+        ],
+        [
+          256,
+          0
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          510
+        ],
+        [
+          510,
+          0
+        ],
+        [
+          510,
+          256
+        ],
+        [
+          510,
+          510
+        ]
+      ],
+      "source_same512_gate": true,
+      "source_full_score_raw_hashes_reproduced": true,
+      "score": "mean semantic s then softmax(s)[2]"
+    },
+    {
+      "product": "S2B_MSIL1C_20180131T082149_N0206_R121_T34JDL_20180131T120726",
+      "file": "/home/scv/shared/phase302_20261020/evaluation/Source_S2B_MSIL1C_20180131T082149_N0206_R121_T34JDL_20180131T120726.npz",
+      "sha256": "900f351e52104427e690b83ddb804597976da2f123523091e837b99b7927e040",
+      "input_sha256": "8787d949a18d4d761620147f3238433ff8fcb0fbc3c3700fe0849aab0f723bdd",
+      "valid": 1044484,
+      "support_sha256": "c43ab6edfefba005a30392eefefd7f46938ed42adbefe87cceda6da0f0853797",
+      "source_sha256": "64dd9a20288c35ab3362b8b1c1dafc216d9c44d60868475177e139d6be859dc9",
+      "windows": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          256
+        ],
+        [
+          0,
+          510
+        ],
+        [
+          256,
+          0
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          510
+        ],
+        [
+          510,
+          0
+        ],
+        [
+          510,
+          256
+        ],
+        [
+          510,
+          510
+        ]
+      ],
+      "source_same512_gate": true,
+      "source_full_score_raw_hashes_reproduced": true,
+      "score": "mean semantic s then softmax(s)[2]"
+    },
+    {
+      "product": "S2B_MSIL1C_20180214T025819_N0206_R032_T51TUM_20180214T072411",
+      "file": "/home/scv/shared/phase302_20261020/evaluation/Source_S2B_MSIL1C_20180214T025819_N0206_R032_T51TUM_20180214T072411.npz",
+      "sha256": "c3259769a97d3833da9a96a87da3cc6ae2665708f3205efe4dbd1dda9d131fcd",
+      "input_sha256": "9cb4a825f9a0fd3f56e77836759d0d316d08b1d41236aa027416b213dfe9a832",
+      "valid": 1044484,
+      "support_sha256": "c43ab6edfefba005a30392eefefd7f46938ed42adbefe87cceda6da0f0853797",
+      "source_sha256": "64dd9a20288c35ab3362b8b1c1dafc216d9c44d60868475177e139d6be859dc9",
+      "windows": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          256
+        ],
+        [
+          0,
+          510
+        ],
+        [
+          256,
+          0
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          510
+        ],
+        [
+          510,
+          0
+        ],
+        [
+          510,
+          256
+        ],
+        [
+          510,
+          510
+        ]
+      ],
+      "source_same512_gate": true,
+      "source_full_score_raw_hashes_reproduced": true,
+      "score": "mean semantic s then softmax(s)[2]"
+    },
+    {
+      "product": "S2A_MSIL1C_20181118T084231_N0207_R064_T35RPM_20181118T101007",
+      "file": "/home/scv/shared/phase302_20261020/evaluation/Source_S2A_MSIL1C_20181118T084231_N0207_R064_T35RPM_20181118T101007.npz",
+      "sha256": "1826c9c8ac034f8dbbc1ee54972163ca85845d23966d42836cff92d5535094ff",
+      "input_sha256": "526db4b1aba9ac73c2142f2bee5112022bd34a2aef7e419455f24a777fa25cec",
+      "valid": 1044484,
+      "support_sha256": "c43ab6edfefba005a30392eefefd7f46938ed42adbefe87cceda6da0f0853797",
+      "source_sha256": "64dd9a20288c35ab3362b8b1c1dafc216d9c44d60868475177e139d6be859dc9",
+      "windows": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          256
+        ],
+        [
+          0,
+          510
+        ],
+        [
+          256,
+          0
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          510
+        ],
+        [
+          510,
+          0
+        ],
+        [
+          510,
+          256
+        ],
+        [
+          510,
+          510
+        ]
+      ],
+      "source_same512_gate": true,
+      "source_full_score_raw_hashes_reproduced": true,
+      "score": "mean semantic s then softmax(s)[2]"
+    },
+    {
+      "product": "S2A_MSIL1C_20180703T023551_N0206_R089_T50PLR_20180703T053714",
+      "file": "/home/scv/shared/phase302_20261020/evaluation/Source_S2A_MSIL1C_20180703T023551_N0206_R089_T50PLR_20180703T053714.npz",
+      "sha256": "6d75a6d23ee63b9f346d280ea2847c4b5534970bf57aacb68817cc6b574ab65e",
+      "input_sha256": "25d449805955db8e247b7f98757a4c15130f3cec23e9b3494fbf001069749027",
+      "valid": 1044484,
+      "support_sha256": "c43ab6edfefba005a30392eefefd7f46938ed42adbefe87cceda6da0f0853797",
+      "source_sha256": "64dd9a20288c35ab3362b8b1c1dafc216d9c44d60868475177e139d6be859dc9",
+      "windows": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          256
+        ],
+        [
+          0,
+          510
+        ],
+        [
+          256,
+          0
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          510
+        ],
+        [
+          510,
+          0
+        ],
+        [
+          510,
+          256
+        ],
+        [
+          510,
+          510
+        ]
+      ],
+      "source_same512_gate": true,
+      "source_full_score_raw_hashes_reproduced": true,
+      "score": "mean semantic s then softmax(s)[2]"
+    },
+    {
+      "product": "S2A_MSIL1C_20180805T024551_N0206_R132_T52UDG_20180805T054920",
+      "file": "/home/scv/shared/phase302_20261020/evaluation/Source_S2A_MSIL1C_20180805T024551_N0206_R132_T52UDG_20180805T054920.npz",
+      "sha256": "e3ca371aa17181d333d148f5c2765d10acf8b14774fc22791e983810c72c2b9b",
+      "input_sha256": "bf173b7550301a57e26d96820af715e54d01769ccf1aed0cd002926617dc1e1d",
+      "valid": 1044484,
+      "support_sha256": "c43ab6edfefba005a30392eefefd7f46938ed42adbefe87cceda6da0f0853797",
+      "source_sha256": "64dd9a20288c35ab3362b8b1c1dafc216d9c44d60868475177e139d6be859dc9",
+      "windows": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          256
+        ],
+        [
+          0,
+          510
+        ],
+        [
+          256,
+          0
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          510
+        ],
+        [
+          510,
+          0
+        ],
+        [
+          510,
+          256
+        ],
+        [
+          510,
+          510
+        ]
+      ],
+      "source_same512_gate": true,
+      "source_full_score_raw_hashes_reproduced": true,
+      "score": "mean semantic s then softmax(s)[2]"
+    },
+    {
+      "product": "S2A_MSIL1C_20180211T234711_N0206_R073_T60WWT_20180212T011403",
+      "file": "/home/scv/shared/phase302_20261020/evaluation/Source_S2A_MSIL1C_20180211T234711_N0206_R073_T60WWT_20180212T011403.npz",
+      "sha256": "72446ae115bce7f35d7f6a8825256435251ca3fa5594198d62ae8d43b1ed2d12",
+      "input_sha256": "6a701d7602ab8cebf9b0de943983b77acb1d7030a66c0db983c0292c568f5e0c",
+      "valid": 1044484,
+      "support_sha256": "c43ab6edfefba005a30392eefefd7f46938ed42adbefe87cceda6da0f0853797",
+      "source_sha256": "64dd9a20288c35ab3362b8b1c1dafc216d9c44d60868475177e139d6be859dc9",
+      "windows": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          256
+        ],
+        [
+          0,
+          510
+        ],
+        [
+          256,
+          0
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          510
+        ],
+        [
+          510,
+          0
+        ],
+        [
+          510,
+          256
+        ],
+        [
+          510,
+          510
+        ]
+      ],
+      "source_same512_gate": true,
+      "source_full_score_raw_hashes_reproduced": true,
+      "score": "mean semantic s then softmax(s)[2]"
+    },
+    {
+      "product": "S2A_MSIL1C_20180804T045701_N0206_R119_T45RTH_20180804T075337",
+      "file": "/home/scv/shared/phase302_20261020/evaluation/Source_S2A_MSIL1C_20180804T045701_N0206_R119_T45RTH_20180804T075337.npz",
+      "sha256": "22cd673ae1894747c585ab6b2df01df994e8d3e27f527624c529fb3d0fbd9830",
+      "input_sha256": "c9fc4613bc9955973da67389299fee63db45ee5fde4bfbea315f8bcab2a1bce2",
+      "valid": 1044484,
+      "support_sha256": "c43ab6edfefba005a30392eefefd7f46938ed42adbefe87cceda6da0f0853797",
+      "source_sha256": "64dd9a20288c35ab3362b8b1c1dafc216d9c44d60868475177e139d6be859dc9",
+      "windows": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          256
+        ],
+        [
+          0,
+          510
+        ],
+        [
+          256,
+          0
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          510
+        ],
+        [
+          510,
+          0
+        ],
+        [
+          510,
+          256
+        ],
+        [
+          510,
+          510
+        ]
+      ],
+      "source_same512_gate": true,
+      "source_full_score_raw_hashes_reproduced": true,
+      "score": "mean semantic s then softmax(s)[2]"
+    },
+    {
+      "product": "S2B_MSIL1C_20181004T102019_N0206_R065_T32TML_20181004T141056",
+      "file": "/home/scv/shared/phase302_20261020/evaluation/Source_S2B_MSIL1C_20181004T102019_N0206_R065_T32TML_20181004T141056.npz",
+      "sha256": "0c1e6f8c094a57bf52165ea81f580270ebf041d3fef2a106e3781930edd6dddd",
+      "input_sha256": "9ee21eedf219dd3481dc4506eb865b985bb3dddc536164030f8077299fce3765",
+      "valid": 1044484,
+      "support_sha256": "c43ab6edfefba005a30392eefefd7f46938ed42adbefe87cceda6da0f0853797",
+      "source_sha256": "64dd9a20288c35ab3362b8b1c1dafc216d9c44d60868475177e139d6be859dc9",
+      "windows": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          256
+        ],
+        [
+          0,
+          510
+        ],
+        [
+          256,
+          0
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          510
+        ],
+        [
+          510,
+          0
+        ],
+        [
+          510,
+          256
+        ],
+        [
+          510,
+          510
+        ]
+      ],
+      "source_same512_gate": true,
+      "source_full_score_raw_hashes_reproduced": true,
+      "score": "mean semantic s then softmax(s)[2]"
+    },
+    {
+      "product": "S2A_MSIL1C_20180602T081011_N0206_R078_T36PWC_20180602T115947",
+      "file": "/home/scv/shared/phase302_20261020/evaluation/Source_S2A_MSIL1C_20180602T081011_N0206_R078_T36PWC_20180602T115947.npz",
+      "sha256": "8b2adbe6ec03e75c72b0e3d709890151232161b3238e00d58dadabeae0cd2c98",
+      "input_sha256": "3cf3ee79d1f0388d810d5e785812d46629ee28d00ef3f730078696fb18db750d",
+      "valid": 1044484,
+      "support_sha256": "c43ab6edfefba005a30392eefefd7f46938ed42adbefe87cceda6da0f0853797",
+      "source_sha256": "64dd9a20288c35ab3362b8b1c1dafc216d9c44d60868475177e139d6be859dc9",
+      "windows": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          256
+        ],
+        [
+          0,
+          510
+        ],
+        [
+          256,
+          0
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          510
+        ],
+        [
+          510,
+          0
+        ],
+        [
+          510,
+          256
+        ],
+        [
+          510,
+          510
+        ]
+      ],
+      "source_same512_gate": true,
+      "source_full_score_raw_hashes_reproduced": true,
+      "score": "mean semantic s then softmax(s)[2]"
+    },
+    {
+      "product": "S2B_MSIL1C_20180508T150719_N0206_R082_T18MYV_20180508T202621",
+      "file": "/home/scv/shared/phase302_20261020/evaluation/Source_S2B_MSIL1C_20180508T150719_N0206_R082_T18MYV_20180508T202621.npz",
+      "sha256": "1d989410efa977a81e0383de8bd9efb3089aea8774fc254cf9009c9b68011311",
+      "input_sha256": "91d3f9ce0abf50aa0895c2c3084e0232d056e1d7a32a9d5d6f8afff1666b3047",
+      "valid": 1044484,
+      "support_sha256": "c43ab6edfefba005a30392eefefd7f46938ed42adbefe87cceda6da0f0853797",
+      "source_sha256": "64dd9a20288c35ab3362b8b1c1dafc216d9c44d60868475177e139d6be859dc9",
+      "windows": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          256
+        ],
+        [
+          0,
+          510
+        ],
+        [
+          256,
+          0
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          510
+        ],
+        [
+          510,
+          0
+        ],
+        [
+          510,
+          256
+        ],
+        [
+          510,
+          510
+        ]
+      ],
+      "source_same512_gate": true,
+      "source_full_score_raw_hashes_reproduced": true,
+      "score": "mean semantic s then softmax(s)[2]"
+    },
+    {
+      "product": "S2B_MSIL1C_20180420T103019_N0206_R108_T31TGF_20180420T114307",
+      "file": "/home/scv/shared/phase302_20261020/evaluation/Source_S2B_MSIL1C_20180420T103019_N0206_R108_T31TGF_20180420T114307.npz",
+      "sha256": "f6cde65b50069f2311042c4e92f89e267ba31b19b6299e24413d848fcafa9415",
+      "input_sha256": "ad91b47186750b0f65c2674d8d8c75185dd4f40c6d69eb5d86cc3ef9edb84242",
+      "valid": 1044484,
+      "support_sha256": "c43ab6edfefba005a30392eefefd7f46938ed42adbefe87cceda6da0f0853797",
+      "source_sha256": "64dd9a20288c35ab3362b8b1c1dafc216d9c44d60868475177e139d6be859dc9",
+      "windows": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          256
+        ],
+        [
+          0,
+          510
+        ],
+        [
+          256,
+          0
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          510
+        ],
+        [
+          510,
+          0
+        ],
+        [
+          510,
+          256
+        ],
+        [
+          510,
+          510
+        ]
+      ],
+      "source_same512_gate": true,
+      "source_full_score_raw_hashes_reproduced": true,
+      "score": "mean semantic s then softmax(s)[2]"
+    },
+    {
+      "product": "S2A_MSIL1C_20180430T111621_N0206_R037_T40XDR_20180430T132750",
+      "file": "/home/scv/shared/phase302_20261020/evaluation/Source_S2A_MSIL1C_20180430T111621_N0206_R037_T40XDR_20180430T132750.npz",
+      "sha256": "c9d4018ed052a608d99eb135b10b97f55f337fdc32b5b41c624de0fce68f1b24",
+      "input_sha256": "17902f9de95239338a4e59debdc2f194232a4aa9d3e1905aaf67c74eb5c2ac8e",
+      "valid": 1044484,
+      "support_sha256": "c43ab6edfefba005a30392eefefd7f46938ed42adbefe87cceda6da0f0853797",
+      "source_sha256": "64dd9a20288c35ab3362b8b1c1dafc216d9c44d60868475177e139d6be859dc9",
+      "windows": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          256
+        ],
+        [
+          0,
+          510
+        ],
+        [
+          256,
+          0
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          510
+        ],
+        [
+          510,
+          0
+        ],
+        [
+          510,
+          256
+        ],
+        [
+          510,
+          510
+        ]
+      ],
+      "source_same512_gate": true,
+      "source_full_score_raw_hashes_reproduced": true,
+      "score": "mean semantic s then softmax(s)[2]"
+    },
+    {
+      "product": "S2A_MSIL1C_20180909T151911_N0206_R068_T25XEG_20180909T205122",
+      "file": "/home/scv/shared/phase302_20261020/evaluation/Source_S2A_MSIL1C_20180909T151911_N0206_R068_T25XEG_20180909T205122.npz",
+      "sha256": "9ebdd83a5c4cc23e90a8b0e5000a2c1c3cb899eb46ae83675fd4baa6a6f44b18",
+      "input_sha256": "ef40de0ebd4898ca296bb3b69acd7100b280c8d34de1bdfcafd29d2d78417985",
+      "valid": 1044484,
+      "support_sha256": "c43ab6edfefba005a30392eefefd7f46938ed42adbefe87cceda6da0f0853797",
+      "source_sha256": "64dd9a20288c35ab3362b8b1c1dafc216d9c44d60868475177e139d6be859dc9",
+      "windows": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          256
+        ],
+        [
+          0,
+          510
+        ],
+        [
+          256,
+          0
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          510
+        ],
+        [
+          510,
+          0
+        ],
+        [
+          510,
+          256
+        ],
+        [
+          510,
+          510
+        ]
+      ],
+      "source_same512_gate": true,
+      "source_full_score_raw_hashes_reproduced": true,
+      "score": "mean semantic s then softmax(s)[2]"
+    },
+    {
+      "product": "S2A_MSIL1C_20180707T021601_N0206_R003_T51SXR_20180707T041118",
+      "file": "/home/scv/shared/phase302_20261020/evaluation/Source_S2A_MSIL1C_20180707T021601_N0206_R003_T51SXR_20180707T041118.npz",
+      "sha256": "cd3dbd857ef4ecd03d812081a9f2e2cfb848d0f202b49c87dfd9ec6aa2d39dcc",
+      "input_sha256": "40e5c0ce70c43bb37f0ee402c799270ed81ae82ca56e3cba4fbe0db3067c198a",
+      "valid": 1044484,
+      "support_sha256": "c43ab6edfefba005a30392eefefd7f46938ed42adbefe87cceda6da0f0853797",
+      "source_sha256": "64dd9a20288c35ab3362b8b1c1dafc216d9c44d60868475177e139d6be859dc9",
+      "windows": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          256
+        ],
+        [
+          0,
+          510
+        ],
+        [
+          256,
+          0
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          510
+        ],
+        [
+          510,
+          0
+        ],
+        [
+          510,
+          256
+        ],
+        [
+          510,
+          510
+        ]
+      ],
+      "source_same512_gate": true,
+      "source_full_score_raw_hashes_reproduced": true,
+      "score": "mean semantic s then softmax(s)[2]"
+    },
+    {
+      "product": "S2A_MSIL1C_20180522T183921_N0206_R070_T12VVH_20180522T233949",
+      "file": "/home/scv/shared/phase302_20261020/evaluation/Source_S2A_MSIL1C_20180522T183921_N0206_R070_T12VVH_20180522T233949.npz",
+      "sha256": "af0120e26a871c72f448c43534d2b48f5c431f6db3753670cd029aeef95b7bad",
+      "input_sha256": "4631fbc1b5560937838b8adffa60d3c699ffb9b01ded266d8dcafa2d238893cf",
+      "valid": 1044484,
+      "support_sha256": "c43ab6edfefba005a30392eefefd7f46938ed42adbefe87cceda6da0f0853797",
+      "source_sha256": "64dd9a20288c35ab3362b8b1c1dafc216d9c44d60868475177e139d6be859dc9",
+      "windows": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          256
+        ],
+        [
+          0,
+          510
+        ],
+        [
+          256,
+          0
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          510
+        ],
+        [
+          510,
+          0
+        ],
+        [
+          510,
+          256
+        ],
+        [
+          510,
+          510
+        ]
+      ],
+      "source_same512_gate": true,
+      "source_full_score_raw_hashes_reproduced": true,
+      "score": "mean semantic s then softmax(s)[2]"
+    },
+    {
+      "product": "S2A_MSIL1C_20180317T045651_N0206_R119_T50XMG_20180317T075452",
+      "file": "/home/scv/shared/phase302_20261020/evaluation/Source_S2A_MSIL1C_20180317T045651_N0206_R119_T50XMG_20180317T075452.npz",
+      "sha256": "d329a0104c3af458958017d1fc575e7dc69ab1799c2ce4c4561453c5707259ed",
+      "input_sha256": "4472465b83d4033315bfb6e2bee01216c4fa14fd5856b682c8fafa172409fca5",
+      "valid": 1044484,
+      "support_sha256": "c43ab6edfefba005a30392eefefd7f46938ed42adbefe87cceda6da0f0853797",
+      "source_sha256": "64dd9a20288c35ab3362b8b1c1dafc216d9c44d60868475177e139d6be859dc9",
+      "windows": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          256
+        ],
+        [
+          0,
+          510
+        ],
+        [
+          256,
+          0
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          510
+        ],
+        [
+          510,
+          0
+        ],
+        [
+          510,
+          256
+        ],
+        [
+          510,
+          510
+        ]
+      ],
+      "source_same512_gate": true,
+      "source_full_score_raw_hashes_reproduced": true,
+      "score": "mean semantic s then softmax(s)[2]"
+    },
+    {
+      "product": "S2B_MSIL1C_20181001T165109_N0206_R026_T16UDV_20181001T221311",
+      "file": "/home/scv/shared/phase302_20261020/evaluation/Source_S2B_MSIL1C_20181001T165109_N0206_R026_T16UDV_20181001T221311.npz",
+      "sha256": "5413cfe059deb0c9eb6dac73f6bc6153c38d4791112b439cd1f63a9ffca7049a",
+      "input_sha256": "bf2bbb8f87748c8b5cbf9a5c382b932cf137407591187ce346e473bb9b1d72e5",
+      "valid": 1044484,
+      "support_sha256": "c43ab6edfefba005a30392eefefd7f46938ed42adbefe87cceda6da0f0853797",
+      "source_sha256": "64dd9a20288c35ab3362b8b1c1dafc216d9c44d60868475177e139d6be859dc9",
+      "windows": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          256
+        ],
+        [
+          0,
+          510
+        ],
+        [
+          256,
+          0
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          510
+        ],
+        [
+          510,
+          0
+        ],
+        [
+          510,
+          256
+        ],
+        [
+          510,
+          510
+        ]
+      ],
+      "source_same512_gate": true,
+      "source_full_score_raw_hashes_reproduced": true,
+      "score": "mean semantic s then softmax(s)[2]"
+    },
+    {
+      "product": "S2A_MSIL1C_20180608T152641_N0206_R025_T18MUA_20180608T202221",
+      "file": "/home/scv/shared/phase302_20261020/evaluation/Source_S2A_MSIL1C_20180608T152641_N0206_R025_T18MUA_20180608T202221.npz",
+      "sha256": "8ead6037cb92a81b810e41895bbab0885522d1c9decaee1cce9b0532cda68cd8",
+      "input_sha256": "139cb26eb529041ff6185f730161cce2b7c1667bd13956b6309de71e4da7fa6f",
+      "valid": 1044484,
+      "support_sha256": "c43ab6edfefba005a30392eefefd7f46938ed42adbefe87cceda6da0f0853797",
+      "source_sha256": "64dd9a20288c35ab3362b8b1c1dafc216d9c44d60868475177e139d6be859dc9",
+      "windows": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          256
+        ],
+        [
+          0,
+          510
+        ],
+        [
+          256,
+          0
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          510
+        ],
+        [
+          510,
+          0
+        ],
+        [
+          510,
+          256
+        ],
+        [
+          510,
+          510
+        ]
+      ],
+      "source_same512_gate": true,
+      "source_full_score_raw_hashes_reproduced": true,
+      "score": "mean semantic s then softmax(s)[2]"
+    },
+    {
+      "product": "S2A_MSIL1C_20181114T054101_N0207_R005_T44UNA_20181114T093234",
+      "file": "/home/scv/shared/phase302_20261020/evaluation/Source_S2A_MSIL1C_20181114T054101_N0207_R005_T44UNA_20181114T093234.npz",
+      "sha256": "81b35e7c3bd50b4f97aa3d0d0ce1f41de3e5968524033b080f3ce46f213c86f8",
+      "input_sha256": "2cbf3dff0a6e28e0dcc2f78debbce2949c15d94ab31474f3660347dd5e2ff019",
+      "valid": 1044484,
+      "support_sha256": "c43ab6edfefba005a30392eefefd7f46938ed42adbefe87cceda6da0f0853797",
+      "source_sha256": "64dd9a20288c35ab3362b8b1c1dafc216d9c44d60868475177e139d6be859dc9",
+      "windows": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          256
+        ],
+        [
+          0,
+          510
+        ],
+        [
+          256,
+          0
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          510
+        ],
+        [
+          510,
+          0
+        ],
+        [
+          510,
+          256
+        ],
+        [
+          510,
+          510
+        ]
+      ],
+      "source_same512_gate": true,
+      "source_full_score_raw_hashes_reproduced": true,
+      "score": "mean semantic s then softmax(s)[2]"
+    },
+    {
+      "product": "S2A_MSIL1C_20181118T152621_N0207_R068_T20VPK_20181118T172424",
+      "file": "/home/scv/shared/phase302_20261020/evaluation/Source_S2A_MSIL1C_20181118T152621_N0207_R068_T20VPK_20181118T172424.npz",
+      "sha256": "04c2eb8df443a955e520b90a25c5f5abe5895d71ea689483bd299bb1f5d8481e",
+      "input_sha256": "9859ae51be37b7547e3aaa20de43d21c245993f5a3a29c2b301393de5edb7562",
+      "valid": 1044484,
+      "support_sha256": "c43ab6edfefba005a30392eefefd7f46938ed42adbefe87cceda6da0f0853797",
+      "source_sha256": "64dd9a20288c35ab3362b8b1c1dafc216d9c44d60868475177e139d6be859dc9",
+      "windows": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          256
+        ],
+        [
+          0,
+          510
+        ],
+        [
+          256,
+          0
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          510
+        ],
+        [
+          510,
+          0
+        ],
+        [
+          510,
+          256
+        ],
+        [
+          510,
+          510
+        ]
+      ],
+      "source_same512_gate": true,
+      "source_full_score_raw_hashes_reproduced": true,
+      "score": "mean semantic s then softmax(s)[2]"
+    },
+    {
+      "product": "S2A_MSIL1C_20180922T185101_N0206_R113_T10SEE_20180922T225409",
+      "file": "/home/scv/shared/phase302_20261020/evaluation/Source_S2A_MSIL1C_20180922T185101_N0206_R113_T10SEE_20180922T225409.npz",
+      "sha256": "385b421fbac6fbdca6951f0350d2e5725b7193dc4db4734a599b35c1d49173b5",
+      "input_sha256": "ae9726ab3239cd382556398823d258c09098b5c5d610e0e21a40a9aff8ff22ab",
+      "valid": 1044484,
+      "support_sha256": "c43ab6edfefba005a30392eefefd7f46938ed42adbefe87cceda6da0f0853797",
+      "source_sha256": "64dd9a20288c35ab3362b8b1c1dafc216d9c44d60868475177e139d6be859dc9",
+      "windows": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          256
+        ],
+        [
+          0,
+          510
+        ],
+        [
+          256,
+          0
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          510
+        ],
+        [
+          510,
+          0
+        ],
+        [
+          510,
+          256
+        ],
+        [
+          510,
+          510
+        ]
+      ],
+      "source_same512_gate": true,
+      "source_full_score_raw_hashes_reproduced": true,
+      "score": "mean semantic s then softmax(s)[2]"
+    },
+    {
+      "product": "S2B_MSIL1C_20181111T094229_N0207_R036_T32NKF_20181111T131623",
+      "file": "/home/scv/shared/phase302_20261020/evaluation/Source_S2B_MSIL1C_20181111T094229_N0207_R036_T32NKF_20181111T131623.npz",
+      "sha256": "8106147d2b821bd3c20229fa182f5ddd1f20ea7c89fe8e843aad3e81da027c39",
+      "input_sha256": "6930c1f01d1eb7e13705680ffac1b640d772da935559a04d4b9cbeea02604053",
+      "valid": 1044484,
+      "support_sha256": "c43ab6edfefba005a30392eefefd7f46938ed42adbefe87cceda6da0f0853797",
+      "source_sha256": "64dd9a20288c35ab3362b8b1c1dafc216d9c44d60868475177e139d6be859dc9",
+      "windows": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          256
+        ],
+        [
+          0,
+          510
+        ],
+        [
+          256,
+          0
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          510
+        ],
+        [
+          510,
+          0
+        ],
+        [
+          510,
+          256
+        ],
+        [
+          510,
+          510
+        ]
+      ],
+      "source_same512_gate": true,
+      "source_full_score_raw_hashes_reproduced": true,
+      "score": "mean semantic s then softmax(s)[2]"
+    },
+    {
+      "product": "S2A_MSIL1C_20181021T160311_N0206_R097_T20WNV_20181021T192258",
+      "file": "/home/scv/shared/phase302_20261020/evaluation/Source_S2A_MSIL1C_20181021T160311_N0206_R097_T20WNV_20181021T192258.npz",
+      "sha256": "fa49d16d3dd51ada839f3883e35945b8cca5a498dbc4aa829e8865882cb895bb",
+      "input_sha256": "14a573c71f24fb97d2f0d7eb6748854a50bddb8815e4d1e4fe0d4a30d6cab8cc",
+      "valid": 1044484,
+      "support_sha256": "c43ab6edfefba005a30392eefefd7f46938ed42adbefe87cceda6da0f0853797",
+      "source_sha256": "64dd9a20288c35ab3362b8b1c1dafc216d9c44d60868475177e139d6be859dc9",
+      "windows": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          256
+        ],
+        [
+          0,
+          510
+        ],
+        [
+          256,
+          0
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          510
+        ],
+        [
+          510,
+          0
+        ],
+        [
+          510,
+          256
+        ],
+        [
+          510,
+          510
+        ]
+      ],
+      "source_same512_gate": true,
+      "source_full_score_raw_hashes_reproduced": true,
+      "score": "mean semantic s then softmax(s)[2]"
+    }
+  ],
+  "all32_same_support": true,
+  "additional_Source_calls": 0
+}

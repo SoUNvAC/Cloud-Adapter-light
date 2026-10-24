@@ -1,0 +1,9 @@
+{
+  "status": "completed",
+  "exit_code": 0,
+  "failure": null,
+  "PID": 1737591,
+  "seconds": 440.70278116699774,
+  "peak_cpu_bytes": 1999052800,
+  "minimum_available_memory": 30494093312
+}

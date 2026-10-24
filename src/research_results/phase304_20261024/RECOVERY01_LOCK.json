@@ -1,0 +1,15 @@
+{
+  "reason": "Manifest identity SHA must precede image_guard, which intentionally blocks EVAL_IMAGES opens",
+  "code": {
+    "src/tools/control_phase304_recovery01.py": "1bf4197b091bf99043f0c4871ec7631d730b92d94c8d88b1ed51777fd8248b0f",
+    "src/tools/evaluate_phase304_recovery01.py": "b3cd7ec4787df9ff2dcb2df3fa7e727c9d8eb6826b9441ecf4cd54a555cbb0b7"
+  },
+  "endpoint_sha256": "e74d7f2b175e526ad73020cb78e42ad4c14162d88f01fec72442bb972d8b0f72",
+  "execution_lock_sha256": "35965ffd9733c9a5ed98039ac3f2ce6351d32a6dbfcc41b4abb8fc6f23df9182",
+  "previous_calls": 1852,
+  "failed_evaluation_calls": 0,
+  "training_unchanged": true,
+  "rules_unchanged": true,
+  "original_failure_preserved": true,
+  "git_commit": "a96b7faa9933cbc80c83ca9130c3dfd999c45dd2"
+}

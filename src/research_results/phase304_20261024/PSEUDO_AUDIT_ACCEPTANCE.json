@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "PID": 1737972,
+  "after_seal": true,
+  "seal_epoch": 1792858945.5962644,
+  "completed_epoch": 1792859267.422789,
+  "seconds": 16.366436086012982,
+  "fit_products": 100,
+  "student_audit_probes_only": 4,
+  "image_valid": 104448397,
+  "reference_valid": 104448397,
+  "reference_ignore_excluded": 0,
+  "training_mask_unmodified": true,
+  "accepted_rejected_partition_exact": true,
+  "confusions_histogram_bincount_equal": true,
+  "target_labels_not_used_for_training": true,
+  "extra_forward_calls": 0
+}

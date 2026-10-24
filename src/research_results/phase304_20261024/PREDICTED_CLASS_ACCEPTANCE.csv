@@ -1,0 +1,4 @@
+﻿category,image_valid_predicted,image_only_accepted,predicted_class_acceptance_pct,denominator
+Surface,48824048,40622307,83.20143180262316,all image-valid pixels predicted as this class; NOT precision
+Cloud,49329823,33554491,68.02070017563209,all image-valid pixels predicted as this class; NOT precision
+Shadow,6294526,1292360,20.531490377512142,all image-valid pixels predicted as this class; NOT precision

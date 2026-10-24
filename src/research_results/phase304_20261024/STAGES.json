@@ -1,0 +1,47 @@
+{
+  "prepare": {
+    "status": "completed",
+    "exit_code": 0,
+    "failure": null,
+    "PID": 1737534,
+    "seconds": 104.57943183497991,
+    "peak_cpu_bytes": 1737707520,
+    "minimum_available_memory": 30838804480
+  },
+  "train": {
+    "status": "completed",
+    "exit_code": 0,
+    "failure": null,
+    "PID": 1737591,
+    "seconds": 440.70278116699774,
+    "peak_cpu_bytes": 1999052800,
+    "minimum_available_memory": 30494093312
+  },
+  "evaluate_failed_01": {
+    "status": "failed",
+    "exit_code": 1,
+    "failure": null,
+    "PID": 1737817,
+    "seconds": 4.539502335013822,
+    "peak_cpu_bytes": 897388544,
+    "minimum_available_memory": 31689814016
+  },
+  "evaluate": {
+    "status": "completed",
+    "exit_code": 0,
+    "failure": null,
+    "PID": 1737920,
+    "seconds": 69.65723656094633,
+    "peak_cpu_bytes": 1679060992,
+    "minimum_available_memory": 31215513600
+  },
+  "analyze": {
+    "status": "completed",
+    "exit_code": 0,
+    "failure": null,
+    "PID": 1737972,
+    "seconds": 61.62834686797578,
+    "peak_cpu_bytes": 3289059328,
+    "minimum_available_memory": 29551316992
+  }
+}

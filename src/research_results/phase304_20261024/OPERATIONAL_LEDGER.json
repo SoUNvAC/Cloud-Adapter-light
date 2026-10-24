@@ -32,6 +32,11 @@
       "diagnosis": "Python3.10 tarfile.open(w|gz) rejects compresslevel; confirmed with in-memory empty-stream reproduction, remote BACKUP_FILES exists, no stream receipt or active exporter",
       "recovery": "New transfer_phase304_recovery01.py wraps tar w| in gzip.GzipFile; preserve failed manifest and empty receive directory before controlled recovery",
       "experiment_repeated": false
+    },
+    {
+      "event": "gzs git pull of backup fix encountered a GnuTLS handshake failure",
+      "resolution": "One retry pulled18b440e successfully; five-byte Python310 gzip/tar round-trip passed before transfer",
+      "experiment_calls": 0
     }
   ]
 }

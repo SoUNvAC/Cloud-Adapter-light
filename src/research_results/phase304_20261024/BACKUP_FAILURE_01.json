@@ -1,0 +1,5 @@
+{
+  "traceback": "Traceback (most recent call last):\n  File \"D:\\Cloud-Adapter-light\\src\\tools\\transfer_phase304.py\", line 44, in receive\n    with tarfile.open(fileobj=incoming,mode='r|gz') as tar:\n         ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\ProgramData\\miniconda3\\Lib\\tarfile.py\", line 1997, in open\n    t = cls(name, filemode, stream, **kwargs)\n  File \"C:\\ProgramData\\miniconda3\\Lib\\tarfile.py\", line 1860, in __init__\n    self.firstmember = self.next()\n                       ~~~~~~~~~^^\n  File \"C:\\ProgramData\\miniconda3\\Lib\\tarfile.py\", line 2921, in next\n    raise ReadError(\"empty file\") from None\ntarfile.ReadError: empty file\n",
+  "verified_members": 0,
+  "action": "preserve partial; investigate before any further transfer"
+}

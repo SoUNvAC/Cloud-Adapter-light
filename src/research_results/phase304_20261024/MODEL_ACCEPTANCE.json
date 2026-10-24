@@ -1,0 +1,609 @@
+{
+  "status": "passed",
+  "trainable_parameters": 294912,
+  "active_blocks": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "trainable_names": [
+    "backbone.blocks.0.attn.qkv.lora_a",
+    "backbone.blocks.0.attn.qkv.lora_b",
+    "backbone.blocks.0.attn.proj.lora_a",
+    "backbone.blocks.0.attn.proj.lora_b",
+    "backbone.blocks.0.mlp.fc1.lora_a",
+    "backbone.blocks.0.mlp.fc1.lora_b",
+    "backbone.blocks.0.mlp.fc2.lora_a",
+    "backbone.blocks.0.mlp.fc2.lora_b",
+    "backbone.blocks.1.attn.qkv.lora_a",
+    "backbone.blocks.1.attn.qkv.lora_b",
+    "backbone.blocks.1.attn.proj.lora_a",
+    "backbone.blocks.1.attn.proj.lora_b",
+    "backbone.blocks.1.mlp.fc1.lora_a",
+    "backbone.blocks.1.mlp.fc1.lora_b",
+    "backbone.blocks.1.mlp.fc2.lora_a",
+    "backbone.blocks.1.mlp.fc2.lora_b",
+    "backbone.blocks.2.attn.qkv.lora_a",
+    "backbone.blocks.2.attn.qkv.lora_b",
+    "backbone.blocks.2.attn.proj.lora_a",
+    "backbone.blocks.2.attn.proj.lora_b",
+    "backbone.blocks.2.mlp.fc1.lora_a",
+    "backbone.blocks.2.mlp.fc1.lora_b",
+    "backbone.blocks.2.mlp.fc2.lora_a",
+    "backbone.blocks.2.mlp.fc2.lora_b",
+    "backbone.blocks.3.attn.qkv.lora_a",
+    "backbone.blocks.3.attn.qkv.lora_b",
+    "backbone.blocks.3.attn.proj.lora_a",
+    "backbone.blocks.3.attn.proj.lora_b",
+    "backbone.blocks.3.mlp.fc1.lora_a",
+    "backbone.blocks.3.mlp.fc1.lora_b",
+    "backbone.blocks.3.mlp.fc2.lora_a",
+    "backbone.blocks.3.mlp.fc2.lora_b",
+    "backbone.blocks.4.attn.qkv.lora_a",
+    "backbone.blocks.4.attn.qkv.lora_b",
+    "backbone.blocks.4.attn.proj.lora_a",
+    "backbone.blocks.4.attn.proj.lora_b",
+    "backbone.blocks.4.mlp.fc1.lora_a",
+    "backbone.blocks.4.mlp.fc1.lora_b",
+    "backbone.blocks.4.mlp.fc2.lora_a",
+    "backbone.blocks.4.mlp.fc2.lora_b",
+    "backbone.blocks.5.attn.qkv.lora_a",
+    "backbone.blocks.5.attn.qkv.lora_b",
+    "backbone.blocks.5.attn.proj.lora_a",
+    "backbone.blocks.5.attn.proj.lora_b",
+    "backbone.blocks.5.mlp.fc1.lora_a",
+    "backbone.blocks.5.mlp.fc1.lora_b",
+    "backbone.blocks.5.mlp.fc2.lora_a",
+    "backbone.blocks.5.mlp.fc2.lora_b",
+    "backbone.blocks.6.attn.qkv.lora_a",
+    "backbone.blocks.6.attn.qkv.lora_b",
+    "backbone.blocks.6.attn.proj.lora_a",
+    "backbone.blocks.6.attn.proj.lora_b",
+    "backbone.blocks.6.mlp.fc1.lora_a",
+    "backbone.blocks.6.mlp.fc1.lora_b",
+    "backbone.blocks.6.mlp.fc2.lora_a",
+    "backbone.blocks.6.mlp.fc2.lora_b",
+    "backbone.blocks.7.attn.qkv.lora_a",
+    "backbone.blocks.7.attn.qkv.lora_b",
+    "backbone.blocks.7.attn.proj.lora_a",
+    "backbone.blocks.7.attn.proj.lora_b",
+    "backbone.blocks.7.mlp.fc1.lora_a",
+    "backbone.blocks.7.mlp.fc1.lora_b",
+    "backbone.blocks.7.mlp.fc2.lora_a",
+    "backbone.blocks.7.mlp.fc2.lora_b",
+    "backbone.blocks.8.attn.qkv.lora_a",
+    "backbone.blocks.8.attn.qkv.lora_b",
+    "backbone.blocks.8.attn.proj.lora_a",
+    "backbone.blocks.8.attn.proj.lora_b",
+    "backbone.blocks.8.mlp.fc1.lora_a",
+    "backbone.blocks.8.mlp.fc1.lora_b",
+    "backbone.blocks.8.mlp.fc2.lora_a",
+    "backbone.blocks.8.mlp.fc2.lora_b",
+    "backbone.blocks.9.attn.qkv.lora_a",
+    "backbone.blocks.9.attn.qkv.lora_b",
+    "backbone.blocks.9.attn.proj.lora_a",
+    "backbone.blocks.9.attn.proj.lora_b",
+    "backbone.blocks.9.mlp.fc1.lora_a",
+    "backbone.blocks.9.mlp.fc1.lora_b",
+    "backbone.blocks.9.mlp.fc2.lora_a",
+    "backbone.blocks.9.mlp.fc2.lora_b",
+    "backbone.blocks.10.attn.qkv.lora_a",
+    "backbone.blocks.10.attn.qkv.lora_b",
+    "backbone.blocks.10.attn.proj.lora_a",
+    "backbone.blocks.10.attn.proj.lora_b",
+    "backbone.blocks.10.mlp.fc1.lora_a",
+    "backbone.blocks.10.mlp.fc1.lora_b",
+    "backbone.blocks.10.mlp.fc2.lora_a",
+    "backbone.blocks.10.mlp.fc2.lora_b",
+    "backbone.blocks.11.attn.qkv.lora_a",
+    "backbone.blocks.11.attn.qkv.lora_b",
+    "backbone.blocks.11.attn.proj.lora_a",
+    "backbone.blocks.11.attn.proj.lora_b",
+    "backbone.blocks.11.mlp.fc1.lora_a",
+    "backbone.blocks.11.mlp.fc1.lora_b",
+    "backbone.blocks.11.mlp.fc2.lora_a",
+    "backbone.blocks.11.mlp.fc2.lora_b"
+  ],
+  "gradient_receipt": {
+    "backbone.blocks.0.attn.qkv.lora_a": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.0
+    },
+    "backbone.blocks.0.attn.qkv.lora_b": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.006450112909078598
+    },
+    "backbone.blocks.0.attn.proj.lora_a": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.0
+    },
+    "backbone.blocks.0.attn.proj.lora_b": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.008571626618504524
+    },
+    "backbone.blocks.0.mlp.fc1.lora_a": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.0
+    },
+    "backbone.blocks.0.mlp.fc1.lora_b": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.012360840104520321
+    },
+    "backbone.blocks.0.mlp.fc2.lora_a": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.0
+    },
+    "backbone.blocks.0.mlp.fc2.lora_b": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.0042919497936964035
+    },
+    "backbone.blocks.1.attn.qkv.lora_a": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.0
+    },
+    "backbone.blocks.1.attn.qkv.lora_b": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.00682865222916007
+    },
+    "backbone.blocks.1.attn.proj.lora_a": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.0
+    },
+    "backbone.blocks.1.attn.proj.lora_b": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.0048563554883003235
+    },
+    "backbone.blocks.1.mlp.fc1.lora_a": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.0
+    },
+    "backbone.blocks.1.mlp.fc1.lora_b": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.007842632941901684
+    },
+    "backbone.blocks.1.mlp.fc2.lora_a": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.0
+    },
+    "backbone.blocks.1.mlp.fc2.lora_b": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.004613196477293968
+    },
+    "backbone.blocks.2.attn.qkv.lora_a": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.0
+    },
+    "backbone.blocks.2.attn.qkv.lora_b": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.010208037681877613
+    },
+    "backbone.blocks.2.attn.proj.lora_a": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.0
+    },
+    "backbone.blocks.2.attn.proj.lora_b": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.013078397139906883
+    },
+    "backbone.blocks.2.mlp.fc1.lora_a": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.0
+    },
+    "backbone.blocks.2.mlp.fc1.lora_b": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.014671487733721733
+    },
+    "backbone.blocks.2.mlp.fc2.lora_a": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.0
+    },
+    "backbone.blocks.2.mlp.fc2.lora_b": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.0116885956376791
+    },
+    "backbone.blocks.3.attn.qkv.lora_a": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.0
+    },
+    "backbone.blocks.3.attn.qkv.lora_b": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.0081057483330369
+    },
+    "backbone.blocks.3.attn.proj.lora_a": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.0
+    },
+    "backbone.blocks.3.attn.proj.lora_b": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.008051261305809021
+    },
+    "backbone.blocks.3.mlp.fc1.lora_a": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.0
+    },
+    "backbone.blocks.3.mlp.fc1.lora_b": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.011072563007473946
+    },
+    "backbone.blocks.3.mlp.fc2.lora_a": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.0
+    },
+    "backbone.blocks.3.mlp.fc2.lora_b": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.005964428186416626
+    },
+    "backbone.blocks.4.attn.qkv.lora_a": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.0
+    },
+    "backbone.blocks.4.attn.qkv.lora_b": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.011598478071391582
+    },
+    "backbone.blocks.4.attn.proj.lora_a": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.0
+    },
+    "backbone.blocks.4.attn.proj.lora_b": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.008100563660264015
+    },
+    "backbone.blocks.4.mlp.fc1.lora_a": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.0
+    },
+    "backbone.blocks.4.mlp.fc1.lora_b": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.008059955202043056
+    },
+    "backbone.blocks.4.mlp.fc2.lora_a": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.0
+    },
+    "backbone.blocks.4.mlp.fc2.lora_b": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.011968975886702538
+    },
+    "backbone.blocks.5.attn.qkv.lora_a": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.0
+    },
+    "backbone.blocks.5.attn.qkv.lora_b": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.013220533728599548
+    },
+    "backbone.blocks.5.attn.proj.lora_a": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.0
+    },
+    "backbone.blocks.5.attn.proj.lora_b": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.015617393888533115
+    },
+    "backbone.blocks.5.mlp.fc1.lora_a": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.0
+    },
+    "backbone.blocks.5.mlp.fc1.lora_b": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.009658961556851864
+    },
+    "backbone.blocks.5.mlp.fc2.lora_a": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.0
+    },
+    "backbone.blocks.5.mlp.fc2.lora_b": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.005522244609892368
+    },
+    "backbone.blocks.6.attn.qkv.lora_a": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.0
+    },
+    "backbone.blocks.6.attn.qkv.lora_b": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.007058221846818924
+    },
+    "backbone.blocks.6.attn.proj.lora_a": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.0
+    },
+    "backbone.blocks.6.attn.proj.lora_b": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.0072336988523602486
+    },
+    "backbone.blocks.6.mlp.fc1.lora_a": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.0
+    },
+    "backbone.blocks.6.mlp.fc1.lora_b": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.0077221752144396305
+    },
+    "backbone.blocks.6.mlp.fc2.lora_a": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.0
+    },
+    "backbone.blocks.6.mlp.fc2.lora_b": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.004598582163453102
+    },
+    "backbone.blocks.7.attn.qkv.lora_a": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.0
+    },
+    "backbone.blocks.7.attn.qkv.lora_b": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.005452857352793217
+    },
+    "backbone.blocks.7.attn.proj.lora_a": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.0
+    },
+    "backbone.blocks.7.attn.proj.lora_b": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.010339366272091866
+    },
+    "backbone.blocks.7.mlp.fc1.lora_a": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.0
+    },
+    "backbone.blocks.7.mlp.fc1.lora_b": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.0061739180237054825
+    },
+    "backbone.blocks.7.mlp.fc2.lora_a": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.0
+    },
+    "backbone.blocks.7.mlp.fc2.lora_b": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.00556026678532362
+    },
+    "backbone.blocks.8.attn.qkv.lora_a": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.0
+    },
+    "backbone.blocks.8.attn.qkv.lora_b": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.012523649260401726
+    },
+    "backbone.blocks.8.attn.proj.lora_a": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.0
+    },
+    "backbone.blocks.8.attn.proj.lora_b": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.004429013468325138
+    },
+    "backbone.blocks.8.mlp.fc1.lora_a": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.0
+    },
+    "backbone.blocks.8.mlp.fc1.lora_b": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.007466332521289587
+    },
+    "backbone.blocks.8.mlp.fc2.lora_a": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.0
+    },
+    "backbone.blocks.8.mlp.fc2.lora_b": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.004404907114803791
+    },
+    "backbone.blocks.9.attn.qkv.lora_a": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.0
+    },
+    "backbone.blocks.9.attn.qkv.lora_b": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.006642610300332308
+    },
+    "backbone.blocks.9.attn.proj.lora_a": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.0
+    },
+    "backbone.blocks.9.attn.proj.lora_b": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.004411025438457727
+    },
+    "backbone.blocks.9.mlp.fc1.lora_a": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.0
+    },
+    "backbone.blocks.9.mlp.fc1.lora_b": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.00537584675475955
+    },
+    "backbone.blocks.9.mlp.fc2.lora_a": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.0
+    },
+    "backbone.blocks.9.mlp.fc2.lora_b": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.005416269414126873
+    },
+    "backbone.blocks.10.attn.qkv.lora_a": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.0
+    },
+    "backbone.blocks.10.attn.qkv.lora_b": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.004106673412024975
+    },
+    "backbone.blocks.10.attn.proj.lora_a": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.0
+    },
+    "backbone.blocks.10.attn.proj.lora_b": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.004543989431113005
+    },
+    "backbone.blocks.10.mlp.fc1.lora_a": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.0
+    },
+    "backbone.blocks.10.mlp.fc1.lora_b": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.009604234248399734
+    },
+    "backbone.blocks.10.mlp.fc2.lora_a": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.0
+    },
+    "backbone.blocks.10.mlp.fc2.lora_b": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.005993961822241545
+    },
+    "backbone.blocks.11.attn.qkv.lora_a": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.0
+    },
+    "backbone.blocks.11.attn.qkv.lora_b": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.013854682445526123
+    },
+    "backbone.blocks.11.attn.proj.lora_a": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.0
+    },
+    "backbone.blocks.11.attn.proj.lora_b": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.004273028578609228
+    },
+    "backbone.blocks.11.mlp.fc1.lora_a": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.0
+    },
+    "backbone.blocks.11.mlp.fc1.lora_b": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.001903016585856676
+    },
+    "backbone.blocks.11.mlp.fc2.lora_a": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.0
+    },
+    "backbone.blocks.11.mlp.fc2.lora_b": {
+      "connected": true,
+      "finite": true,
+      "norm": 0.003344649216160178
+    }
+  },
+  "original_predict_vs_semantic_max_abs_error": 0.0,
+  "zero_lora_max_abs_error": {
+    "False": 0.0,
+    "True": 0.0
+  },
+  "initial_equals_phase302_tensorwise": true,
+  "prior_initial_sha256": "b1c85c6f7a62eb465a994a5a2803c0c7ee1ebde097b624aae36abcf2a01aee3e",
+  "base_digest": "7c69e0cf60f16675bc6e7263f8bf6916333c1c09000c69813d6d0dda6686d1a9",
+  "all_eval": true,
+  "optimizer_only_lora": true,
+  "restored_initial_cleared_gradient_rng_reset": true
+}

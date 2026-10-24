@@ -1,0 +1,6 @@
+{
+  "reason": "Python3.10 streaming TarFile rejects compresslevel; wrap tar w| in gzip.GzipFile",
+  "previous_manifest_sha256": "a4f48762b1ed14e4d85dca9468ab7d70d2fb7f98ba8fab8e8f97e69365003f08",
+  "code_sha256": "13dafb943316381c3e8b821f8f0b1ef5469bf87c329ebaef748954bc1d09021a",
+  "no_experiment_repeated": true
+}
