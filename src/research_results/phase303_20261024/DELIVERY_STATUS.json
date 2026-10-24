@@ -1,0 +1,8 @@
+{
+  "status": "cached_complete_waiting_gpu",
+  "actual_calls": 0,
+  "cached_reproduced": true,
+  "truth_access": false,
+  "training_updates": 0,
+  "backup_sha256": "ae0479883b1a7e3948feb47d66e754bea0bb7dc32edeff096c81e4b9c45c82f3"
+}

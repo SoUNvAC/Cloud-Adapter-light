@@ -1,0 +1,10 @@
+{
+  "cached": {
+    "status": "completed",
+    "exit_code": 0,
+    "failure": null,
+    "seconds": 4.768689454998821,
+    "peak_cpu_bytes": 148852736,
+    "minimum_available_memory": 30817542144
+  }
+}

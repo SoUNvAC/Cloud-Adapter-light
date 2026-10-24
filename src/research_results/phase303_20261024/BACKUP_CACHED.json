@@ -1,0 +1,8 @@
+{
+  "status": "waiting_for_gpu",
+  "bytes": 42676259,
+  "sha256": "ae0479883b1a7e3948feb47d66e754bea0bb7dc32edeff096c81e4b9c45c82f3",
+  "archived_files": 26,
+  "raw_bytes": 50589402,
+  "all_archive_members_verified": true
+}

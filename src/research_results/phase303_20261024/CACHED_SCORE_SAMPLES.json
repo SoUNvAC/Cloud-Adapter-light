@@ -1,0 +1,26 @@
+[
+  {
+    "product": "S2A_MSIL1C_20180213T092101_N0206_R093_T35VPC_20180213T114024",
+    "array_sha256": "b8d7a454cdd99cec4c065c30adb8e414f54433fff3244b0af4cc499c073c3e70",
+    "maximum_error": 1.1920928955078125e-07,
+    "finite_nonnegative": true
+  },
+  {
+    "product": "S2A_MSIL1C_20180113T234301_N0206_R087_T57JUL_20180114T004417",
+    "array_sha256": "7b702b58c282136648ab14538064ea7322172cf161f4eaa13b6cc208578bc1b1",
+    "maximum_error": 1.1920928955078125e-07,
+    "finite_nonnegative": true
+  },
+  {
+    "product": "S2A_MSIL1C_20180208T020441_N0206_R017_T50HPK_20180208T051613",
+    "array_sha256": "bb93d7073744904026d3c573b0f4e4869809280342dae49f2948173a5d7786fb",
+    "maximum_error": 1.1920928955078125e-07,
+    "finite_nonnegative": true
+  },
+  {
+    "product": "S2A_MSIL1C_20180130T232841_N0206_R044_T58KBF_20180131T004509",
+    "array_sha256": "de288731c5e4f78bd981ad9fd57fb47b3fb5c9f285879af1638a33145b61a753",
+    "maximum_error": 1.7881393432617188e-07,
+    "finite_nonnegative": true
+  }
+]

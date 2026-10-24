@@ -1,0 +1,23 @@
+{
+  "code": {
+    "src/tools/worker_phase303.py": "bc9ec1bf5441b46b0b7170fbaa0cac561dca857d63e6825699f17978eda9be17",
+    "src/tools/control_phase303.py": "cbec13009fea491b8ea552728a126bb32c7064b788083f2635950a74e1a1c18e",
+    "src/tools/phase303_common.py": "701cb49f13a77f422154de2e25c253629e915653c805ec5e8e5058d31d4f0991",
+    "src/tools/execute_phase302.py": "5856b9f15211174453a7ee84b2fcda0ad8b58efef938968a9ae4aa9496245e93",
+    "src/tools/phase302_images.py": "aecaccb41f592141eb17f1b63044626ee5b957eab8e05425e53bf5a7cc8897f8",
+    "src/tools/prepare_phase302.py": "a02c8a642929287d5bf4278f71da44f7bca7965cc595cfd59254ef1cecb00828"
+  },
+  "source_sha256": "64dd9a20288c35ab3362b8b1c1dafc216d9c44d60868475177e139d6be859dc9",
+  "protocol_sha256": "448125c335ed48514df3777bd7241d0ab61a8a98517ffb7bb57e2ea9560577ef",
+  "git_commit": "ad313677e63dbc32f395c0e85a5ad90a73a10c00",
+  "runtime": "/home/scv/miniconda3/envs/cloud-lite-pt210/bin/python",
+  "cpu_seconds_cap": 3600,
+  "gpu_seconds_cap": 3600,
+  "call_cap": 900,
+  "persistent_bytes_cap": 3000000000,
+  "cpu_memory_cap": 17179869184,
+  "host_free_min": 4000000000,
+  "planned_recovery_calls": 873,
+  "immutable_phase302": true,
+  "truth_or_development_access": false
+}

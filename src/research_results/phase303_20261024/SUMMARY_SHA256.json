@@ -1,0 +1,33 @@
+{
+  "status": "cached_complete_waiting_gpu",
+  "files": {
+    "CACHED_ACCEPTANCE.json": "4a79a2be80f0612c69f6ed45a8393e9b5ebce9218945df8a506fa9b1be4eb320",
+    "CACHED_CROP_COUNTS.csv": "3260bbff4da7f8844445055c2c7ea0a03dfbd4779d27d2d6dba79c535c8464e7",
+    "CACHED_PRODUCT_THRESHOLDS.csv": "d8a428714952c85bc91ba1a584fb12218ed848ed249f72d21580bfd486eb551b",
+    "CACHED_SCORE_SAMPLES.json": "d9e0189746451578cbdb18a40165c181de86f7136ee70507dddde57734d55163",
+    "EXECUTION_LOCK.json": "64b11afad917534398da77d1dd8687f3f5cfef6bbd71550d042dbacb89a3f5aa",
+    "IMAGE_ONLY_ACCESS.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "INITIAL_EXECUTION_LOCK.json": "dd8fb5a46fad4caacb72ddbb4ebb27f0c4b35507bae2a61a160983c9752b6ffb",
+    "INPUT_SHA256.json": "6d3102c0081415e1755c18eb3af7ddb535ad1358e8064cc9bae4e65da716fea9",
+    "ORIGINAL_SIX_UPDATES.csv": "818bf097de9edb8a36390e0e27356f169b664dae7e4e726f13b5525a6fb83675",
+    "STAGES.json": "a7530646e6e50a83c8dcf2b1da76ba3b9e6033923cec63d3c7220e20f682a80d",
+    "STATUS.json": "c1f7d7862231dd84d1b423901becd698db9a89015f24a61fa77f32824cc64916",
+    "cached.log": "a871f4c0775f4c2d56c192d7292afddc136389b5af6737fab097e32012104b6f",
+    "cached_RESOURCE.json": "53e3bf6f87ea1ff68cccfbceaa5a39aa121da4411cac9f276ec902f84ca3a7f1",
+    "delivery_cached_FILES.json": "eab663c33a362c378bed6db31f0ce51a73bbd27d8109646a3dacac591e56049b",
+    "BACKUP_CACHED.json": "45c656fc4a677399f4bd5e4e461eebaea8949f885e52c92d803296f933b1d314",
+    "RESULT.md": "fa2a88dabcb1ffea692208f910a36910e7efc3fa00b6a04fd050994e45ab4574",
+    "DELIVERY_STATUS.json": "be11490c58db1c50a604bf8933aa6e32d700bf9d43ef6b80306c372b5b921882",
+    "phase303.md": "f8677959a8858b2a1db710f31703bc79754e28c1d0023e87dc4ac6f8a9f274db"
+  },
+  "code": {
+    "src/tools/phase303_common.py": "701cb49f13a77f422154de2e25c253629e915653c805ec5e8e5058d31d4f0991",
+    "src/tools/worker_phase303.py": "a7b777e173cf636dff89c2ba499c8e168314515f0935e379460a216ccf02f1d3",
+    "src/tools/control_phase303.py": "cbec13009fea491b8ea552728a126bb32c7064b788083f2635950a74e1a1c18e",
+    "src/tools/amend_phase303.py": "10f21d300035ff4be99a57cd4d3f33b727c4208eeea1850cecf4298e435b66c8",
+    "src/tools/transfer_phase303.py": "676b8140f55b6b272024319770fd52c8d6289c310bab483d8a225e619845703a",
+    "src/tools/resume_phase303.py": "63e6388e61fa6f5b6a518786dc57a56b4e702e80271e7806d94518f29720c18a",
+    "src/tools/finalize_phase303.py": "242d07eb538302213ba282af2119a7eeb4cf4e4c7d9b50a28391519bbc206a30",
+    "src/tools/verify_phase303_summary.py": "fd4a8f2e594ef658f113ef0cc58fe5da99767622a498b271fc9f1d519c6930a1"
+  }
+}

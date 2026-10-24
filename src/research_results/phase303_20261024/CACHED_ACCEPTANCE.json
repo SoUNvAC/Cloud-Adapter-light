@@ -1,0 +1,29 @@
+{
+  "status": "passed",
+  "valid": 104448397,
+  "accepted": 101857,
+  "classes": [
+    101857,
+    0,
+    0
+  ],
+  "accepted_products": 5,
+  "updates": 6,
+  "skipped": 994,
+  "gradient_products": 2,
+  "full_score_products": [
+    "S2A_MSIL1C_20180213T092101_N0206_R093_T35VPC_20180213T114024",
+    "S2A_MSIL1C_20180113T234301_N0206_R087_T57JUL_20180114T004417",
+    "S2A_MSIL1C_20180208T020441_N0206_R017_T50HPK_20180208T051613",
+    "S2A_MSIL1C_20180130T232841_N0206_R044_T58KBF_20180131T004509"
+  ],
+  "numeric_tests": {
+    "status": "passed",
+    "example_softmax": 0.5761169195175171,
+    "zero_sum": true,
+    "ties": true,
+    "B_scale_invariance": true,
+    "threshold_monotonicity": true
+  },
+  "neural_calls": 0
+}
