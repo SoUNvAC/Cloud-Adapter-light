@@ -28,6 +28,6 @@
     "src/tools/transfer_phase303.py": "676b8140f55b6b272024319770fd52c8d6289c310bab483d8a225e619845703a",
     "src/tools/resume_phase303.py": "63e6388e61fa6f5b6a518786dc57a56b4e702e80271e7806d94518f29720c18a",
     "src/tools/finalize_phase303.py": "242d07eb538302213ba282af2119a7eeb4cf4e4c7d9b50a28391519bbc206a30",
-    "src/tools/verify_phase303_summary.py": "fd4a8f2e594ef658f113ef0cc58fe5da99767622a498b271fc9f1d519c6930a1"
+    "src/tools/verify_phase303_summary.py": "8706df14efe0a8596fb024ac35699fcedcb5a05ca6b9e611de0e1e9e87e5a33c"
   }
 }

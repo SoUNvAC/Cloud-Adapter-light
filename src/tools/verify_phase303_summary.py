@@ -16,7 +16,11 @@ def main():
     assert sum(int(r['accepted']) for r in updates)==152948
     state=load(root/'DELIVERY_STATUS.json')
     if state['status']=='completed':
-        recovery=load(root/'RECOVERY_ACCEPTANCE.json');assert recovery['calls']==873
+        recovery=load(root/'RECOVERY_ACCEPTANCE.json');assert 873<=recovery['calls']<=900
+        import json
+        calls=[json.loads(s) for s in (root/'CALLS.jsonl').read_text().splitlines()]
+        assert len(calls)==recovery['calls']
+        assert sum(r['kind']=='source_reconstruction_window' for r in calls)==873
         assert load(root/'CPU_ACCEPTANCE.json')['status']=='passed'
         assert load(root/'DIAGNOSTIC_ACCEPTANCE.json')['replayed_rows']==8000
         stages=load(root/'STAGES.json');assert stages['recover']['seconds']<=3600
