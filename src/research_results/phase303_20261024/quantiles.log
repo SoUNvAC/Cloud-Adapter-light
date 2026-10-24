@@ -1,0 +1,8 @@
+quantiles s_Surface
+quantiles s_Cloud
+quantiles s_Shadow
+quantiles sum_s
+quantiles max_s
+quantiles top1_minus_top2
+quantiles confidence_A
+quantiles confidence_B

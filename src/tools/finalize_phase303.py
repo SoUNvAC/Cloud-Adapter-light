@@ -70,7 +70,16 @@ def main():
         f"- 备份：{kind}快照{receipt['archived_files']}成员，{receipt['bytes']}字节，SHA256={receipt['sha256']}，全部成员已回传本地并逐项核验。",
         '- 当前状态：'+status+'；详见RESULT.md。']
     if final:
-        note.append('- 资源：'+json.dumps(load(source/'STAGES.json'),ensure_ascii=False)+'；GPU记账='+json.dumps(load(source/'RECOVERY_ACCEPTANCE.json'),ensure_ascii=False))
+        b90=next(r for r in summary if r['definition']=='B' and float(r['threshold'])==.90)
+        note.append(f"- 主要诊断：A@0.90仅Surface、6非空步/2梯度产品；B@0.90覆盖{float(b90['pooled_coverage_pct']):.6f}%，三类支持={b90['Surface']}/{b90['Cloud']}/{b90['Shadow']}，{b90['nonempty_steps']}非空步/{b90['gradient_products']}梯度产品。B并非已校准概率，未据此自动选规则；下一轮先冻结过滤与有效训练预算。")
+        stages=load(source/'STAGES.json');rec=load(source/'RECOVERY_ACCEPTANCE.json')
+        note.append(f"- 资源：实际{rec['calls']}前向，GPU阶段{stages['recover']['seconds']:.3f}秒，累计CPU阶段{sum(v['seconds'] for k,v in stages.items() if k!='recover'):.3f}秒；峰值CPU {max(v['peak_cpu_bytes'] for v in stages.values())}字节，GPU allocated/reserved={rec['peak_gpu_allocated_bytes']}/{rec['peak_gpu_reserved_bytes']}字节；所有阶段退出0，均满足原预算。")
+        ledger=dict(model_or_cpu_stage_failures=sum(v['status']!='completed' for v in stages.values()),
+            network_incidents=[
+                dict(event='Git SSH connection closed during implementation push; follow-up old checkout lacked amendment script',resolution='Push retried successfully before remote pull and amendment',added_model_calls=0),
+                dict(heartbeat_trigger_utc='2026-10-24T13:42:44.308Z',event='SSH kex connection closed',resolution='One retry restored waiting-for-GPU check',added_model_calls=0),
+                dict(heartbeat_trigger_utc='2026-10-24T13:57:47.000Z',event='SSH kex connection closed',resolution='One retry restored waiting-for-GPU check',added_model_calls=0)])
+        write(LOCAL/'OPERATIONAL_FAILURE_LEDGER.json',ledger);write(S/'OPERATIONAL_FAILURE_LEDGER.json',ledger)
         note.append('- 保留4个完整scores样例；96份临时重建数组在统计和精确分位数完成后按已核验SHA清理，清单TRANSIENT_SCORE_CLEANUP.json保留全部身份。全部失败记录照实保留；不回写Phase302，不启动下一phase。')
     (S/'phase303.md').write_text('\n'.join(note)+'\n',encoding='utf-8')
     write(S/'SUMMARY_SHA256.json',dict(status=status,files={p.name:sha(p) for p in S.iterdir() if p.is_file() and p.name!='SUMMARY_SHA256.json'},

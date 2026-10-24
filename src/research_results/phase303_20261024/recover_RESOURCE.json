@@ -1,0 +1,8 @@
+{
+  "status": "completed",
+  "exit_code": 0,
+  "failure": null,
+  "seconds": 78.58528817305341,
+  "peak_cpu_bytes": 1724727296,
+  "minimum_available_memory": 31220043776
+}

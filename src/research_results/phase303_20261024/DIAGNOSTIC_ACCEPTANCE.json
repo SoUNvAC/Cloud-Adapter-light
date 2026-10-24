@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "products": 100,
+  "combinations": 8,
+  "replayed_rows": 8000,
+  "independent_class_crop_checks": 8000,
+  "all_original090_reproduced": true,
+  "monotonic_thresholds": true,
+  "scale_samples": 4,
+  "A_uses": "original cached maximum; recomputed softmax(s) bounded within1e-6",
+  "neural_calls": 0
+}

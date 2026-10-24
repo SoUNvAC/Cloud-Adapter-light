@@ -6,5 +6,29 @@
     "seconds": 4.768689454998821,
     "peak_cpu_bytes": 148852736,
     "minimum_available_memory": 30817542144
+  },
+  "recover": {
+    "status": "completed",
+    "exit_code": 0,
+    "failure": null,
+    "seconds": 78.58528817305341,
+    "peak_cpu_bytes": 1724727296,
+    "minimum_available_memory": 31220043776
+  },
+  "diagnose": {
+    "status": "completed",
+    "exit_code": 0,
+    "failure": null,
+    "seconds": 22.72733155603055,
+    "peak_cpu_bytes": 188887040,
+    "minimum_available_memory": 32401997824
+  },
+  "quantiles": {
+    "status": "completed",
+    "exit_code": 0,
+    "failure": null,
+    "seconds": 47.74536571500357,
+    "peak_cpu_bytes": 1220329472,
+    "minimum_available_memory": 31346630656
   }
 }

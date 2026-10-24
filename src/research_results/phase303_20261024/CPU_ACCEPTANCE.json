@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "exact_quantile_fields": 8,
+  "prediction_groups": 4,
+  "quantiles": [
+    0,
+    1,
+    10,
+    50,
+    90,
+    99,
+    100
+  ],
+  "zero_training": true,
+  "zero_optimizer_updates": true,
+  "no_truth_or_development_access": true,
+  "neural_calls": 0
+}
