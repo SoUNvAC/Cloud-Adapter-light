@@ -15,6 +15,17 @@
     {
       "event": "scp multi-source filename protocol mismatch",
       "resolution": "Single-file EXECUTION_LOCK backup succeeded; no final backup started"
+    },
+    {
+      "event": "Phase304 evaluation stopped before model construction because image_guard denied EVAL_IMAGES.json identity SHA read",
+      "diagnosis": "Evaluation manifest SHA was placed after the fit-oriented guard installation",
+      "recovery": "New separately hashed recovery01 scripts move SHA verification before guard; original worker, training, endpoint and failures preserved",
+      "training_repeated": false,
+      "failed_evaluation_forward_calls": 0
+    },
+    {
+      "event": "Additional read-only SSH kex failures at heartbeat15:28UTC and16:13UTC",
+      "resolution": "Single status-read retries succeeded; no duplicate model calls"
     }
   ]
 }
