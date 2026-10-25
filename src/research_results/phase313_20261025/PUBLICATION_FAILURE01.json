@@ -1,0 +1,12 @@
+{
+  "utc": "2026-10-25T15:26:31.758135+00:00",
+  "stage": "portable summary publication",
+  "original_commit": "139d66f",
+  "original_summary_sha256": "ac5459399790e85465dbc4c21fedb489956747e9953a67e40352ee73575b6d3f",
+  "remote_error": "FileNotFoundError: prior_inputs\\phase70_report.json on Linux; str(relative_path) serialized Windows backslashes",
+  "diagnosis": "Raw backup and scientific inventory unchanged; only relative-key portability failure",
+  "fix": "Path.relative_to(...).as_posix() for summary files and code keys",
+  "scientific_reruns": 0,
+  "archive_recollection": 0,
+  "original_preserved": "Git commit139d66f retains exact original summary and finalize code"
+}

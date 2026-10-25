@@ -34,23 +34,24 @@
     "phase313.md": "dd51aa4794c3cdd2cae4bfc091c834b75f6123cea8f3ada5982f69c73f6c3953",
     "ARCHIVE_RECEIPT.json": "e311be488ce5ff5123a47bcab9f3a8691625b0c560418a271707e7ea62bfae83",
     "BACKUP_RECEIPT.json": "4ed33176a9bb1e64db36b7dfaacf8e1e84983d8f1eb3c1a2bcb0f8c3c91765d2",
-    "prior_inputs\\phase70_report.json": "6a22606d12a0de69a20ed06625934401262214db52f3e667f656ec3da624bbd2",
-    "prior_inputs\\phase74_report.json": "0d3d6b321e2025530418d7c066b6cbcefeb7233c0c45e2d230be9e900b232039",
-    "prior_inputs\\phase74_README.md": "7e722205e7d135e6a0cb5054be7c2347788c20fa343d8ba8d6ec0de568b52c46",
-    "prior_inputs\\phase76_README.md": "903886ba49ad601baaeda5230a5d0c17d5e2c30ac95a61fc076c5937cc0d5d02",
-    "prior_inputs\\phase77_README.md": "8b25d9f8c0278370c0d90f20e185782747230926deb7e4b2b8eb9f826bc0f41a",
-    "prior_inputs\\phase77_scene_status.csv": "c2157e5987c84996006788f77e3050e01bf9498f505364b9b03b3b1bf9f736e6"
+    "PUBLICATION_FAILURE01.json": "08f9133231ad10995b41b5a913477cf7efd8bf01ab4c681cf4f9e1085ffea975",
+    "prior_inputs/phase70_report.json": "6a22606d12a0de69a20ed06625934401262214db52f3e667f656ec3da624bbd2",
+    "prior_inputs/phase74_report.json": "0d3d6b321e2025530418d7c066b6cbcefeb7233c0c45e2d230be9e900b232039",
+    "prior_inputs/phase74_README.md": "7e722205e7d135e6a0cb5054be7c2347788c20fa343d8ba8d6ec0de568b52c46",
+    "prior_inputs/phase76_README.md": "903886ba49ad601baaeda5230a5d0c17d5e2c30ac95a61fc076c5937cc0d5d02",
+    "prior_inputs/phase77_README.md": "8b25d9f8c0278370c0d90f20e185782747230926deb7e4b2b8eb9f826bc0f41a",
+    "prior_inputs/phase77_scene_status.csv": "c2157e5987c84996006788f77e3050e01bf9498f505364b9b03b3b1bf9f736e6"
   },
   "code": {
-    "src\\tools\\phase313_common.py": "cbc4e2bd1340ad32defa95dfcfd0154e67fa80cbf3c53b709ecd95b6a4b418bd",
-    "src\\tools\\audit_phase313.py": "0d080115dc3ed5060aef87dc9bae664c3ca2bc403c5b05d33bc8a95c6d064d07",
-    "src\\tools\\transfer_phase313.py": "c10a7c5f04a0d47d505b17740ffcafe89303dde05b23e8a4e488474e311da76c",
-    "src\\tools\\review_phase313.py": "2a221af5e864983a41f1e236fbc4fafe66ab61300ef674bf7bec562fabb0018c",
-    "src\\tools\\review_phase313_recovery01.py": "3ee081b2bd5576e5b60a40abca18b53bf92b68d6dab4af50ab60d10695c01e15",
-    "src\\tools\\seal_phase313.py": "33252d98fa25f7c3d61f03b401653b284b9a5e1ac2516912cc8fa8a7c825c22e",
-    "src\\tools\\finalize_phase313.py": "c384dc05e94877074a06ebdf99e6b1c0e76774438b50718074f9b65c0eaf2683",
-    "src\\tools\\verify_phase313.py": "c2bf070f29aebcf2f2e88f0a683387bc7b723115aa649b948808890dbff5034c",
-    "src\\tools\\transfer_phase313_recovery01.py": "3ee812036c22d3dc803115997e90af96684c526eb0a717ed47155061ddaeb35b"
+    "src/tools/phase313_common.py": "cbc4e2bd1340ad32defa95dfcfd0154e67fa80cbf3c53b709ecd95b6a4b418bd",
+    "src/tools/audit_phase313.py": "0d080115dc3ed5060aef87dc9bae664c3ca2bc403c5b05d33bc8a95c6d064d07",
+    "src/tools/transfer_phase313.py": "c10a7c5f04a0d47d505b17740ffcafe89303dde05b23e8a4e488474e311da76c",
+    "src/tools/review_phase313.py": "2a221af5e864983a41f1e236fbc4fafe66ab61300ef674bf7bec562fabb0018c",
+    "src/tools/review_phase313_recovery01.py": "3ee081b2bd5576e5b60a40abca18b53bf92b68d6dab4af50ab60d10695c01e15",
+    "src/tools/seal_phase313.py": "33252d98fa25f7c3d61f03b401653b284b9a5e1ac2516912cc8fa8a7c825c22e",
+    "src/tools/finalize_phase313.py": "38fdd47f4a7b779fc5f01a9d0d0cb6b920313886250558c23649812bde2475bc",
+    "src/tools/verify_phase313.py": "c2bf070f29aebcf2f2e88f0a683387bc7b723115aa649b948808890dbff5034c",
+    "src/tools/transfer_phase313_recovery01.py": "3ee812036c22d3dc803115997e90af96684c526eb0a717ed47155061ddaeb35b"
   },
   "archive_sha256": "74e232819f6e6294dbddf7a2d6753ed6c39dcb3cf29dda2bec57f18ff8d08b59"
 }
