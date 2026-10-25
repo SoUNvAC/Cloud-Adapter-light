@@ -1,0 +1,43 @@
+{
+  "status": "passed",
+  "source_sha256": "64dd9a20288c35ab3362b8b1c1dafc216d9c44d60868475177e139d6be859dc9",
+  "runtime": "/home/scv/miniconda3/envs/cloud-lite-pt210/bin/python",
+  "torch": "2.1.0+cu121",
+  "mmcv": "2.1.0",
+  "mmseg": "1.2.2",
+  "gpu": "NVIDIA GeForce RTX 4090 D",
+  "cuda_free_total": [
+    24161288192,
+    25756565504
+  ],
+  "source_training": "CloudSEN12-high L1C official train8490, val535; seed64; 4000 steps; best source-val mIoU",
+  "classes": [
+    "Surface",
+    "Cloud",
+    "Shadow"
+  ],
+  "selected_source_spatial_overlaps": [],
+  "source_mapping_status": "verified_rgb_ordinal_mapping",
+  "spatial_buffer_m": 100,
+  "history": "Catalogue development used repeatedly in earlier phases; fit identities selected historically with label metadata. Not new blind evaluation.",
+  "unresolved": "DINO pretraining intersection unknown; Source mapping/audits inherited, not reopened source rasters; metadata cannot prove all pretraining independence.",
+  "evidence_sha256": {
+    "/home/scv/Cloud-Adapter-light/src/research_results/phase300_20261020/FIT_IMAGES.json": "123b5a862730260aaec845efa3094b11bbfa9d389ff493147a87654bde1a8592",
+    "/home/scv/shared/phase300_20261020/EVALUATION_INPUT_PLAN.json": "6b1e27ad6954614bbb87512e63b427a2d5cdcb1550ada5f289f516b4d5fa0333",
+    "/home/scv/shared/phase300_20261020/CROP_SCHEDULE.json": "444064f80e526acdfbd30eec4e63a557cf3015e9d2c2a0825f1b189cd515555f",
+    "/home/scv/Cloud-Adapter-light/src/work_dirs/phase65a/source_provenance/spatial_overlap.json": "4e9bef32a0f17d8119cb3f06c79d8dcf6db4113c0c17b246721c9268fbba715d",
+    "/home/scv/Cloud-Adapter-light/src/work_dirs/phase65a/source_mapping/mapping_audit.json": "c3c521a375c50f81ff0e58682621c7fcb72fc47472a7b37931c587036f12d0bb",
+    "/home/scv/Cloud-Adapter-light/src/work_dirs/phase64_source_parent/seed64/phase64_source_parent_rgb.py": "9e9b58132d21db65a165927067918d8dc74de78575b55507ea6dfcb79fdf5ef0"
+  },
+  "source_meta_keys": [
+    "cfg",
+    "dataset_meta",
+    "epoch",
+    "experiment_name",
+    "iter",
+    "mmengine_version",
+    "seed",
+    "time"
+  ],
+  "neural_calls": 0
+}

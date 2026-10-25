@@ -1,0 +1,6 @@
+{
+  "traceback": "Traceback (most recent call last):\n  File \"D:\\Cloud-Adapter-light\\src\\tools\\transfer_phase310.py\", line 56, in receive\n    for b in iter(lambda:src.read(4*1024**2),b''):dest.write(b);h.update(b);n+=len(b)\n             ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Cloud-Adapter-light\\src\\tools\\transfer_phase310.py\", line 56, in <lambda>\n    for b in iter(lambda:src.read(4*1024**2),b''):dest.write(b);h.update(b);n+=len(b)\n                         ~~~~~~~~^^^^^^^^^^^\n  File \"C:\\ProgramData\\miniconda3\\Lib\\tarfile.py\", line 744, in readinto\n    buf = self.read(len(b))\n  File \"C:\\ProgramData\\miniconda3\\Lib\\tarfile.py\", line 735, in read\n    raise ReadError(\"unexpected end of data\")\ntarfile.ReadError: unexpected end of data\n",
+  "verified_members": 250,
+  "ssh_stderr": "{\"stream_sha256\": \"179c578a088af695c454a916619126252e47d3e3e9c17f4f5586b7253262876e\", \"stream_bytes\": 525829488, \"files\": 255, \"raw_bytes\": 578700506, \"manifest_sha256\": \"552db426d172edb2468ec72ac826dc99c4ea23aa6938d4ec965243260cb0b725\", \"archive_persisted\": false, \"two_copy_bytes\": 1157401012}\n",
+  "action": "preserve partial; investigate before any further transfer"
+}

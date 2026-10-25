@@ -1,0 +1,13 @@
+{
+  "reason": "Original accepted-step AST also depends on loop crop coordinates t/l; bind original top/left without changing input or math",
+  "code": {
+    "src/tools/control_phase310_recovery01.py": "d15a509db294a4c1c8270caf471e03df1ae06bd909492580c51342ab48d054ac",
+    "src/tools/worker_phase310_recovery01.py": "890d9711d9b8543f6021bfacc4fe8bc79187de345a3a096ebe0ab9964dfb6b54"
+  },
+  "original_execution_lock_sha256": "7e398e9805602c858624c425ab916db92436055e1397170ba6bb6e0bbc17b845",
+  "prior_calls": 3,
+  "prior_formal_updates": 0,
+  "original_failure_preserved": true,
+  "original_masks_and_protocol_unchanged": true,
+  "git_commit": "65c01cf62482e8fdc095ee98f70ca17536ac255e"
+}

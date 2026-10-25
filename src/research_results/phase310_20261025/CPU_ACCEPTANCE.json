@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "groups": 32,
+  "strategies": 3,
+  "AP_independent_checks": 12120,
+  "original_D": 506798,
+  "original_Cloud_correction": 784478,
+  "nonG_D": 450058,
+  "all_common_support_retained": true,
+  "all27_cells_and_marginals_checked": true,
+  "P_A_other_partition_checked": true,
+  "baselines_metrics_reproduced": true,
+  "probe_rows": 192,
+  "teacher_calls_formal": 955,
+  "student_calls_formal": 955,
+  "empty_A_steps_no_forwards": true,
+  "torch_imported": false,
+  "neural_calls": 0
+}

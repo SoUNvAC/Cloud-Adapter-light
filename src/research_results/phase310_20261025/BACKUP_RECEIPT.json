@@ -1,0 +1,25 @@
+{
+  "stream_sha256": "179c578a088af695c454a916619126252e47d3e3e9c17f4f5586b7253262876e",
+  "stream_bytes": 525829488,
+  "files": 255,
+  "raw_bytes": 578700506,
+  "manifest_sha256": "552db426d172edb2468ec72ac826dc99c4ea23aa6938d4ec965243260cb0b725",
+  "archive_persisted": false,
+  "two_copy_bytes": 1157401012,
+  "hash_only_replay": true,
+  "immutable_original_files": true,
+  "source_code_sha256": "f5ed8303d917105a26c814be46b6a69b04505c15ee4980c6c77fbb811f136b88",
+  "all_archive_members_verified": true,
+  "all_stream_members_verified": true,
+  "initial_decode_failed_preserved": true,
+  "initial_stream_locally_verified": false,
+  "replayed_same_frozen_stream_SHA_verified": true,
+  "missing_members_recovered": [
+    "recovery01/train_RESOURCE.json",
+    "resolved_lora_config.py",
+    "train.log",
+    "train_GPU_RECEIPT.json",
+    "train_RESOURCE.json"
+  ],
+  "no_experiment_repeated": true
+}

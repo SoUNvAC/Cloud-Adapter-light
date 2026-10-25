@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "shape": [
+    1,
+    3,
+    512,
+    512
+  ],
+  "input_bgr_sha256": "fada21217327d67efacdd4d70c0eb256eed88b137fe1e56dbec81b18a94e28e1",
+  "output_rgb_sha256": "ce04a881ff08a0edc871f2b0bfe140e5a75dd9145674986772deb29c48e8ed91",
+  "exact_source_mean_std": true,
+  "bgr_to_rgb_once": true,
+  "no_clipping": true,
+  "padding": [
+    0,
+    0,
+    0,
+    0
+  ]
+}

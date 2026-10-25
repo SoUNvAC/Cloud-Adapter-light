@@ -1,0 +1,33 @@
+{
+  "raw_RESULT_sha256": "2e2a13f65304755c6f97065a4821786ab31478e874f1e6b25851a0ead71b8f3d",
+  "published_RESULT_sha256": "e65a6928821115f0521be6fbb300ab20b59ae632e89aab6afbc19ba746bd68b0",
+  "all_numeric_CSV_unchanged": true,
+  "numeric_CSV_SHA256": {
+    "BOUNDARY_ERROR_FLOW.csv": "358b42a2db4732e84e16c176d04ab0ea6663698d66c235b6795c45ea5a27bb55",
+    "CROP_SUPPORT.csv": "622de52830e61ebf135b152035a5034681317acd8c3e94c5ee7206f20caaa941",
+    "DAMAGE_BENEFIT.csv": "59c7d0bf951ec2802bd42080181d91b893d5412b2b61ab94ba457282e058abaf",
+    "ERROR_FLOW.csv": "d7562b5f3d87684d89a23d76baf2c297f8d9f482b68cd8046b34c7a296dab7fb",
+    "GRADIENT_AUDITS.csv": "4728f01d5c47533320dfc8884f37cba631d5734932b893c8e28ea2b839c16e54",
+    "METRICS.csv": "e990852ace0f7fda66c1fda0802f23c0c10aca08fbcbcaaad44887a6c2c7fa76",
+    "METRIC_DIFFERENCES.csv": "fbb6677d8f322b88db9830d8a8e11251b36386f4b1841d9ca6ce2dee62213711",
+    "PER_GROUP_METRICS.csv": "eea92392cc003b7fcf80c230eb2ab7116f0d6b2ebb38d9e3eb7582ccaabd36b4",
+    "PROBES.csv": "0298defeab99eabe6aa65670b280ef8cc28fceceaa4e23a50ce6043ea4ed59c1",
+    "PRODUCT_SUPPORT.csv": "71edf565d6c47ea7c6f51b1f4dcdcab391efb10714b03a2ac6419c642e5371a8",
+    "PROTECTION_COST.csv": "a3f2d724a43a98c4e055c41d20e13a9853be06d2e8e08da9efd8819a6f0e816c",
+    "SCENE_TAGS_POST_SEAL.csv": "51f856e3e849c553bc8dacd8b7336ba0868ae374e6134d0c7b8f56e2e0d7c066",
+    "TRAINING_CURVE.csv": "dc72d69e465da8a48eac372898b45d484f31ad284680a7ffc087d33af3051671",
+    "TRAINING_SUPPORT.csv": "65896a0db0b9fa07134e6a7b09fa4685bcb927989a6abc84681d9b2c387848d8",
+    "TRANSITIONS27.csv": "90d96b5802c0d57084af510a02e9c86ad33ae86c45d15ed1aa848fe8d34069e5"
+  },
+  "raw_report_and_failure_preserved": true,
+  "visual_review": {
+    "layout": "readable; labels/ticks uncut; legends outside data; all raw traces shown",
+    "colorblind_and_gray": "solid/dashed distinction retained; separate panels; no dual axes",
+    "program_QA_no_issues": true,
+    "reviewed_files": [
+      "TRAINING_CURVES.png",
+      "TRAINING_CURVES_gray.png"
+    ]
+  },
+  "purpose": "State negative aggregate tradeoff, class-union effect in largest group, nonzero SP gradients and legacy table-field meanings; no recalculation or new experimental choice"
+}

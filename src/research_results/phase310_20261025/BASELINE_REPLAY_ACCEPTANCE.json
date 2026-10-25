@@ -1,0 +1,8 @@
+{
+  "product": "S2A_MSIL1C_20180211T234711_N0206_R073_T60WWT_20180212T011403",
+  "windows": 9,
+  "maximum_error": 0.0,
+  "pred_identical": true,
+  "original_final_sha256": "2d0d56de44f57d43a5c3f9788c658ce840f6e916fd4cb49797f111682c6108c9",
+  "old_model_used_only_after_new_endpoint_seal": true
+}
