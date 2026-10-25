@@ -1,0 +1,24 @@
+{
+  "rows": [
+    {
+      "model": "RGB3",
+      "C": 546400,
+      "key_sha256": "12e65119b15b664fa8ccd007bf485507f198e1aa6819fd803db1a95d1835c6f8",
+      "all_keys_unique": true
+    },
+    {
+      "model": "RGB6Q",
+      "C": 546400,
+      "key_sha256": "12e65119b15b664fa8ccd007bf485507f198e1aa6819fd803db1a95d1835c6f8",
+      "all_keys_unique": true
+    },
+    {
+      "model": "MS6",
+      "C": 546400,
+      "key_sha256": "12e65119b15b664fa8ccd007bf485507f198e1aa6819fd803db1a95d1835c6f8",
+      "all_keys_unique": true
+    }
+  ],
+  "complete_C_coverage": true,
+  "each_covered_key_exactly_once": true
+}

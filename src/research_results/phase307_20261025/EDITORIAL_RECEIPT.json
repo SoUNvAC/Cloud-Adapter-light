@@ -1,0 +1,7 @@
+{
+  "scope": "Editorial interpretation of already computed paired/group/stratified tables; no new fitting or statistical computation",
+  "raw_report_sha256": "6cdc75c997162e44a25b9a319da9853ad7f88062547f9c3fa413cf57a2295e75",
+  "published_report_sha256": "e86c2447c4100607f60e6f822e97d24b27d725e16acbf3182090886068ebbb0e",
+  "all_numeric_tables_unchanged": true,
+  "new_fit_or_neural_call": false
+}

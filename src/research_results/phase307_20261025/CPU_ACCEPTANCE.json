@@ -1,0 +1,50 @@
+{
+  "status": "passed",
+  "products": 32,
+  "folds": 32,
+  "fit_attempts": 66,
+  "fit_failures": 0,
+  "neural_calls": 0,
+  "segmentation_updates": 0,
+  "downloads": 0,
+  "supervised_target_reference_information_diagnosis": true,
+  "all32fold_rows_preserved": true,
+  "group_sorted_seed30701_uniform_sampling": true,
+  "training_groups_exclude_heldout": true,
+  "shared_samples_labels_weights_support_all_models": true,
+  "train_only_scaler_independently_checked": true,
+  "weights_equal_groups_sum_one": true,
+  "features_and_parameters_fixed": true,
+  "no_sign_constraints": true,
+  "no_hyperparameter_search": true,
+  "parameters_saved_before_probability_and_metrics": true,
+  "all_C_coverage": true,
+  "covered_OOF_keys_exactly_once": true,
+  "fixed_half_threshold_counts_independent": true,
+  "readout_only_C_Cloud_to_Surface": true,
+  "Shadow_masks_and_scores_unchanged": true,
+  "objective_tests": {
+    "objective_gradient_finite_difference_max_error": 6.034998889514753e-11,
+    "intercept_unpenalized": true,
+    "constant_scale_one": true,
+    "feature_order_and_original_scale_square": true,
+    "test_extremes_do_not_change_train_statistics": true,
+    "half_boundary_cloud": true
+  },
+  "AUC_tests": {
+    "single_class_NA": true,
+    "empty_NA": true,
+    "all_ties_half": true,
+    "positive_and_reverse_fixed": true,
+    "tie_groups_rank_sum_equal": true
+  },
+  "independent_AUC_checks": 244,
+  "torch_imported": false,
+  "BLAS_thread_limits": {
+    "OMP_NUM_THREADS": "4",
+    "OPENBLAS_NUM_THREADS": "4",
+    "MKL_NUM_THREADS": "4"
+  },
+  "seconds": 21.33661261398811,
+  "PID": 1750733
+}

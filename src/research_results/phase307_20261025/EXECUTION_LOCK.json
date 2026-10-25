@@ -1,0 +1,70 @@
+{
+  "code": {
+    "src/tools/analyze_phase307.py": "4d2eb466db4f90222ceaa2129d89e72df837a3533314eb66c5d5af2aa6bad357",
+    "src/tools/finalize_phase307.py": "89ff54172b9ac8931753e20f8d259bd0dbcc5f6eac4e1f5dadfecb6102595c75",
+    "src/tools/math_phase307.py": "4192bd07b2f332039b0294fc97f6855d61bb15079b895468b522879ab0fccf16",
+    "src/tools/phase307_common.py": "d0c0eeeb25ff24aa9c513e7a2c3604bc6cd846d27ed3368a25a3e775945f76fc",
+    "src/tools/run_phase307.py": "a5be16cfb405cae08bccbd9a3e04e8831e4c061f5d17f0b68c4c1646a174b041",
+    "src/tools/transfer_phase307.py": "fe5847e0b109a8309b483351dadd38fe00d14eef693a7c013dc6fa48af32ceda",
+    "src/tools/verify_phase307.py": "6eae62503aab0976372e627439fca71234edba7f88a80d75a7b031829a2c2b06",
+    "src/tools/phase65d_recovery_math.py": "ef0f76bc81cc348ce411c65f8459c5615d29df93477b62a52dc137e86af2c51e",
+    "src/tools/auc_phase306.py": "1a88a49c622259c8afbb835cc47453274a3ea7c547393a18bf78e9905c0bf721"
+  },
+  "protocol_sha256": "306a63f920d25b7ab62ef81c8bfbd32f9b3e9149d5a0f920e000fa726a863d6b",
+  "git_commit": "9d59625fac034afd50e648ff2b844c093ba6684e",
+  "start_beijing": "2026-10-25T11:47:46.571029+08:00",
+  "runtime": "/home/scv/miniconda3/envs/cloud-lite-pt210/bin/python",
+  "neural_calls": 0,
+  "training_updates": 0,
+  "download": 0,
+  "cap_seconds": 3600,
+  "cap_CPU_bytes": 17179869184,
+  "cap_new_bytes_including_backups": 1000000000,
+  "min_free_bytes": 4000000000,
+  "threshold": 0.9,
+  "rule": "Supervised offline LOGO D/K probes; RGB3/RGB6Q/MS6; no segmentation/network training",
+  "sampling_seed": 30701,
+  "max_group_candidates": 8192,
+  "max_fits": 96,
+  "penalty": 0.001,
+  "threshold_Cloud": 0.5,
+  "optimizer": {
+    "method": "L-BFGS-B",
+    "maxiter": 500,
+    "gtol": 1e-07,
+    "ftol": 1e-12
+  },
+  "BLAS_threads": 4,
+  "bands": [
+    "B04",
+    "B03",
+    "B02",
+    "B08",
+    "B11",
+    "B12"
+  ],
+  "indices": [
+    3,
+    2,
+    1,
+    7,
+    11,
+    12
+  ],
+  "q_bins": [
+    [
+      0,
+      0.5
+    ],
+    [
+      0.5,
+      0.7
+    ],
+    [
+      0.7,
+      0.9
+    ]
+  ],
+  "classifier_fits_cap": 96,
+  "history_read_only": true
+}

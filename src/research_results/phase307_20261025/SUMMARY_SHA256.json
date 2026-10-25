@@ -1,0 +1,41 @@
+{
+  "status": "completed",
+  "files": {
+    "CPU_ACCEPTANCE.json": "681751bff3217d02055ac25dd5435a53e89f6b086abf64cac72d014506e56c6a",
+    "EXECUTION_LOCK.json": "c19315a86e30cd37479d5636952355d6ee637b2935c062c6af232712e1211c89",
+    "FAILURE_LEDGER.json": "4ea13873bc4d108cf403db8d5a5335a81f183902d6a80b5f93e8cc2995d3b5f0",
+    "FIT_LEDGER.jsonl": "e8a0bf823f5d13dacb0244029890ab103eff3b79f71825a2083c69abd2331169",
+    "FIT_STARTS.jsonl": "ab05efb2d5cdf05143f7e9fec56dd6f2dd6b1ce4ce425c15a15397f3b2dddb2b",
+    "FIXED_RESULTS.csv": "404cfb477814933f63047cf765966a44a3fde9fac6ef26039e122daac9df9af3",
+    "FOLD_LOCK.json": "1297d168243336798e4203573d2d4ba11ed20aad8b7785019aefdfbabceeac0d",
+    "FOLD_METRICS.csv": "c888128a7919e36ff358fd8fb32e801cb3f42f4ff7bbe171e2f3daa347b4f7ee",
+    "FOLD_SUPPORT.csv": "2807614db5db4fb50f21386aa1ae3ca3929f6e3b77dd7ac6be918235591d2cfa",
+    "GROUP_SAMPLING.csv": "3ce9f8097f1d37c3b7dbbd9b03f99bb5f6faeaf208daf2e1c45e9cf4d37c7ad0",
+    "INPUT_SHA256.json": "75406540d038daeb33d0706b7906bcba9c192aeb19c27aaa4334b21a7def8390",
+    "OOF_KEY_ACCEPTANCE.json": "9cc4fab0a4bf0d2daab69de164e9e61b873e68ca65fb0dea24b8c4eae5ee4839",
+    "PAIRED_COMPARISONS.csv": "a35e36fd587219211313007335f9e662fb17a88d49232d1003b2e7d856e1c3f5",
+    "PAIRED_FOLDS.csv": "e0b9468632dfd3b1988633b44ca2482a3d657fab39dd636c5dfa362e996b8a72",
+    "PREDICTION_LOCK.json": "cb469a072385a462c74fe66bb81db163a621b1786d8b15abd6a5143a2374d489",
+    "PROGRESS.json": "7026b5f74fbdd74b35409835f18c2a101c031066a78974466053dcaacf5c5c82",
+    "RESOURCE.json": "4f1bb031d6ec122920ff11420aa3e9ffb838eaaae833665ee7c176d3fb4e3a3a",
+    "RESULT.md": "e86c2447c4100607f60e6f822e97d24b27d725e16acbf3182090886068ebbb0e",
+    "SAMPLING_LOCK.json": "753b844f246ca010d9454d3f23f03e6fe67e73e1088ed55558f538044869cef3",
+    "STATUS.json": "4f1bb031d6ec122920ff11420aa3e9ffb838eaaae833665ee7c176d3fb4e3a3a",
+    "STRATIFIED_GROUPS.csv": "09cdcbf1ccf7e0a1f20358f27d43527dd0de0a1c8aaa6387e2dec7281600afd9",
+    "STRATIFIED_RESULTS.csv": "ec052d434aa41c55176e550a6d6341ea1b8dc3c5aaa90dc02d3e9b000d0024da",
+    "cpu.log": "8fca327cb28787f9e5f933b1df741fabdde8344104a7202f6c80acc139a0fa2a",
+    "BACKUP_FILES.json": "1f850bb15009a92b91f9876426d9a47794596034100f8ef2fad4e760968430ec",
+    "BACKUP_RECEIPT.json": "d1e653f897a849a9e97d10dfcff7a8d4cbcc2a05b0d4d8d71c945baf0b8f3030",
+    "phase307.md": "a6c03a6a4e9e877c60b16657b74ee7daff56529fcdb53ead5426a30ed1dec5c5",
+    "EDITORIAL_RECEIPT.json": "9a77bb80864c2a02214d54d245e9d12d42b8a3741e0f53ad17294d4bc15b67d7"
+  },
+  "code": {
+    "src/tools/phase307_common.py": "d0c0eeeb25ff24aa9c513e7a2c3604bc6cd846d27ed3368a25a3e775945f76fc",
+    "src/tools/run_phase307.py": "a5be16cfb405cae08bccbd9a3e04e8831e4c061f5d17f0b68c4c1646a174b041",
+    "src/tools/transfer_phase307.py": "fe5847e0b109a8309b483351dadd38fe00d14eef693a7c013dc6fa48af32ceda",
+    "src/tools/math_phase307.py": "4192bd07b2f332039b0294fc97f6855d61bb15079b895468b522879ab0fccf16",
+    "src/tools/analyze_phase307.py": "4d2eb466db4f90222ceaa2129d89e72df837a3533314eb66c5d5af2aa6bad357",
+    "src/tools/finalize_phase307.py": "89ff54172b9ac8931753e20f8d259bd0dbcc5f6eac4e1f5dadfecb6102595c75",
+    "src/tools/verify_phase307.py": "6eae62503aab0976372e627439fca71234edba7f88a80d75a7b031829a2c2b06"
+  }
+}
