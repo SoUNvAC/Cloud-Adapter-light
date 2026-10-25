@@ -96,3 +96,9 @@ src/research_results/phase310_20261025/** -text whitespace=cr-at-eol
 
 src/research_results/phase310_20261025/*.svg -text -whitespace
 src/research_results/phase310_20261025/*.log -text -whitespace
+
+src/tools/*phase311* -text whitespace=cr-at-eol
+src/research_plans/phase311.md -text whitespace=cr-at-eol
+src/research_results/phase311_20261025/** -text whitespace=cr-at-eol
+src/research_results/phase311_20261025/*.svg -text -whitespace
+src/research_results/phase311_20261025/*.log -text -whitespace
