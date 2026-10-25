@@ -1,0 +1,30 @@
+{
+  "code": {
+    "src/tools/analyze_phase308.py": "162a209b6fce452b5070b09e48222f6ab69e81e1f1fc377452fc13b23c2daf2b",
+    "src/tools/finalize_phase308.py": "15397340a5b9d0889a505717dd5ca67b20d29527fd348182a1110711f2542d02",
+    "src/tools/math_phase308.py": "53a0519da846425a68ea9c9b96295b9177636d2192ab9f63ed48736bf7728b3a",
+    "src/tools/phase308_common.py": "41587f67d23dbbb9aa78545fcb3c3532817de9a0664d7e9bee2a677dbb472971",
+    "src/tools/preview_phase308.py": "d403efe3f969e09631bdcc8d5e3bd4a016472282c3de747ce710a99d45f13cc6",
+    "src/tools/report_phase308.py": "9cd5580b7babea12a8b2c7e03ee9e7d10599c0ca15d01fff05246c88fbd3cb6e",
+    "src/tools/run_phase308.py": "c706975ca119124836e0afe71493fd2fde04f1250278a63675bec5cabdc0c675",
+    "src/tools/transfer_phase308.py": "b6d69048ea8714775383ceb93325a8eb748bd48fe3220a6d80f5afd0fce645c5",
+    "src/tools/verify_phase308.py": "29f9628f1a1c88093f405a95760999cf7538c8d1693902899dfc50995430fb56",
+    "src/tools/auc_phase306.py": "1a88a49c622259c8afbb835cc47453274a3ea7c547393a18bf78e9905c0bf721"
+  },
+  "protocol_sha256": "17a063d40994ef2c3818dfd59b347eddedd8121c427c4f3ed3db11701fc2103f",
+  "git_commit": "40780ff2cefc70fbd750b1361443874f5daf2bcf",
+  "start_beijing": "2026-10-25T12:40:44.225197+08:00",
+  "runtime": "/home/scv/miniconda3/envs/cloud-lite-pt210/bin/python",
+  "neural_calls": 0,
+  "training_updates": 0,
+  "download": 0,
+  "cap_seconds": 3600,
+  "cap_CPU_bytes": 17179869184,
+  "cap_new_bytes_including_backups": 1000000000,
+  "min_free_bytes": 4000000000,
+  "threshold": 0.9,
+  "rule": "Read-only restoration of Phase307 samples and fixed parameters; no fitting",
+  "BLAS_threads": 4,
+  "classifier_fits_cap": 0,
+  "history_read_only": true
+}

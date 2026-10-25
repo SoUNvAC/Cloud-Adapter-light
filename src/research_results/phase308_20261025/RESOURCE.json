@@ -1,0 +1,12 @@
+{
+  "classifier_fits": 0,
+  "status": "completed",
+  "exit_code": 0,
+  "failure": null,
+  "seconds": 17.31587033008691,
+  "peak_CPU_bytes": 506564608,
+  "minimum_available_bytes": 32245309440,
+  "neural_calls": 0,
+  "training_updates": 0,
+  "PID": 1752144
+}

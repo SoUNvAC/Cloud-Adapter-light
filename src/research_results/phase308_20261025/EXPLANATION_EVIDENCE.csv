@@ -1,0 +1,5 @@
+﻿explanation,evidence,counter_or_gap,coverage,explains_largest,next_change
+identity_implementation,all96 original probabilities/counts/Brier/AUC and sample/weight SHA reproduced,pre-publication data correctness outside scope,32 folds; fixed3 original-image/reference checks,no concrete discrepancy found,none in Phase308
+same_class_support,"largest fold training D groups=6, snow-D groups=1; full D/K intervals and bounds retained",univariate coverage cannot characterize joint support or establish causality,"all nonempty fitted folds, each feature/class",support warning; insufficient for sole cause,future separately authorized design required
+score_transfer,"largest allD probabilities>=.5, signed sums independently match logits",pureD no ranking evidence; no threshold remedy established,all96 folds/models and detailed3,directly explains zero fixed-readout repair,no threshold or calibration change
+reference_semantics,primary masks/source tags/cache identity consistent,visual cannot determine true cloud/snow; README parser unavailable; alt independence unknown,fixed3 only,unresolved semantic correctness; no evidence of actual mismatch,preserve reference and unknowns

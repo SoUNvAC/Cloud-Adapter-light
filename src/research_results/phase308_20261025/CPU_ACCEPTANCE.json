@@ -1,0 +1,23 @@
+{
+  "tests": {
+    "weighted_uniform": true,
+    "ties": true,
+    "single": true,
+    "empty": true,
+    "unequal_weights": true,
+    "fixed_direction_and_half": true
+  },
+  "folds": 32,
+  "rows": 96,
+  "probability_max_error": 0.0,
+  "contribution_sum_max_error": 1.0658141036401503e-14,
+  "all_original_counts_Brier_AUC_reproduced": true,
+  "samples_weights_labels_SHA_restored": true,
+  "train_only_scaler_checked": true,
+  "bounds_boolean_complement_checked": true,
+  "torch_imported": false,
+  "classifier_fits": 0,
+  "training_updates": 0,
+  "neural_calls": 0,
+  "downloads": 0
+}

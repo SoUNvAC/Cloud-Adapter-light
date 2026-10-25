@@ -1,0 +1,190 @@
+{
+  "CPU_ACCEPTANCE.json": {
+    "bytes": 587,
+    "sha256": "9e829998331cb1a141dd00b9646b5d887d61625f114e4096aca465e2ab6a57eb"
+  },
+  "DETAILED_RESULTS.json": {
+    "bytes": 5745,
+    "sha256": "cb43e2d20ace417b708429b8e6877aaf8f8abf8b319efc46d1ba3b22c771550c"
+  },
+  "DISPLAY_SATURATION.csv": {
+    "bytes": 916,
+    "sha256": "2dbbe2681741838b944b197e180d9b821769f2377993959292bfe1059e70289c"
+  },
+  "DOCUMENT_AUDIT.json": {
+    "bytes": 4534,
+    "sha256": "ac74f93b2853eed500a95f9458bd1d05b86c176de02949e8e98536ed3f12a624"
+  },
+  "EXECUTION_LOCK.json": {
+    "bytes": 1716,
+    "sha256": "f4913b7cf68bac008179338c0e971fc3f8aa90e60da7d47c5277ad494cddc5d0"
+  },
+  "EXIT_CODE": {
+    "bytes": 1,
+    "sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+  },
+  "EXPLANATION_EVIDENCE.csv": {
+    "bytes": 1186,
+    "sha256": "b3c711cb024c0cab62dc0c552a74268b4cf4736884c66c72714ee905d4265615"
+  },
+  "FAILURES.json": {
+    "bytes": 3,
+    "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+  },
+  "FEATURE_DISTRIBUTIONS.csv": {
+    "bytes": 1466145,
+    "sha256": "e23347e5150f13ae0eead5dd456e7a86a0117c487edaa133a68b981382205d35"
+  },
+  "HELDOUT_BOUNDS.csv": {
+    "bytes": 1231019,
+    "sha256": "a181f8b2b29ec2919a2ed1c7c8e434008383c999b586167c0c65ac6c29fd2176"
+  },
+  "IMAGE_REFERENCE_AUDIT.csv": {
+    "bytes": 1019,
+    "sha256": "f5236f5a40d16ea9b3a96d68be9eaea27985ee9af7d2c3d6677fe7be610a5ede"
+  },
+  "IMAGE_REFERENCE_AUDIT.json": {
+    "bytes": 9473,
+    "sha256": "7cac0eb66dc28765dc3ca1bb210ee6487279eebea7d0c8f628c61d4bf00e8d40"
+  },
+  "INPUT_SHA256.json": {
+    "bytes": 53657,
+    "sha256": "fb2238dc5be381938edb896c778f7683ec262aca75be370478f31050c03f9103"
+  },
+  "PREVIEW_COORDINATES.json": {
+    "bytes": 5335,
+    "sha256": "a9411f24d1135fb8a1e9f3244c708000d521ae17a211b75d5a73d8d00228893e"
+  },
+  "PROGRESS.json": {
+    "bytes": 41,
+    "sha256": "c3f03fed526e9358241f857c3ef31d3ea8f11a0758b4ad920fd8cae3f387f3a1"
+  },
+  "REPRODUCTION.csv": {
+    "bytes": 22051,
+    "sha256": "ffe95cdbb4fd74f577800a298a16415ff0054cdfbda8bcab943e1f27a19a7264"
+  },
+  "RESOURCE.json": {
+    "bytes": 258,
+    "sha256": "26ff33c51fd114fe86c694410f485d9856448b6b8e26c4aad490e40cd0b911f6"
+  },
+  "RESULT.md": {
+    "bytes": 2727,
+    "sha256": "4089d05858195b17d62d59660d8b4823784fbbe67d9ce0077ba8584e2cb0ef54"
+  },
+  "SCORE_DISTRIBUTIONS.csv": {
+    "bytes": 202359,
+    "sha256": "2773ff700b90ac3d0c3e78378a2b0d50e9fc65976fbc2fec80af1aeb670a8214"
+  },
+  "SIGNED_CONTRIBUTIONS.csv": {
+    "bytes": 520690,
+    "sha256": "9309f1ac02015b2bf83bb3776e27dfc3a2b46329c1eb7fb91f60dfa2c6053d76"
+  },
+  "STATUS.json": {
+    "bytes": 258,
+    "sha256": "26ff33c51fd114fe86c694410f485d9856448b6b8e26c4aad490e40cd0b911f6"
+  },
+  "TRAIN_COMPOSITION.csv": {
+    "bytes": 309598,
+    "sha256": "9f3ae4579eea2a3c22f562827e4f139b87f8aceef418e1606323e95cbdc46349"
+  },
+  "TRAIN_D_K_OVERLAP.csv": {
+    "bytes": 291023,
+    "sha256": "f405b5263b230e87d1fb4ace38b797207cf8cb9e4a1630392bd1b4047d266772"
+  },
+  "code/analyze_phase308.py": {
+    "bytes": 12635,
+    "sha256": "162a209b6fce452b5070b09e48222f6ab69e81e1f1fc377452fc13b23c2daf2b"
+  },
+  "code/auc_phase306.py": {
+    "bytes": 1546,
+    "sha256": "1a88a49c622259c8afbb835cc47453274a3ea7c547393a18bf78e9905c0bf721"
+  },
+  "code/finalize_phase308.py": {
+    "bytes": 3111,
+    "sha256": "15397340a5b9d0889a505717dd5ca67b20d29527fd348182a1110711f2542d02"
+  },
+  "code/math_phase308.py": {
+    "bytes": 2007,
+    "sha256": "53a0519da846425a68ea9c9b96295b9177636d2192ab9f63ed48736bf7728b3a"
+  },
+  "code/phase308.md": {
+    "bytes": 9998,
+    "sha256": "17a063d40994ef2c3818dfd59b347eddedd8121c427c4f3ed3db11701fc2103f"
+  },
+  "code/phase308_common.py": {
+    "bytes": 1604,
+    "sha256": "41587f67d23dbbb9aa78545fcb3c3532817de9a0664d7e9bee2a677dbb472971"
+  },
+  "code/preview_phase308.py": {
+    "bytes": 8978,
+    "sha256": "d403efe3f969e09631bdcc8d5e3bd4a016472282c3de747ce710a99d45f13cc6"
+  },
+  "code/report_phase308.py": {
+    "bytes": 5530,
+    "sha256": "9cd5580b7babea12a8b2c7e03ee9e7d10599c0ca15d01fff05246c88fbd3cb6e"
+  },
+  "code/run_phase308.py": {
+    "bytes": 3805,
+    "sha256": "c706975ca119124836e0afe71493fd2fde04f1250278a63675bec5cabdc0c675"
+  },
+  "code/transfer_phase308.py": {
+    "bytes": 2235,
+    "sha256": "b6d69048ea8714775383ceb93325a8eb748bd48fe3220a6d80f5afd0fce645c5"
+  },
+  "code/verify_phase308.py": {
+    "bytes": 1870,
+    "sha256": "29f9628f1a1c88093f405a95760999cf7538c8d1693902899dfc50995430fb56"
+  },
+  "cpu.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "previews/T25XEG_center.png": {
+    "bytes": 41719,
+    "sha256": "709bfe0752093b22f4c28811213e3cbc01169581e6ea1b144c902083a679f23d"
+  },
+  "previews/T25XEG_max_D.png": {
+    "bytes": 42028,
+    "sha256": "4a7add5ac51c01ddd1462e47e3bae16f7495dfabfd7ab2403538f72d85da208a"
+  },
+  "previews/T25XEG_max_K.png": {
+    "bytes": 3061,
+    "sha256": "99108ba6cd3db8dd763a4b17a6ccf8b1659cbdbbff3346cd13b7c7903cc47fa1"
+  },
+  "previews/T25XEG_panorama.png": {
+    "bytes": 1970975,
+    "sha256": "d99fdb128a76def0ebe44f8cd5fb08ced0aa712b90f486c64870b05d0b8ff897"
+  },
+  "previews/T35RPM_center.png": {
+    "bytes": 56724,
+    "sha256": "c98f49996019fbf369c46931afd74f8ad4fda2500e51b7f81c7ffabda25ab053"
+  },
+  "previews/T35RPM_max_D.png": {
+    "bytes": 57416,
+    "sha256": "c9715f3f036b9f97d749be88179e3b65b18cd416964419a1bab93b7e73a93853"
+  },
+  "previews/T35RPM_max_K.png": {
+    "bytes": 62615,
+    "sha256": "72a6224d889d091c0e4552495f62e1b96bafacafa4df15d0b4ba0774cadd141f"
+  },
+  "previews/T35RPM_panorama.png": {
+    "bytes": 3164679,
+    "sha256": "eb7949c2cb0df36aaebf727e57522e564c517982178c4c24aea81d128b0e1bf2"
+  },
+  "previews/T40XDR_center.png": {
+    "bytes": 45031,
+    "sha256": "5e4b765bcbb032a6c695b75b38a137b4f43c7227e041b4af15b8683e56078bfc"
+  },
+  "previews/T40XDR_max_D.png": {
+    "bytes": 43141,
+    "sha256": "610c3caef4b4e8ebb9b26f1ff6934e03711f9631830a0c6b8e7f80d7cca7dadc"
+  },
+  "previews/T40XDR_max_K.png": {
+    "bytes": 61256,
+    "sha256": "b78912706ccb44f1b01c198e2cd45dad65cf406a102c237e511d375214ad27a9"
+  },
+  "previews/T40XDR_panorama.png": {
+    "bytes": 2763028,
+    "sha256": "5b0a370afe0bda384276a4d25648880cd3eab256a5112b115d54139c95425afa"
+  }
+}
