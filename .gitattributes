@@ -111,3 +111,7 @@ src/tools/*phase313* -text whitespace=cr-at-eol
 src/research_plans/phase313.md -text whitespace=cr-at-eol
 src/research_results/phase313_20261025/** -text whitespace=cr-at-eol
 src/research_results/phase313_20261025/SOURCE_VERSIONS.txt -text -whitespace
+src/tools/*phase314* -text whitespace=cr-at-eol
+src/research_plans/phase314.md -text whitespace=cr-at-eol
+src/research_results/phase314_20261025/** -text whitespace=cr-at-eol
+src/research_results/phase314_20261025/README_page*.txt -text -whitespace
