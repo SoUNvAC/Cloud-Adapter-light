@@ -1,0 +1,10 @@
+Collecting pypdf==5.9.0
+  Downloading pypdf-5.9.0-py3-none-any.whl.metadata (7.1 kB)
+Collecting pypdfium2==4.30.0
+  Downloading pypdfium2-4.30.0-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (48 kB)
+Downloading pypdf-5.9.0-py3-none-any.whl (313 kB)
+Downloading pypdfium2-4.30.0-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.8/2.8 MB 2.1 MB/s  0:00:01
+Saved /home/scv/shared/phase309_20261025/wheels/pypdf-5.9.0-py3-none-any.whl
+Saved /home/scv/shared/phase309_20261025/wheels/pypdfium2-4.30.0-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+Successfully downloaded pypdf pypdfium2

@@ -1,0 +1,8 @@
+﻿issue,phase308_status,new_evidence,current_decision,historical_values_changed,impact_and_remaining_limit
+snow_ice_classification,场景标签不证明像元真值；政策未读,README p2/p3明确标签属性，p6明确冰雪/云语义模糊,缺少证据仍未知,False,不改历史数值；明确无一律雪冰CLEAR规则，最大组全CLEAR可属于冰雪地表解释但未获像元真值证明
+shadows_not_marked,阴影缺标口径待补,README p1及p2 shadows_marked定义,有直接证据已澄清,False,0=不能标，不是没有阴影；地形阴影详细类分配仍未知，不改支持
+alt_purpose,编码/用途unknown,README p4另标注者、p9分阶段流程,有直接证据已澄清,False,用途已澄清；固定三组均MAIN且无alt，不追加有利产品
+alt_independence,独立性unknown,CALIBRATION共同协商，VALIDATION不咨询；p7一致性不是真实准确率,有直接证据已澄清,False,作业分离不等于独立金标准；固定三组无独立复核，参考正确性仍未知
+spatial_size_difference,23040m与1022×20的关系待查,README p9原始1152/64边缘/1024至1022，实测三组边界23040m,有直接证据已澄清,False,上下文窗解释尺寸来源，不能再把2600m算术差直接叫错位；未恢复逐景最终仿射
+cache_vs_geography,同索引缓存对应通过，地理溯源未定,项目读取代码无地理重采样；DBF仅FID，未含最终栅格仿射,缺少证据仍未知,False,维持同数组索引结论；不宣称已独立复核原始L1C四角/中心
+target_all_CLEAR,T25XEG共同支持全Surface,README主三类定义、原tags MAIN/snow1/clear100；冰雪场景不确定性,缺少证据仍未知,False,编码及元数据自洽，未证明每像元正确；不得凭RGB改标签或性能

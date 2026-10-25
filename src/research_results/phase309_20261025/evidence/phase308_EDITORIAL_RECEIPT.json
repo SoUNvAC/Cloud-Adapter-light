@@ -1,0 +1,22 @@
+{
+  "raw_report_sha256": "4089d05858195b17d62d59660d8b4823784fbbe67d9ce0077ba8584e2cb0ef54",
+  "published_report_sha256": "c4f332d811f2aeaa0a20155a4f08d7ca58547a45e9f035ce95ac37fe4120cc0e",
+  "purpose": "Use actual zero-outside-bounds result and signed means, distinguish scene representation from univariate support; retain geographic provenance question.",
+  "numerical_CSV_unchanged": true,
+  "CSV_sha256": {
+    "DISPLAY_SATURATION.csv": "2dbbe2681741838b944b197e180d9b821769f2377993959292bfe1059e70289c",
+    "EXPLANATION_EVIDENCE.csv": "b3c711cb024c0cab62dc0c552a74268b4cf4736884c66c72714ee905d4265615",
+    "FEATURE_DISTRIBUTIONS.csv": "e23347e5150f13ae0eead5dd456e7a86a0117c487edaa133a68b981382205d35",
+    "HELDOUT_BOUNDS.csv": "a181f8b2b29ec2919a2ed1c7c8e434008383c999b586167c0c65ac6c29fd2176",
+    "IMAGE_REFERENCE_AUDIT.csv": "f5236f5a40d16ea9b3a96d68be9eaea27985ee9af7d2c3d6677fe7be610a5ede",
+    "REPRODUCTION.csv": "ffe95cdbb4fd74f577800a298a16415ff0054cdfbda8bcab943e1f27a19a7264",
+    "SCORE_DISTRIBUTIONS.csv": "2773ff700b90ac3d0c3e78378a2b0d50e9fc65976fbc2fec80af1aeb670a8214",
+    "SIGNED_CONTRIBUTIONS.csv": "9309f1ac02015b2bf83bb3776e27dfc3a2b46329c1eb7fb91f60dfa2c6053d76",
+    "TRAIN_COMPOSITION.csv": "9f3ae4579eea2a3c22f562827e4f139b87f8aceef418e1606323e95cbdc46349",
+    "TRAIN_D_K_OVERLAP.csv": "f405b5263b230e87d1fb4ace38b797207cf8cb9e4a1630392bd1b4047d266772"
+  },
+  "original_image_audit_retained": true,
+  "preview_outcome": "Panels and fixed NA crop inspected; no obvious cache alignment anomaly found; no new pixel ground truth inferred.",
+  "coordinate_outcome": "存在待核查疑点：原shapefile范围与record像元尺度关系未核验；不是已证实错配",
+  "documentation_gap": "README content unavailable in fixed environment; alternate definition/independence unknown; no downloads or environment changes."
+}

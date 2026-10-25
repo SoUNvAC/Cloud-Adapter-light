@@ -1,0 +1,529 @@
+=== PAGE 1 ===
+L0001: Sentinel-2 Cloud Mask Catalogue
+L0002: 
+L0003: 
+L0004: 
+L0005: 
+L0006: 
+L0007: 
+L0008: 
+L0009: 
+L0010: 
+L0011: 
+L0012: 
+L0013: 
+L0014: 
+L0015: 
+L0016: 
+L0017: 
+L0018: 
+L0019: 
+L0020: 
+L0021: 
+L0022: 1. General information
+L0023: 
+L0024: 
+L0025: This dataset comprises cloud masks for 513 1022-by-1022 pixel subscenes, at 20m resolution, sampled random from the 2018 Level-1C
+L0026: Sentinel-2 archive. The design of this dataset follows from some observations about cloud masking: (i) performance over an entire
+L0027: product is highly correlated, thus subscenes provide more value per-pixel than full scenes, (ii) current cloud masking datasets often
+L0028: focus on specific regions, or hand-select the products used, which introduces a bias into the dataset that is not representative of the real-
+L0029: world data, (iii) cloud mask performance appears to be highly correlated to surface type and cloud structure, so testing should include
+L0030: analysis of failure modes in relation to these variables.
+L0031: 
+L0032: The data was annotated semi-automatically, using the IRIS toolkit, which allows users to dynamically train a Random Forest
+L0033: (implemented using LightGBM), speeding up annotations by iteratively improving it's predictions, but preserving the annotator's ability to
+L0034: make final manual changes when needed. This hybrid approach allowed us to process many more masks than would have been
+L0035: possible manually, which we felt was vital in creating a large enough dataset to approximate the statistics of the whole Sentinel-2
+L0036: archive.
+L0037: 
+L0038: 
+L0039: In addition to the pixel-wise, 3 class (CLEAR, CLOUD, CLOUD_SHADOW) segmentation masks, we also provide users with binary
+L0040: classification "tags" for each subscene that can be used in testing to determine performance in specific circumstances. These include:
+L0041: 
+L0042:      SURFACE TYPE: 11 categories
+L0043:      CLOUD TYPE: 7 categories
+L0044:      RELATIVE CLOUD HEIGHT: low, high
+L0045:      CLOUD THICKNESS: thin, thick
+L0046:      CLOUD EXTENT: isolated, extended
+L0047: 
+L0048: Wherever practical, cloud shadows were also annotated, however this was sometimes not possible due to high-relief terrain, or large
+L0049: ambiguities. In total, 424 were marked with shadows (if present), and 89 have shadows that were not annotatable due to very
+L0050: ambiguous shadow boundaries, or terrain that cast significant shadows. If users wish to train an algorithm specifically for cloud shadow
+L0051: masks, we advise them to remove those 89 images for which shadow was not possible, however, bear in mind that this will
+L0052: systematically reduce the difficulty of the shadow class compared to real-world use, as these contain the most difficult shadow examples.
+L0053: 
+L0054: In addition to the 20m sampled subscenes and masks, we also provide users with shapefiles that define the boundary of the mask on
+L0055: the original Sentinel-2 scene. If users wish to retrieve the L1C bands at their original resolutions, they can use these to do so.
+
+
+=== PAGE 2 ===
+L0001: 2. Dataset Description
+L0002: 
+L0003: 
+L0004: We will now describe the structure of the overall dataset, and then go into more detail for each specific component.
+L0005: 
+L0006: 
+L0007: 
+L0008:    DATASET/
+L0009:    │   README.pdf
+L0010:    │   classification_tags.csv
+L0011:    │
+L0012:    └───subscenes/
+L0013:    │   │   <scene1>.npy
+L0014:    │   │   <scene2>.npy     ---->  1022x1022x13, float32, TOA reflectance
+L0015:    │   │   <scene3>.npy
+L0016:    │   │   ....
+L0017:    └───masks/
+L0018:    │   │   <scene1>.npy
+L0019:    │   │   <scene2>.npy     ---->  1022x1022x3, bool, one-hot encoded classes
+L0020:    │   │   <scene3>.npy
+L0021:    │   │   ...
+L0022:    └───shapefiles/
+L0023:    │   └───<scene1>/
+L0024:    │   │   │   <scene1>.cpg  \
+L0025:    │   │   │   <scene1>.dbf   \
+L0026:    │   │   │   <scene1>.prj    }-> Esri shapefile for mask/subscene outline
+L0027:    │   │   │   <scene1>.shp   /
+L0028:    │   │   │   <scene1>.shx  /
+L0029:    │   └───<scene2>/
+L0030:    │   │   │   ...
+L0031:    │   │   ...
+L0032:    └───thumbnails/
+L0033:    │   │   <scene1>.png
+L0034:    │   │   <scene2>.png     ----> 512x512x3, uint8, downsampled image for quickly
+L0035:    │   │   <scene3>.png                             inspecting subscene
+L0036:    │   │   ...
+L0037:    └───alt_masks/
+L0038:    │   │   ALT_<scene1>.npy
+L0039:    │   │   ALT_<scene2>.npy
+L0040:    │   │   ALT_<scene3>.npy
+L0041:    │   │   ....
+L0042: 
+L0043: 
+L0044: 
+L0045: 
+L0046: classification_tags.csv
+L0047: 
+L0048: 
+L0049: The classification_tags.csv file contains several parameters that should be helpful for users. All the categorical tags are non-exclusive,
+L0050: and simply mean a given subscene contained some of that characteristic. For example, snow-covered mountain tops with forests in the
+L0051: lower valleys, would be tagged with forest/jungle, snow/ice and hills/mountains. Similarly multiple cloud types can exist within the same
+L0052: image. All tags were determined by visual inspection of both the image and, for SURFACE TYPE, other high-resolution imagery of the
+L0053: area (e.g. BingMaps and Google Earth). Objective classifications of this kind are not possible, and all our classifications here are made
+L0054: using subjective judgement. We describe each column (grouped into broad categories) as follows:
+L0055: 
+L0056: 
+L0057: 
+L0058: GENERAL INFORMATION:
+L0059: 
+L0060:      scene: string, Sentinel-2 product ID.
+L0061:      difficulty: int, Subjective measure from 1->5 for difficulty of annotation.
+L0062:           1. Near perfect
+L0063:           2. Very good
+L0064:           3. Mostly good
+L0065:           4. Possibly some small errors
+L0066:           5. Possibly large errors
+L0067:      annotator: string, Which of the two annotators, A or B, created the mask used in masks/ (note that alt_masks/ may contain the
+L0068:      other annotator's mask, if both labelled that subscene).
+L0069:      shadows_marked: boolean, if 0 then no shadow markings were possible. If 1, shadows were marked where present.
+
+
+=== PAGE 3 ===
+L0001:      clear_percent: float, 0 -> 100 for percentage of pixels marked CLEAR
+L0002:      cloud_percent: float, 0 -> 100 for percentage of pixels marked CLOUD
+L0003:      shadow_percent: float, 0 -> 100 for percentage of pixels marked CLOUD_SHADOW
+L0004:      dataset: string, referring to whether subscene was part of CALIBRATION, MAIN, or VALIDATION labelling stages (described in
+L0005:      Section "Annotation Strategy")
+L0006: 
+L0007: 
+L0008: 
+L0009: SURFACE TYPES:
+L0010: 
+L0011:      forest/jungle: boolean, dense tree cover
+L0012:      snow/ice: boolean, any snow or ice covering either land or water
+L0013:      agricultural: boolean, farmlands or pastures
+L0014:      urban/developed: boolean, human structures, conurbations, villages, industrial sites. Not including solitary roads.
+L0015:      coastal: boolean, coastlines, specifically. (Not just water near to land, but the division between land and water itself)
+L0016:      hills/mountains: boolean, noticeable hilly terrain
+L0017:      desert/barren: boolean, completely arid, or very sparsely vegetated, drylands.
+L0018:      shrublands/plains: boolean, somewhat sparsely vegetated areas, or non-forested areas without obvious signs or agriculture.
+L0019:      wetland/bog/marsh: boolean, areas with large amounts of standing water (although )
+L0020:      open_water: boolean, extended bodies of water, such as large lakes that continue beyond the image bounds, or the sea.
+L0021:      enclosed_water: boolean, lakes, large rivers or contained areas of sea-water (e.g. fjords)
+L0022: 
+L0023: 
+L0024: 
+L0025: CLOUD THICKNESS:
+L0026: 
+L0027:      thin: boolean, any cloud where some surface colour/signal can be seen through it (not including at the edges of thick clouds, to
+L0028:      avoid all thick tags being accompanied by thin ones)
+L0029:      thick: boolean, any cloud where no surface can be seen through it (except possibly at its edges).
+L0030: 
+L0031: 
+L0032: 
+L0033: RELATIVE CLOUD HEIGHT:
+L0034: 
+L0035:      low: boolean, any cloud which has no obvious sign of high-altitude (high reflectance in the Cirrus (B10) band)
+L0036:      high: boolean, any cloud with noticable reflectance in the Cirrus (B10) band
+L0037: 
+L0038: 
+L0039: 
+L0040: CLOUD EXTENT:
+L0041: 
+L0042: 
+L0043:      isolated: boolean, clouds which are separated from one another, such that there are no areas of continuous cloud across the
+L0044:      majority of the subscene.
+L0045:      extended: boolean, clouds which span continuously across a majority of a subscene.
+L0046: 
+L0047: 
+L0048: 
+L0049: CLOUD TYPE:
+L0050: 
+L0051:      cumulus: boolean, rounded, clumpy and separate clouds.
+L0052:      cumulonimbus: boolean, clouds with very large, steep, vertical profiles, reaching up very high.
+L0053:      altocumulus/stratocumulus: boolean, most general cloud type, denoting any clouds that form periodic cells. Could be high or low,
+L0054:      and thick or thin.
+L0055:      cirrus: boolean, thin, extended clouds that have high reflectance in the Cirrus (B10) band. Sometimes almost invisible or very faint
+L0056:      in any other band.
+L0057:      haze/fog: boolean, low-lying, textureless, thin cloud. Often distinguishable because it looks similar to cirrus, but with no reflectance
+L0058:      in B10.
+L0059:      ice_clouds: boolean, any cloud that has a noticeable icy signature, seen as reddish-orange in the false-colour B1 (red), B11
+L0060:      (green), B12 (blue)
+L0061:      contrails: boolean, exhaust trails left by planes.
+
+
+=== PAGE 4 ===
+L0001: subscenes
+L0002: 
+L0003: 
+L0004: Each subscene is a 1022-by-1022-by-13 numpy array, with Top of Atmosphere reflectance values held as float32 numbers. These are
+L0005: taken directly from the Sentinel-2 L1C product that they share their name with, cropped randomly (but resampled until an area without
+L0006: any no-data values is found). Bands that are not at 20m are resampled to 20m using bilinear interpolation. Users who wish to use the
+L0007: bands at their original resolutions will need to download the L1C products and use the shapefiles provided to extract the area of the
+L0008: mask.
+L0009: 
+L0010: The order of Sentinel-2 bands in the numpy array's 3rd dimension is in numerical order, with band 8A coming between bands 8 and 9. All
+L0011: values are found by dividing the original L1C integer values by 10'000, to retrieve the reflectances, as advised in the Product
+L0012: Specification for Sentinel-2 L1C. Please note that many values go above 1, because apparent reflectance can be greater than 1 if a
+L0013: surface is at an angle which receives more light than is possible on a surface normal to the viewing angle.
+L0014: 
+L0015: 
+L0016: 
+L0017: masks
+L0018: 
+L0019: 
+L0020: Each mask are a 1022-by-1022-by-3 numpy array, with boolean one-hot encoding (each pixel has exactly one True value across the last
+L0021: dimension). The class order in the last dimension is: CLEAR, CLOUD, CLOUD_SHADOW. Even if shadow markings were not possible
+L0022: for a given subscene, the third channel is still included. The masks are named using the corresponding product IDs of the scenes.
+L0023: 
+L0024: 
+L0025: 
+L0026: shapefiles
+L0027: 
+L0028: 
+L0029: An Esri shapefile for each scene which describes the polygon of the extracted subscene. These can be used to extract the original band
+L0030: data from the Sentinel-2 L1C scenes if users need them.
+L0031: 
+L0032: 
+L0033: 
+L0034: thumbnails
+L0035: 
+L0036: 
+L0037: A set of downsampled .png images showing the subscenes, plus a small area around them. Not to be used for any processing, they are
+L0038: included to give a simple way to browse the data.
+L0039: 
+L0040: 
+L0041: 
+L0042: alt_masks
+L0043: 
+L0044: 
+L0045: For scenes which were annotated by both annotators (10 in CALIBRATION and 50 in VALIDATION—see Appendix B for more details
+L0046: about this process) the other annotators mask is provided for completeness. This can be used to verify the statistical tests we performed
+L0047: using them, or as backup masks should you spot one that you would prefer to use for any reason. The selection was random, so they
+L0048: are just as valid as those found in the mask folder.
+
+
+=== PAGE 5 ===
+L0001: 3. Statistics
+L0002: 
+L0003: Class Prevalances
+L0004: 
+L0005: 
+L0006: The following section gives a break down of the frequency with which classes occur in the dataset. For the segmentation masks, this is
+L0007: stated as an overall percentage of every pixel across all masks. Then, for classification tags, they refer to the fraction of subscenes
+L0008: within the dataset that contain that classification.
+L0009: 
+L0010: 
+L0011: 
+L0012: Segmentation masks (pixel-wise over the whole dataset):
+L0013: 
+L0014: 
+L0015: 
+L0016:     Total marked as CLEAR:       45.955%   │------------------>                     │
+L0017:     Total marked as CLOUD:       52.579%   │--------------------->                  │
+L0018:     Total marked as CLOUD_SHADOW: 1.466%   │>                                       │
+L0019:                                            |────────────────────────────────────────|
+L0020:                                            0                   50                  100
+L0021: 
+L0022: 
+L0023: 
+L0024: 
+L0025: 
+L0026: 
+L0027: Difficulty:
+L0028: 
+L0029: 
+L0030: 
+L0031:     1: 52.632%   │--------------------->                  │
+L0032:     2: 6.238%    │-->                                     │
+L0033:     3: 23.782%   │--------->                              │
+L0034:     4: 13.06%    │----->                                  │
+L0035:     5: 4.288%    │->                                      │
+L0036:                  |────────────────────────────────────────|
+L0037:                  0                   50                  100
+L0038: 
+L0039: 
+L0040: 
+L0041: 
+L0042: 
+L0043: 
+L0044: Classification tags:
+L0045: 
+L0046: 
+L0047: 
+L0048:     forest/jungle:             17.154%   │------>                                 │
+L0049:     snow/ice:                  22.027%   │-------->                               │
+L0050:     agricultural:              13.840%   │----->                                  │
+L0051:     urban/developed:            8.967%   │--->                                    │
+L0052:     coastal:                    4.094%   │->                                      │
+L0053:     hills/mountains:           11.501%   │---->                                   │
+L0054:     desert/barren:             14.035%   │----->                                  │
+L0055:     shrublands/plains:         13.255%   │----->                                  │
+L0056:     wetland/bog/marsh:          2.924%   │->                                      │
+L0057:     open_water:                23.392%   │--------->                              │
+L0058:     enclosed_water:             6.823%   │-->                                     │
+L0059:     thin:                      42.690%   │----------------->                      │
+L0060:     thick:                     61.793%   │------------------------>               |
+L0061:     low:                       53.801%   │--------------------->                  |
+L0062:     high:                      46.979%   │------------------>                     │
+L0063:     isolated:                  34.113%   │------------->                          │
+L0064:     extended:                  52.632%   │--------------------->                  |
+L0065:     cumulus:                   56.920%   │---------------------->                 |
+L0066:     cumulonimbus:              10.916%   │---->                                   |
+L0067:     altocumulus/stratocumulus: 35.088%   │-------------->                         │
+L0068:     cirrus:                    36.647%   │-------------->                         │
+L0069:     haze/fog:                   3.119%   │->                                      │
+L0070:     ice_clouds:                18.519%   │------>                                 │
+L0071:     contrails:                  0.780%   │>                                       │
+L0072:                                          |────────────────────────────────────────|
+L0073:                                          0                   50                  100
+
+
+=== PAGE 6 ===
+L0001: 4. Errors and Uncertainties
+L0002: 
+L0003: 
+L0004: Unfortunately, cloud masking is an inherently ambiguous task. When framed as a binary segmentation task, an annotator must decide
+L0005: how to distinguish between cloud and clear, and differences between their definition and another annotator's is inevitable. We have
+L0006: sought, using our CALIBRATION process, to make sure that both annotators were as similar as possible, and that our decisions were as
+L0007: consistent as possible. However, errors still exist throughout the dataset. Some of these can be estimated, whilst others are known but
+L0008: cannot necessarily be accounted for. In this section, we first outline some of the known issues that are not easily quantified, then later,
+L0009: we use some statistical metrics to quantify the level of inter-annotator agreement.
+L0010: 
+L0011: 
+L0012: Known issues
+L0013: 
+L0014: Mask boundaries
+L0015: 
+L0016: As discussed in Appendix B, we discovered a small bug that affected the border pixels of each mask, making them all clear. To resolve
+L0017: this issue, we have cropped all masks and subscenes to be 1022 pixels across in both dimensions.
+L0018: 
+L0019: 
+L0020: 
+L0021: 
+L0022: Cloud pixels surrounding shadows
+L0023: 
+L0024: We noticed in many scenes that, at the boundary between cloud shadow and clear pixels, a thin line of cloud pixels could sometimes
+L0025: erroneously appear in the Random Forest prediction. We corrected these errors manually when they were spotted during annotation,
+L0026: however, because it affected very small areas, some were missed. It is likely that this occurred because the edge of cloud shadows
+L0027: resembled the darker, shaded areas of clouds to the Random Forest. We considered attempting to use a post-processing technique to
+L0028: remove these artifacts, however we determined that it would likely cause more errors than it would solve. Overall, these are most often a
+L0029: few isolated pixels at the edges of some shadows, and so should not effect an algorithm's training (or test accuracy) too dramatically.
+L0030: 
+L0031: 
+L0032: 
+L0033: Large, thin cloud boundaries
+L0034: 
+L0035: If thin clouds (often cirrus) appeared over a large section of the image, it was often incredibly difficult to tell exactly where the boundary
+L0036: between clear and cloud lay. Ultimately this is a subjective exercise, and we approached it with the understanding that, if in doubt, mark
+L0037: it as cloud. This is because most end-users of cloud masks desire high cloud recall, though we appreciate it may not suit users who
+L0038: prefer high precision.
+L0039: 
+L0040: 
+L0041: 
+L0042: High-reflectance icy subscenes
+L0043: 
+L0044: Some subscenes, often over the Antarctic, were essentially completely white in all bands, except the SWIR bands, indicating that the
+L0045: entire subscene was dominated by ice or snow. It was often difficult to tell if this was either clear, high-altitude ice shelves, or smooth icy
+L0046: clouds. We therefore usually marked these with high difficulty (4 or 5), as we were never completely certain that we hadn't marked the
+L0047: entire scene incorrectly.
+L0048: 
+L0049: 
+L0050: 
+L0051: Classification tag ambiguities
+L0052: 
+L0053: The classification tag scheme was developed to be a quick-and-easy way to understand how an algorithm performs in a given context.
+L0054: They are based on visual cues (described in Section 2), rather than physical measurements. As a result, the categories used will not be
+L0055: suitable to every user, and some human errors will more than likely still exist. In particular, CLOUD TYPE should be seen as much more
+L0056: of a subjective classification, that delineates clouds by certain visual characteristics, but without any formal meteorological rigour. We
+L0057: recommend that if users have specific needs of their own they should develop their own classification scheme to compliment the one
+L0058: provided here.
+
+
+=== PAGE 7 ===
+L0001: Inter-annotator agreement
+L0002: 
+L0003: 
+L0004: Now we consider the consistency of annotations between the two annotators. This does not give us a measure of actual accuracy, but
+L0005: rather relative consistency between annotations. We present statistics here for both CALIBRATION (10 subscenes) and VALIDATION
+L0006: (50 subscenes). See Appendix B for details on how these two stages were carried out.
+L0007: 
+L0008: 
+L0009: F1-score here refers to the harmonic mean of recall and precision, and is therefore symmetrical with respect to the annotators (the recall
+L0010: of one annotator is the precision of the other, and vice versa). Accuracy simply refers to the percentage of pixels that are in agreement
+L0011: between the two annotators.
+L0012: 
+L0013: CALIBRATION DATASET:
+L0014: 
+L0015: 
+L0016: 
+L0017:     CLEAR F1-SCORE:             94.478%   |------------------------------------->  │
+L0018:     CLOUD F1-SCORE:             93.149%   |------------------------------------->  │
+L0019:     CLOUD_SHADOW F1-SCORE:      85.024%   |---------------------------------->     │
+L0020:     TOTAL PIXEL-WISE ACCURACY:  93.739%   |------------------------------------->  │
+L0021:                                           |────────────────────────────────────────|
+L0022:                                           0                   50                  100
+L0023: 
+L0024: 
+L0025: 
+L0026: VALIDATION DATASET:
+L0027: 
+L0028: 
+L0029: 
+L0030:     CLEAR F1-SCORE:             94.574%   |------------------------------------->  │
+L0031:     CLOUD F1-SCORE:             95.969%   |--------------------------------------> │
+L0032:     CLOUD_SHADOW F1-SCORE:      77.947%   |------------------------------->        │
+L0033:     TOTAL PIXEL-WISE ACCURACY:  94.978%   |------------------------------------->  │
+L0034:                                           |────────────────────────────────────────|
+L0035:                                           0                   50                  100
+L0036: 
+L0037: 
+L0038: 
+L0039: We were surprised to find a higher overall agreement for VALIDATION, given that we worked on the masks separately, without
+L0040: consultation. However, this may be because the CALIBRATION images were hand picked because of their usefulness in demonstrating
+L0041: certain features that may be difficult to annotate consistently. We encourage users to split the dataset such that the test set includes all
+L0042: CALIBRATION and VALIDATION images, so that an approximate comparison can be made between model performance and inter-
+L0043: annotator agreement.
+
+
+=== PAGE 8 ===
+L0001: APPENDIX A: Working with the dataset
+L0002: 
+L0003: 
+L0004: The dataset uses numpy arrays to hold the data, therefore the only dependency for reading the data in is to have a python installation
+L0005: with the numpy package. We use python 3 and the latest numpy release (1.19.3) but it is unlikely that any versioning issues will arise
+L0006: when loading the data.
+L0007: 
+L0008: To load a subscene array in python using the numpy package:
+L0009: 
+L0010: 
+L0011: 
+L0012:    import numpy as np
+L0013: 
+L0014:    subscene = np.load(<path/to/subscene.npy>)
+L0015: 
+L0016: 
+L0017: 
+L0018: To load an associated mask:
+L0019: 
+L0020: 
+L0021: 
+L0022:    mask = np.load(<path/to/mask.npy>)
+L0023: 
+L0024: 
+L0025: 
+L0026: For an RGB composite of a subscene one would select:
+L0027: 
+L0028: 
+L0029: 
+L0030:    RGB = subscene[...,[3,2,1]]
+L0031: 
+L0032: 
+L0033: 
+L0034: Several python packages are able to read "classification_tags.csv". We recommend the pandas package as it provides lots of
+L0035: functionality for filtering, querying and analysing the data as a DataFrame object (for more information, see here):
+L0036: 
+L0037: 
+L0038: 
+L0039:    import pandas as pd
+L0040: 
+L0041:    table = pd.read_csv("classification_tags.csv",index_col="index")
+
+
+=== PAGE 9 ===
+L0001: APPENDIX B: Annotation Strategy
+L0002: 
+L0003: 
+L0004: To annotate the images, we first randomly sampled images from the Sentinel-2 2018 archive. By "random", we mean that every product
+L0005: in the 2018 archive had an equal chance of being selected (rather than randomising the location or some other variable). For each
+L0006: selected product, we then extracted random areas of 1152-by-1152 pixels at 20m (note the difference between this and the final 1022-
+L0007: by-1022 subscenes, explained in the next paragraph). This was completed using a virtual machine using the CREODIAS system, which
+L0008: allowed us to quickly query and access the Sentinel-2 data without needing to download it.
+L0009: 
+L0010: Once our subscenes were extracted, we began annotating some test images, and configured IRIS. Several different views were defined,
+L0011: using different band combinations, which could be quickly switched between. It also provided a BingMaps view of the location, which
+L0012: was invaluable when subscenes were highly ambiguous, and gave context for where we were actually looking. During annotation, we
+L0013: padded the subscenes by 64 pixels on each side (resulting in the 1152-by-1152 image used in IRIS), so that there was no disadvantage
+L0014: to annotations close to the edge of the final 1022-by-1022 window. We had originally intended to export 1024-by-1024 pixel masks,
+L0015: however we noticed too late a bug which caused all edge pixels of the mask to be unfilled, hence the final 1022-by-1022 window size.
+L0016: 
+L0017: The Random Forest (RF) could also be configured dynamically. As a general rule, we began annotating a subscene with a simple, small
+L0018: RF that just used the reflectance values. If the model was seen to be struggling, then edge filters could be added as input, and the RF
+L0019: size increased in terms of number of trees, branches and leaves. A suppression filter could also be activated, which smoothed the mask
+L0020: by removing cloudy/shadowy pixels which were not in the vicinity of others. We always checked carefully over the image to check that
+L0021: the RF had done a reasonable job, and often found that significant numbers of iterations and manual corrections were required.
+L0022: 
+L0023: We annotated with high recall in mind. If we felt totally split between annotating an area as cloudy or clear, we defaulted to marking as
+L0024: cloudy. There is no perfect solution to this, as cloud masking is an inherently ambiguous task, but we felt most users of cloud masks
+L0025: desired high recall, and thus our cloud masks should be cautious.
+L0026: 
+L0027: Our annotation style was formalised using 10 hand-picked images (which contained difficult or instructive examples of the kinds of
+L0028: decisions that would need to be made). These 10 images constitute the CALIBRATION set, on which we refined our annotations in an
+L0029: attempt to get as high an agreement between us as possible, within a session of a few hours.
+L0030: 
+L0031: Once CALIBRATION was completed, we began annotating subscenes individually, served to us randomly by IRIS. This comprised the
+L0032: scenes with the MAIN dataset tag, resulting in 453 annotated subscenes. After this, we then decided to both annotate another 50
+L0033: subscenes in parallel (without consulting one another like we had in CALIBRATION). This VALIDATION set can then be used to measure
+L0034: the level of inter-annotator agreement, and thus gives users a rough guide of human-level performance.
+L0035: 
+L0036: Once all masks were complete, we then went through every image again and added the classification tags. These were entered into a
+L0037: spreadsheet using a Google Form, in which the product ID was entered, along with checkboxes for each of the tags. Some logical
+L0038: checks were then carried out to reduce human errors in this process (e.g. no image can contain a CLOUD TYPE, but not a CLOUD
+L0039: THICKNESS, RELATIVE CLOUD HEIGHT and CLOUD EXTENT tag). Undoubtedly, there will remain some errors in the classification
+L0040: tags, and we encourage users to double-check them if they are especially important in their application.
+L0041: 
+L0042: 
+L0043: 
+L0044: 
+L0045: Contributions & Acknowledgements
+L0046: 
+L0047: 
+L0048: The data were collected, annotated, checked, formatted and published by Alistair Francis and John Mrziglod.
+L0049: 
+L0050: Support and advice was provided by Prof. Jan-Peter Muller and Dr. Panagiotis Sidiropoulos, for which we are grateful.
+L0051: 
+L0052: We would like to extend our thanks to Dr. Pierre-Philippe Mathieu and the rest of the team at ESA PhiLab, who provided the environment
+L0053: in which this project was conceived, and continued to give technical support throughout.
+L0054: 
+L0055: Finally, we thank the ESA Network of Resources for sponsoring this project by providing ICT resources.
+

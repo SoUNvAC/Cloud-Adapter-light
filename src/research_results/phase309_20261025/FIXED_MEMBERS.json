@@ -1,0 +1,83 @@
+{
+  "subscenes/S2A_MSIL1C_20180909T151911_N0206_R068_T25XEG_20180909T205122.npy": {
+    "archive": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/subscenes.zip",
+    "sha256": "ef40de0ebd4898ca296bb3b69acd7100b280c8d34de1bdfcafd29d2d78417985",
+    "shape": [
+      1022,
+      1022,
+      13
+    ],
+    "dtype": "float32",
+    "tool": "numpy1.26.4"
+  },
+  "subscenes/S2A_MSIL1C_20180430T111621_N0206_R037_T40XDR_20180430T132750.npy": {
+    "archive": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/subscenes.zip",
+    "sha256": "17902f9de95239338a4e59debdc2f194232a4aa9d3e1905aaf67c74eb5c2ac8e",
+    "shape": [
+      1022,
+      1022,
+      13
+    ],
+    "dtype": "float32",
+    "tool": "numpy1.26.4"
+  },
+  "subscenes/S2A_MSIL1C_20181118T084231_N0207_R064_T35RPM_20181118T101007.npy": {
+    "archive": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/subscenes.zip",
+    "sha256": "526db4b1aba9ac73c2142f2bee5112022bd34a2aef7e419455f24a777fa25cec",
+    "shape": [
+      1022,
+      1022,
+      13
+    ],
+    "dtype": "float32",
+    "tool": "numpy1.26.4"
+  },
+  "masks/S2A_MSIL1C_20180909T151911_N0206_R068_T25XEG_20180909T205122.npy": {
+    "archive": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/masks.zip",
+    "sha256": "428d285582fc2ee695d36e476ca2589b3d2d3d2656783427cecc605fb492b83e",
+    "shape": [
+      1022,
+      1022,
+      3
+    ],
+    "dtype": "bool",
+    "tool": "numpy1.26.4",
+    "unique": [
+      false,
+      true
+    ],
+    "one_hot_all": true
+  },
+  "masks/S2A_MSIL1C_20180430T111621_N0206_R037_T40XDR_20180430T132750.npy": {
+    "archive": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/masks.zip",
+    "sha256": "3abbc1b7ae1ddcc1fa743cb176e8be9765d39ba750c29aeae289277f8a9304d6",
+    "shape": [
+      1022,
+      1022,
+      3
+    ],
+    "dtype": "bool",
+    "tool": "numpy1.26.4",
+    "unique": [
+      false,
+      true
+    ],
+    "one_hot_all": true
+  },
+  "masks/S2A_MSIL1C_20181118T084231_N0207_R064_T35RPM_20181118T101007.npy": {
+    "archive": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/masks.zip",
+    "sha256": "ba90d1b9c475f109f5228aa7227519c17503ab9b6f6421ee1c01d1eb0ad1fca2",
+    "shape": [
+      1022,
+      1022,
+      3
+    ],
+    "dtype": "bool",
+    "tool": "numpy1.26.4",
+    "unique": [
+      false,
+      true
+    ],
+    "one_hot_all": true
+  }
+}

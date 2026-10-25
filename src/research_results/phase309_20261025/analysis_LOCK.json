@@ -1,0 +1,24 @@
+{
+  "code": {
+    "src/tools/audit_phase309.py": "a831a33a47413a7fa11bae3933b56ee980a608468759b7693b0cf74ab52c60a8",
+    "src/tools/fetch_phase309.py": "7017b083fc21781cda4d79fa65cb673c7c84bd876ceb5e485e08d0466039478f",
+    "src/tools/finalize_phase309.py": "fda4a46e6bbee8b8e4ba2e38b87e5062a77bebc70d1cf57780ab72b68fd3200f",
+    "src/tools/intake_phase309.py": "42c7f75eb3e53e73f1857a9ab2e6548334429c61f9ab2b69df182428bdfaef8b",
+    "src/tools/phase309_common.py": "dc9a7413f316cd24443759f3c4f713edc2067ec36392bb4db6d96f40a475debd",
+    "src/tools/run_phase309.py": "6bbabc02231c133adce311064af667389444b265521e98fb7d7b7a0f7f9e69c6",
+    "src/tools/transfer_phase309.py": "814f3d4a1cda8a990ebb33955be7c26cef95f4d5abfc87e24047e1bd23f744ab",
+    "src/tools/verify_phase309.py": "142d78fe363db30f8fd465adaac988088b5c289a598330ad057a8baf52162add"
+  },
+  "protocol_sha256": "ab3c310782ebc7d528d9e56d8cd503d16565763d0b75e1dccbf975c270b0a056",
+  "git_commit": "f7b301c10189088f7cbe804a24c414e7f2b4b0a4",
+  "start_beijing": "2026-10-25T12:54:36.609733+08:00",
+  "runtime": "/home/scv/miniconda3/envs/cloud-lite-pt210/bin/python",
+  "cap_CPU_bytes": 8589934592,
+  "cap_total_seconds": 3600,
+  "cap_new_persistent_bytes": 500000000,
+  "max_download_bytes": 20000000,
+  "max_web_documents": 10,
+  "fits": 0,
+  "training_updates": 0,
+  "neural_calls": 0
+}

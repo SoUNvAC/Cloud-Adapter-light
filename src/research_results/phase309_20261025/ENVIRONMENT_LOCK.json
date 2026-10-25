@@ -1,0 +1,28 @@
+{
+  "executable": "/home/scv/miniconda3/envs/cloud-lite-pt210/bin/python",
+  "PDF_tools": {
+    "pdftotext": null,
+    "mutool": null,
+    "gs": null
+  },
+  "PDF_modules": {
+    "pypdf": false,
+    "fitz": false,
+    "pdfminer": false,
+    "pdfplumber": false,
+    "PyPDF2": false
+  },
+  "isolated_target": "/home/scv/shared/phase309_20261025/toolenv",
+  "production_packages_unchanged": true,
+  "wheels": {
+    "pypdf-5.9.0-py3-none-any.whl": {
+      "bytes": 313193,
+      "sha256": "be10a4c54202f46d9daceaa8788be07aa8cd5ea8c25c529c50dd509206382c35"
+    },
+    "pypdfium2-4.30.0-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl": {
+      "bytes": 2812008,
+      "sha256": "f1f78d2189e0ddf9ac2b7a9b9bd4f0c66f54d1389ff6c17e9fd9dc034d06eb3f"
+    }
+  },
+  "download_wheel_bytes": 3125201
+}

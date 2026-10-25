@@ -1,0 +1,254 @@
+[
+  {
+    "product": "S2A_MSIL1C_20180909T151911_N0206_R068_T25XEG_20180909T205122",
+    "members": [
+      {
+        "name": "shapefiles/S2A_MSIL1C_20180909T151911_N0206_R068_T25XEG_20180909T205122/S2A_MSIL1C_20180909T151911_N0206_R068_T25XEG_20180909T205122.cpg",
+        "sha256": "09fc313075748ce8ead962229ed89c919d5a9ff71974ee725a0b48bb87d975a2",
+        "bytes": 10
+      },
+      {
+        "name": "shapefiles/S2A_MSIL1C_20180909T151911_N0206_R068_T25XEG_20180909T205122/S2A_MSIL1C_20180909T151911_N0206_R068_T25XEG_20180909T205122.dbf",
+        "sha256": "bda82c82b9e42fae52217666f43fd16ffa273cb4bacf3340578fc933a6a5aa57",
+        "bytes": 78,
+        "attributes": {
+          "fields": [
+            {
+              "name": "FID",
+              "type": "N",
+              "length": 11,
+              "decimals": 0
+            }
+          ],
+          "rows": [
+            {
+              "deleted": false,
+              "FID": "0"
+            }
+          ]
+        }
+      },
+      {
+        "name": "shapefiles/S2A_MSIL1C_20180909T151911_N0206_R068_T25XEG_20180909T205122/S2A_MSIL1C_20180909T151911_N0206_R068_T25XEG_20180909T205122.prj",
+        "sha256": "2323d4989828d6b7430484ce45ad8c62ed636e184caf89cb1e174defc3abd384",
+        "bytes": 390,
+        "WKT": "PROJCS[\"WGS_1984_UTM_Zone_25N\",GEOGCS[\"GCS_WGS_1984\",DATUM[\"D_WGS_1984\",SPHEROID[\"WGS_1984\",6378137,298.257223563]],PRIMEM[\"Greenwich\",0],UNIT[\"Degree\",0.017453292519943295]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",-33],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"Meter\",1]]"
+      },
+      {
+        "name": "shapefiles/S2A_MSIL1C_20180909T151911_N0206_R068_T25XEG_20180909T205122/S2A_MSIL1C_20180909T151911_N0206_R068_T25XEG_20180909T205122.shp",
+        "sha256": "6d5c342d4a7ff5263ad8be424bf8665cb91e4502916478f5f1e9158f5f33f9ea",
+        "bytes": 236,
+        "shape_type": 5,
+        "bbox_xy_m": [
+          523480.0,
+          8674400.0,
+          546520.0,
+          8697440.0
+        ],
+        "geometry": [
+          {
+            "record": 1,
+            "parts": [
+              0
+            ],
+            "xy_m": [
+              [
+                523480.0,
+                8697440.0
+              ],
+              [
+                546520.0,
+                8697440.0
+              ],
+              [
+                546520.0,
+                8674400.0
+              ],
+              [
+                523480.0,
+                8674400.0
+              ],
+              [
+                523480.0,
+                8697440.0
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "name": "shapefiles/S2A_MSIL1C_20180909T151911_N0206_R068_T25XEG_20180909T205122/S2A_MSIL1C_20180909T151911_N0206_R068_T25XEG_20180909T205122.shx",
+        "sha256": "9d964a4d388bc4d758f2566f7c045f8036677db5c3591a08ecd0989c5c400b5f",
+        "bytes": 108
+      }
+    ]
+  },
+  {
+    "product": "S2A_MSIL1C_20180430T111621_N0206_R037_T40XDR_20180430T132750",
+    "members": [
+      {
+        "name": "shapefiles/S2A_MSIL1C_20180430T111621_N0206_R037_T40XDR_20180430T132750/S2A_MSIL1C_20180430T111621_N0206_R037_T40XDR_20180430T132750.shp",
+        "sha256": "3d9e533f7c725fe382e529d04edb3b55401ed85b378c2be8d2c10857280186e2",
+        "bytes": 236,
+        "shape_type": 5,
+        "bbox_xy_m": [
+          469140.0,
+          8998100.0,
+          492180.0,
+          9021140.0
+        ],
+        "geometry": [
+          {
+            "record": 1,
+            "parts": [
+              0
+            ],
+            "xy_m": [
+              [
+                469140.0,
+                9021140.0
+              ],
+              [
+                492180.0,
+                9021140.0
+              ],
+              [
+                492180.0,
+                8998100.0
+              ],
+              [
+                469140.0,
+                8998100.0
+              ],
+              [
+                469140.0,
+                9021140.0
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "name": "shapefiles/S2A_MSIL1C_20180430T111621_N0206_R037_T40XDR_20180430T132750/S2A_MSIL1C_20180430T111621_N0206_R037_T40XDR_20180430T132750.dbf",
+        "sha256": "bda82c82b9e42fae52217666f43fd16ffa273cb4bacf3340578fc933a6a5aa57",
+        "bytes": 78,
+        "attributes": {
+          "fields": [
+            {
+              "name": "FID",
+              "type": "N",
+              "length": 11,
+              "decimals": 0
+            }
+          ],
+          "rows": [
+            {
+              "deleted": false,
+              "FID": "0"
+            }
+          ]
+        }
+      },
+      {
+        "name": "shapefiles/S2A_MSIL1C_20180430T111621_N0206_R037_T40XDR_20180430T132750/S2A_MSIL1C_20180430T111621_N0206_R037_T40XDR_20180430T132750.cpg",
+        "sha256": "09fc313075748ce8ead962229ed89c919d5a9ff71974ee725a0b48bb87d975a2",
+        "bytes": 10
+      },
+      {
+        "name": "shapefiles/S2A_MSIL1C_20180430T111621_N0206_R037_T40XDR_20180430T132750/S2A_MSIL1C_20180430T111621_N0206_R037_T40XDR_20180430T132750.prj",
+        "sha256": "975f11fff5df8a3e1ff66464921ba01ef92e17c5078d1582fcfc65d4c05fc679",
+        "bytes": 389,
+        "WKT": "PROJCS[\"WGS_1984_UTM_Zone_40N\",GEOGCS[\"GCS_WGS_1984\",DATUM[\"D_WGS_1984\",SPHEROID[\"WGS_1984\",6378137,298.257223563]],PRIMEM[\"Greenwich\",0],UNIT[\"Degree\",0.017453292519943295]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",57],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"Meter\",1]]"
+      },
+      {
+        "name": "shapefiles/S2A_MSIL1C_20180430T111621_N0206_R037_T40XDR_20180430T132750/S2A_MSIL1C_20180430T111621_N0206_R037_T40XDR_20180430T132750.shx",
+        "sha256": "8080416214bbb9f7668dc0b19d28058190b3d54d656b41ca3a421038f3f0650f",
+        "bytes": 108
+      }
+    ]
+  },
+  {
+    "product": "S2A_MSIL1C_20181118T084231_N0207_R064_T35RPM_20181118T101007",
+    "members": [
+      {
+        "name": "shapefiles/S2A_MSIL1C_20181118T084231_N0207_R064_T35RPM_20181118T101007/S2A_MSIL1C_20181118T084231_N0207_R064_T35RPM_20181118T101007.shx",
+        "sha256": "3fe41e6ea17febbd29bdd6e3f625bcdaae3c0ed9ba6af377fdfed9363361cc95",
+        "bytes": 108
+      },
+      {
+        "name": "shapefiles/S2A_MSIL1C_20181118T084231_N0207_R064_T35RPM_20181118T101007/S2A_MSIL1C_20181118T084231_N0207_R064_T35RPM_20181118T101007.dbf",
+        "sha256": "bda82c82b9e42fae52217666f43fd16ffa273cb4bacf3340578fc933a6a5aa57",
+        "bytes": 78,
+        "attributes": {
+          "fields": [
+            {
+              "name": "FID",
+              "type": "N",
+              "length": 11,
+              "decimals": 0
+            }
+          ],
+          "rows": [
+            {
+              "deleted": false,
+              "FID": "0"
+            }
+          ]
+        }
+      },
+      {
+        "name": "shapefiles/S2A_MSIL1C_20181118T084231_N0207_R064_T35RPM_20181118T101007/S2A_MSIL1C_20181118T084231_N0207_R064_T35RPM_20181118T101007.prj",
+        "sha256": "2ce928064e143f9e57ba88800c8c7f67480bc2d93b11fcab27acc2ab3c434434",
+        "bytes": 389,
+        "WKT": "PROJCS[\"WGS_1984_UTM_Zone_35N\",GEOGCS[\"GCS_WGS_1984\",DATUM[\"D_WGS_1984\",SPHEROID[\"WGS_1984\",6378137,298.257223563]],PRIMEM[\"Greenwich\",0],UNIT[\"Degree\",0.017453292519943295]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",27],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"Meter\",1]]"
+      },
+      {
+        "name": "shapefiles/S2A_MSIL1C_20181118T084231_N0207_R064_T35RPM_20181118T101007/S2A_MSIL1C_20181118T084231_N0207_R064_T35RPM_20181118T101007.cpg",
+        "sha256": "09fc313075748ce8ead962229ed89c919d5a9ff71974ee725a0b48bb87d975a2",
+        "bytes": 10
+      },
+      {
+        "name": "shapefiles/S2A_MSIL1C_20181118T084231_N0207_R064_T35RPM_20181118T101007/S2A_MSIL1C_20181118T084231_N0207_R064_T35RPM_20181118T101007.shp",
+        "sha256": "70050840ac6f8eed2c8fd264d91a0b4a9400eeebea90cc550208a49e1ee4303c",
+        "bytes": 236,
+        "shape_type": 5,
+        "bbox_xy_m": [
+          607320.0,
+          3171940.0,
+          630360.0,
+          3194980.0
+        ],
+        "geometry": [
+          {
+            "record": 1,
+            "parts": [
+              0
+            ],
+            "xy_m": [
+              [
+                607320.0,
+                3194980.0
+              ],
+              [
+                630360.0,
+                3194980.0
+              ],
+              [
+                630360.0,
+                3171940.0
+              ],
+              [
+                607320.0,
+                3171940.0
+              ],
+              [
+                607320.0,
+                3194980.0
+              ]
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,222 @@
+{
+  "created": "2020-11-09T13:28:43.837217+00:00",
+  "modified": "2024-07-19T14:22:06.069011+00:00",
+  "id": 4172871,
+  "conceptrecid": "4172870",
+  "doi": "10.5281/zenodo.4172871",
+  "conceptdoi": "10.5281/zenodo.4172870",
+  "doi_url": "https://doi.org/10.5281/zenodo.4172871",
+  "metadata": {
+    "title": "Sentinel-2 Cloud Mask Catalogue",
+    "doi": "10.5281/zenodo.4172871",
+    "publication_date": "2020-11-01",
+    "description": "<p><strong>Overview</strong></p>\n\n<p>This dataset comprises cloud masks for 513 1022-by-1022 pixel subscenes, at 20m resolution, sampled random from the 2018 Level-1C Sentinel-2 archive. The design of this dataset follows from some observations about cloud masking: (i) performance over an entire product is highly correlated, thus subscenes provide more value per-pixel than full scenes, (ii) current cloud masking datasets often focus on specific regions, or hand-select the products used, which introduces a bias into the dataset that is not representative of the real-world data, (iii) cloud mask performance appears to be highly correlated to surface type and cloud structure, so testing should include analysis of failure modes in relation to these variables.</p>\n\n<p>The data was annotated semi-automatically, using the <a href=\"https://github.com/ESA-PhiLab/iris\">IRIS toolkit</a>, which allows users to dynamically train a Random Forest (implemented using <a href=\"https://github.com/microsoft/LightGBM\">LightGBM</a>), speeding up annotations by iteratively improving it&#39;s predictions, but preserving the annotator&#39;s ability to make final manual changes when needed. This hybrid approach allowed us to process many more masks than would have been possible manually, which we felt was vital in creating a large enough dataset to approximate the statistics of the whole Sentinel-2 archive.</p>\n\n<p>In addition to the pixel-wise, 3 class (CLEAR, CLOUD, CLOUD_SHADOW) segmentation masks, we also provide users with binary<br>\nclassification &quot;tags&quot; for each subscene that can be used in testing to determine performance in specific circumstances. These include:</p>\n\n<ul>\n\t<li><strong>SURFACE TYPE</strong>: <em>11 categories</em></li>\n\t<li><strong>CLOUD TYPE</strong>: <em>7 categories</em></li>\n\t<li><strong>CLOUD HEIGHT</strong>: <em>low, high</em></li>\n\t<li><strong>CLOUD THICKNESS</strong>: <em>thin, thick</em></li>\n\t<li><strong>CLOUD EXTENT</strong>: <em>isolated, extended</em></li>\n</ul>\n\n<p>&nbsp;</p>\n\n<p>Wherever practical, cloud shadows were also annotated, however this was sometimes not possible due to high-relief terrain, or large ambiguities. In total, 424 were marked with shadows (if present), and 89 have shadows that were not annotatable due to very ambiguous shadow boundaries, or terrain that cast significant shadows. If users wish to train an algorithm specifically for cloud shadow masks, we advise them to remove those 89 images for which shadow was not possible, however, bear in mind that this will systematically reduce the difficulty of the shadow class compared to real-world use, as these contain the most difficult shadow examples.</p>\n\n<p>In addition to the 20m sampled subscenes and masks, we also provide users with shapefiles that define the boundary of the mask on the original Sentinel-2 scene. If users wish to retrieve the L1C bands at their original resolutions, they can use these to do so.</p>\n\n<p>Please see the README for further details on the dataset structure&nbsp;and more.</p>\n\n<p>&nbsp;</p>\n\n<p><strong>Contributions &amp; Acknowledgements</strong></p>\n\n<p>The data were collected, annotated, checked, formatted and published by Alistair Francis and John Mrziglod.</p>\n\n<p>Support and advice was provided by Prof. Jan-Peter Muller and Dr. Panagiotis Sidiropoulos, for which we are grateful.</p>\n\n<p>We would like to extend our thanks to Dr. Pierre-Philippe Mathieu and the rest of the team at <em>ESA PhiLab</em>, who provided the environment in which this project was conceived, and continued to give technical support throughout.</p>\n\n<p>Finally, we thank the <em>ESA Network of Resources</em> for sponsoring this project by providing ICT resources.</p>\n\n<p>&nbsp;</p>\n\n<p>&nbsp;</p>",
+    "access_right": "open",
+    "creators": [
+      {
+        "name": "Francis, Alistair",
+        "affiliation": "University College London",
+        "orcid": "0000-0003-4613-2140"
+      },
+      {
+        "name": "Mrziglod, John",
+        "affiliation": "World Food Programme"
+      },
+      {
+        "name": "Sidiropoulos, Panagiotis",
+        "affiliation": "Hummingbird Technologies Ltd",
+        "orcid": "0000-0003-3605-3908"
+      },
+      {
+        "name": "Muller, Jan-Peter",
+        "affiliation": "University College London",
+        "orcid": "0000-0002-5077-3736"
+      }
+    ],
+    "keywords": [
+      "Earth Observation",
+      "Remote sensing",
+      "AI4EO",
+      "Machine Learning",
+      "Deep Learning",
+      "satellite",
+      "meteorology",
+      "atmosphere",
+      "atmospheric",
+      "optical",
+      "computer vision",
+      "image segmentation",
+      "validation",
+      "training",
+      "copernicus",
+      "infrared",
+      "multispectral",
+      "spaceborne",
+      "Sentinel-2",
+      "iris"
+    ],
+    "language": "eng",
+    "resource_type": {
+      "title": "Dataset",
+      "type": "dataset"
+    },
+    "license": {
+      "id": "cc-by-4.0"
+    },
+    "grants": [
+      {
+        "code": "1912521",
+        "internal_id": "10.13039/100014013::1912521",
+        "funder": {
+          "name": "UK Research and Innovation",
+          "doi": "10.13039/100014013",
+          "acronym": "UKRI"
+        },
+        "title": "Data mining for surface change discovery on the lunar surface from orbital images",
+        "program": "STFC"
+      }
+    ],
+    "relations": {
+      "version": [
+        {
+          "index": 0,
+          "is_last": true,
+          "parent": {
+            "pid_type": "recid",
+            "pid_value": "4172870"
+          }
+        }
+      ]
+    }
+  },
+  "title": "Sentinel-2 Cloud Mask Catalogue",
+  "links": {
+    "self": "https://zenodo.org/api/records/4172871",
+    "self_html": "https://zenodo.org/records/4172871",
+    "preview_html": "https://zenodo.org/records/4172871?preview=1",
+    "doi": "https://doi.org/10.5281/zenodo.4172871",
+    "self_doi": "https://doi.org/10.5281/zenodo.4172871",
+    "self_doi_html": "https://zenodo.org/doi/10.5281/zenodo.4172871",
+    "reserve_doi": "https://zenodo.org/api/records/4172871/draft/pids/doi",
+    "parent": "https://zenodo.org/api/records/4172870",
+    "parent_html": "https://zenodo.org/records/4172870",
+    "parent_doi": "https://doi.org/10.5281/zenodo.4172870",
+    "parent_doi_html": "https://zenodo.org/doi/10.5281/zenodo.4172870",
+    "self_iiif_manifest": "https://zenodo.org/api/iiif/record:4172871/manifest",
+    "self_iiif_sequence": "https://zenodo.org/api/iiif/record:4172871/sequence/default",
+    "files": "https://zenodo.org/api/records/4172871/files",
+    "media_files": "https://zenodo.org/api/records/4172871/media-files",
+    "thumbnails": {
+      "10": "https://zenodo.org/api/iiif/record:4172871:README.pdf/full/%5E10,/0/default.jpg",
+      "50": "https://zenodo.org/api/iiif/record:4172871:README.pdf/full/%5E50,/0/default.jpg",
+      "100": "https://zenodo.org/api/iiif/record:4172871:README.pdf/full/%5E100,/0/default.jpg",
+      "250": "https://zenodo.org/api/iiif/record:4172871:README.pdf/full/%5E250,/0/default.jpg",
+      "750": "https://zenodo.org/api/iiif/record:4172871:README.pdf/full/%5E750,/0/default.jpg",
+      "1200": "https://zenodo.org/api/iiif/record:4172871:README.pdf/full/%5E1200,/0/default.jpg"
+    },
+    "archive": "https://zenodo.org/api/records/4172871/files-archive",
+    "archive_media": "https://zenodo.org/api/records/4172871/media-files-archive",
+    "latest": "https://zenodo.org/api/records/4172871/versions/latest",
+    "latest_html": "https://zenodo.org/records/4172871/latest",
+    "versions": "https://zenodo.org/api/records/4172871/versions",
+    "draft": "https://zenodo.org/api/records/4172871/draft",
+    "access_links": "https://zenodo.org/api/records/4172871/access/links",
+    "access_grants": "https://zenodo.org/api/records/4172871/access/grants",
+    "access_users": "https://zenodo.org/api/records/4172871/access/users",
+    "access_request": "https://zenodo.org/api/records/4172871/access/request",
+    "access": "https://zenodo.org/api/records/4172871/access",
+    "communities": "https://zenodo.org/api/records/4172871/communities",
+    "communities-suggestions": "https://zenodo.org/api/records/4172871/communities-suggestions",
+    "request_deletion": "https://zenodo.org/api/records/4172871/request-deletion",
+    "file_modification": "https://zenodo.org/api/records/4172871/file-modification",
+    "quota_increase": "https://zenodo.org/api/records/4172871/quota-increase",
+    "requests": "https://zenodo.org/api/records/4172871/requests"
+  },
+  "updated": "2024-07-19T14:22:06.069011+00:00",
+  "recid": "4172871",
+  "revision": 5,
+  "files": [
+    {
+      "id": "173ebe37-9411-48c4-b188-411e0696a9f0",
+      "key": "subscenes.zip",
+      "size": 15197196473,
+      "checksum": "md5:0ad1de0ebeaff529782f456cad2e966f",
+      "links": {
+        "self": "https://zenodo.org/api/records/4172871/files/subscenes.zip/content"
+      }
+    },
+    {
+      "id": "e25bf21f-678c-442c-916f-d5649dd6b2f6",
+      "key": "shapefiles.zip",
+      "size": 1450453,
+      "checksum": "md5:3ed79b74eb84431e68f764457b1f00ac",
+      "links": {
+        "self": "https://zenodo.org/api/records/4172871/files/shapefiles.zip/content"
+      }
+    },
+    {
+      "id": "205ce07a-fd66-44a8-9486-0dcad31d60aa",
+      "key": "masks.zip",
+      "size": 7241097,
+      "checksum": "md5:c955efe74c52d07f8e8bb02d5143e182",
+      "links": {
+        "self": "https://zenodo.org/api/records/4172871/files/masks.zip/content"
+      }
+    },
+    {
+      "id": "a87869f2-96f9-47f4-9c37-0e874ff6fc73",
+      "key": "README.pdf",
+      "size": 1891882,
+      "checksum": "md5:48fb6afa0195a3736d4ce122d007be36",
+      "links": {
+        "self": "https://zenodo.org/api/records/4172871/files/README.pdf/content"
+      }
+    },
+    {
+      "id": "7cca9fd0-8595-4707-91fd-f4a7632e8192",
+      "key": "classification_tags.csv",
+      "size": 77940,
+      "checksum": "md5:6911e5a8915daf9a98638eb21ba4afd3",
+      "links": {
+        "self": "https://zenodo.org/api/records/4172871/files/classification_tags.csv/content"
+      }
+    },
+    {
+      "id": "45a519c8-860b-4f02-9fef-33209901d296",
+      "key": "thumbnails.zip",
+      "size": 145914232,
+      "checksum": "md5:ac054a7940e0680e768bdd824e0ee8af",
+      "links": {
+        "self": "https://zenodo.org/api/records/4172871/files/thumbnails.zip/content"
+      }
+    },
+    {
+      "id": "d12f8a7a-ac77-432e-8893-1d9970cdb9ad",
+      "key": "alt_masks.zip",
+      "size": 1077840,
+      "checksum": "md5:0140a8b500d85cc8553ec8ba0a304bde",
+      "links": {
+        "self": "https://zenodo.org/api/records/4172871/files/alt_masks.zip/content"
+      }
+    }
+  ],
+  "swh": {},
+  "owners": [
+    {
+      "id": "108853"
+    }
+  ],
+  "status": "published",
+  "stats": {
+    "downloads": 29145,
+    "unique_downloads": 14492,
+    "views": 17084,
+    "unique_views": 15394,
+    "version_downloads": 28978,
+    "version_unique_downloads": 14390,
+    "version_unique_views": 15298,
+    "version_views": 16980
+  },
+  "state": "done",
+  "submitted": true
+}

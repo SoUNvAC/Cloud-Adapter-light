@@ -1,0 +1,33 @@
+{
+  "raw_RESULT_sha256": "1c9803cbf5121ab8a3c040755e59ce787e25284134ac366e6b0367b60774e590",
+  "published_RESULT_sha256": "582c567da6c8dc22904015b0c0c52f613c585fef372a8e4f0e2c0c4486332c2c",
+  "all_original_CSV_unchanged": true,
+  "original_CSV_SHA": {
+    "EVIDENCE_INDEX.csv": "4ea290519231fb31d697582d03c1e25c676d20e9aa3126e179a3a01841547683",
+    "ISSUE_DISPOSITION.csv": "0929b9f7617606da97787872e6fb798dfd0e73bb699eb8bf15a28dd917fd6987",
+    "REFERENCE_CROSS_COUNTS.csv": "5516872d7eaf08aef97767952813580debd2a190fc5a5fc7837561e5b30bec30",
+    "REFERENCE_RELATION.csv": "216b3412792214e9cd48273a273f4434522ff3fd45fc3cdd59918b34745b5be2",
+    "SEMANTIC_EVIDENCE.csv": "94aa346ceddf9950cdcbaa4cfbb061562795dfe1faf5a17461fb92fadb85c121",
+    "SPATIAL_PROVENANCE.csv": "da7a6e2ee6fd07060651904dd7f0addd726a35a7cc5da76e30f599b0aac90312"
+  },
+  "pages_visually_checked": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "page_order_tables_and_footnotes_checked": true,
+  "author_tool_README_is_current_general_capability_not_dataset_version_pipeline": true,
+  "unknowns_are_documentation_gaps_not_negative_truth": true,
+  "download_accounting": {
+    "saved_wheels_and_document_bodies_bytes": 3146312,
+    "pip_metadata": "pip log shows rounded7.1kB and48kB; retained in tool_download.log",
+    "index_HTTP_TLS_overhead": "not measured as network-interface traffic; saved-file/body count is not total wire bytes"
+  },
+  "no_original_report_or_metrics_rewritten": true
+}

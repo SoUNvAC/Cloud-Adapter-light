@@ -1,0 +1,78 @@
+{
+  "tool": "pypdf5.9.0 layout extraction + pypdfium2 4.30.0 rendering, no OCR",
+  "README_sha256": "fe30cf507184ee3f3cf16e16bce271b0701763d00144b138e0b3edf075e50ce6",
+  "pages": [
+    {
+      "page": 1,
+      "text": "evidence/pages/README_page01.txt",
+      "text_sha256": "77a3ac9da7f084b713a8976832c62966a0656ad1da0eb200e1189a49c7cffb3b",
+      "png": "evidence/pages/README_page01.png",
+      "png_sha256": "1137527fa9b33a837d9a40e275f5ba1ad73a44eeffd07d3f21c628ecf9914c5d",
+      "characters": 2676
+    },
+    {
+      "page": 2,
+      "text": "evidence/pages/README_page02.txt",
+      "text_sha256": "e5212fdc9d05256b305d0da0715b4c9a0cddebf74942ef154c526b99a417e783",
+      "png": "evidence/pages/README_page02.png",
+      "png_sha256": "b4e6b8258851384e673e49e01200595d0d3c2989d752d17cbd7b86e978ac2e45",
+      "characters": 2558
+    },
+    {
+      "page": 3,
+      "text": "evidence/pages/README_page03.txt",
+      "text_sha256": "3b95787033abaa040e9832de54d7517b86fa0ed6c4a9ac6e1287ae4a14ba567d",
+      "png": "evidence/pages/README_page03.png",
+      "png_sha256": "de3b28b96d356b4ed5c39150e6dc4871c5fdcb9182fa805000a853e63449a5c3",
+      "characters": 3072
+    },
+    {
+      "page": 4,
+      "text": "evidence/pages/README_page04.txt",
+      "text_sha256": "bd5e77cf1691e3c4176172790aa1bc8203d0a7227526e137eadc73f112340fca",
+      "png": "evidence/pages/README_page04.png",
+      "png_sha256": "6580a995d2eae36efd7af494b673a7a046833d5599be0f6913c53db1699b843c",
+      "characters": 2309
+    },
+    {
+      "page": 5,
+      "text": "evidence/pages/README_page05.txt",
+      "text_sha256": "850a083ca2620faa6a54b2d13bb1dc01c500970477fb66b68605469d11e547f2",
+      "png": "evidence/pages/README_page05.png",
+      "png_sha256": "e3cdcbebb918cb47edde88cfe1b1e8870f15d7d4822274cabe4e8ff35d78d6a8",
+      "characters": 3508
+    },
+    {
+      "page": 6,
+      "text": "evidence/pages/README_page06.txt",
+      "text_sha256": "d7acedea2d6c2d814275f7e080a8dbca2754465bd46c2b3685ca23b09b507206",
+      "png": "evidence/pages/README_page06.png",
+      "png_sha256": "d65db13c7a256c6199a940a1e3560d7577b0e4e99978845e0e76d5262dbaf438",
+      "characters": 3546
+    },
+    {
+      "page": 7,
+      "text": "evidence/pages/README_page07.txt",
+      "text_sha256": "3776166a399a3abfe7b6d3e29b4829374a7d57e84913b8dd40bf14d91964f360",
+      "png": "evidence/pages/README_page07.png",
+      "png_sha256": "d692f894c7331a7f8c1642eb01cb786123b0e30da15f95ff720a0783e2cccfb5",
+      "characters": 2284
+    },
+    {
+      "page": 8,
+      "text": "evidence/pages/README_page08.txt",
+      "text_sha256": "54d003da4a5596e8159b014313cae9cc749d67655358090352dd1b839505b5c1",
+      "png": "evidence/pages/README_page08.png",
+      "png_sha256": "c95d20002aabd3e274d0b0501e74fcf820d8e031ce4bd26a2b8bd10f773ad977",
+      "characters": 964
+    },
+    {
+      "page": 9,
+      "text": "evidence/pages/README_page09.txt",
+      "text_sha256": "c01045418aa5a1fb230eb753d5d1d56603f5a95dac150b75d05fd4843313e3c6",
+      "png": "evidence/pages/README_page09.png",
+      "png_sha256": "0d9ed05f48336190ba3f6a673ab499f3ad7386b5b9a4cbac6271958134e16e5f",
+      "characters": 4486
+    }
+  ]
+}

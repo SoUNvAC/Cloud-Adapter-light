@@ -1,0 +1,5 @@
+Processing /home/scv/shared/phase309_20261025/wheels/pypdf-5.9.0-py3-none-any.whl
+Processing /home/scv/shared/phase309_20261025/wheels/pypdfium2-4.30.0-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+Installing collected packages: pypdfium2, pypdf
+
+Successfully installed pypdf-5.9.0 pypdfium2-4.30.0

@@ -1,0 +1,27 @@
+{
+  "status": "completed",
+  "stages": [
+    {
+      "stage": "intake",
+      "seconds": 9.14356159500312,
+      "peak_CPU_tree_bytes": 319012864,
+      "minimum_available_bytes": 32340791296,
+      "exit_code": 0,
+      "failure": null
+    },
+    {
+      "stage": "analysis",
+      "seconds": 5.334793865913525,
+      "peak_CPU_tree_bytes": 43343872,
+      "minimum_available_bytes": 32691437568,
+      "exit_code": 0,
+      "failure": null
+    }
+  ],
+  "total_seconds": 14.478355460916646,
+  "peak_CPU_tree_bytes": 319012864,
+  "minimum_available_bytes": 32340791296,
+  "fits": 0,
+  "training_updates": 0,
+  "neural_calls": 0
+}

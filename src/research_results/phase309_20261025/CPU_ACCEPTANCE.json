@@ -1,0 +1,20 @@
+{
+  "products": 3,
+  "pages": 9,
+  "semantic_questions": 15,
+  "issues": 7,
+  "all_reference_rows_including_missing": true,
+  "all_space_dimensions_in_metres": true,
+  "unknown_not_negation": true,
+  "no_hypothesis_written_as_affine": true,
+  "four_corner_center_residuals_NA_no_complete_transform": true,
+  "main_alt_fixed3_missing": true,
+  "historical_SHA_unchanged": true,
+  "production_packages_unchanged": true,
+  "fits": 0,
+  "training_updates": 0,
+  "neural_calls": 0,
+  "performance_recalculations": 0,
+  "network_documents": 3,
+  "download_bytes": 3146312
+}

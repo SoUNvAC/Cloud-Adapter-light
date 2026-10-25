@@ -1,0 +1,12 @@
+﻿evidence_id,role,version,URL,path,SHA,page
+README_p1,published file,4172871; local SHA exact,https://zenodo.org/records/4172871,evidence/pages/README_page01.txt,77a3ac9da7f084b713a8976832c62966a0656ad1da0eb200e1189a49c7cffb3b,1
+README_p2,published file,4172871; local SHA exact,https://zenodo.org/records/4172871,evidence/pages/README_page02.txt,e5212fdc9d05256b305d0da0715b4c9a0cddebf74942ef154c526b99a417e783,2
+README_p3,published file,4172871; local SHA exact,https://zenodo.org/records/4172871,evidence/pages/README_page03.txt,3b95787033abaa040e9832de54d7517b86fa0ed6c4a9ac6e1287ae4a14ba567d,3
+README_p4,published file,4172871; local SHA exact,https://zenodo.org/records/4172871,evidence/pages/README_page04.txt,bd5e77cf1691e3c4176172790aa1bc8203d0a7227526e137eadc73f112340fca,4
+README_p5,published file,4172871; local SHA exact,https://zenodo.org/records/4172871,evidence/pages/README_page05.txt,850a083ca2620faa6a54b2d13bb1dc01c500970477fb66b68605469d11e547f2,5
+README_p6,published file,4172871; local SHA exact,https://zenodo.org/records/4172871,evidence/pages/README_page06.txt,d7acedea2d6c2d814275f7e080a8dbca2754465bd46c2b3685ca23b09b507206,6
+README_p7,published file,4172871; local SHA exact,https://zenodo.org/records/4172871,evidence/pages/README_page07.txt,3776166a399a3abfe7b6d3e29b4829374a7d57e84913b8dd40bf14d91964f360,7
+README_p8,published file,4172871; local SHA exact,https://zenodo.org/records/4172871,evidence/pages/README_page08.txt,54d003da4a5596e8159b014313cae9cc749d67655358090352dd1b839505b5c1,8
+README_p9,published file,4172871; local SHA exact,https://zenodo.org/records/4172871,evidence/pages/README_page09.txt,c01045418aa5a1fb230eb753d5d1d56603f5a95dac150b75d05fd4843313e3c6,9
+record,publication metadata,4172871,https://doi.org/10.5281/zenodo.4172871,evidence/record.json,bd74499766b355c418b69d83b15c6313c08799a44cb361944066dc7191dea255,NA
+project_reader,"project processing code, not author annotation policy",aecaccb41f592141eb17f1b63044626ee5b957eab8e05425e53bf5a7cc8897f8,NA,evidence/project_readers/phase302_images.py,aecaccb41f592141eb17f1b63044626ee5b957eab8e05425e53bf5a7cc8897f8,NA

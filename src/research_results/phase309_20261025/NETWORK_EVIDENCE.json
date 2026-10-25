@@ -1,0 +1,46 @@
+{
+  "documents": [
+    {
+      "name": "zenodo_record4172871",
+      "url": "https://zenodo.org/api/records/4172871",
+      "accessed_UTC": "2026-10-25T04:54:36.710989+00:00",
+      "source_role": "exact dataset version metadata",
+      "status": 200,
+      "final_url": "https://zenodo.org/api/records/4172871",
+      "bytes": 10107,
+      "path": "evidence/web/zenodo_record4172871.json",
+      "sha256": "8dfb388dbce4631ddd462b22f20cb96cc55c8fdd51f71425929dfe11713e67c2"
+    },
+    {
+      "name": "author_IRIS_repository",
+      "url": "https://api.github.com/repos/ESA-PhiLab/iris",
+      "accessed_UTC": "2026-10-25T04:54:39.636860+00:00",
+      "source_role": "author-linked tool repository, current state not dataset-version provenance",
+      "status": 200,
+      "final_url": "https://api.github.com/repos/ESA-PhiLab/iris",
+      "bytes": 6397,
+      "path": "evidence/web/author_IRIS_repository.json",
+      "sha256": "c60498c7db899074def672848218ababae235bf48109fc85b93ebfdfb5842e7f"
+    },
+    {
+      "name": "author_IRIS_README",
+      "url": "https://api.github.com/repos/ESA-PhiLab/iris/readme",
+      "accessed_UTC": "2026-10-25T04:54:40.733689+00:00",
+      "source_role": "author-linked tool repository, current state not dataset-version provenance",
+      "status": 200,
+      "final_url": "https://api.github.com/repos/ESA-PhiLab/iris/readme",
+      "bytes": 4607,
+      "path": "evidence/web/author_IRIS_README.json",
+      "sha256": "bce55192e11c1e57b054ba83400392f8d6abd1bcd11453e27cf71fbf798bd369",
+      "decoded_path": "evidence/web/author_IRIS_README.md",
+      "revision_blob_sha": "070338863470dc2d9054249df17ce66cb8bf36dd"
+    }
+  ],
+  "documents_attempted": 3,
+  "wheel_bytes": 3125201,
+  "document_bytes": 21111,
+  "total_download_bytes": 3146312,
+  "limit_bytes": 20000000,
+  "limit_documents": 10,
+  "no_whole_repo_or_images": true
+}
