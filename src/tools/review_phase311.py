@@ -81,7 +81,8 @@ def main():
     overall=float(cm['group_mean_mIoU_pct'])-float(pl['group_mean_mIoU_pct']);retain=int(dam['Q90-CM']['benefit_retained_Cloud'])-int(dam['Q90-SP']['benefit_retained_Cloud']);fpr=float(cm['macro_FPR_pct'])-float(sp['macro_FPR_pct'])
     answer=f"\n复核结论：相对PL，组均mIoU变化{overall:+.6f}pp；相对SP，原B保留Cloud变化{retain:+d}、宏Shadow FPR变化{fpr:+.6f}pp。"+('本次同时保留更多原Cloud纠正且降低宏Shadow误报。' if retain>0 and fpr<0 else '未同时实现更多原Cloud纠正保留和更低宏Shadow误报。')+'总体取舍仍须并看池化指标及新增错误；不能由一个方向改善概括整体成功。\n'
     report.write_text(report.read_text(encoding='utf-8')+answer,encoding='utf-8')
-    (ROOT/'TABLE_README.md').write_text('TRANSITIONS27字段 truth/Source_pred/student_pred 对应真值/比较左端/比较右端；ERROR_FLOW字段 Source_errors/student_errors 同理，不恒指Source。comparison明确三组对照。D/B固定于Source与PL，不按新策略重定义。P/A/other由影像Source定义。跳过步active_count=0只是未求值占位；全部边际、池化及分区由独立CSV检查复核。\n',encoding='utf-8')
+    shutil.copyfile(ROOT/'TABLE_README.md',ROOT/'TABLE_README_GENERATED.md')
+    (ROOT/'TABLE_README.md').write_text('TRANSITIONS27字段 truth/Source_pred/student_pred 对应真值/比较左端/比较右端；ERROR_FLOW字段 Source_errors/student_errors 同理，不恒指Source。comparison明确三组对照。D/B固定于Source与PL，不按新策略重定义。D外新Cloud/Shadow均相对Source正确Surface计数，非PL→CM新增事件数；后者见ERROR_FLOW。P/A/other由影像Source定义。跳过步active_count=0只是未求值占位；全部边际、池化及分区由独立CSV检查复核。\n',encoding='utf-8')
     assert all(sha(ROOT/n)==h for n,h in numeric_sha.items())
     available=int(next(s.split()[1] for s in Path('/proc/meminfo').read_text().splitlines() if s.startswith('MemAvailable:')))*1024
     peak=resource.getrusage(resource.RUSAGE_SELF).ru_maxrss*1024
@@ -90,4 +91,7 @@ def main():
     write(ROOT/'REVIEW_ACCEPTANCE.json',dict(status='passed',original_execution_code_and_inputs_unchanged=True,analysis_input_SHA_checked=True,independent_CSV_27cells_margins_partition_pool_and_errorflow_checked=True,all_numeric_CSV_unchanged=numeric_sha,original_report_sha256=sha(ROOT/'RESULT_GENERATED.md'),reviewed_report_sha256=sha(ROOT/'RESULT.md'),calls=len(calls),contexts=dict(contexts),review_script_sha256=sha(script),seconds=time.monotonic()-started,peak_cpu_bytes=peak,minimum_available_memory=available,model_forwards=0,new_training=0))
     print(json.dumps(dict(status='passed',calls=len(calls),overall_delta_pp=overall,retention_change_vs_SP=retain,macro_FPR_delta_vs_SP=fpr)))
 
-if __name__=='__main__':main()
+if __name__=='__main__':
+    try:main()
+    except BaseException:
+        append('REVIEW_FAILURE.jsonl',dict(traceback=__import__('traceback').format_exc(),epoch=time.time(),action='Preserve inputs and output; diagnose before any retry.'));raise
