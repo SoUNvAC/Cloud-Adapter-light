@@ -1,0 +1,54 @@
+{
+  "response_body_bytes": 6545079,
+  "limit": 20000000,
+  "objects": 3,
+  "requests": [
+    {
+      "object": "ESA_ATBD",
+      "url": "https://sentinels.copernicus.eu/documents/247904/446933/Sentinel-2-Level-2A-Algorithm-Theoretical-Basis-Document-ATBD.pdf",
+      "original_url": "https://sentinels.copernicus.eu/documents/247904/446933/Sentinel-2-Level-2A-Algorithm-Theoretical-Basis-Document-ATBD.pdf",
+      "utc": "2026-10-25T14:53:07.752072+00:00",
+      "redirect_hop": 0,
+      "response_body_bytes": 4897580,
+      "status": 200,
+      "content_type": "application/pdf",
+      "content_length": "4897580",
+      "location": null,
+      "last_modified": "Tue, 25 Jan 2022 09:24:51 GMT",
+      "etag": null,
+      "path": "literature/ESA_ATBD_0.pdf",
+      "sha256": "fca403d6ea3cf9bc4c1fa4f22e435e43027cb26b95a66d58380297b76dc86379",
+      "body_complete": true,
+      "pages": 78,
+      "reader_version": "5.9.0"
+    },
+    {
+      "object": "COPERNICUS_PROCESSOR",
+      "url": "https://s2.pages.eopf.copernicus.eu/msi/s2msi/main/api/s2msi.projected_geometry_processor.l2a_scene_classification_processor.html",
+      "original_url": "https://s2.pages.eopf.copernicus.eu/msi/s2msi/main/api/s2msi.projected_geometry_processor.l2a_scene_classification_processor.html",
+      "utc": "2026-10-25T14:53:15.133087+00:00",
+      "redirect_hop": 0,
+      "response_body_bytes": 0,
+      "failure": "Traceback (most recent call last):\n  File \"/home/scv/miniconda3/envs/cloud-lite-pt210/lib/python3.10/site-packages/urllib3/connectionpool.py\", line 386, in _make_request\n    self._validate_conn(conn)\n  File \"/home/scv/miniconda3/envs/cloud-lite-pt210/lib/python3.10/site-packages/urllib3/connectionpool.py\", line 1042, in _validate_conn\n    conn.connect()\n  File \"/home/scv/miniconda3/envs/cloud-lite-pt210/lib/python3.10/site-packages/urllib3/connection.py\", line 414, in connect\n    self.sock = ssl_wrap_socket(\n  File \"/home/scv/miniconda3/envs/cloud-lite-pt210/lib/python3.10/site-packages/urllib3/util/ssl_.py\", line 449, in ssl_wrap_socket\n    ssl_sock = _ssl_wrap_socket_impl(\n  File \"/home/scv/miniconda3/envs/cloud-lite-pt210/lib/python3.10/site-packages/urllib3/util/ssl_.py\", line 493, in _ssl_wrap_socket_impl\n    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)\n  File \"/home/scv/miniconda3/envs/cloud-lite-pt210/lib/python3.10/ssl.py\", line 513, in wrap_socket\n    return self.sslsocket_class._create(\n  File \"/home/scv/miniconda3/envs/cloud-lite-pt210/lib/python3.10/ssl.py\", line 1104, in _create\n    self.do_handshake()\n  File \"/home/scv/miniconda3/envs/cloud-lite-pt210/lib/python3.10/ssl.py\", line 1375, in do_handshake\n    self._sslobj.do_handshake()\nTimeoutError: _ssl.c:1000: The handshake operation timed out\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/scv/miniconda3/envs/cloud-lite-pt210/lib/python3.10/site-packages/requests/adapters.py\", line 489, in send\n    resp = conn.urlopen(\n  File \"/home/scv/miniconda3/envs/cloud-lite-pt210/lib/python3.10/site-packages/urllib3/connectionpool.py\", line 787, in urlopen\n    retries = retries.increment(\n  File \"/home/scv/miniconda3/envs/cloud-lite-pt210/lib/python3.10/site-packages/urllib3/util/retry.py\", line 550, in increment\n    raise six.reraise(type(error), error, _stacktrace)\n  File \"/home/scv/miniconda3/envs/cloud-lite-pt210/lib/python3.10/site-packages/urllib3/packages/six.py\", line 770, in reraise\n    raise value\n  File \"/home/scv/miniconda3/envs/cloud-lite-pt210/lib/python3.10/site-packages/urllib3/connectionpool.py\", line 703, in urlopen\n    httplib_response = self._make_request(\n  File \"/home/scv/miniconda3/envs/cloud-lite-pt210/lib/python3.10/site-packages/urllib3/connectionpool.py\", line 389, in _make_request\n    self._raise_timeout(err=e, url=url, timeout_value=conn.timeout)\n  File \"/home/scv/miniconda3/envs/cloud-lite-pt210/lib/python3.10/site-packages/urllib3/connectionpool.py\", line 340, in _raise_timeout\n    raise ReadTimeoutError(\nurllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='s2.pages.eopf.copernicus.eu', port=443): Read timed out. (read timeout=15)\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/scv/Cloud-Adapter-light/src/tools/audit_phase313.py\", line 75, in fetch\n    with requests.get(url,stream=True,timeout=(15,35),allow_redirects=False) as response:\n  File \"/home/scv/miniconda3/envs/cloud-lite-pt210/lib/python3.10/site-packages/requests/api.py\", line 73, in get\n    return request(\"get\", url, params=params, **kwargs)\n  File \"/home/scv/miniconda3/envs/cloud-lite-pt210/lib/python3.10/site-packages/requests/api.py\", line 59, in request\n    return session.request(method=method, url=url, **kwargs)\n  File \"/home/scv/miniconda3/envs/cloud-lite-pt210/lib/python3.10/site-packages/requests/sessions.py\", line 587, in request\n    resp = self.send(prep, **send_kwargs)\n  File \"/home/scv/miniconda3/envs/cloud-lite-pt210/lib/python3.10/site-packages/requests/sessions.py\", line 701, in send\n    r = adapter.send(request, **kwargs)\n  File \"/home/scv/miniconda3/envs/cloud-lite-pt210/lib/python3.10/site-packages/requests/adapters.py\", line 578, in send\n    raise ReadTimeout(e, request=request)\nrequests.exceptions.ReadTimeout: HTTPSConnectionPool(host='s2.pages.eopf.copernicus.eu', port=443): Read timed out. (read timeout=15)\n"
+    },
+    {
+      "object": "FMASK2015",
+      "url": "https://gerslab.cahnr.uconn.edu/wp-content/uploads/sites/2514/2021/06/Improvement-and-expansion-of-the-Fmask-algorithm-cloud-cloud-shadow-and-snow-detection-for-Landsats-4%E2%80%937-8-and-Sentinel-2-images.pdf",
+      "original_url": "https://gerslab.cahnr.uconn.edu/wp-content/uploads/sites/2514/2021/06/Improvement-and-expansion-of-the-Fmask-algorithm-cloud-cloud-shadow-and-snow-detection-for-Landsats-4%E2%80%937-8-and-Sentinel-2-images.pdf",
+      "utc": "2026-10-25T14:53:30.775759+00:00",
+      "redirect_hop": 0,
+      "response_body_bytes": 1647499,
+      "status": 200,
+      "content_type": "application/pdf",
+      "content_length": null,
+      "location": null,
+      "last_modified": "Tue, 25 Jun 2024 10:30:32 GMT",
+      "etag": "W/\"667a9c48-19238b\"",
+      "path": "literature/FMASK2015_0.pdf",
+      "sha256": "2e8e628823f1c3e9b9011ce319d2ef8daa0347eefa04f1a297adf40077abc053",
+      "body_complete": true,
+      "pages": 9,
+      "reader_version": "5.9.0"
+    }
+  ]
+}

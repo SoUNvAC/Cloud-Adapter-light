@@ -1,0 +1,22 @@
+{
+  "code": {
+    "src/tools/phase313_common.py": "cbc4e2bd1340ad32defa95dfcfd0154e67fa80cbf3c53b709ecd95b6a4b418bd",
+    "src/tools/seal_phase313.py": "33252d98fa25f7c3d61f03b401653b284b9a5e1ac2516912cc8fa8a7c825c22e",
+    "src/tools/finalize_phase313.py": "a09c08fa525231ba6083d99b6c367c73bb84e8a2315a2f94eb90b39700d8730e",
+    "src/tools/transfer_phase313.py": "c10a7c5f04a0d47d505b17740ffcafe89303dde05b23e8a4e488474e311da76c",
+    "src/tools/audit_phase313.py": "0d080115dc3ed5060aef87dc9bae664c3ca2bc403c5b05d33bc8a95c6d064d07",
+    "src/tools/review_phase313.py": "2a221af5e864983a41f1e236fbc4fafe66ab61300ef674bf7bec562fabb0018c",
+    "src/tools/review_phase313_recovery01.py": "3ee081b2bd5576e5b60a40abca18b53bf92b68d6dab4af50ab60d10695c01e15",
+    "src/tools/verify_phase313.py": "c2bf070f29aebcf2f2e88f0a683387bc7b723115aa649b948808890dbff5034c"
+  },
+  "decision": "geometry experiment not executable",
+  "products": 132,
+  "states": {
+    "ready": 0,
+    "approximate_only": 3,
+    "missing": 129
+  },
+  "all_inputs_reverified": true,
+  "first_failure_retained": true,
+  "utc": "2026-10-25T15:18:42.070498+00:00"
+}

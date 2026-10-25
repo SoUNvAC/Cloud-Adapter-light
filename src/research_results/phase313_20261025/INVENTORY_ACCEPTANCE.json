@@ -1,0 +1,42 @@
+{
+  "products": 132,
+  "fit": 100,
+  "development": 32,
+  "old75_intersection": [
+    {
+      "product": "S2A_MSIL1C_20180430T043701_N0206_R033_T46RBU_20180430T082134",
+      "pool": "fit",
+      "group_id": "be2177736a0749fc6c3d8b8b9d6abd318d9ab011b0b09e8f439eea85622b39df",
+      "selection_bias": "public positive Shadow proportion among153fit then fixedhash first3; not representative of132"
+    },
+    {
+      "product": "S2A_MSIL1C_20180626T144731_N0206_R139_T20PMQ_20180626T163032",
+      "pool": "fit",
+      "group_id": "18565d32be3444f4173fe15df760ab7d7588595ceb01450c84715b33754fee97",
+      "selection_bias": "public positive Shadow proportion among153fit then fixedhash first3; not representative of132"
+    },
+    {
+      "product": "S2B_MSIL1C_20180205T073059_N0206_R049_T37LDL_20180205T111142",
+      "pool": "fit",
+      "group_id": "4e42ea7b8ec2459f7ff6d4aa7c25d37672ba3177dd34231ce7bf324003392f7e",
+      "selection_bias": "public positive Shadow proportion among153fit then fixedhash first3; not representative of132"
+    }
+  ],
+  "ready": 0,
+  "solar_metadata": 3,
+  "source_grid": 3,
+  "cube_verified": 0,
+  "height_available": 0,
+  "external_context_verified": 0,
+  "source_scores_existing": 132,
+  "student_caches_existing": 32,
+  "no_array_payload_read": true,
+  "no_reference_arrays_read": true,
+  "B11_verified": 3,
+  "approximate_only": 3,
+  "missing": 129,
+  "RGB_tested_chains_contradictory": 3,
+  "all_band_cube_verified": 0,
+  "initial_inventory_preserved": "INPUT_READINESS_INITIAL.csv",
+  "supplement": "old76/77 metadata discovered under phase76_20261010, not incorrect _20261011 path; no pixel rerun"
+}

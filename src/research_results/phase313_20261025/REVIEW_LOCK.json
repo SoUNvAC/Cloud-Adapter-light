@@ -1,0 +1,33 @@
+{
+  "code_sha256": "3ee081b2bd5576e5b60a40abca18b53bf92b68d6dab4af50ab60d10695c01e15",
+  "seconds": 0.36557543801609427,
+  "renders": [
+    {
+      "path": "literature/ESA_ATBD_0_page001.png",
+      "sha256": "a0face21d90fd644493065578af63eaf0c5b23d6c332c2773b0621d007ebdf50",
+      "source_pdf": "ESA_ATBD_0.pdf",
+      "page": 1
+    },
+    {
+      "path": "literature/ESA_ATBD_0_page039.png",
+      "sha256": "2d69313bc6b4bc04a04a30a92b00185ae95c5925ab61f9664b183620b9f1ffa1",
+      "source_pdf": "ESA_ATBD_0.pdf",
+      "page": 39
+    },
+    {
+      "path": "literature/ESA_ATBD_0_page040.png",
+      "sha256": "a8fa61e5804a78934808a0cc6ffc4c74236ed7dfe89b7011514d1761f08a8836",
+      "source_pdf": "ESA_ATBD_0.pdf",
+      "page": 40
+    },
+    {
+      "path": "literature/FMASK2015_0_page006.png",
+      "sha256": "c5066673204753d1987478b64814b171233f400b93ead54c356b1f1d61cb17fb",
+      "source_pdf": "FMASK2015_0.pdf",
+      "page": 6
+    }
+  ],
+  "no_JP2_or_residual_arrays_opened": true,
+  "no_new_downloads": true,
+  "old76_path_correction": true
+}

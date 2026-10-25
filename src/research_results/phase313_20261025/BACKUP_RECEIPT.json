@@ -1,0 +1,14 @@
+{
+  "archive": "phase313_full_backup.tar.gz",
+  "archive_sha256": "74e232819f6e6294dbddf7a2d6753ed6c39dcb3cf29dda2bec57f18ff8d08b59",
+  "archive_bytes": 6867772,
+  "files": 122,
+  "raw_bytes": 8860890,
+  "manifest_sha256": "9bbe1e3e9a75e9ec6b00f33b55752afd911688cc005ff5c334bc78e797105702",
+  "archive_persisted": true,
+  "projected_two_hosts_including_archives_and_summary": 51457324,
+  "all_archive_members_verified": true,
+  "archive_SHA_verified_before_extraction": true,
+  "all_stream_members_verified": true,
+  "recovery": "state-checked independent SSH stream; no repeated scientific audit or existing archive overwrite"
+}

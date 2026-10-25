@@ -1,0 +1,4 @@
+{
+  "traceback": "Traceback (most recent call last):\n  File \"D:\\Cloud-Adapter-light\\src\\tools\\transfer_phase313.py\", line 34, in receive\n    result=subprocess.run(['ssh','-o','BatchMode=yes','gzs',COMMAND],check=True,capture_output=True,text=True)\n  File \"C:\\ProgramData\\miniconda3\\Lib\\subprocess.py\", line 578, in run\n    raise CalledProcessError(retcode, process.args,\n                             output=stdout, stderr=stderr)\nsubprocess.CalledProcessError: Command '['ssh', '-o', 'BatchMode=yes', 'gzs', 'source /home/scv/miniconda3/etc/profile.d/conda.sh && conda activate cloud-lite-pt210 && cd /home/scv/Cloud-Adapter-light && python -B src/tools/transfer_phase313.py collect']' returned non-zero exit status 255.\n",
+  "action": "Preserve archive, partial and any verified members; diagnose before recovery. Never repeat collect/receive blindly."
+}

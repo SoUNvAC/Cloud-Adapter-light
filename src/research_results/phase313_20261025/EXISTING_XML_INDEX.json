@@ -1,0 +1,13 @@
+{
+  "paths": [
+    "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/phase75_20261010/S2A_MSIL1C_20180626T144731_N0206_R139_T20PMQ_20180626T163032/MTD_TL.xml",
+    "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/phase75_20261010/S2A_MSIL1C_20180626T144731_N0206_R139_T20PMQ_20180626T163032/MTD_MSIL1C.xml",
+    "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/phase75_20261010/S2B_MSIL1C_20180205T073059_N0206_R049_T37LDL_20180205T111142/MTD_TL.xml",
+    "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/phase75_20261010/S2B_MSIL1C_20180205T073059_N0206_R049_T37LDL_20180205T111142/MTD_MSIL1C.xml",
+    "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/phase75_20261010/S2A_MSIL1C_20180430T043701_N0206_R033_T46RBU_20180430T082134/MTD_TL.xml",
+    "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/phase75_20261010/S2A_MSIL1C_20180430T043701_N0206_R033_T46RBU_20180430T082134/MTD_MSIL1C.xml"
+  ],
+  "scope": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871",
+  "no_xml_downloads": true,
+  "no_pixel_pool_reads": true
+}

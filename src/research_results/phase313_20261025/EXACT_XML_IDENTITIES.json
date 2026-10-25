@@ -1,0 +1,791 @@
+{
+  "S2B_MSIL1C_20180205T073059_N0206_R049_T37LDL_20180205T111142": {
+    "product_uri": "S2B_MSIL1C_20180205T073059_N0206_R049_T37LDL_20180205T111142.SAFE",
+    "tile_id": "S2B_OPER_MSI_L1C_TL_SGS__20180205T111142_A004794_T37LDL_N02.06",
+    "processing_baseline": "02.06",
+    "solar": {
+      "level": "original granule/tile metadata mean; not per-pixel angles",
+      "azimuth_definition": "clockwise from local North at the node; zenith from ellipsoid normal; degrees",
+      "definition_source": "https://sentiwiki.copernicus.eu/web/s2-processing",
+      "grid_north_conversion": "not performed; geographic local North is not silently treated as image-row North",
+      "azimuth": 108.103027882348,
+      "azimuth_unit": "deg",
+      "zenith": 27.1868152328675,
+      "zenith_unit": "deg",
+      "angle_grids": [
+        {
+          "axis": "Zenith",
+          "rows": 23,
+          "columns": [
+            23
+          ],
+          "row_step": "5000",
+          "col_step": "5000",
+          "row_step_unit": "m",
+          "col_step_unit": "m",
+          "values_level": "coarse angle nodes; no pixel interpolation executed"
+        },
+        {
+          "axis": "Azimuth",
+          "rows": 23,
+          "columns": [
+            23
+          ],
+          "row_step": "5000",
+          "col_step": "5000",
+          "row_step_unit": "m",
+          "col_step_unit": "m",
+          "values_level": "coarse angle nodes; no pixel interpolation executed"
+        }
+      ],
+      "grid_present": true
+    },
+    "source_grid": {
+      "crs_name": "WGS84 / UTM zone 37S",
+      "crs_code": "EPSG:32737",
+      "resolutions": {
+        "10": {
+          "NROWS": 10980,
+          "NCOLS": 10980,
+          "ULX": 399960.0,
+          "ULY": 9100000.0,
+          "XDIM": 10.0,
+          "YDIM": -10.0,
+          "bounds": [
+            399960.0,
+            8990200.0,
+            509760.0,
+            9100000.0
+          ]
+        },
+        "20": {
+          "NROWS": 5490,
+          "NCOLS": 5490,
+          "ULX": 399960.0,
+          "ULY": 9100000.0,
+          "XDIM": 20.0,
+          "YDIM": -20.0,
+          "bounds": [
+            399960.0,
+            8990200.0,
+            509760.0,
+            9100000.0
+          ]
+        },
+        "60": {
+          "NROWS": 1830,
+          "NCOLS": 1830,
+          "ULX": 399960.0,
+          "ULY": 9100000.0,
+          "XDIM": 60.0,
+          "YDIM": -60.0,
+          "bounds": [
+            399960.0,
+            8990200.0,
+            509760.0,
+            9100000.0
+          ]
+        }
+      },
+      "bands": {
+        "B04": {
+          "native_resolution_m": "10",
+          "grid": {
+            "NROWS": 10980,
+            "NCOLS": 10980,
+            "ULX": 399960.0,
+            "ULY": 9100000.0,
+            "XDIM": 10.0,
+            "YDIM": -10.0,
+            "bounds": [
+              399960.0,
+              8990200.0,
+              509760.0,
+              9100000.0
+            ]
+          },
+          "product_xml_references": [
+            "GRANULE/L1C_T37LDL_A004794_20180205T074846/IMG_DATA/T37LDL_20180205T073059_B04"
+          ],
+          "archive_objects": [
+            "tiles/37/L/DL/S2B_MSIL1C_20180205T073059_N0206_R049_T37LDL_20180205T111142.SAFE/GRANULE/L1C_T37LDL_A004794_20180205T074846/IMG_DATA/T37LDL_20180205T073059_B04.jp2"
+          ],
+          "identity_chain_verified": true,
+          "raster_downloaded": false
+        },
+        "B03": {
+          "native_resolution_m": "10",
+          "grid": {
+            "NROWS": 10980,
+            "NCOLS": 10980,
+            "ULX": 399960.0,
+            "ULY": 9100000.0,
+            "XDIM": 10.0,
+            "YDIM": -10.0,
+            "bounds": [
+              399960.0,
+              8990200.0,
+              509760.0,
+              9100000.0
+            ]
+          },
+          "product_xml_references": [
+            "GRANULE/L1C_T37LDL_A004794_20180205T074846/IMG_DATA/T37LDL_20180205T073059_B03"
+          ],
+          "archive_objects": [
+            "tiles/37/L/DL/S2B_MSIL1C_20180205T073059_N0206_R049_T37LDL_20180205T111142.SAFE/GRANULE/L1C_T37LDL_A004794_20180205T074846/IMG_DATA/T37LDL_20180205T073059_B03.jp2"
+          ],
+          "identity_chain_verified": true,
+          "raster_downloaded": false
+        },
+        "B02": {
+          "native_resolution_m": "10",
+          "grid": {
+            "NROWS": 10980,
+            "NCOLS": 10980,
+            "ULX": 399960.0,
+            "ULY": 9100000.0,
+            "XDIM": 10.0,
+            "YDIM": -10.0,
+            "bounds": [
+              399960.0,
+              8990200.0,
+              509760.0,
+              9100000.0
+            ]
+          },
+          "product_xml_references": [
+            "GRANULE/L1C_T37LDL_A004794_20180205T074846/IMG_DATA/T37LDL_20180205T073059_B02"
+          ],
+          "archive_objects": [
+            "tiles/37/L/DL/S2B_MSIL1C_20180205T073059_N0206_R049_T37LDL_20180205T111142.SAFE/GRANULE/L1C_T37LDL_A004794_20180205T074846/IMG_DATA/T37LDL_20180205T073059_B02.jp2"
+          ],
+          "identity_chain_verified": true,
+          "raster_downloaded": false
+        },
+        "B08": {
+          "native_resolution_m": "10",
+          "grid": {
+            "NROWS": 10980,
+            "NCOLS": 10980,
+            "ULX": 399960.0,
+            "ULY": 9100000.0,
+            "XDIM": 10.0,
+            "YDIM": -10.0,
+            "bounds": [
+              399960.0,
+              8990200.0,
+              509760.0,
+              9100000.0
+            ]
+          },
+          "product_xml_references": [
+            "GRANULE/L1C_T37LDL_A004794_20180205T074846/IMG_DATA/T37LDL_20180205T073059_B08"
+          ],
+          "archive_objects": [
+            "tiles/37/L/DL/S2B_MSIL1C_20180205T073059_N0206_R049_T37LDL_20180205T111142.SAFE/GRANULE/L1C_T37LDL_A004794_20180205T074846/IMG_DATA/T37LDL_20180205T073059_B08.jp2"
+          ],
+          "identity_chain_verified": true,
+          "raster_downloaded": false
+        },
+        "B11": {
+          "native_resolution_m": "20",
+          "grid": {
+            "NROWS": 5490,
+            "NCOLS": 5490,
+            "ULX": 399960.0,
+            "ULY": 9100000.0,
+            "XDIM": 20.0,
+            "YDIM": -20.0,
+            "bounds": [
+              399960.0,
+              8990200.0,
+              509760.0,
+              9100000.0
+            ]
+          },
+          "product_xml_references": [
+            "GRANULE/L1C_T37LDL_A004794_20180205T074846/IMG_DATA/T37LDL_20180205T073059_B11"
+          ],
+          "archive_objects": [
+            "tiles/37/L/DL/S2B_MSIL1C_20180205T073059_N0206_R049_T37LDL_20180205T111142.SAFE/GRANULE/L1C_T37LDL_A004794_20180205T074846/IMG_DATA/T37LDL_20180205T073059_B11.jp2"
+          ],
+          "identity_chain_verified": true,
+          "raster_downloaded": false
+        },
+        "B12": {
+          "native_resolution_m": "20",
+          "grid": {
+            "NROWS": 5490,
+            "NCOLS": 5490,
+            "ULX": 399960.0,
+            "ULY": 9100000.0,
+            "XDIM": 20.0,
+            "YDIM": -20.0,
+            "bounds": [
+              399960.0,
+              8990200.0,
+              509760.0,
+              9100000.0
+            ]
+          },
+          "product_xml_references": [
+            "GRANULE/L1C_T37LDL_A004794_20180205T074846/IMG_DATA/T37LDL_20180205T073059_B12"
+          ],
+          "archive_objects": [
+            "tiles/37/L/DL/S2B_MSIL1C_20180205T073059_N0206_R049_T37LDL_20180205T111142.SAFE/GRANULE/L1C_T37LDL_A004794_20180205T074846/IMG_DATA/T37LDL_20180205T073059_B12.jp2"
+          ],
+          "identity_chain_verified": true,
+          "raster_downloaded": false
+        }
+      }
+    },
+    "identity": {
+      "catalogue_product_id": "S2B_MSIL1C_20180205T073059_N0206_R049_T37LDL_20180205T111142",
+      "archive_product_id": "S2B_MSIL1C_20180205T073059_N0206_R049_T37LDL_20180205T111142",
+      "xml_product_uri": "S2B_MSIL1C_20180205T073059_N0206_R049_T37LDL_20180205T111142.SAFE",
+      "product_sensing_start_utc": "2018-02-05T07:30:59.027Z",
+      "product_name_sensing_start_utc": "2018-02-05T07:30:59+00:00",
+      "tile_sensing_time_utc": "2018-02-05T07:48:46.749Z",
+      "processing_baseline": "02.06",
+      "tile": "37LDL",
+      "tile_identifier": "S2B_OPER_MSI_L1C_TL_SGS__20180205T111142_A004794_T37LDL_N02.06",
+      "granule_ids": [
+        "S2B_OPER_MSI_L1C_TL_SGS__20180205T111142_A004794_T37LDL_N02.06"
+      ],
+      "archive_prefix": "tiles/37/L/DL/S2B_MSIL1C_20180205T073059_N0206_R049_T37LDL_20180205T111142.SAFE/",
+      "processing_generation_token": "20180205T111142",
+      "archive_granule_folders": [
+        "L1C_T37LDL_A004794_20180205T074846"
+      ],
+      "granule_link_rule": "Product granuleIdentifier==tile TILE_ID (long ID), plus product IMAGE_FILE==archive band path under the same compact folder as tile XML; direct folder-ID equality also accepted"
+    },
+    "viewing_angle_grids_present": true
+  },
+  "S2A_MSIL1C_20180626T144731_N0206_R139_T20PMQ_20180626T163032": {
+    "product_uri": "S2A_MSIL1C_20180626T144731_N0206_R139_T20PMQ_20180626T163032.SAFE",
+    "tile_id": "S2A_OPER_MSI_L1C_TL_SGS__20180626T163032_A015723_T20PMQ_N02.06",
+    "processing_baseline": "02.06",
+    "solar": {
+      "level": "original granule/tile metadata mean; not per-pixel angles",
+      "azimuth_definition": "clockwise from local North at the node; zenith from ellipsoid normal; degrees",
+      "definition_source": "https://sentiwiki.copernicus.eu/web/s2-processing",
+      "grid_north_conversion": "not performed; geographic local North is not silently treated as image-row North",
+      "azimuth": 51.8139580824051,
+      "azimuth_unit": "deg",
+      "zenith": 25.3682582788311,
+      "zenith_unit": "deg",
+      "angle_grids": [
+        {
+          "axis": "Zenith",
+          "rows": 23,
+          "columns": [
+            23
+          ],
+          "row_step": "5000",
+          "col_step": "5000",
+          "row_step_unit": "m",
+          "col_step_unit": "m",
+          "values_level": "coarse angle nodes; no pixel interpolation executed"
+        },
+        {
+          "axis": "Azimuth",
+          "rows": 23,
+          "columns": [
+            23
+          ],
+          "row_step": "5000",
+          "col_step": "5000",
+          "row_step_unit": "m",
+          "col_step_unit": "m",
+          "values_level": "coarse angle nodes; no pixel interpolation executed"
+        }
+      ],
+      "grid_present": true
+    },
+    "source_grid": {
+      "crs_name": "WGS84 / UTM zone 20N",
+      "crs_code": "EPSG:32620",
+      "resolutions": {
+        "10": {
+          "NROWS": 10980,
+          "NCOLS": 10980,
+          "ULX": 399960.0,
+          "ULY": 1000020.0,
+          "XDIM": 10.0,
+          "YDIM": -10.0,
+          "bounds": [
+            399960.0,
+            890220.0,
+            509760.0,
+            1000020.0
+          ]
+        },
+        "20": {
+          "NROWS": 5490,
+          "NCOLS": 5490,
+          "ULX": 399960.0,
+          "ULY": 1000020.0,
+          "XDIM": 20.0,
+          "YDIM": -20.0,
+          "bounds": [
+            399960.0,
+            890220.0,
+            509760.0,
+            1000020.0
+          ]
+        },
+        "60": {
+          "NROWS": 1830,
+          "NCOLS": 1830,
+          "ULX": 399960.0,
+          "ULY": 1000020.0,
+          "XDIM": 60.0,
+          "YDIM": -60.0,
+          "bounds": [
+            399960.0,
+            890220.0,
+            509760.0,
+            1000020.0
+          ]
+        }
+      },
+      "bands": {
+        "B04": {
+          "native_resolution_m": "10",
+          "grid": {
+            "NROWS": 10980,
+            "NCOLS": 10980,
+            "ULX": 399960.0,
+            "ULY": 1000020.0,
+            "XDIM": 10.0,
+            "YDIM": -10.0,
+            "bounds": [
+              399960.0,
+              890220.0,
+              509760.0,
+              1000020.0
+            ]
+          },
+          "product_xml_references": [
+            "GRANULE/L1C_T20PMQ_A015723_20180626T144731/IMG_DATA/T20PMQ_20180626T144731_B04"
+          ],
+          "archive_objects": [
+            "tiles/20/P/MQ/S2A_MSIL1C_20180626T144731_N0206_R139_T20PMQ_20180626T163032.SAFE/GRANULE/L1C_T20PMQ_A015723_20180626T144731/IMG_DATA/T20PMQ_20180626T144731_B04.jp2"
+          ],
+          "identity_chain_verified": true,
+          "raster_downloaded": false
+        },
+        "B03": {
+          "native_resolution_m": "10",
+          "grid": {
+            "NROWS": 10980,
+            "NCOLS": 10980,
+            "ULX": 399960.0,
+            "ULY": 1000020.0,
+            "XDIM": 10.0,
+            "YDIM": -10.0,
+            "bounds": [
+              399960.0,
+              890220.0,
+              509760.0,
+              1000020.0
+            ]
+          },
+          "product_xml_references": [
+            "GRANULE/L1C_T20PMQ_A015723_20180626T144731/IMG_DATA/T20PMQ_20180626T144731_B03"
+          ],
+          "archive_objects": [
+            "tiles/20/P/MQ/S2A_MSIL1C_20180626T144731_N0206_R139_T20PMQ_20180626T163032.SAFE/GRANULE/L1C_T20PMQ_A015723_20180626T144731/IMG_DATA/T20PMQ_20180626T144731_B03.jp2"
+          ],
+          "identity_chain_verified": true,
+          "raster_downloaded": false
+        },
+        "B02": {
+          "native_resolution_m": "10",
+          "grid": {
+            "NROWS": 10980,
+            "NCOLS": 10980,
+            "ULX": 399960.0,
+            "ULY": 1000020.0,
+            "XDIM": 10.0,
+            "YDIM": -10.0,
+            "bounds": [
+              399960.0,
+              890220.0,
+              509760.0,
+              1000020.0
+            ]
+          },
+          "product_xml_references": [
+            "GRANULE/L1C_T20PMQ_A015723_20180626T144731/IMG_DATA/T20PMQ_20180626T144731_B02"
+          ],
+          "archive_objects": [
+            "tiles/20/P/MQ/S2A_MSIL1C_20180626T144731_N0206_R139_T20PMQ_20180626T163032.SAFE/GRANULE/L1C_T20PMQ_A015723_20180626T144731/IMG_DATA/T20PMQ_20180626T144731_B02.jp2"
+          ],
+          "identity_chain_verified": true,
+          "raster_downloaded": false
+        },
+        "B08": {
+          "native_resolution_m": "10",
+          "grid": {
+            "NROWS": 10980,
+            "NCOLS": 10980,
+            "ULX": 399960.0,
+            "ULY": 1000020.0,
+            "XDIM": 10.0,
+            "YDIM": -10.0,
+            "bounds": [
+              399960.0,
+              890220.0,
+              509760.0,
+              1000020.0
+            ]
+          },
+          "product_xml_references": [
+            "GRANULE/L1C_T20PMQ_A015723_20180626T144731/IMG_DATA/T20PMQ_20180626T144731_B08"
+          ],
+          "archive_objects": [
+            "tiles/20/P/MQ/S2A_MSIL1C_20180626T144731_N0206_R139_T20PMQ_20180626T163032.SAFE/GRANULE/L1C_T20PMQ_A015723_20180626T144731/IMG_DATA/T20PMQ_20180626T144731_B08.jp2"
+          ],
+          "identity_chain_verified": true,
+          "raster_downloaded": false
+        },
+        "B11": {
+          "native_resolution_m": "20",
+          "grid": {
+            "NROWS": 5490,
+            "NCOLS": 5490,
+            "ULX": 399960.0,
+            "ULY": 1000020.0,
+            "XDIM": 20.0,
+            "YDIM": -20.0,
+            "bounds": [
+              399960.0,
+              890220.0,
+              509760.0,
+              1000020.0
+            ]
+          },
+          "product_xml_references": [
+            "GRANULE/L1C_T20PMQ_A015723_20180626T144731/IMG_DATA/T20PMQ_20180626T144731_B11"
+          ],
+          "archive_objects": [
+            "tiles/20/P/MQ/S2A_MSIL1C_20180626T144731_N0206_R139_T20PMQ_20180626T163032.SAFE/GRANULE/L1C_T20PMQ_A015723_20180626T144731/IMG_DATA/T20PMQ_20180626T144731_B11.jp2"
+          ],
+          "identity_chain_verified": true,
+          "raster_downloaded": false
+        },
+        "B12": {
+          "native_resolution_m": "20",
+          "grid": {
+            "NROWS": 5490,
+            "NCOLS": 5490,
+            "ULX": 399960.0,
+            "ULY": 1000020.0,
+            "XDIM": 20.0,
+            "YDIM": -20.0,
+            "bounds": [
+              399960.0,
+              890220.0,
+              509760.0,
+              1000020.0
+            ]
+          },
+          "product_xml_references": [
+            "GRANULE/L1C_T20PMQ_A015723_20180626T144731/IMG_DATA/T20PMQ_20180626T144731_B12"
+          ],
+          "archive_objects": [
+            "tiles/20/P/MQ/S2A_MSIL1C_20180626T144731_N0206_R139_T20PMQ_20180626T163032.SAFE/GRANULE/L1C_T20PMQ_A015723_20180626T144731/IMG_DATA/T20PMQ_20180626T144731_B12.jp2"
+          ],
+          "identity_chain_verified": true,
+          "raster_downloaded": false
+        }
+      }
+    },
+    "identity": {
+      "catalogue_product_id": "S2A_MSIL1C_20180626T144731_N0206_R139_T20PMQ_20180626T163032",
+      "archive_product_id": "S2A_MSIL1C_20180626T144731_N0206_R139_T20PMQ_20180626T163032",
+      "xml_product_uri": "S2A_MSIL1C_20180626T144731_N0206_R139_T20PMQ_20180626T163032.SAFE",
+      "product_sensing_start_utc": "2018-06-26T14:47:31.024Z",
+      "product_name_sensing_start_utc": "2018-06-26T14:47:31+00:00",
+      "tile_sensing_time_utc": "2018-06-26T14:47:31.464Z",
+      "processing_baseline": "02.06",
+      "tile": "20PMQ",
+      "tile_identifier": "S2A_OPER_MSI_L1C_TL_SGS__20180626T163032_A015723_T20PMQ_N02.06",
+      "granule_ids": [
+        "S2A_OPER_MSI_L1C_TL_SGS__20180626T163032_A015723_T20PMQ_N02.06"
+      ],
+      "archive_prefix": "tiles/20/P/MQ/S2A_MSIL1C_20180626T144731_N0206_R139_T20PMQ_20180626T163032.SAFE/",
+      "processing_generation_token": "20180626T163032",
+      "archive_granule_folders": [
+        "L1C_T20PMQ_A015723_20180626T144731"
+      ],
+      "granule_link_rule": "Product granuleIdentifier==tile TILE_ID (long ID), plus product IMAGE_FILE==archive band path under the same compact folder as tile XML; direct folder-ID equality also accepted"
+    },
+    "viewing_angle_grids_present": true
+  },
+  "S2A_MSIL1C_20180430T043701_N0206_R033_T46RBU_20180430T082134": {
+    "product_uri": "S2A_MSIL1C_20180430T043701_N0206_R033_T46RBU_20180430T082134.SAFE",
+    "tile_id": "S2A_OPER_MSI_L1C_TL_MTI__20180430T082134_A014902_T46RBU_N02.06",
+    "processing_baseline": "02.06",
+    "solar": {
+      "level": "original granule/tile metadata mean; not per-pixel angles",
+      "azimuth_definition": "clockwise from local North at the node; zenith from ellipsoid normal; degrees",
+      "definition_source": "https://sentiwiki.copernicus.eu/web/s2-processing",
+      "grid_north_conversion": "not performed; geographic local North is not silently treated as image-row North",
+      "azimuth": 132.318467569056,
+      "azimuth_unit": "deg",
+      "zenith": 21.5278842911593,
+      "zenith_unit": "deg",
+      "angle_grids": [
+        {
+          "axis": "Zenith",
+          "rows": 23,
+          "columns": [
+            23
+          ],
+          "row_step": "5000",
+          "col_step": "5000",
+          "row_step_unit": "m",
+          "col_step_unit": "m",
+          "values_level": "coarse angle nodes; no pixel interpolation executed"
+        },
+        {
+          "axis": "Azimuth",
+          "rows": 23,
+          "columns": [
+            23
+          ],
+          "row_step": "5000",
+          "col_step": "5000",
+          "row_step_unit": "m",
+          "col_step_unit": "m",
+          "values_level": "coarse angle nodes; no pixel interpolation executed"
+        }
+      ],
+      "grid_present": true
+    },
+    "source_grid": {
+      "crs_name": "WGS84 / UTM zone 46N",
+      "crs_code": "EPSG:32646",
+      "resolutions": {
+        "10": {
+          "NROWS": 10980,
+          "NCOLS": 10980,
+          "ULX": 199980.0,
+          "ULY": 3400020.0,
+          "XDIM": 10.0,
+          "YDIM": -10.0,
+          "bounds": [
+            199980.0,
+            3290220.0,
+            309780.0,
+            3400020.0
+          ]
+        },
+        "20": {
+          "NROWS": 5490,
+          "NCOLS": 5490,
+          "ULX": 199980.0,
+          "ULY": 3400020.0,
+          "XDIM": 20.0,
+          "YDIM": -20.0,
+          "bounds": [
+            199980.0,
+            3290220.0,
+            309780.0,
+            3400020.0
+          ]
+        },
+        "60": {
+          "NROWS": 1830,
+          "NCOLS": 1830,
+          "ULX": 199980.0,
+          "ULY": 3400020.0,
+          "XDIM": 60.0,
+          "YDIM": -60.0,
+          "bounds": [
+            199980.0,
+            3290220.0,
+            309780.0,
+            3400020.0
+          ]
+        }
+      },
+      "bands": {
+        "B04": {
+          "native_resolution_m": "10",
+          "grid": {
+            "NROWS": 10980,
+            "NCOLS": 10980,
+            "ULX": 199980.0,
+            "ULY": 3400020.0,
+            "XDIM": 10.0,
+            "YDIM": -10.0,
+            "bounds": [
+              199980.0,
+              3290220.0,
+              309780.0,
+              3400020.0
+            ]
+          },
+          "product_xml_references": [
+            "GRANULE/L1C_T46RBU_A014902_20180430T044539/IMG_DATA/T46RBU_20180430T043701_B04"
+          ],
+          "archive_objects": [
+            "tiles/46/R/BU/S2A_MSIL1C_20180430T043701_N0206_R033_T46RBU_20180430T082134.SAFE/GRANULE/L1C_T46RBU_A014902_20180430T044539/IMG_DATA/T46RBU_20180430T043701_B04.jp2"
+          ],
+          "identity_chain_verified": true,
+          "raster_downloaded": false
+        },
+        "B03": {
+          "native_resolution_m": "10",
+          "grid": {
+            "NROWS": 10980,
+            "NCOLS": 10980,
+            "ULX": 199980.0,
+            "ULY": 3400020.0,
+            "XDIM": 10.0,
+            "YDIM": -10.0,
+            "bounds": [
+              199980.0,
+              3290220.0,
+              309780.0,
+              3400020.0
+            ]
+          },
+          "product_xml_references": [
+            "GRANULE/L1C_T46RBU_A014902_20180430T044539/IMG_DATA/T46RBU_20180430T043701_B03"
+          ],
+          "archive_objects": [
+            "tiles/46/R/BU/S2A_MSIL1C_20180430T043701_N0206_R033_T46RBU_20180430T082134.SAFE/GRANULE/L1C_T46RBU_A014902_20180430T044539/IMG_DATA/T46RBU_20180430T043701_B03.jp2"
+          ],
+          "identity_chain_verified": true,
+          "raster_downloaded": false
+        },
+        "B02": {
+          "native_resolution_m": "10",
+          "grid": {
+            "NROWS": 10980,
+            "NCOLS": 10980,
+            "ULX": 199980.0,
+            "ULY": 3400020.0,
+            "XDIM": 10.0,
+            "YDIM": -10.0,
+            "bounds": [
+              199980.0,
+              3290220.0,
+              309780.0,
+              3400020.0
+            ]
+          },
+          "product_xml_references": [
+            "GRANULE/L1C_T46RBU_A014902_20180430T044539/IMG_DATA/T46RBU_20180430T043701_B02"
+          ],
+          "archive_objects": [
+            "tiles/46/R/BU/S2A_MSIL1C_20180430T043701_N0206_R033_T46RBU_20180430T082134.SAFE/GRANULE/L1C_T46RBU_A014902_20180430T044539/IMG_DATA/T46RBU_20180430T043701_B02.jp2"
+          ],
+          "identity_chain_verified": true,
+          "raster_downloaded": false
+        },
+        "B08": {
+          "native_resolution_m": "10",
+          "grid": {
+            "NROWS": 10980,
+            "NCOLS": 10980,
+            "ULX": 199980.0,
+            "ULY": 3400020.0,
+            "XDIM": 10.0,
+            "YDIM": -10.0,
+            "bounds": [
+              199980.0,
+              3290220.0,
+              309780.0,
+              3400020.0
+            ]
+          },
+          "product_xml_references": [
+            "GRANULE/L1C_T46RBU_A014902_20180430T044539/IMG_DATA/T46RBU_20180430T043701_B08"
+          ],
+          "archive_objects": [
+            "tiles/46/R/BU/S2A_MSIL1C_20180430T043701_N0206_R033_T46RBU_20180430T082134.SAFE/GRANULE/L1C_T46RBU_A014902_20180430T044539/IMG_DATA/T46RBU_20180430T043701_B08.jp2"
+          ],
+          "identity_chain_verified": true,
+          "raster_downloaded": false
+        },
+        "B11": {
+          "native_resolution_m": "20",
+          "grid": {
+            "NROWS": 5490,
+            "NCOLS": 5490,
+            "ULX": 199980.0,
+            "ULY": 3400020.0,
+            "XDIM": 20.0,
+            "YDIM": -20.0,
+            "bounds": [
+              199980.0,
+              3290220.0,
+              309780.0,
+              3400020.0
+            ]
+          },
+          "product_xml_references": [
+            "GRANULE/L1C_T46RBU_A014902_20180430T044539/IMG_DATA/T46RBU_20180430T043701_B11"
+          ],
+          "archive_objects": [
+            "tiles/46/R/BU/S2A_MSIL1C_20180430T043701_N0206_R033_T46RBU_20180430T082134.SAFE/GRANULE/L1C_T46RBU_A014902_20180430T044539/IMG_DATA/T46RBU_20180430T043701_B11.jp2"
+          ],
+          "identity_chain_verified": true,
+          "raster_downloaded": false
+        },
+        "B12": {
+          "native_resolution_m": "20",
+          "grid": {
+            "NROWS": 5490,
+            "NCOLS": 5490,
+            "ULX": 199980.0,
+            "ULY": 3400020.0,
+            "XDIM": 20.0,
+            "YDIM": -20.0,
+            "bounds": [
+              199980.0,
+              3290220.0,
+              309780.0,
+              3400020.0
+            ]
+          },
+          "product_xml_references": [
+            "GRANULE/L1C_T46RBU_A014902_20180430T044539/IMG_DATA/T46RBU_20180430T043701_B12"
+          ],
+          "archive_objects": [
+            "tiles/46/R/BU/S2A_MSIL1C_20180430T043701_N0206_R033_T46RBU_20180430T082134.SAFE/GRANULE/L1C_T46RBU_A014902_20180430T044539/IMG_DATA/T46RBU_20180430T043701_B12.jp2"
+          ],
+          "identity_chain_verified": true,
+          "raster_downloaded": false
+        }
+      }
+    },
+    "identity": {
+      "catalogue_product_id": "S2A_MSIL1C_20180430T043701_N0206_R033_T46RBU_20180430T082134",
+      "archive_product_id": "S2A_MSIL1C_20180430T043701_N0206_R033_T46RBU_20180430T082134",
+      "xml_product_uri": "S2A_MSIL1C_20180430T043701_N0206_R033_T46RBU_20180430T082134.SAFE",
+      "product_sensing_start_utc": "2018-04-30T04:37:01.024Z",
+      "product_name_sensing_start_utc": "2018-04-30T04:37:01+00:00",
+      "tile_sensing_time_utc": "2018-04-30T04:45:39.371Z",
+      "processing_baseline": "02.06",
+      "tile": "46RBU",
+      "tile_identifier": "S2A_OPER_MSI_L1C_TL_MTI__20180430T082134_A014902_T46RBU_N02.06",
+      "granule_ids": [
+        "S2A_OPER_MSI_L1C_TL_MTI__20180430T082134_A014902_T46RBU_N02.06"
+      ],
+      "archive_prefix": "tiles/46/R/BU/S2A_MSIL1C_20180430T043701_N0206_R033_T46RBU_20180430T082134.SAFE/",
+      "processing_generation_token": "20180430T082134",
+      "archive_granule_folders": [
+        "L1C_T46RBU_A014902_20180430T044539"
+      ],
+      "granule_link_rule": "Product granuleIdentifier==tile TILE_ID (long ID), plus product IMAGE_FILE==archive band path under the same compact folder as tile XML; direct folder-ID equality also accepted"
+    },
+    "viewing_angle_grids_present": true
+  }
+}

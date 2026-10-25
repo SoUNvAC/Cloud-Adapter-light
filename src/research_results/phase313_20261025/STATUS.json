@@ -1,0 +1,22 @@
+{
+  "status": "completed",
+  "utc": "2026-10-25T14:53:44.589487+00:00",
+  "wall_seconds": 37.151251172996126,
+  "peak_cpu_bytes": 72695808,
+  "minimum_available_memory": 31033139200,
+  "train": 0,
+  "fit": 0,
+  "forwards": 0,
+  "projection": 0,
+  "raster_downloads": 0,
+  "DEM_downloads": 0,
+  "network_response_body_bytes": 6545079,
+  "reading_objects": 3,
+  "metadata_and_review_seconds": 37.51682661101222,
+  "decision": "geometry experiment not executable",
+  "seal_seconds": 0.02511573804076761,
+  "metadata_only": true,
+  "all_input_SHA_reverified": true,
+  "final_git_commit": "b30d897fe09044f210207da5ba7e88d669946895",
+  "total_seconds": 37.54194234905299
+}

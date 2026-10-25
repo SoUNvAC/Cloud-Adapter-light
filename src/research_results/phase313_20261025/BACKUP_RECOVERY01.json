@@ -1,0 +1,13 @@
+{
+  "initial_receiver_exit": 255,
+  "initial_receiver_failure_sha256": "6da4601180ca898b902e8924ef2178d32038192decb29cd3afdf151233c6dae7",
+  "remote_state_before_recovery": {
+    "archive": false,
+    "receipt": false,
+    "manifest": false,
+    "partial": false
+  },
+  "diagnosis": "No archive, manifest, receipt or archive partial exists; prior collect did not publish any artifact. Underlying initial SSH255 cause unproven.",
+  "code_sha256": "3ee812036c22d3dc803115997e90af96684c526eb0a717ed47155061ddaeb35b",
+  "action": "one first successful collect, stream same immutable archive; no scientific repeat"
+}

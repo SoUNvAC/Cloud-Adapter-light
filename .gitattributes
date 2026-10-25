@@ -110,3 +110,4 @@ src/research_results/phase312_20261025/*.log -text -whitespace
 src/tools/*phase313* -text whitespace=cr-at-eol
 src/research_plans/phase313.md -text whitespace=cr-at-eol
 src/research_results/phase313_20261025/** -text whitespace=cr-at-eol
+src/research_results/phase313_20261025/SOURCE_VERSIONS.txt -text -whitespace

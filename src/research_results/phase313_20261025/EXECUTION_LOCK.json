@@ -1,0 +1,13 @@
+{
+  "code": {
+    "src/tools/phase313_common.py": "cbc4e2bd1340ad32defa95dfcfd0154e67fa80cbf3c53b709ecd95b6a4b418bd",
+    "src/tools/transfer_phase313.py": "c10a7c5f04a0d47d505b17740ffcafe89303dde05b23e8a4e488474e311da76c",
+    "src/tools/audit_phase313.py": "0d080115dc3ed5060aef87dc9bae664c3ca2bc403c5b05d33bc8a95c6d064d07"
+  },
+  "plan_sha256": "77a3a75ae16ed1dc760558287f6a8361d43eaad65e791a5c37e4b7074911d85e",
+  "git_commit": "02440b1dc67f38493964927906297f3cc046ba31",
+  "python": "/home/scv/miniconda3/envs/cloud-lite-pt210/bin/python",
+  "authorization": "User execute313 plus persistent git/results synchronization; no new training authorization",
+  "scope": "metadata headers primary literature only; no historical entrypoints",
+  "utc": "2026-10-25T14:53:07.443171+00:00"
+}

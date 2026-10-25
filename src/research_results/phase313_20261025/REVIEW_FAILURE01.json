@@ -1,0 +1,7 @@
+{
+  "error": "Original review stopped before any inventory write: expected phase76 top-level B11_only_transforms.json absent. Original transforms are in reports/summary.json; local B11_only_transforms was editorial derived. Metadata path fix only.",
+  "original_code_sha256": "2a221af5e864983a41f1e236fbc4fafe66ab61300ef674bf7bec562fabb0018c",
+  "failed_exec_session": 12975,
+  "recovery_code_sha256": "3ee081b2bd5576e5b60a40abca18b53bf92b68d6dab4af50ab60d10695c01e15",
+  "utc": "2026-10-25T15:15:00.595485+00:00"
+}

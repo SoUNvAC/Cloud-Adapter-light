@@ -1,0 +1,35 @@
+ESA acquired PDF first-page version evidence:
+ 
+Reference: S2-PDGS-MPC-ATBD-L2A 
+Issue:  2.10 
+Date:   2021-11-15 
+ 
+           
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+S2 MPC 
+ 
+ 
+ 
+Level-2A 
+Algorithm 
+Theoretical Basis 
+Document 
+ 
+ 
+ 
+Ref. S2-PDGS-MPC-ATBD-L2A 
+ 
+ 
+ 
+ 
+ 
+ 
+
+Fmask: Zhu, Wang, Woodcock, RSE159 (2015)269-277, DOI10.1016/j.rse.2014.12.014; author-hosted PDF SHA in NETWORK.json.
+Copernicus processor webpage: TLS handshake timeout, content/version unavailable; no claims attributed.
