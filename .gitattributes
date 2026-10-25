@@ -72,3 +72,6 @@ src/research_results/phase304_20261024/** -text whitespace=cr-at-eol
 src/tools/*phase305* -text whitespace=cr-at-eol
 src/research_plans/phase305.md -text whitespace=cr-at-eol
 src/research_results/phase305_20261025/** -text whitespace=cr-at-eol
+src/tools/*phase306* -text whitespace=cr-at-eol
+src/research_plans/phase306.md -text whitespace=cr-at-eol
+src/research_results/phase306_20261025/** -text whitespace=cr-at-eol
