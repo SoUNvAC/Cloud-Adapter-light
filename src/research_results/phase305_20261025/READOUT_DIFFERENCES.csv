@@ -1,0 +1,2 @@
+﻿strategy,group_mean_mIoU_pct,pooled_mIoU_pct,Surface_IoU_pct,Cloud_IoU_pct,Shadow_IoU_pct,Shadow_TP,Shadow_FP,Shadow_FN,Shadow_TN,Surface_to_Cloud,Cloud_to_Surface,macro_recall_pct,macro_FPR_pct,macro_AP_pct,pooled_AP_pct
+Q90+G90 minus Q90,0.23443788051545766,0.17605172029252003,0.28795304660805243,0.24020211426952187,0.0,0,0,0,0,-56740,10692,0.0,0.0,0.0,0.0

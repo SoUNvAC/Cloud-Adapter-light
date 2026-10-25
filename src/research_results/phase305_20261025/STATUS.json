@@ -1,0 +1,11 @@
+{
+  "status": "completed",
+  "exit_code": 0,
+  "failure": null,
+  "seconds": 19.070153026957996,
+  "peak_CPU_bytes": 188694528,
+  "minimum_available_bytes": 30853169152,
+  "neural_calls": 0,
+  "training_updates": 0,
+  "PID": 1749536
+}

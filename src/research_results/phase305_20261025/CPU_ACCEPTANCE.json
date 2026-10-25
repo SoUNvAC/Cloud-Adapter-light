@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "neural_calls": 0,
+  "training_updates": 0,
+  "products": 32,
+  "all_historical_groups_retained": true,
+  "G_label_free": true,
+  "all27_cells_and_directed_events_reproduced": true,
+  "G_nonG_partition_exact": true,
+  "boundary_partition_exact": true,
+  "eleven_scene_partitions_exact": true,
+  "independent_bool_vs_tensor_checks": true,
+  "readout_only_G_student_Cloud": true,
+  "Shadow_decisions_and_continuous_scores_unchanged": true,
+  "confusion_delta_matches_changes": true,
+  "missing_class_rules_unchanged": true,
+  "seconds": 18.619546656962484,
+  "PID": 1749536,
+  "torch_imported": false
+}

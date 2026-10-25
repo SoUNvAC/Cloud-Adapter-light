@@ -1,0 +1,26 @@
+{
+  "code": {
+    "src/tools/analyze_phase305.py": "169c3c934f8d701552ae6cf0430b3b487cc907bcdc3aa53a1d6c56cddeaad398",
+    "src/tools/finalize_phase305.py": "2dff6b637ae910fb3c03a8ba2326aa330139b7632d08cc101c4db55578d4bdd5",
+    "src/tools/phase305_common.py": "7246a04efbd6ad1dcb98dd197e60425a4549ed1b127ddbd59d0e9f7d7ebb8248",
+    "src/tools/run_phase305.py": "f586463554828e841cceb155704da057aefee33cf6e7e4cb37626304844592ac",
+    "src/tools/transfer_phase305.py": "b6efdce0722fbbdc42f93979d54a8db168450f5ba88b4b83750fad0c686f0601",
+    "src/tools/verify_phase305.py": "74cf970c20fb043a612806b18542079c59f9c2a76f01171f3a03ce944afadaab",
+    "src/tools/analyze_phase304.py": "ea08ab17fb1c7d060e2885f428d9364db14c9d0757c4d9786293792da74d7ece",
+    "src/tools/transfer_phase302.py": "560c214062938b24b1b84061d49ca7c5755d56c569eee46a0eedcff97033682a"
+  },
+  "protocol_sha256": "f1dcc41f1f59ddbb170e9d6bf947dcd82da194809ed41178e60efbac5aba849b",
+  "git_commit": "f471ee4a7d02b15e8e0732d70ec9489b0a535a8b",
+  "start_beijing": "2026-10-25T11:05:33.552024+08:00",
+  "runtime": "/home/scv/miniconda3/envs/cloud-lite-pt210/bin/python",
+  "neural_calls": 0,
+  "training_updates": 0,
+  "download": 0,
+  "cap_seconds": 3600,
+  "cap_CPU_bytes": 17179869184,
+  "cap_new_bytes_including_backups": 1000000000,
+  "min_free_bytes": 4000000000,
+  "threshold": 0.9,
+  "rule": "only Source_pred Surface and Source sSurface/sum(s)>=.90 and sum>1e-12 and student Cloud -> Surface",
+  "history_read_only": true
+}

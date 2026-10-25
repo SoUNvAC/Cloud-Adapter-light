@@ -1,0 +1,142 @@
+{
+  "BOUNDARY_PER_GROUP.csv": {
+    "bytes": 21048,
+    "sha256": "dcab4ad2aff8cd891ff2aac42aeaa04422977aad6ce662f79cdf130ececbf381"
+  },
+  "BOUNDARY_POOLED.csv": {
+    "bytes": 1188,
+    "sha256": "d70ede73f6b9139f0396484bce0668de9778b161855f7efc73aebb3f54149fb6"
+  },
+  "CPU_ACCEPTANCE.json": {
+    "bytes": 627,
+    "sha256": "043066357d8dc54aa2bd43513402e9e574d44d9d52a920460d459ad9ee273390"
+  },
+  "DAMAGE_G_NON_G.csv": {
+    "bytes": 10635,
+    "sha256": "994fa620e4bf89969c95a685a8246addaf0dca3a479f2712c7ae5cb8aba119e7"
+  },
+  "ERROR_EVENTS.csv": {
+    "bytes": 698,
+    "sha256": "229c0a167f2dd91b8d2056aac6639a13ce7bd509b5fddf333fc89e8739f561b3"
+  },
+  "EXECUTION_LOCK.json": {
+    "bytes": 1491,
+    "sha256": "e2b4fab7893d53680c128a412f7142f9dbca6a98215a3d70bc20b50d9b556103"
+  },
+  "EXIT_CODE": {
+    "bytes": 1,
+    "sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+  },
+  "FIXED_READOUT_RESULTS.csv": {
+    "bytes": 902,
+    "sha256": "022e8a4a2b15e1de92d6f296164b1364b965a5eed8b7bff826c2140d90e1703e"
+  },
+  "G_IMAGE_ONLY_LOCK.csv": {
+    "bytes": 11630,
+    "sha256": "da48b6bbf0f6baf46514048212a4e4240615e115a780c9584ec153bb5e963d66"
+  },
+  "G_RELIABILITY.csv": {
+    "bytes": 7657,
+    "sha256": "e2f2760c476f84766f4cf0dde79572179de4884b4963afce845ac0caff16a1d1"
+  },
+  "INPUT_SHA256.json": {
+    "bytes": 22109,
+    "sha256": "fcd06b0055728086644791b81f7bf59162f47b64396237826d3184aa22b11a36"
+  },
+  "MAPPING_LOCK.json": {
+    "bytes": 779,
+    "sha256": "8176fed5594565c554c0f1b3c4a7303731755753daa267954b7baa23f8186458"
+  },
+  "PER_GROUP_CONFUSIONS.csv": {
+    "bytes": 130412,
+    "sha256": "846602a6439526b74688dcb48a8afbd3f7da25f1840c2683f7f170642a3a7520"
+  },
+  "PER_GROUP_ERRORS.csv": {
+    "bytes": 34538,
+    "sha256": "e0726983c5210b2d178878bd4648cb66f55c4782b3d5568164a1b2756fbfd94b"
+  },
+  "PER_GROUP_METRICS.csv": {
+    "bytes": 26915,
+    "sha256": "0a9f6e387b6afd7516086ed85f0e0c69a24f128a76987ebe9eb93d39c64345db"
+  },
+  "PER_GROUP_TRANSITIONS.csv": {
+    "bytes": 134399,
+    "sha256": "e814b17eee9daaae4138d8619a174d54c6c6640cf444997a9b0635d2de8acbec"
+  },
+  "POOLED_CONFUSIONS.csv": {
+    "bytes": 803,
+    "sha256": "32ce733a7150c4fbec5b22bb5e9c6d0b7e21a34b6ec535ae51d7eee26f1eadda"
+  },
+  "READOUT_CHANGES.csv": {
+    "bytes": 7176,
+    "sha256": "54ea153632d9bcca24ce396b03f3fafa8b9c4dccb13e515cc28fee273f56954f"
+  },
+  "READOUT_DIFFERENCES.csv": {
+    "bytes": 366,
+    "sha256": "50d61e98c91695f371f0d730fbb30f52a6f44f00db64e6ecc6b049071b1ef7a9"
+  },
+  "RESOURCE.json": {
+    "bytes": 235,
+    "sha256": "94378218bd9617ffc5da21f1ce05377f11764ec3e1a4b45b27cbb71bfd77acb5"
+  },
+  "RESULT.md": {
+    "bytes": 4153,
+    "sha256": "0ae11f1e04b15db99cc68fdb309bdaf095778ff241ae1e3f333dc82aca60bdf7"
+  },
+  "SCENE_MAPPING.csv": {
+    "bytes": 35536,
+    "sha256": "f06de3a72087ed6dc06c10ffab0d16cf4c0df7e7d07882858567e073a22a7e8f"
+  },
+  "SCENE_STRATA.csv": {
+    "bytes": 6728,
+    "sha256": "ce406d4a3e27afb94b05667a8784030537598f551b4457cfe6d51c413a062ff8"
+  },
+  "STATUS.json": {
+    "bytes": 235,
+    "sha256": "94378218bd9617ffc5da21f1ce05377f11764ec3e1a4b45b27cbb71bfd77acb5"
+  },
+  "TRANSITIONS27.csv": {
+    "bytes": 1037,
+    "sha256": "7c579e9dd5efae792f7a4d6e4662a94111d18286c8b9d584e9378f813bedf770"
+  },
+  "code/analyze_phase304.py": {
+    "bytes": 31794,
+    "sha256": "ea08ab17fb1c7d060e2885f428d9364db14c9d0757c4d9786293792da74d7ece"
+  },
+  "code/analyze_phase305.py": {
+    "bytes": 23792,
+    "sha256": "169c3c934f8d701552ae6cf0430b3b487cc907bcdc3aa53a1d6c56cddeaad398"
+  },
+  "code/finalize_phase305.py": {
+    "bytes": 3306,
+    "sha256": "2dff6b637ae910fb3c03a8ba2326aa330139b7632d08cc101c4db55578d4bdd5"
+  },
+  "code/phase305.md": {
+    "bytes": 9398,
+    "sha256": "f1dcc41f1f59ddbb170e9d6bf947dcd82da194809ed41178e60efbac5aba849b"
+  },
+  "code/phase305_common.py": {
+    "bytes": 1348,
+    "sha256": "7246a04efbd6ad1dcb98dd197e60425a4549ed1b127ddbd59d0e9f7d7ebb8248"
+  },
+  "code/run_phase305.py": {
+    "bytes": 3726,
+    "sha256": "f586463554828e841cceb155704da057aefee33cf6e7e4cb37626304844592ac"
+  },
+  "code/transfer_phase302.py": {
+    "bytes": 4373,
+    "sha256": "560c214062938b24b1b84061d49ca7c5755d56c569eee46a0eedcff97033682a"
+  },
+  "code/transfer_phase305.py": {
+    "bytes": 2201,
+    "sha256": "b6efdce0722fbbdc42f93979d54a8db168450f5ba88b4b83750fad0c686f0601"
+  },
+  "code/verify_phase305.py": {
+    "bytes": 1353,
+    "sha256": "74cf970c20fb043a612806b18542079c59f9c2a76f01171f3a03ce944afadaab"
+  },
+  "cpu.log": {
+    "bytes": 2739,
+    "sha256": "b2e2241ea9d20ebd17f3b8c846ef637106b9ffd70195ed2112463bb641bc6f3e"
+  }
+}
