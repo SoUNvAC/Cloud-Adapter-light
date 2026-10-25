@@ -1,0 +1,25 @@
+﻿scope,identity,snow_ice,q_bin,band,D,K,C_Shadow_excluded,AUC,reason,direction
+group_mean,ALL,all,all_R_q,B04,252976,72670,12337,0.6531218332522218,6 computable independent groups; unweighted mean,larger raw TOA ranks true Cloud; never flip
+group_mean,ALL,all,all_R_q,B03,252976,72670,12337,0.6713006289697416,6 computable independent groups; unweighted mean,larger raw TOA ranks true Cloud; never flip
+group_mean,ALL,all,all_R_q,B02,252976,72670,12337,0.703327057350201,6 computable independent groups; unweighted mean,larger raw TOA ranks true Cloud; never flip
+group_mean,ALL,all,all_R_q,B08,252976,72670,12337,0.6119489744413392,6 computable independent groups; unweighted mean,larger raw TOA ranks true Cloud; never flip
+group_mean,ALL,all,all_R_q,B11,252976,72670,12337,0.6372938619227676,6 computable independent groups; unweighted mean,larger raw TOA ranks true Cloud; never flip
+group_mean,ALL,all,all_R_q,B12,252976,72670,12337,0.6571619126365748,6 computable independent groups; unweighted mean,larger raw TOA ranks true Cloud; never flip
+group_mean,ALL,all,"q[0,0.5)",B04,19082,9776,2312,0.5275421741412555,6 computable independent groups; unweighted mean,larger raw TOA ranks true Cloud; never flip
+group_mean,ALL,all,"q[0,0.5)",B03,19082,9776,2312,0.5578446572777033,6 computable independent groups; unweighted mean,larger raw TOA ranks true Cloud; never flip
+group_mean,ALL,all,"q[0,0.5)",B02,19082,9776,2312,0.589976911842351,6 computable independent groups; unweighted mean,larger raw TOA ranks true Cloud; never flip
+group_mean,ALL,all,"q[0,0.5)",B08,19082,9776,2312,0.49841503167853896,6 computable independent groups; unweighted mean,larger raw TOA ranks true Cloud; never flip
+group_mean,ALL,all,"q[0,0.5)",B11,19082,9776,2312,0.525917333682908,6 computable independent groups; unweighted mean,larger raw TOA ranks true Cloud; never flip
+group_mean,ALL,all,"q[0,0.5)",B12,19082,9776,2312,0.5483888842417209,6 computable independent groups; unweighted mean,larger raw TOA ranks true Cloud; never flip
+group_mean,ALL,all,"q[0.5,0.7)",B04,148833,40174,6326,0.7037553863984661,6 computable independent groups; unweighted mean,larger raw TOA ranks true Cloud; never flip
+group_mean,ALL,all,"q[0.5,0.7)",B03,148833,40174,6326,0.7216116984403501,6 computable independent groups; unweighted mean,larger raw TOA ranks true Cloud; never flip
+group_mean,ALL,all,"q[0.5,0.7)",B02,148833,40174,6326,0.753160676268657,6 computable independent groups; unweighted mean,larger raw TOA ranks true Cloud; never flip
+group_mean,ALL,all,"q[0.5,0.7)",B08,148833,40174,6326,0.6579585984149188,6 computable independent groups; unweighted mean,larger raw TOA ranks true Cloud; never flip
+group_mean,ALL,all,"q[0.5,0.7)",B11,148833,40174,6326,0.6883243041580723,6 computable independent groups; unweighted mean,larger raw TOA ranks true Cloud; never flip
+group_mean,ALL,all,"q[0.5,0.7)",B12,148833,40174,6326,0.7056021125554585,6 computable independent groups; unweighted mean,larger raw TOA ranks true Cloud; never flip
+group_mean,ALL,all,"q[0.7,0.9)",B04,85061,22720,3699,0.7121289301563869,6 computable independent groups; unweighted mean,larger raw TOA ranks true Cloud; never flip
+group_mean,ALL,all,"q[0.7,0.9)",B03,85061,22720,3699,0.7298524573454351,6 computable independent groups; unweighted mean,larger raw TOA ranks true Cloud; never flip
+group_mean,ALL,all,"q[0.7,0.9)",B02,85061,22720,3699,0.7497680229365203,6 computable independent groups; unweighted mean,larger raw TOA ranks true Cloud; never flip
+group_mean,ALL,all,"q[0.7,0.9)",B08,85061,22720,3699,0.665941148233427,6 computable independent groups; unweighted mean,larger raw TOA ranks true Cloud; never flip
+group_mean,ALL,all,"q[0.7,0.9)",B11,85061,22720,3699,0.6533315568713373,6 computable independent groups; unweighted mean,larger raw TOA ranks true Cloud; never flip
+group_mean,ALL,all,"q[0.7,0.9)",B12,85061,22720,3699,0.6896799726157753,6 computable independent groups; unweighted mean,larger raw TOA ranks true Cloud; never flip

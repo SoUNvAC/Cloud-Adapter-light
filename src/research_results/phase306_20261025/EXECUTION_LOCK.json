@@ -1,0 +1,59 @@
+{
+  "code": {
+    "src/tools/analyze_phase306.py": "f6ca43df6e9c8675f7710cbd2e72661726acce7da07eaa625da78b41da9e4241",
+    "src/tools/auc_phase306.py": "1a88a49c622259c8afbb835cc47453274a3ea7c547393a18bf78e9905c0bf721",
+    "src/tools/finalize_phase306.py": "ce5ffc669b0c966ee697be3a932ce2d4cf6cb75e486ff46b7df6de9396f4e5f3",
+    "src/tools/phase306_common.py": "62bc5aac9d033bef4078efb13dac4d06a9d8382f1b0b2c17d0cda0d64fd0cb75",
+    "src/tools/run_phase306.py": "e07deab8517599cc6534e6dd7bbead0874b9d1c357c233150a1cc9d81e1feaa7",
+    "src/tools/transfer_phase306.py": "88e1d22974418fc625595ea8901f553a13866b9adfe1b0d41c994d95e4cecbee",
+    "src/tools/verify_phase306.py": "f3cb1bceec5126dba4c77f86ce76b5f653a2d907305a229a5fd2adb562dbae88",
+    "src/tools/analyze_phase304.py": "ea08ab17fb1c7d060e2885f428d9364db14c9d0757c4d9786293792da74d7ece",
+    "src/tools/transfer_phase302.py": "560c214062938b24b1b84061d49ca7c5755d56c569eee46a0eedcff97033682a",
+    "src/tools/phase302_images.py": "aecaccb41f592141eb17f1b63044626ee5b957eab8e05425e53bf5a7cc8897f8"
+  },
+  "protocol_sha256": "c9663887c0055a5118705c8782fda189a122f8aa65a3b8105d801b082cdb4ed2",
+  "git_commit": "ab9619881d8671fde1e56e330262c525873ff03e",
+  "start_beijing": "2026-10-25T11:17:42.488773+08:00",
+  "runtime": "/home/scv/miniconda3/envs/cloud-lite-pt210/bin/python",
+  "neural_calls": 0,
+  "training_updates": 0,
+  "download": 0,
+  "cap_seconds": 3600,
+  "cap_CPU_bytes": 17179869184,
+  "cap_new_bytes_including_backups": 1000000000,
+  "min_free_bytes": 4000000000,
+  "threshold": 0.9,
+  "rule": "R=common&SourceSurface&0<=qSurface<.90&sum>1e-12; six raw TOA bands, fixed q bins, no fitting",
+  "bands": [
+    "B04",
+    "B03",
+    "B02",
+    "B08",
+    "B11",
+    "B12"
+  ],
+  "indices": [
+    3,
+    2,
+    1,
+    7,
+    11,
+    12
+  ],
+  "q_bins": [
+    [
+      0,
+      0.5
+    ],
+    [
+      0.5,
+      0.7
+    ],
+    [
+      0.7,
+      0.9
+    ]
+  ],
+  "classifier_fits": 0,
+  "history_read_only": true
+}

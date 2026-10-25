@@ -1,0 +1,31 @@
+{
+  "status": "passed",
+  "products": 32,
+  "neural_calls": 0,
+  "training_updates": 0,
+  "classifier_fits": 0,
+  "downloads": 0,
+  "previous_damage_exact": true,
+  "snow_seven_scenes_exact": true,
+  "events_partition_R_exact": true,
+  "candidate_D_K_Shadow_partition_exact": true,
+  "confidence_bins_exact": true,
+  "all_eleven_scene_partitions_exact": true,
+  "same_six_band_support": true,
+  "common_and_spectral_support_SHA": true,
+  "channel_and_flat_index_checked": true,
+  "auc_group_ties_vs_independent_rank_sum": true,
+  "auc_numerical_tests": {
+    "single_class_NA": true,
+    "empty_NA": true,
+    "all_ties_half": true,
+    "positive_and_reverse_fixed": true,
+    "tie_groups_rank_sum_equal": true
+  },
+  "independent_auc_checks": 220,
+  "missing_classes_NA": true,
+  "unflipped_all_six_bands": true,
+  "torch_imported": false,
+  "seconds": 38.86152088805102,
+  "PID": 1749866
+}

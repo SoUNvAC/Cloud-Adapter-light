@@ -1,0 +1,41 @@
+{
+  "status": "completed",
+  "files": {
+    "AUC_GROUP_MEANS.csv": "8dfd8b0dc3363fba57359510e9f678ccdc55470d4b9142fef654cf16f487da49",
+    "AUC_RESULTS.csv": "f079169ae1c94875897914abb0ed85459fa2e23f8114be67364c0d7ba1a8b88e",
+    "BAND_QUANTILES.csv": "d1bac27cc50fb778c8fd866fdd151b26908e67ae42c20d2cc9fa05e5b39c976b",
+    "BOUNDARY_EVENTS.csv": "10b9e92a4e1c865655bc465118c0def757349102443f918ed680e33722239ee9",
+    "CHANNEL_LOCK.json": "48c695118d3cd0de8eaf955e92301996204ca0f3af9eac5dd72600292378e8b6",
+    "CHANNEL_POSITION_CHECKS.csv": "349cb4cb806985d6469d34e97a10f0f8c1d8f0ad4f43537fcc51340dc9378eb8",
+    "CONFIDENCE_EVENT_PARTITIONS.csv": "cf0c0b7197a78ae9f16adcffe08770166b30cedc31abb0b936966dba6ae89190",
+    "CPU_ACCEPTANCE.json": "d95a18be3fde524d512fe67e53f709ab0003e6929c85243ad420285f66a327be",
+    "EVENTS_PER_GROUP.csv": "dd7c2ac5d27f518e496b8e40cff299f862ed1ce2467677437bc14bae119d8375",
+    "EVENTS_POOLED.csv": "1326f7232ee7de82c4d1658487453c4e8f4bf9715eb5cc13d87c6a13f0e913b5",
+    "EVIDENCE_COVERAGE.csv": "a309dd850c5ed6f57cb1f06cb39d29d7741c98181d65ce6bb6134322edb098be",
+    "EXECUTION_LOCK.json": "bd685fd3aa7b4d98c13b18528a014e404126721d2081ea5ee19a7a6b63ce6039",
+    "INPUT_SHA256.json": "f55911ba334a6e7b83bd443ac9e2f11ab7b1af9473704380cdc1840f8da1c91b",
+    "MAPPING_LOCK.json": "8176fed5594565c554c0f1b3c4a7303731755753daa267954b7baa23f8186458",
+    "RESOURCE.json": "daabde38612ca6e65bdaa567852d95cdc02fe516c44906f8434c00e8df400895",
+    "RESULT.md": "ee8f0d9cb340c6de038f8a8ddc1dab23cc73165c00dde0d91d507dc752e6c0ed",
+    "SCENE_EVENT_STRATA.csv": "f4eae854ea9f3b2a043a20ac0585af672bc652d3a76bce8ab9a063f77acc581d",
+    "SCENE_MAPPING.csv": "f06de3a72087ed6dc06c10ffab0d16cf4c0df7e7d07882858567e073a22a7e8f",
+    "SPECTRAL_SUPPORT_LOSS.csv": "cd6f20fc49306d574e35bb85886f2a21c5b8404a7a5f7e99e5e4788e523cd7a3",
+    "STATUS.json": "daabde38612ca6e65bdaa567852d95cdc02fe516c44906f8434c00e8df400895",
+    "SUPPORT_AND_SAMPLE_SHA.csv": "3c9b6dbba2c7b12efda07c0cf093d44138b8d6f817566d6bf3c76b508f95a338",
+    "TOP_1_3_5_CONCENTRATION.csv": "f80dd83f993a1686c7dc4ab05beac1b9e3723f95a76b2ce305824228f8b836c7",
+    "cpu.log": "83875d95e1a1a1556e3b0a19f4f36cbe4636a00eec8af4b5477d006a940d9b4a",
+    "BACKUP_FILES.json": "52e7d2fb31ec9bcfc0ef9987d76f805f623d765580afbbb7ba298eb33ef7147d",
+    "BACKUP_RECEIPT.json": "6decb6ce52c466d285663e0c3706e1764c8af1a126133af4f4355dd98d8e1006",
+    "phase306.md": "7b30dbf7e6f671a8fed4d2adb6785a170ac6bb7ddbf5d0c301c82952b33c7720",
+    "EDITORIAL_RECEIPT.json": "eddae72855c992d5290fc9332a1d0c644ea6b896f866c4ae0cc0cc5008a2c7c1"
+  },
+  "code": {
+    "src/tools/phase306_common.py": "62bc5aac9d033bef4078efb13dac4d06a9d8382f1b0b2c17d0cda0d64fd0cb75",
+    "src/tools/run_phase306.py": "e07deab8517599cc6534e6dd7bbead0874b9d1c357c233150a1cc9d81e1feaa7",
+    "src/tools/transfer_phase306.py": "88e1d22974418fc625595ea8901f553a13866b9adfe1b0d41c994d95e4cecbee",
+    "src/tools/auc_phase306.py": "1a88a49c622259c8afbb835cc47453274a3ea7c547393a18bf78e9905c0bf721",
+    "src/tools/analyze_phase306.py": "f6ca43df6e9c8675f7710cbd2e72661726acce7da07eaa625da78b41da9e4241",
+    "src/tools/finalize_phase306.py": "ce5ffc669b0c966ee697be3a932ce2d4cf6cb75e486ff46b7df6de9396f4e5f3",
+    "src/tools/verify_phase306.py": "f3cb1bceec5126dba4c77f86ce76b5f653a2d907305a229a5fd2adb562dbae88"
+  }
+}

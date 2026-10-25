@@ -1,0 +1,30 @@
+{
+  "bands": [
+    "B04",
+    "B03",
+    "B02",
+    "B08",
+    "B11",
+    "B12"
+  ],
+  "indices": [
+    3,
+    2,
+    1,
+    7,
+    11,
+    12
+  ],
+  "input": "original float32 TOA; no255/no clipping/no standardization/no indices",
+  "B08_index": 7,
+  "B8A_not_used": true,
+  "all_bands_share_identical_support": true,
+  "event_codes": {
+    "D": 0,
+    "U": 1,
+    "K": 2,
+    "C_Shadow": 3
+  },
+  "sampling": "joint image-valid, old reference common support, six finite nonzero nonfill bands",
+  "limitations": "Inherited native-resampling provenance limited; these cube statistics do not validate native sensor response"
+}

@@ -1,0 +1,7 @@
+{
+  "scope": "Editorial clarification of precomputed scene-confounding and within-group/q-band evidence; all CSVs unchanged",
+  "raw_report_sha256": "13fd79e4a642f945d423df4bea5b8c798750795e7538c7c821f82ac39bff5209",
+  "published_report_sha256": "ee8f0d9cb340c6de038f8a8ddc1dab23cc73165c00dde0d91d507dc752e6c0ed",
+  "new_model_or_statistical_computation": false,
+  "all_numeric_tables_unchanged": true
+}

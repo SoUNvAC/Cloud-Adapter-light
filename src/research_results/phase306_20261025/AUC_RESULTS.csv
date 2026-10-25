@@ -1,0 +1,889 @@
+﻿scope,identity,snow_ice,q_bin,band,D,K,C_Shadow_excluded,AUC,reason,direction
+group,S2A_MSIL1C_20180310T165111_N0206_R026_T17VNJ_20180310T220933,1,all_R_q,B04,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180310T165111_N0206_R026_T17VNJ_20180310T220933,1,all_R_q,B03,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180310T165111_N0206_R026_T17VNJ_20180310T220933,1,all_R_q,B02,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180310T165111_N0206_R026_T17VNJ_20180310T220933,1,all_R_q,B08,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180310T165111_N0206_R026_T17VNJ_20180310T220933,1,all_R_q,B11,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180310T165111_N0206_R026_T17VNJ_20180310T220933,1,all_R_q,B12,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180310T165111_N0206_R026_T17VNJ_20180310T220933,1,"q[0,0.5)",B04,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180310T165111_N0206_R026_T17VNJ_20180310T220933,1,"q[0,0.5)",B03,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180310T165111_N0206_R026_T17VNJ_20180310T220933,1,"q[0,0.5)",B02,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180310T165111_N0206_R026_T17VNJ_20180310T220933,1,"q[0,0.5)",B08,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180310T165111_N0206_R026_T17VNJ_20180310T220933,1,"q[0,0.5)",B11,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180310T165111_N0206_R026_T17VNJ_20180310T220933,1,"q[0,0.5)",B12,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180310T165111_N0206_R026_T17VNJ_20180310T220933,1,"q[0.5,0.7)",B04,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180310T165111_N0206_R026_T17VNJ_20180310T220933,1,"q[0.5,0.7)",B03,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180310T165111_N0206_R026_T17VNJ_20180310T220933,1,"q[0.5,0.7)",B02,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180310T165111_N0206_R026_T17VNJ_20180310T220933,1,"q[0.5,0.7)",B08,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180310T165111_N0206_R026_T17VNJ_20180310T220933,1,"q[0.5,0.7)",B11,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180310T165111_N0206_R026_T17VNJ_20180310T220933,1,"q[0.5,0.7)",B12,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180310T165111_N0206_R026_T17VNJ_20180310T220933,1,"q[0.7,0.9)",B04,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180310T165111_N0206_R026_T17VNJ_20180310T220933,1,"q[0.7,0.9)",B03,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180310T165111_N0206_R026_T17VNJ_20180310T220933,1,"q[0.7,0.9)",B02,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180310T165111_N0206_R026_T17VNJ_20180310T220933,1,"q[0.7,0.9)",B08,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180310T165111_N0206_R026_T17VNJ_20180310T220933,1,"q[0.7,0.9)",B11,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180310T165111_N0206_R026_T17VNJ_20180310T220933,1,"q[0.7,0.9)",B12,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180822T014649_N0206_R017_T56WNB_20180822T032508,0,all_R_q,B04,0,86,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180822T014649_N0206_R017_T56WNB_20180822T032508,0,all_R_q,B03,0,86,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180822T014649_N0206_R017_T56WNB_20180822T032508,0,all_R_q,B02,0,86,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180822T014649_N0206_R017_T56WNB_20180822T032508,0,all_R_q,B08,0,86,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180822T014649_N0206_R017_T56WNB_20180822T032508,0,all_R_q,B11,0,86,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180822T014649_N0206_R017_T56WNB_20180822T032508,0,all_R_q,B12,0,86,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180822T014649_N0206_R017_T56WNB_20180822T032508,0,"q[0,0.5)",B04,0,63,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180822T014649_N0206_R017_T56WNB_20180822T032508,0,"q[0,0.5)",B03,0,63,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180822T014649_N0206_R017_T56WNB_20180822T032508,0,"q[0,0.5)",B02,0,63,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180822T014649_N0206_R017_T56WNB_20180822T032508,0,"q[0,0.5)",B08,0,63,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180822T014649_N0206_R017_T56WNB_20180822T032508,0,"q[0,0.5)",B11,0,63,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180822T014649_N0206_R017_T56WNB_20180822T032508,0,"q[0,0.5)",B12,0,63,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180822T014649_N0206_R017_T56WNB_20180822T032508,0,"q[0.5,0.7)",B04,0,23,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180822T014649_N0206_R017_T56WNB_20180822T032508,0,"q[0.5,0.7)",B03,0,23,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180822T014649_N0206_R017_T56WNB_20180822T032508,0,"q[0.5,0.7)",B02,0,23,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180822T014649_N0206_R017_T56WNB_20180822T032508,0,"q[0.5,0.7)",B08,0,23,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180822T014649_N0206_R017_T56WNB_20180822T032508,0,"q[0.5,0.7)",B11,0,23,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180822T014649_N0206_R017_T56WNB_20180822T032508,0,"q[0.5,0.7)",B12,0,23,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180822T014649_N0206_R017_T56WNB_20180822T032508,0,"q[0.7,0.9)",B04,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180822T014649_N0206_R017_T56WNB_20180822T032508,0,"q[0.7,0.9)",B03,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180822T014649_N0206_R017_T56WNB_20180822T032508,0,"q[0.7,0.9)",B02,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180822T014649_N0206_R017_T56WNB_20180822T032508,0,"q[0.7,0.9)",B08,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180822T014649_N0206_R017_T56WNB_20180822T032508,0,"q[0.7,0.9)",B11,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180822T014649_N0206_R017_T56WNB_20180822T032508,0,"q[0.7,0.9)",B12,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180321T075621_N0206_R035_T34HGK_20180321T101406,0,all_R_q,B04,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180321T075621_N0206_R035_T34HGK_20180321T101406,0,all_R_q,B03,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180321T075621_N0206_R035_T34HGK_20180321T101406,0,all_R_q,B02,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180321T075621_N0206_R035_T34HGK_20180321T101406,0,all_R_q,B08,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180321T075621_N0206_R035_T34HGK_20180321T101406,0,all_R_q,B11,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180321T075621_N0206_R035_T34HGK_20180321T101406,0,all_R_q,B12,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180321T075621_N0206_R035_T34HGK_20180321T101406,0,"q[0,0.5)",B04,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180321T075621_N0206_R035_T34HGK_20180321T101406,0,"q[0,0.5)",B03,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180321T075621_N0206_R035_T34HGK_20180321T101406,0,"q[0,0.5)",B02,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180321T075621_N0206_R035_T34HGK_20180321T101406,0,"q[0,0.5)",B08,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180321T075621_N0206_R035_T34HGK_20180321T101406,0,"q[0,0.5)",B11,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180321T075621_N0206_R035_T34HGK_20180321T101406,0,"q[0,0.5)",B12,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180321T075621_N0206_R035_T34HGK_20180321T101406,0,"q[0.5,0.7)",B04,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180321T075621_N0206_R035_T34HGK_20180321T101406,0,"q[0.5,0.7)",B03,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180321T075621_N0206_R035_T34HGK_20180321T101406,0,"q[0.5,0.7)",B02,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180321T075621_N0206_R035_T34HGK_20180321T101406,0,"q[0.5,0.7)",B08,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180321T075621_N0206_R035_T34HGK_20180321T101406,0,"q[0.5,0.7)",B11,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180321T075621_N0206_R035_T34HGK_20180321T101406,0,"q[0.5,0.7)",B12,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180321T075621_N0206_R035_T34HGK_20180321T101406,0,"q[0.7,0.9)",B04,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180321T075621_N0206_R035_T34HGK_20180321T101406,0,"q[0.7,0.9)",B03,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180321T075621_N0206_R035_T34HGK_20180321T101406,0,"q[0.7,0.9)",B02,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180321T075621_N0206_R035_T34HGK_20180321T101406,0,"q[0.7,0.9)",B08,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180321T075621_N0206_R035_T34HGK_20180321T101406,0,"q[0.7,0.9)",B11,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180321T075621_N0206_R035_T34HGK_20180321T101406,0,"q[0.7,0.9)",B12,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180612T171859_N0206_R012_T15UVU_20180612T204912,0,all_R_q,B04,0,137,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180612T171859_N0206_R012_T15UVU_20180612T204912,0,all_R_q,B03,0,137,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180612T171859_N0206_R012_T15UVU_20180612T204912,0,all_R_q,B02,0,137,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180612T171859_N0206_R012_T15UVU_20180612T204912,0,all_R_q,B08,0,137,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180612T171859_N0206_R012_T15UVU_20180612T204912,0,all_R_q,B11,0,137,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180612T171859_N0206_R012_T15UVU_20180612T204912,0,all_R_q,B12,0,137,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180612T171859_N0206_R012_T15UVU_20180612T204912,0,"q[0,0.5)",B04,0,44,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180612T171859_N0206_R012_T15UVU_20180612T204912,0,"q[0,0.5)",B03,0,44,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180612T171859_N0206_R012_T15UVU_20180612T204912,0,"q[0,0.5)",B02,0,44,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180612T171859_N0206_R012_T15UVU_20180612T204912,0,"q[0,0.5)",B08,0,44,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180612T171859_N0206_R012_T15UVU_20180612T204912,0,"q[0,0.5)",B11,0,44,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180612T171859_N0206_R012_T15UVU_20180612T204912,0,"q[0,0.5)",B12,0,44,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180612T171859_N0206_R012_T15UVU_20180612T204912,0,"q[0.5,0.7)",B04,0,87,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180612T171859_N0206_R012_T15UVU_20180612T204912,0,"q[0.5,0.7)",B03,0,87,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180612T171859_N0206_R012_T15UVU_20180612T204912,0,"q[0.5,0.7)",B02,0,87,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180612T171859_N0206_R012_T15UVU_20180612T204912,0,"q[0.5,0.7)",B08,0,87,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180612T171859_N0206_R012_T15UVU_20180612T204912,0,"q[0.5,0.7)",B11,0,87,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180612T171859_N0206_R012_T15UVU_20180612T204912,0,"q[0.5,0.7)",B12,0,87,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180612T171859_N0206_R012_T15UVU_20180612T204912,0,"q[0.7,0.9)",B04,0,6,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180612T171859_N0206_R012_T15UVU_20180612T204912,0,"q[0.7,0.9)",B03,0,6,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180612T171859_N0206_R012_T15UVU_20180612T204912,0,"q[0.7,0.9)",B02,0,6,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180612T171859_N0206_R012_T15UVU_20180612T204912,0,"q[0.7,0.9)",B08,0,6,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180612T171859_N0206_R012_T15UVU_20180612T204912,0,"q[0.7,0.9)",B11,0,6,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180612T171859_N0206_R012_T15UVU_20180612T204912,0,"q[0.7,0.9)",B12,0,6,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180824T111239_N0206_R051_T28LGP_20180824T164334,0,all_R_q,B04,0,69,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180824T111239_N0206_R051_T28LGP_20180824T164334,0,all_R_q,B03,0,69,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180824T111239_N0206_R051_T28LGP_20180824T164334,0,all_R_q,B02,0,69,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180824T111239_N0206_R051_T28LGP_20180824T164334,0,all_R_q,B08,0,69,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180824T111239_N0206_R051_T28LGP_20180824T164334,0,all_R_q,B11,0,69,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180824T111239_N0206_R051_T28LGP_20180824T164334,0,all_R_q,B12,0,69,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180824T111239_N0206_R051_T28LGP_20180824T164334,0,"q[0,0.5)",B04,0,20,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180824T111239_N0206_R051_T28LGP_20180824T164334,0,"q[0,0.5)",B03,0,20,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180824T111239_N0206_R051_T28LGP_20180824T164334,0,"q[0,0.5)",B02,0,20,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180824T111239_N0206_R051_T28LGP_20180824T164334,0,"q[0,0.5)",B08,0,20,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180824T111239_N0206_R051_T28LGP_20180824T164334,0,"q[0,0.5)",B11,0,20,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180824T111239_N0206_R051_T28LGP_20180824T164334,0,"q[0,0.5)",B12,0,20,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180824T111239_N0206_R051_T28LGP_20180824T164334,0,"q[0.5,0.7)",B04,0,45,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180824T111239_N0206_R051_T28LGP_20180824T164334,0,"q[0.5,0.7)",B03,0,45,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180824T111239_N0206_R051_T28LGP_20180824T164334,0,"q[0.5,0.7)",B02,0,45,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180824T111239_N0206_R051_T28LGP_20180824T164334,0,"q[0.5,0.7)",B08,0,45,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180824T111239_N0206_R051_T28LGP_20180824T164334,0,"q[0.5,0.7)",B11,0,45,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180824T111239_N0206_R051_T28LGP_20180824T164334,0,"q[0.5,0.7)",B12,0,45,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180824T111239_N0206_R051_T28LGP_20180824T164334,0,"q[0.7,0.9)",B04,0,4,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180824T111239_N0206_R051_T28LGP_20180824T164334,0,"q[0.7,0.9)",B03,0,4,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180824T111239_N0206_R051_T28LGP_20180824T164334,0,"q[0.7,0.9)",B02,0,4,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180824T111239_N0206_R051_T28LGP_20180824T164334,0,"q[0.7,0.9)",B08,0,4,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180824T111239_N0206_R051_T28LGP_20180824T164334,0,"q[0.7,0.9)",B11,0,4,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180824T111239_N0206_R051_T28LGP_20180824T164334,0,"q[0.7,0.9)",B12,0,4,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180410T214911_N0206_R043_T02LKH_20180410T231102,0,all_R_q,B04,0,2033,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180410T214911_N0206_R043_T02LKH_20180410T231102,0,all_R_q,B03,0,2033,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180410T214911_N0206_R043_T02LKH_20180410T231102,0,all_R_q,B02,0,2033,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180410T214911_N0206_R043_T02LKH_20180410T231102,0,all_R_q,B08,0,2033,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180410T214911_N0206_R043_T02LKH_20180410T231102,0,all_R_q,B11,0,2033,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180410T214911_N0206_R043_T02LKH_20180410T231102,0,all_R_q,B12,0,2033,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180410T214911_N0206_R043_T02LKH_20180410T231102,0,"q[0,0.5)",B04,0,1780,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180410T214911_N0206_R043_T02LKH_20180410T231102,0,"q[0,0.5)",B03,0,1780,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180410T214911_N0206_R043_T02LKH_20180410T231102,0,"q[0,0.5)",B02,0,1780,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180410T214911_N0206_R043_T02LKH_20180410T231102,0,"q[0,0.5)",B08,0,1780,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180410T214911_N0206_R043_T02LKH_20180410T231102,0,"q[0,0.5)",B11,0,1780,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180410T214911_N0206_R043_T02LKH_20180410T231102,0,"q[0,0.5)",B12,0,1780,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180410T214911_N0206_R043_T02LKH_20180410T231102,0,"q[0.5,0.7)",B04,0,249,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180410T214911_N0206_R043_T02LKH_20180410T231102,0,"q[0.5,0.7)",B03,0,249,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180410T214911_N0206_R043_T02LKH_20180410T231102,0,"q[0.5,0.7)",B02,0,249,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180410T214911_N0206_R043_T02LKH_20180410T231102,0,"q[0.5,0.7)",B08,0,249,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180410T214911_N0206_R043_T02LKH_20180410T231102,0,"q[0.5,0.7)",B11,0,249,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180410T214911_N0206_R043_T02LKH_20180410T231102,0,"q[0.5,0.7)",B12,0,249,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180410T214911_N0206_R043_T02LKH_20180410T231102,0,"q[0.7,0.9)",B04,0,4,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180410T214911_N0206_R043_T02LKH_20180410T231102,0,"q[0.7,0.9)",B03,0,4,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180410T214911_N0206_R043_T02LKH_20180410T231102,0,"q[0.7,0.9)",B02,0,4,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180410T214911_N0206_R043_T02LKH_20180410T231102,0,"q[0.7,0.9)",B08,0,4,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180410T214911_N0206_R043_T02LKH_20180410T231102,0,"q[0.7,0.9)",B11,0,4,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180410T214911_N0206_R043_T02LKH_20180410T231102,0,"q[0.7,0.9)",B12,0,4,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180701T074609_N0206_R135_T38TNN_20180701T100320,1,all_R_q,B04,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180701T074609_N0206_R135_T38TNN_20180701T100320,1,all_R_q,B03,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180701T074609_N0206_R135_T38TNN_20180701T100320,1,all_R_q,B02,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180701T074609_N0206_R135_T38TNN_20180701T100320,1,all_R_q,B08,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180701T074609_N0206_R135_T38TNN_20180701T100320,1,all_R_q,B11,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180701T074609_N0206_R135_T38TNN_20180701T100320,1,all_R_q,B12,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180701T074609_N0206_R135_T38TNN_20180701T100320,1,"q[0,0.5)",B04,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180701T074609_N0206_R135_T38TNN_20180701T100320,1,"q[0,0.5)",B03,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180701T074609_N0206_R135_T38TNN_20180701T100320,1,"q[0,0.5)",B02,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180701T074609_N0206_R135_T38TNN_20180701T100320,1,"q[0,0.5)",B08,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180701T074609_N0206_R135_T38TNN_20180701T100320,1,"q[0,0.5)",B11,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180701T074609_N0206_R135_T38TNN_20180701T100320,1,"q[0,0.5)",B12,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180701T074609_N0206_R135_T38TNN_20180701T100320,1,"q[0.5,0.7)",B04,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180701T074609_N0206_R135_T38TNN_20180701T100320,1,"q[0.5,0.7)",B03,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180701T074609_N0206_R135_T38TNN_20180701T100320,1,"q[0.5,0.7)",B02,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180701T074609_N0206_R135_T38TNN_20180701T100320,1,"q[0.5,0.7)",B08,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180701T074609_N0206_R135_T38TNN_20180701T100320,1,"q[0.5,0.7)",B11,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180701T074609_N0206_R135_T38TNN_20180701T100320,1,"q[0.5,0.7)",B12,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180701T074609_N0206_R135_T38TNN_20180701T100320,1,"q[0.7,0.9)",B04,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180701T074609_N0206_R135_T38TNN_20180701T100320,1,"q[0.7,0.9)",B03,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180701T074609_N0206_R135_T38TNN_20180701T100320,1,"q[0.7,0.9)",B02,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180701T074609_N0206_R135_T38TNN_20180701T100320,1,"q[0.7,0.9)",B08,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180701T074609_N0206_R135_T38TNN_20180701T100320,1,"q[0.7,0.9)",B11,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180701T074609_N0206_R135_T38TNN_20180701T100320,1,"q[0.7,0.9)",B12,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181218T043159_N0207_R133_T46RDT_20181218T072156,0,all_R_q,B04,0,42,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181218T043159_N0207_R133_T46RDT_20181218T072156,0,all_R_q,B03,0,42,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181218T043159_N0207_R133_T46RDT_20181218T072156,0,all_R_q,B02,0,42,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181218T043159_N0207_R133_T46RDT_20181218T072156,0,all_R_q,B08,0,42,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181218T043159_N0207_R133_T46RDT_20181218T072156,0,all_R_q,B11,0,42,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181218T043159_N0207_R133_T46RDT_20181218T072156,0,all_R_q,B12,0,42,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181218T043159_N0207_R133_T46RDT_20181218T072156,0,"q[0,0.5)",B04,0,6,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181218T043159_N0207_R133_T46RDT_20181218T072156,0,"q[0,0.5)",B03,0,6,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181218T043159_N0207_R133_T46RDT_20181218T072156,0,"q[0,0.5)",B02,0,6,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181218T043159_N0207_R133_T46RDT_20181218T072156,0,"q[0,0.5)",B08,0,6,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181218T043159_N0207_R133_T46RDT_20181218T072156,0,"q[0,0.5)",B11,0,6,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181218T043159_N0207_R133_T46RDT_20181218T072156,0,"q[0,0.5)",B12,0,6,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181218T043159_N0207_R133_T46RDT_20181218T072156,0,"q[0.5,0.7)",B04,0,30,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181218T043159_N0207_R133_T46RDT_20181218T072156,0,"q[0.5,0.7)",B03,0,30,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181218T043159_N0207_R133_T46RDT_20181218T072156,0,"q[0.5,0.7)",B02,0,30,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181218T043159_N0207_R133_T46RDT_20181218T072156,0,"q[0.5,0.7)",B08,0,30,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181218T043159_N0207_R133_T46RDT_20181218T072156,0,"q[0.5,0.7)",B11,0,30,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181218T043159_N0207_R133_T46RDT_20181218T072156,0,"q[0.5,0.7)",B12,0,30,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181218T043159_N0207_R133_T46RDT_20181218T072156,0,"q[0.7,0.9)",B04,0,6,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181218T043159_N0207_R133_T46RDT_20181218T072156,0,"q[0.7,0.9)",B03,0,6,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181218T043159_N0207_R133_T46RDT_20181218T072156,0,"q[0.7,0.9)",B02,0,6,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181218T043159_N0207_R133_T46RDT_20181218T072156,0,"q[0.7,0.9)",B08,0,6,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181218T043159_N0207_R133_T46RDT_20181218T072156,0,"q[0.7,0.9)",B11,0,6,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181218T043159_N0207_R133_T46RDT_20181218T072156,0,"q[0.7,0.9)",B12,0,6,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180710T090601_N0206_R050_T34QBG_20180710T112311,0,all_R_q,B04,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180710T090601_N0206_R050_T34QBG_20180710T112311,0,all_R_q,B03,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180710T090601_N0206_R050_T34QBG_20180710T112311,0,all_R_q,B02,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180710T090601_N0206_R050_T34QBG_20180710T112311,0,all_R_q,B08,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180710T090601_N0206_R050_T34QBG_20180710T112311,0,all_R_q,B11,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180710T090601_N0206_R050_T34QBG_20180710T112311,0,all_R_q,B12,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180710T090601_N0206_R050_T34QBG_20180710T112311,0,"q[0,0.5)",B04,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180710T090601_N0206_R050_T34QBG_20180710T112311,0,"q[0,0.5)",B03,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180710T090601_N0206_R050_T34QBG_20180710T112311,0,"q[0,0.5)",B02,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180710T090601_N0206_R050_T34QBG_20180710T112311,0,"q[0,0.5)",B08,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180710T090601_N0206_R050_T34QBG_20180710T112311,0,"q[0,0.5)",B11,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180710T090601_N0206_R050_T34QBG_20180710T112311,0,"q[0,0.5)",B12,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180710T090601_N0206_R050_T34QBG_20180710T112311,0,"q[0.5,0.7)",B04,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180710T090601_N0206_R050_T34QBG_20180710T112311,0,"q[0.5,0.7)",B03,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180710T090601_N0206_R050_T34QBG_20180710T112311,0,"q[0.5,0.7)",B02,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180710T090601_N0206_R050_T34QBG_20180710T112311,0,"q[0.5,0.7)",B08,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180710T090601_N0206_R050_T34QBG_20180710T112311,0,"q[0.5,0.7)",B11,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180710T090601_N0206_R050_T34QBG_20180710T112311,0,"q[0.5,0.7)",B12,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180710T090601_N0206_R050_T34QBG_20180710T112311,0,"q[0.7,0.9)",B04,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180710T090601_N0206_R050_T34QBG_20180710T112311,0,"q[0.7,0.9)",B03,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180710T090601_N0206_R050_T34QBG_20180710T112311,0,"q[0.7,0.9)",B02,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180710T090601_N0206_R050_T34QBG_20180710T112311,0,"q[0.7,0.9)",B08,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180710T090601_N0206_R050_T34QBG_20180710T112311,0,"q[0.7,0.9)",B11,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180710T090601_N0206_R050_T34QBG_20180710T112311,0,"q[0.7,0.9)",B12,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180131T082149_N0206_R121_T34JDL_20180131T120726,0,all_R_q,B04,40,538,18,0.5546236059479553,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180131T082149_N0206_R121_T34JDL_20180131T120726,0,all_R_q,B03,40,538,18,0.6559247211895911,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180131T082149_N0206_R121_T34JDL_20180131T120726,0,all_R_q,B02,40,538,18,0.7508131970260223,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180131T082149_N0206_R121_T34JDL_20180131T120726,0,all_R_q,B08,40,538,18,0.5127091078066914,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180131T082149_N0206_R121_T34JDL_20180131T120726,0,all_R_q,B11,40,538,18,0.43392193308550187,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180131T082149_N0206_R121_T34JDL_20180131T120726,0,all_R_q,B12,40,538,18,0.44437732342007435,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180131T082149_N0206_R121_T34JDL_20180131T120726,0,"q[0,0.5)",B04,13,108,7,0.349002849002849,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180131T082149_N0206_R121_T34JDL_20180131T120726,0,"q[0,0.5)",B03,13,108,7,0.5192307692307693,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180131T082149_N0206_R121_T34JDL_20180131T120726,0,"q[0,0.5)",B02,13,108,7,0.6285612535612536,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180131T082149_N0206_R121_T34JDL_20180131T120726,0,"q[0,0.5)",B08,13,108,7,0.3055555555555556,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180131T082149_N0206_R121_T34JDL_20180131T120726,0,"q[0,0.5)",B11,13,108,7,0.23504273504273504,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180131T082149_N0206_R121_T34JDL_20180131T120726,0,"q[0,0.5)",B12,13,108,7,0.28952991452991456,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180131T082149_N0206_R121_T34JDL_20180131T120726,0,"q[0.5,0.7)",B04,19,423,11,0.6269130272489735,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180131T082149_N0206_R121_T34JDL_20180131T120726,0,"q[0.5,0.7)",B03,19,423,11,0.7102774667164364,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180131T082149_N0206_R121_T34JDL_20180131T120726,0,"q[0.5,0.7)",B02,19,423,11,0.809879308199577,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180131T082149_N0206_R121_T34JDL_20180131T120726,0,"q[0.5,0.7)",B08,19,423,11,0.5964912280701754,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180131T082149_N0206_R121_T34JDL_20180131T120726,0,"q[0.5,0.7)",B11,19,423,11,0.5351499315665049,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180131T082149_N0206_R121_T34JDL_20180131T120726,0,"q[0.5,0.7)",B12,19,423,11,0.5342789598108747,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180131T082149_N0206_R121_T34JDL_20180131T120726,0,"q[0.7,0.9)",B04,8,7,0,0.5357142857142857,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180131T082149_N0206_R121_T34JDL_20180131T120726,0,"q[0.7,0.9)",B03,8,7,0,0.6964285714285714,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180131T082149_N0206_R121_T34JDL_20180131T120726,0,"q[0.7,0.9)",B02,8,7,0,0.7321428571428571,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180131T082149_N0206_R121_T34JDL_20180131T120726,0,"q[0.7,0.9)",B08,8,7,0,0.5,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180131T082149_N0206_R121_T34JDL_20180131T120726,0,"q[0.7,0.9)",B11,8,7,0,0.10714285714285714,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180131T082149_N0206_R121_T34JDL_20180131T120726,0,"q[0.7,0.9)",B12,8,7,0,0.26785714285714285,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180214T025819_N0206_R032_T51TUM_20180214T072411,1,all_R_q,B04,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180214T025819_N0206_R032_T51TUM_20180214T072411,1,all_R_q,B03,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180214T025819_N0206_R032_T51TUM_20180214T072411,1,all_R_q,B02,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180214T025819_N0206_R032_T51TUM_20180214T072411,1,all_R_q,B08,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180214T025819_N0206_R032_T51TUM_20180214T072411,1,all_R_q,B11,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180214T025819_N0206_R032_T51TUM_20180214T072411,1,all_R_q,B12,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180214T025819_N0206_R032_T51TUM_20180214T072411,1,"q[0,0.5)",B04,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180214T025819_N0206_R032_T51TUM_20180214T072411,1,"q[0,0.5)",B03,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180214T025819_N0206_R032_T51TUM_20180214T072411,1,"q[0,0.5)",B02,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180214T025819_N0206_R032_T51TUM_20180214T072411,1,"q[0,0.5)",B08,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180214T025819_N0206_R032_T51TUM_20180214T072411,1,"q[0,0.5)",B11,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180214T025819_N0206_R032_T51TUM_20180214T072411,1,"q[0,0.5)",B12,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180214T025819_N0206_R032_T51TUM_20180214T072411,1,"q[0.5,0.7)",B04,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180214T025819_N0206_R032_T51TUM_20180214T072411,1,"q[0.5,0.7)",B03,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180214T025819_N0206_R032_T51TUM_20180214T072411,1,"q[0.5,0.7)",B02,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180214T025819_N0206_R032_T51TUM_20180214T072411,1,"q[0.5,0.7)",B08,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180214T025819_N0206_R032_T51TUM_20180214T072411,1,"q[0.5,0.7)",B11,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180214T025819_N0206_R032_T51TUM_20180214T072411,1,"q[0.5,0.7)",B12,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180214T025819_N0206_R032_T51TUM_20180214T072411,1,"q[0.7,0.9)",B04,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180214T025819_N0206_R032_T51TUM_20180214T072411,1,"q[0.7,0.9)",B03,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180214T025819_N0206_R032_T51TUM_20180214T072411,1,"q[0.7,0.9)",B02,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180214T025819_N0206_R032_T51TUM_20180214T072411,1,"q[0.7,0.9)",B08,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180214T025819_N0206_R032_T51TUM_20180214T072411,1,"q[0.7,0.9)",B11,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180214T025819_N0206_R032_T51TUM_20180214T072411,1,"q[0.7,0.9)",B12,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181118T084231_N0207_R064_T35RPM_20181118T101007,0,all_R_q,B04,76637,40515,9262,0.3676158825465439,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181118T084231_N0207_R064_T35RPM_20181118T101007,0,all_R_q,B03,76637,40515,9262,0.42710721951192193,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181118T084231_N0207_R064_T35RPM_20181118T101007,0,all_R_q,B02,76637,40515,9262,0.52639501419936,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181118T084231_N0207_R064_T35RPM_20181118T101007,0,all_R_q,B08,76637,40515,9262,0.3599501428696204,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181118T084231_N0207_R064_T35RPM_20181118T101007,0,all_R_q,B11,76637,40515,9262,0.3026930729119718,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181118T084231_N0207_R064_T35RPM_20181118T101007,0,all_R_q,B12,76637,40515,9262,0.3440838365329754,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181118T084231_N0207_R064_T35RPM_20181118T101007,0,"q[0,0.5)",B04,3167,2836,772,0.4154314392561157,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181118T084231_N0207_R064_T35RPM_20181118T101007,0,"q[0,0.5)",B03,3167,2836,772,0.4416496726868184,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181118T084231_N0207_R064_T35RPM_20181118T101007,0,"q[0,0.5)",B02,3167,2836,772,0.4820062924116517,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181118T084231_N0207_R064_T35RPM_20181118T101007,0,"q[0,0.5)",B08,3167,2836,772,0.3923486118082144,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181118T084231_N0207_R064_T35RPM_20181118T101007,0,"q[0,0.5)",B11,3167,2836,772,0.3751473566215063,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181118T084231_N0207_R064_T35RPM_20181118T101007,0,"q[0,0.5)",B12,3167,2836,772,0.39974227343599344,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181118T084231_N0207_R064_T35RPM_20181118T101007,0,"q[0.5,0.7)",B04,20962,18641,5061,0.47416558734361675,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181118T084231_N0207_R064_T35RPM_20181118T101007,0,"q[0.5,0.7)",B03,20962,18641,5061,0.5298347144636837,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181118T084231_N0207_R064_T35RPM_20181118T101007,0,"q[0.5,0.7)",B02,20962,18641,5061,0.6078100592855364,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181118T084231_N0207_R064_T35RPM_20181118T101007,0,"q[0.5,0.7)",B08,20962,18641,5061,0.46764696475168044,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181118T084231_N0207_R064_T35RPM_20181118T101007,0,"q[0.5,0.7)",B11,20962,18641,5061,0.4172483701338608,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181118T084231_N0207_R064_T35RPM_20181118T101007,0,"q[0.5,0.7)",B12,20962,18641,5061,0.4595725625317717,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181118T084231_N0207_R064_T35RPM_20181118T101007,0,"q[0.7,0.9)",B04,52508,19038,3429,0.32342417491279507,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181118T084231_N0207_R064_T35RPM_20181118T101007,0,"q[0.7,0.9)",B03,52508,19038,3429,0.3808664600770033,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181118T084231_N0207_R064_T35RPM_20181118T101007,0,"q[0.7,0.9)",B02,52508,19038,3429,0.4902559032960689,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181118T084231_N0207_R064_T35RPM_20181118T101007,0,"q[0.7,0.9)",B08,52508,19038,3429,0.32358014242191163,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181118T084231_N0207_R064_T35RPM_20181118T101007,0,"q[0.7,0.9)",B11,52508,19038,3429,0.26084896238563754,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181118T084231_N0207_R064_T35RPM_20181118T101007,0,"q[0.7,0.9)",B12,52508,19038,3429,0.30590015125974873,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180703T023551_N0206_R089_T50PLR_20180703T053714,0,all_R_q,B04,0,4134,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180703T023551_N0206_R089_T50PLR_20180703T053714,0,all_R_q,B03,0,4134,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180703T023551_N0206_R089_T50PLR_20180703T053714,0,all_R_q,B02,0,4134,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180703T023551_N0206_R089_T50PLR_20180703T053714,0,all_R_q,B08,0,4134,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180703T023551_N0206_R089_T50PLR_20180703T053714,0,all_R_q,B11,0,4134,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180703T023551_N0206_R089_T50PLR_20180703T053714,0,all_R_q,B12,0,4134,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180703T023551_N0206_R089_T50PLR_20180703T053714,0,"q[0,0.5)",B04,0,3976,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180703T023551_N0206_R089_T50PLR_20180703T053714,0,"q[0,0.5)",B03,0,3976,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180703T023551_N0206_R089_T50PLR_20180703T053714,0,"q[0,0.5)",B02,0,3976,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180703T023551_N0206_R089_T50PLR_20180703T053714,0,"q[0,0.5)",B08,0,3976,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180703T023551_N0206_R089_T50PLR_20180703T053714,0,"q[0,0.5)",B11,0,3976,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180703T023551_N0206_R089_T50PLR_20180703T053714,0,"q[0,0.5)",B12,0,3976,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180703T023551_N0206_R089_T50PLR_20180703T053714,0,"q[0.5,0.7)",B04,0,114,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180703T023551_N0206_R089_T50PLR_20180703T053714,0,"q[0.5,0.7)",B03,0,114,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180703T023551_N0206_R089_T50PLR_20180703T053714,0,"q[0.5,0.7)",B02,0,114,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180703T023551_N0206_R089_T50PLR_20180703T053714,0,"q[0.5,0.7)",B08,0,114,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180703T023551_N0206_R089_T50PLR_20180703T053714,0,"q[0.5,0.7)",B11,0,114,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180703T023551_N0206_R089_T50PLR_20180703T053714,0,"q[0.5,0.7)",B12,0,114,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180703T023551_N0206_R089_T50PLR_20180703T053714,0,"q[0.7,0.9)",B04,0,44,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180703T023551_N0206_R089_T50PLR_20180703T053714,0,"q[0.7,0.9)",B03,0,44,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180703T023551_N0206_R089_T50PLR_20180703T053714,0,"q[0.7,0.9)",B02,0,44,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180703T023551_N0206_R089_T50PLR_20180703T053714,0,"q[0.7,0.9)",B08,0,44,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180703T023551_N0206_R089_T50PLR_20180703T053714,0,"q[0.7,0.9)",B11,0,44,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180703T023551_N0206_R089_T50PLR_20180703T053714,0,"q[0.7,0.9)",B12,0,44,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180805T024551_N0206_R132_T52UDG_20180805T054920,0,all_R_q,B04,726,1627,39,0.766581414525204,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180805T024551_N0206_R132_T52UDG_20180805T054920,0,all_R_q,B03,726,1627,39,0.754825169615358,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180805T024551_N0206_R132_T52UDG_20180805T054920,0,all_R_q,B02,726,1627,39,0.7614472376443656,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180805T024551_N0206_R132_T52UDG_20180805T054920,0,all_R_q,B08,726,1627,39,0.587340268641604,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180805T024551_N0206_R132_T52UDG_20180805T054920,0,all_R_q,B11,726,1627,39,0.6456965023763929,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180805T024551_N0206_R132_T52UDG_20180805T054920,0,all_R_q,B12,726,1627,39,0.7184164943845337,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180805T024551_N0206_R132_T52UDG_20180805T054920,0,"q[0,0.5)",B04,135,341,36,0.7076029108287173,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180805T024551_N0206_R132_T52UDG_20180805T054920,0,"q[0,0.5)",B03,135,341,36,0.7019333116107309,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180805T024551_N0206_R132_T52UDG_20180805T054920,0,"q[0,0.5)",B02,135,341,36,0.7094710546323449,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180805T024551_N0206_R132_T52UDG_20180805T054920,0,"q[0,0.5)",B08,135,341,36,0.6035625067883132,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180805T024551_N0206_R132_T52UDG_20180805T054920,0,"q[0,0.5)",B11,135,341,36,0.6304442272184207,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180805T024551_N0206_R132_T52UDG_20180805T054920,0,"q[0,0.5)",B12,135,341,36,0.6772890192245031,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180805T024551_N0206_R132_T52UDG_20180805T054920,0,"q[0.5,0.7)",B04,568,1266,3,0.7867701866809069,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180805T024551_N0206_R132_T52UDG_20180805T054920,0,"q[0.5,0.7)",B03,568,1266,3,0.7791744543087912,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180805T024551_N0206_R132_T52UDG_20180805T054920,0,"q[0.5,0.7)",B02,568,1266,3,0.7797668713704025,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180805T024551_N0206_R132_T52UDG_20180805T054920,0,"q[0.5,0.7)",B08,568,1266,3,0.5966481153906059,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180805T024551_N0206_R132_T52UDG_20180805T054920,0,"q[0.5,0.7)",B11,568,1266,3,0.6605227732906126,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180805T024551_N0206_R132_T52UDG_20180805T054920,0,"q[0.5,0.7)",B12,568,1266,3,0.7363667590058519,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180805T024551_N0206_R132_T52UDG_20180805T054920,0,"q[0.7,0.9)",B04,23,20,0,0.775,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180805T024551_N0206_R132_T52UDG_20180805T054920,0,"q[0.7,0.9)",B03,23,20,0,0.6989130434782609,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180805T024551_N0206_R132_T52UDG_20180805T054920,0,"q[0.7,0.9)",B02,23,20,0,0.7282608695652174,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180805T024551_N0206_R132_T52UDG_20180805T054920,0,"q[0.7,0.9)",B08,23,20,0,0.55,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180805T024551_N0206_R132_T52UDG_20180805T054920,0,"q[0.7,0.9)",B11,23,20,0,0.691304347826087,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180805T024551_N0206_R132_T52UDG_20180805T054920,0,"q[0.7,0.9)",B12,23,20,0,0.7489130434782608,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180211T234711_N0206_R073_T60WWT_20180212T011403,0,all_R_q,B04,0,3714,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180211T234711_N0206_R073_T60WWT_20180212T011403,0,all_R_q,B03,0,3714,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180211T234711_N0206_R073_T60WWT_20180212T011403,0,all_R_q,B02,0,3714,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180211T234711_N0206_R073_T60WWT_20180212T011403,0,all_R_q,B08,0,3714,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180211T234711_N0206_R073_T60WWT_20180212T011403,0,all_R_q,B11,0,3714,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180211T234711_N0206_R073_T60WWT_20180212T011403,0,all_R_q,B12,0,3714,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180211T234711_N0206_R073_T60WWT_20180212T011403,0,"q[0,0.5)",B04,0,2908,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180211T234711_N0206_R073_T60WWT_20180212T011403,0,"q[0,0.5)",B03,0,2908,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180211T234711_N0206_R073_T60WWT_20180212T011403,0,"q[0,0.5)",B02,0,2908,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180211T234711_N0206_R073_T60WWT_20180212T011403,0,"q[0,0.5)",B08,0,2908,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180211T234711_N0206_R073_T60WWT_20180212T011403,0,"q[0,0.5)",B11,0,2908,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180211T234711_N0206_R073_T60WWT_20180212T011403,0,"q[0,0.5)",B12,0,2908,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180211T234711_N0206_R073_T60WWT_20180212T011403,0,"q[0.5,0.7)",B04,0,806,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180211T234711_N0206_R073_T60WWT_20180212T011403,0,"q[0.5,0.7)",B03,0,806,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180211T234711_N0206_R073_T60WWT_20180212T011403,0,"q[0.5,0.7)",B02,0,806,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180211T234711_N0206_R073_T60WWT_20180212T011403,0,"q[0.5,0.7)",B08,0,806,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180211T234711_N0206_R073_T60WWT_20180212T011403,0,"q[0.5,0.7)",B11,0,806,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180211T234711_N0206_R073_T60WWT_20180212T011403,0,"q[0.5,0.7)",B12,0,806,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180211T234711_N0206_R073_T60WWT_20180212T011403,0,"q[0.7,0.9)",B04,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180211T234711_N0206_R073_T60WWT_20180212T011403,0,"q[0.7,0.9)",B03,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180211T234711_N0206_R073_T60WWT_20180212T011403,0,"q[0.7,0.9)",B02,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180211T234711_N0206_R073_T60WWT_20180212T011403,0,"q[0.7,0.9)",B08,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180211T234711_N0206_R073_T60WWT_20180212T011403,0,"q[0.7,0.9)",B11,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180211T234711_N0206_R073_T60WWT_20180212T011403,0,"q[0.7,0.9)",B12,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180804T045701_N0206_R119_T45RTH_20180804T075337,0,all_R_q,B04,0,89,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180804T045701_N0206_R119_T45RTH_20180804T075337,0,all_R_q,B03,0,89,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180804T045701_N0206_R119_T45RTH_20180804T075337,0,all_R_q,B02,0,89,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180804T045701_N0206_R119_T45RTH_20180804T075337,0,all_R_q,B08,0,89,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180804T045701_N0206_R119_T45RTH_20180804T075337,0,all_R_q,B11,0,89,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180804T045701_N0206_R119_T45RTH_20180804T075337,0,all_R_q,B12,0,89,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180804T045701_N0206_R119_T45RTH_20180804T075337,0,"q[0,0.5)",B04,0,19,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180804T045701_N0206_R119_T45RTH_20180804T075337,0,"q[0,0.5)",B03,0,19,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180804T045701_N0206_R119_T45RTH_20180804T075337,0,"q[0,0.5)",B02,0,19,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180804T045701_N0206_R119_T45RTH_20180804T075337,0,"q[0,0.5)",B08,0,19,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180804T045701_N0206_R119_T45RTH_20180804T075337,0,"q[0,0.5)",B11,0,19,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180804T045701_N0206_R119_T45RTH_20180804T075337,0,"q[0,0.5)",B12,0,19,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180804T045701_N0206_R119_T45RTH_20180804T075337,0,"q[0.5,0.7)",B04,0,64,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180804T045701_N0206_R119_T45RTH_20180804T075337,0,"q[0.5,0.7)",B03,0,64,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180804T045701_N0206_R119_T45RTH_20180804T075337,0,"q[0.5,0.7)",B02,0,64,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180804T045701_N0206_R119_T45RTH_20180804T075337,0,"q[0.5,0.7)",B08,0,64,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180804T045701_N0206_R119_T45RTH_20180804T075337,0,"q[0.5,0.7)",B11,0,64,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180804T045701_N0206_R119_T45RTH_20180804T075337,0,"q[0.5,0.7)",B12,0,64,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180804T045701_N0206_R119_T45RTH_20180804T075337,0,"q[0.7,0.9)",B04,0,6,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180804T045701_N0206_R119_T45RTH_20180804T075337,0,"q[0.7,0.9)",B03,0,6,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180804T045701_N0206_R119_T45RTH_20180804T075337,0,"q[0.7,0.9)",B02,0,6,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180804T045701_N0206_R119_T45RTH_20180804T075337,0,"q[0.7,0.9)",B08,0,6,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180804T045701_N0206_R119_T45RTH_20180804T075337,0,"q[0.7,0.9)",B11,0,6,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180804T045701_N0206_R119_T45RTH_20180804T075337,0,"q[0.7,0.9)",B12,0,6,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181004T102019_N0206_R065_T32TML_20181004T141056,0,all_R_q,B04,22,1394,3,0.516857962697274,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181004T102019_N0206_R065_T32TML_20181004T141056,0,all_R_q,B03,22,1394,3,0.5053312899439155,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181004T102019_N0206_R065_T32TML_20181004T141056,0,all_R_q,B02,22,1394,3,0.5234120255641059,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181004T102019_N0206_R065_T32TML_20181004T141056,0,all_R_q,B08,22,1394,3,0.5046791443850267,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181004T102019_N0206_R065_T32TML_20181004T141056,0,all_R_q,B11,22,1394,3,0.5441339506977958,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181004T102019_N0206_R065_T32TML_20181004T141056,0,all_R_q,B12,22,1394,3,0.550198904395461,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181004T102019_N0206_R065_T32TML_20181004T141056,0,"q[0,0.5)",B04,3,803,2,0.0186799501867995,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181004T102019_N0206_R065_T32TML_20181004T141056,0,"q[0,0.5)",B03,3,803,2,0.0315483603154836,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181004T102019_N0206_R065_T32TML_20181004T141056,0,"q[0,0.5)",B02,3,803,2,0.08530510585305105,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181004T102019_N0206_R065_T32TML_20181004T141056,0,"q[0,0.5)",B08,3,803,2,0.03507679535076795,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181004T102019_N0206_R065_T32TML_20181004T141056,0,"q[0,0.5)",B11,3,803,2,0.036322125363221255,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181004T102019_N0206_R065_T32TML_20181004T141056,0,"q[0,0.5)",B12,3,803,2,0.048152760481527605,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181004T102019_N0206_R065_T32TML_20181004T141056,0,"q[0.5,0.7)",B04,16,536,1,0.5920592350746269,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181004T102019_N0206_R065_T32TML_20181004T141056,0,"q[0.5,0.7)",B03,16,536,1,0.5972481343283582,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181004T102019_N0206_R065_T32TML_20181004T141056,0,"q[0.5,0.7)",B02,16,536,1,0.6361357276119403,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181004T102019_N0206_R065_T32TML_20181004T141056,0,"q[0.5,0.7)",B08,16,536,1,0.5463502798507462,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181004T102019_N0206_R065_T32TML_20181004T141056,0,"q[0.5,0.7)",B11,16,536,1,0.6069263059701493,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181004T102019_N0206_R065_T32TML_20181004T141056,0,"q[0.5,0.7)",B12,16,536,1,0.6059351679104478,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181004T102019_N0206_R065_T32TML_20181004T141056,0,"q[0.7,0.9)",B04,3,55,0,0.9030303030303031,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181004T102019_N0206_R065_T32TML_20181004T141056,0,"q[0.7,0.9)",B03,3,55,0,0.8787878787878788,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181004T102019_N0206_R065_T32TML_20181004T141056,0,"q[0.7,0.9)",B02,3,55,0,0.8393939393939394,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181004T102019_N0206_R065_T32TML_20181004T141056,0,"q[0.7,0.9)",B08,3,55,0,0.8878787878787879,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181004T102019_N0206_R065_T32TML_20181004T141056,0,"q[0.7,0.9)",B11,3,55,0,0.9424242424242424,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181004T102019_N0206_R065_T32TML_20181004T141056,0,"q[0.7,0.9)",B12,3,55,0,0.9181818181818182,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180602T081011_N0206_R078_T36PWC_20180602T115947,0,all_R_q,B04,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180602T081011_N0206_R078_T36PWC_20180602T115947,0,all_R_q,B03,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180602T081011_N0206_R078_T36PWC_20180602T115947,0,all_R_q,B02,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180602T081011_N0206_R078_T36PWC_20180602T115947,0,all_R_q,B08,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180602T081011_N0206_R078_T36PWC_20180602T115947,0,all_R_q,B11,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180602T081011_N0206_R078_T36PWC_20180602T115947,0,all_R_q,B12,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180602T081011_N0206_R078_T36PWC_20180602T115947,0,"q[0,0.5)",B04,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180602T081011_N0206_R078_T36PWC_20180602T115947,0,"q[0,0.5)",B03,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180602T081011_N0206_R078_T36PWC_20180602T115947,0,"q[0,0.5)",B02,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180602T081011_N0206_R078_T36PWC_20180602T115947,0,"q[0,0.5)",B08,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180602T081011_N0206_R078_T36PWC_20180602T115947,0,"q[0,0.5)",B11,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180602T081011_N0206_R078_T36PWC_20180602T115947,0,"q[0,0.5)",B12,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180602T081011_N0206_R078_T36PWC_20180602T115947,0,"q[0.5,0.7)",B04,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180602T081011_N0206_R078_T36PWC_20180602T115947,0,"q[0.5,0.7)",B03,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180602T081011_N0206_R078_T36PWC_20180602T115947,0,"q[0.5,0.7)",B02,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180602T081011_N0206_R078_T36PWC_20180602T115947,0,"q[0.5,0.7)",B08,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180602T081011_N0206_R078_T36PWC_20180602T115947,0,"q[0.5,0.7)",B11,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180602T081011_N0206_R078_T36PWC_20180602T115947,0,"q[0.5,0.7)",B12,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180602T081011_N0206_R078_T36PWC_20180602T115947,0,"q[0.7,0.9)",B04,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180602T081011_N0206_R078_T36PWC_20180602T115947,0,"q[0.7,0.9)",B03,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180602T081011_N0206_R078_T36PWC_20180602T115947,0,"q[0.7,0.9)",B02,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180602T081011_N0206_R078_T36PWC_20180602T115947,0,"q[0.7,0.9)",B08,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180602T081011_N0206_R078_T36PWC_20180602T115947,0,"q[0.7,0.9)",B11,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180602T081011_N0206_R078_T36PWC_20180602T115947,0,"q[0.7,0.9)",B12,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180508T150719_N0206_R082_T18MYV_20180508T202621,0,all_R_q,B04,0,195,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180508T150719_N0206_R082_T18MYV_20180508T202621,0,all_R_q,B03,0,195,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180508T150719_N0206_R082_T18MYV_20180508T202621,0,all_R_q,B02,0,195,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180508T150719_N0206_R082_T18MYV_20180508T202621,0,all_R_q,B08,0,195,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180508T150719_N0206_R082_T18MYV_20180508T202621,0,all_R_q,B11,0,195,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180508T150719_N0206_R082_T18MYV_20180508T202621,0,all_R_q,B12,0,195,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180508T150719_N0206_R082_T18MYV_20180508T202621,0,"q[0,0.5)",B04,0,34,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180508T150719_N0206_R082_T18MYV_20180508T202621,0,"q[0,0.5)",B03,0,34,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180508T150719_N0206_R082_T18MYV_20180508T202621,0,"q[0,0.5)",B02,0,34,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180508T150719_N0206_R082_T18MYV_20180508T202621,0,"q[0,0.5)",B08,0,34,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180508T150719_N0206_R082_T18MYV_20180508T202621,0,"q[0,0.5)",B11,0,34,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180508T150719_N0206_R082_T18MYV_20180508T202621,0,"q[0,0.5)",B12,0,34,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180508T150719_N0206_R082_T18MYV_20180508T202621,0,"q[0.5,0.7)",B04,0,145,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180508T150719_N0206_R082_T18MYV_20180508T202621,0,"q[0.5,0.7)",B03,0,145,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180508T150719_N0206_R082_T18MYV_20180508T202621,0,"q[0.5,0.7)",B02,0,145,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180508T150719_N0206_R082_T18MYV_20180508T202621,0,"q[0.5,0.7)",B08,0,145,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180508T150719_N0206_R082_T18MYV_20180508T202621,0,"q[0.5,0.7)",B11,0,145,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180508T150719_N0206_R082_T18MYV_20180508T202621,0,"q[0.5,0.7)",B12,0,145,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180508T150719_N0206_R082_T18MYV_20180508T202621,0,"q[0.7,0.9)",B04,0,16,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180508T150719_N0206_R082_T18MYV_20180508T202621,0,"q[0.7,0.9)",B03,0,16,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180508T150719_N0206_R082_T18MYV_20180508T202621,0,"q[0.7,0.9)",B02,0,16,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180508T150719_N0206_R082_T18MYV_20180508T202621,0,"q[0.7,0.9)",B08,0,16,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180508T150719_N0206_R082_T18MYV_20180508T202621,0,"q[0.7,0.9)",B11,0,16,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180508T150719_N0206_R082_T18MYV_20180508T202621,0,"q[0.7,0.9)",B12,0,16,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180420T103019_N0206_R108_T31TGF_20180420T114307,0,all_R_q,B04,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180420T103019_N0206_R108_T31TGF_20180420T114307,0,all_R_q,B03,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180420T103019_N0206_R108_T31TGF_20180420T114307,0,all_R_q,B02,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180420T103019_N0206_R108_T31TGF_20180420T114307,0,all_R_q,B08,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180420T103019_N0206_R108_T31TGF_20180420T114307,0,all_R_q,B11,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180420T103019_N0206_R108_T31TGF_20180420T114307,0,all_R_q,B12,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180420T103019_N0206_R108_T31TGF_20180420T114307,0,"q[0,0.5)",B04,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180420T103019_N0206_R108_T31TGF_20180420T114307,0,"q[0,0.5)",B03,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180420T103019_N0206_R108_T31TGF_20180420T114307,0,"q[0,0.5)",B02,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180420T103019_N0206_R108_T31TGF_20180420T114307,0,"q[0,0.5)",B08,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180420T103019_N0206_R108_T31TGF_20180420T114307,0,"q[0,0.5)",B11,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180420T103019_N0206_R108_T31TGF_20180420T114307,0,"q[0,0.5)",B12,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180420T103019_N0206_R108_T31TGF_20180420T114307,0,"q[0.5,0.7)",B04,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180420T103019_N0206_R108_T31TGF_20180420T114307,0,"q[0.5,0.7)",B03,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180420T103019_N0206_R108_T31TGF_20180420T114307,0,"q[0.5,0.7)",B02,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180420T103019_N0206_R108_T31TGF_20180420T114307,0,"q[0.5,0.7)",B08,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180420T103019_N0206_R108_T31TGF_20180420T114307,0,"q[0.5,0.7)",B11,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180420T103019_N0206_R108_T31TGF_20180420T114307,0,"q[0.5,0.7)",B12,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180420T103019_N0206_R108_T31TGF_20180420T114307,0,"q[0.7,0.9)",B04,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180420T103019_N0206_R108_T31TGF_20180420T114307,0,"q[0.7,0.9)",B03,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180420T103019_N0206_R108_T31TGF_20180420T114307,0,"q[0.7,0.9)",B02,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180420T103019_N0206_R108_T31TGF_20180420T114307,0,"q[0.7,0.9)",B08,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180420T103019_N0206_R108_T31TGF_20180420T114307,0,"q[0.7,0.9)",B11,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20180420T103019_N0206_R108_T31TGF_20180420T114307,0,"q[0.7,0.9)",B12,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180430T111621_N0206_R037_T40XDR_20180430T132750,1,all_R_q,B04,169270,13675,684,0.8850318894912652,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180430T111621_N0206_R037_T40XDR_20180430T132750,1,all_R_q,B03,169270,13675,684,0.8894965264866262,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180430T111621_N0206_R037_T40XDR_20180430T132750,1,all_R_q,B02,169270,13675,684,0.8963934127718456,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180430T111621_N0206_R037_T40XDR_20180430T132750,1,all_R_q,B08,169270,13675,684,0.8849366546463797,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180430T111621_N0206_R037_T40XDR_20180430T132750,1,all_R_q,B11,169270,13675,684,0.9874036227616405,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180430T111621_N0206_R037_T40XDR_20180430T132750,1,all_R_q,B12,169270,13675,684,0.9820651348423908,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180430T111621_N0206_R037_T40XDR_20180430T132750,1,"q[0,0.5)",B04,13456,1270,377,0.8830357853417847,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180430T111621_N0206_R037_T40XDR_20180430T132750,1,"q[0,0.5)",B03,13456,1270,377,0.8992392820695273,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180430T111621_N0206_R037_T40XDR_20180430T132750,1,"q[0,0.5)",B02,13456,1270,377,0.9198842011759529,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180430T111621_N0206_R037_T40XDR_20180430T132750,1,"q[0,0.5)",B08,13456,1270,377,0.8768068806351643,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180430T111621_N0206_R037_T40XDR_20180430T132750,1,"q[0,0.5)",B11,13456,1270,377,0.9983140735157808,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180430T111621_N0206_R037_T40XDR_20180430T132750,1,"q[0,0.5)",B12,13456,1270,377,0.9971384717293811,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180430T111621_N0206_R037_T40XDR_20180430T132750,1,"q[0.5,0.7)",B04,123807,10102,297,0.9028632327715763,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180430T111621_N0206_R037_T40XDR_20180430T132750,1,"q[0.5,0.7)",B03,123807,10102,297,0.90660129170047,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180430T111621_N0206_R037_T40XDR_20180430T132750,1,"q[0.5,0.7)",B02,123807,10102,297,0.9118947576993376,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180430T111621_N0206_R037_T40XDR_20180430T132750,1,"q[0.5,0.7)",B08,123807,10102,297,0.901558900238511,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180430T111621_N0206_R037_T40XDR_20180430T132750,1,"q[0.5,0.7)",B11,123807,10102,297,0.9855602971573207,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180430T111621_N0206_R037_T40XDR_20180430T132750,1,"q[0.5,0.7)",B12,123807,10102,297,0.9797951214796312,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180430T111621_N0206_R037_T40XDR_20180430T132750,1,"q[0.7,0.9)",B04,32007,2303,10,0.8670703085588868,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180430T111621_N0206_R037_T40XDR_20180430T132750,1,"q[0.7,0.9)",B03,32007,2303,10,0.8717205274828546,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180430T111621_N0206_R037_T40XDR_20180430T132750,1,"q[0.7,0.9)",B02,32007,2303,10,0.8766294826871146,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180430T111621_N0206_R037_T40XDR_20180430T132750,1,"q[0.7,0.9)",B08,32007,2303,10,0.8780641517559914,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180430T111621_N0206_R037_T40XDR_20180430T132750,1,"q[0.7,0.9)",B11,32007,2303,10,0.9899645812660851,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180430T111621_N0206_R037_T40XDR_20180430T132750,1,"q[0.7,0.9)",B12,32007,2303,10,0.9854217395263934,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180909T151911_N0206_R068_T25XEG_20180909T205122,1,all_R_q,B04,197082,0,0,NA,no K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180909T151911_N0206_R068_T25XEG_20180909T205122,1,all_R_q,B03,197082,0,0,NA,no K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180909T151911_N0206_R068_T25XEG_20180909T205122,1,all_R_q,B02,197082,0,0,NA,no K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180909T151911_N0206_R068_T25XEG_20180909T205122,1,all_R_q,B08,197082,0,0,NA,no K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180909T151911_N0206_R068_T25XEG_20180909T205122,1,all_R_q,B11,197082,0,0,NA,no K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180909T151911_N0206_R068_T25XEG_20180909T205122,1,all_R_q,B12,197082,0,0,NA,no K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180909T151911_N0206_R068_T25XEG_20180909T205122,1,"q[0,0.5)",B04,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180909T151911_N0206_R068_T25XEG_20180909T205122,1,"q[0,0.5)",B03,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180909T151911_N0206_R068_T25XEG_20180909T205122,1,"q[0,0.5)",B02,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180909T151911_N0206_R068_T25XEG_20180909T205122,1,"q[0,0.5)",B08,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180909T151911_N0206_R068_T25XEG_20180909T205122,1,"q[0,0.5)",B11,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180909T151911_N0206_R068_T25XEG_20180909T205122,1,"q[0,0.5)",B12,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180909T151911_N0206_R068_T25XEG_20180909T205122,1,"q[0.5,0.7)",B04,96075,0,0,NA,no K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180909T151911_N0206_R068_T25XEG_20180909T205122,1,"q[0.5,0.7)",B03,96075,0,0,NA,no K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180909T151911_N0206_R068_T25XEG_20180909T205122,1,"q[0.5,0.7)",B02,96075,0,0,NA,no K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180909T151911_N0206_R068_T25XEG_20180909T205122,1,"q[0.5,0.7)",B08,96075,0,0,NA,no K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180909T151911_N0206_R068_T25XEG_20180909T205122,1,"q[0.5,0.7)",B11,96075,0,0,NA,no K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180909T151911_N0206_R068_T25XEG_20180909T205122,1,"q[0.5,0.7)",B12,96075,0,0,NA,no K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180909T151911_N0206_R068_T25XEG_20180909T205122,1,"q[0.7,0.9)",B04,101007,0,0,NA,no K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180909T151911_N0206_R068_T25XEG_20180909T205122,1,"q[0.7,0.9)",B03,101007,0,0,NA,no K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180909T151911_N0206_R068_T25XEG_20180909T205122,1,"q[0.7,0.9)",B02,101007,0,0,NA,no K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180909T151911_N0206_R068_T25XEG_20180909T205122,1,"q[0.7,0.9)",B08,101007,0,0,NA,no K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180909T151911_N0206_R068_T25XEG_20180909T205122,1,"q[0.7,0.9)",B11,101007,0,0,NA,no K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180909T151911_N0206_R068_T25XEG_20180909T205122,1,"q[0.7,0.9)",B12,101007,0,0,NA,no K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180707T021601_N0206_R003_T51SXR_20180707T041118,0,all_R_q,B04,0,181,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180707T021601_N0206_R003_T51SXR_20180707T041118,0,all_R_q,B03,0,181,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180707T021601_N0206_R003_T51SXR_20180707T041118,0,all_R_q,B02,0,181,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180707T021601_N0206_R003_T51SXR_20180707T041118,0,all_R_q,B08,0,181,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180707T021601_N0206_R003_T51SXR_20180707T041118,0,all_R_q,B11,0,181,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180707T021601_N0206_R003_T51SXR_20180707T041118,0,all_R_q,B12,0,181,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180707T021601_N0206_R003_T51SXR_20180707T041118,0,"q[0,0.5)",B04,0,60,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180707T021601_N0206_R003_T51SXR_20180707T041118,0,"q[0,0.5)",B03,0,60,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180707T021601_N0206_R003_T51SXR_20180707T041118,0,"q[0,0.5)",B02,0,60,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180707T021601_N0206_R003_T51SXR_20180707T041118,0,"q[0,0.5)",B08,0,60,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180707T021601_N0206_R003_T51SXR_20180707T041118,0,"q[0,0.5)",B11,0,60,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180707T021601_N0206_R003_T51SXR_20180707T041118,0,"q[0,0.5)",B12,0,60,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180707T021601_N0206_R003_T51SXR_20180707T041118,0,"q[0.5,0.7)",B04,0,121,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180707T021601_N0206_R003_T51SXR_20180707T041118,0,"q[0.5,0.7)",B03,0,121,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180707T021601_N0206_R003_T51SXR_20180707T041118,0,"q[0.5,0.7)",B02,0,121,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180707T021601_N0206_R003_T51SXR_20180707T041118,0,"q[0.5,0.7)",B08,0,121,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180707T021601_N0206_R003_T51SXR_20180707T041118,0,"q[0.5,0.7)",B11,0,121,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180707T021601_N0206_R003_T51SXR_20180707T041118,0,"q[0.5,0.7)",B12,0,121,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180707T021601_N0206_R003_T51SXR_20180707T041118,0,"q[0.7,0.9)",B04,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180707T021601_N0206_R003_T51SXR_20180707T041118,0,"q[0.7,0.9)",B03,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180707T021601_N0206_R003_T51SXR_20180707T041118,0,"q[0.7,0.9)",B02,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180707T021601_N0206_R003_T51SXR_20180707T041118,0,"q[0.7,0.9)",B08,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180707T021601_N0206_R003_T51SXR_20180707T041118,0,"q[0.7,0.9)",B11,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180707T021601_N0206_R003_T51SXR_20180707T041118,0,"q[0.7,0.9)",B12,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180522T183921_N0206_R070_T12VVH_20180522T233949,0,all_R_q,B04,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180522T183921_N0206_R070_T12VVH_20180522T233949,0,all_R_q,B03,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180522T183921_N0206_R070_T12VVH_20180522T233949,0,all_R_q,B02,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180522T183921_N0206_R070_T12VVH_20180522T233949,0,all_R_q,B08,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180522T183921_N0206_R070_T12VVH_20180522T233949,0,all_R_q,B11,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180522T183921_N0206_R070_T12VVH_20180522T233949,0,all_R_q,B12,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180522T183921_N0206_R070_T12VVH_20180522T233949,0,"q[0,0.5)",B04,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180522T183921_N0206_R070_T12VVH_20180522T233949,0,"q[0,0.5)",B03,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180522T183921_N0206_R070_T12VVH_20180522T233949,0,"q[0,0.5)",B02,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180522T183921_N0206_R070_T12VVH_20180522T233949,0,"q[0,0.5)",B08,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180522T183921_N0206_R070_T12VVH_20180522T233949,0,"q[0,0.5)",B11,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180522T183921_N0206_R070_T12VVH_20180522T233949,0,"q[0,0.5)",B12,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180522T183921_N0206_R070_T12VVH_20180522T233949,0,"q[0.5,0.7)",B04,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180522T183921_N0206_R070_T12VVH_20180522T233949,0,"q[0.5,0.7)",B03,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180522T183921_N0206_R070_T12VVH_20180522T233949,0,"q[0.5,0.7)",B02,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180522T183921_N0206_R070_T12VVH_20180522T233949,0,"q[0.5,0.7)",B08,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180522T183921_N0206_R070_T12VVH_20180522T233949,0,"q[0.5,0.7)",B11,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180522T183921_N0206_R070_T12VVH_20180522T233949,0,"q[0.5,0.7)",B12,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180522T183921_N0206_R070_T12VVH_20180522T233949,0,"q[0.7,0.9)",B04,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180522T183921_N0206_R070_T12VVH_20180522T233949,0,"q[0.7,0.9)",B03,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180522T183921_N0206_R070_T12VVH_20180522T233949,0,"q[0.7,0.9)",B02,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180522T183921_N0206_R070_T12VVH_20180522T233949,0,"q[0.7,0.9)",B08,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180522T183921_N0206_R070_T12VVH_20180522T233949,0,"q[0.7,0.9)",B11,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180522T183921_N0206_R070_T12VVH_20180522T233949,0,"q[0.7,0.9)",B12,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180317T045651_N0206_R119_T50XMG_20180317T075452,1,all_R_q,B04,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180317T045651_N0206_R119_T50XMG_20180317T075452,1,all_R_q,B03,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180317T045651_N0206_R119_T50XMG_20180317T075452,1,all_R_q,B02,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180317T045651_N0206_R119_T50XMG_20180317T075452,1,all_R_q,B08,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180317T045651_N0206_R119_T50XMG_20180317T075452,1,all_R_q,B11,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180317T045651_N0206_R119_T50XMG_20180317T075452,1,all_R_q,B12,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180317T045651_N0206_R119_T50XMG_20180317T075452,1,"q[0,0.5)",B04,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180317T045651_N0206_R119_T50XMG_20180317T075452,1,"q[0,0.5)",B03,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180317T045651_N0206_R119_T50XMG_20180317T075452,1,"q[0,0.5)",B02,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180317T045651_N0206_R119_T50XMG_20180317T075452,1,"q[0,0.5)",B08,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180317T045651_N0206_R119_T50XMG_20180317T075452,1,"q[0,0.5)",B11,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180317T045651_N0206_R119_T50XMG_20180317T075452,1,"q[0,0.5)",B12,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180317T045651_N0206_R119_T50XMG_20180317T075452,1,"q[0.5,0.7)",B04,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180317T045651_N0206_R119_T50XMG_20180317T075452,1,"q[0.5,0.7)",B03,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180317T045651_N0206_R119_T50XMG_20180317T075452,1,"q[0.5,0.7)",B02,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180317T045651_N0206_R119_T50XMG_20180317T075452,1,"q[0.5,0.7)",B08,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180317T045651_N0206_R119_T50XMG_20180317T075452,1,"q[0.5,0.7)",B11,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180317T045651_N0206_R119_T50XMG_20180317T075452,1,"q[0.5,0.7)",B12,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180317T045651_N0206_R119_T50XMG_20180317T075452,1,"q[0.7,0.9)",B04,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180317T045651_N0206_R119_T50XMG_20180317T075452,1,"q[0.7,0.9)",B03,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180317T045651_N0206_R119_T50XMG_20180317T075452,1,"q[0.7,0.9)",B02,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180317T045651_N0206_R119_T50XMG_20180317T075452,1,"q[0.7,0.9)",B08,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180317T045651_N0206_R119_T50XMG_20180317T075452,1,"q[0.7,0.9)",B11,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180317T045651_N0206_R119_T50XMG_20180317T075452,1,"q[0.7,0.9)",B12,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181001T165109_N0206_R026_T16UDV_20181001T221311,0,all_R_q,B04,0,207,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181001T165109_N0206_R026_T16UDV_20181001T221311,0,all_R_q,B03,0,207,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181001T165109_N0206_R026_T16UDV_20181001T221311,0,all_R_q,B02,0,207,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181001T165109_N0206_R026_T16UDV_20181001T221311,0,all_R_q,B08,0,207,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181001T165109_N0206_R026_T16UDV_20181001T221311,0,all_R_q,B11,0,207,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181001T165109_N0206_R026_T16UDV_20181001T221311,0,all_R_q,B12,0,207,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181001T165109_N0206_R026_T16UDV_20181001T221311,0,"q[0,0.5)",B04,0,168,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181001T165109_N0206_R026_T16UDV_20181001T221311,0,"q[0,0.5)",B03,0,168,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181001T165109_N0206_R026_T16UDV_20181001T221311,0,"q[0,0.5)",B02,0,168,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181001T165109_N0206_R026_T16UDV_20181001T221311,0,"q[0,0.5)",B08,0,168,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181001T165109_N0206_R026_T16UDV_20181001T221311,0,"q[0,0.5)",B11,0,168,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181001T165109_N0206_R026_T16UDV_20181001T221311,0,"q[0,0.5)",B12,0,168,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181001T165109_N0206_R026_T16UDV_20181001T221311,0,"q[0.5,0.7)",B04,0,35,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181001T165109_N0206_R026_T16UDV_20181001T221311,0,"q[0.5,0.7)",B03,0,35,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181001T165109_N0206_R026_T16UDV_20181001T221311,0,"q[0.5,0.7)",B02,0,35,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181001T165109_N0206_R026_T16UDV_20181001T221311,0,"q[0.5,0.7)",B08,0,35,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181001T165109_N0206_R026_T16UDV_20181001T221311,0,"q[0.5,0.7)",B11,0,35,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181001T165109_N0206_R026_T16UDV_20181001T221311,0,"q[0.5,0.7)",B12,0,35,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181001T165109_N0206_R026_T16UDV_20181001T221311,0,"q[0.7,0.9)",B04,0,4,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181001T165109_N0206_R026_T16UDV_20181001T221311,0,"q[0.7,0.9)",B03,0,4,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181001T165109_N0206_R026_T16UDV_20181001T221311,0,"q[0.7,0.9)",B02,0,4,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181001T165109_N0206_R026_T16UDV_20181001T221311,0,"q[0.7,0.9)",B08,0,4,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181001T165109_N0206_R026_T16UDV_20181001T221311,0,"q[0.7,0.9)",B11,0,4,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181001T165109_N0206_R026_T16UDV_20181001T221311,0,"q[0.7,0.9)",B12,0,4,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180608T152641_N0206_R025_T18MUA_20180608T202221,0,all_R_q,B04,0,183,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180608T152641_N0206_R025_T18MUA_20180608T202221,0,all_R_q,B03,0,183,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180608T152641_N0206_R025_T18MUA_20180608T202221,0,all_R_q,B02,0,183,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180608T152641_N0206_R025_T18MUA_20180608T202221,0,all_R_q,B08,0,183,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180608T152641_N0206_R025_T18MUA_20180608T202221,0,all_R_q,B11,0,183,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180608T152641_N0206_R025_T18MUA_20180608T202221,0,all_R_q,B12,0,183,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180608T152641_N0206_R025_T18MUA_20180608T202221,0,"q[0,0.5)",B04,0,105,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180608T152641_N0206_R025_T18MUA_20180608T202221,0,"q[0,0.5)",B03,0,105,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180608T152641_N0206_R025_T18MUA_20180608T202221,0,"q[0,0.5)",B02,0,105,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180608T152641_N0206_R025_T18MUA_20180608T202221,0,"q[0,0.5)",B08,0,105,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180608T152641_N0206_R025_T18MUA_20180608T202221,0,"q[0,0.5)",B11,0,105,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180608T152641_N0206_R025_T18MUA_20180608T202221,0,"q[0,0.5)",B12,0,105,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180608T152641_N0206_R025_T18MUA_20180608T202221,0,"q[0.5,0.7)",B04,0,78,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180608T152641_N0206_R025_T18MUA_20180608T202221,0,"q[0.5,0.7)",B03,0,78,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180608T152641_N0206_R025_T18MUA_20180608T202221,0,"q[0.5,0.7)",B02,0,78,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180608T152641_N0206_R025_T18MUA_20180608T202221,0,"q[0.5,0.7)",B08,0,78,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180608T152641_N0206_R025_T18MUA_20180608T202221,0,"q[0.5,0.7)",B11,0,78,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180608T152641_N0206_R025_T18MUA_20180608T202221,0,"q[0.5,0.7)",B12,0,78,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180608T152641_N0206_R025_T18MUA_20180608T202221,0,"q[0.7,0.9)",B04,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180608T152641_N0206_R025_T18MUA_20180608T202221,0,"q[0.7,0.9)",B03,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180608T152641_N0206_R025_T18MUA_20180608T202221,0,"q[0.7,0.9)",B02,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180608T152641_N0206_R025_T18MUA_20180608T202221,0,"q[0.7,0.9)",B08,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180608T152641_N0206_R025_T18MUA_20180608T202221,0,"q[0.7,0.9)",B11,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180608T152641_N0206_R025_T18MUA_20180608T202221,0,"q[0.7,0.9)",B12,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181114T054101_N0207_R005_T44UNA_20181114T093234,1,all_R_q,B04,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181114T054101_N0207_R005_T44UNA_20181114T093234,1,all_R_q,B03,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181114T054101_N0207_R005_T44UNA_20181114T093234,1,all_R_q,B02,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181114T054101_N0207_R005_T44UNA_20181114T093234,1,all_R_q,B08,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181114T054101_N0207_R005_T44UNA_20181114T093234,1,all_R_q,B11,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181114T054101_N0207_R005_T44UNA_20181114T093234,1,all_R_q,B12,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181114T054101_N0207_R005_T44UNA_20181114T093234,1,"q[0,0.5)",B04,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181114T054101_N0207_R005_T44UNA_20181114T093234,1,"q[0,0.5)",B03,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181114T054101_N0207_R005_T44UNA_20181114T093234,1,"q[0,0.5)",B02,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181114T054101_N0207_R005_T44UNA_20181114T093234,1,"q[0,0.5)",B08,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181114T054101_N0207_R005_T44UNA_20181114T093234,1,"q[0,0.5)",B11,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181114T054101_N0207_R005_T44UNA_20181114T093234,1,"q[0,0.5)",B12,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181114T054101_N0207_R005_T44UNA_20181114T093234,1,"q[0.5,0.7)",B04,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181114T054101_N0207_R005_T44UNA_20181114T093234,1,"q[0.5,0.7)",B03,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181114T054101_N0207_R005_T44UNA_20181114T093234,1,"q[0.5,0.7)",B02,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181114T054101_N0207_R005_T44UNA_20181114T093234,1,"q[0.5,0.7)",B08,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181114T054101_N0207_R005_T44UNA_20181114T093234,1,"q[0.5,0.7)",B11,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181114T054101_N0207_R005_T44UNA_20181114T093234,1,"q[0.5,0.7)",B12,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181114T054101_N0207_R005_T44UNA_20181114T093234,1,"q[0.7,0.9)",B04,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181114T054101_N0207_R005_T44UNA_20181114T093234,1,"q[0.7,0.9)",B03,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181114T054101_N0207_R005_T44UNA_20181114T093234,1,"q[0.7,0.9)",B02,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181114T054101_N0207_R005_T44UNA_20181114T093234,1,"q[0.7,0.9)",B08,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181114T054101_N0207_R005_T44UNA_20181114T093234,1,"q[0.7,0.9)",B11,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181114T054101_N0207_R005_T44UNA_20181114T093234,1,"q[0.7,0.9)",B12,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181118T152621_N0207_R068_T20VPK_20181118T172424,0,all_R_q,B04,0,152,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181118T152621_N0207_R068_T20VPK_20181118T172424,0,all_R_q,B03,0,152,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181118T152621_N0207_R068_T20VPK_20181118T172424,0,all_R_q,B02,0,152,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181118T152621_N0207_R068_T20VPK_20181118T172424,0,all_R_q,B08,0,152,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181118T152621_N0207_R068_T20VPK_20181118T172424,0,all_R_q,B11,0,152,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181118T152621_N0207_R068_T20VPK_20181118T172424,0,all_R_q,B12,0,152,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181118T152621_N0207_R068_T20VPK_20181118T172424,0,"q[0,0.5)",B04,0,101,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181118T152621_N0207_R068_T20VPK_20181118T172424,0,"q[0,0.5)",B03,0,101,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181118T152621_N0207_R068_T20VPK_20181118T172424,0,"q[0,0.5)",B02,0,101,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181118T152621_N0207_R068_T20VPK_20181118T172424,0,"q[0,0.5)",B08,0,101,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181118T152621_N0207_R068_T20VPK_20181118T172424,0,"q[0,0.5)",B11,0,101,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181118T152621_N0207_R068_T20VPK_20181118T172424,0,"q[0,0.5)",B12,0,101,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181118T152621_N0207_R068_T20VPK_20181118T172424,0,"q[0.5,0.7)",B04,0,51,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181118T152621_N0207_R068_T20VPK_20181118T172424,0,"q[0.5,0.7)",B03,0,51,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181118T152621_N0207_R068_T20VPK_20181118T172424,0,"q[0.5,0.7)",B02,0,51,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181118T152621_N0207_R068_T20VPK_20181118T172424,0,"q[0.5,0.7)",B08,0,51,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181118T152621_N0207_R068_T20VPK_20181118T172424,0,"q[0.5,0.7)",B11,0,51,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181118T152621_N0207_R068_T20VPK_20181118T172424,0,"q[0.5,0.7)",B12,0,51,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181118T152621_N0207_R068_T20VPK_20181118T172424,0,"q[0.7,0.9)",B04,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181118T152621_N0207_R068_T20VPK_20181118T172424,0,"q[0.7,0.9)",B03,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181118T152621_N0207_R068_T20VPK_20181118T172424,0,"q[0.7,0.9)",B02,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181118T152621_N0207_R068_T20VPK_20181118T172424,0,"q[0.7,0.9)",B08,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181118T152621_N0207_R068_T20VPK_20181118T172424,0,"q[0.7,0.9)",B11,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181118T152621_N0207_R068_T20VPK_20181118T172424,0,"q[0.7,0.9)",B12,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180922T185101_N0206_R113_T10SEE_20180922T225409,0,all_R_q,B04,0,18,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180922T185101_N0206_R113_T10SEE_20180922T225409,0,all_R_q,B03,0,18,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180922T185101_N0206_R113_T10SEE_20180922T225409,0,all_R_q,B02,0,18,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180922T185101_N0206_R113_T10SEE_20180922T225409,0,all_R_q,B08,0,18,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180922T185101_N0206_R113_T10SEE_20180922T225409,0,all_R_q,B11,0,18,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180922T185101_N0206_R113_T10SEE_20180922T225409,0,all_R_q,B12,0,18,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180922T185101_N0206_R113_T10SEE_20180922T225409,0,"q[0,0.5)",B04,0,14,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180922T185101_N0206_R113_T10SEE_20180922T225409,0,"q[0,0.5)",B03,0,14,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180922T185101_N0206_R113_T10SEE_20180922T225409,0,"q[0,0.5)",B02,0,14,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180922T185101_N0206_R113_T10SEE_20180922T225409,0,"q[0,0.5)",B08,0,14,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180922T185101_N0206_R113_T10SEE_20180922T225409,0,"q[0,0.5)",B11,0,14,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180922T185101_N0206_R113_T10SEE_20180922T225409,0,"q[0,0.5)",B12,0,14,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180922T185101_N0206_R113_T10SEE_20180922T225409,0,"q[0.5,0.7)",B04,0,4,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180922T185101_N0206_R113_T10SEE_20180922T225409,0,"q[0.5,0.7)",B03,0,4,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180922T185101_N0206_R113_T10SEE_20180922T225409,0,"q[0.5,0.7)",B02,0,4,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180922T185101_N0206_R113_T10SEE_20180922T225409,0,"q[0.5,0.7)",B08,0,4,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180922T185101_N0206_R113_T10SEE_20180922T225409,0,"q[0.5,0.7)",B11,0,4,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180922T185101_N0206_R113_T10SEE_20180922T225409,0,"q[0.5,0.7)",B12,0,4,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180922T185101_N0206_R113_T10SEE_20180922T225409,0,"q[0.7,0.9)",B04,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180922T185101_N0206_R113_T10SEE_20180922T225409,0,"q[0.7,0.9)",B03,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180922T185101_N0206_R113_T10SEE_20180922T225409,0,"q[0.7,0.9)",B02,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180922T185101_N0206_R113_T10SEE_20180922T225409,0,"q[0.7,0.9)",B08,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180922T185101_N0206_R113_T10SEE_20180922T225409,0,"q[0.7,0.9)",B11,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20180922T185101_N0206_R113_T10SEE_20180922T225409,0,"q[0.7,0.9)",B12,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181111T094229_N0207_R036_T32NKF_20181111T131623,0,all_R_q,B04,6281,14921,2331,0.8280202443050888,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181111T094229_N0207_R036_T32NKF_20181111T131623,0,all_R_q,B03,6281,14921,2331,0.7951188470710375,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181111T094229_N0207_R036_T32NKF_20181111T131623,0,all_R_q,B02,6281,14921,2331,0.761501456895506,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181111T094229_N0207_R036_T32NKF_20181111T131623,0,all_R_q,B08,6281,14921,2331,0.8220785282987135,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181111T094229_N0207_R036_T32NKF_20181111T131623,0,all_R_q,B11,6281,14921,2331,0.909914089703303,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181111T094229_N0207_R036_T32NKF_20181111T131623,0,all_R_q,B12,6281,14921,2331,0.9038297822440131,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181111T094229_N0207_R036_T32NKF_20181111T131623,0,"q[0,0.5)",B04,2308,4418,1118,0.791500110231266,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181111T094229_N0207_R036_T32NKF_20181111T131623,0,"q[0,0.5)",B03,2308,4418,1118,0.7534665477528906,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181111T094229_N0207_R036_T32NKF_20181111T131623,0,"q[0,0.5)",B02,2308,4418,1118,0.7146335634198524,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181111T094229_N0207_R036_T32NKF_20181111T131623,0,"q[0,0.5)",B08,2308,4418,1118,0.7771398399332179,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181111T094229_N0207_R036_T32NKF_20181111T131623,0,"q[0,0.5)",B11,2308,4418,1118,0.8802334843357841,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181111T094229_N0207_R036_T32NKF_20181111T131623,0,"q[0,0.5)",B12,2308,4418,1118,0.8784808660490054,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181111T094229_N0207_R036_T32NKF_20181111T131623,0,"q[0.5,0.7)",B04,3461,9206,953,0.8397610492710964,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181111T094229_N0207_R036_T32NKF_20181111T131623,0,"q[0.5,0.7)",B03,3461,9206,953,0.806534129124361,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181111T094229_N0207_R036_T32NKF_20181111T131623,0,"q[0.5,0.7)",B02,3461,9206,953,0.773477333445149,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181111T094229_N0207_R036_T32NKF_20181111T131623,0,"q[0.5,0.7)",B08,3461,9206,953,0.8390561021877935,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181111T094229_N0207_R036_T32NKF_20181111T131623,0,"q[0.5,0.7)",B11,3461,9206,953,0.9245381468299854,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181111T094229_N0207_R036_T32NKF_20181111T131623,0,"q[0.5,0.7)",B12,3461,9206,953,0.9176641045941735,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181111T094229_N0207_R036_T32NKF_20181111T131623,0,"q[0.7,0.9)",B04,512,1297,260,0.8685345087220508,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181111T094229_N0207_R036_T32NKF_20181111T131623,0,"q[0.7,0.9)",B03,512,1297,260,0.8523982628180417,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181111T094229_N0207_R036_T32NKF_20181111T131623,0,"q[0.7,0.9)",B02,512,1297,260,0.8319250855339244,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181111T094229_N0207_R036_T32NKF_20181111T131623,0,"q[0.7,0.9)",B08,512,1297,260,0.8561238073438705,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181111T094229_N0207_R036_T32NKF_20181111T131623,0,"q[0.7,0.9)",B11,512,1297,260,0.9283043501831149,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2B_MSIL1C_20181111T094229_N0207_R036_T32NKF_20181111T131623,0,"q[0.7,0.9)",B12,512,1297,260,0.9118059403912876,both classes,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181021T160311_N0206_R097_T20WNV_20181021T192258,0,all_R_q,B04,0,95,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181021T160311_N0206_R097_T20WNV_20181021T192258,0,all_R_q,B03,0,95,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181021T160311_N0206_R097_T20WNV_20181021T192258,0,all_R_q,B02,0,95,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181021T160311_N0206_R097_T20WNV_20181021T192258,0,all_R_q,B08,0,95,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181021T160311_N0206_R097_T20WNV_20181021T192258,0,all_R_q,B11,0,95,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181021T160311_N0206_R097_T20WNV_20181021T192258,0,all_R_q,B12,0,95,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181021T160311_N0206_R097_T20WNV_20181021T192258,0,"q[0,0.5)",B04,0,50,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181021T160311_N0206_R097_T20WNV_20181021T192258,0,"q[0,0.5)",B03,0,50,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181021T160311_N0206_R097_T20WNV_20181021T192258,0,"q[0,0.5)",B02,0,50,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181021T160311_N0206_R097_T20WNV_20181021T192258,0,"q[0,0.5)",B08,0,50,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181021T160311_N0206_R097_T20WNV_20181021T192258,0,"q[0,0.5)",B11,0,50,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181021T160311_N0206_R097_T20WNV_20181021T192258,0,"q[0,0.5)",B12,0,50,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181021T160311_N0206_R097_T20WNV_20181021T192258,0,"q[0.5,0.7)",B04,0,45,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181021T160311_N0206_R097_T20WNV_20181021T192258,0,"q[0.5,0.7)",B03,0,45,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181021T160311_N0206_R097_T20WNV_20181021T192258,0,"q[0.5,0.7)",B02,0,45,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181021T160311_N0206_R097_T20WNV_20181021T192258,0,"q[0.5,0.7)",B08,0,45,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181021T160311_N0206_R097_T20WNV_20181021T192258,0,"q[0.5,0.7)",B11,0,45,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181021T160311_N0206_R097_T20WNV_20181021T192258,0,"q[0.5,0.7)",B12,0,45,0,NA,no D,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181021T160311_N0206_R097_T20WNV_20181021T192258,0,"q[0.7,0.9)",B04,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181021T160311_N0206_R097_T20WNV_20181021T192258,0,"q[0.7,0.9)",B03,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181021T160311_N0206_R097_T20WNV_20181021T192258,0,"q[0.7,0.9)",B02,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181021T160311_N0206_R097_T20WNV_20181021T192258,0,"q[0.7,0.9)",B08,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181021T160311_N0206_R097_T20WNV_20181021T192258,0,"q[0.7,0.9)",B11,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group,S2A_MSIL1C_20181021T160311_N0206_R097_T20WNV_20181021T192258,0,"q[0.7,0.9)",B12,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+pooled,ALL,all,all_R_q,B04,450058,84005,12337,0.2538738541874883,both classes,larger raw TOA ranks true Cloud; never flip
+pooled,ALL,all,all_R_q,B03,450058,84005,12337,0.253005964673224,both classes,larger raw TOA ranks true Cloud; never flip
+pooled,ALL,all,all_R_q,B02,450058,84005,12337,0.2672043000260838,both classes,larger raw TOA ranks true Cloud; never flip
+pooled,ALL,all,all_R_q,B08,450058,84005,12337,0.2538408779273425,both classes,larger raw TOA ranks true Cloud; never flip
+pooled,ALL,all,all_R_q,B11,450058,84005,12337,0.7102831009860496,both classes,larger raw TOA ranks true Cloud; never flip
+pooled,ALL,all,all_R_q,B12,450058,84005,12337,0.6984737900558154,both classes,larger raw TOA ranks true Cloud; never flip
+pooled,ALL,all,"q[0,0.5)",B04,19082,19124,2312,0.38664017725457966,both classes,larger raw TOA ranks true Cloud; never flip
+pooled,ALL,all,"q[0,0.5)",B03,19082,19124,2312,0.38811219814852055,both classes,larger raw TOA ranks true Cloud; never flip
+pooled,ALL,all,"q[0,0.5)",B02,19082,19124,2312,0.39115493304351384,both classes,larger raw TOA ranks true Cloud; never flip
+pooled,ALL,all,"q[0,0.5)",B08,19082,19124,2312,0.3855876736560786,both classes,larger raw TOA ranks true Cloud; never flip
+pooled,ALL,all,"q[0,0.5)",B11,19082,19124,2312,0.5822064955697864,both classes,larger raw TOA ranks true Cloud; never flip
+pooled,ALL,all,"q[0,0.5)",B12,19082,19124,2312,0.5761548574661681,both classes,larger raw TOA ranks true Cloud; never flip
+pooled,ALL,all,"q[0.5,0.7)",B04,244908,42071,6326,0.26405895787891676,both classes,larger raw TOA ranks true Cloud; never flip
+pooled,ALL,all,"q[0.5,0.7)",B03,244908,42071,6326,0.2580017041019366,both classes,larger raw TOA ranks true Cloud; never flip
+pooled,ALL,all,"q[0.5,0.7)",B02,244908,42071,6326,0.26803938468601307,both classes,larger raw TOA ranks true Cloud; never flip
+pooled,ALL,all,"q[0.5,0.7)",B08,244908,42071,6326,0.26465242519381377,both classes,larger raw TOA ranks true Cloud; never flip
+pooled,ALL,all,"q[0.5,0.7)",B11,244908,42071,6326,0.7557091510465853,both classes,larger raw TOA ranks true Cloud; never flip
+pooled,ALL,all,"q[0.5,0.7)",B12,244908,42071,6326,0.7360508641051543,both classes,larger raw TOA ranks true Cloud; never flip
+pooled,ALL,all,"q[0.7,0.9)",B04,186068,22810,3699,0.18008637932776897,both classes,larger raw TOA ranks true Cloud; never flip
+pooled,ALL,all,"q[0.7,0.9)",B03,186068,22810,3699,0.19263287477681246,both classes,larger raw TOA ranks true Cloud; never flip
+pooled,ALL,all,"q[0.7,0.9)",B02,186068,22810,3699,0.21874417117821576,both classes,larger raw TOA ranks true Cloud; never flip
+pooled,ALL,all,"q[0.7,0.9)",B08,186068,22810,3699,0.18082703016740628,both classes,larger raw TOA ranks true Cloud; never flip
+pooled,ALL,all,"q[0.7,0.9)",B11,186068,22810,3699,0.7557334935848666,both classes,larger raw TOA ranks true Cloud; never flip
+pooled,ALL,all,"q[0.7,0.9)",B12,186068,22810,3699,0.7648361340454349,both classes,larger raw TOA ranks true Cloud; never flip
+snow_ice,0,0,all_R_q,B04,83706,70330,11653,0.38127058739428465,both classes,larger raw TOA ranks true Cloud; never flip
+snow_ice,0,0,all_R_q,B03,83706,70330,11653,0.4181729497921892,both classes,larger raw TOA ranks true Cloud; never flip
+snow_ice,0,0,all_R_q,B02,83706,70330,11653,0.4770987004922461,both classes,larger raw TOA ranks true Cloud; never flip
+snow_ice,0,0,all_R_q,B08,83706,70330,11653,0.36949199587803927,both classes,larger raw TOA ranks true Cloud; never flip
+snow_ice,0,0,all_R_q,B11,83706,70330,11653,0.23918210276086688,both classes,larger raw TOA ranks true Cloud; never flip
+snow_ice,0,0,all_R_q,B12,83706,70330,11653,0.26183504328687607,both classes,larger raw TOA ranks true Cloud; never flip
+snow_ice,0,0,"q[0,0.5)",B04,5626,17854,1935,0.6508153227360479,both classes,larger raw TOA ranks true Cloud; never flip
+snow_ice,0,0,"q[0,0.5)",B03,5626,17854,1935,0.6522876373202224,both classes,larger raw TOA ranks true Cloud; never flip
+snow_ice,0,0,"q[0,0.5)",B02,5626,17854,1935,0.660795072773192,both classes,larger raw TOA ranks true Cloud; never flip
+snow_ice,0,0,"q[0,0.5)",B08,5626,17854,1935,0.6472905196476328,both classes,larger raw TOA ranks true Cloud; never flip
+snow_ice,0,0,"q[0,0.5)",B11,5626,17854,1935,0.43394725420483105,both classes,larger raw TOA ranks true Cloud; never flip
+snow_ice,0,0,"q[0,0.5)",B12,5626,17854,1935,0.4465511546811478,both classes,larger raw TOA ranks true Cloud; never flip
+snow_ice,0,0,"q[0.5,0.7)",B04,25026,31969,6029,0.41572936687994694,both classes,larger raw TOA ranks true Cloud; never flip
+snow_ice,0,0,"q[0.5,0.7)",B03,25026,31969,6029,0.4459513515121914,both classes,larger raw TOA ranks true Cloud; never flip
+snow_ice,0,0,"q[0.5,0.7)",B02,25026,31969,6029,0.49075429194164827,both classes,larger raw TOA ranks true Cloud; never flip
+snow_ice,0,0,"q[0.5,0.7)",B08,25026,31969,6029,0.4058794912598352,both classes,larger raw TOA ranks true Cloud; never flip
+snow_ice,0,0,"q[0.5,0.7)",B11,25026,31969,6029,0.355392196988603,both classes,larger raw TOA ranks true Cloud; never flip
+snow_ice,0,0,"q[0.5,0.7)",B12,25026,31969,6029,0.376489438815594,both classes,larger raw TOA ranks true Cloud; never flip
+snow_ice,0,0,"q[0.7,0.9)",B04,53054,20507,3689,0.31121776852076377,both classes,larger raw TOA ranks true Cloud; never flip
+snow_ice,0,0,"q[0.7,0.9)",B03,53054,20507,3689,0.36426058919343707,both classes,larger raw TOA ranks true Cloud; never flip
+snow_ice,0,0,"q[0.7,0.9)",B02,53054,20507,3689,0.4651994504067249,both classes,larger raw TOA ranks true Cloud; never flip
+snow_ice,0,0,"q[0.7,0.9)",B08,53054,20507,3689,0.31133564724206314,both classes,larger raw TOA ranks true Cloud; never flip
+snow_ice,0,0,"q[0.7,0.9)",B11,53054,20507,3689,0.24987859731160944,both classes,larger raw TOA ranks true Cloud; never flip
+snow_ice,0,0,"q[0.7,0.9)",B12,53054,20507,3689,0.29125369162437525,both classes,larger raw TOA ranks true Cloud; never flip
+snow_ice,1,1,all_R_q,B04,366352,13675,684,0.9344414178262258,both classes,larger raw TOA ranks true Cloud; never flip
+snow_ice,1,1,all_R_q,B03,366352,13675,684,0.8801255992278911,both classes,larger raw TOA ranks true Cloud; never flip
+snow_ice,1,1,all_R_q,B02,366352,13675,684,0.923157211106506,both classes,larger raw TOA ranks true Cloud; never flip
+snow_ice,1,1,all_R_q,B08,366352,13675,684,0.9444045487585729,both classes,larger raw TOA ranks true Cloud; never flip
+snow_ice,1,1,all_R_q,B11,366352,13675,684,0.994179945038823,both classes,larger raw TOA ranks true Cloud; never flip
+snow_ice,1,1,all_R_q,B12,366352,13675,684,0.9917133395607817,both classes,larger raw TOA ranks true Cloud; never flip
+snow_ice,1,1,"q[0,0.5)",B04,13456,1270,377,0.8830357853417847,both classes,larger raw TOA ranks true Cloud; never flip
+snow_ice,1,1,"q[0,0.5)",B03,13456,1270,377,0.8992392820695273,both classes,larger raw TOA ranks true Cloud; never flip
+snow_ice,1,1,"q[0,0.5)",B02,13456,1270,377,0.9198842011759529,both classes,larger raw TOA ranks true Cloud; never flip
+snow_ice,1,1,"q[0,0.5)",B08,13456,1270,377,0.8768068806351643,both classes,larger raw TOA ranks true Cloud; never flip
+snow_ice,1,1,"q[0,0.5)",B11,13456,1270,377,0.9983140735157808,both classes,larger raw TOA ranks true Cloud; never flip
+snow_ice,1,1,"q[0,0.5)",B12,13456,1270,377,0.9971384717293811,both classes,larger raw TOA ranks true Cloud; never flip
+snow_ice,1,1,"q[0.5,0.7)",B04,219882,10102,297,0.9413257650148599,both classes,larger raw TOA ranks true Cloud; never flip
+snow_ice,1,1,"q[0.5,0.7)",B03,219882,10102,297,0.9009322342365915,both classes,larger raw TOA ranks true Cloud; never flip
+snow_ice,1,1,"q[0.5,0.7)",B02,219882,10102,297,0.9358592591601358,both classes,larger raw TOA ranks true Cloud; never flip
+snow_ice,1,1,"q[0.5,0.7)",B08,219882,10102,297,0.9444435610071312,both classes,larger raw TOA ranks true Cloud; never flip
+snow_ice,1,1,"q[0.5,0.7)",B11,219882,10102,297,0.9918695650856205,both classes,larger raw TOA ranks true Cloud; never flip
+snow_ice,1,1,"q[0.5,0.7)",B12,219882,10102,297,0.988623418947566,both classes,larger raw TOA ranks true Cloud; never flip
+snow_ice,1,1,"q[0.7,0.9)",B04,133014,2303,10,0.964725563316849,both classes,larger raw TOA ranks true Cloud; never flip
+snow_ice,1,1,"q[0.7,0.9)",B03,133014,2303,10,0.9501849994131516,both classes,larger raw TOA ranks true Cloud; never flip
+snow_ice,1,1,"q[0.7,0.9)",B02,133014,2303,10,0.9579201376397645,both classes,larger raw TOA ranks true Cloud; never flip
+snow_ice,1,1,"q[0.7,0.9)",B08,133014,2303,10,0.970233680898927,both classes,larger raw TOA ranks true Cloud; never flip
+snow_ice,1,1,"q[0.7,0.9)",B11,133014,2303,10,0.9975851891724449,both classes,larger raw TOA ranks true Cloud; never flip
+snow_ice,1,1,"q[0.7,0.9)",B12,133014,2303,10,0.9964920505888198,both classes,larger raw TOA ranks true Cloud; never flip
+snow_ice,missing,missing,all_R_q,B04,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+snow_ice,missing,missing,all_R_q,B03,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+snow_ice,missing,missing,all_R_q,B02,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+snow_ice,missing,missing,all_R_q,B08,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+snow_ice,missing,missing,all_R_q,B11,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+snow_ice,missing,missing,all_R_q,B12,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+snow_ice,missing,missing,"q[0,0.5)",B04,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+snow_ice,missing,missing,"q[0,0.5)",B03,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+snow_ice,missing,missing,"q[0,0.5)",B02,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+snow_ice,missing,missing,"q[0,0.5)",B08,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+snow_ice,missing,missing,"q[0,0.5)",B11,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+snow_ice,missing,missing,"q[0,0.5)",B12,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+snow_ice,missing,missing,"q[0.5,0.7)",B04,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+snow_ice,missing,missing,"q[0.5,0.7)",B03,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+snow_ice,missing,missing,"q[0.5,0.7)",B02,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+snow_ice,missing,missing,"q[0.5,0.7)",B08,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+snow_ice,missing,missing,"q[0.5,0.7)",B11,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+snow_ice,missing,missing,"q[0.5,0.7)",B12,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+snow_ice,missing,missing,"q[0.7,0.9)",B04,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+snow_ice,missing,missing,"q[0.7,0.9)",B03,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+snow_ice,missing,missing,"q[0.7,0.9)",B02,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+snow_ice,missing,missing,"q[0.7,0.9)",B08,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+snow_ice,missing,missing,"q[0.7,0.9)",B11,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+snow_ice,missing,missing,"q[0.7,0.9)",B12,0,0,0,NA,no D or K,larger raw TOA ranks true Cloud; never flip
+group_mean,ALL,all,all_R_q,B04,252976,72670,12337,0.6531218332522218,6 computable independent groups; unweighted mean,larger raw TOA ranks true Cloud; never flip
+group_mean,ALL,all,all_R_q,B03,252976,72670,12337,0.6713006289697416,6 computable independent groups; unweighted mean,larger raw TOA ranks true Cloud; never flip
+group_mean,ALL,all,all_R_q,B02,252976,72670,12337,0.703327057350201,6 computable independent groups; unweighted mean,larger raw TOA ranks true Cloud; never flip
+group_mean,ALL,all,all_R_q,B08,252976,72670,12337,0.6119489744413392,6 computable independent groups; unweighted mean,larger raw TOA ranks true Cloud; never flip
+group_mean,ALL,all,all_R_q,B11,252976,72670,12337,0.6372938619227676,6 computable independent groups; unweighted mean,larger raw TOA ranks true Cloud; never flip
+group_mean,ALL,all,all_R_q,B12,252976,72670,12337,0.6571619126365748,6 computable independent groups; unweighted mean,larger raw TOA ranks true Cloud; never flip
+group_mean,ALL,all,"q[0,0.5)",B04,19082,9776,2312,0.5275421741412555,6 computable independent groups; unweighted mean,larger raw TOA ranks true Cloud; never flip
+group_mean,ALL,all,"q[0,0.5)",B03,19082,9776,2312,0.5578446572777033,6 computable independent groups; unweighted mean,larger raw TOA ranks true Cloud; never flip
+group_mean,ALL,all,"q[0,0.5)",B02,19082,9776,2312,0.589976911842351,6 computable independent groups; unweighted mean,larger raw TOA ranks true Cloud; never flip
+group_mean,ALL,all,"q[0,0.5)",B08,19082,9776,2312,0.49841503167853896,6 computable independent groups; unweighted mean,larger raw TOA ranks true Cloud; never flip
+group_mean,ALL,all,"q[0,0.5)",B11,19082,9776,2312,0.525917333682908,6 computable independent groups; unweighted mean,larger raw TOA ranks true Cloud; never flip
+group_mean,ALL,all,"q[0,0.5)",B12,19082,9776,2312,0.5483888842417209,6 computable independent groups; unweighted mean,larger raw TOA ranks true Cloud; never flip
+group_mean,ALL,all,"q[0.5,0.7)",B04,148833,40174,6326,0.7037553863984661,6 computable independent groups; unweighted mean,larger raw TOA ranks true Cloud; never flip
+group_mean,ALL,all,"q[0.5,0.7)",B03,148833,40174,6326,0.7216116984403501,6 computable independent groups; unweighted mean,larger raw TOA ranks true Cloud; never flip
+group_mean,ALL,all,"q[0.5,0.7)",B02,148833,40174,6326,0.753160676268657,6 computable independent groups; unweighted mean,larger raw TOA ranks true Cloud; never flip
+group_mean,ALL,all,"q[0.5,0.7)",B08,148833,40174,6326,0.6579585984149188,6 computable independent groups; unweighted mean,larger raw TOA ranks true Cloud; never flip
+group_mean,ALL,all,"q[0.5,0.7)",B11,148833,40174,6326,0.6883243041580723,6 computable independent groups; unweighted mean,larger raw TOA ranks true Cloud; never flip
+group_mean,ALL,all,"q[0.5,0.7)",B12,148833,40174,6326,0.7056021125554585,6 computable independent groups; unweighted mean,larger raw TOA ranks true Cloud; never flip
+group_mean,ALL,all,"q[0.7,0.9)",B04,85061,22720,3699,0.7121289301563869,6 computable independent groups; unweighted mean,larger raw TOA ranks true Cloud; never flip
+group_mean,ALL,all,"q[0.7,0.9)",B03,85061,22720,3699,0.7298524573454351,6 computable independent groups; unweighted mean,larger raw TOA ranks true Cloud; never flip
+group_mean,ALL,all,"q[0.7,0.9)",B02,85061,22720,3699,0.7497680229365203,6 computable independent groups; unweighted mean,larger raw TOA ranks true Cloud; never flip
+group_mean,ALL,all,"q[0.7,0.9)",B08,85061,22720,3699,0.665941148233427,6 computable independent groups; unweighted mean,larger raw TOA ranks true Cloud; never flip
+group_mean,ALL,all,"q[0.7,0.9)",B11,85061,22720,3699,0.6533315568713373,6 computable independent groups; unweighted mean,larger raw TOA ranks true Cloud; never flip
+group_mean,ALL,all,"q[0.7,0.9)",B12,85061,22720,3699,0.6896799726157753,6 computable independent groups; unweighted mean,larger raw TOA ranks true Cloud; never flip

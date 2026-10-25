@@ -1,0 +1,27 @@
+{
+  "source": "/home/scv/Cloud-Adapter-light/data/sentinel2_cloud_mask_catalogue_4172871/classification_tags.csv",
+  "sha256": "46b88e07480f36a4d2fa27f01a1ee9987b1def7ad08f1eb721a88ef0b5288d25",
+  "join": "exact complete scene product ID",
+  "fields": [
+    "forest/jungle",
+    "snow/ice",
+    "agricultural",
+    "urban/developed",
+    "coastal",
+    "hills/mountains",
+    "desert/barren",
+    "shrublands/plains",
+    "wetland/bog/marsh",
+    "open_water",
+    "enclosed_water"
+  ],
+  "values": [
+    "0",
+    "1",
+    "missing"
+  ],
+  "duplicate_policy": "all fields missing if scene has !=1 matching rows",
+  "rows_sha256": "f06de3a72087ed6dc06c10ffab0d16cf4c0df7e7d07882858567e073a22a7e8f",
+  "overlapping_fields_not_additive": true,
+  "physical_pixel_landcover": false
+}

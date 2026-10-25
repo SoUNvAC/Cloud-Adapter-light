@@ -1,0 +1,2 @@
+﻿product,group_id,snow_ice,support,Source_correct_Surface,D_correct,G_damage,nonG_damage,nonG_correct_Surface,tiny_SourceSurface,tiny_D,common_truth_Surface,common_truth_Cloud,common_truth_Shadow,R,C,D,U,K,O,C_Shadow,Surface_risk,truth_Surface,truth_Cloud,truth_Shadow,boundary_D,nonboundary_D,excluded_D,six_R,six_C
+ALL,ALL,all,33423488,15182479,506798,56740,450058,2812248,0,0,15425256,17342271,655961,3115350,546400,450058,2359382,84005,221905,12337,2812248,2812248,208670,94432,49877,396611,3570,3115350,546400
