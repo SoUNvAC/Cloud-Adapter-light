@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "review_utc": "2026-10-25T15:17:29.409644+00:00",
+  "method": "human-facing rendered-page visual inspection by assistant; not OCR inference",
+  "reviewed_page_sha256": {
+    "ESA_ATBD_0_page039.png": "2d69313bc6b4bc04a04a30a92b00185ae95c5925ab61f9664b183620b9f1ffa1",
+    "FMASK2015_0_page006.png": "c5066673204753d1987478b64814b171233f400b93ead54c356b1f1d61cb17fb"
+  },
+  "observations": [
+    "ATBD header issue2.10 date2021-11-15; p39 distinguishes legacy height prior and since2.10 image-parallax distribution",
+    "Fmask PDF6 printed274 flatcloud historical range200m-1200m visually confirmed; not adopted as current height prior"
+  ],
+  "other_rendered_pages_not_claimed_visually_reviewed": [
+    "ESA_ATBD_0_page001.png",
+    "ESA_ATBD_0_page040.png"
+  ]
+}
