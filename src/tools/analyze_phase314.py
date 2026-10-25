@@ -138,7 +138,7 @@ def main():
                 a,b=(ym,ya) if ma=='A' else (ya,ym);joint=vm&va
                 am=mat(a[joint],b[joint]);mm=mat(ym[joint],ya[joint]);assert np.array_equal(am,mm if ma=='A' else mm.T)
                 prefix=dict(product=pid,group_id=gmap[pid],dataset=tag['dataset'],main_annotator=ma,shadows_marked=tag['shadows_marked'])
-                prefixes[pid]=prefix;mats[pid]=am;ab_cells+=cells(am,prefix,['label_A','label_B']);main_cells+=cells(mm,prefix,['main_label','alt_label']);disagreements.append(disagree(am,dict(**prefix,row_type='product',groups=1)))
+                prefixes[pid]=prefix;mats[pid]=am;ab_cells+=cells(am,prefix,['label_A','label_B']);main_cells+=cells(mm,prefix,['main_label','alt_label']);disagreements.append(disagree(am,dict(**prefix,row_type='product',groups=1,products=1)))
                 row=dict(**prefix,main_member=mainmember,alt_member=alts[pid],main_sha256=mh,alt_sha256=altsha,alt_annotator=aa,annotator_evidence='classification_tags.annotator gives main; README4 otherannotator',pool='fit' if pid in cset else 'development' if pid in bset else 'not_model_scope',range_A=True,range_B=pid in bset,range_C=pid in cset,main_valid=ms['valid'],main_zero_hot=ms['zero_hot'],main_multi_hot=ms['multi_hot'],alt_valid=ass['valid'],alt_zero_hot=ass['zero_hot'],alt_multi_hot=ass['multi_hot'],Jmask=int(joint.sum()),main_only=int((vm&~va).sum()),alt_only=int((va&~vm).sum()),J=None,original_main_support=None,extra_excluded_for_alt_invalid=None,extra_excluded_for_image_or_common=None,support_definition='NA outside B/C; label census only',shadow_completeness='public shadows_marked is not separate proof for alternate annotator; unknown where unspecified')
                 if pid in bset:
                     cp=Path('/home/scv/shared/phase205_20261019/infer/R4/scores/Catalogue')/(pid+'.npz');pin(cp,kind='historical support archive byteSHA; only flat_indices,valid decoded')
@@ -196,8 +196,9 @@ def main():
             for field,values in [('all',['all']),('main_annotator',['A','B']),('shadows_marked',['0','1'])]:
                 for value in values:
                     ids=[p for p in alts if tags[p]['dataset']==dataset and (field=='all' or tags[p]['annotator' if field=='main_annotator' else field]==value)]
-                    m=sum((mats[p] for p in ids),np.zeros((3,3),np.int64));row=disagree(m,dict(product='STRATUM',group_id='NA',dataset=dataset,main_annotator=value if field=='main_annotator' else 'all',shadows_marked=value if field=='shadows_marked' else 'all',row_type='stratum',groups=len(ids)))
-                    row['group_mean_disagreement_pct']=float(np.mean([100*(mats[p].sum()-np.trace(mats[p]))/mats[p].sum() for p in ids if mats[p].sum()])) if any(mats[p].sum() for p in ids) else None;disagreements.append(row)
+                    gids=sorted({gmap[p] for p in ids});gm=[sum((mats[p] for p in ids if gmap[p]==g),np.zeros((3,3),np.int64)) for g in gids]
+                    m=sum((mats[p] for p in ids),np.zeros((3,3),np.int64));row=disagree(m,dict(product='STRATUM',group_id='NA',dataset=dataset,main_annotator=value if field=='main_annotator' else 'all',shadows_marked=value if field=='shadows_marked' else 'all',row_type='stratum',groups=len(gids),products=len(ids)))
+                    row['group_mean_disagreement_pct']=float(np.mean([100*(g.sum()-np.trace(g))/g.sum() for g in gm if g.sum()])) if any(g.sum() for g in gm) else None;disagreements.append(row)
         # Make schemas uniform, preserving perproduct and group mean vs pooled distinction.
         for row in disagreements:row.setdefault('group_mean_disagreement_pct',row['disagreement_pct'])
         for ref in ['A','B','main','alt']:
