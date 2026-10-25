@@ -1,0 +1,52 @@
+{
+  "status": "passed",
+  "trainable_parameters": 294912,
+  "active_blocks": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "initial_equals_Phase304_tensorwise": true,
+  "base_initial_digest": "7c69e0cf60f16675bc6e7263f8bf6916333c1c09000c69813d6d0dda6686d1a9",
+  "teacher_is_separate_Source": true,
+  "teacher_has_no_lora": true,
+  "teacher_frozen_digest": "7c69e0cf60f16675bc6e7263f8bf6916333c1c09000c69813d6d0dda6686d1a9",
+  "all_eval": true,
+  "optimizer_only_lora": true,
+  "numerical_tests": {
+    "status": "passed",
+    "manual_loss_error": 0.0,
+    "manual_gradient_max_error": 2.7755575615628914e-17,
+    "below_and_equal_zero_gradient": true,
+    "positive_Cloud_gradient_and_negative_Surface_gradient": true,
+    "independent_Shadow_output_partial_zero": true,
+    "all_P_denominator": true,
+    "excluded_invalid_gradient_zero": true,
+    "teacher_detached": true,
+    "empty_P_differentiable_zero": true,
+    "empty_A_differentiable_zero": true,
+    "semantic_scores_not_softmax": true,
+    "lambda_CM": 1.0
+  },
+  "zero_lora_errors": {
+    "source_original_custom": 0.0,
+    "zero_lora_source": 0.0
+  },
+  "initial_L_CM": 0.0,
+  "lambda0_loss_error": 0.0,
+  "lambda0_gradient_max_error": 2.561137080192566e-09,
+  "lambda0_update_max_error": 3.6934829950041603e-07,
+  "lambda0_reference": "exact AST of original worker_phase304.py accepted-step block",
+  "gate_attempt": 1,
+  "protection_gate_attempt": 1,
+  "initial_optimizer_gradient_RNG_restored": true
+}

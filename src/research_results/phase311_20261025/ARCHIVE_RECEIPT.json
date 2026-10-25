@@ -1,0 +1,10 @@
+{
+  "archive": "phase311_full_backup.tar.gz",
+  "archive_sha256": "63071b928c6ba3e5b457c1ab931344012acc4be0c700e33fa8a4e032744ffc51",
+  "archive_bytes": 489481472,
+  "files": 150,
+  "raw_bytes": 542802846,
+  "manifest_sha256": "36bc65b51b9fca78f6bb11e1886f3d47a9bcb732f74f29dcc0afb8207a069b3e",
+  "archive_persisted": true,
+  "projected_two_hosts_including_archives_and_summary": 2128568636
+}

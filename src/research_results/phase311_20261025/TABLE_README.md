@@ -1,0 +1,1 @@
+TRANSITIONS27字段 truth/Source_pred/student_pred 对应真值/比较左端/比较右端；ERROR_FLOW字段 Source_errors/student_errors 同理，不恒指Source。comparison明确三组对照。D/B固定于Source与PL，不按新策略重定义。D外新Cloud/Shadow均相对Source正确Surface计数，非PL→CM新增事件数；后者见ERROR_FLOW。P/A/other由影像Source定义。跳过步active_count=0只是未求值占位；全部边际、池化及分区由独立CSV检查复核。

@@ -1,0 +1,8 @@
+{
+  "status": "completed",
+  "seconds": 468.87416267802473,
+  "torch": "2.1.0+cu121",
+  "GPU": "NVIDIA GeForce RTX 4090 D",
+  "peak_allocated": 1385531392,
+  "peak_reserved": 1589641216
+}

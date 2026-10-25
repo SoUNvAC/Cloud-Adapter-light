@@ -1,0 +1,10 @@
+{
+  "updated_steps": 955,
+  "P_nonempty_updated_steps": 482,
+  "active_steps": 390,
+  "P_updated_cumulative": 19937970,
+  "active_pixel_exposures": 4737383,
+  "active_fraction_of_all_updated_P": 0.23760608527347568,
+  "mean_CM": 0.04138838315909734,
+  "skip_rule": "A empty: no forwards, losses/margins NA; active_count recorded 0 means unevaluated, not measured inactive. Updated P empty: differentiable CM0, margins NA."
+}

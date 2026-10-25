@@ -1,0 +1,42 @@
+{
+  "status": "completed",
+  "stages": {
+    "prepare": {
+      "status": "completed",
+      "exit_code": 0,
+      "failure": null,
+      "PID": 1759405,
+      "seconds": 43.63846043299418,
+      "peak_cpu_bytes": 261701632,
+      "minimum_available_memory": 32319029248
+    },
+    "train": {
+      "status": "completed",
+      "exit_code": 0,
+      "failure": null,
+      "PID": 1759423,
+      "seconds": 470.9119246120099,
+      "peak_cpu_bytes": 2087538688,
+      "minimum_available_memory": 30299799552
+    },
+    "evaluate": {
+      "status": "completed",
+      "exit_code": 0,
+      "failure": null,
+      "PID": 1759853,
+      "seconds": 71.34536740300246,
+      "peak_cpu_bytes": 1695383552,
+      "minimum_available_memory": 30969163776
+    },
+    "analyze": {
+      "status": "completed",
+      "exit_code": 0,
+      "failure": null,
+      "PID": 1759916,
+      "seconds": 99.52131024096161,
+      "peak_cpu_bytes": 3664150528,
+      "minimum_available_memory": 28944883712
+    }
+  },
+  "neural_calls": 2238
+}

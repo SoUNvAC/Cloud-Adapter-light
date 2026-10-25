@@ -1,0 +1,25 @@
+{
+  "profile_rows": 1000,
+  "updated": 955,
+  "skipped": 45,
+  "selection": "ordered raw traces; separate panels, alternative scatter not needed; no dual axes or smoothing",
+  "layout_issues": [],
+  "file_checks": [],
+  "metadata": {
+    "path": "/home/scv/shared/phase311_20261025/TRAINING_CURVES.png",
+    "ext": "png",
+    "size_bytes": 253599,
+    "category": "raster",
+    "size_px": [
+      2160,
+      1860
+    ],
+    "dpi": [
+      299.9994,
+      299.9994
+    ]
+  },
+  "single_seed_no_error_bars": true,
+  "missing_values_are_45_skips": true,
+  "PNG_and_grayscale_for_visual_review": true
+}

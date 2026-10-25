@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "rows": [
+    {
+      "arm": "Q90-PL",
+      "product": "S2A_MSIL1C_20180211T234711_N0206_R073_T60WWT_20180212T011403",
+      "windows": 9,
+      "maximum_error": 0.0,
+      "pred_identical": true,
+      "original_final_sha256": "2d0d56de44f57d43a5c3f9788c658ce840f6e916fd4cb49797f111682c6108c9",
+      "old_model_used_only_after_new_endpoint_seal": true
+    },
+    {
+      "arm": "Q90-SP",
+      "product": "S2A_MSIL1C_20180211T234711_N0206_R073_T60WWT_20180212T011403",
+      "windows": 9,
+      "maximum_error": 0.0,
+      "pred_identical": true,
+      "original_final_sha256": "f67ab5d3c714d06e31f62b3af81e206f12e3e6b026c7c7a7ecfff2b396248aea",
+      "old_model_used_only_after_new_endpoint_seal": true
+    }
+  ],
+  "total_windows": 18
+}

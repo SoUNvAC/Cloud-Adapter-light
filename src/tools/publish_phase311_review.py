@@ -13,6 +13,7 @@ def main():
     report=report.replace('CM固定末步32×9窗。\n|策略|', 'CM固定末步32×9窗。\n\n|策略|')
     report+='\n损伤转移与误保护：相对PL，Surface→Cloud净减少475251，但Cloud→Surface增加166987、Cloud→Shadow增加625324、Surface→Shadow增加48069。P内真Cloud208670中186722判为Surface，PL原正确被CM改错70168；P内真Shadow94432中83449判为Surface，PL原正确被CM改错2668。这些“改错”数包括全部新错误类别，不全等于转Surface；P内Shadow同时有7782从PL错改对，不应概括为各类均恶化。\n'
     report+='\n本轮未取得优于PL的总体取舍，也未实现比SP保留更多原Cloud纠正；最大组虽已完全修复，不能代替全32组结论。本保护区连续换loss分枝在此记录收束，无新证据不再追加loss或lambda扫描；下一步须另提假设并获得新的执行指令。\n'
+    report+='\n曲线视觉复核：少数步骤的CM与梯度尖峰原样保留，不平滑、不截断，也未事后增加梯度裁剪；均值不能代替逐步活动表，不将本次曲线概括为稳定收敛。\n'
     (S/'RESULT.md').write_text(report,encoding='utf-8')
     notes=(S/'phase311.md').read_text(encoding='utf-8').split('- 交付复核：',1)[0]
     notes+='- 交付复核：组均mIoU CM61.5651%、PL63.4181%、SP57.0789%；CM池化72.5145%。最大T25XEG三类误报清零并恢复100%，但原Cloud纠正仅保留299949/784478，比SP少62183；总体取舍未改善。\n'

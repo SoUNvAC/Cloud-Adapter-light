@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "all_100_product_and_1000_crop_array_SHA_identical": true,
+  "original_mask_lock_SHA": "2be14f70155d76845ec2ab7852325ac3d16c9e850d63063aadef26b3b83929fb",
+  "original_crop_support_SHA": "622de52830e61ebf135b152035a5034681317acd8c3e94c5ee7206f20caaa941",
+  "original_product_support_SHA": "71edf565d6c47ea7c6f51b1f4dcdcab391efb10714b03a2ac6419c642e5371a8",
+  "read_only_masks_reused": true
+}
