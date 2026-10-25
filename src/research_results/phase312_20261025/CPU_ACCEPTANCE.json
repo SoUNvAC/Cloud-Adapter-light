@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "groups": 32,
+  "strategies": 8,
+  "zero_neural_calls": true,
+  "zero_neural_training": true,
+  "fit_attempts": 3,
+  "successful_models": [
+    "RGB3",
+    "RGB6Q",
+    "MS6"
+  ],
+  "original_D": 506798,
+  "original_B": 784478,
+  "all_Shadow_binary_and_scores_identical_to_PL": true,
+  "all_equal_count_controls_exact": true,
+  "only_C_image_Cloud_to_Surface": true,
+  "reference_invalid_excluded_only_at_analysis": true,
+  "Source_PL_metrics_reproduced": true,
+  "original_B_disjoint_P_and_fully_retained": true,
+  "AUC_independent_rank_checks": 36,
+  "post_seal_reference_only": true,
+  "torch_imported": false,
+  "fit_label_audit_status": "passed"
+}

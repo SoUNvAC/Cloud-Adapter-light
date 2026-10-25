@@ -1,0 +1,42 @@
+{
+  "start_beijing": "2026-10-25T19:53:51.883634+08:00",
+  "git_commit": "6f95a61e534f27f985feed93833cbef3f6228616",
+  "runtime": "/home/scv/miniconda3/envs/cloud-lite-pt210/bin/python",
+  "code": {
+    "src/tools/phase312_common.py": "f3a11b0687f8e82e9ecf93a425896836c3c032ecdb638e9b338ea87eede118ed",
+    "src/tools/analyze_phase312.py": "e492203063322dd920beb307ac2d5ac781c5983fe3f743b9ac470aae062c2024",
+    "src/tools/images_phase312.py": "27a48ddafece882072061ff12a945e2650f4db3916c03f9d645eb9c15225ffeb",
+    "src/tools/math_phase312.py": "6df2b898d8118cce7e65ca961899d7de4f55f4512ee4178b729dc2de5fb9a406",
+    "src/tools/worker_phase312.py": "a3cd9cd0337cccda56d460b19716f0ed9b6e0daad845e998ee63b14d15896034",
+    "src/tools/transfer_phase312.py": "c28ab391ff201bb50cd43ba2d426680f8340a141500731d5418896c6e98ec3a7",
+    "src/tools/verify_phase312.py": "9517fa7a04647dd8d4d4c717fca8c9973584b0ad811d2fa2d66190e673a0478e",
+    "src/tools/finalize_phase312.py": "fdd8ae28f16dfc931011701c4a22d3a6dbc3f63f029cb4d8a7716a61dfba6807",
+    "src/tools/control_phase312.py": "2e571c75619cd92055407e5b369f63d65016d8368db59e6df1c998318c031588",
+    "src/tools/report_phase312.py": "7ecc7ab4c32698075b8f0dbebf93fae0d102ad5ba5ecdddbfb34e2dd232d268d",
+    "src/tools/phase65d_recovery_math.py": "ef0f76bc81cc348ce411c65f8459c5615d29df93477b62a52dc137e86af2c51e",
+    "src/tools/analyze_phase304.py": "ea08ab17fb1c7d060e2885f428d9364db14c9d0757c4d9786293792da74d7ece",
+    "src/tools/transfer_phase302.py": "560c214062938b24b1b84061d49ca7c5755d56c569eee46a0eedcff97033682a",
+    "src/tools/auc_phase306.py": "1a88a49c622259c8afbb835cc47453274a3ea7c547393a18bf78e9905c0bf721"
+  },
+  "protocol_SHA": "24b462feb2609308ca96accf9e13423ea84da10aae44f0e7b685963a02478c3d",
+  "inputs": {
+    "/home/scv/shared/phase304_20261024/EXECUTION_LOCK.json": "35965ffd9733c9a5ed98039ac3f2ce6351d32a6dbfcc41b4abb8fc6f23df9182",
+    "/home/scv/shared/phase304_20261024/ENDPOINT_LOCK.json": "e74d7f2b175e526ad73020cb78e42ad4c14162d88f01fec72442bb972d8b0f72",
+    "/home/scv/shared/phase304_20261024/EVALUATION_LOCK.json": "276207b4c90d74ea318a6ec45d20cf78d668f0e946c1f73f251ff06d2b51226e",
+    "/home/scv/shared/phase304_20261024/PSEUDO_LOCK.json": "7b32234108d3c2031962bd908fa8b16cf5ba8c1838ab2652ba40fd1c49b6add1",
+    "/home/scv/shared/phase304_20261024/FIT_IMAGES.json": "1a328d6e5b7d88fea3aa3dda89205d79ab1562c4fac76361fcc4e31219e26ea5",
+    "/home/scv/shared/phase304_20261024/EVAL_IMAGES.json": "7bc7fd23b684f9ab8e7072cab119b1412a56971a2592ac791f580375f6e696a4"
+  },
+  "fit_images_SHA": "1a328d6e5b7d88fea3aa3dda89205d79ab1562c4fac76361fcc4e31219e26ea5",
+  "eval_images_SHA": "7bc7fd23b684f9ab8e7072cab119b1412a56971a2592ac791f580375f6e696a4",
+  "fit_dev_product_and_group_disjoint": true,
+  "Source_SHA": "64dd9a20288c35ab3362b8b1c1dafc216d9c44d60868475177e139d6be859dc9",
+  "neural_training_and_forwards": 0,
+  "logistic_fits_cap": 3,
+  "CPU_seconds_cap": 7200,
+  "CPU_bytes_cap": 17179869184,
+  "persistent_all_hosts_cap": 2000000000,
+  "min_free_memory_disk": 4000000000,
+  "compute_location": "gzs CPU only",
+  "no_scheduled_checks": true
+}

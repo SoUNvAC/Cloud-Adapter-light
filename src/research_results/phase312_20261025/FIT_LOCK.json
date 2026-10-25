@@ -1,0 +1,37 @@
+{
+  "status": "sealed",
+  "sealed_epoch": 1792929286.569188,
+  "code_lock_SHA": "cc2e9e3ef640d608b4aad6b60aeaf2e074d274219f9fc595e8ff65ebb781b8c6",
+  "sampling_SHA": "6cbc159ee7b9c3ebc1d77e98282877be15c53fa11c09dda39646ee20f62b370e",
+  "support_SHA": "5a234229cca740d4cfb9b19567d1b19a8fb9175547b102d6865d60e6095101bb",
+  "models": {
+    "RGB3": "61fbc3af1b86b6a799b2b9177db58e28ad1209e2b66d54604dd39f8f2e9b0c6d",
+    "RGB6Q": "841e3cc6133f8b529e1540fb9ce3d0267ca264fd47a4b1e34bc3ade6934a22bf",
+    "MS6": "e29ced90c5eac96ad58cdf6902ecbb13e608619728cf54db6f1886651fb7d468"
+  },
+  "numerical_tests": {
+    "status": "passed",
+    "gradient_finite_difference_max_error": 6.034998889514753e-11,
+    "unpenalized_intercept": true,
+    "positive_is_pseudo_Surface": true,
+    "raw_TOA_features_and_squares": true,
+    "equal_product_weights_train_only_scaler": true,
+    "empty_and_constant_cases": true,
+    "threshold_point90_neighbors": true,
+    "topk_ties_flat_ascending_and_zero_full": true
+  },
+  "successful_models": [
+    "RGB3",
+    "RGB6Q",
+    "MS6"
+  ],
+  "fit_attempts": 3,
+  "nonempty_products": 97,
+  "samples": 794624,
+  "seed": 31201,
+  "PCG64": true,
+  "positive_class": "Source-Surface",
+  "no_test_scaler_or_fit": true,
+  "no_reference_reads": true,
+  "neural_calls": 0
+}

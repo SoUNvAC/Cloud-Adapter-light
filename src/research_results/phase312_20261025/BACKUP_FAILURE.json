@@ -1,0 +1,4 @@
+{
+  "traceback": "Traceback (most recent call last):\n  File \"D:\\Cloud-Adapter-light\\src\\tools\\transfer_phase312.py\", line 37, in receive\n    subprocess.run(['scp','-q','gzs:'+str(ROOT/ARCHIVE),str(partial)],check=True)\n    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\ProgramData\\miniconda3\\Lib\\subprocess.py\", line 578, in run\n    raise CalledProcessError(retcode, process.args,\n                             output=stdout, stderr=stderr)\nsubprocess.CalledProcessError: Command '['scp', '-q', 'gzs:\\\\home\\\\scv\\\\shared\\\\phase312_20261025\\\\phase312_full_backup.tar.gz', 'D:\\\\Cloud-Adapter-light\\\\outputs\\\\phase312\\\\phase312_20261025\\\\phase312_full_backup.tar.gz.partial']' returned non-zero exit status 4294967295.\n",
+  "action": "Preserve archive, partial and any verified members; diagnose before recovery. Never repeat collect/receive blindly."
+}

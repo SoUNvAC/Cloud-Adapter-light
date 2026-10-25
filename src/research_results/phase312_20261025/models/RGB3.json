@@ -1,0 +1,59 @@
+{
+  "model": "RGB3",
+  "status": "passed",
+  "features": [
+    "B04",
+    "B03",
+    "B02"
+  ],
+  "parameter_count": 4,
+  "fit_products": 97,
+  "samples": 794624,
+  "sample_Surface": 374316,
+  "sample_Cloud": 420308,
+  "sampling_SHA": "6cbc159ee7b9c3ebc1d77e98282877be15c53fa11c09dda39646ee20f62b370e",
+  "sample_ids_SHA": "c2f8948e25770a31ae953864467f1d4f5dc8003c898961a2747214a6d387d6e7",
+  "labels_SHA": "a834749e020a7e93d96ef2173a3bab6c5f8831f0fdd1577313d510be548f8a23",
+  "weights_SHA": "e4edb47bd71704b2c57666e08fee0f9eba2a8c281e3455a033eea2724efdbf66",
+  "feature_order": "RGB3",
+  "result": {
+    "mean": [
+      0.4025105305354777,
+      0.37458254230263566,
+      0.4044712885516907
+    ],
+    "scale": [
+      0.2733213582900601,
+      0.2540449454220325,
+      0.276944359887646
+    ],
+    "theta": [
+      2.414079097880785,
+      -2.8177867369258744,
+      -0.9952367514160566,
+      -0.24731672314306188
+    ],
+    "constant_columns": [],
+    "iterations": 19,
+    "objective": 0.5049574470222179,
+    "optimizer_success": true,
+    "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "optimizer_status": 0,
+    "gradient": [
+      -7.924370199049666e-08,
+      -1.28949213106834e-07,
+      -2.0874782111430026e-07,
+      1.041609784428266e-07
+    ],
+    "final_gradient_inf": 2.0874782111430026e-07,
+    "penalty": 0.001,
+    "positive_class": "Source-Surface=1; Source-Cloud=0",
+    "scaler_independently_recomputed": true,
+    "fit_initial": "all zero",
+    "maxiter": 500,
+    "gtol": 1e-07,
+    "ftol": 1e-12
+  },
+  "failure": null,
+  "truth_reads": false
+}

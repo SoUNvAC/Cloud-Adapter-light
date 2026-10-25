@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "original_partial_bytes": 79151104,
+  "original_partial_SHA": "5f8d7379ea693d9e19a813c584aedee748137a077da06bd3d564076c465f8ce7",
+  "remote_prefix_SHA_matched": true,
+  "only_missing_suffix_transferred_bytes": 13390686,
+  "original_partial_preserved": true,
+  "original_failure_preserved": true,
+  "archive_recollected": false,
+  "full_archive_SHA": "24afa625e81b94115d02895eaad44b1a5cdd1b4c60b9b6a69805aa41d00da405",
+  "all_members_verified": 134,
+  "scientific_fits_or_forwards_added": 0,
+  "code_SHA": "009d116f16a76d7a7796306356f6839ee6687a28a3e00aa9933912d1492be656"
+}

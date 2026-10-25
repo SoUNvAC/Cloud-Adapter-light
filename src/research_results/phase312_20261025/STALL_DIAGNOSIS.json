@@ -1,0 +1,19 @@
+{
+  "original_partial_bytes": 79151104,
+  "original_partial_SHA": "5f8d7379ea693d9e19a813c584aedee748137a077da06bd3d564076c465f8ce7",
+  "observations": "No byte growth across multiple checks for over six minutes; remote scp PID1761387 waiting,0CPU; local free11444158464 bytes; fresh SSH succeeds. Exact transport root cause unproven.",
+  "stopped_only_verified_local_processes": [
+    {
+      "PID": 12472,
+      "name": "scp",
+      "start": "2026-10-25T20:04:06+08:00"
+    },
+    {
+      "PID": 37588,
+      "name": "ssh",
+      "start": "2026-10-25T20:04:06+08:00"
+    }
+  ],
+  "archive_not_recollected": true,
+  "scientific_experiment_not_repeated": true
+}

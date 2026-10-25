@@ -1,0 +1,3 @@
+{"model": "RGB3", "attempt": 1, "initial": "all zero", "epoch": 1792929271.607531}
+{"model": "RGB6Q", "attempt": 1, "initial": "all zero", "epoch": 1792929275.2037435}
+{"model": "MS6", "attempt": 1, "initial": "all zero", "epoch": 1792929281.508378}
