@@ -31,7 +31,7 @@
     "REVIEW_LOCK.json": "ed69c1486cf87f2686e8a8785e92f6813258c173084d26a63b028f82c02cc578",
     "SOURCE_VERSIONS.txt": "89cde4806c38fb22141f6fca80426e5cb95be1266d5c7468b8aefdd767c54656",
     "STATUS.json": "50a6881ccd16f09ec5b7414f999b538965b4ccb3e701c9040c2faac54a201333",
-    "phase313.md": "dd51aa4794c3cdd2cae4bfc091c834b75f6123cea8f3ada5982f69c73f6c3953",
+    "phase313.md": "b537f20cea4efd26194c6160c0e3da522c7b70983dd596428f75766186ff9ea1",
     "ARCHIVE_RECEIPT.json": "e311be488ce5ff5123a47bcab9f3a8691625b0c560418a271707e7ea62bfae83",
     "BACKUP_RECEIPT.json": "4ed33176a9bb1e64db36b7dfaacf8e1e84983d8f1eb3c1a2bcb0f8c3c91765d2",
     "PUBLICATION_FAILURE01.json": "08f9133231ad10995b41b5a913477cf7efd8bf01ab4c681cf4f9e1085ffea975",
@@ -49,8 +49,8 @@
     "src/tools/review_phase313.py": "2a221af5e864983a41f1e236fbc4fafe66ab61300ef674bf7bec562fabb0018c",
     "src/tools/review_phase313_recovery01.py": "3ee081b2bd5576e5b60a40abca18b53bf92b68d6dab4af50ab60d10695c01e15",
     "src/tools/seal_phase313.py": "33252d98fa25f7c3d61f03b401653b284b9a5e1ac2516912cc8fa8a7c825c22e",
-    "src/tools/finalize_phase313.py": "38fdd47f4a7b779fc5f01a9d0d0cb6b920313886250558c23649812bde2475bc",
-    "src/tools/verify_phase313.py": "c2bf070f29aebcf2f2e88f0a683387bc7b723115aa649b948808890dbff5034c",
+    "src/tools/finalize_phase313.py": "1810bfcdf2d44d5fb30634c79c2b457db1b106a01f3289492ddebd52d91a5c2f",
+    "src/tools/verify_phase313.py": "25ac64eec45bb960d517b9d2ff67b37e887db55ad780bda9b40b6186a947e562",
     "src/tools/transfer_phase313_recovery01.py": "3ee812036c22d3dc803115997e90af96684c526eb0a717ed47155061ddaeb35b"
   },
   "archive_sha256": "74e232819f6e6294dbddf7a2d6753ed6c39dcb3cf29dda2bec57f18ff8d08b59"

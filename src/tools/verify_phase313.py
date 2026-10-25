@@ -21,5 +21,8 @@ def main():
     if ROOT.exists():
         for p,h in load(S/'INPUT_SHA256.json').items():assert sha(p)==h,p
         assert sha(ROOT/b['archive'])==b['archive_sha256']
+        assert sha(ROOT/'BACKUP_FILES.json')==b['manifest_sha256']
+        for name,item in load(ROOT/'BACKUP_FILES.json').items():
+            assert sha(ROOT/name)==item['sha256'] and (ROOT/name).stat().st_size==item['bytes'],name
     print('Phase313 verified:132products, ready0/approximate3/missing129; zero training/forward/projection; full backup SHA passed')
 if __name__=='__main__':main()
