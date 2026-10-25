@@ -1,0 +1,9 @@
+{
+  "archive": "phase314_full_backup.tar.gz",
+  "archive_sha256": "f2da68965ee567e746bd9ccf0f358317b3b527496a1f21075a8027169dd10a7d",
+  "archive_bytes": 109048,
+  "files": 30,
+  "raw_bytes": 1005785,
+  "manifest_sha256": "7ed0709fb4d71ceb0241b994377913c0d5bd8d8997219dfe06a29a6bc3ad49ce",
+  "projected_two_hosts_including_archives_and_summary": 32229666
+}

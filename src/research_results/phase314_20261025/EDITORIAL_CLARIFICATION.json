@@ -1,0 +1,50 @@
+{
+  "utc": "2026-10-25T16:01:22.435531+00:00",
+  "code_sha256": "bfd2fd6b8d23d890b36ea33b6d8402294450ee551033857c5de06bceba0eb89a",
+  "reason": "all4Dempty; only2defined change fractions; distinguish C12teacher sensitivity",
+  "data_CSV_unchanged": {
+    "ANNOTATOR_CONFUSIONS.csv": "303ccc53d30fe609212b8181433812ddf7d80cc76abc3946e12c7f4d4f21bb1b",
+    "CHANGE_ENRICHMENT.csv": "1185bbddb36b6fedd1506361ddbba81da37f98a353de3073e52f20e9ac50678e",
+    "DUAL_REFERENCE_DELTAS.csv": "b37e58cb8b59b253aa97be14f19ec23d33b62592810b72944c3c6a3bdfdebfd5",
+    "DUAL_LABEL_MANIFEST.csv": "4faa338df9be368f6efc25a2a63bb4d8fb5a605d1d2f6c96f1200c994729b6b5",
+    "TENSOR81.csv": "e2d8e5feaa55550f317020f93996da5ecfb8da60e72f3e0a67f710930f0833bf",
+    "PSEUDO_CONFUSIONS.csv": "d36ece2e1d751a27917f9d2283bf092dc8bada4adbd6bf2d9278b2583ef7f5a5",
+    "CHANGE_DECOMPOSITION.csv": "1ab6b67f55456c6b118fc1fbd6eb4fa76d1fb08279195196b5436d87f442d5bc",
+    "PSEUDO_LABEL_SENSITIVITY.csv": "1f3245b1d3c99776642004726a54f5691bfc5f06c92a473fa47536d8b3874acf",
+    "DELTA_B_MINUS_A.csv": "1b3c76d618aa0db0e5c5673e66aa0d6ab218e29b40c59e16a90e0260b5a7c9e3",
+    "ORIGINAL_MAIN_REPRODUCTION.csv": "66d5e2a4f5b1f9f8d569ec4cec85881c33b65f474683af16e046741cda31f8e3",
+    "PSEUDO_SUPPORT.csv": "4390ebc32827989df341ec047f6bba07ba44e0fe20e8a52fa79cc2d028b9e3e2",
+    "MAIN_ALT_CONFUSIONS.csv": "c6c8dc6250c256f267aaa94c0a6bb07d689c1ea2a524598af8e87185162ada1c",
+    "DUAL_REFERENCE_METRICS.csv": "10d58bc82226fb1d257cd4fef9262e5d9eaf3a63ec56bbe0fb804d2a9a4c056b",
+    "PSEUDO_ACCEPTED_POOLED.csv": "1d6580edbc0d3f6a622f8fe4b7a5044e83f2c630398f8a86a1e1ba515744e7d7",
+    "ANNOTATOR_DISAGREEMENT.csv": "58957e193d826ce3bd29abdd2a0c2b8f598b408d46888030c7bc0be7d2951cfa"
+  },
+  "no_reference_or_model_reread": true,
+  "no_scientific_rerun": true,
+  "Shadow_calculability": {
+    "A_Source": {
+      "groups": 4,
+      "AP_defined": 0,
+      "recall_defined": 0,
+      "positive_groups": 0
+    },
+    "A_PL": {
+      "groups": 4,
+      "AP_defined": 0,
+      "recall_defined": 0,
+      "positive_groups": 0
+    },
+    "B_Source": {
+      "groups": 4,
+      "AP_defined": 0,
+      "recall_defined": 0,
+      "positive_groups": 0
+    },
+    "B_PL": {
+      "groups": 4,
+      "AP_defined": 0,
+      "recall_defined": 0,
+      "positive_groups": 0
+    }
+  }
+}

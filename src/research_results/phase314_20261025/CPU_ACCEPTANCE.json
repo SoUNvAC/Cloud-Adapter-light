@@ -1,0 +1,41 @@
+{
+  "status": "passed",
+  "reference_products": 60,
+  "calibration": 10,
+  "validation": 50,
+  "development_products": [
+    "S2A_MSIL1C_20180410T214911_N0206_R043_T02LKH_20180410T231102",
+    "S2A_MSIL1C_20180602T081011_N0206_R078_T36PWC_20180602T115947",
+    "S2A_MSIL1C_20180703T023551_N0206_R089_T50PLR_20180703T053714",
+    "S2B_MSIL1C_20180214T025819_N0206_R032_T51TUM_20180214T072411"
+  ],
+  "fit_products": [
+    "S2A_MSIL1C_20180113T234301_N0206_R087_T57JUL_20180114T004417",
+    "S2A_MSIL1C_20180407T110621_N0206_R137_T31UCV_20180407T132633",
+    "S2A_MSIL1C_20180603T155901_N0206_R097_T17SNA_20180603T194236",
+    "S2A_MSIL1C_20180624T170851_N0206_R112_T16UCG_20180624T223010",
+    "S2A_MSIL1C_20180626T144731_N0206_R139_T20PMQ_20180626T163032",
+    "S2A_MSIL1C_20180802T230911_N0206_R101_T59LKG_20180803T002614",
+    "S2A_MSIL1C_20181117T141441_N0207_R053_T24VVM_20181117T160857",
+    "S2B_MSIL1C_20180210T232709_N0206_R130_T01VEK_20180211T005618",
+    "S2B_MSIL1C_20180313T050719_N0206_R133_T38CPE_20180313T085711",
+    "S2B_MSIL1C_20180617T095029_N0206_R079_T33SUT_20180617T120017",
+    "S2B_MSIL1C_20180807T023549_N0206_R089_T53VMK_20180807T042942",
+    "S2B_MSIL1C_20181212T080919_N0207_R049_T22CEP_20181212T094237"
+  ],
+  "B_groups": 4,
+  "C_groups": 12,
+  "main_author_B_products": 30,
+  "original_confusions_exact": 8,
+  "tensor81_cells": 324,
+  "onehot_checked_per_reference": true,
+  "invalid_never_argmaxed": true,
+  "independent_direct_boolean_checks": 3744,
+  "E_counts_identical": true,
+  "alias_checks": true,
+  "training_mask_unmodified": true,
+  "no_student_fit_predictions_read": true,
+  "reference_completeness_unknown_not_inferred": true,
+  "no_new_model_or_original_image_read": true,
+  "no_torch": true
+}

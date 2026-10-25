@@ -1,0 +1,16 @@
+{
+  "status": "completed",
+  "utc": "2026-10-25T15:52:52.675937+00:00",
+  "seconds": 13.692012377083302,
+  "peak_cpu_bytes": 394199040,
+  "minimum_available_memory": 30303043584,
+  "training": 0,
+  "fits": 0,
+  "forwards": 0,
+  "downloads": 0,
+  "audit_seconds": 0.3113966789096594,
+  "total_seconds": 14.01490012393333,
+  "completed_utc": "2026-10-25T16:01:22.435531+00:00",
+  "report_seconds": 0.007949215942062438,
+  "clarification_seconds": 0.003541851998306811
+}

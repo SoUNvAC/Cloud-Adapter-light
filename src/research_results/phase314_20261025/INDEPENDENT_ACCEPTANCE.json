@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "utc": "2026-10-25T15:57:42.030979+00:00",
+  "code_sha256": "1c40d28d0cdb74ceab0ae6d998559701a6c82ea6371c88acbc4055920676a57c",
+  "ledger_checks": 672,
+  "reference_products": 60,
+  "model_products": 4,
+  "teacher_products": 12,
+  "authors_flipped": 30,
+  "raw_arrays_reread": false,
+  "all_original_input_SHA_reverified": true,
+  "tensor81_and_confusion_margins": true,
+  "E_AB_identical": true,
+  "alias_not_independent": true,
+  "pseudo_region_partitions": true,
+  "NA_denominators_preserved": true,
+  "seconds": 0.3113966789096594
+}

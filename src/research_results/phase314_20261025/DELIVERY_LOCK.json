@@ -1,0 +1,17 @@
+{
+  "utc": "2026-10-25T16:01:22.435531+00:00",
+  "report_sha256": "cf4e64b013db0dd22809bdbef7e100f0e8a30e3b99c0ba304cc8fe5f93c733ae",
+  "initial_lock_sha256": "edd1e942e50aa0a87e43d8e04b00b00d84eb0bc55a5fe0cec850dd7c57dbb890",
+  "code": {
+    "src/tools/analyze_phase314.py": "decb6067ba640c56f1b3cf350cd2ae434753268c1ab26739154ed1de2de9e883",
+    "src/tools/transfer_phase314.py": "e6648cbb4caf7116a426971c2788bcb49a2a5547bbba5f5bd4bf4c8a36ad0c62",
+    "src/tools/verify_phase314.py": "f6b73da33d2ae9f8c653c927f52d8b7ecc706784d11c400ae110d182c2e03b06",
+    "src/tools/audit_phase314.py": "1c40d28d0cdb74ceab0ae6d998559701a6c82ea6371c88acbc4055920676a57c",
+    "src/tools/clarify_phase314.py": "bfd2fd6b8d23d890b36ea33b6d8402294450ee551033857c5de06bceba0eb89a",
+    "src/tools/report_phase314.py": "370e49c8afb24a40661a7dcf28d3ad0868f036aa899bc13577371216a19b9d16",
+    "src/tools/finalize_phase314.py": "3a7b1bd5538622a844cbf0ee93670ab2bc9b6a305a7050c9cef79da73f1a21f7",
+    "src/tools/phase314_common.py": "a2ed8c73b0bb3535fd7a3bf2bc1fdbeb77c3e214e9fbfcabcf58fe6be743a0e3"
+  },
+  "from_frozen_tables_only": true,
+  "no_new_model_or_reference_reads": true
+}

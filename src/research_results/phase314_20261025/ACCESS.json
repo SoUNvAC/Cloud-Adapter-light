@@ -1,0 +1,1052 @@
+[
+  {
+    "path": "/home/scv/shared/phase304_20261024/FIT_IMAGES.json",
+    "mode": "metadata",
+    "sha256": "1a328d6e5b7d88fea3aa3dda89205d79ab1562c4fac76361fcc4e31219e26ea5",
+    "utc": "2026-10-25T15:52:38.986131+00:00"
+  },
+  {
+    "path": "/home/scv/shared/phase304_20261024/EVAL_IMAGES.json",
+    "mode": "metadata",
+    "sha256": "7bc7fd23b684f9ab8e7072cab119b1412a56971a2592ac791f580375f6e696a4",
+    "utc": "2026-10-25T15:52:38.986774+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/classification_tags.csv",
+    "mode": "metadata",
+    "sha256": "46b88e07480f36a4d2fa27f01a1ee9987b1def7ad08f1eb721a88ef0b5288d25",
+    "utc": "2026-10-25T15:52:38.987439+00:00"
+  },
+  {
+    "path": "/home/scv/Cloud-Adapter-light/src/tools/prepare_phase65_scene_groups.py",
+    "mode": "metadata",
+    "sha256": "b47f8ccf0d3422f2775f7899252caeb40b4b5fb6b9dee9b2e89b9c35780a1f37",
+    "utc": "2026-10-25T15:52:38.994151+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/record.json",
+    "mode": "metadata",
+    "sha256": "bd74499766b355c418b69d83b15c6313c08799a44cb361944066dc7191dea255",
+    "utc": "2026-10-25T15:52:38.994563+00:00"
+  },
+  {
+    "path": "/home/scv/Cloud-Adapter-light/src/research_results/phase309_20261025/evidence/pages/README_page04.txt",
+    "mode": "metadata",
+    "sha256": "bd5e77cf1691e3c4176172790aa1bc8203d0a7227526e137eadc73f112340fca",
+    "utc": "2026-10-25T15:52:38.994804+00:00"
+  },
+  {
+    "path": "/home/scv/Cloud-Adapter-light/src/research_results/phase309_20261025/evidence/pages/README_page09.txt",
+    "mode": "metadata",
+    "sha256": "c01045418aa5a1fb230eb753d5d1d56603f5a95dac150b75d05fd4843313e3c6",
+    "utc": "2026-10-25T15:52:38.995165+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/masks.zip",
+    "mode": "byte SHA only then authorized60mainmembers",
+    "sha256": "2c5c52e1b7d7c6b64241a79b7994b732c564854afb1bac41d9aa82c832cac74e",
+    "utc": "2026-10-25T15:52:39.006159+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/alt_masks.zip",
+    "mode": "byte SHA only then authorized60altmembers",
+    "sha256": "71f3fc2706baf128fad22733afb2e76b5b06c1864ef7516ef095a1743dd85d2b",
+    "utc": "2026-10-25T15:52:39.008370+00:00"
+  },
+  {
+    "path": "/home/scv/shared/phase304_20261024/ENDPOINT_LOCK.json",
+    "mode": "metadata",
+    "sha256": "e74d7f2b175e526ad73020cb78e42ad4c14162d88f01fec72442bb972d8b0f72",
+    "utc": "2026-10-25T15:52:39.012585+00:00"
+  },
+  {
+    "path": "/home/scv/shared/phase304_20261024/final_lora.pth",
+    "mode": "weight byte SHA only; no model loading",
+    "sha256": "2d0d56de44f57d43a5c3f9788c658ce840f6e916fd4cb49797f111682c6108c9",
+    "utc": "2026-10-25T15:52:39.015621+00:00"
+  },
+  {
+    "path": "/home/scv/Cloud-Adapter-light/src/work_dirs/phase64_source_parent/seed64/best_mIoU_iter_4000.pth",
+    "mode": "weight byte SHA only; no model loading",
+    "sha256": "64dd9a20288c35ab3362b8b1c1dafc216d9c44d60868475177e139d6be859dc9",
+    "utc": "2026-10-25T15:52:39.071985+00:00"
+  },
+  {
+    "path": "/home/scv/shared/phase304_20261024/EVALUATION_LOCK.json",
+    "mode": "metadata",
+    "sha256": "276207b4c90d74ea318a6ec45d20cf78d668f0e946c1f73f251ff06d2b51226e",
+    "utc": "2026-10-25T15:52:39.072147+00:00"
+  },
+  {
+    "path": "/home/scv/shared/phase304_20261024/PSEUDO_LOCK.json",
+    "mode": "metadata",
+    "sha256": "7b32234108d3c2031962bd908fa8b16cf5ba8c1838ab2652ba40fd1c49b6add1",
+    "utc": "2026-10-25T15:52:39.072637+00:00"
+  },
+  {
+    "path": "/home/scv/shared/phase300_20261020/EXPECTED_SUPPORT.json",
+    "mode": "metadata",
+    "sha256": "6c418faa76eebca87ebf55e2899f5b215fba9017858df48f359c8e1b3e872a5b",
+    "utc": "2026-10-25T15:52:39.073223+00:00"
+  },
+  {
+    "path": "/home/scv/shared/phase300_20261020/EVALUATION_INPUT_PLAN.json",
+    "mode": "metadata",
+    "sha256": "6b1e27ad6954614bbb87512e63b427a2d5cdcb1550ada5f289f516b4d5fa0333",
+    "utc": "2026-10-25T15:52:39.074544+00:00"
+  },
+  {
+    "path": "/home/scv/shared/phase208_20261020/12201_FIT_INPUT_LOCK.json",
+    "mode": "metadata",
+    "sha256": "723fb69ceccb669c66e2885de1a12e48b4a0d5a448133534144dc5dfd62a1d19",
+    "utc": "2026-10-25T15:52:39.075614+00:00"
+  },
+  {
+    "path": "/home/scv/shared/phase304_20261024/analysis/PER_GROUP_TRANSITIONS.csv",
+    "mode": "historical confusion rows filtered to fixed B4 only",
+    "sha256": "e814b17eee9daaae4138d8619a174d54c6c6640cf444997a9b0635d2de8acbec",
+    "utc": "2026-10-25T15:52:39.077960+00:00"
+  },
+  {
+    "path": "/home/scv/shared/phase304_20261024/analysis/PSEUDO_REFERENCE_SUPPORT.csv",
+    "mode": "historical teacher support rows filtered to fixed C12 only",
+    "sha256": "b89fcf7b75af1121f798cfac5eb24cf68f4f7d37e290aa4620a9c3c9f793eb80",
+    "utc": "2026-10-25T15:52:39.081055+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/masks.zip::masks/S2A_MSIL1C_20180113T234301_N0206_R087_T57JUL_20180114T004417.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "4f57c050036eff6241fe077edbf27e48e02f4f018637122359e07804f9e8a420",
+    "utc": "2026-10-25T15:52:39.156307+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/alt_masks.zip::alt_masks/ALT_S2A_MSIL1C_20180113T234301_N0206_R087_T57JUL_20180114T004417.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "fdf6df976426c3bd4ce933bad025920d13ab078857943aa12d9d3d1bb44b7954",
+    "utc": "2026-10-25T15:52:39.210390+00:00"
+  },
+  {
+    "path": "/home/scv/shared/phase303_20261024/scores/S2A_MSIL1C_20180113T234301_N0206_R087_T57JUL_20180114T004417.npy",
+    "mode": "authorized C12 Source fullscores only",
+    "sha256": "ad13d3551c2f709bbf3d7080d554a8b8161b6e525d19b45cf023184fcda0bc94",
+    "utc": "2026-10-25T15:52:39.247000+00:00"
+  },
+  {
+    "path": "/home/scv/shared/phase304_20261024/teacher/S2A_MSIL1C_20180113T234301_N0206_R087_T57JUL_20180114T004417.npz",
+    "mode": "authorized C12 frozen teacher pseudo,pred,maximum,valid only",
+    "sha256": "4f82e54d8b139f049a2ca70b513ddb6200244d3733c3a7a65631cc082e7405f1",
+    "utc": "2026-10-25T15:52:39.269897+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/masks.zip::masks/S2A_MSIL1C_20180123T000731_N0206_R073_T56LPR_20180123T013338.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "8fe5f6d7d24effb2572971d364d52e51256baecc3dcdea5ff5f4ca32e3917e12",
+    "utc": "2026-10-25T15:52:39.540269+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/alt_masks.zip::alt_masks/ALT_S2A_MSIL1C_20180123T000731_N0206_R073_T56LPR_20180123T013338.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "be826d8d3b422daab1b6ed17f81cabd43617d8cb7a05b7f66579a60746114788",
+    "utc": "2026-10-25T15:52:39.585215+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/masks.zip::masks/S2A_MSIL1C_20180126T032011_N0206_R118_T49TGK_20180126T083810.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "8ed21b1ff1b0effd48af0405c731ca4670725e4f0a0ec8705efa56626ec0ac95",
+    "utc": "2026-10-25T15:52:39.658332+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/alt_masks.zip::alt_masks/ALT_S2A_MSIL1C_20180126T032011_N0206_R118_T49TGK_20180126T083810.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "8b15324f7c3b756a29adec86cf13d98d15bc50e54489e7cfde05b5ac547d8744",
+    "utc": "2026-10-25T15:52:39.703951+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/masks.zip::masks/S2A_MSIL1C_20180221T083951_N0206_R064_T34LCR_20180221T123030.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "5709e87d8b336a7ae629065ef210a01d2920aa04965856871e8caa5ca162f88f",
+    "utc": "2026-10-25T15:52:39.776133+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/alt_masks.zip::alt_masks/ALT_S2A_MSIL1C_20180221T083951_N0206_R064_T34LCR_20180221T123030.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "6ac39156128cace9b1084e0f34fdfed1ca22407bb3dd40dce5194b05a8840a90",
+    "utc": "2026-10-25T15:52:39.822536+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/masks.zip::masks/S2A_MSIL1C_20180225T045751_N0206_R119_T45TXE_20180225T084222.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "428d285582fc2ee695d36e476ca2589b3d2d3d2656783427cecc605fb492b83e",
+    "utc": "2026-10-25T15:52:39.899192+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/alt_masks.zip::alt_masks/ALT_S2A_MSIL1C_20180225T045751_N0206_R119_T45TXE_20180225T084222.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "428d285582fc2ee695d36e476ca2589b3d2d3d2656783427cecc605fb492b83e",
+    "utc": "2026-10-25T15:52:39.947995+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/masks.zip::masks/S2A_MSIL1C_20180320T183041_N0206_R027_T12UWC_20180320T220230.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "13fcfc4e750249b368211daaf8efc47617a7e3f5a70ab447f16c91d776c6417e",
+    "utc": "2026-10-25T15:52:40.021458+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/alt_masks.zip::alt_masks/ALT_S2A_MSIL1C_20180320T183041_N0206_R027_T12UWC_20180320T220230.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "010022a94c114767b65be455cd9549e19522b6565dfe5ecfe996aac29fc5e7aa",
+    "utc": "2026-10-25T15:52:40.067570+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/masks.zip::masks/S2A_MSIL1C_20180407T110621_N0206_R137_T31UCV_20180407T132633.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "be826d8d3b422daab1b6ed17f81cabd43617d8cb7a05b7f66579a60746114788",
+    "utc": "2026-10-25T15:52:40.142592+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/alt_masks.zip::alt_masks/ALT_S2A_MSIL1C_20180407T110621_N0206_R137_T31UCV_20180407T132633.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "be826d8d3b422daab1b6ed17f81cabd43617d8cb7a05b7f66579a60746114788",
+    "utc": "2026-10-25T15:52:40.191963+00:00"
+  },
+  {
+    "path": "/home/scv/shared/phase304_20261024/scores/S2A_MSIL1C_20180407T110621_N0206_R137_T31UCV_20180407T132633.npy",
+    "mode": "authorized C12 Source fullscores only",
+    "sha256": "cf1191608271b069dad60a864080acd5a22fe42bb09a18428717c585c4d59867",
+    "utc": "2026-10-25T15:52:40.237476+00:00"
+  },
+  {
+    "path": "/home/scv/shared/phase304_20261024/teacher/S2A_MSIL1C_20180407T110621_N0206_R137_T31UCV_20180407T132633.npz",
+    "mode": "authorized C12 frozen teacher pseudo,pred,maximum,valid only",
+    "sha256": "e061ca0ff1a64a7a3e7a29945b92d3ae718ccf2dc7a339fb4de20c774684d12f",
+    "utc": "2026-10-25T15:52:40.253241+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/masks.zip::masks/S2A_MSIL1C_20180410T214911_N0206_R043_T02LKH_20180410T231102.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "be826d8d3b422daab1b6ed17f81cabd43617d8cb7a05b7f66579a60746114788",
+    "utc": "2026-10-25T15:52:40.505750+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/alt_masks.zip::alt_masks/ALT_S2A_MSIL1C_20180410T214911_N0206_R043_T02LKH_20180410T231102.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "be826d8d3b422daab1b6ed17f81cabd43617d8cb7a05b7f66579a60746114788",
+    "utc": "2026-10-25T15:52:40.551682+00:00"
+  },
+  {
+    "path": "/home/scv/shared/phase205_20261019/infer/R4/scores/Catalogue/S2A_MSIL1C_20180410T214911_N0206_R043_T02LKH_20180410T231102.npz",
+    "mode": "historical support archive byteSHA; only flat_indices,valid decoded",
+    "sha256": "da91bbfd294da8dee0b57151585145937b52cb6f94f5e854c96e3387d7c9bda6",
+    "utc": "2026-10-25T15:52:40.591274+00:00"
+  },
+  {
+    "path": "/home/scv/shared/phase302_20261020/evaluation/Source_S2A_MSIL1C_20180410T214911_N0206_R043_T02LKH_20180410T231102.npz",
+    "mode": "authorized B4 Source/PL scores,pred,shadow,valid only",
+    "sha256": "0ed58310ca674417ed2657b85a1d3aee5fb7d50b7d3cc02475551447177e24b2",
+    "utc": "2026-10-25T15:52:40.638512+00:00"
+  },
+  {
+    "path": "/home/scv/shared/phase304_20261024/evaluation/LoRA_S2A_MSIL1C_20180410T214911_N0206_R043_T02LKH_20180410T231102.npz",
+    "mode": "authorized B4 Source/PL scores,pred,shadow,valid only",
+    "sha256": "f81654914c977e81a26b14a26a055b29c056a07e1a8370229c0157849ae2f99f",
+    "utc": "2026-10-25T15:52:40.771032+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/masks.zip::masks/S2A_MSIL1C_20180504T005651_N0206_R088_T57VVK_20180504T024815.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "cf030c4a6d33d9fc81c8efeec566cbb8ff736b8d1924947ed9192b05856cd77c",
+    "utc": "2026-10-25T15:52:41.253455+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/alt_masks.zip::alt_masks/ALT_S2A_MSIL1C_20180504T005651_N0206_R088_T57VVK_20180504T024815.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "f88baae04d7c25f708a96fc207262c8ee71d809851cf9e892cb44c84fdef4e62",
+    "utc": "2026-10-25T15:52:41.308348+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/masks.zip::masks/S2A_MSIL1C_20180518T171941_N0206_R012_T14TQR_20180518T210433.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "144bee7f4a4c1f6f194baba2bfa2e110f2e5e3e6b41c3e84035c510c26efeb5b",
+    "utc": "2026-10-25T15:52:41.388118+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/alt_masks.zip::alt_masks/ALT_S2A_MSIL1C_20180518T171941_N0206_R012_T14TQR_20180518T210433.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "c1af9c5531964c281619965b0c465d3e3b4cb028e12c1cc4a6327e98bd62682a",
+    "utc": "2026-10-25T15:52:41.439764+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/masks.zip::masks/S2A_MSIL1C_20180601T152631_N0206_R068_T19UGP_20180601T185946.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "be826d8d3b422daab1b6ed17f81cabd43617d8cb7a05b7f66579a60746114788",
+    "utc": "2026-10-25T15:52:41.519393+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/alt_masks.zip::alt_masks/ALT_S2A_MSIL1C_20180601T152631_N0206_R068_T19UGP_20180601T185946.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "be826d8d3b422daab1b6ed17f81cabd43617d8cb7a05b7f66579a60746114788",
+    "utc": "2026-10-25T15:52:41.571712+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/masks.zip::masks/S2A_MSIL1C_20180602T081011_N0206_R078_T36PWC_20180602T115947.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "428d285582fc2ee695d36e476ca2589b3d2d3d2656783427cecc605fb492b83e",
+    "utc": "2026-10-25T15:52:41.649767+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/alt_masks.zip::alt_masks/ALT_S2A_MSIL1C_20180602T081011_N0206_R078_T36PWC_20180602T115947.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "428d285582fc2ee695d36e476ca2589b3d2d3d2656783427cecc605fb492b83e",
+    "utc": "2026-10-25T15:52:41.702049+00:00"
+  },
+  {
+    "path": "/home/scv/shared/phase205_20261019/infer/R4/scores/Catalogue/S2A_MSIL1C_20180602T081011_N0206_R078_T36PWC_20180602T115947.npz",
+    "mode": "historical support archive byteSHA; only flat_indices,valid decoded",
+    "sha256": "9d6e37486d3f7f90db8cc81e0d58bbc2fb0cbb382c85a9ea7480033273e3df9c",
+    "utc": "2026-10-25T15:52:41.741698+00:00"
+  },
+  {
+    "path": "/home/scv/shared/phase302_20261020/evaluation/Source_S2A_MSIL1C_20180602T081011_N0206_R078_T36PWC_20180602T115947.npz",
+    "mode": "authorized B4 Source/PL scores,pred,shadow,valid only",
+    "sha256": "8b2adbe6ec03e75c72b0e3d709890151232161b3238e00d58dadabeae0cd2c98",
+    "utc": "2026-10-25T15:52:41.786413+00:00"
+  },
+  {
+    "path": "/home/scv/shared/phase304_20261024/evaluation/LoRA_S2A_MSIL1C_20180602T081011_N0206_R078_T36PWC_20180602T115947.npz",
+    "mode": "authorized B4 Source/PL scores,pred,shadow,valid only",
+    "sha256": "96a5395c371d90cf048da11ff5ba8a730ae352d69cf2d815f76f0d68438d5cce",
+    "utc": "2026-10-25T15:52:41.917137+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/masks.zip::masks/S2A_MSIL1C_20180603T155901_N0206_R097_T17SNA_20180603T194236.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "18eb2f84f6a2d920497b06c4386659bdfe31638959c1be23b2f9989e25802db7",
+    "utc": "2026-10-25T15:52:42.377148+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/alt_masks.zip::alt_masks/ALT_S2A_MSIL1C_20180603T155901_N0206_R097_T17SNA_20180603T194236.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "d2df0afa9cbbb0aa2fb38d3443e7101a402cba3560badd886edb247a3ceaeb58",
+    "utc": "2026-10-25T15:52:42.431305+00:00"
+  },
+  {
+    "path": "/home/scv/shared/phase304_20261024/scores/S2A_MSIL1C_20180603T155901_N0206_R097_T17SNA_20180603T194236.npy",
+    "mode": "authorized C12 Source fullscores only",
+    "sha256": "86cdbbeee6c31b2a1944c8d7939a3f83452da9bb9c87dee5f9fe3309d98a33b6",
+    "utc": "2026-10-25T15:52:42.476918+00:00"
+  },
+  {
+    "path": "/home/scv/shared/phase304_20261024/teacher/S2A_MSIL1C_20180603T155901_N0206_R097_T17SNA_20180603T194236.npz",
+    "mode": "authorized C12 frozen teacher pseudo,pred,maximum,valid only",
+    "sha256": "b1a27d6f36da1e35bfabf6b61eb522b25a9d200368ead73e9280983f98d1d7dc",
+    "utc": "2026-10-25T15:52:42.495132+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/masks.zip::masks/S2A_MSIL1C_20180615T045701_N0206_R119_T45RTK_20180615T080052.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "be826d8d3b422daab1b6ed17f81cabd43617d8cb7a05b7f66579a60746114788",
+    "utc": "2026-10-25T15:52:42.761625+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/alt_masks.zip::alt_masks/ALT_S2A_MSIL1C_20180615T045701_N0206_R119_T45RTK_20180615T080052.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "be826d8d3b422daab1b6ed17f81cabd43617d8cb7a05b7f66579a60746114788",
+    "utc": "2026-10-25T15:52:42.811366+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/masks.zip::masks/S2A_MSIL1C_20180621T083651_N0206_R064_T34KBG_20180621T123155.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "428d285582fc2ee695d36e476ca2589b3d2d3d2656783427cecc605fb492b83e",
+    "utc": "2026-10-25T15:52:42.888313+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/alt_masks.zip::alt_masks/ALT_S2A_MSIL1C_20180621T083651_N0206_R064_T34KBG_20180621T123155.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "428d285582fc2ee695d36e476ca2589b3d2d3d2656783427cecc605fb492b83e",
+    "utc": "2026-10-25T15:52:42.937433+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/masks.zip::masks/S2A_MSIL1C_20180624T170851_N0206_R112_T16UCG_20180624T223010.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "1dbe096ddb584651f35dc5c2ea508005c1881917034fff03ad25eb4cfefc2330",
+    "utc": "2026-10-25T15:52:43.015117+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/alt_masks.zip::alt_masks/ALT_S2A_MSIL1C_20180624T170851_N0206_R112_T16UCG_20180624T223010.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "c95c5331f77bd37ac39fa1f395695ed3ea83f74f8b5758f5ed418e70d8680d85",
+    "utc": "2026-10-25T15:52:43.063773+00:00"
+  },
+  {
+    "path": "/home/scv/shared/phase304_20261024/scores/S2A_MSIL1C_20180624T170851_N0206_R112_T16UCG_20180624T223010.npy",
+    "mode": "authorized C12 Source fullscores only",
+    "sha256": "e1cfd500e119e842612ce5b80dcd6bd21ee0c57248da4e596560b4b5f50aa4c0",
+    "utc": "2026-10-25T15:52:43.111398+00:00"
+  },
+  {
+    "path": "/home/scv/shared/phase304_20261024/teacher/S2A_MSIL1C_20180624T170851_N0206_R112_T16UCG_20180624T223010.npz",
+    "mode": "authorized C12 frozen teacher pseudo,pred,maximum,valid only",
+    "sha256": "aa51852c7b852848f48983a6929d5b7e3ff99f29ccd5612d8e80cde9ac110232",
+    "utc": "2026-10-25T15:52:43.133170+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/masks.zip::masks/S2A_MSIL1C_20180626T144731_N0206_R139_T20PMQ_20180626T163032.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "6ef7c2b7bb667d26e34d6177e20dcfb31ce638f00ecba3bf8625a31a61b8a259",
+    "utc": "2026-10-25T15:52:43.418412+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/alt_masks.zip::alt_masks/ALT_S2A_MSIL1C_20180626T144731_N0206_R139_T20PMQ_20180626T163032.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "76bc83ce1e9cc3defb912d5eb2f83c80a98e410b0a491e6b6588834dfda898f2",
+    "utc": "2026-10-25T15:52:43.471346+00:00"
+  },
+  {
+    "path": "/home/scv/shared/phase304_20261024/scores/S2A_MSIL1C_20180626T144731_N0206_R139_T20PMQ_20180626T163032.npy",
+    "mode": "authorized C12 Source fullscores only",
+    "sha256": "c10922b825c712a68a46a9d1535e198392c37c8362c93b6d2d7095a681cd1f7d",
+    "utc": "2026-10-25T15:52:43.516828+00:00"
+  },
+  {
+    "path": "/home/scv/shared/phase304_20261024/teacher/S2A_MSIL1C_20180626T144731_N0206_R139_T20PMQ_20180626T163032.npz",
+    "mode": "authorized C12 frozen teacher pseudo,pred,maximum,valid only",
+    "sha256": "0325c4d17b82b21ead2127ba42ffbf773a6aa0657071d0b3b5eb87f08f46eed7",
+    "utc": "2026-10-25T15:52:43.537322+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/masks.zip::masks/S2A_MSIL1C_20180703T023551_N0206_R089_T50PLR_20180703T053714.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "be826d8d3b422daab1b6ed17f81cabd43617d8cb7a05b7f66579a60746114788",
+    "utc": "2026-10-25T15:52:43.817258+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/alt_masks.zip::alt_masks/ALT_S2A_MSIL1C_20180703T023551_N0206_R089_T50PLR_20180703T053714.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "be826d8d3b422daab1b6ed17f81cabd43617d8cb7a05b7f66579a60746114788",
+    "utc": "2026-10-25T15:52:43.869869+00:00"
+  },
+  {
+    "path": "/home/scv/shared/phase205_20261019/infer/R4/scores/Catalogue/S2A_MSIL1C_20180703T023551_N0206_R089_T50PLR_20180703T053714.npz",
+    "mode": "historical support archive byteSHA; only flat_indices,valid decoded",
+    "sha256": "a4acdc4b850eaad71957f2e7ba05a732d47c99669e3ef729756d686a42afe3c6",
+    "utc": "2026-10-25T15:52:43.909374+00:00"
+  },
+  {
+    "path": "/home/scv/shared/phase302_20261020/evaluation/Source_S2A_MSIL1C_20180703T023551_N0206_R089_T50PLR_20180703T053714.npz",
+    "mode": "authorized B4 Source/PL scores,pred,shadow,valid only",
+    "sha256": "6d75a6d23ee63b9f346d280ea2847c4b5534970bf57aacb68817cc6b574ab65e",
+    "utc": "2026-10-25T15:52:43.956899+00:00"
+  },
+  {
+    "path": "/home/scv/shared/phase304_20261024/evaluation/LoRA_S2A_MSIL1C_20180703T023551_N0206_R089_T50PLR_20180703T053714.npz",
+    "mode": "authorized B4 Source/PL scores,pred,shadow,valid only",
+    "sha256": "f664b95c550366d76f4e6c62f7c6b746579dd9ecf635122186aac2fa06121ed5",
+    "utc": "2026-10-25T15:52:44.091056+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/masks.zip::masks/S2A_MSIL1C_20180717T071621_N0206_R006_T42WVU_20180717T093030.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "2e107c437689b03f10f5899898ef81d343db113aff71bccf5b6bbb04a0c5f4a1",
+    "utc": "2026-10-25T15:52:44.563233+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/alt_masks.zip::alt_masks/ALT_S2A_MSIL1C_20180717T071621_N0206_R006_T42WVU_20180717T093030.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "46639a3964e03e7b42b22063c0baca648b9f0b379eba19163c1576c163bbda8c",
+    "utc": "2026-10-25T15:52:44.615196+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/masks.zip::masks/S2A_MSIL1C_20180801T181011_N0206_R084_T12TVM_20180801T234550.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "428d285582fc2ee695d36e476ca2589b3d2d3d2656783427cecc605fb492b83e",
+    "utc": "2026-10-25T15:52:44.696357+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/alt_masks.zip::alt_masks/ALT_S2A_MSIL1C_20180801T181011_N0206_R084_T12TVM_20180801T234550.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "428d285582fc2ee695d36e476ca2589b3d2d3d2656783427cecc605fb492b83e",
+    "utc": "2026-10-25T15:52:44.748145+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/masks.zip::masks/S2A_MSIL1C_20180802T230911_N0206_R101_T59LKG_20180803T002614.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "4b9c913e42e9e837039d0b71c1974dbadfe219d237f6c7743e9db0c48c72ae6a",
+    "utc": "2026-10-25T15:52:44.828115+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/alt_masks.zip::alt_masks/ALT_S2A_MSIL1C_20180802T230911_N0206_R101_T59LKG_20180803T002614.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "40d4e2c25feeb9a771ac08fd44240201050218cbf775c9899337254a18d0514f",
+    "utc": "2026-10-25T15:52:44.880687+00:00"
+  },
+  {
+    "path": "/home/scv/shared/phase304_20261024/scores/S2A_MSIL1C_20180802T230911_N0206_R101_T59LKG_20180803T002614.npy",
+    "mode": "authorized C12 Source fullscores only",
+    "sha256": "45e55ac5423af95fed213f615feddcfcd0bf7f0240706efddd7c34a998b799a5",
+    "utc": "2026-10-25T15:52:44.926498+00:00"
+  },
+  {
+    "path": "/home/scv/shared/phase304_20261024/teacher/S2A_MSIL1C_20180802T230911_N0206_R101_T59LKG_20180803T002614.npz",
+    "mode": "authorized C12 frozen teacher pseudo,pred,maximum,valid only",
+    "sha256": "31424ded99c3b4acfb687e60a238f343b2de3e418a301d587251f31ec2b2ce25",
+    "utc": "2026-10-25T15:52:44.950047+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/masks.zip::masks/S2A_MSIL1C_20180811T030541_N0206_R075_T49PCT_20180811T064840.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "1517fca0459789d03cfbde8a81f92885e031132233b2f662efd0ee929242ca7c",
+    "utc": "2026-10-25T15:52:45.230877+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/alt_masks.zip::alt_masks/ALT_S2A_MSIL1C_20180811T030541_N0206_R075_T49PCT_20180811T064840.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "fb087d49cc8d06ba28fedc3780f2268c4cd2babd1eca6feb967da23c547d4126",
+    "utc": "2026-10-25T15:52:45.276338+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/masks.zip::masks/S2A_MSIL1C_20180818T061631_N0206_R034_T43VFG_20180818T074215.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "be826d8d3b422daab1b6ed17f81cabd43617d8cb7a05b7f66579a60746114788",
+    "utc": "2026-10-25T15:52:45.350732+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/alt_masks.zip::alt_masks/ALT_S2A_MSIL1C_20180818T061631_N0206_R034_T43VFG_20180818T074215.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "be826d8d3b422daab1b6ed17f81cabd43617d8cb7a05b7f66579a60746114788",
+    "utc": "2026-10-25T15:52:45.395792+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/masks.zip::masks/S2A_MSIL1C_20180823T084601_N0206_R107_T36UXG_20180823T111105.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "fdc5a1b40e9a2e4e5a4b0dfcb7330ad317264903de807f76fecfeb917283b78a",
+    "utc": "2026-10-25T15:52:45.473282+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/alt_masks.zip::alt_masks/ALT_S2A_MSIL1C_20180823T084601_N0206_R107_T36UXG_20180823T111105.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "d40d64ac4e2bb664362bafbb111c4b1503482e609d926e34c611be915a56683f",
+    "utc": "2026-10-25T15:52:45.519945+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/masks.zip::masks/S2A_MSIL1C_20180906T164851_N0206_R026_T15TYK_20180906T203616.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "1af62c3ad2249ced7283a5c703a1778c1fd4d14a6b3e0912c3f70cd5d02dcf48",
+    "utc": "2026-10-25T15:52:45.591670+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/alt_masks.zip::alt_masks/ALT_S2A_MSIL1C_20180906T164851_N0206_R026_T15TYK_20180906T203616.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "5fb301e8c2463553d31e62c34164e2b00c66ba46dae2e440fe156722d380e3e2",
+    "utc": "2026-10-25T15:52:45.637464+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/masks.zip::masks/S2A_MSIL1C_20180909T102021_N0206_R065_T34VCQ_20180909T155923.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "be826d8d3b422daab1b6ed17f81cabd43617d8cb7a05b7f66579a60746114788",
+    "utc": "2026-10-25T15:52:45.710698+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/alt_masks.zip::alt_masks/ALT_S2A_MSIL1C_20180909T102021_N0206_R065_T34VCQ_20180909T155923.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "be826d8d3b422daab1b6ed17f81cabd43617d8cb7a05b7f66579a60746114788",
+    "utc": "2026-10-25T15:52:45.755498+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/masks.zip::masks/S2A_MSIL1C_20180921T023541_N0206_R089_T49NHG_20180921T061537.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "e37abff69522dfd29b002044def10a3be1479fc9d7fee07a2c6556830d0146de",
+    "utc": "2026-10-25T15:52:45.829408+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/alt_masks.zip::alt_masks/ALT_S2A_MSIL1C_20180921T023541_N0206_R089_T49NHG_20180921T061537.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "92f9c85f8f2bab6f35084087f38abafb0dbffae906d07da3a549f676d1241435",
+    "utc": "2026-10-25T15:52:45.875470+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/masks.zip::masks/S2A_MSIL1C_20181029T170421_N0206_R069_T15SVC_20181029T203354.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "03ebcd299862cd1df81f7b6c35f751e1abe48adb9da38b0b734cc64693dbd6bf",
+    "utc": "2026-10-25T15:52:45.948454+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/alt_masks.zip::alt_masks/ALT_S2A_MSIL1C_20181029T170421_N0206_R069_T15SVC_20181029T203354.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "1f0efe282ad913b6f0bcdb1af5896af5b34c530cd8faf1430107f178e7c3dffb",
+    "utc": "2026-10-25T15:52:45.993674+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/masks.zip::masks/S2A_MSIL1C_20181030T044921_N0206_R076_T45RXQ_20181030T065311.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "debfdeeca7da70d88dbbd5d4c4e0be7f7d501c69774220901a503b8247c801cc",
+    "utc": "2026-10-25T15:52:46.067167+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/alt_masks.zip::alt_masks/ALT_S2A_MSIL1C_20181030T044921_N0206_R076_T45RXQ_20181030T065311.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "82d394a15891de2c0dbf6a43915156fb852783bc3539adf9f6e86afd60af4d94",
+    "utc": "2026-10-25T15:52:46.112704+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/masks.zip::masks/S2A_MSIL1C_20181030T095121_N0206_R079_T33TWK_20181030T130454.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "3f0fd467179abd9954771d9138839ba98b24bf227e40287a4a0ad9f8a9a1f5e4",
+    "utc": "2026-10-25T15:52:46.187110+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/alt_masks.zip::alt_masks/ALT_S2A_MSIL1C_20181030T095121_N0206_R079_T33TWK_20181030T130454.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "743c7ac9acd9537b95d4779233b179b8054db056fe54a758fd9ebc86d06d8fe1",
+    "utc": "2026-10-25T15:52:46.234659+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/masks.zip::masks/S2A_MSIL1C_20181117T141441_N0207_R053_T24VVM_20181117T160857.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "be826d8d3b422daab1b6ed17f81cabd43617d8cb7a05b7f66579a60746114788",
+    "utc": "2026-10-25T15:52:46.307374+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/alt_masks.zip::alt_masks/ALT_S2A_MSIL1C_20181117T141441_N0207_R053_T24VVM_20181117T160857.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "be826d8d3b422daab1b6ed17f81cabd43617d8cb7a05b7f66579a60746114788",
+    "utc": "2026-10-25T15:52:46.353013+00:00"
+  },
+  {
+    "path": "/home/scv/shared/phase304_20261024/scores/S2A_MSIL1C_20181117T141441_N0207_R053_T24VVM_20181117T160857.npy",
+    "mode": "authorized C12 Source fullscores only",
+    "sha256": "7bb0b1b49eb0357ea6a01df48bd82916241c44f7744835582a104d5b6267418d",
+    "utc": "2026-10-25T15:52:46.397935+00:00"
+  },
+  {
+    "path": "/home/scv/shared/phase304_20261024/teacher/S2A_MSIL1C_20181117T141441_N0207_R053_T24VVM_20181117T160857.npz",
+    "mode": "authorized C12 frozen teacher pseudo,pred,maximum,valid only",
+    "sha256": "9d123ac36ccc8d16c5cb089afa853f9cd5c76968c82c5708a01691bcba1f1c00",
+    "utc": "2026-10-25T15:52:46.413362+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/masks.zip::masks/S2A_MSIL1C_20181213T225941_N0207_R001_T01UDV_20181214T003010.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "be826d8d3b422daab1b6ed17f81cabd43617d8cb7a05b7f66579a60746114788",
+    "utc": "2026-10-25T15:52:46.683888+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/alt_masks.zip::alt_masks/ALT_S2A_MSIL1C_20181213T225941_N0207_R001_T01UDV_20181214T003010.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "be826d8d3b422daab1b6ed17f81cabd43617d8cb7a05b7f66579a60746114788",
+    "utc": "2026-10-25T15:52:46.735508+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/masks.zip::masks/S2A_MSIL1C_20181214T090351_N0207_R007_T34QGM_20181214T102932.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "428d285582fc2ee695d36e476ca2589b3d2d3d2656783427cecc605fb492b83e",
+    "utc": "2026-10-25T15:52:46.818386+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/alt_masks.zip::alt_masks/ALT_S2A_MSIL1C_20181214T090351_N0207_R007_T34QGM_20181214T102932.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "428d285582fc2ee695d36e476ca2589b3d2d3d2656783427cecc605fb492b83e",
+    "utc": "2026-10-25T15:52:46.869720+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/masks.zip::masks/S2B_MSIL1C_20180119T110349_N0206_R094_T29QMV_20180119T131401.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "428d285582fc2ee695d36e476ca2589b3d2d3d2656783427cecc605fb492b83e",
+    "utc": "2026-10-25T15:52:46.949791+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/alt_masks.zip::alt_masks/ALT_S2B_MSIL1C_20180119T110349_N0206_R094_T29QMV_20180119T131401.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "428d285582fc2ee695d36e476ca2589b3d2d3d2656783427cecc605fb492b83e",
+    "utc": "2026-10-25T15:52:47.003086+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/masks.zip::masks/S2B_MSIL1C_20180120T021009_N0206_R103_T53TLN_20180120T034823.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "2ef9c56e9dfe3bfebd3088b3a95e871976d39a2cb82010c10b0d3b714854158d",
+    "utc": "2026-10-25T15:52:47.079195+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/alt_masks.zip::alt_masks/ALT_S2B_MSIL1C_20180120T021009_N0206_R103_T53TLN_20180120T034823.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "2ef9c56e9dfe3bfebd3088b3a95e871976d39a2cb82010c10b0d3b714854158d",
+    "utc": "2026-10-25T15:52:47.125609+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/masks.zip::masks/S2B_MSIL1C_20180125T080209_N0206_R035_T36NXN_20180125T100104.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "82ea82a67cf49c265046c4335d15150b1d3d3535302f8b56197eaa844acf6f2c",
+    "utc": "2026-10-25T15:52:47.207645+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/alt_masks.zip::alt_masks/ALT_S2B_MSIL1C_20180125T080209_N0206_R035_T36NXN_20180125T100104.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "7a97d09027b3ccd4a49b449b650e4b529917d9ea6fbe78b45761fd8252e3f043",
+    "utc": "2026-10-25T15:52:47.260200+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/masks.zip::masks/S2B_MSIL1C_20180131T182559_N0206_R127_T12TUN_20180131T202103.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "4dc21bb3710da4e1bd9282913465adfb97352bea2ed123cb2385ca5ce18121ef",
+    "utc": "2026-10-25T15:52:47.338669+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/alt_masks.zip::alt_masks/ALT_S2B_MSIL1C_20180131T182559_N0206_R127_T12TUN_20180131T202103.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "4dc21bb3710da4e1bd9282913465adfb97352bea2ed123cb2385ca5ce18121ef",
+    "utc": "2026-10-25T15:52:47.390342+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/masks.zip::masks/S2B_MSIL1C_20180201T144729_N0206_R139_T19LDE_20180201T180727.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "be826d8d3b422daab1b6ed17f81cabd43617d8cb7a05b7f66579a60746114788",
+    "utc": "2026-10-25T15:52:47.470416+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/alt_masks.zip::alt_masks/ALT_S2B_MSIL1C_20180201T144729_N0206_R139_T19LDE_20180201T180727.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "be826d8d3b422daab1b6ed17f81cabd43617d8cb7a05b7f66579a60746114788",
+    "utc": "2026-10-25T15:52:47.522521+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/masks.zip::masks/S2B_MSIL1C_20180210T232709_N0206_R130_T01VEK_20180211T005618.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "be826d8d3b422daab1b6ed17f81cabd43617d8cb7a05b7f66579a60746114788",
+    "utc": "2026-10-25T15:52:47.601479+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/alt_masks.zip::alt_masks/ALT_S2B_MSIL1C_20180210T232709_N0206_R130_T01VEK_20180211T005618.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "be826d8d3b422daab1b6ed17f81cabd43617d8cb7a05b7f66579a60746114788",
+    "utc": "2026-10-25T15:52:47.654610+00:00"
+  },
+  {
+    "path": "/home/scv/shared/phase304_20261024/scores/S2B_MSIL1C_20180210T232709_N0206_R130_T01VEK_20180211T005618.npy",
+    "mode": "authorized C12 Source fullscores only",
+    "sha256": "54625ead8689e6850034bc24939d47e9fa5c3da46fa738cca58717e18db1198b",
+    "utc": "2026-10-25T15:52:47.702198+00:00"
+  },
+  {
+    "path": "/home/scv/shared/phase304_20261024/teacher/S2B_MSIL1C_20180210T232709_N0206_R130_T01VEK_20180211T005618.npz",
+    "mode": "authorized C12 frozen teacher pseudo,pred,maximum,valid only",
+    "sha256": "84aeae12c525bb02d1942b089fbca42ea2bd2fe51cfb3cad0dc57549a7eb783b",
+    "utc": "2026-10-25T15:52:47.723298+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/masks.zip::masks/S2B_MSIL1C_20180214T025819_N0206_R032_T51TUM_20180214T072411.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "428d285582fc2ee695d36e476ca2589b3d2d3d2656783427cecc605fb492b83e",
+    "utc": "2026-10-25T15:52:47.987141+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/alt_masks.zip::alt_masks/ALT_S2B_MSIL1C_20180214T025819_N0206_R032_T51TUM_20180214T072411.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "428d285582fc2ee695d36e476ca2589b3d2d3d2656783427cecc605fb492b83e",
+    "utc": "2026-10-25T15:52:48.039670+00:00"
+  },
+  {
+    "path": "/home/scv/shared/phase205_20261019/infer/R4/scores/Catalogue/S2B_MSIL1C_20180214T025819_N0206_R032_T51TUM_20180214T072411.npz",
+    "mode": "historical support archive byteSHA; only flat_indices,valid decoded",
+    "sha256": "368cf2311cea2e58a59e80bb29336fde461c1cb83ae8a585c81e70bab919e903",
+    "utc": "2026-10-25T15:52:48.079663+00:00"
+  },
+  {
+    "path": "/home/scv/shared/phase302_20261020/evaluation/Source_S2B_MSIL1C_20180214T025819_N0206_R032_T51TUM_20180214T072411.npz",
+    "mode": "authorized B4 Source/PL scores,pred,shadow,valid only",
+    "sha256": "c3259769a97d3833da9a96a87da3cc6ae2665708f3205efe4dbd1dda9d131fcd",
+    "utc": "2026-10-25T15:52:48.119783+00:00"
+  },
+  {
+    "path": "/home/scv/shared/phase304_20261024/evaluation/LoRA_S2B_MSIL1C_20180214T025819_N0206_R032_T51TUM_20180214T072411.npz",
+    "mode": "authorized B4 Source/PL scores,pred,shadow,valid only",
+    "sha256": "d945d9ab62187fc8f34b571cae45965eb2ecde97fb2dbc8e2bcd0150f4426e20",
+    "utc": "2026-10-25T15:52:48.243042+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/masks.zip::masks/S2B_MSIL1C_20180301T084859_N0206_R107_T39XWB_20180301T091109.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "5264a44ecc5c6b5bcd49f43394369825664cd4f994ea6462a31cca6de514f944",
+    "utc": "2026-10-25T15:52:48.701998+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/alt_masks.zip::alt_masks/ALT_S2B_MSIL1C_20180301T084859_N0206_R107_T39XWB_20180301T091109.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "dee01812819e569587342e9f996b13628874b4d4ddfa1ba192b19f29000cf8b2",
+    "utc": "2026-10-25T15:52:48.755272+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/masks.zip::masks/S2B_MSIL1C_20180313T050719_N0206_R133_T38CPE_20180313T085711.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "428d285582fc2ee695d36e476ca2589b3d2d3d2656783427cecc605fb492b83e",
+    "utc": "2026-10-25T15:52:48.836729+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/alt_masks.zip::alt_masks/ALT_S2B_MSIL1C_20180313T050719_N0206_R133_T38CPE_20180313T085711.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "428d285582fc2ee695d36e476ca2589b3d2d3d2656783427cecc605fb492b83e",
+    "utc": "2026-10-25T15:52:48.888979+00:00"
+  },
+  {
+    "path": "/home/scv/shared/phase304_20261024/scores/S2B_MSIL1C_20180313T050719_N0206_R133_T38CPE_20180313T085711.npy",
+    "mode": "authorized C12 Source fullscores only",
+    "sha256": "1e22d594a57856a7918d0b82d44153c129c3232bc3c834313a7b3c5947ac9c20",
+    "utc": "2026-10-25T15:52:48.936548+00:00"
+  },
+  {
+    "path": "/home/scv/shared/phase304_20261024/teacher/S2B_MSIL1C_20180313T050719_N0206_R133_T38CPE_20180313T085711.npz",
+    "mode": "authorized C12 frozen teacher pseudo,pred,maximum,valid only",
+    "sha256": "f931304374ca6edc4c4a5b9ba61c5a99f903db66b987aae616b6525f796069b7",
+    "utc": "2026-10-25T15:52:48.957526+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/masks.zip::masks/S2B_MSIL1C_20180409T055629_N0206_R091_T42SWB_20180409T094452.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "e8e14e014d14d773d4e02fb2eb297ec9564b44694c27edf5afa35a55cec23b9a",
+    "utc": "2026-10-25T15:52:49.227892+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/alt_masks.zip::alt_masks/ALT_S2B_MSIL1C_20180409T055629_N0206_R091_T42SWB_20180409T094452.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "408c489edbb69751d6da10a5802cf7d7fdde78c7e7690fb018b5febd3b4aeaeb",
+    "utc": "2026-10-25T15:52:49.281687+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/masks.zip::masks/S2B_MSIL1C_20180517T051649_N0206_R062_T44RKQ_20180517T090507.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "428d285582fc2ee695d36e476ca2589b3d2d3d2656783427cecc605fb492b83e",
+    "utc": "2026-10-25T15:52:49.360961+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/alt_masks.zip::alt_masks/ALT_S2B_MSIL1C_20180517T051649_N0206_R062_T44RKQ_20180517T090507.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "428d285582fc2ee695d36e476ca2589b3d2d3d2656783427cecc605fb492b83e",
+    "utc": "2026-10-25T15:52:49.413860+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/masks.zip::masks/S2B_MSIL1C_20180531T221559_N0206_R129_T60HWC_20180531T231251.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "7075f5d1abfb1a6011077e7b6c98c3f0bbf02c141c5c2fb4d3b6d213dd3f20bd",
+    "utc": "2026-10-25T15:52:49.493854+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/alt_masks.zip::alt_masks/ALT_S2B_MSIL1C_20180531T221559_N0206_R129_T60HWC_20180531T231251.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "9f073b9e6900ff623a352b383dd6c6f43f3c69b0eeb58440218f6a5d73a40be6",
+    "utc": "2026-10-25T15:52:49.545181+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/masks.zip::masks/S2B_MSIL1C_20180617T095029_N0206_R079_T33SUT_20180617T120017.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "428d285582fc2ee695d36e476ca2589b3d2d3d2656783427cecc605fb492b83e",
+    "utc": "2026-10-25T15:52:49.627617+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/alt_masks.zip::alt_masks/ALT_S2B_MSIL1C_20180617T095029_N0206_R079_T33SUT_20180617T120017.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "428d285582fc2ee695d36e476ca2589b3d2d3d2656783427cecc605fb492b83e",
+    "utc": "2026-10-25T15:52:49.680097+00:00"
+  },
+  {
+    "path": "/home/scv/shared/phase304_20261024/scores/S2B_MSIL1C_20180617T095029_N0206_R079_T33SUT_20180617T120017.npy",
+    "mode": "authorized C12 Source fullscores only",
+    "sha256": "62525f541b77169469bc4111367aef19bd5b23e776ed0f69c7a0eb23859b1afb",
+    "utc": "2026-10-25T15:52:49.717111+00:00"
+  },
+  {
+    "path": "/home/scv/shared/phase304_20261024/teacher/S2B_MSIL1C_20180617T095029_N0206_R079_T33SUT_20180617T120017.npz",
+    "mode": "authorized C12 frozen teacher pseudo,pred,maximum,valid only",
+    "sha256": "581fcb82e06cb8a2209b2225cbe2c152e7cf3757c3772780eb694f84a2d3d1e8",
+    "utc": "2026-10-25T15:52:49.738030+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/masks.zip::masks/S2B_MSIL1C_20180617T233819_N0206_R087_T57LYF_20180618T010340.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "722aa5f74f4066edec9d4a60939781a34dedde4654db9db8b589f979180841da",
+    "utc": "2026-10-25T15:52:49.999259+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/alt_masks.zip::alt_masks/ALT_S2B_MSIL1C_20180617T233819_N0206_R087_T57LYF_20180618T010340.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "722aa5f74f4066edec9d4a60939781a34dedde4654db9db8b589f979180841da",
+    "utc": "2026-10-25T15:52:50.045446+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/masks.zip::masks/S2B_MSIL1C_20180623T152639_N0206_R025_T18PXV_20180623T201712.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "5d6896c1168d12a801f91e383868342d4cd5c78e9d85fbecfc5818e5ab6e352c",
+    "utc": "2026-10-25T15:52:50.118861+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/alt_masks.zip::alt_masks/ALT_S2B_MSIL1C_20180623T152639_N0206_R025_T18PXV_20180623T201712.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "f1c8120b3563e623dfeaf4bf2520491a701b5f0dbb1f16b77aad82a23eb000d9",
+    "utc": "2026-10-25T15:52:50.164390+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/masks.zip::masks/S2B_MSIL1C_20180625T230019_N0206_R058_T58KHC_20180626T001009.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "d42a01e7676020e75ad471f1750c378e93408a5f4bab3d4ea33555e7a73decb9",
+    "utc": "2026-10-25T15:52:50.242042+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/alt_masks.zip::alt_masks/ALT_S2B_MSIL1C_20180625T230019_N0206_R058_T58KHC_20180626T001009.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "d42a01e7676020e75ad471f1750c378e93408a5f4bab3d4ea33555e7a73decb9",
+    "utc": "2026-10-25T15:52:50.287777+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/masks.zip::masks/S2B_MSIL1C_20180718T073729_N0206_R092_T35JQH_20180718T113136.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "428d285582fc2ee695d36e476ca2589b3d2d3d2656783427cecc605fb492b83e",
+    "utc": "2026-10-25T15:52:50.359170+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/alt_masks.zip::alt_masks/ALT_S2B_MSIL1C_20180718T073729_N0206_R092_T35JQH_20180718T113136.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "428d285582fc2ee695d36e476ca2589b3d2d3d2656783427cecc605fb492b83e",
+    "utc": "2026-10-25T15:52:50.404650+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/masks.zip::masks/S2B_MSIL1C_20180807T023549_N0206_R089_T53VMK_20180807T042942.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "f323fcaf859a99b49984ca43cc5d7ae74bf10ac7f92517502f0ffe439399bab9",
+    "utc": "2026-10-25T15:52:50.477915+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/alt_masks.zip::alt_masks/ALT_S2B_MSIL1C_20180807T023549_N0206_R089_T53VMK_20180807T042942.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "8809356f75323849beffd73f3f8a0f162a3a787c46a18572527413b48c518c73",
+    "utc": "2026-10-25T15:52:50.523611+00:00"
+  },
+  {
+    "path": "/home/scv/shared/phase304_20261024/scores/S2B_MSIL1C_20180807T023549_N0206_R089_T53VMK_20180807T042942.npy",
+    "mode": "authorized C12 Source fullscores only",
+    "sha256": "7df7d2bda3ffa4f9895baaf299ad17ec29368eb598ae6a7b14c760b2063f86bd",
+    "utc": "2026-10-25T15:52:50.568313+00:00"
+  },
+  {
+    "path": "/home/scv/shared/phase304_20261024/teacher/S2B_MSIL1C_20180807T023549_N0206_R089_T53VMK_20180807T042942.npz",
+    "mode": "authorized C12 frozen teacher pseudo,pred,maximum,valid only",
+    "sha256": "3cb45953e433675fdd605a60c1178adaaa387c67035bedc40622fe1fb106d46a",
+    "utc": "2026-10-25T15:52:50.582971+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/masks.zip::masks/S2B_MSIL1C_20180811T104019_N0206_R008_T31UGQ_20180811T143244.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "a5aff09a62e81efa328a268beb68ebb5c377e3898f6b176654266472b464a43f",
+    "utc": "2026-10-25T15:52:50.849749+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/alt_masks.zip::alt_masks/ALT_S2B_MSIL1C_20180811T104019_N0206_R008_T31UGQ_20180811T143244.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "9abbec149c15c31db96c526d195f355a844966ae713686a4edf0f8fbfa220906",
+    "utc": "2026-10-25T15:52:50.902398+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/masks.zip::masks/S2B_MSIL1C_20180816T162829_N0206_R083_T18VUM_20180816T213305.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "be826d8d3b422daab1b6ed17f81cabd43617d8cb7a05b7f66579a60746114788",
+    "utc": "2026-10-25T15:52:50.984607+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/alt_masks.zip::alt_masks/ALT_S2B_MSIL1C_20180816T162829_N0206_R083_T18VUM_20180816T213305.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "be826d8d3b422daab1b6ed17f81cabd43617d8cb7a05b7f66579a60746114788",
+    "utc": "2026-10-25T15:52:51.037601+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/masks.zip::masks/S2B_MSIL1C_20180821T171849_N0206_R012_T14RKU_20180821T222028.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "f32fe33ae8dcb9de7ea5899bcee58fe708235b580fcad04e7ed23bbf88b48bd9",
+    "utc": "2026-10-25T15:52:51.115925+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/alt_masks.zip::alt_masks/ALT_S2B_MSIL1C_20180821T171849_N0206_R012_T14RKU_20180821T222028.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "f32fe33ae8dcb9de7ea5899bcee58fe708235b580fcad04e7ed23bbf88b48bd9",
+    "utc": "2026-10-25T15:52:51.167616+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/masks.zip::masks/S2B_MSIL1C_20180905T181029_N0206_R084_T13UCT_20180905T215631.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "f347039f504a83dc3899ac7e7e201cb322618f505e681e4705635f6f4dace15e",
+    "utc": "2026-10-25T15:52:51.250964+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/alt_masks.zip::alt_masks/ALT_S2B_MSIL1C_20180905T181029_N0206_R084_T13UCT_20180905T215631.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "97ad204ff9e7d7b4dfcec76528985872719ac687277e19c5529a7b828e4af087",
+    "utc": "2026-10-25T15:52:51.303289+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/masks.zip::masks/S2B_MSIL1C_20180909T142739_N0206_R139_T31XDJ_20180909T181648.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "f764a78e61bdab2208ccac5db1b5b3d492456f6328ce83762861273c1730890f",
+    "utc": "2026-10-25T15:52:51.382554+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/alt_masks.zip::alt_masks/ALT_S2B_MSIL1C_20180909T142739_N0206_R139_T31XDJ_20180909T181648.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "c348b04d466e4b1836e5aed110fe3d073d02573273a9a7a42a43dc481e8d5d5f",
+    "utc": "2026-10-25T15:52:51.433972+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/masks.zip::masks/S2B_MSIL1C_20181212T080919_N0207_R049_T22CEP_20181212T094237.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "be826d8d3b422daab1b6ed17f81cabd43617d8cb7a05b7f66579a60746114788",
+    "utc": "2026-10-25T15:52:51.513043+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/alt_masks.zip::alt_masks/ALT_S2B_MSIL1C_20181212T080919_N0207_R049_T22CEP_20181212T094237.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "be826d8d3b422daab1b6ed17f81cabd43617d8cb7a05b7f66579a60746114788",
+    "utc": "2026-10-25T15:52:51.566283+00:00"
+  },
+  {
+    "path": "/home/scv/shared/phase304_20261024/scores/S2B_MSIL1C_20181212T080919_N0207_R049_T22CEP_20181212T094237.npy",
+    "mode": "authorized C12 Source fullscores only",
+    "sha256": "95f08b965f744140414281a9e24ae7be27fdf507eb92be79997b0f1d80c93499",
+    "utc": "2026-10-25T15:52:51.613253+00:00"
+  },
+  {
+    "path": "/home/scv/shared/phase304_20261024/teacher/S2B_MSIL1C_20181212T080919_N0207_R049_T22CEP_20181212T094237.npz",
+    "mode": "authorized C12 frozen teacher pseudo,pred,maximum,valid only",
+    "sha256": "188dab4aa2637ffed30abd2e4c897d0e129b7dea52afe2f4b362968eb2b1c49d",
+    "utc": "2026-10-25T15:52:51.632916+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/masks.zip::masks/S2B_MSIL1C_20181214T150719_N0207_R082_T19QGU_20181214T182650.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "0ad2ad049681a3090ed66fd81519070b9f08adb52449a228b1058d808c89e6a2",
+    "utc": "2026-10-25T15:52:51.895685+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/alt_masks.zip::alt_masks/ALT_S2B_MSIL1C_20181214T150719_N0207_R082_T19QGU_20181214T182650.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "0ad2ad049681a3090ed66fd81519070b9f08adb52449a228b1058d808c89e6a2",
+    "utc": "2026-10-25T15:52:51.948210+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/masks.zip::masks/S2B_MSIL1C_20181220T033139_N0207_R018_T48QVK_20181220T060651.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "42bb6f56ee8d93a197d160b56fb1cc9ef2de98ee0acbaab06bef6e2f7830cebf",
+    "utc": "2026-10-25T15:52:52.029485+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/alt_masks.zip::alt_masks/ALT_S2B_MSIL1C_20181220T033139_N0207_R018_T48QVK_20181220T060651.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "42bb6f56ee8d93a197d160b56fb1cc9ef2de98ee0acbaab06bef6e2f7830cebf",
+    "utc": "2026-10-25T15:52:52.083709+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/masks.zip::masks/S2B_MSIL1C_20181220T033139_N0207_R018_T48SYC_20181220T060651.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "be826d8d3b422daab1b6ed17f81cabd43617d8cb7a05b7f66579a60746114788",
+    "utc": "2026-10-25T15:52:52.162881+00:00"
+  },
+  {
+    "path": "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/alt_masks.zip::alt_masks/ALT_S2B_MSIL1C_20181220T033139_N0207_R018_T48SYC_20181220T060651.npy",
+    "mode": "authorized dual-reference pixels; labels only",
+    "sha256": "be826d8d3b422daab1b6ed17f81cabd43617d8cb7a05b7f66579a60746114788",
+    "utc": "2026-10-25T15:52:52.218041+00:00"
+  }
+]
