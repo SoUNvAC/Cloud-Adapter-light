@@ -6,12 +6,19 @@ def main():
  for n,h in d['code'].items():assert sha(R/n)==h,n
  assert load(S/'STATUS.json')['status']=='completed' and load(S/'INDEPENDENT_ACCEPTANCE.json')['status']=='passed';assert load(S/'CPU_ACCEPTANCE.json')['historical_CMC_D']==506798 and load(S/'CPU_ACCEPTANCE.json')['historical_CMC_B']==784478
  assert len(read(S/'METRICS.csv'))==9 and len(read(S/'TRAINING_IDENTITY.csv'))==5
- b=load(S/'BACKUP_RECEIPT.json');assert b['all_member_SHA_verified'] and b['whole_compressed_stream_SHA_verified'] and b['projected_two_hosts_with_summary']<=16000000000 and b['no_persistent_archive']
+ b=load(S/'BACKUP_RECEIPT.json');recovery=b.get('backup_mode')=='member_checked_prefix_plus_SHA_verified_segmented_suffix';assert b['all_member_SHA_verified'] and (b['whole_compressed_stream_SHA_verified'] or (recovery and b['completed_recovery_streams_SHA_verified'])) and b['projected_two_hosts_with_summary']<=16000000000 and b['no_persistent_archive']
+ if recovery:
+  index=S/'backup_recovery01/RECOVERY01_INTEGRITY_INDEX.json';assert sha(index)==b['integrity_index_sha256'];ev=load(index)
+  assert ev['all_member_SHA_verified'] and ev['first_stream_SHA']=='unavailable/incomplete' and len(ev['receipts'])==b['recovery_batches']
+  for r in ev['receipts']:assert r['local']['stream_sha256']==r['remote']['stream_sha256'] and r['local']['stream_bytes']==r['remote']['stream_bytes']
  if sys.platform=='linux':
   for n,v in load(ROOT/'BACKUP_FILES.json').items():assert sha(ROOT/n)==v['sha256'] and (ROOT/n).stat().st_size==v['bytes'],n
   for f,h in load(S/'EXECUTION_LOCK.json')['inputs'].items():assert sha(f)==h,f
   for name in ['CPU_INPUT_SHA256.json','REFERENCE_INPUT_SHA256.json']:
    for f,h in load(S/name).items():assert sha(f)==h,f
-  assert load(ROOT/'STREAM_RECEIPT.json')['stream_sha256']==b['stream_sha256']
+  if recovery:
+   assert sha(ROOT/'BACKUP_FILES.json')==b['manifest_sha256']
+   for n,h in ev['recovery_metadata_SHA'].items():assert sha(ROOT/'backup_recovery01'/n)==h,n
+  else:assert load(ROOT/'STREAM_RECEIPT.json')['stream_sha256']==b['stream_sha256']
  print('Phase317 verified: threepools/ninemetricrows/fivefresharms, all input/code/result/member/stream SHA; no nextphase')
 if __name__=='__main__':main()
