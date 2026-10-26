@@ -1,0 +1,19 @@
+KappaSet: Sentinel-2 KappaZeta Cloud and Cloud Shadow Masks
+General information
+The dataset consists of 9251 labelled sub-tiles from1038 Sentinel-2 (S2) Level-1C (L1C)products distributed over the globe. In terms of seasonal distribution, S2 products canbedivided into the following groups:
+● Winter products: 29 austral and 142 boreal S2 products● Sprint products: 45 austral and 257 boreal S2 products● Summer products: 30 austral and 293 boreal S2 products● Autumn products:  29 austral and 213 boreal S2 products
+Each S2 product was oversampled at 10 mresolution for 512x512pixelssub-tiles. Fromeach S2 product the most challenging ~5sub-tilesper product wereselectedfor labelling.Each selected L1C S2 product represents different clouds, such as cumulus, stratus, orcirrus, which are spread over various geographical locations around the world. Theclassiﬁcation pixel-wise map consists of the following categories:
+● 0 – UNDEFINED: pixels that the labeler is not sure which class they belong to;● 1 – CLEAR: pixels without clouds or cloud shadows;● 2 – CLOUD SHADOW: pixels with cloud shadows;● 3 –SEMI TRANSPARENT CLOUD: pixels with thin clouds throughwhichthelandisvisible; include cirrus clouds that are on the high cloud level (5-15km).● 4–CLOUD: pixelswithcloud; includestratusandcumuluscloudsthatareonthelowcloud level (from 0-0.2km to 2km).● 5 – MISSING: missing or invalid pixels.
+The dataset was labelled usingComputer VisionAnnotationTool (CVAT) andSegments.ai.With the possibility of integrating an active learning process in Segments.ai, the labellingwasperformedsemi-automatically. Thedistributionof thedatasetispresentedintheFigurebelow. Color represents the season from which the product was chosen.
+The dataset limitations must be considered: the data mostly covers terrestrial regions(around 91%) and includes some water areas (around 9%); only around 7%of thedatasetcontains snow. Current sub-tiles do not have georeferencing.
+DatasetDescription
+kappasetsub-folder contains<month>andtestdirectorieswith<tile_x_y.nc>ﬁles.
+Each<tile_x_y.nc>istheNetCDFﬁlethat includesthefollowingseriesof bands: “B01”(443nm), "B02" (490nm), "B03" (560nm), "B04" (665nm), "B05"(705nm), "B06"(740nm), “B07”(783 nm), "B08" (842 nm), "B8A" (865 nm), “B09” (940 nm), “B10” (1375 nm), "B11" (1610nm), "B12" (2190nm), “Label”. Theﬁlenameprovidesinformationaboutsub-tilecoordinateswhichcanbeextractedbymultiplyingcoordinatesby512pixels(Figure2).512x512pixelsNetCDF sub-tiles are generated in tool developed by KappaZeta that is available at:https://github.com/kappazeta/cm-vsm
+In addition to abovementioned bands, <NetCDF.nc> ﬁles in test also include FMC (Fmaskclassiﬁcation map), SS2C (Sinergise S2Cloudless classiﬁcation map), IDPX (IdePix cloudclassiﬁcation map), MAJAC (CNES MAJA cloud classiﬁcation map) and SCL(Sen2Corclassiﬁcationmap). Notethat MAJACisavailablefor averylimitednumberofproducts, asthey should be located in 60° North and 56° South latitudes.
+Thefeaturesareresampledtothesame10mresolutionwithSincInﬁniteImpulseResponse(IIR) ﬁlter that is windowed with a Blackman ﬁlter.
+Acknowledgements
+The data were annotated by Olga Wold, Mariana Rohtsalu, Nikita Murin, Joosep Truupõld,Abdullah Toqeer, Catherine Akinyi Odera and Fariha Harun. The data veriﬁcation andSoftware Development were performedbyIndrekSünter, HeidoTroﬁmov, AntonKostiukhin,
+
+Marharyta Domnich, Mihkel Järveoja, OlgaWoldandTetianaShtym. Themethodologywasdeveloped by Kaupo Voormansik, Indrek Sünter, Marharyta Domnich and Tetiana Shtym.
+The data were collected, processed, and checked as a part of “KappaMask: AI-basedCloudmask Processor for Sentinel-2” project. We thank Segments.ai teamfor providing awonderful annotationtool thatwasactivelyusedtopreparethedataset.Intheend, wethankEuropean Space Agency (ESA) for supporting, advising, and funding the project.
+The project was funded byEuropean Space Agency, ContractNo. 4000132124/20/I-DT.
