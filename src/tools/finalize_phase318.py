@@ -8,6 +8,9 @@ def main():
   if (LOCAL/n).exists():shutil.copyfile(LOCAL/n,S/n)
  ev=S/'backup_transport';shutil.copytree(LOCAL/'remote_backup/backup_transport',ev)
  for p in LOCAL.glob('segment*_VERIFIED.json'):shutil.copyfile(p,ev/p.name)
+ if (LOCAL/'NETWORK_EVENTS.json').exists():
+  network=load(LOCAL/'NETWORK_EVENTS.json');errors=int(network.get('initial_exit',0)!=0)+int(network.get('later_status_probe',{}).get('exit',0)!=0)
+  with (S/'phase318.md').open('a',encoding='utf-8') as f:f.write(f'\n- 网络实录：预检/状态只读SSH有{errors}次exit255、服务端握手前关闭；后续连接恢复。未因这些探测失败重启控制器或重复前向，原stderr和诊断边界见NETWORK_EVENTS.json。\n')
  with (S/'phase318.md').open('a',encoding='utf-8') as f:f.write(f"\n- 完整备份：{b['files']}原始成员/{b['raw_bytes']}字节，{b['segments']}段gzip及全部成员SHA、合并压缩载荷SHA通过；payloadSHA256={b['compressed_payload_sha256']}，清单SHA256={b['manifest_sha256']}。双机含摘要预留{b['projected_two_hosts_with_summary']}字节≤12GB，无持久大归档；本机仅收文件/哈希，科学计算均gzs。网络探测及传输stderr按实保留。\n")
  write(S/'SUMMARY_SHA256.json',dict(files={p.relative_to(S).as_posix():sha(p) for p in S.rglob('*') if p.is_file()},code={p.relative_to(R).as_posix():sha(p) for p in (R/'src/tools').glob('*phase318*.py')}));print('Phase318 file-only publication completed')
 if __name__=='__main__':main()
