@@ -33,4 +33,9 @@ def main():
         receipt=dict(status='passed' if code==0 and not failure else 'failed',seconds=time.monotonic()-started,exit_code=code,failure=failure,peak_cpu_bytes=peak,minimum_available_memory=minimum);stages[stage]=receipt;write(ROOT/'CPU_STAGES.json',stages)
         if receipt['status']!='passed':write(ROOT/'STATUS.json',dict(status='failed',stage='CPU_'+stage,receipt=receipt));raise RuntimeError('CPU stage failed; preserve results; no retry: '+stage)
     print('All Phase315 CPU stages passed')
-if __name__=='__main__':main()
+if __name__=='__main__':
+    if '--launch' in sys.argv:
+        assert (ROOT/'BOTH_SEALED.json').exists() and not (ROOT/'CPU_LAUNCH.json').exists()
+        with (ROOT/'CPU_controller.log').open('xb') as log:p=subprocess.Popen([sys.executable,'-B',str(Path(__file__).resolve())],cwd=R,stdout=log,stderr=subprocess.STDOUT,start_new_session=True)
+        write(ROOT/'CPU_LAUNCH.json',dict(PID=p.pid,epoch=time.time()));print('CPU controller PID',p.pid)
+    else:main()
