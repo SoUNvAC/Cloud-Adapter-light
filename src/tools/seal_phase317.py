@@ -45,8 +45,7 @@ def main():
  data=buf.getvalue();reader=HashReader(io.BytesIO(data))
  with gzip.GzipFile(fileobj=reader,mode='rb') as gz:
   with tarfile.open(fileobj=gz,mode='r|') as tar:
-   item=next(iter(tar));assert tar.extractfile(item).read()==b'317ok'
-   for unused in tar:raise AssertionError(unused.name)
+   members=iter(tar);item=next(members);assert tar.extractfile(item).read()==b'317ok';assert next(members,None) is None
   while gz.read(1048576):pass
  assert reader.bytes==writer.bytes==len(data) and reader.hash.hexdigest()==writer.hash.hexdigest()
  write(ROOT/'BACKUP_FORMAT_ACCEPTANCE.json',dict(status='passed',runtime=sys.version,raw_bytes=5,compressed_bytes=len(data),writer_reader_SHA_equal=True,tar_stream_member_exact=True,real_experiment_streams=0))
