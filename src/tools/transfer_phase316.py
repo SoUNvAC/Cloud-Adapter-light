@@ -13,12 +13,12 @@ def remote():
     else:
         assert not any(p.exists() for p in [receipt,manifest,partial]),'preserve incomplete backup and diagnose'
         files=sorted(p for p in ROOT.rglob('*') if p.is_file());raw=sum(p.stat().st_size for p in files)
-        assert 4*raw+10000000<=300000000
+        assert 4*raw+100000000<=300000000
         write(manifest,{p.relative_to(ROOT).as_posix():dict(bytes=p.stat().st_size,sha256=sha(p)) for p in files})
         with tarfile.open(partial,'w:gz',compresslevel=1) as tar:
             tar.add(manifest,arcname='BACKUP_FILES.json',recursive=False)
             for p in files:tar.add(p,arcname=p.relative_to(ROOT).as_posix(),recursive=False)
-        partial.rename(archive);budget=2*raw+2*archive.stat().st_size+10000000;assert budget<=300000000
+        partial.rename(archive);budget=2*raw+2*archive.stat().st_size+100000000;assert budget<=300000000
         r=dict(archive=ARCHIVE,archive_bytes=archive.stat().st_size,archive_sha256=sha(archive),manifest_sha256=sha(manifest),files=len(files)+1,raw_bytes=raw,projected_persistent_bytes=budget);write(receipt,r)
     sys.stdout.buffer.write((json.dumps(r)+'\n').encode());sys.stdout.buffer.flush()
     with archive.open('rb') as f:
