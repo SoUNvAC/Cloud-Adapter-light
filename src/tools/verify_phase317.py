@@ -20,5 +20,5 @@ def main():
    assert sha(ROOT/'BACKUP_FILES.json')==b['manifest_sha256']
    for n,h in ev['recovery_metadata_SHA'].items():assert sha(ROOT/'backup_recovery01'/n)==h,n
   else:assert load(ROOT/'STREAM_RECEIPT.json')['stream_sha256']==b['stream_sha256']
- print('Phase317 verified: threepools/ninemetricrows/fivefresharms, all input/code/result/member/stream SHA; no nextphase')
+ print('Phase317 verified: threepools/ninemetricrows/fivefresharms; all snapshotmembers and completed recovery-stream SHA; first interruptedstream retained incomplete' if recovery else 'Phase317 verified: threepools/ninemetricrows/fivefresharms, all input/code/result/member/stream SHA; no nextphase')
 if __name__=='__main__':main()
