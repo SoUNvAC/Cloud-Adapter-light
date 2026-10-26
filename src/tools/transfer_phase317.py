@@ -43,6 +43,7 @@ def receive():
      if count%100==0:print('Phase317 backupverified',count,flush=True)
    while gz.read(1048576):pass
   stderr=p.stderr.read().decode(errors='replace');assert p.wait()==0,stderr;assert count==h['files']==len(manifest)+1
+  write(LOCAL/'RECEIVE_STREAM_CHECKPOINT.json',dict(files=count,manifest_sha256=h['manifest_sha256'],stream_sha256=reader.hash.hexdigest(),stream_bytes=reader.bytes,all_member_SHA_verified=True,remote_process_exit=0,action='if finalreceiptSSHfails, fetchreceipt only; no repeatedstreamneeded'))
   result=subprocess.run(ssh+[prefix+'cat /home/scv/shared/phase317_20261026/STREAM_RECEIPT.json'],capture_output=True,check=True);receipt=json.loads(result.stdout);assert receipt['stream_sha256']==reader.hash.hexdigest() and receipt['stream_bytes']==reader.bytes and receipt['manifest_sha256']==h['manifest_sha256']
   receipt.update(all_member_SHA_verified=True,whole_compressed_stream_SHA_verified=True);write(target/'STREAM_RECEIPT.json',receipt);write(LOCAL/'BACKUP_RECEIPT.json',receipt);print(json.dumps(receipt))
  except BaseException:write(LOCAL/'BACKUP_FAILURE.json',dict(traceback=traceback.format_exc(),action='preserve members/partial/header/remote streamlock; inspect before independentrecovery, never repeat receiveblindly'));raise
