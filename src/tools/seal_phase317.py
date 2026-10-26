@@ -35,6 +35,21 @@ def main():
  for p in deps:
   n=p.relative_to(R).as_posix();target=closure/n;target.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(p,target);dep_hash[n]=sha(p)
  for p in (R/'src/tools').glob('*phase317*.py'):shutil.copyfile(p,code/p.name)
+ # Exercise the exact streaming API on this Python runtime, using five memory bytes only.
+ import io,gzip,tarfile
+ from transfer_phase317 import HashReader,HashWriter
+ buf=io.BytesIO();writer=HashWriter(buf)
+ with gzip.GzipFile(fileobj=writer,mode='wb',compresslevel=1,mtime=0) as gz:
+  with tarfile.open(fileobj=gz,mode='w|') as tar:
+   item=tarfile.TarInfo('probe');item.size=5;tar.addfile(item,io.BytesIO(b'317ok'))
+ data=buf.getvalue();reader=HashReader(io.BytesIO(data))
+ with gzip.GzipFile(fileobj=reader,mode='rb') as gz:
+  with tarfile.open(fileobj=gz,mode='r|') as tar:
+   item=next(iter(tar));assert tar.extractfile(item).read()==b'317ok'
+   for unused in tar:raise AssertionError(unused.name)
+  while gz.read(1048576):pass
+ assert reader.bytes==writer.bytes==len(data) and reader.hash.hexdigest()==writer.hash.hexdigest()
+ write(ROOT/'BACKUP_FORMAT_ACCEPTANCE.json',dict(status='passed',runtime=sys.version,raw_bytes=5,compressed_bytes=len(data),writer_reader_SHA_equal=True,tar_stream_member_exact=True,real_experiment_streams=0))
  write(ROOT/'DEPENDENCY_SHA256.json',dep_hash);assert budget_bytes()<=16000000000
  write(ROOT/'DELIVERY_LOCK.json',dict(status='sealed',science_outputs_unchanged=['all endpoints','predictions','METRICS','27cells','sixflows','native/scenestatistics','reference/support','trainingcurves'],original_CPU_run_sha256=sha(ROOT/'CPU_RUN_LOCK.json'),original_GPU_code_sha256=sha(ROOT/'GPU_CODE_LOCK.json'),delivery_code={p.name:sha(p) for p in code.iterdir()},table_review_source_sha=sha(ROOT/'METRICS.csv'),old_report_preserved=True,no_new_raw_reference_reads=True,no_new_forwards=True))
  print('Phase317 finaldecision reviewed; originalscience preserved; delivery/dependency closure sealed')
