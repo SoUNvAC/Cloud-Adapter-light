@@ -1,0 +1,12 @@
+{
+  "archive": "phase315_full_backup.tar.gz",
+  "archive_sha256": "85eadefed463c0f1a54ad2a3fa0fefcd3bdf7f51572b3a120f44d44366677b53",
+  "archive_bytes": 1019350832,
+  "files": 218,
+  "raw_bytes": 1119695721,
+  "manifest_sha256": "4889a9158629d9e0e3ab579ce8a0f21f87c16db0fc4f0ca2975698045537bedc",
+  "projected_two_hosts_including_archives_and_summary": 4378093106,
+  "all_archive_members_verified": true,
+  "archive_SHA_verified_before_extraction": true,
+  "all_stream_members_verified": true
+}

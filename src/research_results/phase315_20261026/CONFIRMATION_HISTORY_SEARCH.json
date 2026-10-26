@@ -1,0 +1,141 @@
+{
+  "utc": "2026-10-26T03:01:59.818257+00:00",
+  "scope": "existing result .md/.json <=150KB with admission/provenance/exposure/history/metadata/source_record filenames plus6explicit metadata/history files; text used only as usage leads, no evaluation-value parsing or raster/cache/pixel/sealedpool opens",
+  "limits": "other reports/untracked host files/missing historical runs/external pretraining not certified; no matching record is not proof unseen",
+  "hits": [
+    {
+      "path": "src/research_results/phase102_20261013/coverage_metadata.json",
+      "sha256": "0d64729b5317d1ca3b9de586aaf7b6f4542a07d828d2c397cf7a750a5887769b",
+      "pool_name_matches": [
+        "PixBox",
+        "Kappa"
+      ],
+      "role": "report metadata text search only; not a new model readout"
+    },
+    {
+      "path": "src/research_results/phase102_20261013/inputs/exposure_scan.json",
+      "sha256": "5490ba58b9cdafd92189bd77ca9deeb1f6236340610da2f5f442f84fc8defac8",
+      "pool_name_matches": [
+        "ALCD",
+        "Catalogue"
+      ],
+      "role": "report metadata text search only; not a new model readout"
+    },
+    {
+      "path": "src/research_results/phase102_20261013/inputs/source_records.json",
+      "sha256": "11d8998d3172b9b534d108adf314a8e8009f6ecb469d3c8296bf0a1e4a99630b",
+      "pool_name_matches": [
+        "PixBox",
+        "Kappa"
+      ],
+      "role": "report metadata text search only; not a new model readout"
+    },
+    {
+      "path": "src/research_results/phase102_20261013/metadata_audit.json",
+      "sha256": "f74a40331379ce120a1938e348adb4c60350feb76dcdb769e8bcd18a45482c35",
+      "pool_name_matches": [
+        "PixBox",
+        "Kappa",
+        "ALCD",
+        "Catalogue"
+      ],
+      "role": "report metadata text search only; not a new model readout"
+    },
+    {
+      "path": "src/research_results/phase109_20261013/ADMISSION.md",
+      "sha256": "25f39d7e5424a66f0bb8b34271700364bbe0d34d102f288d96a6dc2e1dde0387",
+      "pool_name_matches": [
+        "PixBox",
+        "Kappa",
+        "ALCD",
+        "Catalogue"
+      ],
+      "role": "report metadata text search only; not a new model readout"
+    },
+    {
+      "path": "src/research_results/phase110_20261014/V1_PROVENANCE.md",
+      "sha256": "bd87fdb6667c9ad24d8ab1650652905d700fc6ecab71cd66dda2a744ce46a395",
+      "pool_name_matches": [
+        "PixBox",
+        "ALCD",
+        "Catalogue"
+      ],
+      "role": "report metadata text search only; not a new model readout"
+    },
+    {
+      "path": "src/research_results/phase301_20261020/verified_run/RUNTIME_PROVENANCE.json",
+      "sha256": "65f424fb224050b5f27c22526d32ca046877781e43fb153190a0a6427e6e63e0",
+      "pool_name_matches": [
+        "PixBox"
+      ],
+      "role": "report metadata text search only; not a new model readout"
+    },
+    {
+      "path": "src/research_results/phase302_20261020/SOURCE_ADMISSION.json",
+      "sha256": "b97fda545d9639f4088c0309ce687798260ca95c402734b8a4375f6137052897",
+      "pool_name_matches": [
+        "Catalogue"
+      ],
+      "role": "report metadata text search only; not a new model readout"
+    },
+    {
+      "path": "src/research_results/phase304_20261024/SOURCE_ADMISSION.json",
+      "sha256": "b97fda545d9639f4088c0309ce687798260ca95c402734b8a4375f6137052897",
+      "pool_name_matches": [
+        "Catalogue"
+      ],
+      "role": "report metadata text search only; not a new model readout"
+    },
+    {
+      "path": "src/research_results/phase310_20261025/SOURCE_ADMISSION.json",
+      "sha256": "b97fda545d9639f4088c0309ce687798260ca95c402734b8a4375f6137052897",
+      "pool_name_matches": [
+        "Catalogue"
+      ],
+      "role": "report metadata text search only; not a new model readout"
+    },
+    {
+      "path": "src/research_results/phase311_20261025/SOURCE_ADMISSION.json",
+      "sha256": "b97fda545d9639f4088c0309ce687798260ca95c402734b8a4375f6137052897",
+      "pool_name_matches": [
+        "Catalogue"
+      ],
+      "role": "report metadata text search only; not a new model readout"
+    }
+  ],
+  "explicit_sources": [
+    {
+      "path": "/home/scv/Cloud-Adapter-light/src/research_results/phase101_20261013/README.md",
+      "sha256": "dfb6c3e2a39a4eff7ae18c325e063b539ea03454410de98de5afa8f789317747",
+      "purpose": "existing metadata/history/annotation limitations; no performance based admission"
+    },
+    {
+      "path": "/home/scv/Cloud-Adapter-light/src/research_results/phase102_20261013/metadata_audit.json",
+      "sha256": "f74a40331379ce120a1938e348adb4c60350feb76dcdb769e8bcd18a45482c35",
+      "purpose": "existing metadata/history/annotation limitations; no performance based admission"
+    },
+    {
+      "path": "/home/scv/Cloud-Adapter-light/src/research_results/phase103_20261013/README.md",
+      "sha256": "67a8d0eb54e6f2f727b787b0952c6603d847c578101f10821388483f7f2d488c",
+      "purpose": "existing metadata/history/annotation limitations; no performance based admission"
+    },
+    {
+      "path": "/home/scv/Cloud-Adapter-light/src/research_results/phase109_20261013/ADMISSION.md",
+      "sha256": "25f39d7e5424a66f0bb8b34271700364bbe0d34d102f288d96a6dc2e1dde0387",
+      "purpose": "existing metadata/history/annotation limitations; no performance based admission"
+    },
+    {
+      "path": "/home/scv/Cloud-Adapter-light/src/research_results/phase309_20261025/SOURCE_RECORD.json",
+      "sha256": "b6a2b7a5ff10463ce24162ee9592d150ae75eac376610b116ec8f3a946be9a8e",
+      "purpose": "existing metadata/history/annotation limitations; no performance based admission"
+    },
+    {
+      "path": "/home/scv/Cloud-Adapter-light/src/research_results/phase314_20261025/CPU_ACCEPTANCE.json",
+      "sha256": "33813808955c6f9586500cd62d5f9523dc9a90c220eed5193e2397544fe17d10",
+      "purpose": "existing metadata/history/annotation limitations; no performance based admission"
+    }
+  ],
+  "no_outcome_or_disagreement_based_selection": true,
+  "new_predictions": 0,
+  "new_downloads": 0
+}

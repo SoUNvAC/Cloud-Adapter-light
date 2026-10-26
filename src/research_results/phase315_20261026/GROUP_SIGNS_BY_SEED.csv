@@ -1,0 +1,4 @@
+﻿seed,groups,positive,negative,zero,min_delta_pp,max_delta_pp,threshold
+30201,32,16,7,9,-59.864966816150364,68.6242521027927,exact sign; no new performance threshold
+31501,32,16,6,10,-21.853561480992596,68.6242521027927,exact sign; no new performance threshold
+31502,32,16,7,9,-51.14870117684905,68.6242521027927,exact sign; no new performance threshold

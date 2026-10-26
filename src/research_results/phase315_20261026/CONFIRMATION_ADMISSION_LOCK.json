@@ -1,0 +1,17 @@
+{
+  "status": "completed_metadata_only",
+  "ready_independent_pools": 0,
+  "table_sha256": "51f8246c4619ee0979a0bb32699fd92466344b818c7d80fcac3f9de4c626bcba",
+  "inputs": {
+    "phase101_20261013/README.md": "dfb6c3e2a39a4eff7ae18c325e063b539ea03454410de98de5afa8f789317747",
+    "phase102_20261013/metadata_audit.json": "f74a40331379ce120a1938e348adb4c60350feb76dcdb769e8bcd18a45482c35",
+    "phase103_20261013/README.md": "67a8d0eb54e6f2f727b787b0952c6603d847c578101f10821388483f7f2d488c",
+    "phase109_20261013/ADMISSION.md": "25f39d7e5424a66f0bb8b34271700364bbe0d34d102f288d96a6dc2e1dde0387",
+    "phase309_20261025/SOURCE_RECORD.json": "b6a2b7a5ff10463ce24162ee9592d150ae75eac376610b116ec8f3a946be9a8e",
+    "phase314_20261025/CPU_ACCEPTANCE.json": "33813808955c6f9586500cd62d5f9523dc9a90c220eed5193e2397544fe17d10"
+  },
+  "new_predictions": 0,
+  "newdownloads": 0,
+  "no_sealed_pixels_read": true,
+  "no_model_performance_based_selection": true
+}

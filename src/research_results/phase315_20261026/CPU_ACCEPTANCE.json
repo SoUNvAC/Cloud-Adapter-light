@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "both_endpoints_sealed_before_references": true,
+  "groups": 32,
+  "seeds": [
+    30201,
+    31501,
+    31502
+  ],
+  "historical_D0": 506798,
+  "historical_B0": 784478,
+  "historical64_confusions_exact": true,
+  "tensor_margins_exact": true,
+  "all32groups_retained": true,
+  "no_torch": true,
+  "seconds": 90.72624527802691,
+  "peak_cpu_bytes": 3579039744,
+  "host_available_end": 31527260160
+}

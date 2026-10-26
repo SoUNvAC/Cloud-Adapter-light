@@ -1,0 +1,4 @@
+﻿observation,direction_count,seeds,effect_min,effect_max,no_p_value,scope
+group_mIoU_improves,3,3,0.7699855635066442,2.138140001739103,True,fixed schedule/Source/LoRA initialization repeat only
+Cloud_Shadow_decreases,3,3,839287,889726,True,fixed schedule/Source/LoRA initialization repeat only
+Surface_Cloud_increases,3,3,80372,498719,True,fixed schedule/Source/LoRA initialization repeat only

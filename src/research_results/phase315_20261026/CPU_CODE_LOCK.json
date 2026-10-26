@@ -1,0 +1,18 @@
+{
+  "code": {
+    "src/tools/analyze_phase315.py": "8c65679af32e626a7b28319132e8680825f2c5b773d8a751b20d135defdafe92",
+    "src/tools/admission_phase315.py": "e02d598c9769883f56acec0e95cc491f32ee22fe30f125380157232443adfd4b",
+    "src/tools/phase315_common.py": "9b2e54b915a839f00ed445f39b3bc184d8c3999b01aae474ab6abe287e0c9998",
+    "src/tools/report_phase315.py": "2f68ed086431df0cf066254cb2e71e8926558baa3276a8d8b58bac8bd6086e0d",
+    "src/tools/audit_phase315.py": "e222e0cfdf29a017620fda20f0647ab8a7b3743b5282138110ab01f733c09e92",
+    "src/tools/verify_phase315.py": "d57fa9b9d5ac8e89b294734eb8bec9c54602c269f5b521f827d972af3c653cec",
+    "src/tools/transfer_phase315.py": "1aacc8f85e3d800716b3ab68d4ed58492da76be5f56aac0326848d9a76d96465",
+    "src/tools/worker_phase315.py": "4f8c6f73b5cc0944bc23964d6bdfe869409467fd3c4308d8cf02b37100752a50",
+    "src/tools/control_phase315.py": "619fd00507a96c1ea386576921a755a7bc78b4a23c189f522e4c9511bc9df01e",
+    "src/tools/finalize_phase315.py": "90ec7cd4dc18e0c0a1e03661d4d3d4b311ed4a3b5cdd6e15d11abcff1595589d",
+    "src/tools/prepare_phase315.py": "5eed8698483fc27c56be3d06ad20682dc885d8bb912e789e0c9b1b349dc1215b",
+    "src/tools/run_cpu_phase315.py": "29c41455228300edda83f3e82bc47ad5d17ffc0750136a44721907a4945b0c8a"
+  },
+  "training_execution_lock_SHA": "b513e30d9f877d3a6802934c7ac9bd5ef3f2804a8ddd1dfcf6e0222e7add6d1b",
+  "both_sealed_SHA": "966a8935a0e68dc3ad7e89040a9a4c74135da27552b6b85e15025a3dad743f22"
+}

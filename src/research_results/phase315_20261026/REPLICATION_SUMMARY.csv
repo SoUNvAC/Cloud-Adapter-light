@@ -1,0 +1,4 @@
+﻿seed,group_mIoU_delta_pp,pooled_mIoU_delta_pp,Cloud_Shadow_net_reduction,Surface_Cloud_net_increase,B_cloud_corrections,D_surface_damage,macro_Shadow_recall_delta_pp,group_mIoU_improves,Cloud_Shadow_decreases,Surface_Cloud_increases
+30201,2.138140001739103,6.053787468577994,879124,498719,784478,506798,-15.138958668643774,True,True,True
+31501,1.8604351003459385,4.403932613835735,839287,80372,681382,135944,-26.765008053661568,True,True,True
+31502,0.7699855635066442,6.336163151133761,889726,329219,781485,334838,-21.596602583766135,True,True,True

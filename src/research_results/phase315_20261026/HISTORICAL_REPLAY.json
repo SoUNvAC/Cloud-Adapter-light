@@ -1,0 +1,8 @@
+{
+  "product": "S2A_MSIL1C_20180211T234711_N0206_R073_T60WWT_20180212T011403",
+  "seed": 30201,
+  "windows": 9,
+  "max_abs_error": 0.0,
+  "pred_identical": true,
+  "old_weights_only_for_identity_not_new_initialization": true
+}

@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "utc": "2026-10-26T03:01:59.475305+00:00",
+  "code_sha256": "e222e0cfdf29a017620fda20f0647ab8a7b3743b5282138110ab01f733c09e92",
+  "checks": 726,
+  "all96_group_tensors_and3pooled_exact": true,
+  "Source_new_confusions_and6flows_reproduced": true,
+  "historical_D0": 506798,
+  "historical_B0": 784478,
+  "all_overlap_margins_exact": true,
+  "three_distinct_initial_A": true,
+  "B_initial_zero": true,
+  "original_step_gates_passed": true,
+  "all_original_input_cache_SHA_reverified": true,
+  "actual_forwards": 2539,
+  "raw_truth_or_model_arrays_reread": false,
+  "seconds": 4.2387911709956825,
+  "peak_cpu_bytes": 24600576
+}

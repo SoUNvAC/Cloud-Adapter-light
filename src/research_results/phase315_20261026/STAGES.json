@@ -1,0 +1,47 @@
+{
+  "replay_30201": {
+    "status": "completed",
+    "exit_code": 0,
+    "failure": null,
+    "seconds": 10.53369621897582,
+    "peak_cpu_bytes": 1541447680,
+    "minimum_available_memory": 31517704192,
+    "PID": 1778524
+  },
+  "train_31501": {
+    "status": "completed",
+    "exit_code": 0,
+    "failure": null,
+    "seconds": 421.25060126103926,
+    "peak_cpu_bytes": 1977483264,
+    "minimum_available_memory": 30716649472,
+    "PID": 1778565
+  },
+  "train_31502": {
+    "status": "completed",
+    "exit_code": 0,
+    "failure": null,
+    "seconds": 438.24794183601625,
+    "peak_cpu_bytes": 1973043200,
+    "minimum_available_memory": 30499389440,
+    "PID": 1778802
+  },
+  "evaluate_31501": {
+    "status": "completed",
+    "exit_code": 0,
+    "failure": null,
+    "seconds": 63.37176016392186,
+    "peak_cpu_bytes": 1682857984,
+    "minimum_available_memory": 31142547456,
+    "PID": 1779101
+  },
+  "evaluate_31502": {
+    "status": "completed",
+    "exit_code": 0,
+    "failure": null,
+    "seconds": 62.42980504198931,
+    "peak_cpu_bytes": 1652600832,
+    "minimum_available_memory": 31059943424,
+    "PID": 1779138
+  }
+}
