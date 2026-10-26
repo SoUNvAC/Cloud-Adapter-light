@@ -54,6 +54,10 @@ def main():
   for n,h in load(file).items():assert sha(n)==h,n
  for n,h in load(ROOT/'EXECUTION_LOCK.json')['inputs'].items():assert sha(n)==h,n
  assert len(calls)<=11000 and load(ROOT/'ALL_SEALED.json')['gpu_seconds']<=43200 and budget_bytes()<=12000000000
+ assert sum(x['kind']=='flip_teacher_window' for x in calls)==900 and sum(x['kind']=='flip_teacher_image' for x in calls)==160
+ for pool in ['CMC','SPARCS','L8']:
+  trained=sum(r['mode']=='trained_once' and r['pool']==pool for r in records);expected=trained*{'CMC':288,'SPARCS':10,'L8':963}[pool]
+  assert sum(x['pool']==pool and x['kind'] in ['evaluation_window','evaluation_image'] for x in calls)==expected
  assert sha(ROOT/'DECISION_WINDOW.json')==sha(PRIOR/'DECISION_WINDOW.json')
  table(ROOT/'TRAINING_IDENTITY.csv',records);write(ROOT/'INDEPENDENT_ACCEPTANCE.json',dict(status='passed',same_Q90_masks=True,paired_class_masses_float64_rtol=1e-6,all_new_train_curves=True,all_transition_margins=True,all_native_margins=True,original317_metrics_D_B_and_CMC_error_reproduced=True,fit_L8_reference_gap=load(ROOT/'QUALITY_ACCEPTANCE.json')['L8_fit_gap_images'],calls=len(calls),no_neural_calls=True,resources=resource_check()))
  print('Phase318 independent audit passed')
