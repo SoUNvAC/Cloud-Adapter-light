@@ -1,0 +1,26 @@
+"""Compact actual-result publication. Interpretation is reviewed before delivery."""
+from phase318_common import *
+def main():
+ assert load(ROOT/'INDEPENDENT_ACCEPTANCE.json')['status']=='passed';metrics=read(ROOT/'METRICS.csv');sel=load(ROOT/'SELECTION_LOCK.json');sealed=load(ROOT/'ALL_SEALED.json');quality=read(ROOT/'SELECTOR_QUALITY.csv');decisions=[];products=[]
+ for pool in ['CMC','SPARCS','L8']:
+  for r in load(ROOT/pool/'FLIP_TEACHER_LOCK.json')['rows']:products.append(dict(pool=pool,**r,selected_fraction=r['selected']/r['original_shadow'] if r['original_shadow'] else None))
+  m={r['strategy']:r for r in metrics if r['pool']==pool};d={k:float(m['Flip-CB'][k])-float(m['Conf-CB'][k]) for k in ['group_mean_mIoU_pct','pooled_mIoU_pct','Shadow_IoU_pct','macro_Shadow_recall_pct','macro_Shadow_FPR_pct','maximum_Shadow_FPR_pct']}
+  decisions.append(dict(pool=pool,**{'Flip_minus_Conf_'+k:v for k,v in d.items()},selection_mode=sel['pools'][pool]['mode'],Flip_minus_CB_recall_pp=float(m['Flip-CB']['macro_Shadow_recall_pct'])-float(m['CB']['macro_Shadow_recall_pct']),Flip_minus_CB_FPR_pp=float(m['Flip-CB']['macro_Shadow_FPR_pct'])-float(m['CB']['macro_Shadow_FPR_pct']),fit_quality_coverage='uncovered; no new registration, val complete' if pool=='L8' else 'postseal exact reference',interpretation='pending explicit actual-effect/cost/scene-range review; numerical sign is not a universal pass threshold',decision='no automatic continuation or new seed/loss'))
+ table(ROOT/'DECISION.csv',decisions);table(ROOT/'SELECTION_PRODUCTS.csv',products)
+ lines=['# Phase318 Flip-CB与同数量Conf-CB','','三池固定输入与日程已执行；Flip只把原Q90 Shadow中水平翻转后仍被Q90接纳为Shadow的像元选出，Conf逐步选相同数量的原高分Shadow。实际数量/交并/严格退化见选择锁。是否有额外信息必须看Flip−Conf及误报代价，不能把一致性当正确率。此自动报告等待交付前按真实数值复核决定。','','|池/策略|组均mIoU|池化mIoU|Shadow IoU|宏Shadow召回|宏Shadow FPR|最大组FPR|','|---|---:|---:|---:|---:|---:|---:|']
+ for r in metrics:lines.append('|'+r['pool']+'/'+r['strategy']+'|'+'|'.join(r[k] if r[k]=='NA' else f'{float(r[k]):.3f}' for k in ['group_mean_mIoU_pct','pooled_mIoU_pct','Shadow_IoU_pct','macro_Shadow_recall_pct','macro_Shadow_FPR_pct','maximum_Shadow_FPR_pct'])+'|')
+ lines+=['','|池|Flip−Conf召回pp|FPR pp|组均mIoU pp|选择模式|','|---|---:|---:|---:|---|']
+ for r in decisions:lines.append(f"|{r['pool']}|{r['Flip_minus_Conf_macro_Shadow_recall_pct']:+.3f}|{r['Flip_minus_Conf_macro_Shadow_FPR_pct']:+.3f}|{r['Flip_minus_Conf_group_mean_mIoU_pct']:+.3f}|{r['selection_mode']}|")
+ for pool in ['CMC','SPARCS','L8']:
+  pp=[r for r in products if r['pool']==pool];ss=[r for r in read(ROOT/'SELECTION_AND_WEIGHT.csv') if r['pool']==pool];a=sum(r['original_shadow'] for r in pp);k=sum(r['selected'] for r in pp);union=sum(int(r['union']) for r in ss);inter=sum(int(r['intersection']) for r in ss)
+  paired={r['selector']:r for r in quality if r['pool']==pool and r['product']=='POOLED' and r['mode']=='scheduled_crop_exposure'}
+  lines.append(f"\n{pool}：全图唯一A_Sh={a}、Flip选中{k}（{100*k/a if a else 0:.3f}%）；同裁剪Flip/Conf累计交并比={inter/union if union else 1:.6f}。配对曝光真Shadow precision：Flip={paired['Flip_selected']['Shadow_precision_pct']}%、Conf={paired['Conf_selected']['Shadow_precision_pct']}%；参考覆盖分别{paired['Flip_selected']['reference_support']}/{paired['Conf_selected']['reference_support']}，无覆盖记NA。")
+ lines+=['','损失严格为接纳像元加权CE除以权重和：Surface/Cloud使用N/(K*n_c)，选中Shadow同样使用CB权重，其余Shadow仍以权重1参与。权重不夹到1；全选退化CB，零选也未必等于PL。逐步数量和每类权重质量配对，CPU64复算相对误差≤1e-6。Conf数量来自Flip，不是无需翻转的独立部署方案。',
+ '','三池全部是历史探索支持，一个seed；CMC沿原TOA/9窗，SPARCS/L8沿原显示RGB512，不作传感器优劣排名。L8仅Shadows?=yes；val完整复用317已验证的rawfill排除支持。参考只在所有新增端点及评价封存后由独立CPU读取。CMC/SPARCS fit选择质量列唯一像元及同裁剪曝光；L8 fit原rawfill/坐标未有旧验证，100张质量审计缺口原样保留，没有新配准或猜标签，不能据此宣称L8质量提高。',
+ '','METRICS含float32精确ties宏/池化AP、最大FPR、全部支持与可算组数；PER_SCENE保留全部组/原生地表/薄云、union/NA。四组比较完整27格与六向流、Surface/Cloud→Shadow消除/新增/真正纠错/转另一错及固定PL的D/B去向另表。旧CMC CB−PL净增Surface→Shadow189039、Cloud→Shadow767522已精确复现；D506798/B784478不重定义。通用27格Source_pred列指comparison起点、student_pred指终点，并非始终是Source策略。',
+ '',f"新增前向{sealed['forwards']}，GPU管线{sealed['gpu_seconds']:.2f}秒；实际训练/严格等价引用逐臂见TRAINING_IDENTITY，不把引用当独立训练。CPU≤16GiB/2h，新增双机≤12GB、空闲RAM≥4GiB/磁盘≥8GiB；无下载/升级/阈值、扰动、权重或seed搜索。14天窗口逐字节继承317（北京时间2026-10-26 20:52:39至2026-11-09 20:52:39），等待或拆phase不重置。完整备份验收另附。没有自动下一phase或定时检查。"]
+ (ROOT/'RESULT.md').write_text('\n'.join(lines)+'\n',encoding='utf-8')
+ training=read(ROOT/'TRAINING_IDENTITY.csv');attempts=sum(int(r['attempts']) for r in training);updates=sum(int(r['updates']) for r in training);skips=sum(int(r['skipped']) for r in training)
+ (ROOT/'phase318.md').write_text(f"# Phase318 实验记录\n\n- 目标：翻转一致选择是否超过同数量原高分选择，并少制造Surface/Cloud→Shadow错误。\n- 改动：原Q90/A与日程不变，仅选择性应用CB权重、按权重和归一化；最多6臂、严格等价不重复训练，Source新建30201 LoRA，其余参数/buffer冻结。\n- 网络：本地代码push→gzs pull，原缓存只读；无新数据下载，SSH与备份事件按实记录。\n- 止损：前向11000/GPU12h/CPU16GiB且统计2h/双机12GB/空闲RAM4GiB磁盘8GiB；不重训、不调阈值或视图，不延长317窗口。\n- 结果：实际{attempts}尝试/{updates}更新/{skips}跳过，{sealed['forwards']}前向，GPU{sealed['gpu_seconds']:.2f}秒；选择/权重CPU64、27格/六向/原生边缘及原317缓存复现通过。真实指标与待审决定见RESULT/DECISION。\n- 审计：CMC/SPARCS封存后fit真值审计；L8 fit100张旧坐标/rawfill未验证，质量表记录缺口，不新增配准，val963张保持完整317支持。\n- 局限：单seed、已暴露探索池；一致不是正确、Conf数量依赖Flip；全选等于CB、零选不一定PL。无自动下一轮/定时检查。\n",encoding='utf-8')
+ print(json.dumps(decisions,ensure_ascii=False))
+if __name__=='__main__':main()
