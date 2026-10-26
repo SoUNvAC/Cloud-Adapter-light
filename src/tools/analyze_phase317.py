@@ -72,7 +72,7 @@ def main():
     a,b=pair.split('->');assert np.array_equal(t.sum(2),mats[a]) and np.array_equal(t.sum(1),mats[b]);prefix=dict(pool=pool,comparison=pair,scene=scene);cells+=legacy.cells(t,prefix);flows+=legacy.events(t,prefix);totalt[pair]+=t
    assert sum(db['D_CB_'+c] for c in C)==db['D'] and sum(db['B_CB_'+c] for c in C)==db['B'];damage.append(dict(pool=pool,scene=scene,**dict(db)))
    for (biome,n),e in native.items():
-    names={'CMC':{0:'Surface',1:'Cloud',2:'Shadow'},'SPARCS':{0:'shadow',1:'shadow_over_water',2:'water',3:'snow',4:'land',5:'cloud',6:'flooded'},'L8':{0:'fill',64:'shadow',128:'clear',192:'thin_cloud',255:'cloud'}}
+    names={'CMC':{0:'Surface',1:'Cloud',2:'Shadow',255:'excluded_reference_support'},'SPARCS':{0:'shadow',1:'shadow_over_water',2:'water',3:'snow',4:'land',5:'cloud',6:'flooded'},'L8':{0:'fill',64:'shadow',128:'clear',192:'thin_cloud',255:'cloud'}}
     native_rows.append(dict(pool=pool,scene=scene,biome=biome,native_code=n,native_class=names[pool][n],reference_support=e['support'],metric_support=e['metric_support'],Source_parent_predictions=e['preds']['Source'].tolist(),PL_parent_predictions=e['preds']['PL'].tolist(),CB_parent_predictions=e['preds']['CB'].tolist(),scene_mIoU={a:next(r['mIoU_pct'] for r in reversed(per) if r['pool']==pool and r['scene']==scene and r['strategy']==a) for a in strategies},scene_union={a:metric(mats[a])['union_classes'] for a in strategies},note='L8 biome snow_ice/water is scene-stratum not pixelwise snow/water truth; rawfill excluded; CMC no finer native subclasses'))
    del ys,scores,yy;gc.collect()
   # One strategy at a time: exact pooled AP without retaining three full score pools or loading models.

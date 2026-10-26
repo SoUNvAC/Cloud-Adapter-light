@@ -16,8 +16,8 @@ def main():
   for row in inputs('CMC')['val']:
    name=row['product'];p=Path('/home/scv/shared/phase205_20261019/infer/R4/scores/Catalogue')/(name+'.npz');pin(p)
    with np.load(p) as z:ids=z['flat_indices'];v=z['valid']
-   assert ah(ids)==support[name]['flat_indices_sha256'] and ah(v)==support[name]['common_valid_sha256'];valid=np.zeros((1022,1022),bool);valid.ravel()[ids[v]]=True
-   raw=archive.read('masks/'+name+'.npy');assert hashlib.sha256(raw).hexdigest()==plans[name]['group']['mask_member_sha256'];mask=np.load(io.BytesIO(raw));assert mask.shape==(1022,1022,3) and (mask.sum(-1)[valid]==1).all();y=mask.argmax(-1).astype(np.uint8)
+   assert ah(ids)==support[name]['flat_indices_sha256'] and ah(v)==support[name]['common_valid_sha256'];valid=np.zeros((1022,1022),bool);valid.ravel()[ids[v]]=True;assert int(valid.sum())==support[name]['count']
+   raw=archive.read('masks/'+name+'.npy');assert hashlib.sha256(raw).hexdigest()==plans[name]['group']['mask_member_sha256'];mask=np.load(io.BytesIO(raw));assert mask.dtype==bool and mask.shape==(1022,1022,3) and (mask.sum(-1)[valid]==1).all();y=mask.argmax(-1).astype(np.uint8);y[~valid]=255
    p=ref/('CMC_'+name+'.npz');np.savez_compressed(p,truth=y,native=y,valid=valid);out.append(dict(pool='CMC',name=name,scene=row['group_id'],biome='NA',file=str(p),sha256=sha(p),support=int(valid.sum()),invalid=int((~valid).sum())))
  # SPARCS: original 7-class mask indices, fixed512 nearest as preregistered for this round.
  for row in inputs('SPARCS')['val']:
