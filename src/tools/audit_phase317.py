@@ -56,6 +56,15 @@ def main():
   assert np.array_equal(t.sum(2),ma) and np.array_equal(t.sum(1),mb)
  for r in read(ROOT/'DAMAGE_BENEFIT.csv'):
   assert sum(int(r['D_CB_'+c]) for c in C)==int(r['D']) and sum(int(r['B_CB_'+c]) for c in C)==int(r['B'])
+ native_mats=defaultdict(lambda:np.zeros((3,3),np.int64))
+ maps={'CMC':{0:0,1:1,2:2},'SPARCS':{0:2,1:2,2:0,3:0,4:0,5:1,6:0},'L8':{64:2,128:0,192:1,255:1}}
+ for r in read(ROOT/'PER_SCENE_NATIVE.csv'):
+  n=int(r['native_code']);parent=maps[r['pool']].get(n)
+  for a in ['Source','PL','CB']:
+   v=np.array(json.loads(r[a+'_parent_predictions']),np.int64);assert int(v.sum())==int(r['metric_support'])
+   if parent is None:assert not v.any() and int(r['metric_support'])==0
+   else:native_mats[r['pool'],a,r['scene']][parent]+=v
+ for key,m in matrices.items():assert np.array_equal(native_mats[key],m),key
  old={(r['strategy'],r['product']):json.loads(r['confusion']) for r in read(OLD/'analysis/PER_GROUP_METRICS.csv')}
  for r in inputs('CMC')['val']:
   for strategy in ['Source','PL']:assert np.array_equal(matrices['CMC',strategy,r['group_id']],old['Source' if strategy=='Source' else 'LoRA',r['product']])
