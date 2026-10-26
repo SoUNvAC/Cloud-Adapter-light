@@ -1,0 +1,78 @@
+{
+  "metadata": [
+    {
+      "path": "/home/scv/Cloud-Adapter-light/src/research_results/phase102_20261013/inputs/history_positions_only.json",
+      "exists": true,
+      "bytes": 4019652,
+      "sha256": "88379af9c1f6d6493b22cb188579647751c053f206a55d1f23fb93b1167b42c7",
+      "schema": [
+        "records",
+        "source_files",
+        "historical_missing_evidence",
+        "pretraining_corpus",
+        "source_roles",
+        "label_fields_selected"
+      ],
+      "first": "{'source_files': [{'path': 'outputs\\\\phase86\\\\phase86_20261011\\\\history_sources.json', 'sha256': '3c594cadadd9ee7b220afc70e621834ae66343539efe83ccabd97c85acfa2cbf'}], 'historical_missing_evidence': [], 'pretraining_corpus': 'unknown; only recorded Source supervision train/val audited', 'source_roles': \"{'Source_train': 8490, 'Source_val': 535, 'Catalogue_65b_confirmation': 66, 'Catalogue_65a_confirmation': 65, 'Catalogue_65c_final': 66, 'Catalogue_fit': 155, 'Catalogue_unused_release_conservative': 129, 'Catalogue_development_val': 32, 'historical_used': 142}\", 'label_fields_selected': 'False'}"
+    },
+    {
+      "path": "/home/scv/Cloud-Adapter-light/src/research_results/phase102_20261013/inputs/candidate_products_metadata.json",
+      "exists": true,
+      "bytes": 889765,
+      "sha256": "27247292f1fd94c6c4fc9e1b0fde179c9328b2518d2a3c24e2f8e8fc819ce0cc",
+      "schema": [
+        "list",
+        1108
+      ],
+      "first": "{'source': 'KappaSet7100327', 'record_key': 'Kappa:T52JGR:20200806T011729', 'product_id': 'unknown_original_product', 'tile': '52JGR', 'sensing_key': '20200806T011729', 'utc_day': '20200806', 'orbit': '088', 'location_evidence': 'CDSE reprocessed same-acquisition parent proxy; original baseline/grid still unresolved', 'footprint_precision': 'MGRS tile/acquisition key only; no precise sub-tile polygon', 'six_band_availability': 'official declares B02/B03/B04/B08/B11/B12 in NetCDF; actual arrays unopened', 'processing_baseline': 'unknown', 'toa_basis': 'unknown actual NetCDF scaling/offset; do not assume DN/10000', 'geo': {'type': 'Polygon', 'coordinates': [[[131.00129268178, -26.2054590512829], [131.018688478049, -27.1962280828702], [132.126072225207, -27.1759001651085], [132.099164452743, -26.1859845434361], [131.00129268178, -26.2054590512829]]]}, 'crs': '', 'grid': None, 'metadata_complete': False, 'parent_proxy': True}"
+    },
+    {
+      "path": "/home/scv/Cloud-Adapter-light/src/work_dirs/phase65a/source_mapping/mapping_audit.json",
+      "exists": true,
+      "bytes": 2659992,
+      "sha256": "c3c521a375c50f81ff0e58682621c7fcb72fc47472a7b37931c587036f12d0bb",
+      "schema": [
+        "status",
+        "source_commit",
+        "splits",
+        "test_pixels_read",
+        "label_pixels_read",
+        "current_split",
+        "operation",
+        "compared",
+        "mismatch_count",
+        "mappings",
+        "converter_sha256",
+        "reader_sha256"
+      ],
+      "first": "{'status': 'verified_rgb_ordinal_mapping', 'source_commit': 'd97728dd61858a21c7d6bc61385687d328433cba', 'splits': \"{'train': {'rows': 8490, 'exact_matches': 8490, 'mismatch_ordinals': [], 'raw_band_sha256': {'B4': 'c5d899a8f85718db6b920214acb389c5997f299e2b10d345a6886d79dbf0d634', 'B3': '5a1ca427fca3179280d52909932094b42e01c93f2c5ad37b67aa20529e746369', 'B2': 'ec08f0463d041fa2cc28ba0549a03cf568866174c299df8d9c6d939ee935201e'}, 'metadata_sha256': 'd4a4bb41fba0e39d49328db29868273d093f982e84716d7f2b836e852f5349f4'}, 'val': {'rows': 535, 'exact_matches': 535, 'mismatch_ordinals': [], 'raw_band_sha256': {'B4': '3803b85ba066fca0343c997acbd526d9793c47aa506e79412703570eb3af8856', 'B3': '95b77f0952807c7e924735739f915b0afc26ddd04a45c1ba53cac50d23f6fc6f', 'B2': '50d414d6a462ca0c2715708b7242a72cfefa0d45ad7844ff7d0ddbe34036cfaa'}, 'metadata_sha256': '35e7afd8f5feafa6ce6b04415a3e4426ad147b5beed3f84db68839ac12d29097'}}\", 'test_pixels_read': 'False', 'label_pixels_read': 'False', 'current_split': 'val', 'operation': 'compare_png', 'compared': '501', 'mismatch_count': '0', 'converter_sha256': '8fd6ae87a0ddcfcd9765bc0f630ba94ec808fc8d23c65084f74020448e3f13a0', 'reader_sha256': 'ec05a8e28e2d3764577be36b9d5c46a75f8ece811afc9142cd00bd4b1c263ab9'}"
+    },
+    {
+      "path": "/home/scv/Cloud-Adapter-light/src/work_dirs/phase64_source_parent/seed64/phase64_source_parent_rgb.py",
+      "exists": true,
+      "bytes": 12596,
+      "sha256": "9e9b58132d21db65a165927067918d8dc74de78575b55507ea6dfcb79fdf5ef0"
+    },
+    {
+      "path": "/home/scv/shared/data/phase65_source_metadata/source_metadata_manifest.json",
+      "exists": true,
+      "bytes": 1137,
+      "sha256": "917e0a279fb6a5d5b1fd993031ed95d51c9578585d9649803c435a60c0e23a2c",
+      "schema": [
+        "repository",
+        "commit",
+        "splits",
+        "status",
+        "test_accessed",
+        "local_png_mapping_verified"
+      ],
+      "first": "{'repository': 'csaybar/CloudSEN12-high', 'commit': 'd97728dd61858a21c7d6bc61385687d328433cba', 'splits': \"{'train': {'url': 'https://huggingface.co/datasets/csaybar/CloudSEN12-high/resolve/d97728dd61858a21c7d6bc61385687d328433cba/train/metadata.csv', 'bytes': 4759992, 'sha256': 'd4a4bb41fba0e39d49328db29868273d093f982e84716d7f2b836e852f5349f4', 'published_inventory': {'type': 'file', 'oid': '833a137170534590532601c95122aca67b0ac65a', 'size': 4759992, 'path': 'train/metadata.csv'}}, 'val': {'url': 'https://huggingface.co/datasets/csaybar/CloudSEN12-high/resolve/d97728dd61858a21c7d6bc61385687d328433cba/val/metadata.csv', 'bytes': 300257, 'sha256': '35e7afd8f5feafa6ce6b04415a3e4426ad147b5beed3f84db68839ac12d29097', 'published_inventory': {'type': 'file', 'oid': '270070b557c98cd5372512fb0a4c54b4f0ca5cba', 'size': 300257, 'path': 'val/metadata.csv'}}}\", 'status': 'published_train_val_metadata_verified', 'test_accessed': 'False', 'local_png_mapping_verified': 'False'}"
+    }
+  ],
+  "new_requests": 0,
+  "resources": {
+    "available_memory_bytes": 32696795136,
+    "free_disk_bytes": 744058777600,
+    "peak_RSS_bytes": 39895040
+  }
+}

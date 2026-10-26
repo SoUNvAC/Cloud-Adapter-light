@@ -1,0 +1,35 @@
+[
+  {
+    "member": "kappaset/test/T52JGR_20200806T011729_tile_4_8.nc",
+    "split": "test",
+    "tile": "52JGR",
+    "time": "20200806T011729",
+    "index_x": 4,
+    "index_y": 8,
+    "offset_x": 2048,
+    "offset_y": 4096,
+    "interpretation": "index arithmetic only; axes/origin/geolocation not certified"
+  },
+  {
+    "member": "kappaset/test/T35QPG_20200416T083559_tile_17_12.nc",
+    "split": "test",
+    "tile": "35QPG",
+    "time": "20200416T083559",
+    "index_x": 17,
+    "index_y": 12,
+    "offset_x": 8704,
+    "offset_y": 6144,
+    "interpretation": "index arithmetic only; axes/origin/geolocation not certified"
+  },
+  {
+    "member": "kappaset/test/T16UEA_20201027T164409_tile_16_17.nc",
+    "split": "test",
+    "tile": "16UEA",
+    "time": "20201027T164409",
+    "index_x": 16,
+    "index_y": 17,
+    "offset_x": 8192,
+    "offset_y": 8704,
+    "interpretation": "index arithmetic only; axes/origin/geolocation not certified"
+  }
+]

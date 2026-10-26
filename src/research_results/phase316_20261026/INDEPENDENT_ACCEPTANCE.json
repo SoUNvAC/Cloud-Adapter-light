@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "all9251_members_independently_parsed": true,
+  "all1079_keys_old_exclusions_exact": true,
+  "all9025_Source_rows_match_history": true,
+  "label_parent_mapping_document_only": true,
+  "all_input_SHA_rechecked": true,
+  "no_pixels_models_HTTP": true,
+  "resources": {
+    "available_memory_bytes": 32562139136,
+    "free_disk_bytes": 744035336192,
+    "peak_RSS_bytes": 75038720
+  }
+}

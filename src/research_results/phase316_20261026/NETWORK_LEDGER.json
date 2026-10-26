@@ -1,0 +1,20 @@
+{
+  "new_official_requests": 0,
+  "new_response_body_bytes": 0,
+  "redirects": 0,
+  "failures": 0,
+  "reason": "existing originalREADME/API/authorcode and archiveindex sufficient to establish gaps; no refetch or newZIP range",
+  "code_sync_events": [
+    {
+      "action": "first gzs gitpull",
+      "result": "GnuTLS handshake non-properlyterminated beforediscovery; safe sync retry succeeded"
+    },
+    {
+      "action": "audit-code synchronization",
+      "result": "two SSH22 pushes closed; HTTPS no existing password and interactiveprompt disabled; SSH443 closed; diagnosticSSH22 subsequently authenticated; no remoteaudit ran during these failures"
+    }
+  ],
+  "budget_requests": 3,
+  "budget_body_bytes": 3000000,
+  "scientific_data_downloads": 0
+}

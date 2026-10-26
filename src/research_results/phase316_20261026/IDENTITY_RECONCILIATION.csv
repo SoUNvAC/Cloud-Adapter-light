@@ -1,0 +1,10 @@
+﻿object,what_counted,source,recomputed,difference,unresolved
+official_original_products,README/API declared Sentinel2L1C products,7100327 Version1 README p1/API revision6,unknown exact original products,official1038; tile/time keys are a different identity level,complete SAFE/product identifiers absent; do not deduplicate to force1038
+archive_NetCDF_files,all .nc entries in existing frozen central directory,kappaset_archive_index.json,9251,9251 exactly matches README,payload not downloaded/opened
+duplicate_full_member_paths,9251 full archive paths,PATCH_MEMBER_MAP,0,same basename in different directories counted separately,byte-identical payload duplication unknown
+all_tile_time_keys,tile plus full timestamp,9251filename parse; original1079-key registry,1079,+41 relative to official product count,key is not full product identity
+non_test_month_directory_keys,union of12month directories,RELEASE_SPLITS,955,test keys=124; month/test shared keys=0,directory split may explain some count levels; do not infer official count excludes test without explicit statement
+test_only_keys,keys in published test and absent from month directories,RELEASE_SPLITS,124,see full key membership map,not proof of originalproduct identity/independence
+unique_tile_day_keys,"tile plus UTC day, diagnostic alternative only",PATCH_MEMBER_MAP,1079,no forced same-day collapse,same tile/day not exact product
+original_full_products_confirmed,full original S2 SAFE identifiers in name/index evidence,original metadata product_id fields,0,1079keys remain unresolved at fullproduct level,one reprocessed proxy is explicitly excluded from exact-original identity
+unique_tiles,MGRS tile strings,PATCH_MEMBER_MAP,941,not independent sample/group count,no new geometry certification

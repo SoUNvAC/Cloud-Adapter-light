@@ -1,0 +1,13 @@
+{
+  "status": "completed",
+  "stages": 3,
+  "elapsed_since_start_seconds": 870.6533348560333,
+  "resources": {
+    "available_memory_bytes": 32561229824,
+    "free_disk_bytes": 744035311616,
+    "peak_RSS_bytes": 17461248
+  },
+  "training_updates": 0,
+  "neural_forwards": 0,
+  "new_data_requests": 0
+}

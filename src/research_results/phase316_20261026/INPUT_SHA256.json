@@ -1,0 +1,193 @@
+{
+  "/home/scv/Cloud-Adapter-light/src/research_results/phase102_20261013/metadata_audit.json": {
+    "sha256": "f74a40331379ce120a1938e348adb4c60350feb76dcdb769e8bcd18a45482c35",
+    "bytes": 3516,
+    "role": "Phase102 frozen counts/input SHA",
+    "backup_relative": "inputs/011_metadata_audit.json"
+  },
+  "/home/scv/Cloud-Adapter-light/src/research_results/phase102_20261013/inputs/kappa_patch_positions.csv": {
+    "sha256": "ab4a8ca5ba7418cf307fcedd80ef0384c017a4eecd04b0d2fa5c6f086f9d7cc3",
+    "bytes": 2419678,
+    "role": "original9251patch name/index projection",
+    "backup_relative": "inputs/008_kappa_patch_positions.csv"
+  },
+  "/home/scv/Cloud-Adapter-light/src/research_results/phase102_20261013/overlap_exclusions.csv": {
+    "sha256": "4576c4d039e869a71a6e6f2f80c7b03e2232f953b6ed860b5fe7ad7b5e49fddc",
+    "bytes": 168329,
+    "role": "original exclusions retained byte-exact",
+    "backup_relative": "inputs/012_overlap_exclusions.csv"
+  },
+  "/home/scv/Cloud-Adapter-light/src/research_results/phase102_20261013/product_location_index.csv": {
+    "sha256": "87c94bd9ec7fe26896602096ceacc9c6348f86e90949ec6ca35927733c8b1664",
+    "bytes": 655297,
+    "role": "old per-key provenance/status",
+    "backup_relative": "inputs/013_product_location_index.csv"
+  },
+  "/home/scv/Cloud-Adapter-light/src/research_results/phase102_20261013/inputs/candidate_products_metadata.json": {
+    "sha256": "27247292f1fd94c6c4fc9e1b0fde179c9328b2518d2a3c24e2f8e8fc819ce0cc",
+    "bytes": 889765,
+    "role": "old acquisition metadata including one reprocessed proxy",
+    "backup_relative": "inputs/005_candidate_products_metadata.json"
+  },
+  "/home/scv/Cloud-Adapter-light/src/research_results/phase102_20261013/inputs/history_positions_only.json": {
+    "sha256": "88379af9c1f6d6493b22cb188579647751c053f206a55d1f23fb93b1167b42c7",
+    "bytes": 4019652,
+    "role": "old9717position-only registry",
+    "backup_relative": "inputs/007_history_positions_only.json"
+  },
+  "/home/scv/Cloud-Adapter-light/src/research_results/phase102_20261013/related_groups.csv": {
+    "sha256": "19049becad199b3aa51ef262d6e25e03e84f18309a82f96bc39067967ce1b4da",
+    "bytes": 163072,
+    "role": "old incomplete connectivity components; not statistical independence",
+    "backup_relative": "inputs/014_related_groups.csv"
+  },
+  "/home/scv/Cloud-Adapter-light/src/research_results/phase102_20261013/inputs/source_records.json": {
+    "sha256": "11d8998d3172b9b534d108adf314a8e8009f6ecb469d3c8296bf0a1e4a99630b",
+    "bytes": 5185,
+    "role": "pinned release/version/license statements",
+    "backup_relative": "inputs/010_source_records.json"
+  },
+  "/home/scv/Cloud-Adapter-light/src/research_results/phase102_20261013/inputs/source_access_sha256.json": {
+    "sha256": "f896332e2af4ef6dc7df41c5e907254ff54cb7d5b021817f1339641d04d9b1bf",
+    "bytes": 40430,
+    "role": "old acquisition SHA/size bindings",
+    "backup_relative": "inputs/009_source_access_sha256.json"
+  },
+  "/home/scv/Cloud-Adapter-light/src/research_results/phase102_20261013/inputs/access_ledger.json": {
+    "sha256": "d73d5ed974aedc90d8816fd3473f71465f16fcede6306ad3794ad09c4168b121",
+    "bytes": 85846,
+    "role": "old HTTP ledger; no new requests",
+    "backup_relative": "inputs/004_access_ledger.json"
+  },
+  "/home/scv/Cloud-Adapter-light/src/research_results/phase102_20261013/inputs/exposure_scan.json": {
+    "sha256": "5490ba58b9cdafd92189bd77ca9deeb1f6236340610da2f5f442f84fc8defac8",
+    "bytes": 100438,
+    "role": "old657file history scope",
+    "backup_relative": "inputs/006_exposure_scan.json"
+  },
+  "/home/scv/Cloud-Adapter-light/src/research_results/phase102_20261013/README.md": {
+    "sha256": "f0592d213f4b38d3fea61149736ef8970331d72817184c1ea7d270e510ee7a2e",
+    "bytes": 4652,
+    "role": "old audit limits",
+    "backup_relative": "inputs/002_README.md"
+  },
+  "/home/scv/Cloud-Adapter-light/src/research_results/phase102_20261013/SOURCE_FACTS.md": {
+    "sha256": "f7af46172c3186158d102ea39b1492af8371567eb75c357f2eec2fab26d58c14",
+    "bytes": 3855,
+    "role": "old source interpretation/version warning",
+    "backup_relative": "inputs/003_SOURCE_FACTS.md"
+  },
+  "/home/scv/Cloud-Adapter-light/src/research_results/phase315_20261026/CONFIRMATION_POOL_ADMISSION.csv": {
+    "sha256": "51f8246c4619ee0979a0bb32699fd92466344b818c7d80fcac3f9de4c626bcba",
+    "bytes": 6037,
+    "role": "Phase315 pending row, not proof no evidence",
+    "backup_relative": "inputs/015_CONFIRMATION_POOL_ADMISSION.csv"
+  },
+  "/home/scv/Cloud-Adapter-light/src/research_results/phase316_20261026/evidence/record_7100327.json": {
+    "sha256": "db5f55182c5d0f9c0509dbee94afcbdab34cd3578999d434e28e3508bca58f2a",
+    "bytes": 8685,
+    "role": "existing official README or author-code hint; no new acquisition",
+    "backup_relative": "inputs/023_record_7100327.json"
+  },
+  "/home/scv/Cloud-Adapter-light/src/research_results/phase316_20261026/evidence/kappaset_archive_index.json": {
+    "sha256": "0e52cda9408331d442cc22e2d18be10bff20bd37ca819b2e906377c780cc8fc2",
+    "bytes": 1249681,
+    "role": "existing official README or author-code hint; no new acquisition",
+    "backup_relative": "inputs/020_kappaset_archive_index.json"
+  },
+  "/home/scv/Cloud-Adapter-light/src/research_results/phase316_20261026/evidence/cmvsm_dias_product_tiler.py": {
+    "sha256": "f4485f48302acd8f3243a086e4fbf29d29229d559d84c170980793877f9a0ffd",
+    "bytes": 3651,
+    "role": "existing official README or author-code hint; no new acquisition",
+    "backup_relative": "inputs/016_cmvsm_dias_product_tiler.py"
+  },
+  "/home/scv/Cloud-Adapter-light/src/research_results/phase316_20261026/evidence/cmvsm_fmsc_subsplit.py": {
+    "sha256": "2154b62fdb4c2de2823acd4ee45591be609813c5157d5b182249b99c80925b3f",
+    "bytes": 1904,
+    "role": "existing official README or author-code hint; no new acquisition",
+    "backup_relative": "inputs/017_cmvsm_fmsc_subsplit.py"
+  },
+  "/home/scv/Cloud-Adapter-light/src/research_results/phase316_20261026/evidence/cmvsm_tree.json": {
+    "sha256": "7ebba69ca283508795a4ff3ad7d4738f4e1a2855f36fadf90416a95f2673c2c0",
+    "bytes": 22782,
+    "role": "existing official README or author-code hint; no new acquisition",
+    "backup_relative": "inputs/018_cmvsm_tree.json"
+  },
+  "/home/scv/Cloud-Adapter-light/src/research_results/phase316_20261026/evidence/cmvsm_vsm_lib_raster_netcdf_interface.cpp": {
+    "sha256": "b53c0ecf0462ceaad7b9ac1b8a7a8ced35efba4ecba36008e26754a78a7a9805",
+    "bytes": 8592,
+    "role": "existing official README or author-code hint; no new acquisition",
+    "backup_relative": "inputs/019_cmvsm_vsm_lib_raster_netcdf_interface.cpp"
+  },
+  "/home/scv/Cloud-Adapter-light/src/research_results/phase316_20261026/evidence/kappaset_readme.pdf": {
+    "sha256": "9a0572657ed2a70b8d2f2c28c2bf641ca0601deee3d738c6b342b41f3eb8a64f",
+    "bytes": 231988,
+    "role": "existing official README or author-code hint; no new acquisition",
+    "backup_relative": "inputs/021_kappaset_readme.pdf"
+  },
+  "/home/scv/Cloud-Adapter-light/src/research_results/phase316_20261026/evidence/kappaset_readme.pdf.txt": {
+    "sha256": "6db8be5fa6883373dd684b7bfc3b47955617dfe62cbaef8bbfffa83b2e4ad10a",
+    "bytes": 4033,
+    "role": "existing official README or author-code hint; no new acquisition",
+    "backup_relative": "inputs/022_kappaset_readme.pdf.txt"
+  },
+  "/home/scv/Cloud-Adapter-light/src/work_dirs/phase64_source_parent/seed64/best_mIoU_iter_4000.pth": {
+    "sha256": "64dd9a20288c35ab3362b8b1c1dafc216d9c44d60868475177e139d6be859dc9",
+    "bytes": 95875704,
+    "role": "SHA only; never deserialized"
+  },
+  "/home/scv/shared/data/phase65_source_metadata/source_metadata_manifest.json": {
+    "sha256": "917e0a279fb6a5d5b1fd993031ed95d51c9578585d9649803c435a60c0e23a2c",
+    "bytes": 1137,
+    "role": "published CloudSEN12 train/val record revision",
+    "backup_relative": "inputs/029_source_metadata_manifest.json"
+  },
+  "/home/scv/Cloud-Adapter-light/src/work_dirs/phase65a/source_mapping/mapping_audit.json": {
+    "sha256": "c3c521a375c50f81ff0e58682621c7fcb72fc47472a7b37931c587036f12d0bb",
+    "bytes": 2659992,
+    "role": "existing exact RGB PNGordinal-to-product proof, no pixels reopened",
+    "backup_relative": "inputs/028_mapping_audit.json"
+  },
+  "/home/scv/Cloud-Adapter-light/src/work_dirs/phase64_source_parent/seed64/phase64_source_parent_rgb.py": {
+    "sha256": "9e9b58132d21db65a165927067918d8dc74de78575b55507ea6dfcb79fdf5ef0",
+    "bytes": 12596,
+    "role": "actual saved Source training config",
+    "backup_relative": "inputs/027_phase64_source_parent_rgb.py"
+  },
+  "/home/scv/shared/data/phase65_source_metadata/train_metadata.csv": {
+    "sha256": "d4a4bb41fba0e39d49328db29868273d093f982e84716d7f2b836e852f5349f4",
+    "bytes": 4759992,
+    "role": "actual Source train product and geometry metadata",
+    "backup_relative": "inputs/030_train_metadata.csv"
+  },
+  "/home/scv/shared/data/phase65_source_metadata/val_metadata.csv": {
+    "sha256": "35e7afd8f5feafa6ce6b04415a3e4426ad147b5beed3f84db68839ac12d29097",
+    "bytes": 300257,
+    "role": "actual Source val product and geometry metadata",
+    "backup_relative": "inputs/031_val_metadata.csv"
+  },
+  "/home/scv/Cloud-Adapter-light/src/configs/protocol/phase64_source_parent_rgb.py": {
+    "sha256": "d2ff071bb34a7921d37b988a4c31c616f899c1bbd631100f56ae0900910a1d20",
+    "bytes": 2044,
+    "role": "currentSource ontology/input implementation as text only",
+    "backup_relative": "inputs/001_phase64_source_parent_rgb.py"
+  },
+  "/home/scv/Cloud-Adapter-light/src/cloud_adapter/datasets/phase64_parent.py": {
+    "sha256": "9cac6d3c3f31ebf8bf7865f31269b7725762a365297da46b78e79df34c177377",
+    "bytes": 1882,
+    "role": "currentSource ontology/input implementation as text only",
+    "backup_relative": "inputs/000_phase64_parent.py"
+  },
+  "/home/scv/Cloud-Adapter-light/src/tools/phase302_images.py": {
+    "sha256": "aecaccb41f592141eb17f1b63044626ee5b957eab8e05425e53bf5a7cc8897f8",
+    "bytes": 2774,
+    "role": "currentSource ontology/input implementation as text only",
+    "backup_relative": "inputs/025_phase302_images.py"
+  },
+  "/home/scv/Cloud-Adapter-light/src/tools/execute_phase302.py": {
+    "sha256": "5856b9f15211174453a7ee84b2fcda0ad8b58efef938968a9ae4aa9496245e93",
+    "bytes": 19923,
+    "role": "currentSource ontology/input implementation as text only",
+    "backup_relative": "inputs/024_execute_phase302.py"
+  }
+}

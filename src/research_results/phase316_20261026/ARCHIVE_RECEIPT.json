@@ -1,0 +1,11 @@
+{
+  "archive": "phase316_full_backup.tar.gz",
+  "archive_bytes": 4450146,
+  "archive_sha256": "b2672d598285a89025861ed413b0d2aa9e059996d2a2a4cebbbe7e9f1482ced0",
+  "manifest_sha256": "77283de82766397e9bdf1a1611d038e57457d21c98fa043039a518c7443fb4b7",
+  "files": 89,
+  "raw_bytes": 24666456,
+  "projected_persistent_bytes": 158233204,
+  "all_members_SHA_verified": true,
+  "archive_SHA_verified": true
+}

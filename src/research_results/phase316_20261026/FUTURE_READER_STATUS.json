@@ -1,0 +1,23 @@
+{
+  "status": "incomplete_not_frozen_not_implemented",
+  "named_RGB": [
+    "B04",
+    "B03",
+    "B02"
+  ],
+  "label_mapping": {
+    "0": "ignore255",
+    "1": "Surface0",
+    "2": "Shadow2",
+    "3": "Cloud1",
+    "4": "Cloud1",
+    "5": "ignore255"
+  },
+  "missing": [
+    "actualdtype/units/fill",
+    "scaling_factor vs scale_factor/add_offset and exporterrevision",
+    "shared axes/dimensions/index orientation",
+    "originalproduct/grid/spatialintersection"
+  ],
+  "no_resampling_or_normalization_selected": true
+}

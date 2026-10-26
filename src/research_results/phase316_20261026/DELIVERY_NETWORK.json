@@ -1,0 +1,16 @@
+{
+  "official_metadata_requests": 0,
+  "official_metadata_response_bytes": 0,
+  "code_sync_failures": [
+    "gzs firstgitpull GnuTLS handshake; succeeded retry",
+    "local SSH22 pushes connectionclosed multiple times",
+    "HTTPS push no existing credentials; interactiveprompt disabled; no login requested",
+    "firstSSH443 push via defaultssh connectionclosed",
+    "explicitWindowsSSH22 push connectionaborted duringbanner",
+    "ProxyJump attempt connectionclosed",
+    "redundant sameSHA explicitjump attempt bannerexchange timeout"
+  ],
+  "successful_route": "local WindowsOpenSSH -> ssh.github.com:443, HostKeyAlias github.com, StrictHostKeyChecking yes; normal gzs ff-onlypull",
+  "analysis_retries": 0,
+  "external_data_downloads": 0
+}

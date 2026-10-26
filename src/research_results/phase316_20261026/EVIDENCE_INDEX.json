@@ -1,0 +1,244 @@
+{
+  "reused_files": [
+    {
+      "file": "cmvsm_tree.json",
+      "sha256": "7ebba69ca283508795a4ff3ad7d4738f4e1a2855f36fadf90416a95f2673c2c0",
+      "bytes": 22782,
+      "prior_path": "outputs/phase102/phase102_20261013/acquired/cmvsm_tree.json",
+      "prior_events": [
+        {
+          "url": "https://api.github.com/repos/kappazeta/cm-vsm/git/trees/master?recursive=1",
+          "file": "cmvsm_tree.json",
+          "range": null,
+          "body_bytes_received": 22782,
+          "access": "metadata only",
+          "status": 200,
+          "content_length": null,
+          "content_range": null,
+          "sha256": "7ebba69ca283508795a4ff3ad7d4738f4e1a2855f36fadf90416a95f2673c2c0"
+        }
+      ],
+      "note": "Phase102 cache reused; old recorded acquisitiontime if present; Phase316 no HTTP"
+    },
+    {
+      "file": "cmvsm_fmsc_subsplit.py",
+      "sha256": "2154b62fdb4c2de2823acd4ee45591be609813c5157d5b182249b99c80925b3f",
+      "bytes": 1904,
+      "prior_path": "outputs/phase102/phase102_20261013/acquired/cmvsm_fmsc_subsplit.py",
+      "prior_events": [
+        {
+          "url": "https://raw.githubusercontent.com/kappazeta/cm-vsm/master/fmsc/subsplit.py",
+          "file": "cmvsm_fmsc_subsplit.py",
+          "range": null,
+          "body_bytes_received": 1904,
+          "access": "metadata only",
+          "status": 200,
+          "content_length": "1904",
+          "content_range": null,
+          "sha256": "2154b62fdb4c2de2823acd4ee45591be609813c5157d5b182249b99c80925b3f"
+        }
+      ],
+      "note": "Phase102 cache reused; old recorded acquisitiontime if present; Phase316 no HTTP"
+    },
+    {
+      "file": "cmvsm_vsm_lib_raster_netcdf_interface.cpp",
+      "sha256": "b53c0ecf0462ceaad7b9ac1b8a7a8ced35efba4ecba36008e26754a78a7a9805",
+      "bytes": 8592,
+      "prior_path": "outputs/phase102/phase102_20261013/acquired/cmvsm_vsm_lib_raster_netcdf_interface.cpp",
+      "prior_events": [
+        {
+          "url": "https://raw.githubusercontent.com/kappazeta/cm-vsm/master/vsm/lib/raster/netcdf_interface.cpp",
+          "file": "cmvsm_vsm_lib_raster_netcdf_interface.cpp",
+          "range": null,
+          "body_bytes_received": 8592,
+          "access": "metadata only",
+          "status": 200,
+          "content_length": "8592",
+          "content_range": null,
+          "sha256": "b53c0ecf0462ceaad7b9ac1b8a7a8ced35efba4ecba36008e26754a78a7a9805"
+        }
+      ],
+      "note": "Phase102 cache reused; old recorded acquisitiontime if present; Phase316 no HTTP"
+    },
+    {
+      "file": "kappaset_archive_index.json",
+      "sha256": "0e52cda9408331d442cc22e2d18be10bff20bd37ca819b2e906377c780cc8fc2",
+      "bytes": 1249681,
+      "prior_path": "outputs/phase102/phase102_20261013/acquired/kappaset_archive_index.json",
+      "prior_events": [],
+      "note": "Phase102 cache reused; old recorded acquisitiontime if present; Phase316 no HTTP"
+    },
+    {
+      "file": "record_7100327.json",
+      "sha256": "db5f55182c5d0f9c0509dbee94afcbdab34cd3578999d434e28e3508bca58f2a",
+      "bytes": 8685,
+      "prior_path": "outputs/phase102/phase102_20261013/acquired/record_7100327.json",
+      "prior_events": [
+        {
+          "url": "https://zenodo.org/api/records/7100327",
+          "file": "record_7100327.json",
+          "range": null,
+          "body_bytes_received": 8685,
+          "access": "metadata only",
+          "status": 200,
+          "content_length": "8685",
+          "content_range": null,
+          "sha256": "db5f55182c5d0f9c0509dbee94afcbdab34cd3578999d434e28e3508bca58f2a"
+        }
+      ],
+      "note": "Phase102 cache reused; old recorded acquisitiontime if present; Phase316 no HTTP"
+    },
+    {
+      "file": "cmvsm_dias_product_tiler.py",
+      "sha256": "f4485f48302acd8f3243a086e4fbf29d29229d559d84c170980793877f9a0ffd",
+      "bytes": 3651,
+      "prior_path": "outputs/phase102/phase102_20261013/acquired/cmvsm_dias_product_tiler.py",
+      "prior_events": [
+        {
+          "url": "https://raw.githubusercontent.com/kappazeta/cm-vsm/master/dias/product_tiler.py",
+          "file": "cmvsm_dias_product_tiler.py",
+          "range": null,
+          "body_bytes_received": 3651,
+          "access": "metadata only",
+          "status": 200,
+          "content_length": "3651",
+          "content_range": null,
+          "sha256": "f4485f48302acd8f3243a086e4fbf29d29229d559d84c170980793877f9a0ffd"
+        }
+      ],
+      "note": "Phase102 cache reused; old recorded acquisitiontime if present; Phase316 no HTTP"
+    },
+    {
+      "file": "kappaset_readme.pdf",
+      "sha256": "9a0572657ed2a70b8d2f2c28c2bf641ca0601deee3d738c6b342b41f3eb8a64f",
+      "bytes": 231988,
+      "prior_path": "outputs/phase102/phase102_20261013/acquired/kappaset_readme.pdf",
+      "prior_events": [
+        {
+          "url": "https://zenodo.org/api/records/7100327/files/README.pdf/content",
+          "file": "kappaset_readme.pdf",
+          "range": null,
+          "body_bytes_received": 231988,
+          "access": "metadata only",
+          "status": 200,
+          "content_length": "231988",
+          "content_range": null,
+          "sha256": "9a0572657ed2a70b8d2f2c28c2bf641ca0601deee3d738c6b342b41f3eb8a64f"
+        }
+      ],
+      "note": "Phase102 cache reused; old recorded acquisitiontime if present; Phase316 no HTTP"
+    },
+    {
+      "file": "kappaset_readme.pdf.txt",
+      "sha256": "6db8be5fa6883373dd684b7bfc3b47955617dfe62cbaef8bbfffa83b2e4ad10a",
+      "bytes": 4033,
+      "prior_path": "outputs/phase102/phase102_20261013/acquired/kappaset_readme.pdf.txt",
+      "prior_events": [],
+      "note": "Phase102 cache reused; old recorded acquisitiontime if present; Phase316 no HTTP"
+    }
+  ],
+  "release": {
+    "id": 7100327,
+    "version": "1",
+    "revision": 6,
+    "created": "2022-09-23T12:11:03.654671+00:00",
+    "modified": "2024-07-16T02:20:06.960285+00:00",
+    "license": {
+      "id": "cc-by-4.0"
+    },
+    "creators": [
+      {
+        "name": "Tetiana Shtym",
+        "affiliation": "KappaZeta Ltd, Tartu, Estonia ; tetiana.shtym@kappazeta.ee"
+      },
+      {
+        "name": "Olga Wold",
+        "affiliation": "KappaZeta Ltd, Tartu, Estonia"
+      },
+      {
+        "name": "Marharyta Domnich",
+        "affiliation": "Institute of Computer Science, University of Tartu , Tartu, Estonia"
+      },
+      {
+        "name": "Kaupo Voormansik",
+        "affiliation": "KappaZeta Ltd, Tartu, Estonia; Tartu Observatory"
+      },
+      {
+        "name": "Mariana Rohtsalu",
+        "affiliation": null
+      },
+      {
+        "name": "Joosep Truupõld",
+        "affiliation": null
+      },
+      {
+        "name": "Nikita Murin",
+        "affiliation": null
+      },
+      {
+        "name": "Abdullah Toqeer",
+        "affiliation": null
+      },
+      {
+        "name": "Catherine Akinyi Odera",
+        "affiliation": null
+      },
+      {
+        "name": "Fariha Harun",
+        "affiliation": null
+      },
+      {
+        "name": "Indrek Sünter",
+        "affiliation": "KappaZeta Ltd, Tartu, Estonia"
+      },
+      {
+        "name": "Heido Trofimov",
+        "affiliation": "KappaZeta Ltd, Tartu, Estonia"
+      },
+      {
+        "name": "Anton Kostiukhin",
+        "affiliation": "KappaZeta Ltd, Tartu, Estonia"
+      },
+      {
+        "name": "Mihkel Järveoja",
+        "affiliation": null
+      }
+    ]
+  },
+  "checkpoint": {
+    "path": "/home/scv/Cloud-Adapter-light/src/work_dirs/phase64_source_parent/seed64/best_mIoU_iter_4000.pth",
+    "sha256": "64dd9a20288c35ab3362b8b1c1dafc216d9c44d60868475177e139d6be859dc9"
+  },
+  "source_manifest": {
+    "repository": "csaybar/CloudSEN12-high",
+    "commit": "d97728dd61858a21c7d6bc61385687d328433cba",
+    "splits": {
+      "train": {
+        "url": "https://huggingface.co/datasets/csaybar/CloudSEN12-high/resolve/d97728dd61858a21c7d6bc61385687d328433cba/train/metadata.csv",
+        "bytes": 4759992,
+        "sha256": "d4a4bb41fba0e39d49328db29868273d093f982e84716d7f2b836e852f5349f4",
+        "published_inventory": {
+          "type": "file",
+          "oid": "833a137170534590532601c95122aca67b0ac65a",
+          "size": 4759992,
+          "path": "train/metadata.csv"
+        }
+      },
+      "val": {
+        "url": "https://huggingface.co/datasets/csaybar/CloudSEN12-high/resolve/d97728dd61858a21c7d6bc61385687d328433cba/val/metadata.csv",
+        "bytes": 300257,
+        "sha256": "35e7afd8f5feafa6ce6b04415a3e4426ad147b5beed3f84db68839ac12d29097",
+        "published_inventory": {
+          "type": "file",
+          "oid": "270070b557c98cd5372512fb0a4c54b4f0ca5cba",
+          "size": 300257,
+          "path": "val/metadata.csv"
+        }
+      }
+    },
+    "status": "published_train_val_metadata_verified",
+    "test_accessed": false,
+    "local_png_mapping_verified": false
+  },
+  "cached_author_code_not_exporter_binding": true
+}

@@ -1,0 +1,14 @@
+﻿directory,patches,unique_tile_time_keys,role
+April,527,73,published directory; month is not a newly assigned training split
+August,1066,90,published directory; month is not a newly assigned training split
+December,16,3,published directory; month is not a newly assigned training split
+February,476,88,published directory; month is not a newly assigned training split
+January,290,60,published directory; month is not a newly assigned training split
+July,1172,99,published directory; month is not a newly assigned training split
+June,745,117,published directory; month is not a newly assigned training split
+March,698,86,published directory; month is not a newly assigned training split
+May,2271,126,published directory; month is not a newly assigned training split
+November,358,61,published directory; month is not a newly assigned training split
+October,556,88,published directory; month is not a newly assigned training split
+September,273,64,published directory; month is not a newly assigned training split
+test,803,124,published test directory; not project-level untouched guarantee
