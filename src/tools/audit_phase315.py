@@ -31,6 +31,8 @@ def main():
     identities=read(ROOT/'SEED_IDENTITY.csv');assert len(identities)==3 and len({r['initial_A_sha256'] for r in identities})==3 and all(r['B_zero']=='True' for r in identities)
     for seed in ['31501','31502']:
         ep=load(ROOT/seed/'ENDPOINT_LOCK.json');gate=load(ROOT/seed/'MODEL_ACCEPTANCE.json');assert ep['updates']==955 and ep['skipped']==45 and ep['all_base_tensors_unchanged']
+        assert sha(ROOT/seed/'initial_lora.pth')==ep['initial_sha256'] and sha(ROOT/seed/'final_lora.pth')==ep['final_sha256'] and sha(ROOT/seed/'TRAIN_CURVE.jsonl')==ep['curve_sha256']
+        for name,h in ep['probes'].items():assert sha(ROOT/seed/'probes'/name)==h,name
         assert max(gate['same_seed_original304_AST_loss_error'],gate['same_seed_gradient_max_error'],gate['same_seed_update_max_error'],*gate['zero_lora_errors'].values())<=1e-6
     for path,h in load(ROOT/'CPU_INPUT_SHA256.json').items():assert sha(path)==h,path
     for path,h in load(ROOT/'EXECUTION_LOCK.json')['inputs'].items():assert sha(path)==h,path
