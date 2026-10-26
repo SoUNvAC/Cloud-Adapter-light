@@ -77,11 +77,23 @@ def finish():
  for n,e in ev.items():
   assert Path(n).name==n and ':' not in n;data=base64.b64decode(e['base64']);assert hashlib.sha256(data).hexdigest()==e['sha256'];p=dest/n;assert not p.exists();p.write_bytes(data);metadata_sha[n]=e['sha256']
  index=dict(original_manifest_sha256=h['manifest_sha256'],recovery_plan_sha256=sha(LOCAL/'RECOVERY01_PLAN.json'),receipts=receipts,prefix_files=plan['prefix_verified_files'],all_snapshot_files=len(m),all_member_SHA_verified=True,completed_recovery_streams_SHA_verified=True,first_stream_complete=False,first_stream_SHA='unavailable/incomplete',preserved_failure_sha256=sha(LOCAL/'BACKUP_FAILURE.json'),recovery_metadata_SHA=metadata_sha)
- write(LOCAL/'RECOVERY01_INTEGRITY_INDEX.json',index);b=dict(**h,status='completed_via_verified_missing_member_recovery',backup_mode='member_checked_prefix_plus_SHA_verified_segmented_suffix',all_member_SHA_verified=True,whole_compressed_stream_SHA_verified=False,completed_recovery_streams_SHA_verified=True,first_stream_complete=False,recovery_batches=len(receipts),recovery_metadata_files=len(metadata_sha),recovery_stream_bytes=sum(r['local']['stream_bytes'] for r in receipts),manifest_sha256=h['manifest_sha256'],integrity_index_sha256=sha(LOCAL/'RECOVERY01_INTEGRITY_INDEX.json'));write(LOCAL/'BACKUP_RECEIPT.json',b);print(json.dumps(b))
+ write(LOCAL/'RECOVERY01_INTEGRITY_INDEX.json',index);receipt()
+
+def receipt():
+ # Resume only publication after the completed finish-stage integrity index; no SSH/stream.
+ assert not (LOCAL/'BACKUP_RECEIPT.json').exists()
+ h,m=manifest_local();index=load(LOCAL/'RECOVERY01_INTEGRITY_INDEX.json');plan=load(LOCAL/'RECOVERY01_PLAN.json')
+ assert index['original_manifest_sha256']==h['manifest_sha256'] and index['recovery_plan_sha256']==sha(LOCAL/'RECOVERY01_PLAN.json') and index['all_member_SHA_verified'] and not index['first_stream_complete']
+ assert len(index['receipts'])==len(plan['batches']) and index['all_snapshot_files']==len(m)
+ for i,r in enumerate(index['receipts'],1):
+  assert r==load(LOCAL/'recovery01'/f'batch{i:03d}_VERIFIED.json') and r['local']['stream_sha256']==r['remote']['stream_sha256'] and r['local']['stream_bytes']==r['remote']['stream_bytes']
+ for n,v in index['recovery_metadata_SHA'].items():assert sha(LOCAL/'remote_backup/backup_recovery01'/n)==v,n
+ for n,e in m.items():assert (LOCAL/'remote_backup'/n).stat().st_size==e['bytes'] and sha(LOCAL/'remote_backup'/n)==e['sha256'],n
+ b=dict(h);b.update(status='completed_via_verified_missing_member_recovery',backup_mode='member_checked_prefix_plus_SHA_verified_segmented_suffix',all_member_SHA_verified=True,whole_compressed_stream_SHA_verified=False,completed_recovery_streams_SHA_verified=True,first_stream_complete=False,recovery_batches=len(index['receipts']),recovery_metadata_files=len(index['recovery_metadata_SHA']),recovery_stream_bytes=sum(r['local']['stream_bytes'] for r in index['receipts']),integrity_index_sha256=sha(LOCAL/'RECOVERY01_INTEGRITY_INDEX.json'));write(LOCAL/'BACKUP_RECEIPT.json',b);print(json.dumps(b))
 def evidence():
  assert len(list(REC.glob('*_RECEIPT.json')))==len(list(REC.glob('*_REQUEST.json')))
  out={p.name:dict(bytes=p.stat().st_size,sha256=sha(p),base64=base64.b64encode(p.read_bytes()).decode()) for p in REC.iterdir() if p.is_file()};assert sum(e['bytes'] for e in out.values())<=5000000;print(json.dumps(out))
 if __name__=='__main__':
  mode=sys.argv[1]
  if mode=='remote_batch':remote_batch(sys.argv[2])
- else:{'plan':plan,'inspect':inspect,'batches':batches,'finish':finish,'evidence':evidence}[mode]()
+ else:{'plan':plan,'inspect':inspect,'batches':batches,'finish':finish,'receipt':receipt,'evidence':evidence}[mode]()

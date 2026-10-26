@@ -1,0 +1,11 @@
+{
+  "status": "sealed",
+  "endpoints": {
+    "CMC_CB": "1583eb2e62b87d0fc0d947327c0958bbc4fec31e768336ec3a55423bb19fab9f",
+    "SPARCS_PL": "f7cfaef650544c284b6cc4e4550e56be5f3eaf321f4ab5e6543c960823897ec7",
+    "SPARCS_CB": "25d3f3e7c66d80685a357786deb9706aca8447a04c77d479258ea82a035a79da",
+    "L8_PL": "d1be133ad5fbef7fb9b1d8d7e1f961e803181e5d3c48021d78dbbfca5d582e69",
+    "L8_CB": "9d20b38bec3a9346874aef76bc948d0900a39051290ca1c63b4bfbe0233fc804"
+  },
+  "epoch": 1793020208.8294804
+}

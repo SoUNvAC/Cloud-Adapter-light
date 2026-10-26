@@ -1,0 +1,9 @@
+{
+  "index": "batch012",
+  "manifest_sha256": "f3cefafc90a8f52044ae070473c6280d30a152ce9088b5dc0d76d756015a3196",
+  "files": 256,
+  "raw_bytes": 6110265,
+  "stream_bytes": 5950862,
+  "stream_sha256": "aad0849f552a4406c8b3d86b7d50cf3d7489032f238476fdd07a93b4f03fe9ee",
+  "status": "completed"
+}

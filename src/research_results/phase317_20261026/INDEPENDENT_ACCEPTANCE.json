@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "all_same_initial_tensorSHA": true,
+  "original304_initial_sha256": "b1c85c6f7a62eb465a994a5a2803c0c7ee1ebde097b624aae36abcf2a01aee3e",
+  "all_masks_Q90_or_CMC_original_exact": true,
+  "all_5000_attempts_exact": true,
+  "all_transition_margins": true,
+  "CMC_D": 506798,
+  "CMC_B": 784478,
+  "no_new_neural_calls": true,
+  "resources": {
+    "available_memory": 32558882816,
+    "free_disk": 740559388672,
+    "peak_RSS": 159559680
+  }
+}

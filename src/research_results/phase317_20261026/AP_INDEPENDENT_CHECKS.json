@@ -1,0 +1,74 @@
+[
+  {
+    "pool": "CMC",
+    "scene": "0876b85f78d99180dd199fef6b0e29b964106f55b1224e5ec9d05aa8443fe33b",
+    "strategy": "Source",
+    "sample_pixels": 65536,
+    "stream_AP": null,
+    "independent_AP": null
+  },
+  {
+    "pool": "CMC",
+    "scene": "0876b85f78d99180dd199fef6b0e29b964106f55b1224e5ec9d05aa8443fe33b",
+    "strategy": "PL",
+    "sample_pixels": 65536,
+    "stream_AP": null,
+    "independent_AP": null
+  },
+  {
+    "pool": "CMC",
+    "scene": "0876b85f78d99180dd199fef6b0e29b964106f55b1224e5ec9d05aa8443fe33b",
+    "strategy": "CB",
+    "sample_pixels": 65536,
+    "stream_AP": null,
+    "independent_AP": null
+  },
+  {
+    "pool": "SPARCS",
+    "scene": "LC80200462014213LGN00",
+    "strategy": "Source",
+    "sample_pixels": 65536,
+    "stream_AP": 0.11322207433832131,
+    "independent_AP": 0.11322207433832132
+  },
+  {
+    "pool": "SPARCS",
+    "scene": "LC80200462014213LGN00",
+    "strategy": "PL",
+    "sample_pixels": 65536,
+    "stream_AP": 0.3511781965196852,
+    "independent_AP": 0.3511781965196852
+  },
+  {
+    "pool": "SPARCS",
+    "scene": "LC80200462014213LGN00",
+    "strategy": "CB",
+    "sample_pixels": 65536,
+    "stream_AP": 0.38606819192962055,
+    "independent_AP": 0.3860681919296205
+  },
+  {
+    "pool": "L8",
+    "scene": "LC80010112014080LGN00",
+    "strategy": "Source",
+    "sample_pixels": 65536,
+    "stream_AP": 0.6704619878111403,
+    "independent_AP": 0.6704619878111407
+  },
+  {
+    "pool": "L8",
+    "scene": "LC80010112014080LGN00",
+    "strategy": "PL",
+    "sample_pixels": 65536,
+    "stream_AP": 0.38480260586729786,
+    "independent_AP": 0.38480260586729786
+  },
+  {
+    "pool": "L8",
+    "scene": "LC80010112014080LGN00",
+    "strategy": "CB",
+    "sample_pixels": 65536,
+    "stream_AP": 0.4582030299078997,
+    "independent_AP": 0.4582030299078997
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "no_torch": true,
+  "allfive_before_references": true,
+  "historical_CMC_D": 506798,
+  "historical_CMC_B": 784478,
+  "pooled_AP_exact_float32_no_score_quantization": true,
+  "all_transition_margins": true,
+  "seconds": 352.9720607070485,
+  "resources": {
+    "available_memory": 32094224384,
+    "free_disk": 740559446016,
+    "peak_RSS": 4746424320
+  }
+}

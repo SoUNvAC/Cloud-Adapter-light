@@ -1,0 +1,59 @@
+{
+  "l8_raw": {
+    "LC81930452013126LGN01": {
+      "path": "/home/scv/shared/data/l8_biome_raw/l8biome/barren/LC81930452013126LGN01/LC81930452013126LGN01_fixedmask.TIF",
+      "bytes": 5743105,
+      "note": "stat only; open afterallfiveendpointssealed; restorefill collapsedbyoriginalPNGconverter"
+    },
+    "LC81750622013304LGN00": {
+      "path": "/home/scv/shared/data/l8_biome_raw/l8biome/forest/LC81750622013304LGN00/LC81750622013304LGN00_fixedmask.TIF",
+      "bytes": 8532459,
+      "note": "stat only; open afterallfiveendpointssealed; restorefill collapsedbyoriginalPNGconverter"
+    },
+    "LC80980712014024LGN00": {
+      "path": "/home/scv/shared/data/l8_biome_raw/l8biome/grass_crops/LC80980712014024LGN00/LC80980712014024LGN00_fixedmask.TIF",
+      "bytes": 11965645,
+      "note": "stat only; open afterallfiveendpointssealed; restorefill collapsedbyoriginalPNGconverter"
+    },
+    "LC82020522013141LGN01": {
+      "path": "/home/scv/shared/data/l8_biome_raw/l8biome/grass_crops/LC82020522013141LGN01/LC82020522013141LGN01_fixedmask.TIF",
+      "bytes": 4075641,
+      "note": "stat only; open afterallfiveendpointssealed; restorefill collapsedbyoriginalPNGconverter"
+    },
+    "LC80320382013278LGN00": {
+      "path": "/home/scv/shared/data/l8_biome_raw/l8biome/shrubland/LC80320382013278LGN00/LC80320382013278LGN00_fixedmask.TIF",
+      "bytes": 1002818,
+      "note": "stat only; open afterallfiveendpointssealed; restorefill collapsedbyoriginalPNGconverter"
+    },
+    "LC80010112014080LGN00": {
+      "path": "/home/scv/shared/data/l8_biome_raw/l8biome/snow_ice/LC80010112014080LGN00/LC80010112014080LGN00_fixedmask.TIF",
+      "bytes": 1962590,
+      "note": "stat only; open afterallfiveendpointssealed; restorefill collapsedbyoriginalPNGconverter"
+    },
+    "LC80250022014232LGN00": {
+      "path": "/home/scv/shared/data/l8_biome_raw/l8biome/snow_ice/LC80250022014232LGN00/LC80250022014232LGN00_fixedmask.TIF",
+      "bytes": 3366569,
+      "note": "stat only; open afterallfiveendpointssealed; restorefill collapsedbyoriginalPNGconverter"
+    },
+    "LC81010142014189LGN00": {
+      "path": "/home/scv/shared/data/l8_biome_raw/l8biome/wetlands/LC81010142014189LGN00/LC81010142014189LGN00_fixedmask.TIF",
+      "bytes": 7272737,
+      "note": "stat only; open afterallfiveendpointssealed; restorefill collapsedbyoriginalPNGconverter"
+    }
+  },
+  "L8_native_codes": {
+    "0": "fill",
+    "64": "shadow",
+    "128": "clear",
+    "192": "thin",
+    "255": "cloud"
+  },
+  "PNG_codes": {
+    "0": "clear_or_collapsedfill",
+    "1": "shadow",
+    "2": "thin",
+    "3": "cloud"
+  },
+  "rule": "global coordinate orientation must reproduce originalPNG exactly under oldordinalmap before excluding rawfill; ambiguity only allowed if bothyieldidentical reference",
+  "pixels_read": false
+}

@@ -1,0 +1,32 @@
+{
+  "status": "passed",
+  "cases": [
+    {
+      "generated_samples": 27,
+      "constant_scores": false,
+      "exact_AP": 0.48776443347960374,
+      "independent_AP": 0.48776443347960374
+    },
+    {
+      "generated_samples": 1000107,
+      "constant_scores": false,
+      "exact_AP": 0.5013208869356179,
+      "independent_AP": 0.5013208869356179
+    },
+    {
+      "generated_samples": 1000107,
+      "constant_scores": true,
+      "exact_AP": 0.5001454844331656,
+      "independent_AP": 0.5001454844331656
+    }
+  ],
+  "generated_data_only": true,
+  "target_references_opened": false,
+  "new_neural_calls": 0,
+  "seconds": 0.26603676995728165,
+  "resources": {
+    "available_memory": 31405690880,
+    "free_disk": 741185073152,
+    "peak_RSS": 112111616
+  }
+}

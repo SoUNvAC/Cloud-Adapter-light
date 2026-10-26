@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "runtime": "3.10.21 (main, Aug 27 2026, 14:42:07) [GCC 14.3.0]",
+  "raw_bytes": 5,
+  "compressed_bytes": 147,
+  "writer_reader_SHA_equal": true,
+  "tar_stream_member_exact": true,
+  "real_experiment_streams": 0
+}

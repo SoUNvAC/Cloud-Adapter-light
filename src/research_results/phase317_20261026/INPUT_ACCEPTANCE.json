@@ -1,0 +1,32 @@
+{
+  "status": "passed",
+  "rows": [
+    {
+      "pool": "SPARCS",
+      "name": "LC80200462014213LGN00_11",
+      "legacy_val_pipeline": "LoadImage/Resize512/PackSegInputs with annotations omitted",
+      "input_equal": true,
+      "preprocessor_equal": true,
+      "max_score_error": 0.0,
+      "pred_equal": true,
+      "output_space": "resized512 decode_head scores; no return to1000px for thisnewfixedview protocol"
+    },
+    {
+      "pool": "L8",
+      "name": "barren_LC81930452013126LGN01_patch_0_1024.png",
+      "legacy_val_pipeline": "LoadImage/Resize512/PackSegInputs with annotations omitted",
+      "input_equal": true,
+      "preprocessor_equal": true,
+      "max_score_error": 0.0,
+      "pred_equal": true,
+      "output_space": "resized512 decode_head scores; no return to1000px for thisnewfixedview protocol"
+    }
+  ],
+  "CB_manual": {
+    "unequal_class_sizes_CB": 6.0,
+    "PL": 4.666666666666667,
+    "equal_class_CE_invariant": true,
+    "singleclass_equals_PL": true,
+    "allignore_skips": true
+  }
+}

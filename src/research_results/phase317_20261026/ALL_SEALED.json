@@ -1,0 +1,22 @@
+{
+  "status": "sealed",
+  "endpoints": {
+    "CMC_CB": "1583eb2e62b87d0fc0d947327c0958bbc4fec31e768336ec3a55423bb19fab9f",
+    "SPARCS_PL": "f7cfaef650544c284b6cc4e4550e56be5f3eaf321f4ab5e6543c960823897ec7",
+    "SPARCS_CB": "25d3f3e7c66d80685a357786deb9706aca8447a04c77d479258ea82a035a79da",
+    "L8_PL": "d1be133ad5fbef7fb9b1d8d7e1f961e803181e5d3c48021d78dbbfca5d582e69",
+    "L8_CB": "9d20b38bec3a9346874aef76bc948d0900a39051290ca1c63b4bfbe0233fc804"
+  },
+  "evaluation": {
+    "CMC_CB": "7a9ad97f5757308445af93531ed9682a0a21ed1613b72c9cf1e381ea933e715e",
+    "SPARCS_Source": "984cb8d0561f1140044a50af54fff9567bad4f639e3423933210278927daea5f",
+    "SPARCS_PL": "a4dcf8f913c77372e12f04a6de81d8c21f8058b719f92f232883ca1c19c9e2b4",
+    "SPARCS_CB": "ee18c5d709e79be6b6dbe19055112485ebc25c699986f9f04fddf12f88dae970",
+    "L8_Source": "f7e3574ef95fd84f0c471368a63c6d381aa4ead19193c7bb63d68d8910a39ba3",
+    "L8_PL": "8c8ab9920e72ed34f20aaf7ec576906788bee3178aea3086bc215f9decf34af9",
+    "L8_CB": "0093156a926ff3d7d9bdd221e152595476a47617c7e1bff894282345a580e185"
+  },
+  "epoch": 1793020613.11505,
+  "forwards": 8267,
+  "gpu_seconds": 1453.640296754078
+}

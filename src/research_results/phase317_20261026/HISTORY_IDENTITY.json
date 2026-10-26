@@ -1,0 +1,34 @@
+{
+  "status": "passed",
+  "input_metadata_SHA": {
+    "/home/scv/Cloud-Adapter-light/src/work_dirs/phase65a/source_provenance/spatial_overlap.json": "4e9bef32a0f17d8119cb3f06c79d8dcf6db4113c0c17b246721c9268fbba715d",
+    "/home/scv/Cloud-Adapter-light/src/work_dirs/phase65a/source_provenance/historical_overlap_v2.json": "5643bc9c3be55b8a9d467c6bed50d26f9cc4c702a745c9683e40e784c20a1ea5"
+  },
+  "existing_overlap_metadata_preserved": true,
+  "same_parent_ID_intersections": [
+    {
+      "SPARCS_split": "fit",
+      "L8_split": "fit",
+      "shared_parent_scene_IDs": []
+    },
+    {
+      "SPARCS_split": "fit",
+      "L8_split": "val",
+      "shared_parent_scene_IDs": []
+    },
+    {
+      "SPARCS_split": "val",
+      "L8_split": "fit",
+      "shared_parent_scene_IDs": []
+    },
+    {
+      "SPARCS_split": "val",
+      "L8_split": "val",
+      "shared_parent_scene_IDs": []
+    }
+  ],
+  "limits": "exactparentID intersection only; absence does not prove geographic/pretrainingindependence; historicalmetadata retained not recomputed; no newpool no targetreferencepixels",
+  "historical_exposure": "CMC/SPARCS/L8 all developed; Phase64 and216-231 supervised/head diagnostics not used as SFDA endpoints",
+  "shared_image_matches": 1133,
+  "new_neural_calls": 0
+}

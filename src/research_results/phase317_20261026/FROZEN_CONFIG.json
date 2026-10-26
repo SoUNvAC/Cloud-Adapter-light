@@ -1,0 +1,11 @@
+{
+  "inputlock_sha": "36a84dcc2bbdc16e60fb63bd0ef8e547573e3c4f70b28d593ec795772f925205",
+  "reference_metadata_sha": "06db49c2728768c2f9c8ee1b1ab469724045149ba2b6b734c2744dc8d094aa31",
+  "code_lock_sha": "78e46a9ed99b6bf38d7ab8bf4c7509c7eca62c5b981ae3345aa334feeb355b5d",
+  "strategy": "CB equal means of presentacceptedclasses, PL acceptedpixelmean",
+  "initial": "fresh30201SourceLoRA compared to304 initial; no oldtargethead/optimizer",
+  "label_read_barrier": "allfiveENDPOINT_LOCK and all evaluations sealed, independent CPUonly",
+  "new_forwards_max": 11000,
+  "gpu_seconds_max": 43200,
+  "maxpersistent": 16000000000
+}

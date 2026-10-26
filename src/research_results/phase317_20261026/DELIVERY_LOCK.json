@@ -1,0 +1,38 @@
+{
+  "status": "sealed",
+  "science_outputs_unchanged": [
+    "all endpoints",
+    "predictions",
+    "METRICS",
+    "27cells",
+    "sixflows",
+    "native/scenestatistics",
+    "reference/support",
+    "trainingcurves"
+  ],
+  "original_CPU_run_sha256": "3630277457507eb61b04bd3f33062d0dcea5fcdc8d7bb908dcb4db668ccfe473",
+  "original_GPU_code_sha256": "78e46a9ed99b6bf38d7ab8bf4c7509c7eca62c5b981ae3345aa334feeb355b5d",
+  "delivery_code": {
+    "phase317_common.py": "ada2827a2b7053012867cb423554d4fe348dbdfae36f1dc46ed0934f5414b676",
+    "freeze_phase317.py": "57e157a27479edd81ba6264bf90970e98d83d530c2d91dc5bd715bea425dee5d",
+    "prepare_phase317.py": "208c181d0b3cbe9283b3decafe2dae791eca1e05351a18cf6c2d27057865ea82",
+    "control_phase317.py": "7d426f8ee940c45b76749fe5084b462f5ebc94dfbef6ddce2c071274e198b8d3",
+    "report_phase317.py": "5bd4270980c537924130e1605bdd01e14dba5697a0f8a441a30e6ea93e9eed9c",
+    "seal_phase317.py": "8b9b90d1bcc2d42350a1a6a23e2acf27d2dfccda73c5ba6a2db92307e1d6c466",
+    "analyze_phase317.py": "0d12dc39411b5fe12ff052bd1fb669868007ccd44bf62bf9ef1e76bfa41a6685",
+    "audit_phase317.py": "b3264183bdbf979114510a12dbe942a03d802cbf96e88d66f581225ce55dec3f",
+    "finalize_phase317.py": "828625d76fa1c91f3c147a1ca5aecf89e6d734c36d13eb8e70e9459da5a60ed9",
+    "run_cpu_phase317.py": "1c242a5f00e8bf54fe18da5274858bb1ebd9c0419b9a6290d352500026247a94",
+    "transfer_phase317.py": "d06a3d0ccda91f2d06185ecd4cad390b1a7a40880984d05a37781485115d7d4b",
+    "reference_phase317.py": "9830c8ad72d6006296b6625784a6e8503740e921c78c3b5005f30832a0480294",
+    "check_phase317_math.py": "2c211ec3a57b19302ce42729c9de84424ec6032117ca95cf0b3e68c14740bc2c",
+    "phase317_images.py": "07d1d7a3ee3385fbc16442427f47764d4ba07cd55297b099955ba47ec4b365ed",
+    "history_phase317.py": "66d5486d0eb4cfea4d655371f3be80ede802b82d60557d039e03922a7d89a438",
+    "verify_phase317.py": "680f26d11ee5b2a51a5c39339c43ad52845063a7c37f4e72fa87e348a30c8cfd",
+    "worker_phase317.py": "4cec4f179a084b65bdc7172b7e8d19a463cc9d93016f08d427e270ab6db98820"
+  },
+  "table_review_source_sha": "dbbc79e61366c56f0ad9fbce73976739a515c4f44e4cf70237d5c2c8d151a5f7",
+  "old_report_preserved": true,
+  "no_new_raw_reference_reads": true,
+  "no_new_forwards": true
+}

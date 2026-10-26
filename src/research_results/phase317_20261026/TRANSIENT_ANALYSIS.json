@@ -1,0 +1,56 @@
+[
+  {
+    "file": "AP_CMC_Source.scores",
+    "bytes": 133693952,
+    "used": "exactfloat32 pooledAP scratch, no newmodelcall",
+    "removed_after_AP": true
+  },
+  {
+    "file": "AP_CMC_PL.scores",
+    "bytes": 133693952,
+    "used": "exactfloat32 pooledAP scratch, no newmodelcall",
+    "removed_after_AP": true
+  },
+  {
+    "file": "AP_CMC_CB.scores",
+    "bytes": 133693952,
+    "used": "exactfloat32 pooledAP scratch, no newmodelcall",
+    "removed_after_AP": true
+  },
+  {
+    "file": "AP_SPARCS_Source.scores",
+    "bytes": 10485760,
+    "used": "exactfloat32 pooledAP scratch, no newmodelcall",
+    "removed_after_AP": true
+  },
+  {
+    "file": "AP_SPARCS_PL.scores",
+    "bytes": 10485760,
+    "used": "exactfloat32 pooledAP scratch, no newmodelcall",
+    "removed_after_AP": true
+  },
+  {
+    "file": "AP_SPARCS_CB.scores",
+    "bytes": 10485760,
+    "used": "exactfloat32 pooledAP scratch, no newmodelcall",
+    "removed_after_AP": true
+  },
+  {
+    "file": "AP_L8_Source.scores",
+    "bytes": 873932084,
+    "used": "exactfloat32 pooledAP scratch, no newmodelcall",
+    "removed_after_AP": true
+  },
+  {
+    "file": "AP_L8_PL.scores",
+    "bytes": 873932084,
+    "used": "exactfloat32 pooledAP scratch, no newmodelcall",
+    "removed_after_AP": true
+  },
+  {
+    "file": "AP_L8_CB.scores",
+    "bytes": 873932084,
+    "used": "exactfloat32 pooledAP scratch, no newmodelcall",
+    "removed_after_AP": true
+  }
+]

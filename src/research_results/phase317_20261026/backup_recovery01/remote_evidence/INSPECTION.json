@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "original_manifest_sha256": "f3cefafc90a8f52044ae070473c6280d30a152ce9088b5dc0d76d756015a3196",
+  "original_files_unchanged": 4657,
+  "old_stream_active": false,
+  "original_completed_receipt_exists": false,
+  "code_sha256": "bb126c1c1f650013a6031c246feec46eb15df27ddc56553e7ca07c18dae1a209",
+  "epoch": 1793025240.7896261,
+  "diagnosis": "localEOF in firststream; subsequent independentSSH kex closures observed; exact originalremote exception unavailable; no compressionformat assertion invented"
+}

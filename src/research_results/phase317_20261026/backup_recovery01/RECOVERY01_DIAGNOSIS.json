@@ -1,0 +1,14 @@
+{
+  "observed": [
+    "original gzip stream EOF before end marker,2035 original files independently SHA verified locally",
+    "subsequent readonly SSH probes repeatedly closed before server SSH banner/key exchange",
+    "TCP connection establishment observed in SSH verbose probe",
+    "no old ssh process shown in local Get-Process snapshot; no process terminated",
+    "remote original stream process/receipt still requires successful readonly inspection"
+  ],
+  "exact_original_remote_exception": "unknown; first receiver did not persist SSH stderr before EOF",
+  "failure_file_SHA256": "454dace98fb647046fd37ada0033e59fa0463fdb675f101cf314502cd9813f80",
+  "failure_file_local_time": "2026-10-26T22:14:14+08:00",
+  "science_repeated": false,
+  "recovery_policy": "original snapshot immutable; local plan only; inspect remote first, then bounded missing-member streams"
+}

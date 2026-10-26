@@ -1,0 +1,21 @@
+{
+  "local": {
+    "index": "batch009",
+    "manifest_sha256": "f3cefafc90a8f52044ae070473c6280d30a152ce9088b5dc0d76d756015a3196",
+    "files": 98,
+    "raw_bytes": 127309057,
+    "stream_bytes": 123987544,
+    "stream_sha256": "f3c2b3357d181b599033f574e63f757f19f0e37d701512696b1c982e66d5c5f3",
+    "all_members_SHA_verified": true,
+    "process_exit": 0
+  },
+  "remote": {
+    "index": "batch009",
+    "manifest_sha256": "f3cefafc90a8f52044ae070473c6280d30a152ce9088b5dc0d76d756015a3196",
+    "files": 98,
+    "raw_bytes": 127309057,
+    "stream_bytes": 123987544,
+    "stream_sha256": "f3c2b3357d181b599033f574e63f757f19f0e37d701512696b1c982e66d5c5f3",
+    "status": "completed"
+  }
+}

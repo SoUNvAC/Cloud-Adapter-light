@@ -1,0 +1,17 @@
+{
+  "files": 4658,
+  "raw_bytes": 3250282320,
+  "manifest_sha256": "f3cefafc90a8f52044ae070473c6280d30a152ce9088b5dc0d76d756015a3196",
+  "projected_two_hosts_with_summary": 7500564640,
+  "no_persistent_archive": true,
+  "status": "completed_via_verified_missing_member_recovery",
+  "backup_mode": "member_checked_prefix_plus_SHA_verified_segmented_suffix",
+  "all_member_SHA_verified": true,
+  "whole_compressed_stream_SHA_verified": false,
+  "completed_recovery_streams_SHA_verified": true,
+  "first_stream_complete": false,
+  "recovery_batches": 15,
+  "recovery_metadata_files": 32,
+  "recovery_stream_bytes": 1273651593,
+  "integrity_index_sha256": "cdbf60ed425a7e022735df7df514b7278ceff4acba8f85edd781da884c3b230b"
+}

@@ -1,0 +1,9 @@
+{
+  "stage": "backup_phase317_recovery01.py finish / final receipt construction",
+  "exit": 1,
+  "exception": "TypeError: dict() got multiple values for keyword argument 'manifest_sha256'",
+  "cause": "The stream header already contains manifest_sha256; dict(**h, manifest_sha256=...) supplied the same keyword twice.",
+  "completed_before_failure": ["15 missing-member streams verified", "all original snapshot files size/SHA verified", "remote recovery evidence retrieved and SHA verified", "RECOVERY01_INTEGRITY_INDEX.json written"],
+  "backup_receipt_existed_after_failure": false,
+  "recovery": "Independent receipt mode uses existing immutable integrity index, rechecks file SHA, writes only final receipt; no transfer/finish retry, no scientific computation."
+}

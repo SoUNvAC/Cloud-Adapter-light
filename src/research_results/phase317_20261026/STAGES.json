@@ -1,0 +1,137 @@
+{
+  "gates_GLOBAL_Source": {
+    "status": "completed",
+    "exit": 0,
+    "failure": null,
+    "seconds": 11.022762185893953,
+    "peak_CPU": 1515397120,
+    "minimum_host_available": 31513358336,
+    "pid": 1790052
+  },
+  "teacher_SPARCS_Source": {
+    "status": "completed",
+    "exit": 0,
+    "failure": null,
+    "seconds": 22.07831084600184,
+    "peak_CPU": 1467547648,
+    "minimum_host_available": 31495843840,
+    "pid": 1790116
+  },
+  "teacher_L8_Source": {
+    "status": "completed",
+    "exit": 0,
+    "failure": null,
+    "seconds": 31.11813656205777,
+    "peak_CPU": 1465360384,
+    "minimum_host_available": 31385468928,
+    "pid": 1790176
+  },
+  "train_CMC_CB": {
+    "status": "completed",
+    "exit": 0,
+    "failure": null,
+    "seconds": 410.9906146230642,
+    "peak_CPU": 1940316160,
+    "minimum_host_available": 30730055680,
+    "pid": 1790215
+  },
+  "train_SPARCS_PL": {
+    "status": "completed",
+    "exit": 0,
+    "failure": null,
+    "seconds": 154.79260715807322,
+    "peak_CPU": 1785544704,
+    "minimum_host_available": 31133102080,
+    "pid": 1790431
+  },
+  "train_SPARCS_CB": {
+    "status": "completed",
+    "exit": 0,
+    "failure": null,
+    "seconds": 155.83905772701837,
+    "peak_CPU": 1785270272,
+    "minimum_host_available": 31225880576,
+    "pid": 1790513
+  },
+  "train_L8_PL": {
+    "status": "completed",
+    "exit": 0,
+    "failure": null,
+    "seconds": 130.74621215707157,
+    "peak_CPU": 1785749504,
+    "minimum_host_available": 31121678336,
+    "pid": 1790576
+  },
+  "train_L8_CB": {
+    "status": "completed",
+    "exit": 0,
+    "failure": null,
+    "seconds": 132.79689212096855,
+    "peak_CPU": 1782419456,
+    "minimum_host_available": 31124922368,
+    "pid": 1790614
+  },
+  "evaluate_CMC_CB": {
+    "status": "completed",
+    "exit": 0,
+    "failure": null,
+    "seconds": 34.21891199296806,
+    "peak_CPU": 1688408064,
+    "minimum_host_available": 31088230400,
+    "pid": 1790849
+  },
+  "evaluate_SPARCS_Source": {
+    "status": "completed",
+    "exit": 0,
+    "failure": null,
+    "seconds": 8.053208045079373,
+    "peak_CPU": 1460101120,
+    "minimum_host_available": 31151759360,
+    "pid": 1790886
+  },
+  "evaluate_SPARCS_PL": {
+    "status": "completed",
+    "exit": 0,
+    "failure": null,
+    "seconds": 8.053590826923028,
+    "peak_CPU": 1465421824,
+    "minimum_host_available": 31321935872,
+    "pid": 1790948
+  },
+  "evaluate_SPARCS_CB": {
+    "status": "completed",
+    "exit": 0,
+    "failure": null,
+    "seconds": 8.055356781929731,
+    "peak_CPU": 1464582144,
+    "minimum_host_available": 31393906688,
+    "pid": 1791008
+  },
+  "evaluate_L8_Source": {
+    "status": "completed",
+    "exit": 0,
+    "failure": null,
+    "seconds": 131.6295508290641,
+    "peak_CPU": 1464680448,
+    "minimum_host_available": 31419138048,
+    "pid": 1791068
+  },
+  "evaluate_L8_PL": {
+    "status": "completed",
+    "exit": 0,
+    "failure": null,
+    "seconds": 106.52073896699585,
+    "peak_CPU": 1469423616,
+    "minimum_host_available": 31522983936,
+    "pid": 1791105
+  },
+  "evaluate_L8_CB": {
+    "status": "completed",
+    "exit": 0,
+    "failure": null,
+    "seconds": 107.72434593096841,
+    "peak_CPU": 1470558208,
+    "minimum_host_available": 31428456448,
+    "pid": 1791142
+  }
+}
