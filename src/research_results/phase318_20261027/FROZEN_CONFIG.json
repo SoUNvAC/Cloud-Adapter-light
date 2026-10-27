@@ -1,0 +1,10 @@
+{
+  "strategy": "selective CB normalized by sum weights; Surface/Cloud CB, selected Shadow CB, unselected Shadow PL; no clamping",
+  "threshold": 0.9,
+  "flip": "horizontal per original CMC window then inverse and score stitch; otherpools flip preprocessed-input precursor",
+  "conf": "per-step top original qShadow, originalfullimage rowmajor ties, same k as Flip",
+  "no_reference_until_all_endpoints_and_evaluation_sealed": true,
+  "fit_L8_audit": "no new registration: if fit rawfill coordinates not previously verified, declare uncovered",
+  "decision_window_sha": "37fe372a15966ddd18a67a94aac81420dac06676f47fe2ff81e9e05d48497eaa",
+  "execution_sha": "4d7be0678b8ee4279e1442cb65056ebf04b7a315dd13a2f7ef2f6da3e5c680e2"
+}

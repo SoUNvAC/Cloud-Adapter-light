@@ -1,0 +1,48 @@
+{
+  "status": "sealed",
+  "pools": {
+    "CMC": {
+      "identical_all_steps": false,
+      "full_all_steps": false,
+      "updates": 955,
+      "skipped": 45,
+      "class_present_steps": [
+        524,
+        644,
+        458
+      ],
+      "mode": "two_distinct_arms"
+    },
+    "SPARCS": {
+      "identical_all_steps": false,
+      "full_all_steps": false,
+      "updates": 1000,
+      "skipped": 0,
+      "class_present_steps": [
+        1000,
+        837,
+        705
+      ],
+      "mode": "two_distinct_arms"
+    },
+    "L8": {
+      "identical_all_steps": false,
+      "full_all_steps": false,
+      "updates": 951,
+      "skipped": 49,
+      "class_present_steps": [
+        865,
+        715,
+        596
+      ],
+      "mode": "two_distinct_arms"
+    }
+  },
+  "table_sha": "88f175664e4c48510d3965cdb01e24e0a26062fc3b0cdfc08d4d3dcdb584defa",
+  "teacher": {
+    "CMC": "cb336ff9983f2ae7259e7078eeaaf6f3f2a5a862106a1c84a968d7f972d6d9cb",
+    "SPARCS": "9650ff4efd88260c75298fe41b34b89abb6ee73118e4d0b393fce37496565c72",
+    "L8": "b7006c45383649e2ba9a754de66c8d816a9910274ce23524e7e243e189598e1a"
+  },
+  "no_truth_read": true
+}

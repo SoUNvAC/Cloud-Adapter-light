@@ -1,0 +1,13 @@
+{
+  "remote": {
+    "index": 11,
+    "files": 137,
+    "raw_bytes": 127365647,
+    "manifest_sha256": "7ff9023bfef8ef840ae74da1b0b1ec7bb42d8591e3d4a2efa14d881e439104b0",
+    "compressed_bytes": 127369022,
+    "compressed_sha256": "53b2f4739f57ee478d35a8814f120328c6e24d138a4afa489c87c04f1bcf1a4c",
+    "status": "completed"
+  },
+  "local_compressed_sha256": "53b2f4739f57ee478d35a8814f120328c6e24d138a4afa489c87c04f1bcf1a4c",
+  "all_members_SHA_verified": true
+}

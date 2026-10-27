@@ -1,0 +1,202 @@
+{
+  "status": "passed",
+  "manual": [
+    {
+      "pseudo": [
+        0,
+        0,
+        1,
+        2,
+        2
+      ],
+      "selected": [
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "manual_loss": 1.2388989444701901,
+      "loss_error": 4.8068262037404e-08,
+      "full_CB_loss_error": 1.1920928955078125e-07,
+      "full_CB_gradient_error": 0.0,
+      "weights": {
+        "counts": [
+          2,
+          1,
+          2
+        ],
+        "N": 5,
+        "K": 3,
+        "b": [
+          0.8333333333333334,
+          1.6666666666666667,
+          0.8333333333333334
+        ],
+        "k": 1,
+        "class_mass": [
+          1.6666666666666667,
+          1.6666666666666667,
+          1.8333333333333335
+        ],
+        "denominator": 5.166666666666667
+      }
+    },
+    {
+      "pseudo": [
+        2,
+        2,
+        2
+      ],
+      "selected": [
+        1,
+        0,
+        0
+      ],
+      "manual_loss": 0.7303523421287537,
+      "loss_error": 0.0,
+      "full_CB_loss_error": 0.0,
+      "full_CB_gradient_error": 0.0,
+      "weights": {
+        "counts": [
+          0,
+          0,
+          3
+        ],
+        "N": 3,
+        "K": 1,
+        "b": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "k": 1,
+        "class_mass": [
+          0.0,
+          0.0,
+          3.0
+        ],
+        "denominator": 3.0
+      }
+    },
+    {
+      "pseudo": [
+        0,
+        1,
+        1
+      ],
+      "selected": [
+        0,
+        0,
+        0
+      ],
+      "manual_loss": 1.3732095658779144,
+      "loss_error": 2.9802322387695312e-08,
+      "full_CB_loss_error": 0.0,
+      "full_CB_gradient_error": 0.0,
+      "weights": {
+        "counts": [
+          1,
+          2,
+          0
+        ],
+        "N": 3,
+        "K": 2,
+        "b": [
+          1.5,
+          0.75,
+          0.0
+        ],
+        "k": 0,
+        "class_mass": [
+          1.5,
+          1.5,
+          0.0
+        ],
+        "denominator": 3.0
+      }
+    },
+    {
+      "pseudo": [
+        0,
+        1,
+        2
+      ],
+      "selected": [
+        0,
+        0,
+        0
+      ],
+      "manual_loss": 1.1589238047599792,
+      "loss_error": 5.960464477539063e-08,
+      "full_CB_loss_error": 1.1920928955078125e-07,
+      "full_CB_gradient_error": 0.0,
+      "weights": {
+        "counts": [
+          1,
+          1,
+          1
+        ],
+        "N": 3,
+        "K": 3,
+        "b": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "k": 0,
+        "class_mass": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "denominator": 3.0
+      }
+    },
+    {
+      "pseudo": [
+        0,
+        1,
+        2
+      ],
+      "selected": [
+        0,
+        0,
+        1
+      ],
+      "manual_loss": 1.1589238047599792,
+      "loss_error": 5.960464477539063e-08,
+      "full_CB_loss_error": 1.1920928955078125e-07,
+      "full_CB_gradient_error": 0.0,
+      "weights": {
+        "counts": [
+          1,
+          1,
+          1
+        ],
+        "N": 3,
+        "K": 3,
+        "b": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "k": 1,
+        "class_mass": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "denominator": 3.0
+      }
+    },
+    {
+      "empty": true,
+      "skip": true
+    }
+  ],
+  "original_index_ties": true,
+  "double_flip_exact": true,
+  "no_shadow_not_necessarily_PL": true,
+  "majority_shadow_CB_can_be_below_one": true
+}

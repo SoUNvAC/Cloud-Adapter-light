@@ -1,0 +1,13 @@
+/home/scv/Cloud-Adapter-light/src/cloud_adapter/models/backbones/dino_layers/swiglu_ffn.py:45: UserWarning: xFormers is disabled (SwiGLU)
+  warnings.warn("xFormers is disabled (SwiGLU)")
+/home/scv/Cloud-Adapter-light/src/cloud_adapter/models/backbones/dino_layers/swiglu_ffn.py:51: UserWarning: xFormers is not available (SwiGLU)
+  warnings.warn("xFormers is not available (SwiGLU)")
+/home/scv/Cloud-Adapter-light/src/cloud_adapter/models/backbones/dino_layers/attention.py:29: UserWarning: xFormers is disabled (Attention)
+  warnings.warn("xFormers is disabled (Attention)")
+/home/scv/Cloud-Adapter-light/src/cloud_adapter/models/backbones/dino_layers/attention.py:33: UserWarning: xFormers is not available (Attention)
+  warnings.warn("xFormers is not available (Attention)")
+/home/scv/Cloud-Adapter-light/src/cloud_adapter/models/backbones/dino_layers/block.py:35: UserWarning: xFormers is disabled (Block)
+  warnings.warn("xFormers is disabled (Block)")
+/home/scv/Cloud-Adapter-light/src/cloud_adapter/models/backbones/dino_layers/block.py:40: UserWarning: xFormers is not available (Block)
+  warnings.warn("xFormers is not available (Block)")
+Fail to import ReinsConvNeXt, if you need to use it, please install mmpretrain

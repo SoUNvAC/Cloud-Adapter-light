@@ -1,0 +1,8 @@
+{
+  "status": "completed",
+  "segments": 22,
+  "files": 2489,
+  "compressed_bytes": 2707154926,
+  "compressed_payload_sha256": "b13d6a02ed26a4ccbe5461048c0c26bd8cab4cad60e4941bdde6d779dfb952e6",
+  "manifest_sha256": "7ff9023bfef8ef840ae74da1b0b1ec7bb42d8591e3d4a2efa14d881e439104b0"
+}

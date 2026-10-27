@@ -1,0 +1,20 @@
+{
+  "stage": "read-only preflight before any Phase318 remote mutation",
+  "initial_exit": 255,
+  "stderr": "kex_exchange_identification: Connection closed by remote host",
+  "follow_up": "Read-only SSH succeeded; remote HEAD=6fd85eb120e5d52974a01cea50edac6dd89fa630, phase318 root absent, available memory32705155072 bytes, disk740548689920 bytes.",
+  "scientific_work_started_at_failure": false,
+  "later_status_probe": {"exit": 255, "stderr": "kex_exchange_identification: Connection closed by remote host", "action": "read-only probe failed after launch; no relaunch or worker retry"},
+  "probe_failures": [
+    {"stage": "initial preflight", "exit": 255, "stderr": "kex_exchange_identification: Connection closed by remote host"},
+    {"stage": "read-only postlaunch status", "exit": 255, "stderr": "kex_exchange_identification: Connection closed by remote host"},
+    {"stage": "bounded read-only watcher connection", "exit": 255, "stderr": "kex_exchange_identification: Connection closed by remote host"}
+  ],
+  "approval_review_event": {
+    "action": "pull already-pushed CPU audit update on gzs before first independent CPU launch",
+    "executed": false,
+    "reported_reason": "Automatic approval review failed: usage limit reached; action not executed because review could not complete, not a determination of unsafe action.",
+    "follow_up": "User requested continue; subsequent normal approval succeeded. Original observer confirmed GPU_complete_pending_independent_CPU with9452 forwards, then git pull a1c1329 and first CPU launch PID1806669 completed. No scientific stage relaunched."
+  },
+  "diagnosis_limit": "SSH closed before handshake; underlying remote exception unknown."
+}

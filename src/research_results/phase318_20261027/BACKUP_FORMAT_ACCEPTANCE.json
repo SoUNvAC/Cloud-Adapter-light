@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "raw_probe_bytes": 5,
+  "gzip_tar_member_exact": true,
+  "following_JSON_boundary_preserved": true,
+  "segment_and_payload_SHA_equal": true,
+  "no_persistent_archive": true,
+  "runtime": "3.10.21 (main, Aug 27 2026, 14:42:07) [GCC 14.3.0]"
+}

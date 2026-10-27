@@ -1,0 +1,64 @@
+{
+  "reviewed": true,
+  "request": {
+    "outcome": "close",
+    "evidence_pools": [],
+    "rationale": "三池已跑通，当前Flip-CB候选收口，不追加seed、视图或权重搜索。Flip保留原A_Sh的88.278%/80.495%/83.549%；相对同数量Conf，CMC召回+0.655pp却FPR+0.236pp、池化mIoU−1.457pp，SPARCS有部分取舍改善，L8主要以召回−0.626pp换FPR−0.084pp。未见两个池足够独有的可靠性增量。配对曝光Shadow precision：CMC74.566%对74.586%、SPARCS79.998%对80.669%，L8fit质量未知。相对CB的组均mIoU大涨包含缺类union2→1：CMC仅消除306/171个、SPARCS25个Shadow误报，即使相应组mIoU约50→100，两种选择器均有此现象；不能据此称普遍纠错。误报有所缓和并保留部分召回，但未解决完整取舍；这是单seed探索，不否定其他用途或所有一致性方法。",
+    "observed_union_effects": [
+      {
+        "pool": "CMC",
+        "scene": "f9c24c9b6029766e0c62dc9375251f6fdad6c3dc0dadcac647bc80d66d22ab28",
+        "support": 1044484,
+        "CB_Surface_to_Shadow": 306,
+        "Flip_Surface_to_Shadow": 0,
+        "Conf_Surface_to_Shadow": 0,
+        "CB_union": 2,
+        "selector_union": 1
+      },
+      {
+        "pool": "CMC",
+        "scene": "1cfce2528bc2fcf176d11f38ec8132d791f1762735fa1cc1c1f2ae349223ad12",
+        "support": 1044484,
+        "CB_Surface_to_Shadow": 171,
+        "Flip_Surface_to_Shadow": 0,
+        "Conf_Surface_to_Shadow": 0,
+        "CB_union": 2,
+        "selector_union": 1
+      },
+      {
+        "pool": "SPARCS",
+        "scene": "LC80340412013132LGN01",
+        "support": 262144,
+        "CB_Surface_to_Shadow": 25,
+        "Flip_Surface_to_Shadow": 0,
+        "Conf_Surface_to_Shadow": 0,
+        "CB_union": 2,
+        "selector_union": 1
+      }
+    ],
+    "scope": "review of existing validated tables only; no new labels, neural calls, selection changes or automatic next phase"
+  },
+  "metrics_sha256": "ae512b0d757bfeffad046f061843a7534c4e439d1b637d99f06e9c340d02c5a4",
+  "selector_quality_sha256": "387b842678d38316ce7ee5b5c7d2fad94bc27d17c16d1dff8d08e497846926df",
+  "all_scientific_outputs_unchanged": true,
+  "original_reports_preserved": true,
+  "no_new_label_or_neural_reads": true,
+  "code": {
+    "check_phase318_transport.py": "ac4ebd06e373c255dbc5ebd19e702e27311899ee5f2d30905d41626e49971a20",
+    "analyze_phase318.py": "7b45e2649e954ca8051440fc9d113869d203525430178877aeace761e28ae21f",
+    "worker_phase318.py": "559711ebbf727c42de0ae3d119373d2e5c72f9eca1983ab52c59a3f683c75558",
+    "phase318_common.py": "e71213a69d0c33dbc7f569adf0bb798ba405552e8daf3939d9718dfca8f29c86",
+    "audit_phase318.py": "317779d2ac49447c2eea3d8faaeec19e31834f35f1696a970b167caf7fff03a7",
+    "prepare_phase318.py": "fe234e0817c2cadd3e1dd718f44b2b235a5ee36b0ae47797505511db27d0d4ba",
+    "finalize_phase318.py": "6d46ad8a0088cecdee67934e4fc128a6c9daa1de5ce19b33d72ddbefef133bb2",
+    "verify_phase318.py": "633645db32289a20cc7b74298fb241393e09c297c4629e9cf49fb47aee8c5379",
+    "control_phase318.py": "89ec719860c7738246608119a3423e669f6153992d5cd7672b413b70cf41a9e8",
+    "run_cpu_phase318.py": "8ad3a0e99e169384f1efd55b47638db1ab185d97de81cf9d2d433c2b3fe2237b",
+    "quality_phase318.py": "b4b7d848d27a5ac7da5a566b4fb721dbe345f72e408a78c8d94f2edabbe21b66",
+    "phase318_selectors.py": "9b0b24cd7b6172db95cab71403abb6751fd4c3e348d32e3ec1272d4c06fffb55",
+    "report_phase318.py": "10c1c5de1a71a2604feed02da833dc398ab77b88adce3bc8a3d55c2e4c3d5ff5",
+    "transfer_phase318.py": "2a800a8437994f3319e52c97868771535908f0e05c6cfdf89c16716c15396432",
+    "seal_phase318.py": "c6ab6e61065adc6535206a279429374a8e1545d81fd9344095bc4426333defca"
+  },
+  "epoch": 1793069452.0472217
+}

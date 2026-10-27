@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "all_endpoints_before_truth": true,
+  "partitions_exact": true,
+  "paired_exposure_requested_equal": true,
+  "L8_fit_gap_images": 100,
+  "L8_no_new_registration": true,
+  "resources": {
+    "available_memory": 32587386880,
+    "free_disk": 737817104384,
+    "peak_RSS": 176291840
+  }
+}

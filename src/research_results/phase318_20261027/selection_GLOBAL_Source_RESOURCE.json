@@ -1,0 +1,9 @@
+{
+  "status": "completed",
+  "exit": 0,
+  "failure": null,
+  "seconds": 106.62331512803212,
+  "peak_CPU": 881147904,
+  "minimum_host_available": 31974445056,
+  "pid": 1795388
+}

@@ -1,0 +1,34 @@
+[
+  {
+    "script": "analyze_phase318.py",
+    "exit": 0,
+    "failure": null,
+    "seconds": 597.2901833399665,
+    "peak_RSS": 4994543616,
+    "minimum_host_available": 28814569472
+  },
+  {
+    "script": "quality_phase318.py",
+    "exit": 0,
+    "failure": null,
+    "seconds": 25.794700602069497,
+    "peak_RSS": 176689152,
+    "minimum_host_available": 32558559232
+  },
+  {
+    "script": "audit_phase318.py",
+    "exit": 0,
+    "failure": null,
+    "seconds": 105.152738894918,
+    "peak_RSS": 146554880,
+    "minimum_host_available": 32552919040
+  },
+  {
+    "script": "report_phase318.py",
+    "exit": 0,
+    "failure": null,
+    "seconds": 1.0311892989557236,
+    "peak_RSS": 86016,
+    "minimum_host_available": 32609980416
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "status": "sealed",
+  "endpoints": {
+    "CMC_Flip-CB": "fe14bac7c788d08f58d6a305e0bb6fe68f0e790fdf0dddd914638cab63eeffcc",
+    "CMC_Conf-CB": "c4218738d2b7ff295e06e53329a568cafd55fd65c46e738d1709fc06517171b1",
+    "SPARCS_Flip-CB": "92d3026b1ef7cf03c7859be1f9ddd40fa94c75c1a79828be5f4b1c6f810713b8",
+    "SPARCS_Conf-CB": "f409161840cab9ada2ad15052acce5e5f159885323fe1d7f7d6b418609185c14",
+    "L8_Flip-CB": "2fc80d8b146ee5e1759c204f3a4b1d59271827ea7983cd03d1c5a6c621dcdec8",
+    "L8_Conf-CB": "2bf8e1039f8c0dc1a614a3c444dcf4a554b4be913b34e6062010baa0577463cc"
+  },
+  "epoch": 1793033595.590786
+}

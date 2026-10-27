@@ -1,0 +1,7 @@
+﻿pool,arm,mode,target,updates,skipped,attempts
+CMC,Flip-CB,trained_once,/home/scv/shared/phase318_20261027/CMC/Flip-CB,955,45,1000
+CMC,Conf-CB,trained_once,/home/scv/shared/phase318_20261027/CMC/Conf-CB,955,45,1000
+SPARCS,Flip-CB,trained_once,/home/scv/shared/phase318_20261027/SPARCS/Flip-CB,1000,0,1000
+SPARCS,Conf-CB,trained_once,/home/scv/shared/phase318_20261027/SPARCS/Conf-CB,1000,0,1000
+L8,Flip-CB,trained_once,/home/scv/shared/phase318_20261027/L8/Flip-CB,951,49,1000
+L8,Conf-CB,trained_once,/home/scv/shared/phase318_20261027/L8/Conf-CB,951,49,1000

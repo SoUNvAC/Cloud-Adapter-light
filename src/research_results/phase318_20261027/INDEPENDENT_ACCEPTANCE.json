@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "same_Q90_masks": true,
+  "paired_class_masses_float64_rtol": 1e-06,
+  "all_new_train_curves": true,
+  "all_transition_margins": true,
+  "all_native_margins": true,
+  "original317_metrics_D_B_and_CMC_error_reproduced": true,
+  "fit_L8_reference_gap": 100,
+  "calls": 9452,
+  "no_neural_calls": true,
+  "resources": {
+    "available_memory": 32601718784,
+    "free_disk": 737817092096,
+    "peak_RSS": 146554880
+  }
+}
