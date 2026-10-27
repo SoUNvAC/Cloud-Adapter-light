@@ -13,3 +13,4 @@
 - 网络实录：预检/状态只读SSH有3次exit255、服务端握手前关闭；后续连接恢复。未因这些探测失败重启控制器或重复前向，原stderr和诊断边界见NETWORK_EVENTS.json。
 
 - 完整备份：2489原始成员/2725810474字节，22段gzip及全部成员SHA、合并压缩载荷SHA通过；payloadSHA256=b13d6a02ed26a4ccbe5461048c0c26bd8cab4cad60e4941bdde6d779dfb952e6，清单SHA256=7ff9023bfef8ef840ae74da1b0b1ec7bb42d8591e3d4a2efa14d881e439104b0。双机含摘要预留6451620948字节≤12GB，无持久大归档；本机仅收文件/哈希，科学计算均gzs。网络探测及传输stderr按实保留。
+- 交付同步：首次GitHub443推送在SSH握手前关闭（exit1），本地提交23cbaed及完整备份保留；仅重试同一origin/main的非强制同步，无重训/重推理/重复回传。

@@ -4,11 +4,27 @@
   "stderr": "kex_exchange_identification: Connection closed by remote host",
   "follow_up": "Read-only SSH succeeded; remote HEAD=6fd85eb120e5d52974a01cea50edac6dd89fa630, phase318 root absent, available memory32705155072 bytes, disk740548689920 bytes.",
   "scientific_work_started_at_failure": false,
-  "later_status_probe": {"exit": 255, "stderr": "kex_exchange_identification: Connection closed by remote host", "action": "read-only probe failed after launch; no relaunch or worker retry"},
+  "later_status_probe": {
+    "exit": 255,
+    "stderr": "kex_exchange_identification: Connection closed by remote host",
+    "action": "read-only probe failed after launch; no relaunch or worker retry"
+  },
   "probe_failures": [
-    {"stage": "initial preflight", "exit": 255, "stderr": "kex_exchange_identification: Connection closed by remote host"},
-    {"stage": "read-only postlaunch status", "exit": 255, "stderr": "kex_exchange_identification: Connection closed by remote host"},
-    {"stage": "bounded read-only watcher connection", "exit": 255, "stderr": "kex_exchange_identification: Connection closed by remote host"}
+    {
+      "stage": "initial preflight",
+      "exit": 255,
+      "stderr": "kex_exchange_identification: Connection closed by remote host"
+    },
+    {
+      "stage": "read-only postlaunch status",
+      "exit": 255,
+      "stderr": "kex_exchange_identification: Connection closed by remote host"
+    },
+    {
+      "stage": "bounded read-only watcher connection",
+      "exit": 255,
+      "stderr": "kex_exchange_identification: Connection closed by remote host"
+    }
   ],
   "approval_review_event": {
     "action": "pull already-pushed CPU audit update on gzs before first independent CPU launch",
@@ -16,5 +32,14 @@
     "reported_reason": "Automatic approval review failed: usage limit reached; action not executed because review could not complete, not a determination of unsafe action.",
     "follow_up": "User requested continue; subsequent normal approval succeeded. Original observer confirmed GPU_complete_pending_independent_CPU with9452 forwards, then git pull a1c1329 and first CPU launch PID1806669 completed. No scientific stage relaunched."
   },
-  "diagnosis_limit": "SSH closed before handshake; underlying remote exception unknown."
+  "diagnosis_limit": "SSH closed before handshake; underlying remote exception unknown.",
+  "publication_push_events": [
+    {
+      "commit": "23cbaedbe65f9525a683c4ba7fc8140c128d84fd",
+      "exit": 1,
+      "stderr": "kex_exchange_identification: Connection closed by remote host; fatal: Could not read from remote repository.",
+      "diagnosis": "SSH closed before GitHub handshake; not evidence of an authentication/configuration error",
+      "action": "preserve commit and verified backup; retry ordinary non-force push to same origin/main; no scientific rerun or backup repeat"
+    }
+  ]
 }
