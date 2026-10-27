@@ -134,3 +134,7 @@ src/tools/*phase318* -text whitespace=cr-at-eol
 src/research_plans/phase318.md -text whitespace=cr-at-eol
 src/research_results/phase318_20261027/** -text whitespace=cr-at-eol
 src/research_results/phase318_20261027/**/*.log -text -whitespace
+src/tools/*phase319* -text whitespace=cr-at-eol
+src/research_plans/phase319.md -text whitespace=cr-at-eol
+src/research_results/phase319_20261027/** -text whitespace=cr-at-eol
+src/research_results/phase319_20261027/**/*.log -text -whitespace
