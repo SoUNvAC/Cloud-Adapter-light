@@ -1,0 +1,212 @@
+{
+  "status": "complete",
+  "pools": {
+    "CMC": {
+      "status": "passed",
+      "groups": 32,
+      "images": 32,
+      "support": 33423488
+    },
+    "SPARCS": {
+      "status": "passed",
+      "groups": 10,
+      "images": 10,
+      "support": 2621440
+    },
+    "L8": {
+      "status": "passed",
+      "groups": 8,
+      "images": 963,
+      "support": 218483021
+    }
+  },
+  "checks": [
+    {
+      "pool": "CMC",
+      "arm": "PL",
+      "max_stream_macro_roundoff_pp": 1.6056844742706744e-10,
+      "exact_fraction_selected_budgets": {
+        "CB_original_FPR": {
+          "macro_recall_exact": "9027645716530726946749474339/10425364166716088167082707020",
+          "macro_FPR_exact": "5243884556196749462682210170858602950132033/129933402915594404774747789947311380816340928",
+          "CB_macro_recall_exact": "973987778795313987371267063/1158373796301787574120300780",
+          "CB_macro_FPR_exact": "248772247049084747649984962785842242574281/6164009325062083961452643649608898336919788",
+          "matches_or_exceeds_CB_at_no_greater_FPR": true
+        },
+        "CB_original_recall": {
+          "macro_recall_exact": "194797699434128567140495947/231674759260357514824060156",
+          "macro_FPR_exact": "33788528562524215695965118585832398464691605/992218713173630000098074032324923271688421632",
+          "CB_macro_recall_exact": "973987778795313987371267063/1158373796301787574120300780",
+          "CB_macro_FPR_exact": "248772247049084747649984962785842242574281/6164009325062083961452643649608898336919788",
+          "matches_or_exceeds_CB_at_no_greater_FPR": true
+        }
+      },
+      "all_selected_counts_replayed_from_original_cache": true,
+      "AP_errors_pp": {
+        "macro_AP_pp": -1.4210854715202004e-14,
+        "pooled_AP_pp": 0.0
+      },
+      "scene_AP_317_exact_tolerance": true,
+      "monotonic_TP_FP": true,
+      "ties_preserved": true,
+      "all_unique_float32_scores": true
+    },
+    {
+      "pool": "CMC",
+      "arm": "CB",
+      "max_stream_macro_roundoff_pp": 3.0823343877273146e-10,
+      "exact_fraction_selected_budgets": {
+        "CB_original_FPR": {
+          "macro_recall_exact": "1454514591407906854712652881/1737560694452681361180451170",
+          "macro_FPR_exact": "26968681923111273297485097774656519275482953/668228929280199795984417205443315672769753344",
+          "CB_macro_recall_exact": "973987778795313987371267063/1158373796301787574120300780",
+          "CB_macro_FPR_exact": "248772247049084747649984962785842242574281/6164009325062083961452643649608898336919788",
+          "matches_or_exceeds_CB_at_no_greater_FPR": false
+        },
+        "CB_original_recall": {
+          "macro_recall_exact": "2921969995580157299538791659/3475121388905362722360902340",
+          "macro_FPR_exact": "58500924231506332514854753095866259158336113/1423618153683903913184193176814020346335561472",
+          "CB_macro_recall_exact": "973987778795313987371267063/1158373796301787574120300780",
+          "CB_macro_FPR_exact": "248772247049084747649984962785842242574281/6164009325062083961452643649608898336919788",
+          "matches_or_exceeds_CB_at_no_greater_FPR": false
+        }
+      },
+      "all_selected_counts_replayed_from_original_cache": true,
+      "AP_errors_pp": {
+        "macro_AP_pp": 1.4210854715202004e-14,
+        "pooled_AP_pp": 0.0
+      },
+      "scene_AP_317_exact_tolerance": true,
+      "monotonic_TP_FP": true,
+      "ties_preserved": true,
+      "all_unique_float32_scores": true
+    },
+    {
+      "pool": "SPARCS",
+      "arm": "PL",
+      "max_stream_macro_roundoff_pp": 3.2791547255328624e-11,
+      "exact_fraction_selected_budgets": {
+        "CB_original_FPR": {
+          "macro_recall_exact": "8052958628008283124422263088869/19718149857169610309300890111944",
+          "macro_FPR_exact": "29754862360286698430189834542537927483347121/796410140636198604894378143669258210725046800",
+          "CB_macro_recall_exact": "2940526266616250885883604217591/6572716619056536769766963370648",
+          "CB_macro_FPR_exact": "33512447089308870017290630358067671728796489/896929697035078163478375348393950521235865600",
+          "matches_or_exceeds_CB_at_no_greater_FPR": false
+        },
+        "CB_original_recall": {
+          "macro_recall_exact": "11557935038169852027790559603132/25834427822124998692278481026297",
+          "macro_FPR_exact": "7105849655710462002724367014919169506792708/149326901369287238417695901937985914510946275",
+          "CB_macro_recall_exact": "2940526266616250885883604217591/6572716619056536769766963370648",
+          "CB_macro_FPR_exact": "33512447089308870017290630358067671728796489/896929697035078163478375348393950521235865600",
+          "matches_or_exceeds_CB_at_no_greater_FPR": false
+        }
+      },
+      "all_selected_counts_replayed_from_original_cache": true,
+      "AP_errors_pp": {
+        "macro_AP_pp": 0.0,
+        "pooled_AP_pp": 0.0
+      },
+      "scene_AP_317_exact_tolerance": true,
+      "monotonic_TP_FP": true,
+      "ties_preserved": true,
+      "all_unique_float32_scores": true
+    },
+    {
+      "pool": "SPARCS",
+      "arm": "CB",
+      "max_stream_macro_roundoff_pp": 4.432365585671505e-11,
+      "exact_fraction_selected_budgets": {
+        "CB_original_FPR": {
+          "macro_recall_exact": "8893395976944360878207435155097/19718149857169610309300890111944",
+          "macro_FPR_exact": "33511648528998843342319291995028236416779651/896929697035078163478375348393950521235865600",
+          "CB_macro_recall_exact": "2940526266616250885883604217591/6572716619056536769766963370648",
+          "CB_macro_FPR_exact": "33512447089308870017290630358067671728796489/896929697035078163478375348393950521235865600",
+          "matches_or_exceeds_CB_at_no_greater_FPR": true
+        },
+        "CB_original_recall": {
+          "macro_recall_exact": "12067847746094714351445741989/26974213210902339684406142424",
+          "macro_FPR_exact": "6581413902957256409964449100906173321154253/179385939407015632695675069678790104247173120",
+          "CB_macro_recall_exact": "2940526266616250885883604217591/6572716619056536769766963370648",
+          "CB_macro_FPR_exact": "33512447089308870017290630358067671728796489/896929697035078163478375348393950521235865600",
+          "matches_or_exceeds_CB_at_no_greater_FPR": true
+        }
+      },
+      "all_selected_counts_replayed_from_original_cache": true,
+      "AP_errors_pp": {
+        "macro_AP_pp": 0.0,
+        "pooled_AP_pp": 0.0
+      },
+      "scene_AP_317_exact_tolerance": true,
+      "monotonic_TP_FP": true,
+      "ties_preserved": true,
+      "all_unique_float32_scores": true
+    },
+    {
+      "pool": "L8",
+      "arm": "PL",
+      "max_stream_macro_roundoff_pp": 1.7642776128923288e-11,
+      "exact_fraction_selected_budgets": {
+        "CB_original_FPR": {
+          "macro_recall_exact": "13764229909331767569390241647620397548232629/28342131625733575763972678692991897810848320",
+          "macro_FPR_exact": "38289297071859231345502741758831553392506863473839497/892935106574764230994580763783148020649469638341624480",
+          "CB_macro_recall_exact": "10709463888556576102323856575776815924648169/21256598719300181822979509019743923358136240",
+          "CB_macro_FPR_exact": "5672489552844071635231798346635293161071301792184181/132286682455520626814011965004910817873995501976536960",
+          "matches_or_exceeds_CB_at_no_greater_FPR": false
+        },
+        "CB_original_recall": {
+          "macro_recall_exact": "1223939074587031710885848019257369382120779/2429325567920020779769086745113591240929856",
+          "macro_FPR_exact": "166186549700278070469417176742514625712460736543260699/3571740426299056923978323055132592082597878553366497920",
+          "CB_macro_recall_exact": "10709463888556576102323856575776815924648169/21256598719300181822979509019743923358136240",
+          "CB_macro_FPR_exact": "5672489552844071635231798346635293161071301792184181/132286682455520626814011965004910817873995501976536960",
+          "matches_or_exceeds_CB_at_no_greater_FPR": false
+        }
+      },
+      "all_selected_counts_replayed_from_original_cache": true,
+      "AP_errors_pp": {
+        "macro_AP_pp": -7.105427357601002e-15,
+        "pooled_AP_pp": 0.0
+      },
+      "scene_AP_317_exact_tolerance": true,
+      "monotonic_TP_FP": true,
+      "ties_preserved": true,
+      "all_unique_float32_scores": true
+    },
+    {
+      "pool": "L8",
+      "arm": "CB",
+      "max_stream_macro_roundoff_pp": 9.99733629214461e-12,
+      "exact_fraction_selected_budgets": {
+        "CB_original_FPR": {
+          "macro_recall_exact": "2857066127832429318679933366234867289143771/5668426325146715152794535738598379562169664",
+          "macro_FPR_exact": "10210474492115421485199853640552493919273278218492315/238116028419937128265221537008839472173191903557766528",
+          "CB_macro_recall_exact": "10709463888556576102323856575776815924648169/21256598719300181822979509019743923358136240",
+          "CB_macro_FPR_exact": "5672489552844071635231798346635293161071301792184181/132286682455520626814011965004910817873995501976536960",
+          "matches_or_exceeds_CB_at_no_greater_FPR": true
+        },
+        "CB_original_recall": {
+          "macro_recall_exact": "10709465117571116489484049200373055992196623/21256598719300181822979509019743923358136240",
+          "macro_FPR_exact": "25501144667733726238128984055296315152227556248460077/595290071049842820663053842522098680432979758894416320",
+          "CB_macro_recall_exact": "10709463888556576102323856575776815924648169/21256598719300181822979509019743923358136240",
+          "CB_macro_FPR_exact": "5672489552844071635231798346635293161071301792184181/132286682455520626814011965004910817873995501976536960",
+          "matches_or_exceeds_CB_at_no_greater_FPR": true
+        }
+      },
+      "all_selected_counts_replayed_from_original_cache": true,
+      "AP_errors_pp": {
+        "macro_AP_pp": 7.105427357601002e-15,
+        "pooled_AP_pp": 0.0
+      },
+      "scene_AP_317_exact_tolerance": true,
+      "monotonic_TP_FP": true,
+      "ties_preserved": true,
+      "all_unique_float32_scores": true
+    }
+  ],
+  "exact_float32_no_binning_no_sampling": true,
+  "three_class_threshold_mIoU": "NA",
+  "resources": {
+    "available_memory": 32543268864,
+    "free_disk": 737401294848,
+    "peak_RSS": 4010790912
+  }
+}

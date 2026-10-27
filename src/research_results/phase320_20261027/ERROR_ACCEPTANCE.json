@@ -1,0 +1,47 @@
+{
+  "status": "complete",
+  "pools": {
+    "SPARCS": {
+      "status": "passed",
+      "A_Sh": 152450,
+      "E": 30188,
+      "T": 122262,
+      "invalid": 0,
+      "precision_pct": 80.19809773696294,
+      "reference319_original_exact": true
+    },
+    "L8": {
+      "status": "passed",
+      "A_Sh": 426552,
+      "E": 76886,
+      "T": 345985,
+      "invalid": 3681,
+      "precision_pct": 81.81809582591382,
+      "reference319_original_exact": true
+    }
+  },
+  "checks": [
+    {
+      "pool": "SPARCS",
+      "images": 60,
+      "scenes": 60,
+      "exact319_original_counts": true,
+      "native_strata_exact": true,
+      "partitions": true
+    },
+    {
+      "pool": "L8",
+      "images": 100,
+      "scenes": 18,
+      "exact319_original_counts": true,
+      "native_strata_exact": true,
+      "partitions": true
+    }
+  ],
+  "all_missing_classes_retained_zero": true,
+  "resources": {
+    "available_memory": 32630812672,
+    "free_disk": 737402150912,
+    "peak_RSS": 101072896
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "status": "sealed",
+  "files": 47,
+  "raw_bytes": 9260212,
+  "manifest_sha256": "f752e7fb02d81cad095ca6bbc6af5d599909cb1eec33ac7a61f58ba3b2192449",
+  "projected_two_hosts_with_summary": 118520424,
+  "no_persistent_archive": true,
+  "epoch": 1793087671.550231
+}

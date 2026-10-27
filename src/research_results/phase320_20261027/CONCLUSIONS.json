@@ -1,0 +1,96 @@
+{
+  "status": "complete",
+  "pools": {
+    "SPARCS": {
+      "error_composition_status": "passed",
+      "E": 30188,
+      "T": 122262,
+      "invalid": 0,
+      "threshold_status": "passed",
+      "PL_threshold_can_match_CB_original_binary_tradeoff": false
+    },
+    "L8": {
+      "error_composition_status": "passed",
+      "E": 76886,
+      "T": 345985,
+      "invalid": 3681,
+      "threshold_status": "passed",
+      "PL_threshold_can_match_CB_original_binary_tradeoff": false
+    },
+    "CMC": {
+      "threshold_status": "passed",
+      "PL_threshold_can_match_CB_original_binary_tradeoff": true
+    }
+  },
+  "not_a_new_method": true,
+  "oracle_only": true,
+  "new_GT_free_discriminator_verified": false,
+  "possible_limited_followup": [
+    {
+      "pool": "SPARCS",
+      "hypothesis": "CB may alter ranking or scene heterogeneity beyond a single global PL threshold; not a cloud-specific innovation claim",
+      "affected_positive_recall_gap_scenes": [
+        {
+          "scene": "LC80200462014213LGN00",
+          "CB_recall_pct": 23.22915972546145,
+          "PL_global_threshold_recall_pct": 3.80489105084294
+        },
+        {
+          "scene": "LC80310432013207LGN00",
+          "CB_recall_pct": 58.587872404453805,
+          "PL_global_threshold_recall_pct": 50.252031297020764
+        },
+        {
+          "scene": "LC80500162014247LGN00",
+          "CB_recall_pct": 25.909630925493165,
+          "PL_global_threshold_recall_pct": 11.14273404963641
+        },
+        {
+          "scene": "LC81330492014141LGN00",
+          "CB_recall_pct": 55.72358748162151,
+          "PL_global_threshold_recall_pct": 47.29398585731289
+        },
+        {
+          "scene": "LC81500412014244LGN00",
+          "CB_recall_pct": 85.98359224995636,
+          "PL_global_threshold_recall_pct": 85.52976086577064
+        }
+      ],
+      "requires": "separate fixed protocol, compatible controls and bounded repeat; exposed single seed is not confirmation"
+    },
+    {
+      "pool": "L8",
+      "hypothesis": "CB may alter ranking or scene heterogeneity beyond a single global PL threshold; not a cloud-specific innovation claim",
+      "affected_positive_recall_gap_scenes": [
+        {
+          "scene": "LC80010112014080LGN00",
+          "CB_recall_pct": 37.43880479934392,
+          "PL_global_threshold_recall_pct": 35.545096361270076
+        },
+        {
+          "scene": "LC80320382013278LGN00",
+          "CB_recall_pct": 49.39826724622254,
+          "PL_global_threshold_recall_pct": 43.665912652650874
+        },
+        {
+          "scene": "LC81010142014189LGN00",
+          "CB_recall_pct": 85.16950887853089,
+          "PL_global_threshold_recall_pct": 83.78248016417736
+        },
+        {
+          "scene": "LC81750622013304LGN00",
+          "CB_recall_pct": 25.37208409324664,
+          "PL_global_threshold_recall_pct": 20.720061039962072
+        },
+        {
+          "scene": "LC82020522013141LGN01",
+          "CB_recall_pct": 27.424834734593574,
+          "PL_global_threshold_recall_pct": 20.597335522988402
+        }
+      ],
+      "requires": "separate fixed protocol, compatible controls and bounded repeat; exposed single seed is not confirmation"
+    }
+  ],
+  "no_automatic_next_phase": true,
+  "prior_candidate_conclusions_unchanged": true
+}

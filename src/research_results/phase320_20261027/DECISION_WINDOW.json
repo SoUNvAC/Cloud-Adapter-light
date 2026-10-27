@@ -1,0 +1,7 @@
+{
+  "first_formal_execution": "2026-10-26T20:52:39.386137+08:00",
+  "decision_deadline": "2026-11-09T20:52:39.386137+08:00",
+  "start_epoch": 1793019159.386151,
+  "not_project_deadline": true,
+  "never_reset_on_wait_failure_or_phase_split": true
+}

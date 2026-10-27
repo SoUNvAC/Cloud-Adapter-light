@@ -1,0 +1,13 @@
+CMC PL original argmax reproduced; exact global ordering 33423488
+CMC PL exact staircase, AP, selected budget and replay counts passed
+CMC CB original argmax reproduced; exact global ordering 33423488
+CMC CB exact staircase, AP, selected budget and replay counts passed
+SPARCS PL original argmax reproduced; exact global ordering 2621440
+SPARCS PL exact staircase, AP, selected budget and replay counts passed
+SPARCS CB original argmax reproduced; exact global ordering 2621440
+SPARCS CB exact staircase, AP, selected budget and replay counts passed
+L8 PL original argmax reproduced; exact global ordering 218483021
+L8 PL exact staircase, AP, selected budget and replay counts passed
+L8 CB original argmax reproduced; exact global ordering 218483021
+L8 CB exact staircase, AP, selected budget and replay counts passed
+Phase320 three-pool threshold oracle complete

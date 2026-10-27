@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "tests": [
+    {
+      "test": "exact ties across chunk boundaries, all/none, pure scenes, both selection tie-breaks match brute force",
+      "passed": true,
+      "cases": 20
+    },
+    {
+      "test": "317 tied AP convention and pure-scene NA",
+      "passed": true
+    },
+    {
+      "test": "two-sided four-neighbor boundaries, Chebyshev2, invalid neighbor excluded, invalid-distance and outermost pixel-distance<=2 context",
+      "passed": true
+    }
+  ],
+  "real_labels_used": false
+}

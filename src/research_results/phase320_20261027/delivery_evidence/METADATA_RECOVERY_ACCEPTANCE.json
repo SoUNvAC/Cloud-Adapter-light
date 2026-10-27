@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "mode": "metadata_only",
+  "sole_verified_segment_equals_entire_compressed_payload": true,
+  "all_member_SHA_rechecked": true,
+  "no_raw_retransmission": true,
+  "original_failure_retained": true,
+  "remote_no_active_transfer_observed_in_prior_probe": true,
+  "evidence_stdout_complete": true,
+  "original_final_raw_line_was_not_saved_so_precise_cause_unknown": true
+}

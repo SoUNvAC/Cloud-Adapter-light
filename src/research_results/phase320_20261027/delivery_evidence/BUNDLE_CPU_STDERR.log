@@ -1,0 +1,4 @@
+  File "<stdin>", line 13
+    receipt.write_text(json.dumps(entry,indent=2)+'
+                                                  ^
+SyntaxError: unterminated string literal (detected at line 13)

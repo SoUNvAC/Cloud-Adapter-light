@@ -1,0 +1,37 @@
+The bundle contains this ref:
+72fcbbe122ad3f2da0378dde7e311a374d762f8a refs/heads/main
+The bundle requires this ref:
+afd63e34701ea1c8235111ff1739ec8be158fbc0 
+The bundle uses this hash algorithm: sha1
+Updating afd63e3..72fcbbe
+Fast-forward
+ .gitattributes                  |   4 ++
+ src/research_plans/phase320.md  | 123 ++++++++++++++++++++++++++++++++++++++++
+ src/tools/audit_phase320.py     |  53 +++++++++++++++++
+ src/tools/errors_phase320.py    |  63 ++++++++++++++++++++
+ src/tools/finalize_phase320.py  |  16 ++++++
+ src/tools/phase320_common.py    |  39 +++++++++++++
+ src/tools/phase320_staircase.py |  58 +++++++++++++++++++
+ src/tools/prepare_phase320.py   |  54 ++++++++++++++++++
+ src/tools/report_phase320.py    |  40 +++++++++++++
+ src/tools/run_cpu_phase320.py   |  30 ++++++++++
+ src/tools/test_phase320.py      |  31 ++++++++++
+ src/tools/threshold_phase320.py |  92 ++++++++++++++++++++++++++++++
+ src/tools/transfer_phase320.py  |  89 +++++++++++++++++++++++++++++
+ src/tools/verify_phase320.py    |  19 +++++++
+ 14 files changed, 711 insertions(+)
+ create mode 100644 src/research_plans/phase320.md
+ create mode 100644 src/tools/audit_phase320.py
+ create mode 100644 src/tools/errors_phase320.py
+ create mode 100644 src/tools/finalize_phase320.py
+ create mode 100644 src/tools/phase320_common.py
+ create mode 100644 src/tools/phase320_staircase.py
+ create mode 100644 src/tools/prepare_phase320.py
+ create mode 100644 src/tools/report_phase320.py
+ create mode 100644 src/tools/run_cpu_phase320.py
+ create mode 100644 src/tools/test_phase320.py
+ create mode 100644 src/tools/threshold_phase320.py
+ create mode 100644 src/tools/transfer_phase320.py
+ create mode 100644 src/tools/verify_phase320.py
+{"status": "verified_and_pulled", "epoch": 1793087027.7489314, "bundle_path": "/home/scv/shared/phase320_code_72fcbbe.bundle", "bundle_bytes": 38004, "bundle_sha256": "3476cf57ac97b69ab71476423936adf219e474a95739f43988b41df3a1305cb6", "commit": "72fcbbe122ad3f2da0378dde7e311a374d762f8a", "route": "already pushed canonical GitHub commit, SHA-pinned Git bundle, gzs git pull bundle; origin and credentials unchanged", "gitHub_TLS_failure_preserved_locally": true}
+Phase320 both CPU diagnostics complete

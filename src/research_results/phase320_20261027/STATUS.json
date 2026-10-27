@@ -1,0 +1,45 @@
+{
+  "status": "completed",
+  "epoch": 1793087259.4293916,
+  "seconds": 231.65129417798016,
+  "stages": {
+    "prepare": {
+      "exit": 0,
+      "seconds": 7.2381661320105195,
+      "peak_tree_RSS": 0
+    },
+    "test": {
+      "exit": 0,
+      "seconds": 2.003816102980636,
+      "peak_tree_RSS": 3338240
+    },
+    "errors": {
+      "exit": 0,
+      "seconds": 8.01301822194364,
+      "peak_tree_RSS": 101015552
+    },
+    "threshold": {
+      "exit": 0,
+      "seconds": 206.37215102498885,
+      "peak_tree_RSS": 3810684928
+    },
+    "audit": {
+      "exit": 0,
+      "seconds": 6.011304590967484,
+      "peak_tree_RSS": 129826816
+    },
+    "report": {
+      "exit": 0,
+      "seconds": 2.003784636966884,
+      "peak_tree_RSS": 3497984
+    }
+  },
+  "resources": {
+    "available_memory": 32697520128,
+    "free_disk": 737401217024,
+    "peak_RSS": 17207296
+  },
+  "neural_calls": 0,
+  "training_updates": 0,
+  "scratch_remaining_files": []
+}

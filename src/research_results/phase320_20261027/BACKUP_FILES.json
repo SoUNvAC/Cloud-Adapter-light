@@ -1,0 +1,190 @@
+{
+  "ANALYSIS_LOCK.json": {
+    "bytes": 2831077,
+    "sha256": "f0ccb7cc6b8d585ffb45ab3b79207e128cf7be04469a7d17f34368f044a4091c"
+  },
+  "CACHE_SCHEMA.json": {
+    "bytes": 699199,
+    "sha256": "e3b611b14615d686fe019097afab507e12fd63e71ed6de6f592db7637c0e55cf"
+  },
+  "CODE_DELIVERY.bundle": {
+    "bytes": 38004,
+    "sha256": "3476cf57ac97b69ab71476423936adf219e474a95739f43988b41df3a1305cb6"
+  },
+  "CODE_DELIVERY_EXECUTION.json": {
+    "bytes": 200,
+    "sha256": "055006454e01ae42d0a487d503c0d87c395b483288722ae8ec5f42436b3c9a19"
+  },
+  "CODE_DELIVERY_RECEIPT.json": {
+    "bytes": 482,
+    "sha256": "0ee87eb5105b3c307973c7dc4e6f7309a3b9f5de33cfdfd24cab26fa4f667c00"
+  },
+  "CONCLUSIONS.json": {
+    "bytes": 3286,
+    "sha256": "b0a97bad9d022470f2ec981b5af908b8188bc2fd8552f2eaea30c90603f47976"
+  },
+  "DECISION_WINDOW.json": {
+    "bytes": 248,
+    "sha256": "37fe372a15966ddd18a67a94aac81420dac06676f47fe2ff81e9e05d48497eaa"
+  },
+  "DELIVERY_REVIEW.json": {
+    "bytes": 3027,
+    "sha256": "504cc3d8a943038485ca17055ffee188bfe6efab4d47c54f7befadd99cbc31f7"
+  },
+  "ERROR_ACCEPTANCE.json": {
+    "bytes": 997,
+    "sha256": "2600f6854ad42016cb38bd2ab6dc432bbaeeff11a92fa94100df4c1b10f0d935"
+  },
+  "ERROR_COMPOSITION.csv": {
+    "bytes": 121462,
+    "sha256": "ce161e1144c66e157fbe57c4a2d01c96ff6b022e4c7bda2bcd9b84855d7d32b1"
+  },
+  "ERROR_LOCATION.csv": {
+    "bytes": 3926742,
+    "sha256": "615c64773e6e9cbd73a3febc95d073ccdb9fa4796ccdd8f08fdccc9435c00d67"
+  },
+  "ERROR_OPPORTUNITY.md": {
+    "bytes": 2103,
+    "sha256": "ebbcd03df7463f580ea959c3925e1436df2dbebfdaccb1bba71186dbf794c941"
+  },
+  "ERROR_SCENE_SUMMARY.csv": {
+    "bytes": 29873,
+    "sha256": "c1ea474c6cb11e5e0688b4d0d644d6d2e2a05df31800da9c02cc79ebe51c32da"
+  },
+  "EXIT_CODE": {
+    "bytes": 2,
+    "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+  },
+  "INDEPENDENT_QA.json": {
+    "bytes": 37171,
+    "sha256": "b7cb6efd91ec6158603b00b01c58029a20a8f7083282421222f2777e575f4d73"
+  },
+  "INPUT_SHA256.json": {
+    "bytes": 1350462,
+    "sha256": "c89318915d4de1c5e0321bfffd877fe2301637c1f820dbf3132ec45edcb0161e"
+  },
+  "ORIGINAL_POINT_REPRODUCTION.csv": {
+    "bytes": 2139,
+    "sha256": "8f4d02c836932d45a098c37407b6f29f3239b61e6871c7d6ed784073cb0732b8"
+  },
+  "RANKING_SUMMARY.csv": {
+    "bytes": 33245,
+    "sha256": "066ece3f59c2efd31cd027d1ec450482b0e652f4cf781b5a59ef2e8bb244b4e5"
+  },
+  "RESOURCES.jsonl": {
+    "bytes": 17594,
+    "sha256": "cf503c58dffacf884491a5bda83450c815607890c4aea405dda64f87d9e02e3b"
+  },
+  "RESULT.md": {
+    "bytes": 4791,
+    "sha256": "6d8f9dde8eeba56998f75b04dcfb2ccede73e57f50bee0f37360c5a9f9248462"
+  },
+  "STAGES.json": {
+    "bytes": 588,
+    "sha256": "fa4f49f561bba67398c7c8745ebab4f8d4f8f16ab7b8a5ade79e515be9384d1b"
+  },
+  "STARTED.json": {
+    "bytes": 150,
+    "sha256": "497782cb9f72702f532cd8b33fc7811a6b1de10aab8e1c6bb83053dea717cd9b"
+  },
+  "STATUS.json": {
+    "bytes": 949,
+    "sha256": "37fde9569d26676bb910a302e0eddac6412929c1431d1db312cb8cf1ddeb3c80"
+  },
+  "SYNTHETIC_QA.json": {
+    "bytes": 519,
+    "sha256": "805e42ef70fdd69681b69a0fe9df962da9dc6be9ef1658a283e5a586ffed1e06"
+  },
+  "TEMP_FILES.json": {
+    "bytes": 6499,
+    "sha256": "a2d948590e2140bf79135a132cd4386a6e860535d47e179593e43f649ceae310"
+  },
+  "THRESHOLD_ACCEPTANCE.json": {
+    "bytes": 10339,
+    "sha256": "e149ac14524377efcd21d57ecf2d1ecb374c0935fdbdad93207559a6fab4f8ca"
+  },
+  "THRESHOLD_MATCH.csv": {
+    "bytes": 13420,
+    "sha256": "976d32d11f0de5238753aaa4a6a1679e7f5b2582f18a1e367af6d1c4719e904a"
+  },
+  "THRESHOLD_SCENE.csv": {
+    "bytes": 53849,
+    "sha256": "83ec54f7b3553eb6d37309a2c427b5388b0722a0fbbb45544db212fd9f170724"
+  },
+  "audit.log": {
+    "bytes": 76,
+    "sha256": "3b17ef71b7222ec1322897fe0b505499682a14b8de1e0eed590d9248224b889c"
+  },
+  "code/audit_phase320.py": {
+    "bytes": 4700,
+    "sha256": "ed8b5c8c8ccfea434454a9ed07249ea68217d7bfa601fdfe22bfda78a6efa626"
+  },
+  "code/errors_phase320.py": {
+    "bytes": 6908,
+    "sha256": "5b17152cc4085cae8cdfa7b84da5166c3deeeabea565f5baa154e5fd1d34152d"
+  },
+  "code/finalize_phase320.py": {
+    "bytes": 1796,
+    "sha256": "d048fedb6f1cad3db58c134ff7734484c48b5235d22b88ebaf5a82b3750a2fad"
+  },
+  "code/phase320_common.py": {
+    "bytes": 2861,
+    "sha256": "2a088e278349f5911c5a39af0bc92cd52580e9b53c7ffaee180c0b0bc614a317"
+  },
+  "code/phase320_staircase.py": {
+    "bytes": 5276,
+    "sha256": "be2414293b53a436ae49c77d47006037c902350bcd1959d36691b0fd9fc471da"
+  },
+  "code/prepare_phase320.py": {
+    "bytes": 8162,
+    "sha256": "1c66a9df5815200f39017fbbc0e487317b1b0c64fe594682e0f23a9ba8294b09"
+  },
+  "code/report_phase320.py": {
+    "bytes": 9950,
+    "sha256": "eaca27194fd9ef5464db715d905f1857159e210580e1f09b8de1d4653649620d"
+  },
+  "code/run_cpu_phase320.py": {
+    "bytes": 3657,
+    "sha256": "0a29d9226964fb04e969e0658cd58c2e5634da1be2e5a968ba05deb69397d3b8"
+  },
+  "code/test_phase320.py": {
+    "bytes": 3164,
+    "sha256": "090890ddaddd061a256a8af2fbb1f20e1a76e4a1a3163863f115ad124d6b8366"
+  },
+  "code/threshold_phase320.py": {
+    "bytes": 11281,
+    "sha256": "7c89a91cbd572c6cbad001b5e5eed9ef44639823e9445204e85bb411ffacb81b"
+  },
+  "code/transfer_phase320.py": {
+    "bytes": 9068,
+    "sha256": "162c95655ffc456d80d4398c7b3bd1d6018302ba31f9688b4d3abd44a3802331"
+  },
+  "code/verify_phase320.py": {
+    "bytes": 2016,
+    "sha256": "0b4d48283b8e5a8de3e860a1b92989d935c5c8aa7ae7cae39a1fde9e7cf0ebe0"
+  },
+  "errors.log": {
+    "bytes": 47,
+    "sha256": "68668f8de7299d247dc011652bebdd60c42ac3d87a9764bba880dddaa9c8b977"
+  },
+  "phase320.md": {
+    "bytes": 1803,
+    "sha256": "1336f8f4da5566637c5c9e4fb0d577d5641cbd926084dfd89f179a9be6946208"
+  },
+  "prepare.log": {
+    "bytes": 61,
+    "sha256": "840edbb4887ffd1bb24231f58d701409b5df18d6d133a08fc4a9fd06fbe7b38c"
+  },
+  "report.log": {
+    "bytes": 47,
+    "sha256": "60b2a12a90313a25143b13723757b4a2f13c25b1a12416cf94f8a2b2883e71f7"
+  },
+  "test.log": {
+    "bytes": 58,
+    "sha256": "e55652b6e5b342b125fa8e84acdcfbe91adeb92e8a576fe4e66bcb1e7d3f87e6"
+  },
+  "threshold.log": {
+    "bytes": 864,
+    "sha256": "8bcba29e13df5c6a1395d94c744d5830357355cdce360433c7745748a465af24"
+  }
+}

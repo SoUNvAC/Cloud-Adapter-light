@@ -1,0 +1,104 @@
+{
+  "reviewed": true,
+  "neighborhood_checks": [
+    {
+      "pool": "CMC",
+      "arm": "PL",
+      "target": "CB_original_FPR",
+      "adjacent_tie_blocks": true,
+      "exact_rational_budget_sides": true,
+      "selected_primary_objective_matches_boundary": true
+    },
+    {
+      "pool": "CMC",
+      "arm": "PL",
+      "target": "CB_original_recall",
+      "adjacent_tie_blocks": true,
+      "exact_rational_budget_sides": true,
+      "selected_primary_objective_matches_boundary": true
+    },
+    {
+      "pool": "CMC",
+      "arm": "CB",
+      "target": "CB_original_FPR",
+      "adjacent_tie_blocks": true,
+      "exact_rational_budget_sides": true,
+      "selected_primary_objective_matches_boundary": true
+    },
+    {
+      "pool": "CMC",
+      "arm": "CB",
+      "target": "CB_original_recall",
+      "adjacent_tie_blocks": true,
+      "exact_rational_budget_sides": true,
+      "selected_primary_objective_matches_boundary": true
+    },
+    {
+      "pool": "SPARCS",
+      "arm": "PL",
+      "target": "CB_original_FPR",
+      "adjacent_tie_blocks": true,
+      "exact_rational_budget_sides": true,
+      "selected_primary_objective_matches_boundary": true
+    },
+    {
+      "pool": "SPARCS",
+      "arm": "PL",
+      "target": "CB_original_recall",
+      "adjacent_tie_blocks": true,
+      "exact_rational_budget_sides": true,
+      "selected_primary_objective_matches_boundary": true
+    },
+    {
+      "pool": "SPARCS",
+      "arm": "CB",
+      "target": "CB_original_FPR",
+      "adjacent_tie_blocks": true,
+      "exact_rational_budget_sides": true,
+      "selected_primary_objective_matches_boundary": true
+    },
+    {
+      "pool": "SPARCS",
+      "arm": "CB",
+      "target": "CB_original_recall",
+      "adjacent_tie_blocks": true,
+      "exact_rational_budget_sides": true,
+      "selected_primary_objective_matches_boundary": true
+    },
+    {
+      "pool": "L8",
+      "arm": "PL",
+      "target": "CB_original_FPR",
+      "adjacent_tie_blocks": true,
+      "exact_rational_budget_sides": true,
+      "selected_primary_objective_matches_boundary": true
+    },
+    {
+      "pool": "L8",
+      "arm": "PL",
+      "target": "CB_original_recall",
+      "adjacent_tie_blocks": true,
+      "exact_rational_budget_sides": true,
+      "selected_primary_objective_matches_boundary": true
+    },
+    {
+      "pool": "L8",
+      "arm": "CB",
+      "target": "CB_original_FPR",
+      "adjacent_tie_blocks": true,
+      "exact_rational_budget_sides": true,
+      "selected_primary_objective_matches_boundary": true
+    },
+    {
+      "pool": "L8",
+      "arm": "CB",
+      "target": "CB_original_recall",
+      "adjacent_tie_blocks": true,
+      "exact_rational_budget_sides": true,
+      "selected_primary_objective_matches_boundary": true
+    }
+  ],
+  "original_threshold_results_unchanged": true,
+  "code_bundle_identity_passed": true,
+  "report_limits": "Oracle binary threshold only, no new model or data, no pixel cause beyond native labels; SPARCS and L8 gap is not proof of cloud-specific innovation."
+}

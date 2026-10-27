@@ -1,0 +1,10 @@
+{
+  "status": "verified_and_pulled",
+  "epoch": 1793087027.7489314,
+  "bundle_path": "/home/scv/shared/phase320_code_72fcbbe.bundle",
+  "bundle_bytes": 38004,
+  "bundle_sha256": "3476cf57ac97b69ab71476423936adf219e474a95739f43988b41df3a1305cb6",
+  "commit": "72fcbbe122ad3f2da0378dde7e311a374d762f8a",
+  "route": "already pushed canonical GitHub commit, SHA-pinned Git bundle, gzs git pull bundle; origin and credentials unchanged",
+  "gitHub_TLS_failure_preserved_locally": true
+}

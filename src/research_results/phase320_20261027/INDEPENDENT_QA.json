@@ -1,0 +1,1058 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "SPARCS",
+      "name": "LC80010812013365LGN00_18",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "SPARCS",
+      "name": "LC80020622013244LGN00_32",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "SPARCS",
+      "name": "LC80050152014172LGN00_12",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "SPARCS",
+      "name": "LC80050562014076LGN00_33",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "SPARCS",
+      "name": "LC80150242014146LGN00_23",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "SPARCS",
+      "name": "LC80190352014078LGN01_26",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "SPARCS",
+      "name": "LC80250402013245LGN00_45",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "SPARCS",
+      "name": "LC80250482014072LGN00_18",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "SPARCS",
+      "name": "LC80320282013182LGN00_30",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "SPARCS",
+      "name": "LC80430352013243LGN00_31",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "SPARCS",
+      "name": "LC80470252014226LGN00_11",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "SPARCS",
+      "name": "LC80630462013191LGN00_11",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "SPARCS",
+      "name": "LC80750722014022LGN00_16",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "SPARCS",
+      "name": "LC80750962014038LGN00_14",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "SPARCS",
+      "name": "LC80900832013220LGN00_28",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "SPARCS",
+      "name": "LC80910892014006LGN00_44",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "SPARCS",
+      "name": "LC80940802014092LGN00_17",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "SPARCS",
+      "name": "LC80980732014008LGN00_31",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "SPARCS",
+      "name": "LC81110822013288LGN00_11",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "SPARCS",
+      "name": "LC81140622013277LGN00_23",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "SPARCS",
+      "name": "LC81180602014116LGN00_29",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "SPARCS",
+      "name": "LC81230362013276LGN00_19",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "SPARCS",
+      "name": "LC81250542014181LGN00_39",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "SPARCS",
+      "name": "LC81250622013178LGN01_08",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "SPARCS",
+      "name": "LC81280422014074LGN00_16",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "SPARCS",
+      "name": "LC81360162013159LGN00_18",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "SPARCS",
+      "name": "LC81360162014210LGN00_32",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "SPARCS",
+      "name": "LC81370412014105LGN00_30",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "SPARCS",
+      "name": "LC81370452014073LGN00_23",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "SPARCS",
+      "name": "LC81400372014158LGN00_27",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "SPARCS",
+      "name": "LC81460442013293LGN00_38",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "SPARCS",
+      "name": "LC81480352013195LGN00_32",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "SPARCS",
+      "name": "LC81500442013145LGN00_16",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "SPARCS",
+      "name": "LC81550232014135LGN00_26",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "SPARCS",
+      "name": "LC81580442014140LGN00_21",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "SPARCS",
+      "name": "LC81610712013222LGN00_09",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "SPARCS",
+      "name": "LC81660432014100LGN00_35",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "SPARCS",
+      "name": "LC81670512014091LGN00_32",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "SPARCS",
+      "name": "LC81700252014080LGN00_27",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "SPARCS",
+      "name": "LC81700802014016LGN00_23",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "SPARCS",
+      "name": "LC81720642014334LGN00_25",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "SPARCS",
+      "name": "LC81730542014277LGN00_23",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "SPARCS",
+      "name": "LC81730742014085LGN00_11",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "SPARCS",
+      "name": "LC81750832014067LGN00_24",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "SPARCS",
+      "name": "LC81800332013147LGN00_33",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "SPARCS",
+      "name": "LC81810592013218LGN00_05",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "SPARCS",
+      "name": "LC81830242014091LGN00_16",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "SPARCS",
+      "name": "LC81830642014203LGN00_16",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "SPARCS",
+      "name": "LC81860432014224LGN00_19",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "SPARCS",
+      "name": "LC81950282013156LGN00_33",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "SPARCS",
+      "name": "LC81950502014223LGN00_22",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "SPARCS",
+      "name": "LC82010332014105LGN00_34",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "SPARCS",
+      "name": "LC82160662014146LGN00_14",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "SPARCS",
+      "name": "LC82170152014249LGN00_38",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "SPARCS",
+      "name": "LC82210662014229LGN00_18",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "SPARCS",
+      "name": "LC82260732013357LGN00_32",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "SPARCS",
+      "name": "LC82290562014157LGN00_24",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "SPARCS",
+      "name": "LC82290782013282LGN00_12",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "SPARCS",
+      "name": "LC82310942013344LGN00_17",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "SPARCS",
+      "name": "LC82320772014306LGN00_38",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "shrubland_LC80010732013109LGN00_patch_1024_1536.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "shrubland_LC80010732013109LGN00_patch_1024_4096.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "shrubland_LC80010732013109LGN00_patch_1536_2048.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "shrubland_LC80010732013109LGN00_patch_3584_1024.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "shrubland_LC80010732013109LGN00_patch_5120_3584.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "shrubland_LC80010732013109LGN00_patch_512_2560.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "forest_LC80070662014234LGN00_patch_0_2048.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "forest_LC80070662014234LGN00_patch_1536_2048.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "forest_LC80070662014234LGN00_patch_2048_1024.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "forest_LC80070662014234LGN00_patch_3072_2560.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "forest_LC80070662014234LGN00_patch_6144_4096.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "forest_LC80070662014234LGN00_patch_7168_3072.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "forest_LC80160502014041LGN00_patch_0_1536.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "forest_LC80160502014041LGN00_patch_1024_3072.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "forest_LC80160502014041LGN00_patch_2048_2048.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "forest_LC80160502014041LGN00_patch_4096_3584.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "forest_LC80160502014041LGN00_patch_4608_3584.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "forest_LC80160502014041LGN00_patch_7168_4096.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "forest_LC80200462014005LGN00_patch_2048_6656.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "forest_LC80200462014005LGN00_patch_3584_5632.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "forest_LC80200462014005LGN00_patch_4096_3072.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "forest_LC80200462014005LGN00_patch_4096_3584.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "forest_LC80200462014005LGN00_patch_4608_1536.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "forest_LC80200462014005LGN00_patch_5120_3072.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "grass_crops_LC80290372013257LGN00_patch_1024_3584.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "grass_crops_LC80290372013257LGN00_patch_1536_1024.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "grass_crops_LC80290372013257LGN00_patch_2560_5120.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "grass_crops_LC80290372013257LGN00_patch_6144_1536.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "grass_crops_LC80290372013257LGN00_patch_6656_1024.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "grass_crops_LC80290372013257LGN00_patch_7168_5120.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "urban_LC80640452014041LGN00_patch_2560_4608.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "urban_LC80640452014041LGN00_patch_4096_1536.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "urban_LC80640452014041LGN00_patch_4096_6656.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "urban_LC80640452014041LGN00_patch_6144_5632.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "urban_LC80640452014041LGN00_patch_6656_5632.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "urban_LC80640452014041LGN00_patch_6656_6144.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "shrubland_LC80750172013163LGN00_patch_5632_4096.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "shrubland_LC80750172013163LGN00_patch_6144_1024.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "shrubland_LC80750172013163LGN00_patch_6656_3072.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "shrubland_LC80750172013163LGN00_patch_6656_5120.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "shrubland_LC80750172013163LGN00_patch_6656_5632.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "shrubland_LC80750172013163LGN00_patch_7168_5120.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "snow_ice_LC81001082014022LGN00_patch_2048_4096.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "snow_ice_LC81001082014022LGN00_patch_2560_4608.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "snow_ice_LC81001082014022LGN00_patch_2560_6144.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "snow_ice_LC81001082014022LGN00_patch_3072_6144.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "snow_ice_LC81001082014022LGN00_patch_3584_5120.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "snow_ice_LC81001082014022LGN00_patch_4096_0.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "shrubland_LC81020802014100LGN00_patch_1024_6144.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "shrubland_LC81020802014100LGN00_patch_2560_3584.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "shrubland_LC81020802014100LGN00_patch_5120_1536.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "shrubland_LC81020802014100LGN00_patch_512_2560.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "shrubland_LC81020802014100LGN00_patch_512_5632.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "shrubland_LC81020802014100LGN00_patch_6144_4096.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "grass_crops_LC81220312014208LGN00_patch_1024_1536.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "grass_crops_LC81220312014208LGN00_patch_1536_512.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "grass_crops_LC81220312014208LGN00_patch_2048_1536.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "grass_crops_LC81220312014208LGN00_patch_3072_3072.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "grass_crops_LC81220312014208LGN00_patch_3584_3072.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "grass_crops_LC81220312014208LGN00_patch_4608_512.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "forest_LC81310182013108LGN01_patch_0_2048.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "forest_LC81310182013108LGN01_patch_1024_1536.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "forest_LC81310182013108LGN01_patch_1536_3072.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "forest_LC81310182013108LGN01_patch_4096_2560.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "forest_LC81310182013108LGN01_patch_512_1536.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "grass_crops_LC81490432014141LGN00_patch_3072_5632.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "grass_crops_LC81490432014141LGN00_patch_3584_5120.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "grass_crops_LC81490432014141LGN00_patch_4096_6144.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "grass_crops_LC81490432014141LGN00_patch_4608_5632.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "grass_crops_LC81490432014141LGN00_patch_4608_6144.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "urban_LC81620432014072LGN00_patch_1536_2560.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "urban_LC81620432014072LGN00_patch_3072_6144.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "urban_LC81620432014072LGN00_patch_3584_0.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "urban_LC81620432014072LGN00_patch_512_5120.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "urban_LC81620432014072LGN00_patch_6656_2048.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "barren_LC81640502013179LGN01_patch_1024_6144.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "barren_LC81640502013179LGN01_patch_1536_6144.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "barren_LC81640502013179LGN01_patch_4096_5632.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "barren_LC81640502013179LGN01_patch_5632_4096.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "barren_LC81640502013179LGN01_patch_5632_512.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "grass_crops_LC81750512013208LGN00_patch_1536_6144.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "grass_crops_LC81750512013208LGN00_patch_4096_2560.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "grass_crops_LC81750512013208LGN00_patch_5120_512.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "grass_crops_LC81750512013208LGN00_patch_5632_3072.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "grass_crops_LC81750512013208LGN00_patch_6144_5120.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "grass_crops_LC81820302014180LGN00_patch_4096_5120.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "grass_crops_LC81820302014180LGN00_patch_512_1536.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "grass_crops_LC81820302014180LGN00_patch_6144_4096.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "grass_crops_LC81820302014180LGN00_patch_6144_4608.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "grass_crops_LC81820302014180LGN00_patch_7168_5632.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "water_LC81910182013240LGN00_patch_3584_6656.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "water_LC81910182013240LGN00_patch_4096_5632.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "water_LC81910182013240LGN00_patch_5632_4096.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "water_LC81910182013240LGN00_patch_6656_3072.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "water_LC81910182013240LGN00_patch_7168_5120.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "water_LC82150712013152LGN00_patch_0_1024.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "water_LC82150712013152LGN00_patch_2048_3072.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "water_LC82150712013152LGN00_patch_5120_512.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "water_LC82150712013152LGN00_patch_512_3072.png",
+      "passed": true
+    },
+    {
+      "check": "independent maximum-filter boundary and every native/location/geometry outcome cell",
+      "pool": "L8",
+      "name": "water_LC82150712013152LGN00_patch_5632_0.png",
+      "passed": true
+    },
+    {
+      "check": "selected global threshold scene counts, pure-scene NA and macro means",
+      "pool": "CMC",
+      "arm": "PL",
+      "target": "CB_original_FPR",
+      "passed": true
+    },
+    {
+      "check": "selected global threshold scene counts, pure-scene NA and macro means",
+      "pool": "CMC",
+      "arm": "PL",
+      "target": "CB_original_recall",
+      "passed": true
+    },
+    {
+      "check": "selected global threshold scene counts, pure-scene NA and macro means",
+      "pool": "CMC",
+      "arm": "CB",
+      "target": "CB_original_FPR",
+      "passed": true
+    },
+    {
+      "check": "selected global threshold scene counts, pure-scene NA and macro means",
+      "pool": "CMC",
+      "arm": "CB",
+      "target": "CB_original_recall",
+      "passed": true
+    },
+    {
+      "check": "selected global threshold scene counts, pure-scene NA and macro means",
+      "pool": "SPARCS",
+      "arm": "PL",
+      "target": "CB_original_FPR",
+      "passed": true
+    },
+    {
+      "check": "selected global threshold scene counts, pure-scene NA and macro means",
+      "pool": "SPARCS",
+      "arm": "PL",
+      "target": "CB_original_recall",
+      "passed": true
+    },
+    {
+      "check": "selected global threshold scene counts, pure-scene NA and macro means",
+      "pool": "SPARCS",
+      "arm": "CB",
+      "target": "CB_original_FPR",
+      "passed": true
+    },
+    {
+      "check": "selected global threshold scene counts, pure-scene NA and macro means",
+      "pool": "SPARCS",
+      "arm": "CB",
+      "target": "CB_original_recall",
+      "passed": true
+    },
+    {
+      "check": "selected global threshold scene counts, pure-scene NA and macro means",
+      "pool": "L8",
+      "arm": "PL",
+      "target": "CB_original_FPR",
+      "passed": true
+    },
+    {
+      "check": "selected global threshold scene counts, pure-scene NA and macro means",
+      "pool": "L8",
+      "arm": "PL",
+      "target": "CB_original_recall",
+      "passed": true
+    },
+    {
+      "check": "selected global threshold scene counts, pure-scene NA and macro means",
+      "pool": "L8",
+      "arm": "CB",
+      "target": "CB_original_FPR",
+      "passed": true
+    },
+    {
+      "check": "selected global threshold scene counts, pure-scene NA and macro means",
+      "pool": "L8",
+      "arm": "CB",
+      "target": "CB_original_recall",
+      "passed": true
+    }
+  ],
+  "all_original_inputs_and_code_SHA_reverified": true,
+  "original_decision_window_unchanged": true,
+  "model_calls": 0,
+  "scientific_local_work": false,
+  "resources": {
+    "available_memory": 32607219712,
+    "free_disk": 737401282560,
+    "peak_RSS": 130306048
+  }
+}

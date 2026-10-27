@@ -1,0 +1,93 @@
+{
+  "metadata_preflight": {
+    "exit": 0,
+    "run_root_existed": false,
+    "observed_cache_fields": "CMC PL has extra scores/flat_indices; all six pool-arms provide float32 shadow, uint8 pred and bool valid; no need to reconstruct scores"
+  },
+  "events": [
+    {
+      "event": "first gzs git ff-only pull before CPU launch",
+      "exit": 1,
+      "stderr": "fatal: unable to access https://github.com/SoUNvAC/Cloud-Adapter-light.git/: GnuTLS, handshake failed: The TLS connection was non-properly terminated.",
+      "CPU_started": false,
+      "next_action": "retry same idempotent ff-only pull; preserve TLS verification and existing credentials"
+    },
+    {
+      "event": "second connection before any remote command",
+      "exit": 1,
+      "stderr": "kex_exchange_identification: Connection closed by remote host",
+      "CPU_started": false,
+      "next_action": "state-guarded connection; inspect any existing run instead of duplicate launch"
+    },
+    {
+      "event": "third state-guarded attempt; run directory absent branch",
+      "exit": 1,
+      "stderr": "fatal: unable to access https://github.com/SoUNvAC/Cloud-Adapter-light.git/: GnuTLS, handshake failed: The TLS connection was non-properly terminated.",
+      "CPU_started": false,
+      "next_action": "diagnose gzs GitHub TLS using read-only connectivity probes; no scientific retry"
+    },
+    {
+      "event": "read-only gzs TLS diagnosis",
+      "exit": 0,
+      "run_root_exists": false,
+      "curl_GitHub_IPv4_exit": 35,
+      "curl_stderr": "TLS connect error: error:0A000126:SSL routines::unexpected eof while reading",
+      "github_DNS": [
+        "20.205.243.166"
+      ],
+      "evidence": "Git GnuTLS and curl OpenSSL both fail before HTTP response",
+      "resolution": "existing pushed commit via SHA-pinned git bundle; gzs git pull same bundle; origin configuration and credentials unchanged",
+      "bundle_bytes": 38004,
+      "bundle_sha256": "3476cf57ac97b69ab71476423936adf219e474a95739f43988b41df3a1305cb6"
+    },
+    {
+      "event": "bundle orchestration program parsing",
+      "exit": 1,
+      "stderr": "SyntaxError: unterminated string literal at receipt.write_text line13; outer Python template interpreted newline escape",
+      "remote_mutations": false,
+      "CPU_started": false,
+      "resolution": "raw string template and local AST acceptance before resend; original stdout/stderr retained, no scientific retry"
+    },
+    {
+      "event": "read-only status probe while existing controller runs",
+      "exit": 1,
+      "stderr": "kex_exchange_identification: Connection closed by remote host",
+      "CPU_controller_relaunched": false,
+      "action": "leave original foreground SSH/controller untouched; inspect the same process/session later"
+    },
+    {
+      "event": "first full-backup receiver final control JSON",
+      "exit": 1,
+      "error": "JSONDecodeError: Unterminated string starting at line1 column1874",
+      "verified_before_failure": {
+        "files": 47,
+        "segments": 1,
+        "raw_bytes": 9260212,
+        "compressed_bytes": 1039480,
+        "single_segment_payload_SHA": "8717df1c63c12945f696591542ee276ff4cd1a51e16838b94b20343495045c9d"
+      },
+      "cause": "final control line incomplete or malformed; exact transport cause not established because original raw line was not saved",
+      "next_action": "preserve original failure and all47 files; inspect remote process/receipt; metadata-only recovery, no raw retransmission"
+    },
+    {
+      "event": "metadata-only receipt recovery",
+      "exit": 0,
+      "remote_transfer_processes_observed": 0,
+      "old_tool_mode": "evidence only",
+      "raw_result_retransmissions": 0,
+      "proof": "one verified compressed segment equals entire payload; remote master receipt and local digest identical; all47 raw member SHA rechecked",
+      "compressed_payload_sha256": "8717df1c63c12945f696591542ee276ff4cd1a51e16838b94b20343495045c9d",
+      "original_failure_retained": true
+    }
+  ],
+  "network_caused_scientific_retries": 0,
+  "local_code_equals_git_blob": true,
+  "scientific_execution": {
+    "controller_exit": 0,
+    "scientific_failures": 0,
+    "scientific_retries": 0,
+    "neural_calls": 0,
+    "code_commit": "72fcbbe122ad3f2da0378dde7e311a374d762f8a",
+    "git_flow": "pushed GitHub main, gzs pulled SHA-verified same-commit bundle after TLS failures"
+  }
+}
