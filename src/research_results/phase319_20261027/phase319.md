@@ -12,3 +12,5 @@
 - 本地完整备份实际验收：616成员，原始7923653字节，3段；所有成员/分段/整流SHA通过。整流SHA256=0973b9b466feba296aa480c1a2516f4a5ff3b97db58a97877cfc33f4644e7002，清单SHA256=0e9032189d3ba3e7f042712a14278ab84653fd427f9398566e06f989dd8534f7。双机含摘要预留115847306字节<=2GB，无持久大归档。本机仅编辑/文件SHA/备份。网络及执行探测实录见NETWORK_EVENTS.json；原stderr保留，未因此重跑科学阶段。
 
 - 收尾澄清：SPARCS的not_testable源于本实现事前0.1度/0.1%局部线性投影准入覆盖不足，不能称太阳资料缺失。其子集指标不外推全池；L8独立no_go。原始RESULT全文及SHA保留在RESULT_SOURCE.md和DELIVERY_REVIEW.json，未改远端原始结果或任何选择规则。
+
+- 交付复验：远端首次verify定位本地transfer脚本CRLF与原Git/执行快照LF的SHA差异；已证明仅换行并恢复本地为原始Git字节，重建摘要索引。原失败和两套SHA保留NETWORK_EVENTS，未重跑计算或回传。

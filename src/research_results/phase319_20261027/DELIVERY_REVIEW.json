@@ -7,5 +7,6 @@
   "important_limit": "SPARCS insufficient admitted coverage is caused by the preregistered local-linear grid approximation guard, not absence of Landsat sun metadata; subset metrics do not establish full-pool geometry performance. L8 independently no_go.",
   "original_failure": "NumPy bool JSON scalar serialization, before geometry or quality; recovery01 preserves original code and thresholds",
   "network": "one remote ff-only pull TLS handshake failure, successful per-command HTTP/1.1 retry; no network-caused scientific repeat",
-  "no_next_phase": true
+  "no_next_phase": true,
+  "byte_identity_fix": "Restored local transfer script to exact original git blob/executed remote LF bytes; initial final-verify failure and both SHA values retained in NETWORK_EVENTS.json. No scientific or transport rerun."
 }

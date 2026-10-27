@@ -19,6 +19,16 @@
       "stderr": "fatal: unable to access https://github.com/SoUNvAC/Cloud-Adapter-light.git/: GnuTLS, handshake failed: The TLS connection was non-properly terminated.",
       "recovery_started": false,
       "next_action": "idempotent ff-only pull using per-command HTTP/1.1, no persistent configuration change"
+    },
+    {
+      "event": "final remote byte verification",
+      "exit": 1,
+      "assertion": "src/tools/transfer_phase319.py",
+      "cause": "local CRLF vs original git blob and executed gzs LF bytes; script was initially added before Phase319 -text attributes",
+      "original_local_SHA": "0662c95f5b2cf0f78d0247c9718625fe1ce026240065c5514c37154b47fb188e",
+      "canonical_and_executed_SHA": "1dc1f0471c3dbc0a47bd5a0c511a544d9e41074cf245a5f3b0e708b9142a6fa0",
+      "proof": "CRLF to LF equals git blob equals frozen remote code snapshot byte-for-byte",
+      "resolution": "restore local source to exact existing git blob, update publication index; no code logic change or rerun of experiment/backup"
     }
   ],
   "network_caused_scientific_retries": 0
