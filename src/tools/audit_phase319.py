@@ -8,6 +8,7 @@ def main():
   guard();p,n=e['pool'],e['name'];assert sha(e['file'])==e['sha256'];rf=refs[p,n];assert sha(rf['path'])==rf['sha256']
   with np.load(e['file']) as z:m={k:z[k] for k in z.files}
   with np.load(rf['path']) as z:y=z['truth'];v=z['valid']
+  assert int(((y==2)&v).sum())==int(image[p,n,'original_A_Sh']['reference_true_Shadow_all'])
   m['eligible_A_Sh']=m['original_A_Sh'] if e['status']=='qualified' else np.zeros_like(v)
   assert np.all(m['G_sun']<=m['original_A_Sh']) and np.all(m['G_reverse']<=m['original_A_Sh']) and np.all(m['G_conf']<=m['original_A_Sh'])
   assert np.array_equal(m['G_sun'].astype(int)+m['unmatched_observed']+m['unmatched_unknown'],m['original_A_Sh'].astype(int));assert int(m['G_sun'].sum())==int(m['G_conf'].sum())
