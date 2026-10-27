@@ -1,0 +1,6 @@
+{"stage": "inputs", "epoch": 1793074720.9538033, "tree_RSS": 827392, "available_memory": 32692871168, "free_disk": 737803264000, "peak_RSS": 17162240}
+{"stage": "inputs", "epoch": 1793074722.9568558, "tree_RSS": 79089664, "available_memory": 32665780224, "free_disk": 737803218944, "peak_RSS": 17162240}
+{"stage": "inputs", "epoch": 1793074724.9599092, "tree_RSS": 83652608, "available_memory": 32666652672, "free_disk": 737803177984, "peak_RSS": 17162240}
+{"stage": "inputs", "epoch": 1793074726.963009, "tree_RSS": 88068096, "available_memory": 32672792576, "free_disk": 737803141120, "peak_RSS": 17162240}
+{"stage": "inputs", "epoch": 1793074728.966237, "tree_RSS": 98578432, "available_memory": 32665825280, "free_disk": 737803128832, "peak_RSS": 17162240}
+{"stage": "inputs", "epoch": 1793074730.969551, "tree_RSS": 98582528, "available_memory": 32657625088, "free_disk": 737803108352, "peak_RSS": 17162240}

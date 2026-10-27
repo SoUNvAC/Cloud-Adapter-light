@@ -1,0 +1,41 @@
+{
+  "status": "passed",
+  "tests": [
+    {
+      "test": "sun cardinal shadow-to-cloud direction",
+      "azimuth": 0,
+      "passed": true,
+      "FFT_error": 4.440892098500626e-16
+    },
+    {
+      "test": "sun cardinal shadow-to-cloud direction",
+      "azimuth": 90,
+      "passed": true,
+      "FFT_error": 8.881784197001252e-16
+    },
+    {
+      "test": "sun cardinal shadow-to-cloud direction",
+      "azimuth": 180,
+      "passed": true,
+      "FFT_error": 4.440892098500626e-16
+    },
+    {
+      "test": "sun cardinal shadow-to-cloud direction",
+      "azimuth": 270,
+      "passed": true,
+      "FFT_error": 8.881784197001252e-16
+    },
+    {
+      "test": "edge unknown, full out-of-field kernel, zero cloud",
+      "passed": true
+    },
+    {
+      "test": "meters, negative affine Y, native/output scale, grid rotation, zero Shadow empty selection",
+      "passed": true,
+      "native_pixel_m": 30,
+      "output_pixel_m": 58.59375,
+      "zero_Shadow_count": 0
+    }
+  ],
+  "uses_real_labels": false
+}

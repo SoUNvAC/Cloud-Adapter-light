@@ -1,0 +1,12 @@
+{
+  "status": "frozen",
+  "sha256": "a9c1228a0554a23b79ed2aefabbfa5bfcd3dc431919ee8042c15dba002927be4",
+  "path": "/home/scv/Cloud-Adapter-light/src/tools/recovery_phase319.py",
+  "original_preregistration_sha256": "d9c051c1afee8fce1e9ba08791b87e4247e065381ec570ef8f52434ae00c9450",
+  "reason": "all160 coordinate checks completed; final JSON write failed only on numpy.bool_; original rows were not persisted",
+  "change": "JSON default converts NumPy scalar .item() only in metadata writer; all original code/criteria/geometry unchanged",
+  "repeated_input_identity_passes": 1,
+  "geometry_attempts_before_recovery": 0,
+  "quality_reads_before_recovery": 0,
+  "epoch": 1793074997.102973
+}

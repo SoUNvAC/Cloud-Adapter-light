@@ -1,0 +1,9 @@
+{
+  "index": 1,
+  "files": 256,
+  "raw_bytes": 3512891,
+  "manifest_sha256": "0e9032189d3ba3e7f042712a14278ab84653fd427f9398566e06f989dd8534f7",
+  "compressed_bytes": 779864,
+  "compressed_sha256": "c63af99f96baa440756897b075048821fa4ecc6425670924bef108fdfeb9e7df",
+  "status": "completed"
+}

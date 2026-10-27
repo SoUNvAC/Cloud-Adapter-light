@@ -1,0 +1,147 @@
+{
+  "status": "passed",
+  "ellipsoid": "WGS84 a6378137 inverse_flattening298.257223563",
+  "published_equator_and_meridian_one_degree_distances_checked": true,
+  "roundtrips": [
+    {
+      "lon": 0,
+      "lat": 0,
+      "azimuth": 0,
+      "distance_error_m": 7.964558790263254e-09,
+      "azimuth_error_deg": 0.0
+    },
+    {
+      "lon": 0,
+      "lat": 0,
+      "azimuth": 45,
+      "distance_error_m": 6.584258471775684e-07,
+      "azimuth_error_deg": 3.62018681698828e-09
+    },
+    {
+      "lon": 0,
+      "lat": 0,
+      "azimuth": 90,
+      "distance_error_m": 1.2636746760108508e-07,
+      "azimuth_error_deg": 0.0
+    },
+    {
+      "lon": 0,
+      "lat": 0,
+      "azimuth": 180,
+      "distance_error_m": 7.964558790263254e-09,
+      "azimuth_error_deg": 0.0
+    },
+    {
+      "lon": 0,
+      "lat": 0,
+      "azimuth": 270,
+      "distance_error_m": 1.2636746760108508e-07,
+      "azimuth_error_deg": 0.0
+    },
+    {
+      "lon": -69,
+      "lat": -18,
+      "azimuth": 0,
+      "distance_error_m": 3.3506921681691892e-09,
+      "azimuth_error_deg": 0.0
+    },
+    {
+      "lon": -69,
+      "lat": -18,
+      "azimuth": 45,
+      "distance_error_m": 2.5994916086347075e-07,
+      "azimuth_error_deg": 2.4625421701784944e-09
+    },
+    {
+      "lon": -69,
+      "lat": -18,
+      "azimuth": 90,
+      "distance_error_m": 8.011613772396231e-08,
+      "azimuth_error_deg": 0.0
+    },
+    {
+      "lon": -69,
+      "lat": -18,
+      "azimuth": 180,
+      "distance_error_m": 3.2543994166189805e-09,
+      "azimuth_error_deg": 0.0
+    },
+    {
+      "lon": -69,
+      "lat": -18,
+      "azimuth": 270,
+      "distance_error_m": 8.011613772396231e-08,
+      "azimuth_error_deg": 0.0
+    },
+    {
+      "lon": 100,
+      "lat": 70,
+      "azimuth": 0,
+      "distance_error_m": 1.9178969523636624e-10,
+      "azimuth_error_deg": 0.0
+    },
+    {
+      "lon": 100,
+      "lat": 70,
+      "azimuth": 45,
+      "distance_error_m": 3.3428932511014864e-08,
+      "azimuth_error_deg": 1.7982131339522311e-09
+    },
+    {
+      "lon": 100,
+      "lat": 70,
+      "azimuth": 90,
+      "distance_error_m": 6.611492153751897e-08,
+      "azimuth_error_deg": 2.029310053330846e-11
+    },
+    {
+      "lon": 100,
+      "lat": 70,
+      "azimuth": 180,
+      "distance_error_m": 2.9988314054207876e-09,
+      "azimuth_error_deg": 0.0
+    },
+    {
+      "lon": 100,
+      "lat": 70,
+      "azimuth": 270,
+      "distance_error_m": 6.611492153751897e-08,
+      "azimuth_error_deg": 2.029310053330846e-11
+    },
+    {
+      "lon": -120,
+      "lat": 45,
+      "azimuth": 0,
+      "distance_error_m": 2.043157110165339e-08,
+      "azimuth_error_deg": 0.0
+    },
+    {
+      "lon": -120,
+      "lat": 45,
+      "azimuth": 45,
+      "distance_error_m": 6.941093033674406e-08,
+      "azimuth_error_deg": 3.006448423548136e-10
+    },
+    {
+      "lon": -120,
+      "lat": 45,
+      "azimuth": 90,
+      "distance_error_m": 5.804014335808461e-07,
+      "azimuth_error_deg": 0.0
+    },
+    {
+      "lon": -120,
+      "lat": 45,
+      "azimuth": 180,
+      "distance_error_m": 2.9277657631610055e-08,
+      "azimuth_error_deg": 0.0
+    },
+    {
+      "lon": -120,
+      "lat": 45,
+      "azimuth": 270,
+      "distance_error_m": 5.804014335808461e-07,
+      "azimuth_error_deg": 0.0
+    }
+  ]
+}

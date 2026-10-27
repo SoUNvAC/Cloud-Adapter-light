@@ -1,0 +1,27 @@
+{
+  "inputs": {
+    "exit": 0,
+    "seconds": 8.012533080996946,
+    "peak_tree_RSS": 98373632
+  },
+  "geometry": {
+    "exit": 0,
+    "seconds": 52.13812009594403,
+    "peak_tree_RSS": 240599040
+  },
+  "quality": {
+    "exit": 0,
+    "seconds": 10.04065309499856,
+    "peak_tree_RSS": 118255616
+  },
+  "audit": {
+    "exit": 0,
+    "seconds": 10.04547046602238,
+    "peak_tree_RSS": 62808064
+  },
+  "report": {
+    "exit": 0,
+    "seconds": 2.0096323309699073,
+    "peak_tree_RSS": 7286784
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "status": "complete",
+  "products": 160,
+  "L8_original_axes": "x_row_y_col",
+  "L8_fit_masks_exactly_reproduced": 100,
+  "no_truth_quality_computed": true,
+  "no_registration_search": true,
+  "resources": {
+    "available_memory": 32656973824,
+    "free_disk": 737801977856,
+    "peak_RSS": 99311616
+  }
+}

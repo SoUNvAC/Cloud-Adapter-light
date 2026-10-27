@@ -1,0 +1,12 @@
+{
+  "prepare": {
+    "exit": 0,
+    "seconds": 0.10317213996313512,
+    "peak_tree_RSS": 0
+  },
+  "inputs": {
+    "exit": 1,
+    "seconds": 12.019349011941813,
+    "peak_tree_RSS": 98582528
+  }
+}

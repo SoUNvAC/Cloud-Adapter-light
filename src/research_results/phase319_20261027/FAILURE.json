@@ -1,0 +1,5 @@
+{
+  "traceback": "Traceback (most recent call last):\n  File \"/home/scv/Cloud-Adapter-light/src/tools/run_cpu_phase319.py\", line 30, in <module>\n    try:main()\n  File \"/home/scv/Cloud-Adapter-light/src/tools/run_cpu_phase319.py\", line 24, in main\n    stages[stage]=dict(exit=rc,seconds=time.monotonic()-t,peak_tree_RSS=peak);write(ROOT/'STAGES.json',stages);assert rc==0,'stage failed; preserve evidence, no automatic rerun: '+stage\nAssertionError: stage failed; preserve evidence, no automatic rerun: inputs\n",
+  "epoch": 1793074732.9726224,
+  "automatic_retry": false
+}

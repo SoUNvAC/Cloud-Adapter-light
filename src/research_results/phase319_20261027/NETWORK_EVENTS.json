@@ -1,0 +1,25 @@
+{
+  "preflight_events": [
+    {
+      "event": "initial read-only metadata probe shell quoting SyntaxError",
+      "exit": 1,
+      "scientific_work_started": false,
+      "resolution": "PowerShell stdin to SSH Python corrected; subsequent metadata/header/archive probe exit0"
+    },
+    {
+      "event": "fixed environment dependency inventory",
+      "exit": 0,
+      "pyproj": "absent",
+      "psutil": "absent",
+      "resolution": "no environment mutation; existing rasterio CRS plus validated WGS84 Vincenty and proc monitoring"
+    },
+    {
+      "event": "gzs git pull before Recovery01",
+      "exit": 1,
+      "stderr": "fatal: unable to access https://github.com/SoUNvAC/Cloud-Adapter-light.git/: GnuTLS, handshake failed: The TLS connection was non-properly terminated.",
+      "recovery_started": false,
+      "next_action": "idempotent ff-only pull using per-command HTTP/1.1, no persistent configuration change"
+    }
+  ],
+  "network_caused_scientific_retries": 0
+}

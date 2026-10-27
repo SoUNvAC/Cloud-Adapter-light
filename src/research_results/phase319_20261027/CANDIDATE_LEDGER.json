@@ -1,0 +1,28 @@
+{
+  "prior": [
+    {
+      "candidate": "CB",
+      "phase": 317,
+      "outcome": "historical failures/cost retained in original reports; unchanged"
+    },
+    {
+      "candidate": "Flip-CB",
+      "phase": 318,
+      "outcome": "no consistent two-pool unique reliability gain; closed; original reports unchanged"
+    }
+  ],
+  "current": {
+    "phase": 319,
+    "candidate": "fixed sun-direction geometry",
+    "geometry_attempts": 1,
+    "trainings": 0,
+    "neural_forwards": 0,
+    "controls": [
+      "same-k original confidence",
+      "fixed reverse sun direction"
+    ],
+    "decision": "not_testable"
+  },
+  "original_window_sha256": "37fe372a15966ddd18a67a94aac81420dac06676f47fe2ff81e9e05d48497eaa",
+  "no_automatic_next_phase": true
+}

@@ -1,0 +1,26 @@
+{
+  "status": "completed",
+  "files": 616,
+  "raw_bytes": 7923653,
+  "manifest_sha256": "0e9032189d3ba3e7f042712a14278ab84653fd427f9398566e06f989dd8534f7",
+  "projected_two_hosts_with_summary": 115847306,
+  "no_persistent_archive": true,
+  "epoch": 1793075139.4085124,
+  "all_member_SHA_verified": true,
+  "all_segment_SHA_verified": true,
+  "whole_compressed_payload_SHA_verified": true,
+  "segments": 3,
+  "compressed_bytes": 4386194,
+  "compressed_payload_sha256": "0973b9b466feba296aa480c1a2516f4a5ff3b97db58a97877cfc33f4644e7002",
+  "transport_evidence_SHA": {
+    "STREAM_RECEIPT.json": "db6de5a512227525452ca3eec864196338232fa57e83b544cf9f307584b453ba",
+    "segment003_RECEIPT.json": "7055f8eebd00a4dcc48b1e66a3e901604e3f4d315b1edac7a29abb5014dd659a",
+    "SNAPSHOT.json": "f80ef31148319ea3f39e2a5987b796109c32adc985e3ef1f2ce01b4b66cfe304",
+    "segment001_RECEIPT.json": "68ca61ed1ebbc90e16918120acf2cb05264114e8a821ef7f906f38b18ef21d40",
+    "BACKUP_FILES.json": "0e9032189d3ba3e7f042712a14278ab84653fd427f9398566e06f989dd8534f7",
+    "transfer_phase319.py": "1dc1f0471c3dbc0a47bd5a0c511a544d9e41074cf245a5f3b0e708b9142a6fa0",
+    "segment002_RECEIPT.json": "4d4b0c5c7716bd12bc684edd15949175b549cac239af9c0b1ffa00a80ca81604",
+    "STREAM_LOCK.json": "1a757c359a51d6da8426266de3642bdda5bb11b8d7a967416ad7fe90c6b2226e"
+  },
+  "backup_mode": "manifest_pinned_framed_gzip_segments"
+}
