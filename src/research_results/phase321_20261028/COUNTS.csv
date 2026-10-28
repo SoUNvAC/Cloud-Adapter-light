@@ -1,0 +1,7 @@
+﻿dataset,split,products,same_scene_candidates,same_scene_pct,extent,same_tile_different_day,spatial_overlap,unknown,scene_clean,strict_clean,evaluated_products
+Catalogue,train,513,0,0.0,none_detected,30,6,0,513,482,32
+Catalogue,val,513,0,0.0,none_detected,1,0,0,513,512,32
+ALCD,train,37,0,0.0,none_detected,7,7,0,37,30,0
+ALCD,val,37,0,0.0,none_detected,4,4,0,37,33,0
+PixBox,train,29,0,0.0,none_detected,4,4,0,29,25,16
+PixBox,val,29,0,0.0,none_detected,0,0,0,29,29,16

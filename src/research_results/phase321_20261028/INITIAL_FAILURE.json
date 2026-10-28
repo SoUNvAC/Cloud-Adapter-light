@@ -1,0 +1,4 @@
+{
+  "traceback": "Traceback (most recent call last):\n  File \"/home/scv/Cloud-Adapter-light/src/tools/audit_phase321.py\", line 189, in <module>\n    try:main()\n  File \"/home/scv/Cloud-Adapter-light/src/tools/audit_phase321.py\", line 77, in main\n    anti=geographic(box(820000,0,840000,20000),'EPSG:32660');assert anti.is_valid\n  File \"/home/scv/Cloud-Adapter-light/src/tools/audit_phase321.py\", line 68, in geographic\n    assert v.geom_type=='Polygon';v=Polygon(unwrap(v.exterior.coords),[unwrap(x.coords) for x in v.interiors])\nAssertionError\n",
+  "elapsed": 0.23668528301641345
+}

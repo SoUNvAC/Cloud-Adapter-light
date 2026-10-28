@@ -1,0 +1,5 @@
+{
+  "area_threshold_boundary": true,
+  "projection_roundtrip": true,
+  "antimeridian": true
+}

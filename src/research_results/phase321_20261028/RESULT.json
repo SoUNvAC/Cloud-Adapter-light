@@ -1,0 +1,345 @@
+{
+  "status": "completed",
+  "counts": [
+    {
+      "dataset": "Catalogue",
+      "split": "train",
+      "products": 513,
+      "same_scene_candidates": 0,
+      "same_scene_pct": 0.0,
+      "extent": "none_detected",
+      "same_tile_different_day": 30,
+      "spatial_overlap": 6,
+      "unknown": 0,
+      "scene_clean": 513,
+      "strict_clean": 482,
+      "evaluated_products": 32
+    },
+    {
+      "dataset": "Catalogue",
+      "split": "val",
+      "products": 513,
+      "same_scene_candidates": 0,
+      "same_scene_pct": 0.0,
+      "extent": "none_detected",
+      "same_tile_different_day": 1,
+      "spatial_overlap": 0,
+      "unknown": 0,
+      "scene_clean": 513,
+      "strict_clean": 512,
+      "evaluated_products": 32
+    },
+    {
+      "dataset": "ALCD",
+      "split": "train",
+      "products": 37,
+      "same_scene_candidates": 0,
+      "same_scene_pct": 0.0,
+      "extent": "none_detected",
+      "same_tile_different_day": 7,
+      "spatial_overlap": 7,
+      "unknown": 0,
+      "scene_clean": 37,
+      "strict_clean": 30,
+      "evaluated_products": 0
+    },
+    {
+      "dataset": "ALCD",
+      "split": "val",
+      "products": 37,
+      "same_scene_candidates": 0,
+      "same_scene_pct": 0.0,
+      "extent": "none_detected",
+      "same_tile_different_day": 4,
+      "spatial_overlap": 4,
+      "unknown": 0,
+      "scene_clean": 37,
+      "strict_clean": 33,
+      "evaluated_products": 0
+    },
+    {
+      "dataset": "PixBox",
+      "split": "train",
+      "products": 29,
+      "same_scene_candidates": 0,
+      "same_scene_pct": 0.0,
+      "extent": "none_detected",
+      "same_tile_different_day": 4,
+      "spatial_overlap": 4,
+      "unknown": 0,
+      "scene_clean": 29,
+      "strict_clean": 25,
+      "evaluated_products": 16
+    },
+    {
+      "dataset": "PixBox",
+      "split": "val",
+      "products": 29,
+      "same_scene_candidates": 0,
+      "same_scene_pct": 0.0,
+      "extent": "none_detected",
+      "same_tile_different_day": 0,
+      "spatial_overlap": 0,
+      "unknown": 0,
+      "scene_clean": 29,
+      "strict_clean": 29,
+      "evaluated_products": 16
+    }
+  ],
+  "sensitivity": [
+    {
+      "dataset": "Catalogue",
+      "roles": "train",
+      "policy": "full",
+      "retained_groups": 32,
+      "macro_AP_pct": 80.20560190912231,
+      "macro_mIoU_pct": 61.2799665966943,
+      "pooled_mIoU_pct": 71.68888235756427,
+      "macro_FPR_pct": 3.9570595525493752,
+      "confusion": [
+        [
+          15182479,
+          134027,
+          108750
+        ],
+        [
+          246453,
+          15933998,
+          1161820
+        ],
+        [
+          111058,
+          10311,
+          534592
+        ]
+      ],
+      "note": "Phase317 cached sufficient statistics; pooled AP not reconstructible from group AP"
+    },
+    {
+      "dataset": "PixBox",
+      "roles": "train",
+      "policy": "full",
+      "retained_groups": 10,
+      "macro_AP_pct": 45.88498104507903,
+      "macro_mIoU_pct": null,
+      "pooled_mIoU_pct": null,
+      "macro_FPR_pct": null,
+      "confusion": null,
+      "note": "Phase112 cached Source group AP; entire group removed if any evaluated member excluded; pooled AP/FPR not present in sufficient statistics"
+    },
+    {
+      "dataset": "Catalogue",
+      "roles": "train",
+      "policy": "scene_clean",
+      "retained_groups": 32,
+      "macro_AP_pct": 80.20560190912231,
+      "macro_mIoU_pct": 61.2799665966943,
+      "pooled_mIoU_pct": 71.68888235756427,
+      "macro_FPR_pct": 3.9570595525493752,
+      "confusion": [
+        [
+          15182479,
+          134027,
+          108750
+        ],
+        [
+          246453,
+          15933998,
+          1161820
+        ],
+        [
+          111058,
+          10311,
+          534592
+        ]
+      ],
+      "note": "Phase317 cached sufficient statistics; pooled AP not reconstructible from group AP"
+    },
+    {
+      "dataset": "PixBox",
+      "roles": "train",
+      "policy": "scene_clean",
+      "retained_groups": 10,
+      "macro_AP_pct": 45.88498104507903,
+      "macro_mIoU_pct": null,
+      "pooled_mIoU_pct": null,
+      "macro_FPR_pct": null,
+      "confusion": null,
+      "note": "Phase112 cached Source group AP; entire group removed if any evaluated member excluded; pooled AP/FPR not present in sufficient statistics"
+    },
+    {
+      "dataset": "Catalogue",
+      "roles": "train",
+      "policy": "strict_clean",
+      "retained_groups": 32,
+      "macro_AP_pct": 80.20560190912231,
+      "macro_mIoU_pct": 61.2799665966943,
+      "pooled_mIoU_pct": 71.68888235756427,
+      "macro_FPR_pct": 3.9570595525493752,
+      "confusion": [
+        [
+          15182479,
+          134027,
+          108750
+        ],
+        [
+          246453,
+          15933998,
+          1161820
+        ],
+        [
+          111058,
+          10311,
+          534592
+        ]
+      ],
+      "note": "Phase317 cached sufficient statistics; pooled AP not reconstructible from group AP"
+    },
+    {
+      "dataset": "PixBox",
+      "roles": "train",
+      "policy": "strict_clean",
+      "retained_groups": 10,
+      "macro_AP_pct": 45.88498104507903,
+      "macro_mIoU_pct": null,
+      "pooled_mIoU_pct": null,
+      "macro_FPR_pct": null,
+      "confusion": null,
+      "note": "Phase112 cached Source group AP; entire group removed if any evaluated member excluded; pooled AP/FPR not present in sufficient statistics"
+    },
+    {
+      "dataset": "Catalogue",
+      "roles": "train+val",
+      "policy": "full",
+      "retained_groups": 32,
+      "macro_AP_pct": 80.20560190912231,
+      "macro_mIoU_pct": 61.2799665966943,
+      "pooled_mIoU_pct": 71.68888235756427,
+      "macro_FPR_pct": 3.9570595525493752,
+      "confusion": [
+        [
+          15182479,
+          134027,
+          108750
+        ],
+        [
+          246453,
+          15933998,
+          1161820
+        ],
+        [
+          111058,
+          10311,
+          534592
+        ]
+      ],
+      "note": "Phase317 cached sufficient statistics; pooled AP not reconstructible from group AP"
+    },
+    {
+      "dataset": "PixBox",
+      "roles": "train+val",
+      "policy": "full",
+      "retained_groups": 10,
+      "macro_AP_pct": 45.88498104507903,
+      "macro_mIoU_pct": null,
+      "pooled_mIoU_pct": null,
+      "macro_FPR_pct": null,
+      "confusion": null,
+      "note": "Phase112 cached Source group AP; entire group removed if any evaluated member excluded; pooled AP/FPR not present in sufficient statistics"
+    },
+    {
+      "dataset": "Catalogue",
+      "roles": "train+val",
+      "policy": "scene_clean",
+      "retained_groups": 32,
+      "macro_AP_pct": 80.20560190912231,
+      "macro_mIoU_pct": 61.2799665966943,
+      "pooled_mIoU_pct": 71.68888235756427,
+      "macro_FPR_pct": 3.9570595525493752,
+      "confusion": [
+        [
+          15182479,
+          134027,
+          108750
+        ],
+        [
+          246453,
+          15933998,
+          1161820
+        ],
+        [
+          111058,
+          10311,
+          534592
+        ]
+      ],
+      "note": "Phase317 cached sufficient statistics; pooled AP not reconstructible from group AP"
+    },
+    {
+      "dataset": "PixBox",
+      "roles": "train+val",
+      "policy": "scene_clean",
+      "retained_groups": 10,
+      "macro_AP_pct": 45.88498104507903,
+      "macro_mIoU_pct": null,
+      "pooled_mIoU_pct": null,
+      "macro_FPR_pct": null,
+      "confusion": null,
+      "note": "Phase112 cached Source group AP; entire group removed if any evaluated member excluded; pooled AP/FPR not present in sufficient statistics"
+    },
+    {
+      "dataset": "Catalogue",
+      "roles": "train+val",
+      "policy": "strict_clean",
+      "retained_groups": 32,
+      "macro_AP_pct": 80.20560190912231,
+      "macro_mIoU_pct": 61.2799665966943,
+      "pooled_mIoU_pct": 71.68888235756427,
+      "macro_FPR_pct": 3.9570595525493752,
+      "confusion": [
+        [
+          15182479,
+          134027,
+          108750
+        ],
+        [
+          246453,
+          15933998,
+          1161820
+        ],
+        [
+          111058,
+          10311,
+          534592
+        ]
+      ],
+      "note": "Phase317 cached sufficient statistics; pooled AP not reconstructible from group AP"
+    },
+    {
+      "dataset": "PixBox",
+      "roles": "train+val",
+      "policy": "strict_clean",
+      "retained_groups": 10,
+      "macro_AP_pct": 45.88498104507903,
+      "macro_mIoU_pct": null,
+      "pooled_mIoU_pct": null,
+      "macro_FPR_pct": null,
+      "confusion": null,
+      "note": "Phase112 cached Source group AP; entire group removed if any evaluated member excluded; pooled AP/FPR not present in sufficient statistics"
+    }
+  ],
+  "source_geometry_unknown": 0,
+  "resources": {
+    "host_available_bytes": 32524263424,
+    "maxrss_bytes": 175366144
+  },
+  "elapsed_seconds": 14.770392436999828,
+  "training": 0,
+  "model_loads": 0,
+  "forwards": 0,
+  "pixel_reads": 0,
+  "downloads": 0,
+  "V4": "reference only; OCM not audited; no independent external claim",
+  "ALCD_metrics": "NA: no frozen Source predictions",
+  "hard_negative_caution": "overlap with920 OCM hard negatives would primarily qualify false-positive improvements; not audited in this scoped phase"
+}

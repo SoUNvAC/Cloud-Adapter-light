@@ -1,0 +1,50 @@
+{
+  "COUNTS.csv": {
+    "bytes": 476,
+    "sha256": "37ec85c146afa39fb2c5ef6af0d28b7b5db17464046bb1ace9655b3c50532a85"
+  },
+  "TARGET_OVERLAP.csv": {
+    "bytes": 321477,
+    "sha256": "ccfe9b6ef440c5f40e2cb280f42ca277ed870ef80f76342cc97ae412fd7727d0"
+  },
+  "MATCH_PAIRS.csv": {
+    "bytes": 57518,
+    "sha256": "d066a3ffd8e8705d42cd38340357e0cc5f8cd596faff5dbd33ddd4a0058d381f"
+  },
+  "SOURCE_SENSITIVITY.csv": {
+    "bytes": 2886,
+    "sha256": "d98f1d23ad0cbbefbd0c90b61f93a40b238f0875bb05797087df80a3dad5e78a"
+  },
+  "RESULT.json": {
+    "bytes": 9211,
+    "sha256": "d94dea18360cba20e75d644bf8ec1d590cfb17144659fb80acc3241b09027abc"
+  },
+  "INPUT_LOCK.json": {
+    "bytes": 3300,
+    "sha256": "3b2094a09b9599f7ffb5f998f35cce77b9b66dc146a3b7d392208751afd58c80"
+  },
+  "INPUT_FINAL_SHA.json": {
+    "bytes": 3030,
+    "sha256": "4a913117538bfb3a284f8e484ad1353093a93a38105edccda581069243ba762d"
+  },
+  "SYNTHETIC_CHECKS.json": {
+    "bytes": 94,
+    "sha256": "12396904e67f33c2ae8e340965ef0ec94db6abd08f0eb8b99f3dfba996a63d0d"
+  },
+  "ACCEPTANCE.json": {
+    "bytes": 1242,
+    "sha256": "17fc0a09f7b073f5d6ff1b1f5b519085893b9e924f2f56a8945e9dc9e4af1229"
+  },
+  "INITIAL_FAILURE.json": {
+    "bytes": 594,
+    "sha256": "a5df2aa3148ef93d2fa512720085ad93e195d3d55631ef96a3ab70eb800619b6"
+  },
+  "BACKUP_RECEIPT.json": {
+    "bytes": 3286,
+    "sha256": "b12d713f3e1e01701106cf6ba92b42a0ad6e85db1f8897ad6c24d043d4bc350d"
+  },
+  "phase321.md": {
+    "bytes": 4724,
+    "sha256": "ad32fadc0149a7aff0260fa3e53733547437eb82ca182374884c88fc53415615"
+  }
+}

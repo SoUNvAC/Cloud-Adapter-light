@@ -1,0 +1,65 @@
+{
+  "files": {
+    "/home/scv/Cloud-Adapter-light/src/research_plans/phase321.md": {
+      "sha256": "56c4ab47bfd376068c7e92c408481c7a1ce11b6985e692fb17da11eb32fe9d09",
+      "bytes": 3240
+    },
+    "/home/scv/Cloud-Adapter-light/src/tools/audit_phase321.py": {
+      "sha256": "a4666e90b127c2c3439a302f74104406069e9392bd6ed1003e0d42fa82104c1e",
+      "bytes": 16050
+    },
+    "/home/scv/shared/data/phase65_source_metadata/source_metadata_manifest.json": {
+      "sha256": "917e0a279fb6a5d5b1fd993031ed95d51c9578585d9649803c435a60c0e23a2c",
+      "bytes": 1137
+    },
+    "/home/scv/shared/data/phase65_source_metadata/train_metadata.csv": {
+      "sha256": "d4a4bb41fba0e39d49328db29868273d093f982e84716d7f2b836e852f5349f4",
+      "bytes": 4759992
+    },
+    "/home/scv/shared/data/phase65_source_metadata/val_metadata.csv": {
+      "sha256": "35e7afd8f5feafa6ce6b04415a3e4426ad147b5beed3f84db68839ac12d29097",
+      "bytes": 300257
+    },
+    "/home/scv/Cloud-Adapter-light/src/work_dirs/phase65a/source_mapping/mapping_audit.json": {
+      "sha256": "c3c521a375c50f81ff0e58682621c7fcb72fc47472a7b37931c587036f12d0bb",
+      "bytes": 2659992
+    },
+    "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/classification_tags.csv": {
+      "sha256": "46b88e07480f36a4d2fa27f01a1ee9987b1def7ad08f1eb721a88ef0b5288d25",
+      "bytes": 77940
+    },
+    "/home/scv/shared/data/sentinel2_cloud_mask_catalogue_4172871/shapefiles.zip": {
+      "sha256": "73ca5e675b6b885129f429988b14b37c06f309b51e991be122b8f01fce313d40",
+      "bytes": 1450453
+    },
+    "/home/scv/shared/data/sentinel2_alcd_1460961/imagery/product_manifest.json": {
+      "sha256": "2ead8cc9f9701973fce918ddff4797190ee6a0cd493c452421d06338cc597ca9",
+      "bytes": 818452
+    },
+    "/home/scv/shared/data/sentinel2_alcd_1460961/imagery/geometry_audit.json": {
+      "sha256": "a8729d197458b1a29c4024bda4cf8b071ee1094cd19ba7307b076ce7b861dcca",
+      "bytes": 235638
+    },
+    "/home/scv/Cloud-Adapter-light/src/research_results/phase102_20261013/inputs/candidate_products_metadata.json": {
+      "sha256": "27247292f1fd94c6c4fc9e1b0fde179c9328b2518d2a3c24e2f8e8fc819ce0cc",
+      "bytes": 889765
+    },
+    "/home/scv/Cloud-Adapter-light/src/research_results/phase102_20261013/product_location_index.csv": {
+      "sha256": "87c94bd9ec7fe26896602096ceacc9c6348f86e90949ec6ca35927733c8b1664",
+      "bytes": 655297
+    },
+    "/home/scv/shared/phase317_20261026/REFERENCE_LOCK.json": {
+      "sha256": "bf694c394e2bc23a9c3623a407561449a3fd8d68c0b6be4a34ec6d712e64c5ba",
+      "bytes": 421368
+    },
+    "/home/scv/Cloud-Adapter-light/src/research_results/phase317_20261026/PER_SCENE_METRICS.csv": {
+      "sha256": "d154dcd62f59ea876810bbf91fc7cec488725dd58b3ac35e5ef6af95ec089fee",
+      "bytes": 34519
+    },
+    "/home/scv/Cloud-Adapter-light/src/research_results/phase112_20261014/per_group_results.csv": {
+      "sha256": "2404b172f11ea59b84f4dd5bbc9d2a0a89d040885829918fb75d8b1a9db30ba7",
+      "bytes": 4682
+    }
+  },
+  "all_unchanged": true
+}

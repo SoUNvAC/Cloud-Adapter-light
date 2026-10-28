@@ -1,0 +1,51 @@
+{
+  "status": "passed",
+  "baseline_full_source_reproduced": true,
+  "metric_tolerance_pp": 1e-06,
+  "input_and_execution_code_SHA": true,
+  "area_and_fraction_acceptance": true,
+  "combined_counts": [
+    {
+      "dataset": "Catalogue",
+      "source_roles": "train+val",
+      "products": 513,
+      "same_scene_candidate": 0,
+      "same_tile_different_day": 31,
+      "spatial_overlap": 6,
+      "unknown": 0,
+      "strict_clean": 481,
+      "evaluated_products": 32,
+      "evaluated_excluded": 0
+    },
+    {
+      "dataset": "ALCD",
+      "source_roles": "train+val",
+      "products": 37,
+      "same_scene_candidate": 0,
+      "same_tile_different_day": 11,
+      "spatial_overlap": 11,
+      "unknown": 0,
+      "strict_clean": 26,
+      "evaluated_products": 0,
+      "evaluated_excluded": 0
+    },
+    {
+      "dataset": "PixBox",
+      "source_roles": "train+val",
+      "products": 29,
+      "same_scene_candidate": 0,
+      "same_tile_different_day": 4,
+      "spatial_overlap": 4,
+      "unknown": 0,
+      "strict_clean": 25,
+      "evaluated_products": 16,
+      "evaluated_excluded": 0
+    }
+  ],
+  "versions": {
+    "rasterio": "1.3.11",
+    "GDAL": "3.9.2",
+    "shapely": "2.1.2"
+  },
+  "V4_overlap_certified": false
+}

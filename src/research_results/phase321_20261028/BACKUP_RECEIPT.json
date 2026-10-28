@@ -1,0 +1,93 @@
+{
+  "status": "completed",
+  "files": {
+    "ACCEPTANCE.json": {
+      "bytes": 1242,
+      "sha256": "17fc0a09f7b073f5d6ff1b1f5b519085893b9e924f2f56a8945e9dc9e4af1229"
+    },
+    "EXIT_CODE.json": {
+      "bytes": 21,
+      "sha256": "56296949d3a02e635b050fd6b4762f0f0b52c23d05b925203095f7daf8e19027"
+    },
+    "FAILURE.json": {
+      "bytes": 594,
+      "sha256": "a5df2aa3148ef93d2fa512720085ad93e195d3d55631ef96a3ab70eb800619b6"
+    },
+    "INITIAL_AUDIT_CODE.py": {
+      "bytes": 15852,
+      "sha256": "e0fc4cd72a4a5d55b7f5b07429ce3b3dc71cb22663640dcf39343d911a21abda"
+    },
+    "STARTED.json": {
+      "bytes": 80,
+      "sha256": "11c49d613e951cf4897d7e464823aba11fcc19aeba62502590a7a0ab4505fc31"
+    },
+    "STATUS.json": {
+      "bytes": 556,
+      "sha256": "88ee085b9d36ca72127dc6b4a43c79a0e62880b644f85fb0021a90ea699f64a6"
+    },
+    "code/audit_phase321.py": {
+      "bytes": 16050,
+      "sha256": "a4666e90b127c2c3439a302f74104406069e9392bd6ed1003e0d42fa82104c1e"
+    },
+    "code/deliver_phase321.py": {
+      "bytes": 1892,
+      "sha256": "87838fdd94a1358826f63a11cfd9b0137154912de63f38b0c474367e58c4252b"
+    },
+    "code/finalize_phase321.py": {
+      "bytes": 5812,
+      "sha256": "8894890a51d0167519f5ced6db3ed253a1da748977a06bc3c696281fc5fcec7d"
+    },
+    "code/phase321_plan.md": {
+      "bytes": 3240,
+      "sha256": "56c4ab47bfd376068c7e92c408481c7a1ce11b6985e692fb17da11eb32fe9d09"
+    },
+    "code/recover_phase321_01.py": {
+      "bytes": 703,
+      "sha256": "358d292ec1c5af62aa76d9bf165eb27b4460a024d6252a9c4f1aa78ecedd7776"
+    },
+    "code/verify_phase321.py": {
+      "bytes": 3006,
+      "sha256": "0763422957b24949c7b9283609b14f0f2da3355cd0618d6e14a212b305c1727e"
+    },
+    "recovery01/COUNTS.csv": {
+      "bytes": 476,
+      "sha256": "37ec85c146afa39fb2c5ef6af0d28b7b5db17464046bb1ace9655b3c50532a85"
+    },
+    "recovery01/EXIT_CODE.json": {
+      "bytes": 21,
+      "sha256": "81868a6e94ffc0178bf833deb1c9013d9fab4ee95ddb876a5e8ec4f1d26376d2"
+    },
+    "recovery01/INPUT_FINAL_SHA.json": {
+      "bytes": 3030,
+      "sha256": "4a913117538bfb3a284f8e484ad1353093a93a38105edccda581069243ba762d"
+    },
+    "recovery01/INPUT_LOCK.json": {
+      "bytes": 3300,
+      "sha256": "3b2094a09b9599f7ffb5f998f35cce77b9b66dc146a3b7d392208751afd58c80"
+    },
+    "recovery01/MATCH_PAIRS.csv": {
+      "bytes": 57518,
+      "sha256": "d066a3ffd8e8705d42cd38340357e0cc5f8cd596faff5dbd33ddd4a0058d381f"
+    },
+    "recovery01/RESULT.json": {
+      "bytes": 9211,
+      "sha256": "d94dea18360cba20e75d644bf8ec1d590cfb17144659fb80acc3241b09027abc"
+    },
+    "recovery01/SOURCE_SENSITIVITY.csv": {
+      "bytes": 2886,
+      "sha256": "d98f1d23ad0cbbefbd0c90b61f93a40b238f0875bb05797087df80a3dad5e78a"
+    },
+    "recovery01/STARTED.json": {
+      "bytes": 79,
+      "sha256": "9e7a5b34f198ca89c3bae642bec44d4539a7afa3aaa3f03acc606461ef184aba"
+    },
+    "recovery01/SYNTHETIC_CHECKS.json": {
+      "bytes": 94,
+      "sha256": "12396904e67f33c2ae8e340965ef0ec94db6abd08f0eb8b99f3dfba996a63d0d"
+    },
+    "recovery01/TARGET_OVERLAP.csv": {
+      "bytes": 321477,
+      "sha256": "ccfe9b6ef440c5f40e2cb280f42ca277ed870ef80f76342cc97ae412fd7727d0"
+    }
+  }
+}
