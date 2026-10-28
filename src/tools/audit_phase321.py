@@ -141,7 +141,9 @@ def main():
    same=t['tile']==s['tile'] and t['day']==s['day'];tile=t['tile']==s['tile'] and t['day']!=s['day'];area=None;fra=None;frb=None
    if s['geo'] is not None and t['geo'] is not None:
     try:
-     sg=project(s['geo'],'EPSG:4326',t['crs']);area=sg.intersection(t['native']).area;fra=area/sg.area;frb=area/t['native'].area
+     if not s['geo'].intersects(t['geo']):area=0.0;fra=0.0;frb=0.0
+     else:
+      sg=project(s['geo'],'EPSG:4326',t['crs']);area=sg.intersection(t['native']).area;fra=area/sg.area;frb=area/t['native'].area
     except Exception as e:errors.append(s['id']+':'+repr(e))
    spatial=area is not None and area>1.0
    exact=bool(same and t['time'] and s['time']==t['time'] and s['platform']==t['platform'])
