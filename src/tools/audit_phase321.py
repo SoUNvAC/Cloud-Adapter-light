@@ -65,8 +65,12 @@ def main():
       while x-out[-1][0]<-180:x+=360
      out.append((x,y))
     return out
-   assert v.geom_type=='Polygon';v=Polygon(unwrap(v.exterior.coords),[unwrap(x.coords) for x in v.interiors])
-   v=unary_union([translate(v,xoff=k*360).intersection(box(-180,-90,180,90)) for k in [-1,0,1]])
+   parts=list(v.geoms) if v.geom_type=='MultiPolygon' else [v];fixed=[]
+   for part in parts:
+    assert part.geom_type=='Polygon'
+    if part.bounds[2]-part.bounds[0]>180:part=Polygon(unwrap(part.exterior.coords),[unwrap(x.coords) for x in part.interiors])
+    fixed.extend(translate(part,xoff=k*360).intersection(box(-180,-90,180,90)) for k in [-1,0,1])
+   v=unary_union(fixed)
   assert v.is_valid and not v.is_empty;return v
  # Mandatory algorithm checks: adjacent UTM zones and boundary/area decisions.
  a=box(0,0,10,10);assert a.intersection(box(10,0,20,10)).area==0
@@ -77,7 +81,7 @@ def main():
  anti=geographic(box(820000,0,840000,20000),'EPSG:32660');assert anti.is_valid
  put('SYNTHETIC_CHECKS.json',{'area_threshold_boundary':True,'projection_roundtrip':True,'antimeridian':True})
  plan=read(R/'src/research_plans/phase321.md');read(Path(__file__))
- code={n:sha(R/'src/tools'/n) for n in ['audit_phase321.py','deliver_phase321.py']}
+ code={n:sha(R/'src/tools'/n) for n in ['audit_phase321.py','deliver_phase321.py','recover_phase321_01.py']}
  # Hash checkpoint as bytes only; no deserialization.
  assert sha(R/'src/work_dirs/phase64_source_parent/seed64/best_mIoU_iter_4000.pth')==SOURCE
  meta=D/'phase65_source_metadata';sm=js(meta/'source_metadata_manifest.json')
