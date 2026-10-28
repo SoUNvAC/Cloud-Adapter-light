@@ -20,6 +20,9 @@ def main():
  for r in v['sensitivity']:lines.append(f"|{r['dataset']}|{r['roles']}|{r['policy']}|{r['retained_groups']}|{fmt(r['macro_AP_pct'])}|{fmt(r['macro_mIoU_pct'])}|{fmt(r['pooled_mIoU_pct'])}|{fmt(r['macro_FPR_pct'])}|")
  lines+=['','Catalogue复用Phase317 Source32逐景混淆和统计，全集与原指标在1e-6个百分点内复现；PixBox复用Phase112 Source16产品/10相关组的统计，部分成员被排除时整组剔除。缺少充分统计的池化AP/FPR不重建，不将组均AP当池化AP。ALCD没有已冻结Source预测，性能NA。','','## 网络、止损、失败与备份','','本地GitHub SSH443推送成功；远端沿用已知GitHub TLS不稳定的既有路线，以逐SHA验证bundle执行真实git pull，未改origin。首次合成自检因GDAL已返回MultiPolygon而断言失败，尚未读取Source名单或计算真实匹配；原记录保留，独立recovery01只修几何类型处理。规则、面积阈值及池未变，实际匹配仅一次。',f"独立恢复实际CPU墙钟{v['elapsed_seconds']:.3f}秒；峰值RSS {v['resources']['maxrss_bytes']}字节。CPU墙钟上限1800秒、进程地址空间8GiB、宿主空闲4GiB、双机新增200MB。零训练/模型加载/前向/像元读取/下载。所有原输入、执行代码及全部回传成员SHA通过；详见INPUT_FINAL_SHA、ACCEPTANCE及BACKUP_RECEIPT。",'','## 如何使用','','仅可将无命中的已评价子集描述为“相对已审Source train/val未检出来源重叠的历史目标评价”；这不恢复盲测身份，也不认证骨干预训练独立。若某子集存在同景候选，完整集与去除后结果并列，来源范围写明。V4完整训练集合未审，R4 Catalogue82.14及既有PixBox结果保留为历史参考，不能用Source无重叠给V4背书。OCM hard-negative若与目标重叠，首先影响误报改善的解释，本轮对此保持未知。Omni教师版本选择不得以本轮Source审计替代其训练覆盖核查。','','本轮结算，不启动下一phase。']
  (S/'phase321.md').write_text('\n'.join(lines)+'\n',encoding='utf-8')
+ # Git normalizes text to LF. Normalize publication only; preserve raw backup bytes.
+ for p in S.iterdir():
+  if p.is_file() and p.name!='DELIVERY_SHA256.json':p.write_bytes(p.read_bytes().replace(b'\r\n',b'\n'))
  pins={p.name:{'bytes':p.stat().st_size,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()} for p in S.iterdir() if p.is_file() and p.name!='DELIVERY_SHA256.json'}
- (S/'DELIVERY_SHA256.json').write_text(json.dumps(pins,indent=2)+'\n');print(str(S/'phase321.md'))
+ (S/'DELIVERY_SHA256.json').write_bytes((json.dumps(pins,indent=2)+'\n').encode());print(str(S/'phase321.md'))
 if __name__=='__main__':main()
