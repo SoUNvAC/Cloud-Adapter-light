@@ -39,4 +39,4 @@
 
 完整本地交付位于`outputs/phase87/phase87_20261011/README.md`、`index.html`。保存抽样／别名锁、匿名面板、blind_initial.csv、revealed_review.csv、group_summary.csv、pending_adjudication.csv、stage_B_evidence_needs.csv、VISUAL_QA.json及290文件的DELIVERY_SHA256.json。
 
-固定成员、全量常规点、差异SHA选择和方向上限、Stage A先锁后揭示及哈希未变、原窗口／输入哈希、480个HTML图片目标、九代表图像QA均通过。本地原Phase65模板／标签／窗口未改；没有work_dirs同步。代码和小结果按git push／远端pull --ff-only同步，完整影像留本地；预算截止2026-10-20北京时间不变。
+固定成员、全量常规点、差异SHA选择和方向上限、Stage A先锁后揭示及哈希未变、原窗口／输入哈希、480个HTML图片目标、九代表图像QA均通过。本地原Phase65模板／标签／窗口未改；没有work_dirs同步。代码和小结果按git push／远端pull --ff-only同步，完整影像留本地；

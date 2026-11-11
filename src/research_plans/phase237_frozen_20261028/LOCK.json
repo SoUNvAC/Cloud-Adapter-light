@@ -1,0 +1,50 @@
+{
+  "phase": 237,
+  "date": "2026-10-28",
+  "Source_SHA256": "64dd9a20288c35ab3362b8b1c1dafc216d9c44d60868475177e139d6be859dc9",
+  "seeds": [
+    21701,
+    21702
+  ],
+  "base_learning_rate": 0.0001,
+  "subsets": 3,
+  "scenes_per_subset": 18,
+  "subset_method": "sort SHA256(UTF8(f\"phase237|subset{k}|{scene}\")), then scene ascending, first 18; k=1,2,3",
+  "number_of_fits": 6,
+  "steps_per_fit": 4000,
+  "saved_steps": [
+    500,
+    1000,
+    2000,
+    4000
+  ],
+  "trainable_parameters": 1316516,
+  "val_candidates_per_strategy": 5,
+  "W_P_alphas": [
+    0,
+    0.25,
+    0.5,
+    0.75,
+    1
+  ],
+  "primary_comparison": "E18 minus same-seed E60, averaged over 3 fixed subsets and 2 seeds",
+  "secondary_comparisons": [
+    "W18 minus E18",
+    "W18 minus P18"
+  ],
+  "bootstrap_draws": 10000,
+  "bootstrap_seed": 23701,
+  "historical_test_exposed": true,
+  "maximum_training_updates_including_failures": 24000,
+  "maximum_input_forwards": 26000,
+  "main_input_forward_upper_bound": 24620,
+  "maximum_GPU_hours": 3,
+  "CPU_analysis_hours": 2,
+  "CPU_GiB": 16,
+  "GPU_GiB": 20,
+  "maximum_remote_new_GiB": 4,
+  "maximum_delivery_GiB": 1,
+  "source_pixels_allowed": false,
+  "full60_new_forwards_allowed": false,
+  "next_stage": "238 settlement; no automatic new experiments"
+}

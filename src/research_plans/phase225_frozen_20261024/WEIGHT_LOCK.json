@@ -1,0 +1,15 @@
+{
+  "inputs": {
+    "outputs\\phase222\\phase222_20261024\\delivery\\seed21701\\D_LOSSES.jsonl": "2086ab49380c18118f199eedb40e46485a0dcb0dc4909873ede1d71a106fee75",
+    "outputs\\phase222\\phase222_20261024\\delivery\\seed21702\\D_LOSSES.jsonl": "4582fb531a85a0929b2f162b61bd210d07022a2fe327cf63ada990ea1e2fdb63",
+    "outputs\\phase220\\phase220_20261024\\PER_IMAGE_CLASS_WEIGHT_EXPOSURE.csv": "ffaaf6048166b4efd47617641eef404c48db7b3d9de4c84f5776ebf4c0c04196"
+  },
+  "weight_normalizer": 0.9996666666666666,
+  "weight_rule": "top64=2; other192=2/3; divide by 4000-step exposure-weighted mean",
+  "Q_rule": "Hash permutation within repeat15/repeat16 stratum, lexicographic sample IDs as destination order.",
+  "historical_training_required": "Two L8 D 4000-step runs in Phase222; weights are not training-free.",
+  "labels_read": false,
+  "model_calls": 0,
+  "raw_source_pixels_read": false,
+  "limitation": "Source KL is teacher disagreement, not a reference error/damage score; class distribution can change."
+}

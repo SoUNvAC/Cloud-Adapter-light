@@ -1,0 +1,53 @@
+[
+  {
+    "dataset": "L8",
+    "scene": "LC80010732013109LGN00",
+    "name": "shrubland_LC80010732013109LGN00_patch_0_1024.png",
+    "image_path": "/home/scv/Cloud-Adapter-light/src/data/l8_biome/img_dir/train/shrubland_LC80010732013109LGN00_patch_0_1024.png",
+    "expected_current_image_sha256": "83c71f3ed684ce5a63a71e06c45d5455343a454e78ee027cd1664213a86ca2ce",
+    "membership_source": "outputs\\phase222\\phase222_20261024\\delivery\\L8_TRAIN_INPUT_LOCK.json"
+  },
+  {
+    "dataset": "L8",
+    "scene": "LC80070662014234LGN00",
+    "name": "forest_LC80070662014234LGN00_patch_0_1024.png",
+    "image_path": "/home/scv/Cloud-Adapter-light/src/data/l8_biome/img_dir/test/forest_LC80070662014234LGN00_patch_0_1024.png",
+    "expected_current_image_sha256": "219929400e78f7cbdba6cbffb3a212ce7ee97b572eb965afa8cdd5e7b30e819b",
+    "membership_source": "outputs\\phase222\\phase222_20261024\\delivery\\L8_TRAIN_INPUT_LOCK.json"
+  },
+  {
+    "dataset": "L8",
+    "scene": "LC80160502014041LGN00",
+    "name": "forest_LC80160502014041LGN00_patch_0_1024.png",
+    "image_path": "/home/scv/Cloud-Adapter-light/src/data/l8_biome/img_dir/train/forest_LC80160502014041LGN00_patch_0_1024.png",
+    "expected_current_image_sha256": "be3fc932db45d284621e97dbf957dee0334c5c42c4ab47a9d7736b7de8507955",
+    "membership_source": "outputs\\phase222\\phase222_20261024\\delivery\\L8_TRAIN_INPUT_LOCK.json"
+  },
+  {
+    "dataset": "SPARCS",
+    "scene": "LC80010812013365LGN00",
+    "name": "LC80010812013365LGN00_18_photo.png",
+    "image_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC80010812013365LGN00_18_photo.png",
+    "expected_current_image_sha256": null,
+    "membership_source": "outputs\\phase217\\phase217_20261023\\delivery\\seed21701\\TARGET_SOURCE_SCHEDULE.json",
+    "note": "Schedule image_SHA is augmented input SHA, not PNG file SHA; do not use it as file identity."
+  },
+  {
+    "dataset": "SPARCS",
+    "scene": "LC80020622013244LGN00",
+    "name": "LC80020622013244LGN00_32_photo.png",
+    "image_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC80020622013244LGN00_32_photo.png",
+    "expected_current_image_sha256": null,
+    "membership_source": "outputs\\phase217\\phase217_20261023\\delivery\\seed21701\\TARGET_SOURCE_SCHEDULE.json",
+    "note": "Schedule image_SHA is augmented input SHA, not PNG file SHA; do not use it as file identity."
+  },
+  {
+    "dataset": "SPARCS",
+    "scene": "LC80050152014172LGN00",
+    "name": "LC80050152014172LGN00_12_photo.png",
+    "image_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC80050152014172LGN00_12_photo.png",
+    "expected_current_image_sha256": null,
+    "membership_source": "outputs\\phase217\\phase217_20261023\\delivery\\seed21701\\TARGET_SOURCE_SCHEDULE.json",
+    "note": "Schedule image_SHA is augmented input SHA, not PNG file SHA; do not use it as file identity."
+  }
+]

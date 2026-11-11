@@ -1,0 +1,60 @@
+{
+  "Source_SHA256": "64dd9a20288c35ab3362b8b1c1dafc216d9c44d60868475177e139d6be859dc9",
+  "alpha": 0.25,
+  "seeds": [
+    21701,
+    21702
+  ],
+  "heads": [
+    {
+      "domain": "SPARCS",
+      "seed": 21701,
+      "phase": 217,
+      "endpoint_head_sha256": "ac4396988b31667246356741e4e6b5503d0d28189e54e899d0b1a0d50e5eb634",
+      "checkpoint": "4000-step final C; no checkpoint selection"
+    },
+    {
+      "domain": "SPARCS",
+      "seed": 21702,
+      "phase": 217,
+      "endpoint_head_sha256": "31c557d37d958f4da46b730ebaa5062f555045b993f1e5360ba21eb89fe76a11",
+      "checkpoint": "4000-step final C; no checkpoint selection"
+    },
+    {
+      "domain": "L8",
+      "seed": 21701,
+      "phase": 222,
+      "endpoint_head_sha256": "65d87c33bce5d8161f406471fc4290aa7fc0d8ad7ea0a05db57c235ff3df47fa",
+      "checkpoint": "4000-step final C; no checkpoint selection"
+    },
+    {
+      "domain": "L8",
+      "seed": 21702,
+      "phase": 222,
+      "endpoint_head_sha256": "a04292be4b2fa8b2f35cca27e6f9b05c87d1b2a5f24e35281aaf81b2926883dd",
+      "checkpoint": "4000-step final C; no checkpoint selection"
+    }
+  ],
+  "input_pool_contract": {
+    "L8_val": {
+      "inputs": 963,
+      "scenes": 8
+    },
+    "SPARCS_val": {
+      "inputs": 10,
+      "scenes": 10
+    }
+  },
+  "new_training_updates": 0,
+  "maximum_complete_input_forwards": 5200,
+  "maximum_GPU_hours": 1,
+  "test_pixels_allowed": false,
+  "identity_source": {
+    "path": "outputs\\phase227\\phase227_20261025\\HISTORICAL_TRAINING_COST.json",
+    "sha256": "5d262c4237f4e4f5c93e3412928d0a335b48e88ec06598b1521578f817749014"
+  },
+  "evaluation_code_sources": {
+    "src/tools/evaluate_phase217.py": "b61da46f7a1a57b9bcb80d0efebdda1832517f02a727cdaaca5e557a31c2d05e",
+    "src/tools/evaluate_phase222.py": "81b36814db5194289210c09d88ab2abcbcb3cae08158f76e9538ccb3e87d1f40"
+  }
+}

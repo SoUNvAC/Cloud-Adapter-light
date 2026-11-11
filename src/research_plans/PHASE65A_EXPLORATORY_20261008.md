@@ -9,4 +9,4 @@
 - 先执行数据准备及一个fit代表source前向/权重加载/可训练参数检查，随后source代表评估、一次MsRE训练、最佳development checkpoint成对代表评估和描述性汇总。H1报告有支持代表的描述性Pearson与明确分母；H2沿用12固定可观测量及固定logistic，类别支持不足不声称可识别。此探索不作正式确认bootstrap通过判定，也不触发后续阶段。
 - ALCD不参与本次训练或确认，人工语义复核暂停。65a_confirmation、65b_confirmation、65c_final和旧sealed test均不读像素、预测或指标。
 - 新work_dir为src/work_dirs/phase65a_explore_20261008，prepared数据只写shared Catalogue子目录；拒绝覆盖既有任务/数据。只有一个训练作业；启动前检查GPU及任务冲突。全部work_dirs自动备份/传回/同步取消仍有效，允许读取远端任务状态，产物由用户手动操作。
-- 预算截止2026-10-20北京时间，当天不启动新训练，到期停止仍在运行的新研究训练任务并保留日志/状态，不删除结果。原预注册主支持门失败仍为原方案真实结论，探索性结果不能替代它。
+- 原预注册主支持门失败仍为原方案真实结论，探索性结果不能替代它。

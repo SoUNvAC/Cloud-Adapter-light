@@ -1,0 +1,64 @@
+{
+  "phase": 234,
+  "date": "2026-10-27",
+  "Source_SHA256": "64dd9a20288c35ab3362b8b1c1dafc216d9c44d60868475177e139d6be859dc9",
+  "heads": [
+    {
+      "domain": "SPARCS",
+      "seed": 21701,
+      "phase": 217,
+      "endpoint_head_sha256": "ac4396988b31667246356741e4e6b5503d0d28189e54e899d0b1a0d50e5eb634",
+      "checkpoint": "4000-step final C; no checkpoint selection"
+    },
+    {
+      "domain": "SPARCS",
+      "seed": 21702,
+      "phase": 217,
+      "endpoint_head_sha256": "31c557d37d958f4da46b730ebaa5062f555045b993f1e5360ba21eb89fe76a11",
+      "checkpoint": "4000-step final C; no checkpoint selection"
+    },
+    {
+      "domain": "L8",
+      "seed": 21701,
+      "phase": 222,
+      "endpoint_head_sha256": "65d87c33bce5d8161f406471fc4290aa7fc0d8ad7ea0a05db57c235ff3df47fa",
+      "checkpoint": "4000-step final C; no checkpoint selection"
+    },
+    {
+      "domain": "L8",
+      "seed": 21702,
+      "phase": 222,
+      "endpoint_head_sha256": "a04292be4b2fa8b2f35cca27e6f9b05c87d1b2a5f24e35281aaf81b2926883dd",
+      "checkpoint": "4000-step final C; no checkpoint selection"
+    }
+  ],
+  "seeds": [
+    21701,
+    21702
+  ],
+  "alphas": [
+    0,
+    0.25,
+    0.5,
+    0.75,
+    1
+  ],
+  "selection": "maximum validation pooled mIoU; exact tie smaller alpha; L8 VALID support",
+  "bootstrap_seed": 23401,
+  "bootstrap_draws": 10000,
+  "new_training_updates": 0,
+  "new_fits": 0,
+  "main_input_forwards": 28350,
+  "maximum_complete_input_forwards": 30000,
+  "maximum_GPU_hours": 2,
+  "L8_test_native_binding": "pending; bind original native labels and reproduce OLD LUT exactly before clean evaluation",
+  "historical_test_exposed": true,
+  "input_manifest_sources": {
+    "outputs/phase222/phase222_20261024/delivery/evaluation/INPUT_SUPPORT_LOCK.json": "3b0000859989b4a89cb3399462ef8880af2d3e8a94b3eb159f89988e52929740",
+    "outputs/phase217/phase217_20261023/PHASE216_EVAL_INPUT_LOCK.json": "0f7833428a27fd1ec32a2b7ba71ac296d01fc70d2da5771407bc0ba4ea61f6e4"
+  },
+  "prior_identity_lock": {
+    "path": "src/research_plans/phase229_frozen_20261026/LOCK.json",
+    "sha256": "020fcb3bc844813ca29526b86dfeec5e2e2e707b9bbcb65457e3ab25bee6282d"
+  }
+}

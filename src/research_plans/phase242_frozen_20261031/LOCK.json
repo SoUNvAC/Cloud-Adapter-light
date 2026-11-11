@@ -1,0 +1,165 @@
+{
+  "phase": 242,
+  "prepared_on": "2026-10-31",
+  "status": "prepared_not_executed",
+  "protocol_SHA256": "d6fc876425fb95812fe49a0c22d453c4b1b6876db56417a916d26518453699bf",
+  "phase241_remote_cache_root": "/home/scv/shared/phase241_20261030",
+  "models": {
+    "Source_SHA256": "64dd9a20288c35ab3362b8b1c1dafc216d9c44d60868475177e139d6be859dc9",
+    "Source_remote_path": "/home/scv/Cloud-Adapter-light/src/work_dirs/phase64_source_parent/seed64/best_mIoU_iter_4000.pth",
+    "C": [
+      {
+        "domain": "L8",
+        "model": "C",
+        "seed": 21701,
+        "learning_rate": 0.0001,
+        "step": 4000,
+        "head_SHA256": "2ed21971ab2b7cbcb171761af705b9bf98fa4120dcf0fb7600525aab9c478c87",
+        "remote_path": "/home/scv/shared/phase236_20261027/fits/L8_21701_1e-04/head_4000.pth",
+        "local_checkpoint_exists": false,
+        "local_status": "receipt_only_remote_not_checked"
+      },
+      {
+        "domain": "L8",
+        "model": "C",
+        "seed": 21702,
+        "learning_rate": 0.0001,
+        "step": 4000,
+        "head_SHA256": "a5cf7369190910512f9db81310f7177f53bca015fc7f7adf068eb7e5b3c6c4be",
+        "remote_path": "/home/scv/shared/phase236_20261027/fits/L8_21702_1e-04/head_4000.pth",
+        "local_checkpoint_exists": false,
+        "local_status": "receipt_only_remote_not_checked"
+      },
+      {
+        "domain": "SPARCS",
+        "model": "C",
+        "seed": 21701,
+        "learning_rate": 0.0001,
+        "step": 1000,
+        "head_SHA256": "8d8d00056e302835a1e611b0d657cea91f7c2e00213369852daa718cbc0c18dd",
+        "remote_path": "/home/scv/shared/phase236_20261027/fits/SPARCS_21701_1e-04/head_1000.pth",
+        "local_checkpoint_exists": false,
+        "local_status": "receipt_only_remote_not_checked"
+      },
+      {
+        "domain": "SPARCS",
+        "model": "C",
+        "seed": 21702,
+        "learning_rate": 0.0001,
+        "step": 2000,
+        "head_SHA256": "d3ffadbcf0564c9cf8ae03970a4f8c6a3669f09e10924dc382a8977e2f14dd92",
+        "remote_path": "/home/scv/shared/phase236_20261027/fits/SPARCS_21702_1e-04/head_2000.pth",
+        "local_checkpoint_exists": false,
+        "local_status": "receipt_only_remote_not_checked"
+      }
+    ],
+    "selection_seal_SHA256": "1eaebb04939c82da4caa99e1af965d7ad9f6e5814a042a2edb036434b4d28c29",
+    "remote_access": false
+  },
+  "pools": [
+    {
+      "domain": "L8",
+      "split": "val",
+      "scenes": [
+        "LC80010112014080LGN00",
+        "LC80250022014232LGN00",
+        "LC80320382013278LGN00",
+        "LC80980712014024LGN00",
+        "LC81010142014189LGN00",
+        "LC81750622013304LGN00",
+        "LC81930452013126LGN01",
+        "LC82020522013141LGN01"
+      ],
+      "input_files_per_model": 963,
+      "score_index_rows": 2889
+    },
+    {
+      "domain": "SPARCS",
+      "split": "val",
+      "scenes": [
+        "LC80200462014213LGN00",
+        "LC80310432013207LGN00",
+        "LC80340412013132LGN01",
+        "LC80380362013144LGN00",
+        "LC80500162014247LGN00",
+        "LC81140272013261LGN00",
+        "LC81330492014141LGN00",
+        "LC81490372013362LGN00",
+        "LC81500412014244LGN00",
+        "LC82151102013360LGN00"
+      ],
+      "input_files_per_model": 10,
+      "score_index_rows": 30
+    },
+    {
+      "domain": "L8",
+      "split": "test",
+      "scenes": [
+        "LC80060102014147LGN00",
+        "LC81130632014241LGN00",
+        "LC81321192014054LGN00",
+        "LC81620582014104LGN00",
+        "LC81770262013254LGN00",
+        "LC82290572014141LGN00"
+      ],
+      "input_files_per_model": 747,
+      "score_index_rows": 2241
+    },
+    {
+      "domain": "SPARCS",
+      "split": "test",
+      "scenes": [
+        "LC80390152013215LGN00",
+        "LC80760912014013LGN00",
+        "LC80800142014169LGN00",
+        "LC81020642014004LGN00",
+        "LC81060772014064LGN00",
+        "LC81130672013142LGN01",
+        "LC81220242014240LGN00",
+        "LC81340422013257LGN00",
+        "LC81540102013205LGN00",
+        "LC82290872014013LGN00"
+      ],
+      "input_files_per_model": 10,
+      "score_index_rows": 30
+    }
+  ],
+  "task": "Shadow_Surface",
+  "score": "log(max(p_Shadow,1e-12))-log(max(p_Surface,1e-12))",
+  "primary_detector": "median(delta_i)-median(delta_j), expected positive association with delta AUC_ij",
+  "diagnostic_interventions": [
+    "J0 val scene-median global shift",
+    "J1 per-scene median delta shift"
+  ],
+  "new_thresholds": 0,
+  "new_model_forwards": 0,
+  "network_training_updates": 0,
+  "detector_model_fits": 0,
+  "new_downloads": 0,
+  "limits": {
+    "CPU_wall_seconds": 43200,
+    "parallel_workers": 4,
+    "CPU_peak_GiB": 16,
+    "new_work_GiB": 40,
+    "minimum_free_GiB": 10,
+    "local_delivery_MiB": 500
+  },
+  "metadata_input_SHA256": {
+    "outputs\\phase241\\phase241_20261030\\delivery\\MODEL_IDENTITIES.json": "46890b78947592e8fdb3f5cdd6adece10ba292219692a6b27d1deeef784ab3dd",
+    "outputs\\phase241\\phase241_20261030\\delivery\\SUPPORT.csv": "1785213a14980026c78ac3844fb153dcfc17ba7a9090db8df7d98beb54b55c4d",
+    "outputs\\phase241\\phase241_20261030\\delivery\\VAL_SCORE_INDEX.jsonl": "3821dc9dcefc347fc9fd60159c7d432078ef1c02b41da539cd123ea382f83c79",
+    "outputs\\phase241\\phase241_20261030\\delivery\\TEST_SCORE_INDEX.jsonl": "e991c7ad38087df2c038af5a50a6aaa4e2aa7d169ef57deaf98b5d311d63882c",
+    "outputs\\phase241\\phase241_20261030\\delivery\\RANKING.csv": "33d06ef6de391f133a2237a8b4908709a3f8b9eaaa295059da29e29cf874bc36",
+    "outputs\\phase241\\phase241_20261030\\delivery\\POOLED.csv": "09f726202f4c91cef2a8b2ab9217f0d95e3d740717fd6f89afc3600fbdab9b8c",
+    "outputs\\phase241\\phase241_20261030\\delivery\\THRESHOLD_LOCK.json": "20f570ae18fc4e3211a8c83fc58e361ce497117b81a988bdc49c6680d34c633c"
+  },
+  "cache_reference_file_SHA256": "2a96a24fece95eb37a9fe3b744a7b788a77ccedf53d43b63d9f9ac68b1b4512b",
+  "checks": {
+    "three_models_per_input": true,
+    "same_label_SHA_for_each_matched_input": true,
+    "metadata_only_no_cache_payload_read": true,
+    "no_remote_connection": true
+  },
+  "historical_test_exposed": true,
+  "automatic_next_phase": false
+}

@@ -1,0 +1,22 @@
+from pathlib import Path
+T=Path(__file__).parent
+def put(n,s):(T/n).write_bytes(s.encode())
+def copy(n):return (T/n).read_text().replace('470','474')
+s=copy('train_shadow470.py').replace('shadow_experts474','shadow_conditional474').replace('ErrorExperts','ConditionalOcclusion').replace('branch.experts','branch.decoder').replace("'experts.'","'decoder.'").replace("routed=ARM=='B'","conditional=ARM=='B'")
+s=s.replace('install(student.backbone,branch.decoder)','install(branch,branch.decoder)')
+s=s.replace("with torch.no_grad():reference=reference_network(rgb)[0].log_softmax(1)\n   calls+=len(rgb)","with torch.no_grad():reference=branch.decoder.original_logits.log_softmax(1)")
+s=s.replace('loss=loss+.1*branch.decoder.auxiliary(y,reference)','loss=loss+.01*branch.decoder.last_delta.square().mean()')
+s=s.replace('Only new decoder-feature experts trainable; all original parameters and BN fixed','Only new conditional decoder trainable; all original parameters and BN fixed')
+s=s.replace("dict(conditional=ARM=='B',experts=4,zero_init=True,route_aux_weight=.1,position='First decoder pyramid feature, quarter resolution')","dict(conditional=ARM=='B',zero_init=True,auxiliary_loss=False,position='Cloud-content and ground-occlusion decoder; fixed450 probability anchor')")
+put('train_shadow474.py',s)
+s=copy('infer_shadow470.py').replace('shadow_experts474','shadow_conditional474').replace('ErrorExperts','ConditionalOcclusion').replace('experts.','decoder.').replace('branch.experts','branch.decoder').replace('routed=','conditional=').replace('routed_mode','conditional_mode').replace('install(self.teacher.backbone,self.branch.decoder)','install(self.branch,self.branch.decoder)')
+put('infer_shadow474.py',s)
+for n in ['verify_shadow470.py','boundary_shadow470.py','collect_shadow470.py','monitor_shadow470.py']:
+ put(n.replace('470','474'),copy(n))
+put('ablate_shadow474.py',copy('ablate_shadow470.py').replace('branch.experts','branch.decoder'))
+put('ablate_conditional474.py',copy('ablate_routing470.py').replace('branch.experts','branch.decoder').replace('routing_enabled','conditional_enabled').replace('routing_off','conditional_off').replace('ROUTING_OFF','CONDITIONAL_OFF'))
+put('compare_shadow474.py',copy('compare_shadow470.py').replace('B_experts_on_minus_off','B_decoder_on_minus_off').replace('B_routing_on_minus_off','B_conditional_on_minus_off').replace('ROUTING_OFF','CONDITIONAL_OFF'))
+s=(T/'accept_shadow471.py').read_text().replace('471','474').replace('transport.','decoder.').replace('normal_mode','conditional_mode')
+put('accept_shadow474.py',s)
+s=copy('run_shadow470.sh').replace('ablate_routing474','ablate_conditional474');put('run_shadow474.sh',s)
+p=T/'collect_shadow474.py';put(p.name,p.read_text().replace('routing_off','conditional_off'))

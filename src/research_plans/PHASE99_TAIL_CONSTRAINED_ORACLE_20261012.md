@@ -49,4 +49,4 @@ Phase98两条组合分枝保持关闭。本轮仅用已存分数回答：**即�
 
 `outputs/phase99/phase99_20261012/`：短README、输入锁、12点总表、逐组／固定比较表、oracle边界审计、CPU独立复算及成本。继续保留参考标签语义与恢复缓存谱系局限。
 
-代码与小结果按既有流程push／pull，不同步大缓存或work_dirs，不读取ALCD、其他Catalogue保留池或旧sealed。沿用2026-10-20北京时间预算截止。**仅立项，尚未执行。**
+代码与小结果按既有流程push／pull，不同步大缓存或work_dirs，不读取ALCD、其他Catalogue保留池或旧sealed。**仅立项，尚未执行。**

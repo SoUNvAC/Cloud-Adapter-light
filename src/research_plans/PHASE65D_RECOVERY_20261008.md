@@ -16,4 +16,4 @@
 - 主描述为7个含Shadow相关组宏AP及逐组配对AP增量；另外报告32组池化AP、oracle固定FPR1%/5%召回、冻结fit阈值实际逐组/池化召回与FPR、mIoU/Shadow IoU、预测Shadow比例。AP/固定FPR诊断使用全有效像元及精确ties；后者阈值参考标签依赖，不能当部署规则。25个无Shadow组仍完整参与误报。
 - 固定比较2减1、3减2；报告所有7组原始差值、2000次组bootstrap描述区间（seed65310），不报告像元iid显著性。抽样只降低拟合成本，评价全像元；约一亿像元不变成独立样本。bootstrap条件于已拟合模型，不包含fit不确定性或先前development模型选择，不作正式确认。
 - Source以上为完全独立锚点，不能因总体平均改善声称所有损伤恢复；可注明已知受损development场景，但不据此选择阈值或重拟合。评价后不修改本轮冻结策略，不读T18。
-- 产物只在shared/data/sentinel2_cloud_mask_catalogue_4172871/phase65d_recovery_20261008，新shared报告/图交付本地outputs/phase65/phase65d_recovery_20261008；work_dirs仅只读复用，不自动同步/清理。原正式训练禁令和2026-10-20北京时间预算仍有效；本轮授权仅上述低容量恢复实验。
+- 产物只在shared/data/sentinel2_cloud_mask_catalogue_4172871/phase65d_recovery_20261008，新shared报告/图交付本地outputs/phase65/phase65d_recovery_20261008；work_dirs仅只读复用，不自动同步/清理。原正式训练禁令仍有效；本轮授权仅上述低容量恢复实验。

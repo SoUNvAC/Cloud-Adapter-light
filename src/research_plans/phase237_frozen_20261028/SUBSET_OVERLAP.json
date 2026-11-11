@@ -1,0 +1,17 @@
+{
+  "SUBSET_1": {
+    "SUBSET_1": 18,
+    "SUBSET_2": 3,
+    "SUBSET_3": 3
+  },
+  "SUBSET_2": {
+    "SUBSET_1": 3,
+    "SUBSET_2": 18,
+    "SUBSET_3": 6
+  },
+  "SUBSET_3": {
+    "SUBSET_1": 3,
+    "SUBSET_2": 6,
+    "SUBSET_3": 18
+  }
+}

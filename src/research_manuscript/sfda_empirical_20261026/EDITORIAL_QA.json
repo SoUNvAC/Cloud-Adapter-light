@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "checked_at_utc": "2026-10-26T09:46:53.117018+00:00",
+  "table1_metrics_and_deltas": "matched original CSV to displayed precision",
+  "table4_counts_rates_and_metrics": "matched original CSV; event partitions checked",
+  "directed_error_rows": 6,
+  "coverage_and_budget_arithmetic": "passed",
+  "PL_initialization_replication": "3 rows and mean/sample SD matched Phase315 CSV; directed changes checked against confusion",
+  "full_draft_structure": "6 sections, 4 canonical tables plus replication panel, 10 reference entries; writing-outline placeholders removed",
+  "existing_local_file_links": 34,
+  "source_files": {
+    "src/research_results/phase311_20261025/METRICS.csv": "9cd5ef0a18ed479325ef419b3021b7cdea2890a826f0738a866f36073e639191",
+    "src/research_results/phase311_20261025/DAMAGE_BENEFIT.csv": "f2f6ae3057ebfdf731d02f4f5fed6ec6ae569b81ab61794ddaeb21e45eff9b76",
+    "src/research_results/phase315_20261026/SEED_METRICS.csv": "47c21126b3bb6f513bf6fc383138f62894c2192839d4b03ef909e64c7ef3defd"
+  },
+  "scope": "Editorial transcription/arithmetic/link checks only; no new fits, forwards, raw metric evaluation or remote SHA revalidation"
+}

@@ -1,0 +1,548 @@
+{
+  "SUBSET_1": [
+    {
+      "scene": "LC80900832013220LGN00",
+      "name": "LC80900832013220LGN00_28_photo.png",
+      "image_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC80900832013220LGN00_28_photo.png",
+      "mask_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC80900832013220LGN00_28_mask.png",
+      "split": "original SPARCS target_train",
+      "sha_note": "Original schedule SHA is augmented tensor identity, not file SHA; record actual file identities before calibration.",
+      "image_sha256": "b062c69dfb38357041b526356d63bde3a5bdde327587bedfcd14d5ac294de2e0",
+      "mask_sha256": "304df1b50129ce0e4e2266777e8189a7d9e7061e450f0440f0f1f8bdd442cdb3"
+    },
+    {
+      "scene": "LC81720642014334LGN00",
+      "name": "LC81720642014334LGN00_25_photo.png",
+      "image_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC81720642014334LGN00_25_photo.png",
+      "mask_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC81720642014334LGN00_25_mask.png",
+      "split": "original SPARCS target_train",
+      "sha_note": "Original schedule SHA is augmented tensor identity, not file SHA; record actual file identities before calibration.",
+      "image_sha256": "cd919d0bd3b3ad4fd4c016d23fec192f0c78d58ac8bcf68ec371b32fc18f6d3f",
+      "mask_sha256": "f75c44df8e2ff7c8388ab93a0b15d58979150992082347646518234063231317"
+    },
+    {
+      "scene": "LC80250482014072LGN00",
+      "name": "LC80250482014072LGN00_18_photo.png",
+      "image_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC80250482014072LGN00_18_photo.png",
+      "mask_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC80250482014072LGN00_18_mask.png",
+      "split": "original SPARCS target_train",
+      "sha_note": "Original schedule SHA is augmented tensor identity, not file SHA; record actual file identities before calibration.",
+      "image_sha256": "0f3dcd82d3571bf73e3a6f998567f7c8909f43f07acec983bcf1e92b61096bcd",
+      "mask_sha256": "b84688ab3c3b336bc30632c2eda4d4d9d97bb0c0c41b6a78228bb7ac99ba53e6"
+    },
+    {
+      "scene": "LC82170152014249LGN00",
+      "name": "LC82170152014249LGN00_38_photo.png",
+      "image_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC82170152014249LGN00_38_photo.png",
+      "mask_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC82170152014249LGN00_38_mask.png",
+      "split": "original SPARCS target_train",
+      "sha_note": "Original schedule SHA is augmented tensor identity, not file SHA; record actual file identities before calibration.",
+      "image_sha256": "dde933bc1f5cadd1aa664abcfa971d67fdec79031f45dff6280e5183347c4fe5",
+      "mask_sha256": "8b21726b9b5d570fab397042bd5cc5d9741f9fc404b856532cdc9d79db8f7acd"
+    },
+    {
+      "scene": "LC82160662014146LGN00",
+      "name": "LC82160662014146LGN00_14_photo.png",
+      "image_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC82160662014146LGN00_14_photo.png",
+      "mask_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC82160662014146LGN00_14_mask.png",
+      "split": "original SPARCS target_train",
+      "sha_note": "Original schedule SHA is augmented tensor identity, not file SHA; record actual file identities before calibration.",
+      "image_sha256": "8e085ee564f8d3dd0c668398ac7714203afcc0b10396c26553faf7439e9217dc",
+      "mask_sha256": "7973058e56a662e9a7ef8230bee0e5674f0310685a62074beaa55ae63020d0c6"
+    },
+    {
+      "scene": "LC81280422014074LGN00",
+      "name": "LC81280422014074LGN00_16_photo.png",
+      "image_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC81280422014074LGN00_16_photo.png",
+      "mask_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC81280422014074LGN00_16_mask.png",
+      "split": "original SPARCS target_train",
+      "sha_note": "Original schedule SHA is augmented tensor identity, not file SHA; record actual file identities before calibration.",
+      "image_sha256": "04261cf19403cd88a307f83a854dfb5c0252155b61de2c36bc06f4b2dade0608",
+      "mask_sha256": "91d7d34de03ff7048e2c596f4bd561cd4989d977fcfd335f3c4a57cd742daf83"
+    },
+    {
+      "scene": "LC80190352014078LGN01",
+      "name": "LC80190352014078LGN01_26_photo.png",
+      "image_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC80190352014078LGN01_26_photo.png",
+      "mask_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC80190352014078LGN01_26_mask.png",
+      "split": "original SPARCS target_train",
+      "sha_note": "Original schedule SHA is augmented tensor identity, not file SHA; record actual file identities before calibration.",
+      "image_sha256": "3736f39d26e0a1e1b1fe2ab40a03997584af4970ce9a8a3abcd3bf2cba3c1683",
+      "mask_sha256": "103dcb25ac09a88754f5b38f5d488223b50918f6e5f192f59d54f2cd34ea5b1c"
+    },
+    {
+      "scene": "LC80050152014172LGN00",
+      "name": "LC80050152014172LGN00_12_photo.png",
+      "image_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC80050152014172LGN00_12_photo.png",
+      "mask_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC80050152014172LGN00_12_mask.png",
+      "split": "original SPARCS target_train",
+      "sha_note": "Original schedule SHA is augmented tensor identity, not file SHA; record actual file identities before calibration.",
+      "image_sha256": "2a0dce04f36567bcbf748ac7c0af1d9b32e0b7759d59d0db0606e2f00b952538",
+      "mask_sha256": "c5cef15f28448b2b303274369bdd646afcfb2f231a11ffb5344f43ab924a9322"
+    },
+    {
+      "scene": "LC81250622013178LGN01",
+      "name": "LC81250622013178LGN01_08_photo.png",
+      "image_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC81250622013178LGN01_08_photo.png",
+      "mask_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC81250622013178LGN01_08_mask.png",
+      "split": "original SPARCS target_train",
+      "sha_note": "Original schedule SHA is augmented tensor identity, not file SHA; record actual file identities before calibration.",
+      "image_sha256": "b4d2e7b6c6e268d2e8bdccced3dc2df346049e669e893c54cda560ae75d2b02f",
+      "mask_sha256": "72ddf0c99ebb5baf9913fa7942574a1c63d576de3b6da18431b07e27dbbc9ddf"
+    },
+    {
+      "scene": "LC80470252014226LGN00",
+      "name": "LC80470252014226LGN00_11_photo.png",
+      "image_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC80470252014226LGN00_11_photo.png",
+      "mask_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC80470252014226LGN00_11_mask.png",
+      "split": "original SPARCS target_train",
+      "sha_note": "Original schedule SHA is augmented tensor identity, not file SHA; record actual file identities before calibration.",
+      "image_sha256": "992d742073883bbd45e2e084603b739959b5250ef4c4c3fc4721cc1170c99faa",
+      "mask_sha256": "f59478905d4e3d40e3d552fe99e01d66c4dc3ad97970232f8280bae17b0af85b"
+    },
+    {
+      "scene": "LC80750962014038LGN00",
+      "name": "LC80750962014038LGN00_14_photo.png",
+      "image_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC80750962014038LGN00_14_photo.png",
+      "mask_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC80750962014038LGN00_14_mask.png",
+      "split": "original SPARCS target_train",
+      "sha_note": "Original schedule SHA is augmented tensor identity, not file SHA; record actual file identities before calibration.",
+      "image_sha256": "29f1293d18b56762b6eb13c93f5b661fd3461fc659c5379976eff3b71fbc2747",
+      "mask_sha256": "ca01fc960d65018688c47c5db0dc387baaf3da6c5d49880823013ab598fd126d"
+    },
+    {
+      "scene": "LC81140622013277LGN00",
+      "name": "LC81140622013277LGN00_23_photo.png",
+      "image_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC81140622013277LGN00_23_photo.png",
+      "mask_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC81140622013277LGN00_23_mask.png",
+      "split": "original SPARCS target_train",
+      "sha_note": "Original schedule SHA is augmented tensor identity, not file SHA; record actual file identities before calibration.",
+      "image_sha256": "8f205543c5a47da4379519f1ddace8b3020184467e1cd97d9f5ee4ca99126c2f",
+      "mask_sha256": "5375aa12a3b42bbddf419f9346250a136f895d444341c334eb68619c083f1ec8"
+    },
+    {
+      "scene": "LC82010332014105LGN00",
+      "name": "LC82010332014105LGN00_34_photo.png",
+      "image_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC82010332014105LGN00_34_photo.png",
+      "mask_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC82010332014105LGN00_34_mask.png",
+      "split": "original SPARCS target_train",
+      "sha_note": "Original schedule SHA is augmented tensor identity, not file SHA; record actual file identities before calibration.",
+      "image_sha256": "37cf21533feb853d0bb0ad35917c0a3cf588e4e797e41af6a9393bdaf660218a",
+      "mask_sha256": "091b3007cb69b3968d28570a2e8b240b2ecf55d1a1122da608cc12e129ef9ed7"
+    },
+    {
+      "scene": "LC80630462013191LGN00",
+      "name": "LC80630462013191LGN00_11_photo.png",
+      "image_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC80630462013191LGN00_11_photo.png",
+      "mask_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC80630462013191LGN00_11_mask.png",
+      "split": "original SPARCS target_train",
+      "sha_note": "Original schedule SHA is augmented tensor identity, not file SHA; record actual file identities before calibration.",
+      "image_sha256": "e8ca77fe5f7a85e68470fee74332d3570ee22b06767a378ebb2b47b26764a205",
+      "mask_sha256": "cbe822b421e97a9218591b7a04266dc4171bf9f928ee6a368fe23121026d5e84"
+    },
+    {
+      "scene": "LC82210662014229LGN00",
+      "name": "LC82210662014229LGN00_18_photo.png",
+      "image_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC82210662014229LGN00_18_photo.png",
+      "mask_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC82210662014229LGN00_18_mask.png",
+      "split": "original SPARCS target_train",
+      "sha_note": "Original schedule SHA is augmented tensor identity, not file SHA; record actual file identities before calibration.",
+      "image_sha256": "4c168c72662870312da51dd546f0a8dddb1ba546beba222fdc32e2edfd3fc516",
+      "mask_sha256": "cdceabebda8466aa7113bb5b9e419784cd55fd67c094bc541e93d0685aa9cec6"
+    },
+    {
+      "scene": "LC81660432014100LGN00",
+      "name": "LC81660432014100LGN00_35_photo.png",
+      "image_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC81660432014100LGN00_35_photo.png",
+      "mask_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC81660432014100LGN00_35_mask.png",
+      "split": "original SPARCS target_train",
+      "sha_note": "Original schedule SHA is augmented tensor identity, not file SHA; record actual file identities before calibration.",
+      "image_sha256": "d04fff187f30a1eca7e20dc5465cc326bf6c4aa8e6f5b952fd02b0cfd5347098",
+      "mask_sha256": "43a6c05b98e8aa40e2fd26954e2c89ffa4ed08f83bf3dee1410bc706a442972a"
+    },
+    {
+      "scene": "LC81230362013276LGN00",
+      "name": "LC81230362013276LGN00_19_photo.png",
+      "image_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC81230362013276LGN00_19_photo.png",
+      "mask_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC81230362013276LGN00_19_mask.png",
+      "split": "original SPARCS target_train",
+      "sha_note": "Original schedule SHA is augmented tensor identity, not file SHA; record actual file identities before calibration.",
+      "image_sha256": "86d308cbc8b16ef8ce4969441ef12426d919f68e2b03e3ce351d56395de787b7",
+      "mask_sha256": "1e8d29056f2eeee8bd1c039d82603eb5b2856121d28540d0c4a78616af5e66c1"
+    },
+    {
+      "scene": "LC82320772014306LGN00",
+      "name": "LC82320772014306LGN00_38_photo.png",
+      "image_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC82320772014306LGN00_38_photo.png",
+      "mask_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC82320772014306LGN00_38_mask.png",
+      "split": "original SPARCS target_train",
+      "sha_note": "Original schedule SHA is augmented tensor identity, not file SHA; record actual file identities before calibration.",
+      "image_sha256": "93b8b5fa4c1ccf4f433877f9566c25e7bfe92ecc26f39bea6f24d90cb16532ca",
+      "mask_sha256": "b5d6122111aae4e538249d7c418e8ce32fd44d0309c8eda6d1338d23236ed02c"
+    }
+  ],
+  "SUBSET_2": [
+    {
+      "scene": "LC81730542014277LGN00",
+      "name": "LC81730542014277LGN00_23_photo.png",
+      "image_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC81730542014277LGN00_23_photo.png",
+      "mask_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC81730542014277LGN00_23_mask.png",
+      "split": "original SPARCS target_train",
+      "sha_note": "Original schedule SHA is augmented tensor identity, not file SHA; record actual file identities before calibration.",
+      "image_sha256": "dc651e4a3c7cfec78dabe9d8627ef78d290fe2b39fff5ee3aeeb0b4ffd6b17fe",
+      "mask_sha256": "dc63ad0d8dd39f9bc84221b0ad855c63835c25b5a4cc99066b067ce8aab8d171"
+    },
+    {
+      "scene": "LC82010332014105LGN00",
+      "name": "LC82010332014105LGN00_34_photo.png",
+      "image_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC82010332014105LGN00_34_photo.png",
+      "mask_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC82010332014105LGN00_34_mask.png",
+      "split": "original SPARCS target_train",
+      "sha_note": "Original schedule SHA is augmented tensor identity, not file SHA; record actual file identities before calibration.",
+      "image_sha256": "37cf21533feb853d0bb0ad35917c0a3cf588e4e797e41af6a9393bdaf660218a",
+      "mask_sha256": "091b3007cb69b3968d28570a2e8b240b2ecf55d1a1122da608cc12e129ef9ed7"
+    },
+    {
+      "scene": "LC81370452014073LGN00",
+      "name": "LC81370452014073LGN00_23_photo.png",
+      "image_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC81370452014073LGN00_23_photo.png",
+      "mask_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC81370452014073LGN00_23_mask.png",
+      "split": "original SPARCS target_train",
+      "sha_note": "Original schedule SHA is augmented tensor identity, not file SHA; record actual file identities before calibration.",
+      "image_sha256": "c7c594331996acaae7ae41b249a6a7cbc87d9d02ac8e1be1e24ce7021a685be2",
+      "mask_sha256": "9a094f20d5c935a51b2c26fca5ab9c4f873380f0c6d61f169c334c5f87cb7c2d"
+    },
+    {
+      "scene": "LC81670512014091LGN00",
+      "name": "LC81670512014091LGN00_32_photo.png",
+      "image_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC81670512014091LGN00_32_photo.png",
+      "mask_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC81670512014091LGN00_32_mask.png",
+      "split": "original SPARCS target_train",
+      "sha_note": "Original schedule SHA is augmented tensor identity, not file SHA; record actual file identities before calibration.",
+      "image_sha256": "38997a471db660ac7d6d92b758e171cab4cdd68bf845f238570fdcc882975d3f",
+      "mask_sha256": "ad5b3ffc69e07251621fed2804933cbde586a2ff0bb9534fbceb825f865d20ce"
+    },
+    {
+      "scene": "LC81950282013156LGN00",
+      "name": "LC81950282013156LGN00_33_photo.png",
+      "image_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC81950282013156LGN00_33_photo.png",
+      "mask_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC81950282013156LGN00_33_mask.png",
+      "split": "original SPARCS target_train",
+      "sha_note": "Original schedule SHA is augmented tensor identity, not file SHA; record actual file identities before calibration.",
+      "image_sha256": "f0243fa3b105f95efff40ddb8b1339dc5d42be6435a472f575dbbadcf7647881",
+      "mask_sha256": "7b5dc8e547458fd74705af738a5c91e0f8eb1b4cd446953de7bee44c192ad285"
+    },
+    {
+      "scene": "LC81360162014210LGN00",
+      "name": "LC81360162014210LGN00_32_photo.png",
+      "image_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC81360162014210LGN00_32_photo.png",
+      "mask_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC81360162014210LGN00_32_mask.png",
+      "split": "original SPARCS target_train",
+      "sha_note": "Original schedule SHA is augmented tensor identity, not file SHA; record actual file identities before calibration.",
+      "image_sha256": "fc7b20d997c633df7ba4abf796b3792f42382d5b8cf2b8232777956e10f60262",
+      "mask_sha256": "5db56320032ddae8caf4f8b46f0ec62530db892cc772a1b66f15929195a8f706"
+    },
+    {
+      "scene": "LC81360162013159LGN00",
+      "name": "LC81360162013159LGN00_18_photo.png",
+      "image_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC81360162013159LGN00_18_photo.png",
+      "mask_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC81360162013159LGN00_18_mask.png",
+      "split": "original SPARCS target_train",
+      "sha_note": "Original schedule SHA is augmented tensor identity, not file SHA; record actual file identities before calibration.",
+      "image_sha256": "b21ab187509d5843c3f6a16933a86cf1157225dd8d86638a9b14f566f3cf9315",
+      "mask_sha256": "f2cf9ec47aea817267b6f454ce2911d1ad110c6f32781afd2d61ac1364e66068"
+    },
+    {
+      "scene": "LC81460442013293LGN00",
+      "name": "LC81460442013293LGN00_38_photo.png",
+      "image_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC81460442013293LGN00_38_photo.png",
+      "mask_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC81460442013293LGN00_38_mask.png",
+      "split": "original SPARCS target_train",
+      "sha_note": "Original schedule SHA is augmented tensor identity, not file SHA; record actual file identities before calibration.",
+      "image_sha256": "053bee09d2ed10e584e0d0321c26439785fcb21f11253e2853ed4b483db4ee23",
+      "mask_sha256": "603b08bfdebb77ad4725b241705435b6caaffde4f61b834ae97c100b08857617"
+    },
+    {
+      "scene": "LC81180602014116LGN00",
+      "name": "LC81180602014116LGN00_29_photo.png",
+      "image_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC81180602014116LGN00_29_photo.png",
+      "mask_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC81180602014116LGN00_29_mask.png",
+      "split": "original SPARCS target_train",
+      "sha_note": "Original schedule SHA is augmented tensor identity, not file SHA; record actual file identities before calibration.",
+      "image_sha256": "8ddc4582b4c888d319466b3ab6747daa3f83ece912484a0f5045a843d885c739",
+      "mask_sha256": "73f4f7ec9515590029b912077da49bd5104dbb6df1ba389d16d5d6817255d2e3"
+    },
+    {
+      "scene": "LC80050562014076LGN00",
+      "name": "LC80050562014076LGN00_33_photo.png",
+      "image_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC80050562014076LGN00_33_photo.png",
+      "mask_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC80050562014076LGN00_33_mask.png",
+      "split": "original SPARCS target_train",
+      "sha_note": "Original schedule SHA is augmented tensor identity, not file SHA; record actual file identities before calibration.",
+      "image_sha256": "9b277016d402ffaddcb9cbc99dd9df4e9469a5c249083a8c7f1ac12f71b10e01",
+      "mask_sha256": "9d96eceb5c0f748b8f554491907b67ac04fab3758e9961a5c9db41da5c3c270a"
+    },
+    {
+      "scene": "LC81400372014158LGN00",
+      "name": "LC81400372014158LGN00_27_photo.png",
+      "image_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC81400372014158LGN00_27_photo.png",
+      "mask_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC81400372014158LGN00_27_mask.png",
+      "split": "original SPARCS target_train",
+      "sha_note": "Original schedule SHA is augmented tensor identity, not file SHA; record actual file identities before calibration.",
+      "image_sha256": "7962ca55289c87ac98d4391f2de8eeed7ed6ccc5691c3a2ee9ec16f993e46c0f",
+      "mask_sha256": "df1a0f2739339317cf2d85bc55773c3d63a52ad49b330f0cfd1ab5987f0b97ce"
+    },
+    {
+      "scene": "LC81370412014105LGN00",
+      "name": "LC81370412014105LGN00_30_photo.png",
+      "image_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC81370412014105LGN00_30_photo.png",
+      "mask_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC81370412014105LGN00_30_mask.png",
+      "split": "original SPARCS target_train",
+      "sha_note": "Original schedule SHA is augmented tensor identity, not file SHA; record actual file identities before calibration.",
+      "image_sha256": "8af313f50ca450ab3f3262fb0d74421f369ccb0b35fe75bc836792517a44b852",
+      "mask_sha256": "c424c9e9be36fd54e80a6a2eac7f71ef76e857d05aa2d4742466564b720eb519"
+    },
+    {
+      "scene": "LC80190352014078LGN01",
+      "name": "LC80190352014078LGN01_26_photo.png",
+      "image_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC80190352014078LGN01_26_photo.png",
+      "mask_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC80190352014078LGN01_26_mask.png",
+      "split": "original SPARCS target_train",
+      "sha_note": "Original schedule SHA is augmented tensor identity, not file SHA; record actual file identities before calibration.",
+      "image_sha256": "3736f39d26e0a1e1b1fe2ab40a03997584af4970ce9a8a3abcd3bf2cba3c1683",
+      "mask_sha256": "103dcb25ac09a88754f5b38f5d488223b50918f6e5f192f59d54f2cd34ea5b1c"
+    },
+    {
+      "scene": "LC80910892014006LGN00",
+      "name": "LC80910892014006LGN00_44_photo.png",
+      "image_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC80910892014006LGN00_44_photo.png",
+      "mask_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC80910892014006LGN00_44_mask.png",
+      "split": "original SPARCS target_train",
+      "sha_note": "Original schedule SHA is augmented tensor identity, not file SHA; record actual file identities before calibration.",
+      "image_sha256": "db9bb8135986705b1e8e1fafc342b78f28dc25335d9e437705a899d76436cacd",
+      "mask_sha256": "310fdc7c4e4c00facc7f2ff5c8fea95e94604a3aa491b0e0bacb7b7a956d0892"
+    },
+    {
+      "scene": "LC80750962014038LGN00",
+      "name": "LC80750962014038LGN00_14_photo.png",
+      "image_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC80750962014038LGN00_14_photo.png",
+      "mask_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC80750962014038LGN00_14_mask.png",
+      "split": "original SPARCS target_train",
+      "sha_note": "Original schedule SHA is augmented tensor identity, not file SHA; record actual file identities before calibration.",
+      "image_sha256": "29f1293d18b56762b6eb13c93f5b661fd3461fc659c5379976eff3b71fbc2747",
+      "mask_sha256": "ca01fc960d65018688c47c5db0dc387baaf3da6c5d49880823013ab598fd126d"
+    },
+    {
+      "scene": "LC82290782013282LGN00",
+      "name": "LC82290782013282LGN00_12_photo.png",
+      "image_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC82290782013282LGN00_12_photo.png",
+      "mask_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC82290782013282LGN00_12_mask.png",
+      "split": "original SPARCS target_train",
+      "sha_note": "Original schedule SHA is augmented tensor identity, not file SHA; record actual file identities before calibration.",
+      "image_sha256": "e4db42aa0be9f4a551f74243a58bf105132d149e6c30ba69a74b215402d67371",
+      "mask_sha256": "5c7b2a468bf5e995fd3a8b332e4101f1034080a8199b4d239c6eed24bec983c3"
+    },
+    {
+      "scene": "LC81730742014085LGN00",
+      "name": "LC81730742014085LGN00_11_photo.png",
+      "image_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC81730742014085LGN00_11_photo.png",
+      "mask_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC81730742014085LGN00_11_mask.png",
+      "split": "original SPARCS target_train",
+      "sha_note": "Original schedule SHA is augmented tensor identity, not file SHA; record actual file identities before calibration.",
+      "image_sha256": "584d3992f0abc8c929c571918051d3c56654af23f78744770857779215c04b8a",
+      "mask_sha256": "85bde13d4b332b34eaca429c1641eca8c3510e1f4064211d35688cd2ba2af8ac"
+    },
+    {
+      "scene": "LC80750722014022LGN00",
+      "name": "LC80750722014022LGN00_16_photo.png",
+      "image_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC80750722014022LGN00_16_photo.png",
+      "mask_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC80750722014022LGN00_16_mask.png",
+      "split": "original SPARCS target_train",
+      "sha_note": "Original schedule SHA is augmented tensor identity, not file SHA; record actual file identities before calibration.",
+      "image_sha256": "298711e6d5789126ce91f15c584440bb72b6b21b18cd4c1e425252a21ac406ec",
+      "mask_sha256": "d815dad5267137efff765e831c288bcfeb6c559a62ce2cc72db4f5433c6e299c"
+    }
+  ],
+  "SUBSET_3": [
+    {
+      "scene": "LC81810592013218LGN00",
+      "name": "LC81810592013218LGN00_05_photo.png",
+      "image_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC81810592013218LGN00_05_photo.png",
+      "mask_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC81810592013218LGN00_05_mask.png",
+      "split": "original SPARCS target_train",
+      "sha_note": "Original schedule SHA is augmented tensor identity, not file SHA; record actual file identities before calibration.",
+      "image_sha256": "fa6a4db9a6313753f4be042936669390e7cf2f8d649ef8fc8a8b4deb3d66d6d0",
+      "mask_sha256": "e4ec0e6d0123a6a407422449931bb03718949c7a19173a385a91ad3e85150092"
+    },
+    {
+      "scene": "LC82310942013344LGN00",
+      "name": "LC82310942013344LGN00_17_photo.png",
+      "image_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC82310942013344LGN00_17_photo.png",
+      "mask_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC82310942013344LGN00_17_mask.png",
+      "split": "original SPARCS target_train",
+      "sha_note": "Original schedule SHA is augmented tensor identity, not file SHA; record actual file identities before calibration.",
+      "image_sha256": "1ca7584d1222d524a02cf1d2f26f6838b20ca4e2e5b8db528ecded6119acbd9b",
+      "mask_sha256": "eb0fa35055ae43533c59ed9546856eb7e66ee712a6e35c721652e1fadf5e5db2"
+    },
+    {
+      "scene": "LC80020622013244LGN00",
+      "name": "LC80020622013244LGN00_32_photo.png",
+      "image_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC80020622013244LGN00_32_photo.png",
+      "mask_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC80020622013244LGN00_32_mask.png",
+      "split": "original SPARCS target_train",
+      "sha_note": "Original schedule SHA is augmented tensor identity, not file SHA; record actual file identities before calibration.",
+      "image_sha256": "75bacd31ff5ea738ad8e979122ae2705c3ed6a11e6d9519893c2457f262eec1e",
+      "mask_sha256": "6b4772f9ce0b0eb11494a141ee6625255346b0196e93fbc993c76e3f13f74077"
+    },
+    {
+      "scene": "LC81370452014073LGN00",
+      "name": "LC81370452014073LGN00_23_photo.png",
+      "image_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC81370452014073LGN00_23_photo.png",
+      "mask_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC81370452014073LGN00_23_mask.png",
+      "split": "original SPARCS target_train",
+      "sha_note": "Original schedule SHA is augmented tensor identity, not file SHA; record actual file identities before calibration.",
+      "image_sha256": "c7c594331996acaae7ae41b249a6a7cbc87d9d02ac8e1be1e24ce7021a685be2",
+      "mask_sha256": "9a094f20d5c935a51b2c26fca5ab9c4f873380f0c6d61f169c334c5f87cb7c2d"
+    },
+    {
+      "scene": "LC80630462013191LGN00",
+      "name": "LC80630462013191LGN00_11_photo.png",
+      "image_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC80630462013191LGN00_11_photo.png",
+      "mask_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC80630462013191LGN00_11_mask.png",
+      "split": "original SPARCS target_train",
+      "sha_note": "Original schedule SHA is augmented tensor identity, not file SHA; record actual file identities before calibration.",
+      "image_sha256": "e8ca77fe5f7a85e68470fee74332d3570ee22b06767a378ebb2b47b26764a205",
+      "mask_sha256": "cbe822b421e97a9218591b7a04266dc4171bf9f928ee6a368fe23121026d5e84"
+    },
+    {
+      "scene": "LC80910892014006LGN00",
+      "name": "LC80910892014006LGN00_44_photo.png",
+      "image_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC80910892014006LGN00_44_photo.png",
+      "mask_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC80910892014006LGN00_44_mask.png",
+      "split": "original SPARCS target_train",
+      "sha_note": "Original schedule SHA is augmented tensor identity, not file SHA; record actual file identities before calibration.",
+      "image_sha256": "db9bb8135986705b1e8e1fafc342b78f28dc25335d9e437705a899d76436cacd",
+      "mask_sha256": "310fdc7c4e4c00facc7f2ff5c8fea95e94604a3aa491b0e0bacb7b7a956d0892"
+    },
+    {
+      "scene": "LC81250542014181LGN00",
+      "name": "LC81250542014181LGN00_39_photo.png",
+      "image_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC81250542014181LGN00_39_photo.png",
+      "mask_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC81250542014181LGN00_39_mask.png",
+      "split": "original SPARCS target_train",
+      "sha_note": "Original schedule SHA is augmented tensor identity, not file SHA; record actual file identities before calibration.",
+      "image_sha256": "a6c175b528098808c23aa9f2c6de676bc281848fa58e36259226821396b81cff",
+      "mask_sha256": "61e7df7b4a1fc9cbc84eb90d7b3cb10a6da6794ea5d9c8838d9251ad9ee4750f"
+    },
+    {
+      "scene": "LC82260732013357LGN00",
+      "name": "LC82260732013357LGN00_32_photo.png",
+      "image_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC82260732013357LGN00_32_photo.png",
+      "mask_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC82260732013357LGN00_32_mask.png",
+      "split": "original SPARCS target_train",
+      "sha_note": "Original schedule SHA is augmented tensor identity, not file SHA; record actual file identities before calibration.",
+      "image_sha256": "0d58f33b50bba98b2388518f706f857b6da7d0a97152c87d6e0df8092ecbb712",
+      "mask_sha256": "3a62dc86cfa03821297d75fa29156b3e6d1a88d77991c57b0644dc0a19fc5c68"
+    },
+    {
+      "scene": "LC81830242014091LGN00",
+      "name": "LC81830242014091LGN00_16_photo.png",
+      "image_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC81830242014091LGN00_16_photo.png",
+      "mask_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC81830242014091LGN00_16_mask.png",
+      "split": "original SPARCS target_train",
+      "sha_note": "Original schedule SHA is augmented tensor identity, not file SHA; record actual file identities before calibration.",
+      "image_sha256": "b850f535772cd238a099af36bec954354ea9e2588e641a0b990e196aa6a4ccf3",
+      "mask_sha256": "52277655bcbaf7a64be47123855aa708436998a57e84aaee22426fe3ad9bed00"
+    },
+    {
+      "scene": "LC80750962014038LGN00",
+      "name": "LC80750962014038LGN00_14_photo.png",
+      "image_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC80750962014038LGN00_14_photo.png",
+      "mask_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC80750962014038LGN00_14_mask.png",
+      "split": "original SPARCS target_train",
+      "sha_note": "Original schedule SHA is augmented tensor identity, not file SHA; record actual file identities before calibration.",
+      "image_sha256": "29f1293d18b56762b6eb13c93f5b661fd3461fc659c5379976eff3b71fbc2747",
+      "mask_sha256": "ca01fc960d65018688c47c5db0dc387baaf3da6c5d49880823013ab598fd126d"
+    },
+    {
+      "scene": "LC81480352013195LGN00",
+      "name": "LC81480352013195LGN00_32_photo.png",
+      "image_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC81480352013195LGN00_32_photo.png",
+      "mask_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC81480352013195LGN00_32_mask.png",
+      "split": "original SPARCS target_train",
+      "sha_note": "Original schedule SHA is augmented tensor identity, not file SHA; record actual file identities before calibration.",
+      "image_sha256": "cc44c24f6f479608b87ba2f3a6acce631672315de4cbd330bbfc13d9fe95c924",
+      "mask_sha256": "824de563b206a5555e7ed84e155bac3d11de7a1d1a85e6978912042d1d994916"
+    },
+    {
+      "scene": "LC81110822013288LGN00",
+      "name": "LC81110822013288LGN00_11_photo.png",
+      "image_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC81110822013288LGN00_11_photo.png",
+      "mask_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC81110822013288LGN00_11_mask.png",
+      "split": "original SPARCS target_train",
+      "sha_note": "Original schedule SHA is augmented tensor identity, not file SHA; record actual file identities before calibration.",
+      "image_sha256": "b6b245ee85a5cbef611fa1f690726757a3b89c9a954a8f64d408a4b468540409",
+      "mask_sha256": "aa0317ae5819e7d0127bc7cb9e7cf99f319d642624b6e06b1844eb069c0c9ed2"
+    },
+    {
+      "scene": "LC81460442013293LGN00",
+      "name": "LC81460442013293LGN00_38_photo.png",
+      "image_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC81460442013293LGN00_38_photo.png",
+      "mask_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC81460442013293LGN00_38_mask.png",
+      "split": "original SPARCS target_train",
+      "sha_note": "Original schedule SHA is augmented tensor identity, not file SHA; record actual file identities before calibration.",
+      "image_sha256": "053bee09d2ed10e584e0d0321c26439785fcb21f11253e2853ed4b483db4ee23",
+      "mask_sha256": "603b08bfdebb77ad4725b241705435b6caaffde4f61b834ae97c100b08857617"
+    },
+    {
+      "scene": "LC82010332014105LGN00",
+      "name": "LC82010332014105LGN00_34_photo.png",
+      "image_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC82010332014105LGN00_34_photo.png",
+      "mask_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC82010332014105LGN00_34_mask.png",
+      "split": "original SPARCS target_train",
+      "sha_note": "Original schedule SHA is augmented tensor identity, not file SHA; record actual file identities before calibration.",
+      "image_sha256": "37cf21533feb853d0bb0ad35917c0a3cf588e4e797e41af6a9393bdaf660218a",
+      "mask_sha256": "091b3007cb69b3968d28570a2e8b240b2ecf55d1a1122da608cc12e129ef9ed7"
+    },
+    {
+      "scene": "LC81950282013156LGN00",
+      "name": "LC81950282013156LGN00_33_photo.png",
+      "image_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC81950282013156LGN00_33_photo.png",
+      "mask_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC81950282013156LGN00_33_mask.png",
+      "split": "original SPARCS target_train",
+      "sha_note": "Original schedule SHA is augmented tensor identity, not file SHA; record actual file identities before calibration.",
+      "image_sha256": "f0243fa3b105f95efff40ddb8b1339dc5d42be6435a472f575dbbadcf7647881",
+      "mask_sha256": "7b5dc8e547458fd74705af738a5c91e0f8eb1b4cd446953de7bee44c192ad285"
+    },
+    {
+      "scene": "LC81610712013222LGN00",
+      "name": "LC81610712013222LGN00_09_photo.png",
+      "image_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC81610712013222LGN00_09_photo.png",
+      "mask_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC81610712013222LGN00_09_mask.png",
+      "split": "original SPARCS target_train",
+      "sha_note": "Original schedule SHA is augmented tensor identity, not file SHA; record actual file identities before calibration.",
+      "image_sha256": "f95d6c26d2e9dff12424d32fbeb0bbd19b7a630b5bc1da03501ebed0c254c6dc",
+      "mask_sha256": "00c64d2f7249c95a1f2fc3ed8729bdbcf12a619973889838e2a5b9c077916554"
+    },
+    {
+      "scene": "LC81750832014067LGN00",
+      "name": "LC81750832014067LGN00_24_photo.png",
+      "image_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC81750832014067LGN00_24_photo.png",
+      "mask_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC81750832014067LGN00_24_mask.png",
+      "split": "original SPARCS target_train",
+      "sha_note": "Original schedule SHA is augmented tensor identity, not file SHA; record actual file identities before calibration.",
+      "image_sha256": "3af8cc06667c31df808e014eb728ef07b3f84de12c75cf4c2c07312b79f987af",
+      "mask_sha256": "bbb2233a23d7b335f35af4fb70eda8bbafb4da774c43026c2cc1ea6e50387315"
+    },
+    {
+      "scene": "LC80150242014146LGN00",
+      "name": "LC80150242014146LGN00_23_photo.png",
+      "image_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC80150242014146LGN00_23_photo.png",
+      "mask_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC80150242014146LGN00_23_mask.png",
+      "split": "original SPARCS target_train",
+      "sha_note": "Original schedule SHA is augmented tensor identity, not file SHA; record actual file identities before calibration.",
+      "image_sha256": "027e43c8002131d04503298397e3df71942442f88812809dfca4f3e750612cbe",
+      "mask_sha256": "0505d3580527f5dde6d77174a1c3bd6ba43e4f3a10e8027356bb07f89f9070e1"
+    }
+  ]
+}

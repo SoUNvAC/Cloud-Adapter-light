@@ -38,4 +38,4 @@
 
 写入`outputs/phase87/phase87_20261011/`：短README、抽样及别名锁、匿名影像面板、不可覆盖的`blind_initial.csv`、`revealed_review.csv`、九组摘要、待人工裁决清单和原始窗口／判读输入SHA。复用已有本地预览页面，避免重复打包大影像。
 
-不读取Catalogue旧确认池像元／预测，不评价ALCD上的Source、MsRE、LoRA或浅层模型，不重启关闭分枝。代码及小交付按原流程push／pull；不覆盖Phase65人工模板和原标签，不自动同步原始影像或work_dirs。沿用2026-10-20北京时间预算截止。本文件仅立项，未执行判读。
+不读取Catalogue旧确认池像元／预测，不评价ALCD上的Source、MsRE、LoRA或浅层模型，不重启关闭分枝。代码及小交付按原流程push／pull；不覆盖Phase65人工模板和原标签，不自动同步原始影像或work_dirs。本文件仅立项，未执行判读。

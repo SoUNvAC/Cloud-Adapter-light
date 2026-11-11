@@ -1,0 +1,98 @@
+[
+  {
+    "fit": "L8_21701_1e-04",
+    "step": 500,
+    "head_path": "fits/L8_21701_1e-04/head_500.pth",
+    "resume_path": "fits/L8_21701_1e-04/resume_500.pth",
+    "head_SHA": "ee21dac994198b3a93ea7459ae38279640dd6576c3ae4ea9d2834e6c2d492415",
+    "head_digest": "0ddd6435aa56b50a97fa1d52d3cfb2700cd2445e78e1d629a7b56ecf41594140",
+    "resume_SHA": "89cae8895aaef204e7f0f340003e92aef4d436ccc581fc04bcd41bf2d9602541",
+    "nonhead_digest": "8737d1412d386abf7e75719d6ed75411e63d1c16b3e764ae80bfd9a41f457b51",
+    "restore_sampler": "rebuild original InfiniteSampler seed then advance saved prefix; per-step data seeds fixed",
+    "files_retained_shared_not_transferred": true
+  },
+  {
+    "fit": "L8_21701_1e-04",
+    "step": 1000,
+    "head_path": "fits/L8_21701_1e-04/head_1000.pth",
+    "resume_path": "fits/L8_21701_1e-04/resume_1000.pth",
+    "head_SHA": "843cb99dd6d95798ecd2a78131e2f83af4fa0fbe43d0ad21046a590c9a6c5952",
+    "head_digest": "05e224150d84244581475a9bef0ea5bdced0a5dce1afe8791f2d93b2b4361679",
+    "resume_SHA": "cd07f1819353f5ccdb34c14ef81ea976c2ebda74b08d4b1a028f52fa468f59d8",
+    "nonhead_digest": "8737d1412d386abf7e75719d6ed75411e63d1c16b3e764ae80bfd9a41f457b51",
+    "restore_sampler": "rebuild original InfiniteSampler seed then advance saved prefix; per-step data seeds fixed",
+    "files_retained_shared_not_transferred": true
+  },
+  {
+    "fit": "L8_21701_1e-04",
+    "step": 2000,
+    "head_path": "fits/L8_21701_1e-04/head_2000.pth",
+    "resume_path": "fits/L8_21701_1e-04/resume_2000.pth",
+    "head_SHA": "23ddcf720cd35c84db43987dc663426bb3c10e16e6f217949041faf65accc683",
+    "head_digest": "adb9dc06adb56a0612dd533cf46997d158c7bcd06f745c379dcd498329a82f9f",
+    "resume_SHA": "37684515d4b682d328320d3da3e413ced9cd031b87b246fc0da3c345c8db03d6",
+    "nonhead_digest": "8737d1412d386abf7e75719d6ed75411e63d1c16b3e764ae80bfd9a41f457b51",
+    "restore_sampler": "rebuild original InfiniteSampler seed then advance saved prefix; per-step data seeds fixed",
+    "files_retained_shared_not_transferred": true
+  },
+  {
+    "fit": "L8_21701_1e-04",
+    "step": 4000,
+    "head_path": "fits/L8_21701_1e-04/head_4000.pth",
+    "resume_path": "fits/L8_21701_1e-04/resume_4000.pth",
+    "head_SHA": "2ed21971ab2b7cbcb171761af705b9bf98fa4120dcf0fb7600525aab9c478c87",
+    "head_digest": "cbe74969c1e2fb87c4a487be16569500e565771fff05d8d90e5e519c88f24ada",
+    "resume_SHA": "a9529154300654a83e427a215c4dad2511b63753ad0b7355740d80aceafd82b5",
+    "nonhead_digest": "8737d1412d386abf7e75719d6ed75411e63d1c16b3e764ae80bfd9a41f457b51",
+    "restore_sampler": "rebuild original InfiniteSampler seed then advance saved prefix; per-step data seeds fixed",
+    "files_retained_shared_not_transferred": true
+  },
+  {
+    "fit": "SPARCS_21701_1e-04",
+    "step": 500,
+    "head_path": "fits/SPARCS_21701_1e-04/head_500.pth",
+    "resume_path": "fits/SPARCS_21701_1e-04/resume_500.pth",
+    "head_SHA": "0d5e3993bbcbf781c99954b125b345d821936b3f18723b41c9d6822d4f4b2d8a",
+    "head_digest": "c5302d773fa524cbe54cde3a6316e1365aacde0eabea3b0a229f660a53018e4e",
+    "resume_SHA": "2abbcb439e98404429f6d344e6161e21e5767a4d0180b725622244b12349246b",
+    "nonhead_digest": "8737d1412d386abf7e75719d6ed75411e63d1c16b3e764ae80bfd9a41f457b51",
+    "restore_sampler": "rebuild original InfiniteSampler seed then advance saved prefix; per-step data seeds fixed",
+    "files_retained_shared_not_transferred": true
+  },
+  {
+    "fit": "SPARCS_21701_1e-04",
+    "step": 1000,
+    "head_path": "fits/SPARCS_21701_1e-04/head_1000.pth",
+    "resume_path": "fits/SPARCS_21701_1e-04/resume_1000.pth",
+    "head_SHA": "8d8d00056e302835a1e611b0d657cea91f7c2e00213369852daa718cbc0c18dd",
+    "head_digest": "904db5224f162183b27de4a2628857ea171d0a3c318be98fc1bce08c3a374b32",
+    "resume_SHA": "1d2959463f226e53d86f70d3c6b70ceec53597140a5f49d796833a85c5cd4946",
+    "nonhead_digest": "8737d1412d386abf7e75719d6ed75411e63d1c16b3e764ae80bfd9a41f457b51",
+    "restore_sampler": "rebuild original InfiniteSampler seed then advance saved prefix; per-step data seeds fixed",
+    "files_retained_shared_not_transferred": true
+  },
+  {
+    "fit": "SPARCS_21701_1e-04",
+    "step": 2000,
+    "head_path": "fits/SPARCS_21701_1e-04/head_2000.pth",
+    "resume_path": "fits/SPARCS_21701_1e-04/resume_2000.pth",
+    "head_SHA": "50ee3e1f369e4e4d6886556b708ad6b73bf984aec2a072b3113c30188f6c9543",
+    "head_digest": "2e0eab52a3d6c20e0b65bb878329a40f68ab06d5c82c55daf9a8685f7079e3a4",
+    "resume_SHA": "e95b606bb836a4ffd12d172b8d1ba4f09c4f69e68ca7959ab79262ea0a7d6080",
+    "nonhead_digest": "8737d1412d386abf7e75719d6ed75411e63d1c16b3e764ae80bfd9a41f457b51",
+    "restore_sampler": "rebuild original InfiniteSampler seed then advance saved prefix; per-step data seeds fixed",
+    "files_retained_shared_not_transferred": true
+  },
+  {
+    "fit": "SPARCS_21701_1e-04",
+    "step": 4000,
+    "head_path": "fits/SPARCS_21701_1e-04/head_4000.pth",
+    "resume_path": "fits/SPARCS_21701_1e-04/resume_4000.pth",
+    "head_SHA": "c5bc57ef050c623c198a0bc232775299886f96a88bf701cc4978a1a9894af186",
+    "head_digest": "1a1a255f1dcefb7f8596ec00f783848585ec7a4cc6f78b58f909e1d27b6609ca",
+    "resume_SHA": "822b05cef84a40bebeef486b15aa33f100cfc342d85af966d691e70bbf1f3134",
+    "nonhead_digest": "8737d1412d386abf7e75719d6ed75411e63d1c16b3e764ae80bfd9a41f457b51",
+    "restore_sampler": "rebuild original InfiniteSampler seed then advance saved prefix; per-step data seeds fixed",
+    "files_retained_shared_not_transferred": true
+  }
+]

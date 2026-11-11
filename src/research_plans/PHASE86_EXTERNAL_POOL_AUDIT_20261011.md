@@ -52,4 +52,4 @@ Phase85的两个新seed未通过继续条件，关闭当前固定LoRA／LM分枝
 
 参考已有`PHASE65_ALCD_LABEL_REVIEW.md`与`PHASE65_ALCD_VISUAL_REVIEW.md`。官方数据入口：[Zenodo 1460961](https://zenodo.org/records/1460961)；原方法：[Baetens等，2019](https://doi.org/10.3390/RS11040433)。不能把半自动参考图直接称为逐像素人工真值。
 
-代码检查后按原流程push／pull执行；不覆盖历史、不自动同步原始数据或work_dirs。沿用2026-10-20北京时间预算截止。本文件仅立项，尚未执行审计。
+代码检查后按原流程push／pull执行；不覆盖历史、不自动同步原始数据或work_dirs。本文件仅立项，尚未执行审计。

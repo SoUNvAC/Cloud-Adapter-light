@@ -1,0 +1,77 @@
+[
+  {
+    "path": "src/research_plans/phase235_frozen_20261027/L8_TRAIN_INPUTS.json",
+    "bytes": 1106468,
+    "sha256": "747bf908d110e237d99c66738cf2d7a5d0a3ae9aa20adc64a571c870d96183c1"
+  },
+  {
+    "path": "src/research_plans/phase232_frozen_20261027/CALIBRATION_INPUTS.json",
+    "bytes": 43505,
+    "sha256": "b22475b9df3634f25bed93782400cf1eb5174ed350f27608e81daeb87692b6f1"
+  },
+  {
+    "path": "src/research_plans/phase235_frozen_20261027/EVAL_INPUTS.json",
+    "bytes": 2407132,
+    "sha256": "10ad220314af59d51a64d47126600c854b1c95771aad3a8c899aeb0a0eb94c9b"
+  },
+  {
+    "path": "outputs/phase235/phase235_20261027/delivery/TRAIN_NATIVE_BINDING.json",
+    "bytes": 1028554,
+    "sha256": "f148adc49543ea472c64946833aedc9db48dd3054dc6717779d709d4ebd3a937"
+  },
+  {
+    "path": "outputs/phase235/phase235_20261027/delivery/TRAIN_RAW_METADATA.json",
+    "bytes": 5447,
+    "sha256": "74e7e127d1dc93238dd2d155e8aca24190d9054c1dfd4ee7427120290197ec1d"
+  },
+  {
+    "path": "outputs/phase234/phase234_20261027/delivery/NATIVE_REFERENCES.json",
+    "bytes": 1521629,
+    "sha256": "dfe183587d0e1410af8d5c6751a1ad7914afbde99be350c15a5f0024b7bafe55"
+  },
+  {
+    "path": "outputs/phase234/phase234_20261027/delivery/INPUT_IDENTITY_ACCEPTED.json",
+    "bytes": 5611,
+    "sha256": "c5028602c54d5d21f059b246fa158223edbe940eb4104754a5c7201850af86f1"
+  },
+  {
+    "path": "outputs/phase234/phase234_20261027/TABLE1.json",
+    "bytes": 188892,
+    "sha256": "ed2f62ba761bbf25140af5dca2f0d46f068af8a5dcb0d2a6d91f1b5a41c18fda"
+  },
+  {
+    "path": "outputs/phase235/phase235_20261027/TABLE2.json",
+    "bytes": 67384,
+    "sha256": "1452dbcd0e5aa4489e49539c9e85144ef2b77caff3220b4588f2c93c67441a84"
+  },
+  {
+    "path": "outputs/phase217/phase217_20261023/delivery/seed21701/TRAINING_CONFIG_LOCK.json",
+    "bytes": 7100,
+    "sha256": "c5cf5db0949224612246ad830b5e82df63df7a80dfa7f43f05fcc94b7fefaffa"
+  },
+  {
+    "path": "outputs/phase222/phase222_20261024/delivery/seed21701/TRAINING_CONFIG_LOCK.json",
+    "bytes": 7209,
+    "sha256": "db9281a96bfde20fa50a9276666c511fa3dcf0af8572875fa25316b8653a8010"
+  },
+  {
+    "path": "outputs/phase222/phase222_20261024/code/train_phase222_seed21701.py",
+    "bytes": 18499,
+    "sha256": "5680ebab8a85d4616ce7887bfb91ce509e30c6a0fb8941d76973bd02bf2261be"
+  },
+  {
+    "path": "src/tools/execute_phase216.py",
+    "bytes": 25097,
+    "sha256": "284ec89365f5dfccbd6082bc4e5ea232daaf539341b2d4e408023fa0856a1458"
+  },
+  {
+    "path": "src/configs/protocol/phase64_target_parent_rgb.py",
+    "bytes": 5031,
+    "sha256": "6f07ea989e7596dbeca0b49e2c6ae89cee6c77ce774d4228d246cbf57eeab0f6"
+  },
+  {
+    "path": "src/tools/export_phase12_onnx.py",
+    "bytes": 8429,
+    "sha256": "d4161abdd0161c9e6da650918ece48970e7ca453a5fd667ea37e8d37be65ae7b"
+  }
+]

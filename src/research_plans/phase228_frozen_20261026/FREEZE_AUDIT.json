@@ -1,0 +1,27 @@
+{
+  "selection": "First file by (scene,name), first three distinct scenes, separately for each target_train pool. No performance-based selection.",
+  "inputs": [
+    {
+      "path": "outputs\\phase222\\phase222_20261024\\delivery\\L8_TRAIN_INPUT_LOCK.json",
+      "sha256": "99dcd60bf78921e80ab31b2e376b7d220b412b15b76f04d76f33cd668dfeebf6"
+    },
+    {
+      "path": "outputs\\phase217\\phase217_20261023\\delivery\\seed21701\\TARGET_SOURCE_SCHEDULE.json",
+      "sha256": "d01da7ebc61c3ab6b6a809d0200493fc09772c686207a1d5057822a53fba8dd5"
+    },
+    {
+      "path": "src\\dataset\\l8_biome_crop.py",
+      "sha256": "6e93e034bfdb0676f04cbf89bc11da5453136b1eb9774f204f7112f65e62b4fa"
+    },
+    {
+      "path": "src\\tools\\convert_datasets\\create_l8.py",
+      "sha256": "6757ff29eb8d502be0d2bf4e2c6990376793fb7aeee017f49775b6e649b0fb85"
+    },
+    {
+      "path": "src\\tools\\prepare_phase64_sparcs.py",
+      "sha256": "83fc8f93fa7a7d21edce2fae7344a3577dc1a2b25613b24d17fa6640b448984c"
+    }
+  ],
+  "unique_sparcs_train_paths": 60,
+  "samples_sha256": "bbb44bb02a4b8d8387a62dc6efe24a7ed8d40e7992e2c35c0a144e631c85c899"
+}

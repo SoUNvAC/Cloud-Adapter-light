@@ -59,7 +59,7 @@ bootstrap 以 scene 为重采样单位；若 confirmation 的 scene 数、正负
 - C组：只实现层级概率合并、冲突读出和外部风险阈值 router 原型；不训练、不注册正式配置。
 - D组：寻找第二个真正独立目标域，核对标签兼容性和公开基线；未取得数据与合法可比端点前不得声称复现完成。
 
-A/B/C/D 的输出只有在共同数据哈希、标签语义和scene-lock一致时才能合并。Phase 63 的正式运行必须另行记录目标、改动、网络情况、止损线与真实结果到 `src/LOG63.md`。
+A/B/C/D 的输出只有在共同数据哈希、标签语义和scene-lock一致时才能合并。Phase 63 的正式运行必须记录目标、改动、网络情况、止损线与真实结果到统一日志 `src/EXPERIMENT_LOG.md` 的 Phase 63 部分；原 `src/LOG63.md` 已封存在 `src/log_archives/phase_logs_originals_2026-10-06.zip`。
 
 ## 63A scene冻结实际预检结果：fail closed
 

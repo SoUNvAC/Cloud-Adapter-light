@@ -8,4 +8,4 @@
 
 先冻结一个新模型与A/B/C/D四阈值，再加载development。必须先完成全部32组A的分数、confusion、AP原样复现，才继续B/C/D评价。主要开发比较D−B宏实际召回，同时完整报告D−A和A−B、A−C、C−D；10000次配对相关组bootstrap，seed68010。只用153fit及32development原代表，不读Phase66/65b/65c/旧sealed像元、分数或指标，不加入ALCD，不新增网络前向。
 
-新产物只写shared/phase68_20261010并按授权交付到本地outputs/phase68/phase68_20261010；不传回任何work_dirs产物。原H1失败、原split及65c保留状态不变。2026-10-20北京时间为研究训练预算截止。已有Phase66结论只涉及原L3与L2，不给C/D背书。
+新产物只写shared/phase68_20261010并按授权交付到本地outputs/phase68/phase68_20261010；不传回任何work_dirs产物。原H1失败、原split及65c保留状态不变。已有Phase66结论只涉及原L3与L2，不给C/D背书。

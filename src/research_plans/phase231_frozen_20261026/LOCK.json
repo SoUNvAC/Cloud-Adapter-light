@@ -1,0 +1,37 @@
+{
+  "Source_SHA256": "64dd9a20288c35ab3362b8b1c1dafc216d9c44d60868475177e139d6be859dc9",
+  "heads": [
+    {
+      "domain": "L8",
+      "seed": 21701,
+      "phase": 222,
+      "endpoint_head_sha256": "65d87c33bce5d8161f406471fc4290aa7fc0d8ad7ea0a05db57c235ff3df47fa",
+      "checkpoint": "4000-step final C; no checkpoint selection"
+    },
+    {
+      "domain": "L8",
+      "seed": 21702,
+      "phase": 222,
+      "endpoint_head_sha256": "a04292be4b2fa8b2f35cca27e6f9b05c87d1b2a5f24e35281aaf81b2926883dd",
+      "checkpoint": "4000-step final C; no checkpoint selection"
+    }
+  ],
+  "alpha": 0.25,
+  "models_to_calibrate": [
+    "Source",
+    "L8_21701",
+    "L8_21702"
+  ],
+  "calibration_scenes": 60,
+  "validation_scenes": 10,
+  "fit": "one Cloud bias per model; equal-scene binary BCE; bounds [-5,5]; derivative bisection60; no validation selection",
+  "max_complete_input_forwards": 220,
+  "network_parameter_updates": 0,
+  "identities": {
+    "outputs\\phase217\\phase217_20261023\\delivery\\seed21701\\TARGET_SOURCE_SCHEDULE.json": "d01da7ebc61c3ab6b6a809d0200493fc09772c686207a1d5057822a53fba8dd5",
+    "outputs\\phase217\\phase217_20261023\\delivery\\seed21702\\TARGET_SOURCE_SCHEDULE.json": "eb0bf56dfb2cc9436b737aafdeadbc701be4990660f0de657ce43ffb87c7fe84",
+    "src\\research_plans\\phase230_frozen_20261026\\LOCK.json": "751238bacd63bf66d9efa37bc901f8b0d932ed1d3ce09d8c6321db9137928b00",
+    "src\\research_plans\\phase230_frozen_20261026\\SPARCS_VAL_INPUTS.json": "f42307c1c8342260edd66dfd1c1ae254d86be0e143f53cbc74beab859b99f852",
+    "outputs\\phase230\\phase230_20261026\\delivery\\SCORE_RECEIPTS.json": "df168834b358249ce32e2d2d406939f6542b83468937c499c245cbbc6fd5066c"
+  }
+}

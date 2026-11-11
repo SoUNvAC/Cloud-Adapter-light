@@ -1,0 +1,1022 @@
+[
+  {
+    "domain": "SPARCS",
+    "seed": 21701,
+    "strategy": "E",
+    "candidates": [
+      {
+        "domain": "SPARCS",
+        "alpha": null,
+        "lr": null,
+        "seed": 21701,
+        "source": true,
+        "step": null,
+        "strategy": "E",
+        "confusion": [
+          [
+            1857348,
+            20462,
+            19905
+          ],
+          [
+            134475,
+            339218,
+            54708
+          ],
+          [
+            128437,
+            11846,
+            55041
+          ]
+        ],
+        "pooled_mIoU": 55.61724712559876
+      },
+      {
+        "domain": "SPARCS",
+        "alpha": null,
+        "lr": 0.0001,
+        "seed": 21701,
+        "source": false,
+        "step": 500,
+        "strategy": "E",
+        "confusion": [
+          [
+            1836067,
+            36129,
+            25519
+          ],
+          [
+            69746,
+            432071,
+            26584
+          ],
+          [
+            69239,
+            25532,
+            100553
+          ]
+        ],
+        "pooled_mIoU": 68.00441772773519
+      },
+      {
+        "domain": "SPARCS",
+        "alpha": null,
+        "lr": 0.0001,
+        "seed": 21701,
+        "source": false,
+        "step": 1000,
+        "strategy": "E",
+        "confusion": [
+          [
+            1824075,
+            38186,
+            35454
+          ],
+          [
+            52075,
+            436270,
+            40056
+          ],
+          [
+            50949,
+            22806,
+            121569
+          ]
+        ],
+        "pooled_mIoU": 70.02572945301858
+      },
+      {
+        "domain": "SPARCS",
+        "alpha": null,
+        "lr": 0.0001,
+        "seed": 21701,
+        "source": false,
+        "step": 2000,
+        "strategy": "E",
+        "confusion": [
+          [
+            1855347,
+            25244,
+            17124
+          ],
+          [
+            78649,
+            423280,
+            26472
+          ],
+          [
+            84719,
+            21816,
+            88789
+          ]
+        ],
+        "pooled_mIoU": 66.91188435778179
+      },
+      {
+        "domain": "SPARCS",
+        "alpha": null,
+        "lr": 0.0001,
+        "seed": 21701,
+        "source": false,
+        "step": 4000,
+        "strategy": "E",
+        "confusion": [
+          [
+            1841091,
+            31087,
+            25537
+          ],
+          [
+            61886,
+            437860,
+            28655
+          ],
+          [
+            68443,
+            21829,
+            105052
+          ]
+        ],
+        "pooled_mIoU": 69.40199691180958
+      }
+    ],
+    "selected": {
+      "domain": "SPARCS",
+      "alpha": null,
+      "lr": 0.0001,
+      "seed": 21701,
+      "source": false,
+      "step": 1000,
+      "strategy": "E",
+      "confusion": [
+        [
+          1824075,
+          38186,
+          35454
+        ],
+        [
+          52075,
+          436270,
+          40056
+        ],
+        [
+          50949,
+          22806,
+          121569
+        ]
+      ],
+      "pooled_mIoU": 70.02572945301858
+    },
+    "selection_note": "restricted historical val to LR 1e-4, no new performance computation"
+  },
+  {
+    "domain": "SPARCS",
+    "seed": 21701,
+    "strategy": "W",
+    "candidates": [
+      {
+        "domain": "SPARCS",
+        "alpha": null,
+        "lr": null,
+        "seed": 21701,
+        "source": true,
+        "step": null,
+        "strategy": "W",
+        "confusion": [
+          [
+            1857348,
+            20462,
+            19905
+          ],
+          [
+            134475,
+            339218,
+            54708
+          ],
+          [
+            128437,
+            11846,
+            55041
+          ]
+        ],
+        "pooled_mIoU": 55.61724712559876
+      },
+      {
+        "domain": "SPARCS",
+        "alpha": 0.25,
+        "lr": 0.0001,
+        "seed": 21701,
+        "source": false,
+        "step": 4000,
+        "strategy": "W",
+        "confusion": [
+          [
+            1852049,
+            20937,
+            24729
+          ],
+          [
+            94431,
+            375800,
+            58170
+          ],
+          [
+            94740,
+            14291,
+            86293
+          ]
+        ],
+        "pooled_mIoU": 62.145948681947196
+      },
+      {
+        "domain": "SPARCS",
+        "alpha": 0.5,
+        "lr": 0.0001,
+        "seed": 21701,
+        "source": false,
+        "step": 4000,
+        "strategy": "W",
+        "confusion": [
+          [
+            1844405,
+            22773,
+            30537
+          ],
+          [
+            75665,
+            400765,
+            51971
+          ],
+          [
+            70869,
+            16147,
+            108308
+          ]
+        ],
+        "pooled_mIoU": 66.61634086559505
+      },
+      {
+        "domain": "SPARCS",
+        "alpha": 0.75,
+        "lr": 0.0001,
+        "seed": 21701,
+        "source": false,
+        "step": 4000,
+        "strategy": "W",
+        "confusion": [
+          [
+            1844060,
+            25019,
+            28636
+          ],
+          [
+            67914,
+            421411,
+            39076
+          ],
+          [
+            68125,
+            18519,
+            108680
+          ]
+        ],
+        "pooled_mIoU": 68.55712139846014
+      },
+      {
+        "domain": "SPARCS",
+        "alpha": 1,
+        "lr": 0.0001,
+        "seed": 21701,
+        "source": false,
+        "step": 4000,
+        "strategy": "W",
+        "confusion": [
+          [
+            1841091,
+            31087,
+            25537
+          ],
+          [
+            61886,
+            437860,
+            28655
+          ],
+          [
+            68443,
+            21829,
+            105052
+          ]
+        ],
+        "pooled_mIoU": 69.40199691180958
+      }
+    ],
+    "selected": {
+      "domain": "SPARCS",
+      "alpha": 1,
+      "lr": 0.0001,
+      "seed": 21701,
+      "source": false,
+      "step": 4000,
+      "strategy": "W",
+      "confusion": [
+        [
+          1841091,
+          31087,
+          25537
+        ],
+        [
+          61886,
+          437860,
+          28655
+        ],
+        [
+          68443,
+          21829,
+          105052
+        ]
+      ],
+      "pooled_mIoU": 69.40199691180958
+    },
+    "selection_note": "restricted historical val to LR 1e-4, no new performance computation"
+  },
+  {
+    "domain": "SPARCS",
+    "seed": 21701,
+    "strategy": "P",
+    "candidates": [
+      {
+        "domain": "SPARCS",
+        "alpha": null,
+        "lr": null,
+        "seed": 21701,
+        "source": true,
+        "step": null,
+        "strategy": "P",
+        "confusion": [
+          [
+            1857348,
+            20462,
+            19905
+          ],
+          [
+            134475,
+            339218,
+            54708
+          ],
+          [
+            128437,
+            11846,
+            55041
+          ]
+        ],
+        "pooled_mIoU": 55.61724712559876
+      },
+      {
+        "domain": "SPARCS",
+        "alpha": 0.25,
+        "lr": 0.0001,
+        "seed": 21701,
+        "source": false,
+        "step": 4000,
+        "strategy": "P",
+        "confusion": [
+          [
+            1858158,
+            19075,
+            20482
+          ],
+          [
+            110588,
+            371812,
+            46001
+          ],
+          [
+            112941,
+            13128,
+            69255
+          ]
+        ],
+        "pooled_mIoU": 60.12457277740929
+      },
+      {
+        "domain": "SPARCS",
+        "alpha": 0.5,
+        "lr": 0.0001,
+        "seed": 21701,
+        "source": false,
+        "step": 4000,
+        "strategy": "P",
+        "confusion": [
+          [
+            1857085,
+            21027,
+            19603
+          ],
+          [
+            82890,
+            411490,
+            34021
+          ],
+          [
+            93943,
+            16127,
+            85254
+          ]
+        ],
+        "pooled_mIoU": 65.50729853071388
+      },
+      {
+        "domain": "SPARCS",
+        "alpha": 0.75,
+        "lr": 0.0001,
+        "seed": 21701,
+        "source": false,
+        "step": 4000,
+        "strategy": "P",
+        "confusion": [
+          [
+            1849729,
+            26414,
+            21572
+          ],
+          [
+            67802,
+            430194,
+            30405
+          ],
+          [
+            77271,
+            19762,
+            98291
+          ]
+        ],
+        "pooled_mIoU": 68.38871968605208
+      },
+      {
+        "domain": "SPARCS",
+        "alpha": 1,
+        "lr": 0.0001,
+        "seed": 21701,
+        "source": false,
+        "step": 4000,
+        "strategy": "P",
+        "confusion": [
+          [
+            1841091,
+            31087,
+            25537
+          ],
+          [
+            61886,
+            437860,
+            28655
+          ],
+          [
+            68443,
+            21829,
+            105052
+          ]
+        ],
+        "pooled_mIoU": 69.40199691180958
+      }
+    ],
+    "selected": {
+      "domain": "SPARCS",
+      "alpha": 1,
+      "lr": 0.0001,
+      "seed": 21701,
+      "source": false,
+      "step": 4000,
+      "strategy": "P",
+      "confusion": [
+        [
+          1841091,
+          31087,
+          25537
+        ],
+        [
+          61886,
+          437860,
+          28655
+        ],
+        [
+          68443,
+          21829,
+          105052
+        ]
+      ],
+      "pooled_mIoU": 69.40199691180958
+    },
+    "selection_note": "restricted historical val to LR 1e-4, no new performance computation"
+  },
+  {
+    "domain": "SPARCS",
+    "seed": 21702,
+    "strategy": "E",
+    "candidates": [
+      {
+        "domain": "SPARCS",
+        "alpha": null,
+        "lr": null,
+        "seed": 21702,
+        "source": true,
+        "step": null,
+        "strategy": "E",
+        "confusion": [
+          [
+            1857348,
+            20462,
+            19905
+          ],
+          [
+            134475,
+            339218,
+            54708
+          ],
+          [
+            128437,
+            11846,
+            55041
+          ]
+        ],
+        "pooled_mIoU": 55.61724712559876
+      },
+      {
+        "domain": "SPARCS",
+        "alpha": null,
+        "lr": 0.0001,
+        "seed": 21702,
+        "source": false,
+        "step": 500,
+        "strategy": "E",
+        "confusion": [
+          [
+            1828296,
+            39280,
+            30139
+          ],
+          [
+            62880,
+            434601,
+            30920
+          ],
+          [
+            57134,
+            25054,
+            113136
+          ]
+        ],
+        "pooled_mIoU": 69.35353440269158
+      },
+      {
+        "domain": "SPARCS",
+        "alpha": null,
+        "lr": 0.0001,
+        "seed": 21702,
+        "source": false,
+        "step": 1000,
+        "strategy": "E",
+        "confusion": [
+          [
+            1845532,
+            30041,
+            22142
+          ],
+          [
+            75527,
+            422809,
+            30065
+          ],
+          [
+            67765,
+            23527,
+            104032
+          ]
+        ],
+        "pooled_mIoU": 68.36731709483757
+      },
+      {
+        "domain": "SPARCS",
+        "alpha": null,
+        "lr": 0.0001,
+        "seed": 21702,
+        "source": false,
+        "step": 2000,
+        "strategy": "E",
+        "confusion": [
+          [
+            1844204,
+            26636,
+            26875
+          ],
+          [
+            66669,
+            428567,
+            33165
+          ],
+          [
+            62106,
+            20549,
+            112669
+          ]
+        ],
+        "pooled_mIoU": 69.86109712031886
+      },
+      {
+        "domain": "SPARCS",
+        "alpha": null,
+        "lr": 0.0001,
+        "seed": 21702,
+        "source": false,
+        "step": 4000,
+        "strategy": "E",
+        "confusion": [
+          [
+            1844040,
+            29187,
+            24488
+          ],
+          [
+            65745,
+            432078,
+            30578
+          ],
+          [
+            66769,
+            21845,
+            106710
+          ]
+        ],
+        "pooled_mIoU": 69.3385946400795
+      }
+    ],
+    "selected": {
+      "domain": "SPARCS",
+      "alpha": null,
+      "lr": 0.0001,
+      "seed": 21702,
+      "source": false,
+      "step": 2000,
+      "strategy": "E",
+      "confusion": [
+        [
+          1844204,
+          26636,
+          26875
+        ],
+        [
+          66669,
+          428567,
+          33165
+        ],
+        [
+          62106,
+          20549,
+          112669
+        ]
+      ],
+      "pooled_mIoU": 69.86109712031886
+    },
+    "selection_note": "restricted historical val to LR 1e-4, no new performance computation"
+  },
+  {
+    "domain": "SPARCS",
+    "seed": 21702,
+    "strategy": "W",
+    "candidates": [
+      {
+        "domain": "SPARCS",
+        "alpha": null,
+        "lr": null,
+        "seed": 21702,
+        "source": true,
+        "step": null,
+        "strategy": "W",
+        "confusion": [
+          [
+            1857348,
+            20462,
+            19905
+          ],
+          [
+            134475,
+            339218,
+            54708
+          ],
+          [
+            128437,
+            11846,
+            55041
+          ]
+        ],
+        "pooled_mIoU": 55.61724712559876
+      },
+      {
+        "domain": "SPARCS",
+        "alpha": 0.25,
+        "lr": 0.0001,
+        "seed": 21702,
+        "source": false,
+        "step": 4000,
+        "strategy": "W",
+        "confusion": [
+          [
+            1852254,
+            21051,
+            24410
+          ],
+          [
+            94522,
+            374317,
+            59562
+          ],
+          [
+            91475,
+            14298,
+            89551
+          ]
+        ],
+        "pooled_mIoU": 62.45094827704075
+      },
+      {
+        "domain": "SPARCS",
+        "alpha": 0.5,
+        "lr": 0.0001,
+        "seed": 21702,
+        "source": false,
+        "step": 4000,
+        "strategy": "W",
+        "confusion": [
+          [
+            1844634,
+            23473,
+            29608
+          ],
+          [
+            75654,
+            399678,
+            53069
+          ],
+          [
+            68677,
+            16178,
+            110469
+          ]
+        ],
+        "pooled_mIoU": 66.80964937022526
+      },
+      {
+        "domain": "SPARCS",
+        "alpha": 0.75,
+        "lr": 0.0001,
+        "seed": 21702,
+        "source": false,
+        "step": 4000,
+        "strategy": "W",
+        "confusion": [
+          [
+            1844505,
+            25630,
+            27580
+          ],
+          [
+            69500,
+            418626,
+            40275
+          ],
+          [
+            65712,
+            18603,
+            111009
+          ]
+        ],
+        "pooled_mIoU": 68.67228784615273
+      },
+      {
+        "domain": "SPARCS",
+        "alpha": 1,
+        "lr": 0.0001,
+        "seed": 21702,
+        "source": false,
+        "step": 4000,
+        "strategy": "W",
+        "confusion": [
+          [
+            1844040,
+            29187,
+            24488
+          ],
+          [
+            65745,
+            432078,
+            30578
+          ],
+          [
+            66769,
+            21845,
+            106710
+          ]
+        ],
+        "pooled_mIoU": 69.3385946400795
+      }
+    ],
+    "selected": {
+      "domain": "SPARCS",
+      "alpha": 1,
+      "lr": 0.0001,
+      "seed": 21702,
+      "source": false,
+      "step": 4000,
+      "strategy": "W",
+      "confusion": [
+        [
+          1844040,
+          29187,
+          24488
+        ],
+        [
+          65745,
+          432078,
+          30578
+        ],
+        [
+          66769,
+          21845,
+          106710
+        ]
+      ],
+      "pooled_mIoU": 69.3385946400795
+    },
+    "selection_note": "restricted historical val to LR 1e-4, no new performance computation"
+  },
+  {
+    "domain": "SPARCS",
+    "seed": 21702,
+    "strategy": "P",
+    "candidates": [
+      {
+        "domain": "SPARCS",
+        "alpha": null,
+        "lr": null,
+        "seed": 21702,
+        "source": true,
+        "step": null,
+        "strategy": "P",
+        "confusion": [
+          [
+            1857348,
+            20462,
+            19905
+          ],
+          [
+            134475,
+            339218,
+            54708
+          ],
+          [
+            128437,
+            11846,
+            55041
+          ]
+        ],
+        "pooled_mIoU": 55.61724712559876
+      },
+      {
+        "domain": "SPARCS",
+        "alpha": 0.25,
+        "lr": 0.0001,
+        "seed": 21702,
+        "source": false,
+        "step": 4000,
+        "strategy": "P",
+        "confusion": [
+          [
+            1858607,
+            19146,
+            19962
+          ],
+          [
+            111362,
+            370358,
+            46681
+          ],
+          [
+            111595,
+            13099,
+            70630
+          ]
+        ],
+        "pooled_mIoU": 60.2209749653411
+      },
+      {
+        "domain": "SPARCS",
+        "alpha": 0.5,
+        "lr": 0.0001,
+        "seed": 21702,
+        "source": false,
+        "step": 4000,
+        "strategy": "P",
+        "confusion": [
+          [
+            1857617,
+            21251,
+            18847
+          ],
+          [
+            84752,
+            408260,
+            35389
+          ],
+          [
+            91395,
+            16050,
+            87879
+          ]
+        ],
+        "pooled_mIoU": 65.6517168399325
+      },
+      {
+        "domain": "SPARCS",
+        "alpha": 0.75,
+        "lr": 0.0001,
+        "seed": 21702,
+        "source": false,
+        "step": 4000,
+        "strategy": "P",
+        "confusion": [
+          [
+            1851666,
+            25345,
+            20704
+          ],
+          [
+            70756,
+            425542,
+            32103
+          ],
+          [
+            75298,
+            19668,
+            100358
+          ]
+        ],
+        "pooled_mIoU": 68.41937456970294
+      },
+      {
+        "domain": "SPARCS",
+        "alpha": 1,
+        "lr": 0.0001,
+        "seed": 21702,
+        "source": false,
+        "step": 4000,
+        "strategy": "P",
+        "confusion": [
+          [
+            1844040,
+            29187,
+            24488
+          ],
+          [
+            65745,
+            432078,
+            30578
+          ],
+          [
+            66769,
+            21845,
+            106710
+          ]
+        ],
+        "pooled_mIoU": 69.3385946400795
+      }
+    ],
+    "selected": {
+      "domain": "SPARCS",
+      "alpha": 1,
+      "lr": 0.0001,
+      "seed": 21702,
+      "source": false,
+      "step": 4000,
+      "strategy": "P",
+      "confusion": [
+        [
+          1844040,
+          29187,
+          24488
+        ],
+        [
+          65745,
+          432078,
+          30578
+        ],
+        [
+          66769,
+          21845,
+          106710
+        ]
+      ],
+      "pooled_mIoU": 69.3385946400795
+    },
+    "selection_note": "restricted historical val to LR 1e-4, no new performance computation"
+  }
+]

@@ -1,0 +1,31 @@
+{
+  "phase": 235,
+  "date": "2026-10-27",
+  "Source_SHA256": "64dd9a20288c35ab3362b8b1c1dafc216d9c44d60868475177e139d6be859dc9",
+  "new_network_training_updates": 0,
+  "new_scalar_fits": 1,
+  "L8_training_support": "1560 original inputs, 18 scenes; native Fill excluded; binding pending until execution",
+  "loss_weighting": "scene equal, all valid input pixels within scene equal",
+  "bias_bounds": [
+    -5,
+    5
+  ],
+  "bisection_iterations": 60,
+  "SPARCS_Source_bias": 1.5086972783056742,
+  "primary_test_comparisons": [
+    "Source+B minus Source",
+    "Source+B minus val-selected W",
+    "Source+B minus C endpoint"
+  ],
+  "bootstrap_draws": 10000,
+  "bootstrap_seed": 23501,
+  "historical_test_exposed": true,
+  "maximum_input_forwards": 4800,
+  "maximum_GPU_hours": 1,
+  "CPU_analysis_hours": 4,
+  "GPU_GiB": 20,
+  "CPU_GiB": 16,
+  "new_temporary_cache_GiB": 6,
+  "new_delivery_MiB": 512,
+  "next_phase_automatic_execution": false
+}

@@ -1,0 +1,78 @@
+{
+  "phase": 236,
+  "date": "2026-10-27",
+  "Source_SHA256": "64dd9a20288c35ab3362b8b1c1dafc216d9c44d60868475177e139d6be859dc9",
+  "seeds": [
+    21701,
+    21702
+  ],
+  "targets": [
+    "L8",
+    "SPARCS"
+  ],
+  "base_learning_rates": [
+    0.0001,
+    3e-05
+  ],
+  "steps_per_fit": 4000,
+  "number_of_fits": 8,
+  "saved_steps": [
+    500,
+    1000,
+    2000,
+    4000
+  ],
+  "trainable_parameters": 1316516,
+  "uniform_L8_train_Fill_ignore": true,
+  "Fill_mask_loss_and_matching_preflight_required": true,
+  "training_scene_counts": {
+    "L8": 18,
+    "SPARCS": 60
+  },
+  "candidates_per_strategy_per_target_seed": 9,
+  "E_candidates": {
+    "source": true,
+    "learning_rates": [
+      0.0001,
+      3e-05
+    ],
+    "steps": [
+      500,
+      1000,
+      2000,
+      4000
+    ]
+  },
+  "W_P_candidates": {
+    "source": true,
+    "learning_rates": [
+      0.0001,
+      3e-05
+    ],
+    "endpoint_step": 4000,
+    "alphas": [
+      0.25,
+      0.5,
+      0.75,
+      1
+    ]
+  },
+  "selection": "max val pooled mIoU, exact tie Source first; E then step ascending then LR ascending; W/P then alpha ascending then LR ascending",
+  "test_selection_access_order": "lock all 12 choices before test inference",
+  "historical_test_exposed": true,
+  "bootstrap_seed": 23601,
+  "bootstrap_draws": 10000,
+  "maximum_updates": 32000,
+  "maximum_input_forwards": 85000,
+  "main_input_forward_upper_bound": 79810,
+  "main_training_backwards": 32000,
+  "maximum_GPU_hours": 6,
+  "maximum_CPU_analysis_hours": 4,
+  "CPU_GiB": 16,
+  "GPU_GiB": 20,
+  "maximum_new_remote_GiB": 8,
+  "maximum_delivery_GiB": 2,
+  "source_pixels_allowed": false,
+  "new_calibration_fits": 0,
+  "next_phase_automatic_execution": false
+}

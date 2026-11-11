@@ -1,0 +1,57 @@
+[
+  {
+    "path": "src/research_plans/phase236_frozen_20261027/TRAIN_INPUTS.json",
+    "bytes": 1194884,
+    "sha256": "984a2b59d54ab8c44095e4fec16ff781238a41d77629bb08119b8b934cd9b2c2"
+  },
+  {
+    "path": "src/research_plans/phase236_frozen_20261027/EVAL_INPUTS.json",
+    "bytes": 2407132,
+    "sha256": "10ad220314af59d51a64d47126600c854b1c95771aad3a8c899aeb0a0eb94c9b"
+  },
+  {
+    "path": "outputs/phase236/phase236_20261027/VAL_ALL_CANDIDATES.json",
+    "bytes": 46451,
+    "sha256": "ebc45c412598d38982c90b088bab1123c4ba6e0794e9d29d040f5df594b9acd3"
+  },
+  {
+    "path": "outputs/phase236/phase236_20261027/HEAD_RESUME_INVENTORY.json",
+    "bytes": 22381,
+    "sha256": "c8de08331bdbdea676a541a1d784811985f602b353fddc6a90d872b83a9675a8"
+  },
+  {
+    "path": "outputs/phase236/phase236_20261027/PER_SCENE.json",
+    "bytes": 1162915,
+    "sha256": "3a6e1d2972f31d9ab043f4647e78757cac7443a5465af6e1fc34e815ef577a93"
+  },
+  {
+    "path": "outputs/phase236/phase236_20261027/TABLE2.json",
+    "bytes": 66371,
+    "sha256": "6f44cc5c757705e8dd50a5b7480a7a90b3aaf28afe6b878beb25f75a83bf0349"
+  },
+  {
+    "path": "outputs/phase236/phase236_20261027/RESULT.md",
+    "bytes": 10649,
+    "sha256": "3eed3b68cd7fa72dddbe175bfe8a8a8425fcb0a52cb13001cd3543af5e224214"
+  },
+  {
+    "path": "outputs/phase236/phase236_20261027/code/train_phase236_recovery02.py",
+    "bytes": 11830,
+    "sha256": "aefc874e9aec0282296e3ba9a1ddb34228dbe30a7dc8ad83748651f32f740d11"
+  },
+  {
+    "path": "outputs/phase236/phase236_20261027/code/phase236_common.py",
+    "bytes": 4744,
+    "sha256": "3056a8d35875eb71984a3078088222939cffd801ca93292d876935cf5575f815"
+  },
+  {
+    "path": "outputs/phase236/phase236_20261027/code/evaluate_phase236_recovery03.py",
+    "bytes": 9293,
+    "sha256": "4c1104e3b034ce2e5497c408c93fbd2a8b7739ad3d51297666dd385a6bf8c5b1"
+  },
+  {
+    "path": "src/research_plans/PHASE236_MATCHED_OPTIMIZATION_SELECTION.md",
+    "bytes": 9146,
+    "sha256": "342886c9fcf29655c73fbc8edcddffb3a5a5021fb5213d99af297a8796291c40"
+  }
+]

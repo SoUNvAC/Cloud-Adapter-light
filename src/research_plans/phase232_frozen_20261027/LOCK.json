@@ -1,0 +1,48 @@
+{
+  "date": "2026-10-27",
+  "Source_SHA256": "64dd9a20288c35ab3362b8b1c1dafc216d9c44d60868475177e139d6be859dc9",
+  "heads": [
+    {
+      "domain": "L8",
+      "seed": 21701,
+      "phase": 222,
+      "endpoint_head_sha256": "65d87c33bce5d8161f406471fc4290aa7fc0d8ad7ea0a05db57c235ff3df47fa",
+      "checkpoint": "4000-step final C; no checkpoint selection"
+    },
+    {
+      "domain": "L8",
+      "seed": 21702,
+      "phase": 222,
+      "endpoint_head_sha256": "a04292be4b2fa8b2f35cca27e6f9b05c87d1b2a5f24e35281aaf81b2926883dd",
+      "checkpoint": "4000-step final C; no checkpoint selection"
+    }
+  ],
+  "alpha": 0.25,
+  "models": [
+    "Source",
+    "L8_21701",
+    "L8_21702"
+  ],
+  "new_calibration_scalars": 3,
+  "network_parameter_updates": 0,
+  "calibration_images": 60,
+  "validation_images": 10,
+  "validation_new_forwards": 0,
+  "max_complete_input_forwards": 220,
+  "max_GPU_seconds": 1800,
+  "bounds": [
+    -5,
+    5
+  ],
+  "bisection_iterations": 60,
+  "objective": "equal-scene, equal-valid-pixel three-class CE with Cloud-only log-score bias; all reference classes included",
+  "identities": {
+    "outputs\\phase231\\phase231_20261026\\delivery\\CALIBRATION_ACTUAL_INPUTS.json": "a06fb63fee35568ee8592d592a330ed02edd7b1847d96c6400479b28cbe61b32",
+    "src\\research_plans\\phase231_frozen_20261026\\LOCK.json": "67abfe6bbbd071b4b54f6b4440dc0ac8b24e9a4499cc1233e853282bb29ea81c",
+    "src\\research_plans\\phase230_frozen_20261026\\SPARCS_VAL_INPUTS.json": "f42307c1c8342260edd66dfd1c1ae254d86be0e143f53cbc74beab859b99f852",
+    "outputs\\phase231\\phase231_20261026\\delivery\\CALIBRATION_RECEIPTS.json": "514bf94ad1d4e6f1e3ff9b0bb057112e6be95d5bc219c7f91e3cba060975cad4",
+    "outputs\\phase231\\phase231_20261026\\delivery\\BIAS_FROZEN.json": "ccb695dbeb5cb96764ee949e7f28bdf4a27e0a40eeba45a90e3fd3d55db8b2a3",
+    "outputs\\phase230\\phase230_20261026\\delivery\\SCORE_RECEIPTS.json": "df168834b358249ce32e2d2d406939f6542b83468937c499c245cbbc6fd5066c",
+    "src\\tools\\execute_phase231.py": "0a5b06eae8d976fab7aa697fd8d5a899e330191db588da83f09daa9f34798539"
+  }
+}

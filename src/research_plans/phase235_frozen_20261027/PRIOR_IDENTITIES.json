@@ -1,0 +1,57 @@
+[
+  {
+    "path": "outputs/phase222/phase222_20261024/delivery/L8_TRAIN_INPUT_LOCK.json",
+    "bytes": 1084625,
+    "sha256": "99dcd60bf78921e80ab31b2e376b7d220b412b15b76f04d76f33cd668dfeebf6"
+  },
+  {
+    "path": "outputs/phase234/phase234_20261027/EVAL_INPUTS.json",
+    "bytes": 2407132,
+    "sha256": "10ad220314af59d51a64d47126600c854b1c95771aad3a8c899aeb0a0eb94c9b"
+  },
+  {
+    "path": "outputs/phase232/phase232_20261027/delivery/BIAS_FROZEN.json",
+    "bytes": 68531,
+    "sha256": "cc206e69c097e3f50dc8b2c0e7253e3809b40e431af14b152b49c5a7310db3c1"
+  },
+  {
+    "path": "outputs/phase234/phase234_20261027/delivery/INPUT_IDENTITY_ACCEPTED.json",
+    "bytes": 5611,
+    "sha256": "c5028602c54d5d21f059b246fa158223edbe940eb4104754a5c7201850af86f1"
+  },
+  {
+    "path": "outputs/phase234/phase234_20261027/delivery/NATIVE_REFERENCES.json",
+    "bytes": 1521629,
+    "sha256": "dfe183587d0e1410af8d5c6751a1ad7914afbde99be350c15a5f0024b7bafe55"
+  },
+  {
+    "path": "outputs/phase234/phase234_20261027/delivery/VAL_SELECTION_LOCK.json",
+    "bytes": 35158,
+    "sha256": "db79afbda115a6ee895dd1c66ebec4076f2ca24fad1c904a93a3b6d0d8133179"
+  },
+  {
+    "path": "outputs/phase234/phase234_20261027/TABLE1.json",
+    "bytes": 188892,
+    "sha256": "ed2f62ba761bbf25140af5dca2f0d46f068af8a5dcb0d2a6d91f1b5a41c18fda"
+  },
+  {
+    "path": "outputs/phase234/phase234_20261027/PER_SCENE.json",
+    "bytes": 1044276,
+    "sha256": "b78e2d545e9f024e62b9f7ce58037dabbc0155a967c3f922e58148a163937e28"
+  },
+  {
+    "path": "outputs/phase232/phase232_20261027/VAL_PER_SCENE.json",
+    "bytes": 78116,
+    "sha256": "75bb3a8f9b53db2f8aa57751c0455960b8554d55f904ddd3e775ae4a17f01e1b"
+  },
+  {
+    "path": "outputs/phase234/phase234_20261027/code/execute_phase234.py",
+    "bytes": 15078,
+    "sha256": "5b6d6e9ad590d04382cd60dc6123f146b5fdb4b1a59fbd1b85143ab1991a5387"
+  },
+  {
+    "path": "outputs/phase232/phase232_20261027/delivery/code/fit_phase232.py",
+    "bytes": 4517,
+    "sha256": "2fa5dac85120543cea8079818d8bb5704605ceff872dc5b9e7c16ccd89979638"
+  }
+]

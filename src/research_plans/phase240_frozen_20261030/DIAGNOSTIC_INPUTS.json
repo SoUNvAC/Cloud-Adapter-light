@@ -1,0 +1,198 @@
+{
+  "L8": [
+    {
+      "new_split": "target_train",
+      "old_split": "train",
+      "biome": "water",
+      "scene": "LC82150712013152LGN00",
+      "x": "2048",
+      "y": "2560",
+      "name": "water_LC82150712013152LGN00_patch_2048_2560.png",
+      "image_path": "/home/scv/Cloud-Adapter-light/src/data/l8_biome/img_dir/train/water_LC82150712013152LGN00_patch_2048_2560.png",
+      "mask_path": "/home/scv/Cloud-Adapter-light/src/data/l8_biome/ann_dir/train/water_LC82150712013152LGN00_patch_2048_2560.png",
+      "image_sha256": "e7da2862d3fb52875d26a8f72c83d263e4dfd83280d21a0210dafa260a75f6f4",
+      "mask_sha256": "c3b7e987ac962aa31d8e8fa1d8f8a0b76015d30e5fda1e3c008e7103b436e6fe",
+      "usgs_shadows": "yes"
+    },
+    {
+      "new_split": "target_train",
+      "old_split": "test",
+      "biome": "urban",
+      "scene": "LC81620432014072LGN00",
+      "x": "512",
+      "y": "3584",
+      "name": "urban_LC81620432014072LGN00_patch_512_3584.png",
+      "image_path": "/home/scv/Cloud-Adapter-light/src/data/l8_biome/img_dir/test/urban_LC81620432014072LGN00_patch_512_3584.png",
+      "mask_path": "/home/scv/Cloud-Adapter-light/src/data/l8_biome/ann_dir/test/urban_LC81620432014072LGN00_patch_512_3584.png",
+      "image_sha256": "efac66e0474e255c77c11382fd2769db7ef96c1b2d37037f11fc66815ec6bf54",
+      "mask_sha256": "33c576cf9df94d6c277cd6fbdcf06fdad0da5dcb2157d12d5c92800e347c9913",
+      "usgs_shadows": "yes"
+    },
+    {
+      "new_split": "target_train",
+      "old_split": "train",
+      "biome": "grass_crops",
+      "scene": "LC81490432014141LGN00",
+      "x": "4608",
+      "y": "6144",
+      "name": "grass_crops_LC81490432014141LGN00_patch_4608_6144.png",
+      "image_path": "/home/scv/Cloud-Adapter-light/src/data/l8_biome/img_dir/train/grass_crops_LC81490432014141LGN00_patch_4608_6144.png",
+      "mask_path": "/home/scv/Cloud-Adapter-light/src/data/l8_biome/ann_dir/train/grass_crops_LC81490432014141LGN00_patch_4608_6144.png",
+      "image_sha256": "acc995df03f9a8859ac33c395bb965b57d29dff0fb7ad4d4927d09806d2cb985",
+      "mask_sha256": "7a6ec6ca32bc5155416a63a73675c2be5dcdbd44af048058f968a41d46fdccbb",
+      "usgs_shadows": "yes"
+    },
+    {
+      "new_split": "target_train",
+      "old_split": "train",
+      "biome": "forest",
+      "scene": "LC81310182013108LGN01",
+      "x": "5632",
+      "y": "2560",
+      "name": "forest_LC81310182013108LGN01_patch_5632_2560.png",
+      "image_path": "/home/scv/Cloud-Adapter-light/src/data/l8_biome/img_dir/train/forest_LC81310182013108LGN01_patch_5632_2560.png",
+      "mask_path": "/home/scv/Cloud-Adapter-light/src/data/l8_biome/ann_dir/train/forest_LC81310182013108LGN01_patch_5632_2560.png",
+      "image_sha256": "a2a1a2b72afc058b13ee1109b9a13bd51f5001d31dfa77ba4609b87e5711cab4",
+      "mask_sha256": "b3a0e1b300d1097ce938c82fc44739e875bad08957d43ee8d3d3452f519371a5",
+      "usgs_shadows": "yes"
+    },
+    {
+      "new_split": "target_train",
+      "old_split": "train",
+      "biome": "shrubland",
+      "scene": "LC80750172013163LGN00",
+      "x": "6144",
+      "y": "1024",
+      "name": "shrubland_LC80750172013163LGN00_patch_6144_1024.png",
+      "image_path": "/home/scv/Cloud-Adapter-light/src/data/l8_biome/img_dir/train/shrubland_LC80750172013163LGN00_patch_6144_1024.png",
+      "mask_path": "/home/scv/Cloud-Adapter-light/src/data/l8_biome/ann_dir/train/shrubland_LC80750172013163LGN00_patch_6144_1024.png",
+      "image_sha256": "c0f9c3a5ed514f6b0421fc809ed2c9a4447ed04f98faed087bde39f2caec44b0",
+      "mask_sha256": "e3f1b00cace1412c23d76f0e3c082af817e71b48c9f32b88bc34bdb1224abcec",
+      "usgs_shadows": "yes"
+    },
+    {
+      "new_split": "target_train",
+      "old_split": "train",
+      "biome": "grass_crops",
+      "scene": "LC81750512013208LGN00",
+      "x": "4608",
+      "y": "6656",
+      "name": "grass_crops_LC81750512013208LGN00_patch_4608_6656.png",
+      "image_path": "/home/scv/Cloud-Adapter-light/src/data/l8_biome/img_dir/train/grass_crops_LC81750512013208LGN00_patch_4608_6656.png",
+      "mask_path": "/home/scv/Cloud-Adapter-light/src/data/l8_biome/ann_dir/train/grass_crops_LC81750512013208LGN00_patch_4608_6656.png",
+      "image_sha256": "487030a0c834dee52a4b6b68483762e2a4c5212a6665537d60ed58dae8a35e6f",
+      "mask_sha256": "7fc2cb4144cd31cf18a1d156ee12da6c3ba0b6e95fbae6f7ed7b4e9c136b3ab6",
+      "usgs_shadows": "yes"
+    },
+    {
+      "new_split": "target_train",
+      "old_split": "train",
+      "biome": "forest",
+      "scene": "LC80200462014005LGN00",
+      "x": "6144",
+      "y": "6144",
+      "name": "forest_LC80200462014005LGN00_patch_6144_6144.png",
+      "image_path": "/home/scv/Cloud-Adapter-light/src/data/l8_biome/img_dir/train/forest_LC80200462014005LGN00_patch_6144_6144.png",
+      "mask_path": "/home/scv/Cloud-Adapter-light/src/data/l8_biome/ann_dir/train/forest_LC80200462014005LGN00_patch_6144_6144.png",
+      "image_sha256": "64da01cf747b6565dd99335fea95f7d6ab84f7b2abfccd3fd8b6809c468b65ed",
+      "mask_sha256": "cfda4f1f6eaf27bbdbb3a737c5d39cf85b6a97aec2e0fff874f88962282a9bcd",
+      "usgs_shadows": "yes"
+    },
+    {
+      "new_split": "target_train",
+      "old_split": "train",
+      "biome": "grass_crops",
+      "scene": "LC81820302014180LGN00",
+      "x": "4096",
+      "y": "5120",
+      "name": "grass_crops_LC81820302014180LGN00_patch_4096_5120.png",
+      "image_path": "/home/scv/Cloud-Adapter-light/src/data/l8_biome/img_dir/train/grass_crops_LC81820302014180LGN00_patch_4096_5120.png",
+      "mask_path": "/home/scv/Cloud-Adapter-light/src/data/l8_biome/ann_dir/train/grass_crops_LC81820302014180LGN00_patch_4096_5120.png",
+      "image_sha256": "0ecd746be63fc882944a513c14426a1c361f639e7afb01c67bbb590fb01d5d81",
+      "mask_sha256": "70e7fbcbbdaaf447b3963a1bdd531f6ed3eee21d6571b6a6e7390039f238881c",
+      "usgs_shadows": "yes"
+    }
+  ],
+  "SPARCS": [
+    {
+      "scene": "LC81360162013159LGN00",
+      "name": "LC81360162013159LGN00_18_photo.png",
+      "image_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC81360162013159LGN00_18_photo.png",
+      "mask_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC81360162013159LGN00_18_mask.png",
+      "split": "original SPARCS target_train",
+      "sha_note": "Original schedule SHA is augmented tensor identity, not file SHA; record actual file identities before calibration.",
+      "image_sha256": "b21ab187509d5843c3f6a16933a86cf1157225dd8d86638a9b14f566f3cf9315",
+      "mask_sha256": "f2cf9ec47aea817267b6f454ce2911d1ad110c6f32781afd2d61ac1364e66068"
+    },
+    {
+      "scene": "LC81610712013222LGN00",
+      "name": "LC81610712013222LGN00_09_photo.png",
+      "image_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC81610712013222LGN00_09_photo.png",
+      "mask_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC81610712013222LGN00_09_mask.png",
+      "split": "original SPARCS target_train",
+      "sha_note": "Original schedule SHA is augmented tensor identity, not file SHA; record actual file identities before calibration.",
+      "image_sha256": "f95d6c26d2e9dff12424d32fbeb0bbd19b7a630b5bc1da03501ebed0c254c6dc",
+      "mask_sha256": "00c64d2f7249c95a1f2fc3ed8729bdbcf12a619973889838e2a5b9c077916554"
+    },
+    {
+      "scene": "LC80630462013191LGN00",
+      "name": "LC80630462013191LGN00_11_photo.png",
+      "image_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC80630462013191LGN00_11_photo.png",
+      "mask_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC80630462013191LGN00_11_mask.png",
+      "split": "original SPARCS target_train",
+      "sha_note": "Original schedule SHA is augmented tensor identity, not file SHA; record actual file identities before calibration.",
+      "image_sha256": "e8ca77fe5f7a85e68470fee74332d3570ee22b06767a378ebb2b47b26764a205",
+      "mask_sha256": "cbe822b421e97a9218591b7a04266dc4171bf9f928ee6a368fe23121026d5e84"
+    },
+    {
+      "scene": "LC81580442014140LGN00",
+      "name": "LC81580442014140LGN00_21_photo.png",
+      "image_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC81580442014140LGN00_21_photo.png",
+      "mask_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC81580442014140LGN00_21_mask.png",
+      "split": "original SPARCS target_train",
+      "sha_note": "Original schedule SHA is augmented tensor identity, not file SHA; record actual file identities before calibration.",
+      "image_sha256": "73bba9237a0d091d444e0e9e68b8b01222ad77c0e61c964cd726cf86b794143c",
+      "mask_sha256": "5ebc0598a5976160528c6be5690ee8e43b0684edfa745d946e37e54eab9917ad"
+    },
+    {
+      "scene": "LC81230362013276LGN00",
+      "name": "LC81230362013276LGN00_19_photo.png",
+      "image_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC81230362013276LGN00_19_photo.png",
+      "mask_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC81230362013276LGN00_19_mask.png",
+      "split": "original SPARCS target_train",
+      "sha_note": "Original schedule SHA is augmented tensor identity, not file SHA; record actual file identities before calibration.",
+      "image_sha256": "86d308cbc8b16ef8ce4969441ef12426d919f68e2b03e3ce351d56395de787b7",
+      "mask_sha256": "1e8d29056f2eeee8bd1c039d82603eb5b2856121d28540d0c4a78616af5e66c1"
+    },
+    {
+      "scene": "LC80010812013365LGN00",
+      "name": "LC80010812013365LGN00_18_photo.png",
+      "image_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC80010812013365LGN00_18_photo.png",
+      "mask_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC80010812013365LGN00_18_mask.png",
+      "split": "original SPARCS target_train",
+      "sha_note": "Original schedule SHA is augmented tensor identity, not file SHA; record actual file identities before calibration.",
+      "image_sha256": "b0f577a16527b4960bb648256b7608a867e3c991cd8a840bb5cbc788676b8b98",
+      "mask_sha256": "cc367992bb116790f2ab1ad825841d0ea57612eac5ebf9b8b9454bc8a20093e1"
+    },
+    {
+      "scene": "LC82210662014229LGN00",
+      "name": "LC82210662014229LGN00_18_photo.png",
+      "image_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC82210662014229LGN00_18_photo.png",
+      "mask_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC82210662014229LGN00_18_mask.png",
+      "split": "original SPARCS target_train",
+      "sha_note": "Original schedule SHA is augmented tensor identity, not file SHA; record actual file identities before calibration.",
+      "image_sha256": "4c168c72662870312da51dd546f0a8dddb1ba546beba222fdc32e2edfd3fc516",
+      "mask_sha256": "cdceabebda8466aa7113bb5b9e419784cd55fd67c094bc541e93d0685aa9cec6"
+    },
+    {
+      "scene": "LC81480352013195LGN00",
+      "name": "LC81480352013195LGN00_32_photo.png",
+      "image_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC81480352013195LGN00_32_photo.png",
+      "mask_path": "/home/scv/Cloud-Adapter-light/phase64_data/sparcs/extracted_verified/sending/LC81480352013195LGN00_32_mask.png",
+      "split": "original SPARCS target_train",
+      "sha_note": "Original schedule SHA is augmented tensor identity, not file SHA; record actual file identities before calibration.",
+      "image_sha256": "cc44c24f6f479608b87ba2f3a6acce631672315de4cbd330bbfc13d9fe95c924",
+      "mask_sha256": "824de563b206a5555e7ed84e155bac3d11de7a1d1a85e6978912042d1d994916"
+    }
+  ]
+}

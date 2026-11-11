@@ -1,0 +1,15 @@
+{
+  "inputs": {
+    "outputs\\phase217\\phase217_20261023\\delivery\\seed21701\\D_LOSSES.jsonl": "c015261683b65ce4f6c8f3ea9df7010d301a9cb3aa429cf0562311c2a766028d",
+    "outputs\\phase217\\phase217_20261023\\delivery\\seed21702\\D_LOSSES.jsonl": "aabc0718f9e01ffe67e7a9e22712d2f860fc962340c7fba0b6b85c9165376424",
+    "outputs\\phase220\\phase220_20261024\\PER_IMAGE_CLASS_WEIGHT_EXPOSURE.csv": "ffaaf6048166b4efd47617641eef404c48db7b3d9de4c84f5776ebf4c0c04196"
+  },
+  "weight_normalizer": 1.0003333333333333,
+  "weight_rule": "top64=2; other192=2/3; divide by 4000-step exposure-weighted mean",
+  "Q_rule": "Hash permutation within repeat15/repeat16 stratum, lexicographic sample IDs as destination order.",
+  "historical_training_required": "Two SPARCS D 4000-step runs in Phase217; weights are not training-free.",
+  "labels_read": false,
+  "model_calls": 0,
+  "raw_source_pixels_read": false,
+  "limitation": "Source KL is teacher disagreement, not a reference error/damage score; class distribution can change."
+}

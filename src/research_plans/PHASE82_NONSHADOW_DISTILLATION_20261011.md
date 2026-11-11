@@ -49,4 +49,4 @@
 
 蒸馏是已有方法，本轮检验它能否实现当前组合优势，不能凭这一步宣称TGRS方法创新。参考：[Hinton等，Distilling the Knowledge in a Neural Network](https://arxiv.org/abs/1503.02531)。单模型部署成本与教师参与后的训练成本分开报告。
 
-代码本地检查后按原流程push／pull执行；一次一个GPU训练任务，不覆盖历史、不自动同步work_dirs。沿用2026-10-20北京时间研究预算截止时间。本文件仅立项，未启动实验。
+代码本地检查后按原流程push／pull执行；一次一个GPU训练任务，不覆盖历史、不自动同步work_dirs。本文件仅立项，未启动实验。

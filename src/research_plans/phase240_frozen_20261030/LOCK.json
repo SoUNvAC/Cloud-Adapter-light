@@ -1,0 +1,49 @@
+{
+  "phase": 240,
+  "date": "2026-10-30",
+  "purpose": "single-seed exploratory three-branch probe; no confidence-interval promotion gate",
+  "Source_SHA256": "64dd9a20288c35ab3362b8b1c1dafc216d9c44d60868475177e139d6be859dc9",
+  "targets": [
+    "L8",
+    "SPARCS"
+  ],
+  "seed": 21701,
+  "base_lr": 0.0001,
+  "steps_per_fit": 4000,
+  "fits": 6,
+  "arms": {
+    "A": "original cls_embed only; freeze other parameters and buffers",
+    "B": "full decode_head; training loss_dice weight0; Hungarian DiceCost remains5",
+    "G": "full decode_head; symmetric two-group PCGrad on original weighted query classification vs mask BCE+Dice gradients"
+  },
+  "G_projection_epsilon_squared_norm": 1e-12,
+  "saved_steps": [
+    500,
+    1000,
+    2000,
+    4000
+  ],
+  "val_candidates": 5,
+  "selection": "maximum val pooled mIoU; exact tie Source first then smaller step",
+  "new_W_P_or_router": false,
+  "new_source_data_access": false,
+  "historical_test_exposed": true,
+  "new_bootstraps_required": false,
+  "promising_trend_reference_pp": 0.5,
+  "promising_trend_is_hard_gate": false,
+  "new_grad_diagnostic_forward_calls": 48,
+  "A_mask_invariance_additional_calls": 16,
+  "main_forward_upper_bound_excluding_diagnostics_and_gates": 48738,
+  "successful_fit_updates_planned": 24000,
+  "main_backward_or_autograd_passes_planned": 32000,
+  "maximum_full_input_forwards": 52000,
+  "maximum_optimizer_updates_including_failure_allowance": 26000,
+  "maximum_backward_or_autograd_passes": 38000,
+  "maximum_GPU_hours": 4,
+  "CPU_GiB": 16,
+  "GPU_GiB": 20,
+  "CPU_analysis_hours": 3,
+  "maximum_new_remote_GiB": 6,
+  "maximum_formal_delivery_GiB": 1,
+  "automatic_second_seed_or_new_arm": false
+}

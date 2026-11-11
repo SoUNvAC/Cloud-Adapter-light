@@ -1,0 +1,13 @@
+{
+  "handcrafted_array_only": true,
+  "three_reference_classes_present": true,
+  "CE_minus_BCE_constant": 0.2644475735369637,
+  "tested_biases": [
+    -5,
+    0,
+    1,
+    5
+  ],
+  "derivative_finite_difference_passed": true,
+  "models_or_real_pixels_read": false
+}

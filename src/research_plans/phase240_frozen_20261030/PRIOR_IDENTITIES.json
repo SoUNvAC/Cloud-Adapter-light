@@ -1,0 +1,77 @@
+[
+  {
+    "path": "src/research_plans/phase236_frozen_20261027/TRAIN_INPUTS.json",
+    "bytes": 1194884,
+    "sha256": "984a2b59d54ab8c44095e4fec16ff781238a41d77629bb08119b8b934cd9b2c2"
+  },
+  {
+    "path": "src/research_plans/phase236_frozen_20261027/EVAL_INPUTS.json",
+    "bytes": 2407132,
+    "sha256": "10ad220314af59d51a64d47126600c854b1c95771aad3a8c899aeb0a0eb94c9b"
+  },
+  {
+    "path": "outputs/phase236/phase236_20261027/VAL_ALL_CANDIDATES.json",
+    "bytes": 46451,
+    "sha256": "ebc45c412598d38982c90b088bab1123c4ba6e0794e9d29d040f5df594b9acd3"
+  },
+  {
+    "path": "outputs/phase236/phase236_20261027/HEAD_RESUME_INVENTORY.json",
+    "bytes": 22381,
+    "sha256": "c8de08331bdbdea676a541a1d784811985f602b353fddc6a90d872b83a9675a8"
+  },
+  {
+    "path": "outputs/phase236/phase236_20261027/TABLE2.json",
+    "bytes": 66371,
+    "sha256": "6f44cc5c757705e8dd50a5b7480a7a90b3aaf28afe6b878beb25f75a83bf0349"
+  },
+  {
+    "path": "outputs/phase236/phase236_20261027/PER_SCENE.json",
+    "bytes": 1162915,
+    "sha256": "3a6e1d2972f31d9ab043f4647e78757cac7443a5465af6e1fc34e815ef577a93"
+  },
+  {
+    "path": "outputs/phase236/phase236_20261027/delivery/NATIVE_PLAN.json",
+    "bytes": 10247,
+    "sha256": "2878b3f07fe6c99e313d4d65aff7629b6072ae4b273c2b8f0817b9bc1f5a2cd2"
+  },
+  {
+    "path": "outputs/phase236/phase236_20261027/delivery/TRAIN_BINDING235.json",
+    "bytes": 1028554,
+    "sha256": "f148adc49543ea472c64946833aedc9db48dd3054dc6717779d709d4ebd3a937"
+  },
+  {
+    "path": "outputs/phase236/phase236_20261027/delivery/FILL_GATE_ACCEPTED.json",
+    "bytes": 7655,
+    "sha256": "9d7c95ff0d896412a64ad240fc7aee3cef4e068025e11b161b8c030a8de4a82e"
+  },
+  {
+    "path": "outputs/phase236/phase236_20261027/code/train_phase236_recovery02.py",
+    "bytes": 11830,
+    "sha256": "aefc874e9aec0282296e3ba9a1ddb34228dbe30a7dc8ad83748651f32f740d11"
+  },
+  {
+    "path": "outputs/phase236/phase236_20261027/code/phase236_common.py",
+    "bytes": 4744,
+    "sha256": "3056a8d35875eb71984a3078088222939cffd801ca93292d876935cf5575f815"
+  },
+  {
+    "path": "outputs/phase236/phase236_20261027/code/phase236_valid_mask.py",
+    "bytes": 6282,
+    "sha256": "0319eff1b69c96c1036ac85527ef18b50f4d111597f7d46ae6175358128b6ca4"
+  },
+  {
+    "path": "outputs/phase236/phase236_20261027/code/evaluate_phase236_recovery03.py",
+    "bytes": 9293,
+    "sha256": "4c1104e3b034ce2e5497c408c93fbd2a8b7739ad3d51297666dd385a6bf8c5b1"
+  },
+  {
+    "path": "src/configs/protocol/phase64_target_parent_rgb.py",
+    "bytes": 5031,
+    "sha256": "6f07ea989e7596dbeca0b49e2c6ae89cee6c77ce774d4228d246cbf57eeab0f6"
+  },
+  {
+    "path": "src/tools/export_phase12_onnx.py",
+    "bytes": 8429,
+    "sha256": "d4161abdd0161c9e6da650918ece48970e7ca453a5fd667ea37e8d37be65ae7b"
+  }
+]

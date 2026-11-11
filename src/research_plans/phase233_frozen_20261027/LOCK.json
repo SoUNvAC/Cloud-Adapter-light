@@ -1,0 +1,61 @@
+{
+  "Source_SHA256": "64dd9a20288c35ab3362b8b1c1dafc216d9c44d60868475177e139d6be859dc9",
+  "heads": [
+    {
+      "domain": "SPARCS",
+      "seed": 21701,
+      "phase": 217,
+      "endpoint_head_sha256": "ac4396988b31667246356741e4e6b5503d0d28189e54e899d0b1a0d50e5eb634",
+      "checkpoint": "4000-step final C; no checkpoint selection"
+    },
+    {
+      "domain": "SPARCS",
+      "seed": 21702,
+      "phase": 217,
+      "endpoint_head_sha256": "31c557d37d958f4da46b730ebaa5062f555045b993f1e5360ba21eb89fe76a11",
+      "checkpoint": "4000-step final C; no checkpoint selection"
+    },
+    {
+      "domain": "L8",
+      "seed": 21701,
+      "phase": 222,
+      "endpoint_head_sha256": "65d87c33bce5d8161f406471fc4290aa7fc0d8ad7ea0a05db57c235ff3df47fa",
+      "checkpoint": "4000-step final C; no checkpoint selection"
+    },
+    {
+      "domain": "L8",
+      "seed": 21702,
+      "phase": 222,
+      "endpoint_head_sha256": "a04292be4b2fa8b2f35cca27e6f9b05c87d1b2a5f24e35281aaf81b2926883dd",
+      "checkpoint": "4000-step final C; no checkpoint selection"
+    }
+  ],
+  "alpha": 0.25,
+  "models": [
+    "Source",
+    "L8_21701",
+    "L8_21702",
+    "SPARCS_21701",
+    "SPARCS_21702"
+  ],
+  "pool": "same 963 L8 val inputs; no other image/label pixels",
+  "raw_fill_code": 0,
+  "old_fill_parent": 0,
+  "new_fill_support": "excluded; no label changes on native!=0",
+  "expected_fill_pixels": 33961651,
+  "new_training_updates": 0,
+  "max_complete_input_forwards": 5200,
+  "max_GPU_seconds": 3600,
+  "identities": {
+    "outputs\\phase229\\phase229_20261026\\INPUT_SUPPORT.json": "f118fb17d2c948679d6f66c509b0b6c9bc82938abbe9b7572fcf41d9a9664b4d",
+    "outputs\\phase317\\phase317_20261026\\remote_backup\\REFERENCE_LOCK.json": "bf694c394e2bc23a9c3623a407561449a3fd8d68c0b6be4a34ec6d712e64c5ba",
+    "src\\research_plans\\phase229_frozen_20261026\\LOCK.json": "020fcb3bc844813ca29526b86dfeec5e2e2e707b9bbcb65457e3ab25bee6282d",
+    "src\\tools\\execute_phase229.py": "0fd87683059675f06555d399c4ddc30333a7f317b9ee9f79cec0d73934670384",
+    "src\\tools\\reference_phase317.py": "9830c8ad72d6006296b6625784a6e8503740e921c78c3b5005f30832a0480294",
+    "outputs\\phase229\\phase229_20261026\\delivery\\evaluation\\L8_Source.json": "ea8fff35f36b6e015308b37fa9043e69f1d8fd8f6640d06716e7aea9350022ec",
+    "outputs\\phase229\\phase229_20261026\\delivery\\evaluation\\L8_L8_21701.json": "55728ab7ce3e64212e20d2a258cd58cab5c0e4949ef6d52aac6da176c66a5ee8",
+    "outputs\\phase229\\phase229_20261026\\delivery\\evaluation\\L8_L8_21702.json": "6f4917eee6b53b126a73e4b6b85022304b704aa78ab2d95434c5649f640bf279",
+    "outputs\\phase229\\phase229_20261026\\delivery\\evaluation\\L8_SPARCS_21701.json": "94b7d442240fe14a55cfaea3836605dd3f5d817bbe329f2df6f80e98de93a44c",
+    "outputs\\phase229\\phase229_20261026\\delivery\\evaluation\\L8_SPARCS_21702.json": "2fbaae3b6aaf88bbda7d61bd750e0e4abf9c3cca0774a824a7044f31603db6c0"
+  }
+}
